@@ -1,0 +1,419 @@
+# Porthole probe build (route B spike) - untranslated English rebuild; only verifies a cloud Mac can rebuild the IPA.
+# Basis: notes/INVESTIGATION.md (route B). Pass criteria: probe-ci/PROBE-PLAN.md.
+#
+# Repo layout (assembly model - this repo stays minimal, CI assembles the source tree):
+#   this repo (soci-art/porthole-ch)  : README.md, probe-ci/, notes/ only - no upstream source.
+#   this file                         : when landed, lives at .github/workflows/probe-build.yml;
+#                                       a reference copy is kept at probe-ci/workflows/probe-build.yml.
+#   checkout step                     : checks out THIS repo only (to get probe-ci/scripts), no submodules.
+#   clone step                        : clones upstream Porthole at tag v1.2.1 (recursive submodules:
+#                                       Madeira + Wine/FEX/DXMT/dock) into $GITHUB_WORKSPACE/src and
+#                                       verifies HEAD = 0786a24fa97647491c942db6279ad3610dcbb48a.
+#   probe-ci/ is then copied into src/ so every later step runs with working-directory = src and the
+#   scripts' original relative-path assumptions hold unchanged (probe-ci/scripts/*.sh, tools/*,
+#   vendor/*, app/* ...). F4_BUILD_ROOT lives inside src (src/build); PROBE_OUT / PROBE_LOGS stay
+#   at the workspace root so the artifact-upload step finds them from any working directory.
+#
+# Manual trigger only (workflow_dispatch): the probe is expensive and expected to iterate.
+
+name: probe-build (Porthole rebuild spike)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  UPSTREAM_REPO_URL: https://github.com/tylerkaska112/Porthole.git
+  UPSTREAM_TAG: v1.2.1
+  UPSTREAM_HEAD: 0786a24fa97647491c942db6279ad3610dcbb48a
+  SRC: ${{ github.workspace }}/src
+  UPSTREAM_IPA_URL: https://github.com/tylerkaska112/Porthole/releases/download/v1.2.1/Porthole-1.2.1-688.ipa
+  UPSTREAM_IPA_SHA256: 5a6d06aa00cd05d76c5fab1a0a0380a38c43fcdd4790bf6f845744fb7e0dfaf7
+  # Default build root of stage_runtime.sh / check_stage.sh (tools/local.env is not committed;
+  # in CI use a path inside the cloned source tree instead of the author's external drive).
+  F4_BUILD_ROOT: ${{ github.workspace }}/src/build
+  PROBE_OUT: ${{ github.workspace }}/probe-output
+  PROBE_LOGS: ${{ github.workspace }}/probe-logs
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  probe:
+    # Runner choice: docs/SOURCE.md asks for Xcode 27 + its Metal toolchain. macos-26 (macOS 26)
+    # is the newest GitHub-hosted macOS image and ships the newest Xcode line, closest to the ask.
+    # [UNKNOWN] Whether any hosted image already provides Xcode 27 cannot be pre-verified; the
+    # toolchain step below lists every Xcode in /Applications, selects the newest, and records
+    # the real versions in the logs/artifacts - confirming this is the probe's first job.
+    # If the macos-26 label is unavailable when the repo goes live, fall back to macos-15 and
+    # record the version gap in PROBE-PLAN.
+    runs-on: macos-26
+    # Duration is unknown (first from-scratch rebuild of the engine libs on a clean machine;
+    # upstream docs/SOURCE.md admits it has never been done). 360 min is the hosted-runner
+    # per-job cap; if the probe times out, split jobs or add caching (see PROBE-PLAN unknowns).
+    timeout-minutes: 360
+
+    steps:
+      - name: Checkout this repo (probe-ci scripts only - no submodules, no source)
+        uses: actions/checkout@v4
+
+      - name: Clone upstream Porthole v1.2.1 into src (recursive submodules) and verify pinned HEAD
+        run: |
+          set -euxo pipefail
+          mkdir -p "$PROBE_LOGS" "$PROBE_OUT"
+          {
+            git clone --branch "$UPSTREAM_TAG" --recurse-submodules "$UPSTREAM_REPO_URL" "$SRC"
+            # Belt and braces: vendor/Madeira is a submodule with its own wine/FEX/dxmt/madeira-dock
+            # submodules; all pinned, all needed - make sure the nested ones are all present.
+            git -C "$SRC" submodule update --init --recursive
+            head_sha="$(git -C "$SRC" rev-parse HEAD)"
+            echo "upstream HEAD: $head_sha (expect $UPSTREAM_HEAD, tag $UPSTREAM_TAG)"
+            test "$head_sha" = "$UPSTREAM_HEAD"
+            git -C "$SRC" submodule status --recursive | head -40
+            # probe-ci scripts assume they sit at the source repo root (probe-ci/scripts/*.sh);
+            # copy probe-ci into the cloned tree so all later steps keep those relative paths.
+            cp -R "$GITHUB_WORKSPACE/probe-ci" "$SRC/probe-ci"
+            ls "$SRC/probe-ci/scripts"
+          } 2>&1 | tee "$PROBE_LOGS/00-clone-upstream.log"
+
+      - name: Toolchain report (Xcode / xcodegen / clang / tools)
+        run: |
+          set -euxo pipefail
+          mkdir -p "$PROBE_LOGS" "$PROBE_OUT"
+          {
+            sw_vers || true
+            echo '--- Xcodes in /Applications ---'
+            ls /Applications | grep -i xcode || true
+            echo '--- select newest Xcode ---'
+            newest="$(ls -d /Applications/Xcode*.app 2>/dev/null | sort -V | tail -1 || true)"
+            if [ -n "$newest" ]; then sudo xcode-select -s "$newest/Contents/Developer"; fi
+            xcode-select -p
+            xcodebuild -version
+            echo '--- compilers & build tools ---'
+            clang --version | head -2
+            xcrun -sdk iphoneos --show-sdk-path
+            xcrun -sdk macosx metal --version || echo 'metal toolchain: NOT FOUND (DXMT shader headers step needs it)'
+            command -v xcodegen && xcodegen --version || echo 'xcodegen: NOT INSTALLED (next step installs)'
+            command -v cmake && cmake --version | head -1 || echo 'cmake: not installed'
+            command -v ninja && ninja --version || echo 'ninja: not installed'
+            command -v meson && meson --version || echo 'meson: not installed'
+          } 2>&1 | tee "$PROBE_LOGS/01-toolchain.log"
+
+      - name: Install build tools (Homebrew - xcodegen/cmake/ninja/meson)
+        run: |
+          set -euxo pipefail
+          # [UNKNOWN] There is no authoritative list of host tools Madeira's build scripts need;
+          # install the common source-build set. Anything missing shows up as "command not found"
+          # in the matching step log - see the failure table in PROBE-PLAN.md.
+          brew install xcodegen cmake ninja meson pkg-config autoconf automake libtool bison flex gettext || \
+            brew install xcodegen cmake ninja meson pkg-config
+          xcodegen --version
+          cmake --version | head -1
+          echo 'export PATH="$(brew --prefix bison)/bin:$(brew --prefix flex)/bin:$PATH"' >> "$GITHUB_ENV" || true
+
+      - name: Verify pinned commits (Madeira + nested submodules)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          {
+            git submodule status --recursive
+            test "$(git -C vendor/Madeira rev-parse HEAD)" = "5fda6a0e9543e5de1df010aff35748ab913fd0d9"
+            # The four nested pins are from the "Pinned upstream commits" table in docs/SOURCE.md;
+            # submodule status prints each submodule HEAD first on its line - check all four appear.
+            status="$(git submodule status --recursive)"
+            for sha in 80c859a76e1073bd41095b1b0abc43135efdd475 \
+                       1dc6ed4932bd231df1c53dd7b8043ffdee0ac34a \
+                       1f617cd5bbe7a71bc0ad9083589cb44c747cdc9b \
+                       67780ba92e60dbfac4fe80eaf2ce34b9ea1a1c60; do
+              echo "$status" | grep -q "$sha" || { echo "MISSING pinned commit $sha"; exit 1; }
+            done
+            echo 'all pinned commits match docs/SOURCE.md'
+          } 2>&1 | tee "$PROBE_LOGS/02-pinned-commits.log"
+
+      - name: Download upstream IPA and verify sha256
+        run: |
+          set -euxo pipefail
+          curl -fL --retry 3 -o "$RUNNER_TEMP/Porthole-1.2.1-688.ipa" "$UPSTREAM_IPA_URL"
+          echo "$UPSTREAM_IPA_SHA256  $RUNNER_TEMP/Porthole-1.2.1-688.ipa" | shasum -a 256 -c -
+          ls -l "$RUNNER_TEMP/Porthole-1.2.1-688.ipa"
+          echo "UPSTREAM_IPA=$RUNNER_TEMP/Porthole-1.2.1-688.ipa" >> "$GITHUB_ENV"
+
+      - name: Apply engine patches 0172-0176 (docs/SOURCE.md step 0)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          {
+            git -C vendor/Madeira apply --whitespace=nowarn ../../patches/0172-engine-r28-madeira.patch
+            git -C vendor/Madeira/FEX apply --whitespace=nowarn ../../../patches/0173-engine-r28-fex.patch
+            git -C vendor/Madeira/wine apply --whitespace=nowarn ../../../patches/0174-engine-r28-wine.patch
+            git -C vendor/Madeira/dxmt apply --whitespace=nowarn ../../../patches/0175-engine-r28-dxmt.patch
+            git -C vendor/Madeira/madeira-dock apply --whitespace=nowarn ../../../patches/0176-engine-r28-madeira-dock.patch
+            echo 'patches 0172-0176 applied'
+            # Diagnostic only (not a gate): the engine input digest recorded in Engine.xcconfig
+            # should match the current source (pin + all patches + Runtime glue).
+            tools/engine.sh show || true
+          } 2>&1 | tee "$PROBE_LOGS/03-patches.log"
+
+      - name: Extract runtime Resources from upstream IPA
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # Resources come from the IPA (report B-2: the Madeira snapshot lacks the i386 farm,
+          # the gl dylibs and more, so stage_runtime.sh alone cannot produce the full set).
+          # probe-ci/ was copied into src/ by the clone step, so this relative path resolves here.
+          bash probe-ci/scripts/extract_runtime_resources.sh \
+            "$UPSTREAM_IPA" "$F4_BUILD_ROOT/probe-resources" \
+            --manifest "$PROBE_OUT/resources-manifest.txt" \
+            --sha256 "$UPSTREAM_IPA_SHA256" \
+            2>&1 | tee "$PROBE_LOGS/04-extract-resources.log"
+
+      - name: Prepare Local.xcconfig (official build identity values)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # The script's argument is the SOURCE repo root - now src/, not the workspace root.
+          bash probe-ci/scripts/prepare_local_xcconfig.sh "$SRC" \
+            2>&1 | tee "$PROBE_LOGS/05-local-xcconfig.log"
+
+      - name: Prepare StikJIT framework (tools/prepare_stikjit.py)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # The script itself verifies a pinned SHA-256 (444b8d43...7e85) and installs
+          # StikJIT 1.5.0 from the official StikDebug release into app/Vendor/.
+          python3 tools/prepare_stikjit.py 2>&1 | tee "$PROBE_LOGS/06-stikjit.log"
+          ls app/Vendor/StikJIT.xcframework
+
+      # ---- 补建缺失静态库（报告 B-3）：顺序照 docs/SOURCE.md 的 Rebuilding 第 1 步 ----
+      # project.yml 的 OTHER_LDFLAGS 需要 13 个库：dxmt_combined gmp lzma gnutls hogweed nettle
+      # ntdll_unix win32u_unix wineserver avcodec avformat avutil swresample。
+      # 其中 gmp/gnutls/hogweed/nettle 四个快照自带（兜底）；其余靠下面各步补建；
+      # liblzma.a 的来源脚本未点名（报告未决项 2），在 Collect 步骤全盘搜索定位。
+
+      - name: Build libs - wineserver base archive (tools/build_wineserver_base.sh)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # build/wineserver/build.sh 只往一个现成 libwineserver.a 里换对象，而仓库不跟踪该底档；
+          # 这个 Porthole 工具脚本用 Wine server/*.c 现编出底档，必须先于 wineserver 步骤跑。
+          tools/build_wineserver_base.sh 2>&1 | tee "$PROBE_LOGS/10-wineserver-base.log"
+
+      - name: Build libs - DXMT shader headers + DXMT patches
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # shader 头由 Metal 工具链生成（build_dxmt_shader_headers.sh 需要 xcrun metal，是 Xcode 版本敏感点）
+          tools/build_dxmt_shader_headers.sh 2>&1 | tee "$PROBE_LOGS/11-dxmt-headers.log"
+          tools/apply_dxmt_patch.sh 2>&1 | tee -a "$PROBE_LOGS/11-dxmt-headers.log"
+
+      - name: Build libs - Madeira patch script (tools/apply_madeira_patch.sh)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # 注意：此脚本主体补丁 0006 已 RETIRED（脚本头有说明，多半走 already-applied 分支），
+          # 保留此步只为与 docs/SOURCE.md 的官方顺序完全一致，输出原样进日志供判读。
+          tools/apply_madeira_patch.sh 2>&1 | tee "$PROBE_LOGS/12-madeira-patch.log" || \
+            echo 'apply_madeira_patch.sh failed - see log; patch 0006 is retired, judge from log whether this matters'
+
+      - name: Build libs - FEX iOS (tools/build_fex_ios.sh)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          tools/build_fex_ios.sh 2>&1 | tee "$PROBE_LOGS/13-fex.log"
+
+      - name: Build libs - Madeira build/ntdll-unix
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          bash vendor/Madeira/build/ntdll-unix/build.sh 2>&1 | tee "$PROBE_LOGS/14-ntdll-unix.log"
+
+      - name: Build libs - Madeira build/win32u-unix
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          bash vendor/Madeira/build/win32u-unix/build.sh 2>&1 | tee "$PROBE_LOGS/15-win32u-unix.log"
+          # docs/REBUILD.md 已知陷阱：此脚本每次把 FreeType 再并入 libwin32u_unix.a，
+          # 成员数应为 89（131/173 = 有重复成员，需按 REBUILD.md 手工去重）。这里只报告成员数，不自动改。
+          for a in $(find vendor/Madeira build -name 'libwin32u_unix.a' 2>/dev/null); do
+            echo "$a members: $(ar t "$a" | wc -l) (expect 89)"
+          done
+
+      - name: Build libs - Madeira build/wineserver
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          bash vendor/Madeira/build/wineserver/build.sh 2>&1 | tee "$PROBE_LOGS/16-wineserver.log"
+
+      - name: Build libs - Madeira build/dxmt-ios
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          bash vendor/Madeira/build/dxmt-ios/build.sh 2>&1 | tee "$PROBE_LOGS/17-dxmt-ios.log"
+
+      - name: Build libs - Madeira build/ffmpeg (avcodec/avformat/avutil/swresample)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          bash vendor/Madeira/build/ffmpeg/build.sh 2>&1 | tee "$PROBE_LOGS/18-ffmpeg.log"
+
+      - name: Build libs - Madeira build/freetype-ios
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          bash vendor/Madeira/build/freetype-ios/build.sh 2>&1 | tee "$PROBE_LOGS/19-freetype.log"
+
+      - name: Build libs - Madeira build/gnutls-ios
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # gnutls/hogweed/nettle/gmp 快照已带成品；此步仍按 SOURCE.md 顺序跑，Collect 步骤以自建优先、快照兜底。
+          bash vendor/Madeira/build/gnutls-ios/build.sh 2>&1 | tee "$PROBE_LOGS/20-gnutls.log"
+
+      - name: Collect and audit static libraries (13 required by project.yml)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          STAGE_LIB="$F4_BUILD_ROOT/probe-stage/lib"
+          mkdir -p "$STAGE_LIB"
+          {
+            required="dxmt_combined gmp lzma gnutls hogweed nettle ntdll_unix win32u_unix wineserver avcodec avformat avutil swresample"
+            missing=""
+            for n in $required; do
+              # 全盘找该库：优先非快照路径（本次自建产物），其次 Madeira 快照 app/Madeira/ 里的跟踪成品。
+              # 自建产物落在 F4_BUILD_ROOT（= src/build）下；vendor/Madeira/build 为相对 src 的路径。
+              built="$(find "$F4_BUILD_ROOT" vendor/Madeira/build -name "lib$n.a" 2>/dev/null | head -1 || true)"
+              snap="vendor/Madeira/app/Madeira/lib$n.a"
+              if [ -n "$built" ]; then src="$built"; origin="built"
+              elif [ -f "$snap" ]; then src="$snap"; origin="snapshot"
+              else missing="$missing lib$n.a"; continue; fi
+              cp -f "$src" "$STAGE_LIB/lib$n.a"
+              echo "lib$n.a  <- $src  ($origin, $(stat -f%z "$src" 2>/dev/null || stat -c%s "$src") bytes)"
+            done
+            echo '--- liblzma.a 全盘搜索（来源定位，报告未决项 2） ---'
+            find "$SRC" -name 'liblzma*' -not -path '*/.git/*' 2>/dev/null || true
+            xcrun -sdk iphoneos --show-sdk-path | xargs -I{} sh -c 'ls {}/usr/lib/liblzma* 2>/dev/null' || true
+            if [ -n "$missing" ]; then
+              echo "MISSING:$missing"
+              echo '探针在此步失败属预期失败模式之一：按 PROBE-PLAN 定位表看对应编号的构建日志。'
+              exit 1
+            fi
+            echo "all 13 required libraries collected into $STAGE_LIB"
+            ls -l "$STAGE_LIB"
+          } 2>&1 | tee "$PROBE_LOGS/21-collect-libs.log"
+
+      - name: Assemble RuntimeStage (libs above + Resources from IPA)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          {
+            STAGE="$F4_BUILD_ROOT/probe-stage"
+            RES_SRC="$F4_BUILD_ROOT/probe-resources"
+            mkdir -p "$STAGE/Resources"
+            # 与 tools/stage_runtime.sh 相同的布局语义：目录/文件用符号链接（check_stage.sh 要求
+            # 链接目标落在 checkout 或 F4_BUILD_ROOT 内，本步两者都满足），x86_64-vcruntime 为真实空目录。
+            for d in nls aarch64-windows arm64ec-windows i386-windows d3d12 gl compat legal licenses; do
+              ln -sfn "$RES_SRC/$d" "$STAGE/Resources/$d"
+            done
+            for f in prefix-template.tar.gz cacert.pem madeira-jit.js; do
+              ln -sfn "$RES_SRC/$f" "$STAGE/Resources/$f"
+            done
+            mkdir -p "$STAGE/Resources/x86_64-vcruntime"
+            # arm64ec farm 已从 IPA 提取、自带 patches/0001 的 gdiplus.dll，此处只断言其存在
+            test -f "$STAGE/Resources/arm64ec-windows/gdiplus.dll" && echo 'gdiplus.dll present in extracted farm'
+            ln -sfn "$STAGE" app/RuntimeStage
+            ls -la app/RuntimeStage app/RuntimeStage/lib app/RuntimeStage/Resources
+            # 上游自带的 stage 一致性检查（防「用错 stage 构建」出旧引擎包），作为本步的卡口
+            tools/check_stage.sh
+          } 2>&1 | tee "$PROBE_LOGS/22-stage.log"
+
+      - name: Generate Xcode project (xcodegen)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          ( cd app && xcodegen generate ) 2>&1 | tee "$PROBE_LOGS/23-xcodegen.log"
+          ls app/Porthole.xcodeproj
+
+      - name: Build app unsigned (xcodebuild Release, CODE_SIGNING_ALLOWED=NO)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          xcodebuild -project app/Porthole.xcodeproj -scheme Porthole -configuration Release \
+            -destination 'generic/platform=iOS' -derivedDataPath "$F4_BUILD_ROOT/DD" \
+            CODE_SIGNING_ALLOWED=NO build 2>&1 | tee "$PROBE_LOGS/24-xcodebuild.log"
+          ls -la "$F4_BUILD_ROOT/DD/Build/Products/Release-iphoneos/Porthole.app"
+
+      - name: Package unsigned IPA (tools/package_app.sh)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          tools/package_app.sh \
+            "$F4_BUILD_ROOT/DD/Build/Products/Release-iphoneos/Porthole.app" \
+            "$PROBE_OUT/Porthole-1.2.1-probe-unsigned.ipa" \
+            2>&1 | tee "$PROBE_LOGS/25-package.log"
+          ls -l "$PROBE_OUT/Porthole-1.2.1-probe-unsigned.ipa"
+
+      - name: Structure diff vs upstream IPA (report)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # 只出报告不设卡（人工按 PROBE-PLAN 的核对清单判读）；比对：顶层条目、扩展集合与各自
+          # Bundle ID/扩展点、主 Info.plist 关键键（Bundle ID/版本/引擎/Hub）、各主要条目大小量级。
+          python3 - "$UPSTREAM_IPA" "$PROBE_OUT/Porthole-1.2.1-probe-unsigned.ipa" > "$PROBE_OUT/structure-diff.txt" <<'PYEOF' 2>&1 | tee "$PROBE_LOGS/26-diff.log"
+          import plistlib, sys, zipfile
+          def load(path):
+              z = zipfile.ZipFile(path)
+              infos = {}
+              for n in z.namelist():
+                  if n.endswith('.app/Info.plist') or ('.appex/Info.plist' in n and 'PlugIns' in n):
+                      infos[n] = plistlib.loads(z.read(n))
+              tops = {}
+              for i in z.infolist():
+                  if i.filename.startswith('Payload/Porthole.app/'):
+                      rest = i.filename[len('Payload/Porthole.app/'):]
+                      if rest and not i.is_dir():
+                          top = rest.split('/')[0]
+                          c, b = tops.get(top, (0, 0)); tops[top] = (c + 1, b + i.file_size)
+              return z, infos, tops
+          uz, ui, ut = load(sys.argv[1]); rz, ri, rt = load(sys.argv[2])
+          print('== main Info.plist keys (upstream -> rebuilt) ==')
+          uk = next(v for k, v in ui.items() if k.endswith('.app/Info.plist'))
+          rk = next((v for k, v in ri.items() if k.endswith('.app/Info.plist')), {})
+          for key in ('CFBundleIdentifier', 'CFBundleShortVersionString', 'CFBundleVersion',
+                      'PortholeEngine', 'PortholeEngineMadeira', 'PortholeHubURL',
+                      'PortholeHubAppID', 'PortholeReleaseKey'):
+              mark = 'OK ' if uk.get(key) == rk.get(key) else 'DIFF'
+              print(f'{mark} {key}: {uk.get(key)!r} -> {rk.get(key)!r}')
+          print('\n== extensions (PlugIns/*.appex) ==')
+          def exts(infos):
+              out = {}
+              for path, p in infos.items():
+                  if '.appex' in path:
+                      name = path.split('/')[-2]
+                      ext = (p.get('NSExtension') or {}).get('NSExtensionPointIdentifier')
+                      out[name] = (p.get('CFBundleIdentifier'), ext)
+              return out
+          ue, re_ = exts(ui), exts(ri)
+          for name in sorted(set(ue) | set(re_)):
+              mark = 'OK ' if ue.get(name) == re_.get(name) else 'DIFF'
+              print(f'{mark} {name}: {ue.get(name)} -> {re_.get(name)}')
+          print('\n== top-level entries: files / bytes (upstream -> rebuilt) ==')
+          for top in sorted(set(ut) | set(rt)):
+              u, r = ut.get(top, (0, 0)), rt.get(top, (0, 0))
+              print(f'{top:28s} {u[0]:>5} / {u[1]:>12,}  ->  {r[0]:>5} / {r[1]:>12,}')
+          print(f'\nIPA total bytes: upstream {sum(b for _, b in ut.values()):,} vs rebuilt file itself in probe-output')
+          PYEOF
+          cat "$PROBE_OUT/structure-diff.txt"
+
+      - name: Upload probe artifacts (rebuilt IPA + all logs + reports)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: porthole-probe-build
+          path: |
+            probe-output/
+            probe-logs/
+          if-no-files-found: warn
+          retention-days: 14
