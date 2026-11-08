@@ -1,0 +1,2970 @@
+{
+ "batch": 14,
+ "units": [
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Lines in madeira.cfg's syntax that apply to this game only, for example env.MADEIRA_FEX_AVX = 1. A key here wins over the app-wide madeira.cfg while this game runs.",
+   "lines": [
+    73
+   ],
+   "contexts": [
+    "subtitle: configSummary(e.config), info: \"Lines in madeira.cfg's syntax that apply to this game only, for example env.MADEIRA_FEX_AVX = 1. A key here wins over the app-wide madeira.cfg while this game runs.\") { showConfig = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2340"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Share this game's setup",
+   "lines": [
+    75,
+    76
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Share this game's setup\") {",
+    "ActionRow(id: \"ge-share\", symbol: \"square.and.arrow.up\", title: \"Share this game's setup\", subtitle: \"A file for a chat or the Files app\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2341"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "A file for a chat or the Files app",
+   "lines": [
+    76
+   ],
+   "contexts": [
+    "ActionRow(id: \"ge-share\", symbol: \"square.and.arrow.up\", title: \"Share this game's setup\", subtitle: \"A file for a chat or the Files app\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2342"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Puts this game's launch options, per-game settings, engine choices and saved controls into one file you can send. It holds nothing of yours: no program path, account or play history.",
+   "lines": [
+    77
+   ],
+   "contexts": [
+    "info: \"Puts this game's launch options, per-game settings, engine choices and saved controls into one file you can send. It holds nothing of yours: no program path, account or play history.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2343"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Copy this setup as text",
+   "lines": [
+    80
+   ],
+   "contexts": [
+    "ActionRow(id: \"ge-share-text\", symbol: \"doc.on.doc\", title: \"Copy this setup as text\", subtitle: \"One line to paste into a message\", chevron: false) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2344"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "One line to paste into a message",
+   "lines": [
+    80
+   ],
+   "contexts": [
+    "ActionRow(id: \"ge-share-text\", symbol: \"doc.on.doc\", title: \"Copy this setup as text\", subtitle: \"One line to paste into a message\", chevron: false) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2345"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Apply a shared setup",
+   "lines": [
+    83
+   ],
+   "contexts": [
+    "ActionRow(id: \"ge-apply-setup\", symbol: \"square.and.arrow.down\", title: \"Apply a shared setup\", subtitle: \"From a file or the clipboard\") { showApplySetup = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2346"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "From a file or the clipboard",
+   "lines": [
+    83
+   ],
+   "contexts": [
+    "ActionRow(id: \"ge-apply-setup\", symbol: \"square.and.arrow.down\", title: \"Apply a shared setup\", subtitle: \"From a file or the clipboard\") { showApplySetup = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2347"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Home Screen shortcut",
+   "lines": [
+    85
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Home Screen shortcut\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2348"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Copy this game's shortcut link",
+   "lines": [
+    86
+   ],
+   "contexts": [
+    "ActionRow(id: \"ge-link\", symbol: \"link\", title: \"Copy this game's shortcut link\", subtitle: \"porthole://play\\u{2026}\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2349"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "porthole://play\\u{2026}",
+   "lines": [
+    86
+   ],
+   "contexts": [
+    "ActionRow(id: \"ge-link\", symbol: \"link\", title: \"Copy this game's shortcut link\", subtitle: \"porthole://play\\u{2026}\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2350"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Starts this game from outside the app. Copy the link, then in the Shortcuts app make a shortcut with an Open URL action that uses it, and choose Add to Home Screen.",
+   "lines": [
+    87
+   ],
+   "contexts": [
+    "info: \"Starts this game from outside the app. Copy the link, then in the Shortcuts app make a shortcut with an Open URL action that uses it, and choose Add to Home Screen.\", chevron: false) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2351"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Reset this game's engine settings",
+   "lines": [
+    92
+   ],
+   "contexts": [
+    "ActionRow(id: \"ge-reset\", symbol: \"arrow.counterclockwise\", title: \"Reset this game's engine settings\", chevron: false) { model.update(g) { $0.engine = nil }; workText = \"\" }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2352"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "None",
+   "lines": [
+    106
+   ],
+   "contexts": [
+    "return n == 0 ? \"None\" : \"\\(n) line\\(n == 1 ? \"\" : \"s\")\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2353"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "\\(n) line\\(n == 1 ? ",
+   "lines": [
+    106,
+    260
+   ],
+   "contexts": [
+    "return n == 0 ? \"None\" : \"\\(n) line\\(n == 1 ? \"\" : \"s\")\"",
+    "Text(n == 0 ? \"No lines yet.\" : \"\\(n) line\\(n == 1 ? \"\" : \"s\") will be used.\").font(.footnote).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2354"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Done",
+   "lines": [
+    137,
+    246
+   ],
+   "contexts": [
+    "PillButton(id: \"pb-close\", title: \"Done\", symbol: \"checkmark\") { dismiss() }",
+    "PillButton(id: \"gc-close\", title: \"Done\", symbol: \"checkmark\") { save(); dismiss() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2355"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "What each controller input does in this game. Anything you leave on its standard choice uses the usual keyboard-and-mouse layout.",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    "Text(\"What each controller input does in this game. Anything you leave on its standard choice uses the usual keyboard-and-mouse layout.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2356"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Change one by pressing it",
+   "lines": [
+    145
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Change one by pressing it\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2357"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Press the button, or push the stick, now\\u{2026}",
+   "lines": [
+    147
+   ],
+   "contexts": [
+    "ActionRow(id: \"pb-listen\", symbol: \"gamecontroller.fill\", title: \"Press the button, or push the stick, now\\u{2026}\", subtitle: \"Tap here to cancel\", chevron: false) { listener.stop() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2358"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Tap here to cancel",
+   "lines": [
+    147
+   ],
+   "contexts": [
+    "ActionRow(id: \"pb-listen\", symbol: \"gamecontroller.fill\", title: \"Press the button, or push the stick, now\\u{2026}\", subtitle: \"Tap here to cancel\", chevron: false) { listener.stop() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2359"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Press a controller button to change it",
+   "lines": [
+    149
+   ],
+   "contexts": [
+    "ActionRow(id: \"pb-press\", symbol: \"hand.point.up.left.fill\", title: \"Press a controller button to change it\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2360"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Then pick what it does",
+   "lines": [
+    150
+   ],
+   "contexts": [
+    "subtitle: heardNote ?? \"Then pick what it does\", chevron: false) { listen() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2361"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Sticks",
+   "lines": [
+    154
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Sticks\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2362"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "LS",
+   "lines": [
+    155,
+    185
+   ],
+   "contexts": [
+    "stickRow(g, \"LS\", title: \"Left stick\", symbol: \"l.joystick.fill\", custom: custom, standard: \"wasd\")",
+    "if name == \"LS\" { stickRow(g, \"LS\", title: \"Left stick does\", symbol: \"l.joystick.fill\", custom: custom, standard: \"wasd\", id: \"pb-picked\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2363"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Left stick",
+   "lines": [
+    155
+   ],
+   "contexts": [
+    "stickRow(g, \"LS\", title: \"Left stick\", symbol: \"l.joystick.fill\", custom: custom, standard: \"wasd\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2364"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "RS",
+   "lines": [
+    156,
+    186
+   ],
+   "contexts": [
+    "stickRow(g, \"RS\", title: \"Right stick\", symbol: \"r.joystick.fill\", custom: custom, standard: \"mouse\")",
+    "else if name == \"RS\" { stickRow(g, \"RS\", title: \"Right stick does\", symbol: \"r.joystick.fill\", custom: custom, standard: \"mouse\", id: \"pb-picked\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2365"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Right stick",
+   "lines": [
+    156
+   ],
+   "contexts": [
+    "stickRow(g, \"RS\", title: \"Right stick\", symbol: \"r.joystick.fill\", custom: custom, standard: \"mouse\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2366"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Buttons",
+   "lines": [
+    158
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Buttons\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2367"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Back to the standard layout",
+   "lines": [
+    162
+   ],
+   "contexts": [
+    "ActionRow(id: \"pb-reset\", symbol: \"arrow.counterclockwise\", title: \"Back to the standard layout\", chevron: false) { clear(g) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2368"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": " (standard)",
+   "lines": [
+    179,
+    190,
+    211
+   ],
+   "contexts": [
+    "options: PadActions.list.map { ($0.id, $0.label + ($0.id == standard ? \" (standard)\" : \"\")) },",
+    "options: PadActions.stickModes.map { ($0.id, $0.label + ($0.id == standard ? \" (standard)\" : \"\")) },"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2369"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Left stick does",
+   "lines": [
+    185
+   ],
+   "contexts": [
+    "if name == \"LS\" { stickRow(g, \"LS\", title: \"Left stick does\", symbol: \"l.joystick.fill\", custom: custom, standard: \"wasd\", id: \"pb-picked\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2370"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Right stick does",
+   "lines": [
+    186
+   ],
+   "contexts": [
+    "else if name == \"RS\" { stickRow(g, \"RS\", title: \"Right stick does\", symbol: \"r.joystick.fill\", custom: custom, standard: \"mouse\", id: \"pb-picked\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2371"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "\\(padKind.label(name)) does",
+   "lines": [
+    189
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"pb-picked\", symbol: \"circle.circle\", title: \"\\(padKind.label(name)) does\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2372"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "No controller is connected.",
+   "lines": [
+    199
+   ],
+   "contexts": [
+    "case \"\": heardNote = \"No controller is connected.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2373"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Nothing was pressed.",
+   "lines": [
+    200
+   ],
+   "contexts": [
+    "case \"-\": heardNote = \"Nothing was pressed.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2374"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "You pressed \\(name). Pick what it does below.",
+   "lines": [
+    203
+   ],
+   "contexts": [
+    "heardNote = \"You pressed \\(name). Pick what it does below.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2375"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Engine lines",
+   "lines": [
+    244
+   ],
+   "contexts": [
+    "Text(\"Engine lines\").font(.system(size: 26, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2376"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Lines in madeira.cfg's syntax, one per line, that apply only while \\(game?.name ?? ",
+   "lines": [
+    251
+   ],
+   "contexts": [
+    "Text(\"Lines in madeira.cfg's syntax, one per line, that apply only while \\(game?.name ?? \"this game\") runs. A key set here wins over the app-wide madeira.cfg. Examples: env.MADEIRA_FEX_AVX = 1, swap-mb = 2048. Lines starting with # are notes.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2377"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": ") runs. A key set here wins over the app-wide madeira.cfg. Examples: env.MADEIRA_FEX_AVX = 1, swap-mb = 2048. Lines starting with # are notes.",
+   "lines": [
+    251
+   ],
+   "contexts": [
+    "Text(\"Lines in madeira.cfg's syntax, one per line, that apply only while \\(game?.name ?? \"this game\") runs. A key set here wins over the app-wide madeira.cfg. Examples: env.MADEIRA_FEX_AVX = 1, swap-mb = 2048. Lines starting with # are notes.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2378"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "No lines yet.",
+   "lines": [
+    260
+   ],
+   "contexts": [
+    "Text(n == 0 ? \"No lines yet.\" : \"\\(n) line\\(n == 1 ? \"\" : \"s\") will be used.\").font(.footnote).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2379"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": ") will be used.",
+   "lines": [
+    260
+   ],
+   "contexts": [
+    "Text(n == 0 ? \"No lines yet.\" : \"\\(n) line\\(n == 1 ? \"\" : \"s\") will be used.\").font(.footnote).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2380"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameInfo.swift",
+   "text": "Under a minute",
+   "lines": [
+    9
+   ],
+   "contexts": [
+    "if m < 1 { return seconds > 0 ? \"Under a minute\" : \"None yet\" }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2381"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameInfo.swift",
+   "text": "None yet",
+   "lines": [
+    9
+   ],
+   "contexts": [
+    "if m < 1 { return seconds > 0 ? \"Under a minute\" : \"None yet\" }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2382"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameInfo.swift",
+   "text": "\\(m / 60) h \\(m % 60) min",
+   "lines": [
+    10
+   ],
+   "contexts": [
+    "return m >= 60 ? \"\\(m / 60) h \\(m % 60) min\" : \"\\(m) min\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2383"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameInfo.swift",
+   "text": "\\(m) min",
+   "lines": [
+    10
+   ],
+   "contexts": [
+    "return m >= 60 ? \"\\(m / 60) h \\(m % 60) min\" : \"\\(m) min\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2384"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameInfo.swift",
+   "text": "All 1 MB+",
+   "lines": [
+    13
+   ],
+   "contexts": [
+    "static func coverageName(_ v: String) -> String { v == \"blocks\" ? \"All 1 MB+\" : v == \"wide\" ? \"1 MB+ and overflow\" : v == \"broad\" ? \"Broad\" : \"Large (8 MB+)\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2385"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameInfo.swift",
+   "text": "1 MB+ and overflow",
+   "lines": [
+    13
+   ],
+   "contexts": [
+    "static func coverageName(_ v: String) -> String { v == \"blocks\" ? \"All 1 MB+\" : v == \"wide\" ? \"1 MB+ and overflow\" : v == \"broad\" ? \"Broad\" : \"Large (8 MB+)\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2386"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameInfo.swift",
+   "text": "Broad",
+   "lines": [
+    13
+   ],
+   "contexts": [
+    "static func coverageName(_ v: String) -> String { v == \"blocks\" ? \"All 1 MB+\" : v == \"wide\" ? \"1 MB+ and overflow\" : v == \"broad\" ? \"Broad\" : \"Large (8 MB+)\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2387"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameInfo.swift",
+   "text": "Large (8 MB+)",
+   "lines": [
+    13
+   ],
+   "contexts": [
+    "static func coverageName(_ v: String) -> String { v == \"blocks\" ? \"All 1 MB+\" : v == \"wide\" ? \"1 MB+ and overflow\" : v == \"broad\" ? \"Broad\" : \"Large (8 MB+)\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2388"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameInfo.swift",
+   "text": "Unknown",
+   "lines": [
+    34
+   ],
+   "contexts": [
+    "guard let bytes = await folderBytes(for: g) else { return \"Unknown\" }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2389"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Calculating\\u{2026}",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "@State private var sizeText = \"Calculating\\u{2026}\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2390"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Home",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "PillButton(id: \"gp-back\", title: \"Home\", symbol: \"chevron.left\") { leave() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2391"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Delete \\(game.name)'s files?",
+   "lines": [
+    95
+   ],
+   "contexts": [
+    ".confirm(\"Delete \\(game.name)'s files?\", message: \"This frees the space on the device. You can download it again from the Steam tab.\", confirmTitle: \"Delete files\", destructive: true, isPresented: $confirmDelete) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2392"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "This frees the space on the device. You can download it again from the Steam tab.",
+   "lines": [
+    95
+   ],
+   "contexts": [
+    ".confirm(\"Delete \\(game.name)'s files?\", message: \"This frees the space on the device. You can download it again from the Steam tab.\", confirmTitle: \"Delete files\", destructive: true, isPresented: $confirmDelete) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2393"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Delete files",
+   "lines": [
+    95
+   ],
+   "contexts": [
+    ".confirm(\"Delete \\(game.name)'s files?\", message: \"This frees the space on the device. You can download it again from the Steam tab.\", confirmTitle: \"Delete files\", destructive: true, isPresented: $confirmDelete) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2394"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Remove \\(game.name) from the library?",
+   "lines": [
+    99
+   ],
+   "contexts": [
+    ".confirm(\"Remove \\(game.name) from the library?\", message: \"The files stay on the device.\", confirmTitle: \"Remove\", destructive: true, isPresented: $confirmRemove) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2395"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "The files stay on the device.",
+   "lines": [
+    99
+   ],
+   "contexts": [
+    ".confirm(\"Remove \\(game.name) from the library?\", message: \"The files stay on the device.\", confirmTitle: \"Remove\", destructive: true, isPresented: $confirmRemove) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2396"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Remove",
+   "lines": [
+    99
+   ],
+   "contexts": [
+    ".confirm(\"Remove \\(game.name) from the library?\", message: \"The files stay on the device.\", confirmTitle: \"Remove\", destructive: true, isPresented: $confirmRemove) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2397"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "This game was removed",
+   "lines": [
+    104
+   ],
+   "contexts": [
+    "Text(\"This game was removed\").foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2398"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Back",
+   "lines": [
+    105,
+    438
+   ],
+   "contexts": [
+    "PillButton(id: \"gp-gone\", title: \"Back\", symbol: \"chevron.left\") { leave() }",
+    "PillButton(id: \"sub-back\", title: \"Back\", symbol: \"chevron.left\", action: close)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2399"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Last played",
+   "lines": [
+    140,
+    383
+   ],
+   "contexts": [
+    "let stats = [GameHeroStat(symbol: \"clock.fill\", title: \"Last played\", value: g.lastPlayed.map { RelativeDateTimeFormatter().localizedString(for: $0, relativeTo: Date()) } ?? \"Never\"),",
+    "ValueRow(id: \"gp-last\", symbol: \"clock.fill\", title: \"Last played\", value: g.lastPlayed.map { RelativeDateTimeFormatter().localizedString(for: $0, relativeTo: Date()) } ?? \"Never\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2400"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Never",
+   "lines": [
+    140,
+    383
+   ],
+   "contexts": [
+    "let stats = [GameHeroStat(symbol: \"clock.fill\", title: \"Last played\", value: g.lastPlayed.map { RelativeDateTimeFormatter().localizedString(for: $0, relativeTo: Date()) } ?? \"Never\"),",
+    "ValueRow(id: \"gp-last\", symbol: \"clock.fill\", title: \"Last played\", value: g.lastPlayed.map { RelativeDateTimeFormatter().localizedString(for: $0, relativeTo: Date()) } ?? \"Never\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2401"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Time played",
+   "lines": [
+    141,
+    384
+   ],
+   "contexts": [
+    "GameHeroStat(symbol: \"hourglass\", title: \"Time played\", value: GameInfo.duration(g.playSeconds ?? 0)),",
+    "ValueRow(id: \"gp-time\", symbol: \"hourglass\", title: \"Time played\", value: GameInfo.duration(g.playSeconds ?? 0))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2402"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "On this device",
+   "lines": [
+    142
+   ],
+   "contexts": [
+    "GameHeroStat(symbol: \"internaldrive.fill\", title: \"On this device\", value: sizeText)]"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2403"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Preparing",
+   "lines": [
+    143
+   ],
+   "contexts": [
+    "return GameHero(id: g.id, name: g.name, stats: stats, playTitle: preparing ? \"Preparing\" : \"Play\", playEnabled: !busy, play: { session.start(g) },"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2404"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Play",
+   "lines": [
+    143,
+    249
+   ],
+   "contexts": [
+    "return GameHero(id: g.id, name: g.name, stats: stats, playTitle: preparing ? \"Preparing\" : \"Play\", playEnabled: !busy, play: { session.start(g) },",
+    "SettingsGroup(title: \"Play\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2405"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Direct",
+   "lines": [
+    150
+   ],
+   "contexts": [
+    "if g.store == nil || (g.store == .steam && !steamLaunch) { GlowChip(text: \"Direct\", symbol: \"play.fill\", tint: .white) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2406"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "\\(bits)-bit",
+   "lines": [
+    151
+   ],
+   "contexts": [
+    "if let bits { GlowChip(text: \"\\(bits)-bit\", tint: .white) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2407"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "\\(r.text) \\u{00B7} \\(r.percent)%",
+   "lines": [
+    155
+   ],
+   "contexts": [
+    "GlowChip(text: \"\\(r.text) \\u{00B7} \\(r.percent)%\", symbol: r.score >= 7 ? \"hand.thumbsup.fill\" : (r.score >= 5 ? \"hand.thumbsup\" : \"hand.thumbsdown.fill\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2408"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Not yet tested",
+   "lines": [
+    162,
+    215,
+    346,
+    349
+   ],
+   "contexts": [
+    "else if compat.showBadges, compat.isUntested(g) { BadgePill(badge: BadgeData(symbol: \"questionmark.circle.fill\", text: \"Not yet tested\", tint: Theme.textDim)) }",
+    "return compat.hasReported(g) ? \"Not yet tested\" : \"Not yet tested \\u{00B7} be the first to report\"",
+    "ValueRow(id: \"gp-cv\", symbol: \"questionmark.circle.fill\", title: \"Not yet tested\", value: \"Engine changed\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2409"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Controls",
+   "lines": [
+    171
+   ],
+   "contexts": [
+    "var title: String { switch self { case .controls: \"Controls\"; case .compat: \"How it runs\"; case .more: \"More options\"; case .about: \"About and files\"; case .achievements: \"Achievements\"; case .friends: \"Friends playing\"; case .news: \"News and patch notes\"; case .workshop: \"Workshop\" } }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2410"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "How it runs",
+   "lines": [
+    171,
+    338
+   ],
+   "contexts": [
+    "var title: String { switch self { case .controls: \"Controls\"; case .compat: \"How it runs\"; case .more: \"More options\"; case .about: \"About and files\"; case .achievements: \"Achievements\"; case .friends: \"Friends playing\"; case .news: \"News and patch notes\"; case .workshop: \"Workshop\" } }",
+    "SettingsGroup(title: \"How it runs\") {"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2411"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "More options",
+   "lines": [
+    171,
+    189
+   ],
+   "contexts": [
+    "var title: String { switch self { case .controls: \"Controls\"; case .compat: \"How it runs\"; case .more: \"More options\"; case .about: \"About and files\"; case .achievements: \"Achievements\"; case .friends: \"Friends playing\"; case .news: \"News and patch notes\"; case .workshop: \"Workshop\" } }",
+    "ActionRow(id: \"gp-door-more\", symbol: \"slider.horizontal.3\", title: \"More options\", subtitle: \"Speed, memory, engine and launch options\") { open(.more) }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2412"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "About and files",
+   "lines": [
+    171,
+    190
+   ],
+   "contexts": [
+    "var title: String { switch self { case .controls: \"Controls\"; case .compat: \"How it runs\"; case .more: \"More options\"; case .about: \"About and files\"; case .achievements: \"Achievements\"; case .friends: \"Friends playing\"; case .news: \"News and patch notes\"; case .workshop: \"Workshop\" } }",
+    "ActionRow(id: \"gp-door-about\", symbol: \"info.circle.fill\", title: \"About and files\", subtitle: sizeText) { open(.about) }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2413"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Achievements",
+   "lines": [
+    171,
+    183
+   ],
+   "contexts": [
+    "var title: String { switch self { case .controls: \"Controls\"; case .compat: \"How it runs\"; case .more: \"More options\"; case .about: \"About and files\"; case .achievements: \"Achievements\"; case .friends: \"Friends playing\"; case .news: \"News and patch notes\"; case .workshop: \"Workshop\" } }",
+    "ActionRow(id: \"gp-door-achievements\", symbol: \"trophy.fill\", title: \"Achievements\", subtitle: progress.summary(for: g.steamAppID ?? g.dockAppID) ?? \"Your progress on Steam\") { open(.achievements) }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2414"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Friends playing",
+   "lines": [
+    171,
+    184
+   ],
+   "contexts": [
+    "var title: String { switch self { case .controls: \"Controls\"; case .compat: \"How it runs\"; case .more: \"More options\"; case .about: \"About and files\"; case .achievements: \"Achievements\"; case .friends: \"Friends playing\"; case .news: \"News and patch notes\"; case .workshop: \"Workshop\" } }",
+    "ActionRow(id: \"gp-door-friends\", symbol: \"person.2.fill\", title: \"Friends playing\", subtitle: friendsSubtitle(g.steamAppID ?? g.dockAppID ?? 0)) { open(.friends) }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2415"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "News and patch notes",
+   "lines": [
+    171,
+    180
+   ],
+   "contexts": [
+    "var title: String { switch self { case .controls: \"Controls\"; case .compat: \"How it runs\"; case .more: \"More options\"; case .about: \"About and files\"; case .achievements: \"Achievements\"; case .friends: \"Friends playing\"; case .news: \"News and patch notes\"; case .workshop: \"Workshop\" } }",
+    "ActionRow(id: \"gp-door-news\", symbol: \"newspaper.fill\", title: \"News and patch notes\", subtitle: \"From Steam\") { open(.news) }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2416"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Workshop",
+   "lines": [
+    171,
+    185
+   ],
+   "contexts": [
+    "var title: String { switch self { case .controls: \"Controls\"; case .compat: \"How it runs\"; case .more: \"More options\"; case .about: \"About and files\"; case .achievements: \"Achievements\"; case .friends: \"Friends playing\"; case .news: \"News and patch notes\"; case .workshop: \"Workshop\" } }",
+    "ActionRow(id: \"gp-door-workshop\", symbol: \"puzzlepiece.extension.fill\", title: \"Workshop\", subtitle: workshopSubtitle(g.steamAppID ?? g.dockAppID ?? 0), badge: \"Beta\") { open(.workshop) }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2417"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Explore",
+   "lines": [
+    176
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Explore\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2418"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Controls and key binds",
+   "lines": [
+    177
+   ],
+   "contexts": [
+    "ActionRow(id: \"gp-door-controls\", symbol: \"gamecontroller.fill\", title: \"Controls and key binds\", subtitle: (g.controls ?? .standard) == .firstPerson ? \"First person\" : \"Mouse and keys\") { open(.controls) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2419"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "First person",
+   "lines": [
+    177,
+    324
+   ],
+   "contexts": [
+    "ActionRow(id: \"gp-door-controls\", symbol: \"gamecontroller.fill\", title: \"Controls and key binds\", subtitle: (g.controls ?? .standard) == .firstPerson ? \"First person\" : \"Mouse and keys\") { open(.controls) }",
+    "options: [(ControlLayout.standard, \"Mouse and keys\"), (ControlLayout.firstPerson, \"First person\")],"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2420"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Mouse and keys",
+   "lines": [
+    177,
+    324
+   ],
+   "contexts": [
+    "ActionRow(id: \"gp-door-controls\", symbol: \"gamecontroller.fill\", title: \"Controls and key binds\", subtitle: (g.controls ?? .standard) == .firstPerson ? \"First person\" : \"Mouse and keys\") { open(.controls) }",
+    "options: [(ControlLayout.standard, \"Mouse and keys\"), (ControlLayout.firstPerson, \"First person\")],"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2421"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "How it runs for others",
+   "lines": [
+    178
+   ],
+   "contexts": [
+    "ActionRow(id: \"gp-door-compat\", symbol: \"checkmark.seal.fill\", title: \"How it runs for others\", subtitle: compatSummary(g)) { open(.compat) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2422"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "From Steam",
+   "lines": [
+    180
+   ],
+   "contexts": [
+    "ActionRow(id: \"gp-door-news\", symbol: \"newspaper.fill\", title: \"News and patch notes\", subtitle: \"From Steam\") { open(.news) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2423"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Your progress on Steam",
+   "lines": [
+    183
+   ],
+   "contexts": [
+    "ActionRow(id: \"gp-door-achievements\", symbol: \"trophy.fill\", title: \"Achievements\", subtitle: progress.summary(for: g.steamAppID ?? g.dockAppID) ?? \"Your progress on Steam\") { open(.achievements) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2424"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Beta",
+   "lines": [
+    185
+   ],
+   "contexts": [
+    "ActionRow(id: \"gp-door-workshop\", symbol: \"puzzlepiece.extension.fill\", title: \"Workshop\", subtitle: workshopSubtitle(g.steamAppID ?? g.dockAppID ?? 0), badge: \"Beta\") { open(.workshop) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2425"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Manage",
+   "lines": [
+    188
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Manage\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2426"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Speed, memory, engine and launch options",
+   "lines": [
+    189
+   ],
+   "contexts": [
+    "ActionRow(id: \"gp-door-more\", symbol: \"slider.horizontal.3\", title: \"More options\", subtitle: \"Speed, memory, engine and launch options\") { open(.more) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2427"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "\\(n) update\\(n == 1 ? ",
+   "lines": [
+    196
+   ],
+   "contexts": [
+    "return n > 0 ? \"\\(n) update\\(n == 1 ? \"\" : \"s\") available\" : \"Mods and community items\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2428"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": ") available",
+   "lines": [
+    196
+   ],
+   "contexts": [
+    "return n > 0 ? \"\\(n) update\\(n == 1 ? \"\" : \"s\") available\" : \"Mods and community items\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2429"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Mods and community items",
+   "lines": [
+    196
+   ],
+   "contexts": [
+    "return n > 0 ? \"\\(n) update\\(n == 1 ? \"\" : \"s\") available\" : \"Mods and community items\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2430"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Who of your Steam friends is in this game",
+   "lines": [
+    201
+   ],
+   "contexts": [
+    "guard friendsStore.loaded, friendsStore.error == nil || !friendsStore.friends.isEmpty else { return \"Who of your Steam friends is in this game\" }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2431"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Nobody right now",
+   "lines": [
+    204
+   ],
+   "contexts": [
+    "case 0: return \"Nobody right now\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2432"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "\\(names[0]) is playing now",
+   "lines": [
+    205
+   ],
+   "contexts": [
+    "case 1: return \"\\(names[0]) is playing now\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2433"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "\\(names.count) playing now",
+   "lines": [
+    206
+   ],
+   "contexts": [
+    "default: return \"\\(names.count) playing now\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2434"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Not yet tested \\u{00B7} be the first to report",
+   "lines": [
+    215
+   ],
+   "contexts": [
+    "return compat.hasReported(g) ? \"Not yet tested\" : \"Not yet tested \\u{00B7} be the first to report\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2435"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Start",
+   "lines": [
+    251
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"gp-mode\", symbol: \"shield.checkered\", title: \"Start\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2436"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Through Steam: Valve's own client checks your licence first. Most Steam games need this. Run directly: starts the game without Steam. Only use it for games that don't check Steam when they start; a game that does will freeze on its first screen.",
+   "lines": [
+    252
+   ],
+   "contexts": [
+    "info: \"Through Steam: Valve's own client checks your licence first. Most Steam games need this. Run directly: starts the game without Steam. Only use it for games that don't check Steam when they start; a game that does will freeze on its first screen.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2437"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Through Steam",
+   "lines": [
+    253
+   ],
+   "contexts": [
+    "options: [(false, \"Through Steam\"), (true, \"Run directly\")], selection: Binding(get: { g.launchDirect == true }, set: { model.setLaunchDirect($0, for: g) }))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2438"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Run directly",
+   "lines": [
+    253
+   ],
+   "contexts": [
+    "options: [(false, \"Through Steam\"), (true, \"Run directly\")], selection: Binding(get: { g.launchDirect == true }, set: { model.setLaunchDirect($0, for: g) }))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2439"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Resolution",
+   "lines": [
+    255
+   ],
+   "contexts": [
+    "OverrideRow(id: \"gp-res\", symbol: \"display\", title: \"Resolution\", info: \"The size of the screen this game sees. Default follows Settings > Play. Applies the next time the game starts.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2440"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "The size of the screen this game sees. Default follows Settings > Play. Applies the next time the game starts.",
+   "lines": [
+    255
+   ],
+   "contexts": [
+    "OverrideRow(id: \"gp-res\", symbol: \"display\", title: \"Resolution\", info: \"The size of the screen this game sees. Default follows Settings > Play. Applies the next time the game starts.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2441"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Power mode",
+   "lines": [
+    258
+   ],
+   "contexts": [
+    "OverrideRow(id: \"gp-power\", symbol: \"bolt.fill\", title: \"Power mode\", info: \"Default follows Settings > Play. Max runs up to the screen\\u{2019}s maximum (120 FPS on a ProMotion screen, otherwise 60), Saver is 30 FPS and cooler.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2442"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Default follows Settings > Play. Max runs up to the screen\\u{2019}s maximum (120 FPS on a ProMotion screen, otherwise 60), Saver is 30 FPS and cooler.",
+   "lines": [
+    258
+   ],
+   "contexts": [
+    "OverrideRow(id: \"gp-power\", symbol: \"bolt.fill\", title: \"Power mode\", info: \"Default follows Settings > Play. Max runs up to the screen\\u{2019}s maximum (120 FPS on a ProMotion screen, otherwise 60), Saver is 30 FPS and cooler.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2443"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Reset this game to the app-wide settings",
+   "lines": [
+    263
+   ],
+   "contexts": [
+    "ActionRow(id: \"gp-reset\", symbol: \"arrow.counterclockwise\", title: \"Reset this game to the app-wide settings\", chevron: false) { model.update(g) { $0.settings = nil } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2444"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "One-time installs",
+   "lines": [
+    271,
+    272
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"One-time installs\") {",
+    "ChoiceRow(id: \"gp-installs\", symbol: \"shippingbox.fill\", title: \"One-time installs\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2445"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Run at next start",
+   "lines": [
+    274
+   ],
+   "contexts": [
+    "options: [(true, \"Run at next start\"), (false, \"Skip\")],"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2446"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Skip",
+   "lines": [
+    274
+   ],
+   "contexts": [
+    "options: [(true, \"Run at next start\"), (false, \"Skip\")],"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2447"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Run them all again",
+   "lines": [
+    277
+   ],
+   "contexts": [
+    "ActionRow(id: \"gp-reinstall\", symbol: \"arrow.triangle.2.circlepath\", title: \"Run them all again\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2448"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Done: the next start runs them again.",
+   "lines": [
+    283
+   ],
+   "contexts": [
+    "reinstallNote = n > 0 ? \"Done: the next start runs them again.\" : \"Nothing was recorded; the next start runs what is missing.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2449"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Nothing was recorded; the next start runs what is missing.",
+   "lines": [
+    283
+   ],
+   "contexts": [
+    "reinstallNote = n > 0 ? \"Done: the next start runs them again.\" : \"Nothing was recorded; the next start runs what is missing.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2450"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "This game is not installed in Steam yet.",
+   "lines": [
+    285
+   ],
+   "contexts": [
+    "} else { reinstallNote = \"This game is not installed in Steam yet.\" }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2451"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Memory",
+   "lines": [
+    294
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Memory\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2452"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Swap",
+   "lines": [
+    295
+   ],
+   "contexts": [
+    "OverrideRow(id: \"gp-swap\", symbol: \"internaldrive.fill\", title: \"Swap\", value: s.swapMB, globalText: LaunchSettings.globalSwapMB == 0 ? \"Off\" : \"\\(LaunchSettings.globalSwapMB / 1024) GB\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2453"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Off",
+   "lines": [
+    295,
+    296,
+    303,
+    304,
+    306,
+    307,
+    308,
+    310,
+    311
+   ],
+   "contexts": [
+    "OverrideRow(id: \"gp-swap\", symbol: \"internaldrive.fill\", title: \"Swap\", value: s.swapMB, globalText: LaunchSettings.globalSwapMB == 0 ? \"Off\" : \"\\(LaunchSettings.globalSwapMB / 1024) GB\",",
+    "options: [(0, \"Off\"), (1024, \"1 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")]) { v in setting(g) { $0.swapMB = v } }",
+    "OverrideRow(id: \"gp-hot\", symbol: \"thermometer.high\", title: \"Keep mode when hot\", value: s.keepModeWhenHot, globalText: PowerManager.shared.ignoreHeat ? \"On\" : \"Off\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2454"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "\\(LaunchSettings.globalSwapMB / 1024) GB",
+   "lines": [
+    295
+   ],
+   "contexts": [
+    "OverrideRow(id: \"gp-swap\", symbol: \"internaldrive.fill\", title: \"Swap\", value: s.swapMB, globalText: LaunchSettings.globalSwapMB == 0 ? \"Off\" : \"\\(LaunchSettings.globalSwapMB / 1024) GB\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2455"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "1 GB",
+   "lines": [
+    296,
+    300
+   ],
+   "contexts": [
+    "options: [(0, \"Off\"), (1024, \"1 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")]) { v in setting(g) { $0.swapMB = v } }",
+    "options: [(0, \"Automatic\"), (512, \"512 MB\"), (1024, \"1 GB\"), (1536, \"1.5 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")]) { v in setting(g) { $0.vramMB = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2456"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "2 GB",
+   "lines": [
+    296,
+    300
+   ],
+   "contexts": [
+    "options: [(0, \"Off\"), (1024, \"1 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")]) { v in setting(g) { $0.swapMB = v } }",
+    "options: [(0, \"Automatic\"), (512, \"512 MB\"), (1024, \"1 GB\"), (1536, \"1.5 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")]) { v in setting(g) { $0.vramMB = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2457"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "3 GB",
+   "lines": [
+    296,
+    300
+   ],
+   "contexts": [
+    "options: [(0, \"Off\"), (1024, \"1 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")]) { v in setting(g) { $0.swapMB = v } }",
+    "options: [(0, \"Automatic\"), (512, \"512 MB\"), (1024, \"1 GB\"), (1536, \"1.5 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")]) { v in setting(g) { $0.vramMB = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2458"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "4 GB",
+   "lines": [
+    296,
+    300
+   ],
+   "contexts": [
+    "options: [(0, \"Off\"), (1024, \"1 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")]) { v in setting(g) { $0.swapMB = v } }",
+    "options: [(0, \"Automatic\"), (512, \"512 MB\"), (1024, \"1 GB\"), (1536, \"1.5 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")]) { v in setting(g) { $0.vramMB = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2459"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Swap covers",
+   "lines": [
+    297
+   ],
+   "contexts": [
+    "OverrideRow(id: \"gp-cover\", symbol: \"square.stack.3d.up.fill\", title: \"Swap covers\", value: s.swapCoverage, globalText: GameInfo.coverageName(LaunchSettings.globalSwapCoverage),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2460"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Large (8 MB+)",
+   "lines": [
+    298
+   ],
+   "contexts": [
+    "options: [(\"\", \"Large (8 MB+)\"), (\"blocks\", \"All 1 MB+\"), (\"wide\", \"1 MB+ and overflow\"), (\"broad\", \"Broad\")]) { v in setting(g) { $0.swapCoverage = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2461"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "All 1 MB+",
+   "lines": [
+    298
+   ],
+   "contexts": [
+    "options: [(\"\", \"Large (8 MB+)\"), (\"blocks\", \"All 1 MB+\"), (\"wide\", \"1 MB+ and overflow\"), (\"broad\", \"Broad\")]) { v in setting(g) { $0.swapCoverage = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2462"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "1 MB+ and overflow",
+   "lines": [
+    298
+   ],
+   "contexts": [
+    "options: [(\"\", \"Large (8 MB+)\"), (\"blocks\", \"All 1 MB+\"), (\"wide\", \"1 MB+ and overflow\"), (\"broad\", \"Broad\")]) { v in setting(g) { $0.swapCoverage = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2463"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Broad",
+   "lines": [
+    298
+   ],
+   "contexts": [
+    "options: [(\"\", \"Large (8 MB+)\"), (\"blocks\", \"All 1 MB+\"), (\"wide\", \"1 MB+ and overflow\"), (\"broad\", \"Broad\")]) { v in setting(g) { $0.swapCoverage = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2464"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Video memory",
+   "lines": [
+    299
+   ],
+   "contexts": [
+    "OverrideRow(id: \"gp-vram\", symbol: \"memorychip.fill\", title: \"Video memory\", value: s.vramMB, globalText: LaunchSettings.globalVramMB == 0 ? \"Automatic\" : \"\\(LaunchSettings.globalVramMB) MB\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2465"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Automatic",
+   "lines": [
+    299,
+    300
+   ],
+   "contexts": [
+    "OverrideRow(id: \"gp-vram\", symbol: \"memorychip.fill\", title: \"Video memory\", value: s.vramMB, globalText: LaunchSettings.globalVramMB == 0 ? \"Automatic\" : \"\\(LaunchSettings.globalVramMB) MB\",",
+    "options: [(0, \"Automatic\"), (512, \"512 MB\"), (1024, \"1 GB\"), (1536, \"1.5 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")]) { v in setting(g) { $0.vramMB = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2466"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "\\(LaunchSettings.globalVramMB) MB",
+   "lines": [
+    299
+   ],
+   "contexts": [
+    "OverrideRow(id: \"gp-vram\", symbol: \"memorychip.fill\", title: \"Video memory\", value: s.vramMB, globalText: LaunchSettings.globalVramMB == 0 ? \"Automatic\" : \"\\(LaunchSettings.globalVramMB) MB\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2467"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "512 MB",
+   "lines": [
+    300
+   ],
+   "contexts": [
+    "options: [(0, \"Automatic\"), (512, \"512 MB\"), (1024, \"1 GB\"), (1536, \"1.5 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")]) { v in setting(g) { $0.vramMB = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2468"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "1.5 GB",
+   "lines": [
+    300
+   ],
+   "contexts": [
+    "options: [(0, \"Automatic\"), (512, \"512 MB\"), (1024, \"1 GB\"), (1536, \"1.5 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")]) { v in setting(g) { $0.vramMB = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2469"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Speed",
+   "lines": [
+    302
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Speed\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2470"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Keep mode when hot",
+   "lines": [
+    303
+   ],
+   "contexts": [
+    "OverrideRow(id: \"gp-hot\", symbol: \"thermometer.high\", title: \"Keep mode when hot\", value: s.keepModeWhenHot, globalText: PowerManager.shared.ignoreHeat ? \"On\" : \"Off\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2471"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "On",
+   "lines": [
+    303,
+    304,
+    307,
+    308,
+    310,
+    311
+   ],
+   "contexts": [
+    "OverrideRow(id: \"gp-hot\", symbol: \"thermometer.high\", title: \"Keep mode when hot\", value: s.keepModeWhenHot, globalText: PowerManager.shared.ignoreHeat ? \"On\" : \"Off\",",
+    "options: [(true, \"On\"), (false, \"Off\")]) { v in setting(g) { $0.keepModeWhenHot = v } }",
+    "OverrideRow(id: \"gp-math\", symbol: \"function\", title: \"Precise shader math\", value: s.preciseMath, globalText: SessionController.preciseMath ? \"On\" : \"Off\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2472"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Audio buffer",
+   "lines": [
+    305
+   ],
+   "contexts": [
+    "OverrideRow(id: \"gp-audio\", symbol: \"waveform\", title: \"Audio buffer\", value: s.audioCushionMs, globalText: \"\\(SessionController.audioCushionMs) ms\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2473"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "\\(SessionController.audioCushionMs) ms",
+   "lines": [
+    305
+   ],
+   "contexts": [
+    "OverrideRow(id: \"gp-audio\", symbol: \"waveform\", title: \"Audio buffer\", value: s.audioCushionMs, globalText: \"\\(SessionController.audioCushionMs) ms\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2474"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "40 ms",
+   "lines": [
+    306
+   ],
+   "contexts": [
+    "options: [(0, \"Off\"), (40, \"40 ms\"), (80, \"80 ms\"), (160, \"160 ms\"), (300, \"300 ms\")]) { v in setting(g) { $0.audioCushionMs = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2475"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "80 ms",
+   "lines": [
+    306
+   ],
+   "contexts": [
+    "options: [(0, \"Off\"), (40, \"40 ms\"), (80, \"80 ms\"), (160, \"160 ms\"), (300, \"300 ms\")]) { v in setting(g) { $0.audioCushionMs = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2476"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "160 ms",
+   "lines": [
+    306
+   ],
+   "contexts": [
+    "options: [(0, \"Off\"), (40, \"40 ms\"), (80, \"80 ms\"), (160, \"160 ms\"), (300, \"300 ms\")]) { v in setting(g) { $0.audioCushionMs = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2477"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "300 ms",
+   "lines": [
+    306
+   ],
+   "contexts": [
+    "options: [(0, \"Off\"), (40, \"40 ms\"), (80, \"80 ms\"), (160, \"160 ms\"), (300, \"300 ms\")]) { v in setting(g) { $0.audioCushionMs = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2478"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Precise shader math",
+   "lines": [
+    307
+   ],
+   "contexts": [
+    "OverrideRow(id: \"gp-math\", symbol: \"function\", title: \"Precise shader math\", value: s.preciseMath, globalText: SessionController.preciseMath ? \"On\" : \"Off\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2479"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Wine desktop display",
+   "lines": [
+    310
+   ],
+   "contexts": [
+    "OverrideRow(id: \"gp-desk\", symbol: \"macwindow\", title: \"Wine desktop display\", value: s.dockDesktop, globalText: SessionController.dockDesktop ? \"On\" : \"Off\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2480"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "On-screen controls",
+   "lines": [
+    320
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"On-screen controls\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2481"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Layout",
+   "lines": [
+    321
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"gp-layout\", symbol: \"gamecontroller.fill\", title: \"Layout\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2482"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Left stick walks (W A S D). Drag on the right half of the screen to look. Buttons: jump, crouch, use, reload, sprint, fire and aim.",
+   "lines": [
+    322
+   ],
+   "contexts": [
+    "info: first ? \"Left stick walks (W A S D). Drag on the right half of the screen to look. Buttons: jump, crouch, use, reload, sprint, fire and aim.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2483"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Tap to click, drag to hold the button, press and hold for right click, pinch to zoom, with E / F / Tab / Esc always on screen.",
+   "lines": [
+    323
+   ],
+   "contexts": [
+    ": \"Tap to click, drag to hold the button, press and hold for right click, pinch to zoom, with E / F / Tab / Esc always on screen.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2484"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Look sensitivity",
+   "lines": [
+    328
+   ],
+   "contexts": [
+    "SliderRow(id: \"gp-look\", symbol: \"scope\", title: \"Look sensitivity\" + (g.settings?.lookSensitivity == nil ? \" (default)\" : \"\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2485"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": " (default)",
+   "lines": [
+    328
+   ],
+   "contexts": [
+    "SliderRow(id: \"gp-look\", symbol: \"scope\", title: \"Look sensitivity\" + (g.settings?.lookSensitivity == nil ? \" (default)\" : \"\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2486"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "%.1f\\u{00D7}",
+   "lines": [
+    329
+   ],
+   "contexts": [
+    "value: Binding(get: { current }, set: { v in setting(g) { $0.lookSensitivity = v } }), range: LaunchSettings.lookRange, step: 0.1, format: { String(format: \"%.1f\\u{00D7}\", $0) })"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2487"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Use the app-wide look sensitivity",
+   "lines": [
+    330
+   ],
+   "contexts": [
+    "if g.settings?.lookSensitivity != nil { ActionRow(id: \"gp-look-reset\", symbol: \"arrow.counterclockwise\", title: \"Use the app-wide look sensitivity\", chevron: false) { setting(g) { $0.lookSensitivity = nil } } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2488"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "\\(overall.reports) report\\(overall.reports == 1 ? ",
+   "lines": [
+    340
+   ],
+   "contexts": [
+    "ValueRow(id: \"gp-cv\", symbol: overall.verdict.symbol, title: overall.verdict.title, value: \"\\(overall.reports) report\\(overall.reports == 1 ? \"\" : \"s\")\", statusColor: overall.verdict.color)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2489"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Based on reports from other people on this version of the game engine.",
+   "lines": [
+    341
+   ],
+   "contexts": [
+    "Text(\"Based on reports from other people on this version of the game engine.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2490"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "\\(badge.earlier?.reports ?? 0) earlier report\\((badge.earlier?.reports ?? 0) == 1 ? ",
+   "lines": [
+    343
+   ],
+   "contexts": [
+    "ValueRow(id: \"gp-cv\", symbol: past.symbol, title: past.text, value: \"\\(badge.earlier?.reports ?? 0) earlier report\\((badge.earlier?.reports ?? 0) == 1 ? \"\" : \"s\")\", statusColor: past.color)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2491"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Engine changed",
+   "lines": [
+    346
+   ],
+   "contexts": [
+    "ValueRow(id: \"gp-cv\", symbol: \"questionmark.circle.fill\", title: \"Not yet tested\", value: \"Engine changed\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2492"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "The game engine changed since the \\(badge.earlier?.reports ?? 0) earlier report\\((badge.earlier?.reports ?? 0) == 1 ? ",
+   "lines": [
+    347
+   ],
+   "contexts": [
+    "Text(\"The game engine changed since the \\(badge.earlier?.reports ?? 0) earlier report\\((badge.earlier?.reports ?? 0) == 1 ? \"\" : \"s\"), so there is no verdict on this version yet.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2493"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "), so there is no verdict on this version yet.",
+   "lines": [
+    347
+   ],
+   "contexts": [
+    "Text(\"The game engine changed since the \\(badge.earlier?.reports ?? 0) earlier report\\((badge.earlier?.reports ?? 0) == 1 ? \"\" : \"s\"), so there is no verdict on this version yet.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2494"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "No reports",
+   "lines": [
+    349
+   ],
+   "contexts": [
+    "ValueRow(id: \"gp-cv\", symbol: \"questionmark.circle.fill\", title: \"Not yet tested\", value: \"No reports\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2495"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Nobody has reported this game yet. Play it for a few minutes and send the first report.",
+   "lines": [
+    350
+   ],
+   "contexts": [
+    "Text(\"Nobody has reported this game yet. Play it for a few minutes and send the first report.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2496"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "No reports for this game yet",
+   "lines": [
+    352
+   ],
+   "contexts": [
+    "ValueRow(id: \"gp-cv\", symbol: \"questionmark.circle\", title: \"No reports for this game yet\", value: \"\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2497"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "See reports",
+   "lines": [
+    356
+   ],
+   "contexts": [
+    "ActionRow(id: \"gp-reports\", symbol: \"list.bullet.rectangle\", title: \"See reports\") { ask { browsing = true } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2498"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Update my report",
+   "lines": [
+    361
+   ],
+   "contexts": [
+    "title: reported ? \"Update my report\" : (untested ? (earlier > 0 ? \"Report how it runs on this version\" : \"Be the first to report\") : \"Write a report\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2499"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Report how it runs on this version",
+   "lines": [
+    361
+   ],
+   "contexts": [
+    "title: reported ? \"Update my report\" : (untested ? (earlier > 0 ? \"Report how it runs on this version\" : \"Be the first to report\") : \"Write a report\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2500"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Be the first to report",
+   "lines": [
+    361
+   ],
+   "contexts": [
+    "title: reported ? \"Update my report\" : (untested ? (earlier > 0 ? \"Report how it runs on this version\" : \"Be the first to report\") : \"Write a report\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2501"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Write a report",
+   "lines": [
+    361
+   ],
+   "contexts": [
+    "title: reported ? \"Update my report\" : (untested ? (earlier > 0 ? \"Report how it runs on this version\" : \"Be the first to report\") : \"Write a report\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2502"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "You reported on this version.",
+   "lines": [
+    362
+   ],
+   "contexts": [
+    "subtitle: reported ? \"You reported on this version.\" : (untested ? \"Nobody has told us how it runs on this version yet. It takes under a minute.\" : nil),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2503"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Nobody has told us how it runs on this version yet. It takes under a minute.",
+   "lines": [
+    362
+   ],
+   "contexts": [
+    "subtitle: reported ? \"You reported on this version.\" : (untested ? \"Nobody has told us how it runs on this version yet. It takes under a minute.\" : nil),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2504"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Launch",
+   "lines": [
+    370
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Launch\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2505"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "none",
+   "lines": [
+    371
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"gp-args\", symbol: \"chevron.left.forwardslash.chevron.right\", title: \"Launch options\", placeholder: \"none\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2506"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Launch options",
+   "lines": [
+    371
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"gp-args\", symbol: \"chevron.left.forwardslash.chevron.right\", title: \"Launch options\", placeholder: \"none\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2507"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Extra command-line options for the program, separated by spaces.",
+   "lines": [
+    372
+   ],
+   "contexts": [
+    "info: \"Extra command-line options for the program, separated by spaces.\", monospaced: true,"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2508"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Show Windows windows",
+   "lines": [
+    374
+   ],
+   "contexts": [
+    "ToggleRow(id: \"gp-windows\", symbol: \"macwindow\", title: \"Show Windows windows\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2509"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Draws ordinary Windows windows, like launchers and installers. Games that draw their own picture don't need it.",
+   "lines": [
+    375
+   ],
+   "contexts": [
+    "info: \"Draws ordinary Windows windows, like launchers and installers. Games that draw their own picture don't need it.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2510"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "About this game",
+   "lines": [
+    382
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"About this game\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2511"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Size on disk",
+   "lines": [
+    385
+   ],
+   "contexts": [
+    "ValueRow(id: \"gp-size\", symbol: \"internaldrive.fill\", title: \"Size on disk\", value: sizeText)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2512"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Program",
+   "lines": [
+    386
+   ],
+   "contexts": [
+    "ActionRow(id: \"gp-exe\", symbol: \"terminal.fill\", title: \"Program\", subtitle: g.exe, detail: \"Change\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2513"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Change",
+   "lines": [
+    386
+   ],
+   "contexts": [
+    "ActionRow(id: \"gp-exe\", symbol: \"terminal.fill\", title: \"Program\", subtitle: g.exe, detail: \"Change\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2514"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Pick another program from this game's folder to start. The game stays in your library with its Steam link, settings and play time.",
+   "lines": [
+    387
+   ],
+   "contexts": [
+    "info: \"Pick another program from this game's folder to start. The game stays in your library with its Steam link, settings and play time.\") { changingProgram = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2515"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Files",
+   "lines": [
+    389
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Files\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2516"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Verify and update files",
+   "lines": [
+    391
+   ],
+   "contexts": [
+    "ActionRow(id: \"gp-verify\", symbol: \"arrow.triangle.2.circlepath\", title: \"Verify and update files\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2517"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Steam has a newer build. Only the changed parts are downloaded.",
+   "lines": [
+    392
+   ],
+   "contexts": [
+    "subtitle: steam.updateAvailable(owned) ? \"Steam has a newer build. Only the changed parts are downloaded.\" : \"Checks every file against Steam (a few minutes) and downloads only what is missing or damaged.\", chevron: false) { steam.verify(id) }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2518"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Checks every file against Steam (a few minutes) and downloads only what is missing or damaged.",
+   "lines": [
+    392
+   ],
+   "contexts": [
+    "subtitle: steam.updateAvailable(owned) ? \"Steam has a newer build. Only the changed parts are downloaded.\" : \"Checks every file against Steam (a few minutes) and downloads only what is missing or damaged.\", chevron: false) { steam.verify(id) }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2519"
+  }
+ ]
+}

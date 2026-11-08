@@ -1,0 +1,2936 @@
+{
+ "batch": 13,
+ "units": [
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Installed version",
+   "lines": [
+    512
+   ],
+   "contexts": [
+    "ValueRow(id: \"ep-d-ver\", symbol: \"number\", title: \"Installed version\", value: record.buildVersion.isEmpty ? \"Unknown\" : record.buildVersion)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2160"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Unknown",
+   "lines": [
+    512
+   ],
+   "contexts": [
+    "ValueRow(id: \"ep-d-ver\", symbol: \"number\", title: \"Installed version\", value: record.buildVersion.isEmpty ? \"Unknown\" : record.buildVersion)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2161"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Download size",
+   "lines": [
+    514
+   ],
+   "contexts": [
+    "if let p = install?.progress, p.totalBytes > 0 { ValueRow(id: \"ep-d-size\", symbol: \"externaldrive.fill\", title: \"Download size\", value: EpicText.size(p.totalBytes)) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2162"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Files and links",
+   "lines": [
+    519
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Files and links\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2163"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Find on the Epic Games Store",
+   "lines": [
+    520
+   ],
+   "contexts": [
+    "ActionRow(id: \"ep-web\", symbol: \"safari\", title: \"Find on the Epic Games Store\", chevron: false) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2164"
+  },
+  {
+   "file": "app/Sources/UI/Game/ChangeProgramSheet.swift",
+   "text": "Choose the program",
+   "lines": [
+    24
+   ],
+   "contexts": [
+    "GameSubSheet(title: \"Choose the program\", scope: scope, close: close) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2165"
+  },
+  {
+   "file": "app/Sources/UI/Game/ChangeProgramSheet.swift",
+   "text": "Now",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Now\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2166"
+  },
+  {
+   "file": "app/Sources/UI/Game/ChangeProgramSheet.swift",
+   "text": "No programs were found in \\(rootPath).",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "Text(\"No programs were found in \\(rootPath).\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2167"
+  },
+  {
+   "file": "app/Sources/UI/Game/ChangeProgramSheet.swift",
+   "text": "Use this program",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "ProgramChooserView(name: game.name, programs: programs, actionTitle: \"Use this program\") { pick($0.file.path) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2168"
+  },
+  {
+   "file": "app/Sources/UI/Game/ChangeProgramSheet.swift",
+   "text": "Looking in the game\\u{2019}s folder\\u{2026}",
+   "lines": [
+    35
+   ],
+   "contexts": [
+    "HStack(spacing: 10) { ProgressView().tint(Theme.accent); Text(\"Looking in the game\\u{2019}s folder\\u{2026}\").foregroundStyle(Theme.textDim) }.padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2169"
+  },
+  {
+   "file": "app/Sources/UI/Game/ChangeProgramSheet.swift",
+   "text": "Somewhere else",
+   "lines": [
+    37
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Somewhere else\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2170"
+  },
+  {
+   "file": "app/Sources/UI/Game/ChangeProgramSheet.swift",
+   "text": "Program",
+   "lines": [
+    38
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"cp-path\", symbol: \"pencil\", title: \"Program\", placeholder: #\"C:\\Games\\Foo\\foo.exe\"#, monospaced: true, text: $manual)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2171"
+  },
+  {
+   "file": "app/Sources/UI/Game/ChangeProgramSheet.swift",
+   "text": "Use this path",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    "PillButton(id: \"cp-go\", title: \"Use this path\", symbol: \"checkmark\", style: .primary, enabled: !manual.trimmingCharacters(in: .whitespaces).isEmpty) { pick(manual) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2172"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "In use",
+   "lines": [
+    21,
+    33,
+    480
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"In use\") {",
+    "detail: set.id == g.activeBindSetID ? \"In use\" : nil) { editing = set.id }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2173"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Bind set in use",
+   "lines": [
+    22,
+    481
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"bs-active\", symbol: \"checkmark.circle.fill\", title: \"Bind set in use\",",
+    "ChoiceRow(id: \"ig-active\", symbol: \"checkmark.circle.fill\", title: \"Bind set in use\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2174"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Only one set is used at a time. Standard leaves this game's own Controls and Engine settings exactly as they are. A set with controller binds switches the controller to keyboard and mouse for this game; a set with a touch layout replaces the on-screen controls. Applies the next time the game starts.",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "info: \"Only one set is used at a time. Standard leaves this game's own Controls and Engine settings exactly as they are. A set with controller binds switches the controller to keyboard and mouse for this game; a set with a touch layout replaces the on-screen controls. Applies the next time the game"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2175"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Standard",
+   "lines": [
+    24,
+    482
+   ],
+   "contexts": [
+    "options: [(UUID?.none, \"Standard\")] + sets.map { (Optional($0.id), $0.name) },"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2176"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "\\(active.name): \\(active.summary.lowercased()).",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "Text(\"\\(active.name): \\(active.summary.lowercased()).\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2177"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Your sets",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Your sets\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2178"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "No sets yet. Make one from this game's current controls, or import one from a file.",
+   "lines": [
+    36
+   ],
+   "contexts": [
+    "Text(\"No sets yet. Make one from this game's current controls, or import one from a file.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2179"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "New bind set",
+   "lines": [
+    38
+   ],
+   "contexts": [
+    "ActionRow(id: \"bs-new\", symbol: \"plus.circle.fill\", title: \"New bind set\", subtitle: \"Starts from this game's current controller settings\", chevron: false) { create(g) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2180"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Starts from this game's current controller settings",
+   "lines": [
+    38
+   ],
+   "contexts": [
+    "ActionRow(id: \"bs-new\", symbol: \"plus.circle.fill\", title: \"New bind set\", subtitle: \"Starts from this game's current controller settings\", chevron: false) { create(g) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2181"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Import from a file\\u{2026}",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    "ActionRow(id: \"bs-import\", symbol: \"square.and.arrow.down\", title: \"Import from a file\\u{2026}\", subtitle: \".portholebinds\", chevron: false) { importing = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2182"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": ".portholebinds",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    "ActionRow(id: \"bs-import\", symbol: \"square.and.arrow.down\", title: \"Import from a file\\u{2026}\", subtitle: \".portholebinds\", chevron: false) { importing = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2183"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Community",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Community\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2184"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Shared binds for this game",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "ActionRow(id: \"bs-browse\", symbol: \"person.2.fill\", title: \"Shared binds for this game\", subtitle: \"Binds and touch layouts other people shared; rate them and add the ones you like\", chevron: true) { browsing = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2185"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Binds and touch layouts other people shared; rate them and add the ones you like",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "ActionRow(id: \"bs-browse\", symbol: \"person.2.fill\", title: \"Shared binds for this game\", subtitle: \"Binds and touch layouts other people shared; rate them and add the ones you like\", chevron: true) { browsing = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2186"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "My binds",
+   "lines": [
+    60,
+    522
+   ],
+   "contexts": [
+    "var set = BindSet(name: uniqueName(\"My binds\", in: g.bindSets ?? []))",
+    "var set = BindSet(name: \"My binds\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2187"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Imported \\(set.name).",
+   "lines": [
+    72
+   ],
+   "contexts": [
+    "message = \"Imported \\(set.name).\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2188"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "\\(base) \\(n)",
+   "lines": [
+    82,
+    83
+   ],
+   "contexts": [
+    "while sets.contains(where: { $0.name == \"\\(base) \\(n)\" }) { n += 1 }",
+    "return \"\\(base) \\(n)\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2189"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Bind set",
+   "lines": [
+    108
+   ],
+   "contexts": [
+    "Text(\"Bind set\").font(.system(size: 26, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2190"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Done",
+   "lines": [
+    110,
+    273
+   ],
+   "contexts": [
+    "PillButton(id: \"be-close\", title: \"Done\", symbol: \"checkmark\") { dismiss() }",
+    "Button(\"Done\") { dismiss() }.font(.system(size: 16, weight: .bold, design: .rounded)).foregroundStyle(Theme.accent)"
+   ],
+   "reasons": [
+    "named-param-string-component",
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2191"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "About this set",
+   "lines": [
+    129
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"About this set\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2192"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Name",
+   "lines": [
+    130
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"be-name\", symbol: \"textformat\", title: \"Name\", placeholder: \"Name\", text: Binding(get: { s.name }, set: { v in change { $0.name = BindSetFile.clean(v, 40) } }))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2193"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Notes",
+   "lines": [
+    131
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"be-notes\", symbol: \"text.alignleft\", title: \"Notes\", placeholder: \"What it is for\", text: Binding(get: { s.notes }, set: { v in change { $0.notes = BindSetFile.clean(v, 300) } }))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2194"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "What it is for",
+   "lines": [
+    131
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"be-notes\", symbol: \"text.alignleft\", title: \"Notes\", placeholder: \"What it is for\", text: Binding(get: { s.notes }, set: { v in change { $0.notes = BindSetFile.clean(v, 300) } }))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2195"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Use this set",
+   "lines": [
+    132
+   ],
+   "contexts": [
+    "ToggleRow(id: \"be-use\", symbol: \"checkmark.circle.fill\", title: \"Use this set\", info: \"Only one set is used at a time. Applies the next time the game starts.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2196"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Only one set is used at a time. Applies the next time the game starts.",
+   "lines": [
+    132
+   ],
+   "contexts": [
+    "ToggleRow(id: \"be-use\", symbol: \"checkmark.circle.fill\", title: \"Use this set\", info: \"Only one set is used at a time. Applies the next time the game starts.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2197"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "This set",
+   "lines": [
+    138
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"This set\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2198"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Export to a file",
+   "lines": [
+    139
+   ],
+   "contexts": [
+    "ActionRow(id: \"be-export\", symbol: \"square.and.arrow.up\", title: \"Export to a file\", subtitle: \".portholebinds, to keep or send\", chevron: false) { export(g, s) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2199"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": ".portholebinds, to keep or send",
+   "lines": [
+    139
+   ],
+   "contexts": [
+    "ActionRow(id: \"be-export\", symbol: \"square.and.arrow.up\", title: \"Export to a file\", subtitle: \".portholebinds, to keep or send\", chevron: false) { export(g, s) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2200"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Duplicate",
+   "lines": [
+    140
+   ],
+   "contexts": [
+    "ActionRow(id: \"be-dup\", symbol: \"plus.square.on.square\", title: \"Duplicate\", chevron: false) { duplicate(g, s) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2201"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Delete this set",
+   "lines": [
+    141
+   ],
+   "contexts": [
+    "ActionRow(id: \"be-del\", symbol: \"trash\", title: \"Delete this set\", destructive: true, chevron: false) { confirmDelete = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2202"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Delete \\(s.name)?",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    ".confirm(\"Delete \\(s.name)?\", message: \"The set is removed from this game. Other games are not affected.\", confirmTitle: \"Delete\", destructive: true, isPresented: $confirmDelete) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2203"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "The set is removed from this game. Other games are not affected.",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    ".confirm(\"Delete \\(s.name)?\", message: \"The set is removed from this game. Other games are not affected.\", confirmTitle: \"Delete\", destructive: true, isPresented: $confirmDelete) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2204"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Delete",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    ".confirm(\"Delete \\(s.name)?\", message: \"The set is removed from this game. Other games are not affected.\", confirmTitle: \"Delete\", destructive: true, isPresented: $confirmDelete) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2205"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Replace the touch layout?",
+   "lines": [
+    148
+   ],
+   "contexts": [
+    ".confirm(\"Replace the touch layout?\", message: \"This set's layout is replaced by the starting point you chose.\", confirmTitle: \"Replace\", destructive: true,"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2206"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "This set's layout is replaced by the starting point you chose.",
+   "lines": [
+    148
+   ],
+   "contexts": [
+    ".confirm(\"Replace the touch layout?\", message: \"This set's layout is replaced by the starting point you chose.\", confirmTitle: \"Replace\", destructive: true,"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2207"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Replace",
+   "lines": [
+    148
+   ],
+   "contexts": [
+    ".confirm(\"Replace the touch layout?\", message: \"This set's layout is replaced by the starting point you chose.\", confirmTitle: \"Replace\", destructive: true,"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2208"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Controller",
+   "lines": [
+    158,
+    470
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Controller\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2209"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Include controller binds",
+   "lines": [
+    159
+   ],
+   "contexts": [
+    "ToggleRow(id: \"be-pad\", symbol: \"gamecontroller.fill\", title: \"Include controller binds\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2210"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "With this on, using the set turns the controller into a keyboard and mouse for this game, with the buttons below. Off leaves the controller as it is.",
+   "lines": [
+    160
+   ],
+   "contexts": [
+    "info: \"With this on, using the set turns the controller into a keyboard and mouse for this game, with the buttons below. Off leaves the controller as it is.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2211"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "LS",
+   "lines": [
+    163
+   ],
+   "contexts": [
+    "stickRow(\"LS\", \"Left stick\", \"l.joystick.fill\", pad, standard: \"wasd\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2212"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Left stick",
+   "lines": [
+    163
+   ],
+   "contexts": [
+    "stickRow(\"LS\", \"Left stick\", \"l.joystick.fill\", pad, standard: \"wasd\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2213"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "RS",
+   "lines": [
+    164
+   ],
+   "contexts": [
+    "stickRow(\"RS\", \"Right stick\", \"r.joystick.fill\", pad, standard: \"mouse\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2214"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Right stick",
+   "lines": [
+    164
+   ],
+   "contexts": [
+    "stickRow(\"RS\", \"Right stick\", \"r.joystick.fill\", pad, standard: \"mouse\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2215"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": " (standard)",
+   "lines": [
+    167,
+    177
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"be-\\(name)\", symbol: \"circle.circle\", title: name, options: PadActions.list.map { ($0.id, $0.label + ($0.id == standard ? \" (standard)\" : \"\")) },",
+    "ChoiceRow(id: \"be-\\(name)\", symbol: symbol, title: title, options: PadActions.stickModes.map { ($0.id, $0.label + ($0.id == standard ? \" (standard)\" : \"\")) },"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2216"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Right stick up and down speed",
+   "lines": [
+    170
+   ],
+   "contexts": [
+    "SliderRow(id: \"be-vert\", symbol: \"arrow.up.and.down\", title: \"Right stick up and down speed\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2217"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "%.2f\\u{00D7}",
+   "lines": [
+    171
+   ],
+   "contexts": [
+    "value: Binding(get: { pad.mouseVertical ?? 1 }, set: { v in change { $0.pad?.mouseVertical = abs(v - 1) < 0.05 ? nil : v } }), range: 0.25...2.0, step: 0.05, format: { String(format: \"%.2f\\u{00D7}\", $0) })"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2218"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Touch controls",
+   "lines": [
+    188
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Touch controls\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2219"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Include a touch layout",
+   "lines": [
+    189
+   ],
+   "contexts": [
+    "ToggleRow(id: \"be-touch\", symbol: \"hand.tap.fill\", title: \"Include a touch layout\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2220"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "With this on, using the set replaces the on-screen controls with this layout. Off keeps the game's normal Controls choice.",
+   "lines": [
+    190
+   ],
+   "contexts": [
+    "info: \"With this on, using the set replaces the on-screen controls with this layout. Off keeps the game's normal Controls choice.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2221"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Edit the layout",
+   "lines": [
+    193
+   ],
+   "contexts": [
+    "ActionRow(id: \"be-edit\", symbol: \"square.and.pencil\", title: \"Edit the layout\", subtitle: \"\\(t.controls.count) control\\(t.controls.count == 1 ? \"\" : \"s\")\" + (t.look ? \", drag to look\" : \"\"), chevron: true) { editingTouch = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2222"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "\\(t.controls.count) control\\(t.controls.count == 1 ? ",
+   "lines": [
+    193
+   ],
+   "contexts": [
+    "ActionRow(id: \"be-edit\", symbol: \"square.and.pencil\", title: \"Edit the layout\", subtitle: \"\\(t.controls.count) control\\(t.controls.count == 1 ? \"\" : \"s\")\" + (t.look ? \", drag to look\" : \"\"), chevron: true) { editingTouch = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2223"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": ", drag to look",
+   "lines": [
+    193
+   ],
+   "contexts": [
+    "ActionRow(id: \"be-edit\", symbol: \"square.and.pencil\", title: \"Edit the layout\", subtitle: \"\\(t.controls.count) control\\(t.controls.count == 1 ? \"\" : \"s\")\" + (t.look ? \", drag to look\" : \"\"), chevron: true) { editingTouch = true }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2224"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Start over from: mouse and keys",
+   "lines": [
+    194
+   ],
+   "contexts": [
+    "ActionRow(id: \"be-from1\", symbol: \"rectangle.on.rectangle\", title: \"Start over from: mouse and keys\", chevron: false) { replace(with: .mouseAndKeys, current: t) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2225"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Start over from: first person",
+   "lines": [
+    195
+   ],
+   "contexts": [
+    "ActionRow(id: \"be-from2\", symbol: \"scope\", title: \"Start over from: first person\", chevron: false) { replace(with: .firstPerson, current: t) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2226"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Start over from: empty",
+   "lines": [
+    196
+   ],
+   "contexts": [
+    "ActionRow(id: \"be-from3\", symbol: \"rectangle.dashed\", title: \"Start over from: empty\", chevron: false) { replace(with: TouchLayout(), current: t) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2227"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "\\(s.name) \\(n)",
+   "lines": [
+    217,
+    218
+   ],
+   "contexts": [
+    "var n = 2; while (g.bindSets ?? []).contains(where: { $0.name == \"\\(s.name) \\(n)\" }) { n += 1 }",
+    "copy.name = \"\\(s.name) \\(n)\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2228"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Undo",
+   "lines": [
+    274
+   ],
+   "contexts": [
+    "Button { step(undo: true) } label: { Image(systemName: \"arrow.uturn.backward\") }.disabled(undoStack.isEmpty).accessibilityLabel(\"Undo\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2229"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Redo",
+   "lines": [
+    275
+   ],
+   "contexts": [
+    "Button { step(undo: false) } label: { Image(systemName: \"arrow.uturn.forward\") }.disabled(redoStack.isEmpty).accessibilityLabel(\"Redo\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2230"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Drag to look",
+   "lines": [
+    277
+   ],
+   "contexts": [
+    "Toggle(\"Drag to look\", isOn: Binding(get: { layout.look }, set: { v in edit { $0.look = v } })).toggleStyle(.switch).fixedSize().font(.system(size: 14, weight: .semibold, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2231"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Buttons",
+   "lines": [
+    279
+   ],
+   "contexts": [
+    "Section(\"Buttons\") {"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2232"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Key",
+   "lines": [
+    280
+   ],
+   "contexts": [
+    "Button(\"Key\") { add(label: \"E\", action: \"key-E\") }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2233"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "E",
+   "lines": [
+    280
+   ],
+   "contexts": [
+    "Button(\"Key\") { add(label: \"E\", action: \"key-E\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2234"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Left mouse button",
+   "lines": [
+    281
+   ],
+   "contexts": [
+    "Button(\"Left mouse button\") { add(label: \"LMB\", action: \"lmb\", mode: \"hold\") }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2235"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "LMB",
+   "lines": [
+    281
+   ],
+   "contexts": [
+    "Button(\"Left mouse button\") { add(label: \"LMB\", action: \"lmb\", mode: \"hold\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2236"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Right mouse button",
+   "lines": [
+    282
+   ],
+   "contexts": [
+    "Button(\"Right mouse button\") { add(label: \"RMB\", action: \"rmb\", mode: \"hold\") }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2237"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "RMB",
+   "lines": [
+    282
+   ],
+   "contexts": [
+    "Button(\"Right mouse button\") { add(label: \"RMB\", action: \"rmb\", mode: \"hold\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2238"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Middle mouse button",
+   "lines": [
+    283
+   ],
+   "contexts": [
+    "Button(\"Middle mouse button\") { add(label: \"MMB\", action: \"mmb\", mode: \"hold\") }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2239"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "MMB",
+   "lines": [
+    283
+   ],
+   "contexts": [
+    "Button(\"Middle mouse button\") { add(label: \"MMB\", action: \"mmb\", mode: \"hold\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2240"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Mouse wheel up",
+   "lines": [
+    284
+   ],
+   "contexts": [
+    "Button(\"Mouse wheel up\") { add(label: \"Wh\\u{2191}\", action: \"wheelup\") }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2241"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Wh\\u{2191}",
+   "lines": [
+    284
+   ],
+   "contexts": [
+    "Button(\"Mouse wheel up\") { add(label: \"Wh\\u{2191}\", action: \"wheelup\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2242"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Mouse wheel down",
+   "lines": [
+    285
+   ],
+   "contexts": [
+    "Button(\"Mouse wheel down\") { add(label: \"Wh\\u{2193}\", action: \"wheeldown\") }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2243"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Wh\\u{2193}",
+   "lines": [
+    285
+   ],
+   "contexts": [
+    "Button(\"Mouse wheel down\") { add(label: \"Wh\\u{2193}\", action: \"wheeldown\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2244"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Sticks",
+   "lines": [
+    287
+   ],
+   "contexts": [
+    "Section(\"Sticks\") {"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2245"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Stick: W A S D",
+   "lines": [
+    288,
+    419
+   ],
+   "contexts": [
+    "Button(\"Stick: W A S D\") { add(label: \"\", action: \"stick-wasd\", size: 110) }",
+    "Text(c.action == \"stick-arrows\" ? \"Stick: arrow keys\" : \"Stick: W A S D\").font(.system(size: 15, weight: .semibold, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2246"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Stick: arrow keys",
+   "lines": [
+    289,
+    419
+   ],
+   "contexts": [
+    "Button(\"Stick: arrow keys\") { add(label: \"\", action: \"stick-arrows\", size: 110) }",
+    "Text(c.action == \"stick-arrows\" ? \"Stick: arrow keys\" : \"Stick: W A S D\").font(.system(size: 15, weight: .semibold, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2247"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Add",
+   "lines": [
+    291
+   ],
+   "contexts": [
+    "} label: { Label(\"Add\", systemImage: \"plus.circle.fill\").font(.system(size: 16, weight: .bold, design: .rounded)) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2248"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Drag anywhere that is not a control to look around",
+   "lines": [
+    330
+   ],
+   "contexts": [
+    ".overlay(Text(layout.look ? \"Drag anywhere that is not a control to look around\" : \"The game's screen\").font(.footnote).foregroundStyle(.white.opacity(0.35)))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2249"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "The game's screen",
+   "lines": [
+    330
+   ],
+   "contexts": [
+    ".overlay(Text(layout.look ? \"Drag anywhere that is not a control to look around\" : \"The game's screen\").font(.footnote).foregroundStyle(.white.opacity(0.35)))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2250"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Stick, arrow keys",
+   "lines": [
+    341
+   ],
+   "contexts": [
+    "if c.isStick { return c.action == \"stick-arrows\" ? \"Stick, arrow keys\" : \"Stick, W A S D\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2251"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Stick, W A S D",
+   "lines": [
+    341
+   ],
+   "contexts": [
+    "if c.isStick { return c.action == \"stick-arrows\" ? \"Stick, arrow keys\" : \"Stick, W A S D\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2252"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": " button, ",
+   "lines": [
+    343
+   ],
+   "contexts": [
+    "return name + \" button, \" + PadActions.label(c.action)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2253"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Drag to move. Use the actions to move or resize it.",
+   "lines": [
+    375
+   ],
+   "contexts": [
+    ".accessibilityHint(\"Drag to move. Use the actions to move or resize it.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2254"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "\\u{2191}\\u{2190}\\u{2192}\\u{2193}",
+   "lines": [
+    395
+   ],
+   "contexts": [
+    "Text(c.isStick ? (c.action == \"stick-arrows\" ? \"\\u{2191}\\u{2190}\\u{2192}\\u{2193}\" : \"WASD\") : c.label)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2255"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Label",
+   "lines": [
+    408
+   ],
+   "contexts": [
+    "PadTextField(title: \"Label\", prompt: \"Label\", text: Binding(get: { c.label }, set: { v in update(id) { $0.label = v } }))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2256"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Does",
+   "lines": [
+    410
+   ],
+   "contexts": [
+    "Picker(\"Does\", selection: Binding(get: { c.action }, set: { v in update(id) { $0.action = v; if [\"lmb\", \"rmb\", \"mmb\"].contains(v) { $0.mode = \"hold\" } } })) {"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2257"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Mode",
+   "lines": [
+    414
+   ],
+   "contexts": [
+    "Picker(\"Mode\", selection: Binding(get: { c.mode == \"latch\" ? \"latch\" : \"tap\" }, set: { v in update(id) { $0.mode = v } })) {"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2258"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Tap or hold",
+   "lines": [
+    415
+   ],
+   "contexts": [
+    "Text(\"Tap or hold\").tag(\"tap\"); Text(\"Latch\").tag(\"latch\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2259"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Latch",
+   "lines": [
+    415
+   ],
+   "contexts": [
+    "Text(\"Tap or hold\").tag(\"tap\"); Text(\"Latch\").tag(\"latch\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2260"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Remove",
+   "lines": [
+    422
+   ],
+   "contexts": [
+    "Button(role: .destructive) { edit { $0.controls.removeAll { $0.id == id } }; selected = nil } label: { Label(\"Remove\", systemImage: \"trash\") }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2261"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Size",
+   "lines": [
+    425
+   ],
+   "contexts": [
+    "Text(\"Size\").font(.footnote).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2262"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Drag a control to move it. Tap one to change it. Add more with Add.",
+   "lines": [
+    431
+   ],
+   "contexts": [
+    "Text(\"Drag a control to move it. Tap one to change it. Add more with Add.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 16)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2263"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Binds",
+   "lines": [
+    459
+   ],
+   "contexts": [
+    "Text(\"Binds\").font(.system(size: 26, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2264"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Back to the game",
+   "lines": [
+    461
+   ],
+   "contexts": [
+    "PillButton(id: \"ig-close\", title: \"Back to the game\", symbol: \"checkmark\") { dismiss() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2265"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Changes apply right away, while the game runs. Try a set, then come back and adjust it.",
+   "lines": [
+    468
+   ],
+   "contexts": [
+    "Text(\"Changes apply right away, while the game runs. Try a set, then come back and adjust it.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2266"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Controller as keyboard and mouse",
+   "lines": [
+    471
+   ],
+   "contexts": [
+    "ToggleRow(id: \"ig-padkeys\", symbol: \"keyboard\", title: \"Controller as keyboard and mouse\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2267"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "A bind set with controller binds is in use and decides",
+   "lines": [
+    472
+   ],
+   "contexts": [
+    "subtitle: g.activeBindSet?.pad != nil ? \"A bind set with controller binds is in use and decides\" : nil,"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2268"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Left stick W A S D, right stick the mouse, buttons as keys. Off goes back to Automatic. Applies at once.",
+   "lines": [
+    473
+   ],
+   "contexts": [
+    "info: \"Left stick W A S D, right stick the mouse, buttons as keys. Off goes back to Automatic. Applies at once.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2269"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Controller buttons",
+   "lines": [
+    476
+   ],
+   "contexts": [
+    "ActionRow(id: \"ig-padbinds\", symbol: \"gamecontroller\", title: \"Controller buttons\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2270"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Standard layout; press a button to change it",
+   "lines": [
+    477
+   ],
+   "contexts": [
+    "subtitle: (g.engine?.binds?.isEmpty ?? true) ? \"Standard layout; press a button to change it\" : \"\\(g.engine?.binds?.count ?? 0) changed\", chevron: true) { showPadBinds = true }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2271"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "\\(g.engine?.binds?.count ?? 0) changed",
+   "lines": [
+    477
+   ],
+   "contexts": [
+    "subtitle: (g.engine?.binds?.isEmpty ?? true) ? \"Standard layout; press a button to change it\" : \"\\(g.engine?.binds?.count ?? 0) changed\", chevron: true) { showPadBinds = true }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2272"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "New bind set from the current controls",
+   "lines": [
+    484
+   ],
+   "contexts": [
+    "ActionRow(id: \"ig-new\", symbol: \"plus.circle.fill\", title: \"New bind set from the current controls\", chevron: false) { create(g) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2273"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Edit this set",
+   "lines": [
+    488
+   ],
+   "contexts": [
+    "ActionRow(id: \"ig-edit\", symbol: \"square.and.pencil\", title: \"Edit this set\", subtitle: \"Controller binds and the touch layout\", chevron: true) { editing = active.id }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2274"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Controller binds and the touch layout",
+   "lines": [
+    488
+   ],
+   "contexts": [
+    "ActionRow(id: \"ig-edit\", symbol: \"square.and.pencil\", title: \"Edit this set\", subtitle: \"Controller binds and the touch layout\", chevron: true) { editing = active.id }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2275"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Edit the on-screen controls on the game",
+   "lines": [
+    490
+   ],
+   "contexts": [
+    "ActionRow(id: \"ig-screen\", symbol: \"hand.tap.fill\", title: \"Edit the on-screen controls on the game\", subtitle: \"Move and change controls while you look at the game, and test them\", chevron: false) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2276"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Move and change controls while you look at the game, and test them",
+   "lines": [
+    490
+   ],
+   "contexts": [
+    "ActionRow(id: \"ig-screen\", symbol: \"hand.tap.fill\", title: \"Edit the on-screen controls on the game\", subtitle: \"Move and change controls while you look at the game, and test them\", chevron: false) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2277"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Make on-screen controls on the game",
+   "lines": [
+    498
+   ],
+   "contexts": [
+    "ActionRow(id: \"ig-screen-new\", symbol: \"hand.tap.fill\", title: \"Make on-screen controls on the game\", subtitle: \"Starts a new set with its own layout\", chevron: false) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2278"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "Starts a new set with its own layout",
+   "lines": [
+    498
+   ],
+   "contexts": [
+    "ActionRow(id: \"ig-screen-new\", symbol: \"hand.tap.fill\", title: \"Make on-screen controls on the game\", subtitle: \"Starts a new set with its own layout\", chevron: false) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2279"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameBindsSection.swift",
+   "text": "My binds \\(n)",
+   "lines": [
+    523
+   ],
+   "contexts": [
+    "var n = 2; while (g.bindSets ?? []).contains(where: { $0.name == set.name }) { set.name = \"My binds \\(n)\"; n += 1 }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2280"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Compatibility",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Compatibility\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2281"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "AVX and AVX2",
+   "lines": [
+    24
+   ],
+   "contexts": [
+    "OverrideRow(id: \"ge-avx\", symbol: \"cpu\", title: \"AVX and AVX2\", info: \"Lets the translator run programs built for AVX processors through its 128-bit emulation. A game that closes the moment it starts, or after a message about unsupported instructions, may need it. Only 64-bit games. Costs some speed"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2282"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Lets the translator run programs built for AVX processors through its 128-bit emulation. A game that closes the moment it starts, or after a message about unsupported instructions, may need it. Only 64-bit games. Costs some speed.",
+   "lines": [
+    24
+   ],
+   "contexts": [
+    "OverrideRow(id: \"ge-avx\", symbol: \"cpu\", title: \"AVX and AVX2\", info: \"Lets the translator run programs built for AVX processors through its 128-bit emulation. A game that closes the moment it starts, or after a message about unsupported instructions, may need it. Only 64-bit games. Costs some speed"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2283"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Off",
+   "lines": [
+    25,
+    27,
+    34,
+    38,
+    45
+   ],
+   "contexts": [
+    "value: e.avx, globalText: \"Off\", options: [(true, \"On\"), (false, \"Off\")]) { v in change(g) { $0.avx = v } }",
+    "value: e.frameGeneration, globalText: \"Off\", options: [(true, \"On\"), (false, \"Off\")]) { v in change(g) { $0.frameGeneration = v } }",
+    "value: e.reducedX87, globalText: \"the engine's own (on for 32-bit games)\", options: [(true, \"On\"), (false, \"Off\")]) { v in change(g) { $0.reducedX87 = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2284"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "On",
+   "lines": [
+    25,
+    27,
+    34,
+    38,
+    45
+   ],
+   "contexts": [
+    "value: e.avx, globalText: \"Off\", options: [(true, \"On\"), (false, \"Off\")]) { v in change(g) { $0.avx = v } }",
+    "value: e.frameGeneration, globalText: \"Off\", options: [(true, \"On\"), (false, \"Off\")]) { v in change(g) { $0.frameGeneration = v } }",
+    "value: e.reducedX87, globalText: \"the engine's own (on for 32-bit games)\", options: [(true, \"On\"), (false, \"Off\")]) { v in change(g) { $0.reducedX87 = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2285"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Frame generation (experimental)",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "OverrideRow(id: \"ge-fg\", symbol: \"wand.and.rays\", title: \"Frame generation (experimental)\", info: \"Shows a MetalFX-generated picture between every two frames the game draws, so the screen can show twice the game\\u{2019}s frame rate. It needs a screen that can run at least twice as fast as the game:"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2286"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Shows a MetalFX-generated picture between every two frames the game draws, so the screen can show twice the game\\u{2019}s frame rate. It needs a screen that can run at least twice as fast as the game: on a 120 Hz screen a game at 60 FPS or less (the screen is held at its top rate while it is on). A game faster than that, or a moment when the screen\\u{2019}s picture queue is full, is shown as it is. It adds about half a game frame of delay and can smear edges and the on-screen controls. Frame limits do not apply while it is on. Needs iOS 26.",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "OverrideRow(id: \"ge-fg\", symbol: \"wand.and.rays\", title: \"Frame generation (experimental)\", info: \"Shows a MetalFX-generated picture between every two frames the game draws, so the screen can show twice the game\\u{2019}s frame rate. It needs a screen that can run at least twice as fast as the game:"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2287"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "CPU cores reported",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "OverrideRow(id: \"ge-cpu\", symbol: \"memorychip\", title: \"CPU cores reported\", info: \"How many processor cores this game is told about. Some games size their worker threads from it.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2288"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "How many processor cores this game is told about. Some games size their worker threads from it.",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "OverrideRow(id: \"ge-cpu\", symbol: \"memorychip\", title: \"CPU cores reported\", info: \"How many processor cores this game is told about. Some games size their worker threads from it.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2289"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "the device",
+   "lines": [
+    29
+   ],
+   "contexts": [
+    "value: e.cpuCount, globalText: EngineOptions.value(\"cpu-count\").isEmpty ? \"the device\" : EngineOptions.value(\"cpu-count\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2290"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Direct3D 9 anisotropic filtering",
+   "lines": [
+    31
+   ],
+   "contexts": [
+    "OverrideRow(id: \"ge-aniso\", symbol: \"square.3.layers.3d.down.right\", title: \"Direct3D 9 anisotropic filtering\", info: \"Limits (or raises) texture filtering quality for Direct3D 9 games. The game's own setting is used by default.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2291"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Limits (or raises) texture filtering quality for Direct3D 9 games. The game's own setting is used by default.",
+   "lines": [
+    31
+   ],
+   "contexts": [
+    "OverrideRow(id: \"ge-aniso\", symbol: \"square.3.layers.3d.down.right\", title: \"Direct3D 9 anisotropic filtering\", info: \"Limits (or raises) texture filtering quality for Direct3D 9 games. The game's own setting is used by default.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2292"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "the game's own",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "value: e.anisotropy, globalText: \"the game's own\", options: [(1, \"1\\u{00D7}\"), (2, \"2\\u{00D7}\"), (4, \"4\\u{00D7}\"), (8, \"8\\u{00D7}\")]) { v in change(g) { $0.anisotropy = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2293"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "1\\u{00D7}",
+   "lines": [
+    32,
+    42
+   ],
+   "contexts": [
+    "value: e.anisotropy, globalText: \"the game's own\", options: [(1, \"1\\u{00D7}\"), (2, \"2\\u{00D7}\"), (4, \"4\\u{00D7}\"), (8, \"8\\u{00D7}\")]) { v in change(g) { $0.anisotropy = v } }",
+    "value: e.mouseSpeed, globalText: EngineOptions.value(InputSettings.sensKey).isEmpty ? \"1\\u{00D7}\" : EngineOptions.value(InputSettings.sensKey) + \"\\u{00D7}\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2294"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "2\\u{00D7}",
+   "lines": [
+    32,
+    43
+   ],
+   "contexts": [
+    "value: e.anisotropy, globalText: \"the game's own\", options: [(1, \"1\\u{00D7}\"), (2, \"2\\u{00D7}\"), (4, \"4\\u{00D7}\"), (8, \"8\\u{00D7}\")]) { v in change(g) { $0.anisotropy = v } }",
+    "options: [(0.25, \"0.25\\u{00D7}\"), (0.5, \"0.5\\u{00D7}\"), (0.75, \"0.75\\u{00D7}\"), (1.5, \"1.5\\u{00D7}\"), (2.0, \"2\\u{00D7}\"), (3.0, \"3\\u{00D7}\"), (4.0, \"4\\u{00D7}\"), (6.0, \"6\\u{00D7}\")]) { v in change(g) { $0.mouseSpeed = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2295"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "4\\u{00D7}",
+   "lines": [
+    32,
+    43
+   ],
+   "contexts": [
+    "value: e.anisotropy, globalText: \"the game's own\", options: [(1, \"1\\u{00D7}\"), (2, \"2\\u{00D7}\"), (4, \"4\\u{00D7}\"), (8, \"8\\u{00D7}\")]) { v in change(g) { $0.anisotropy = v } }",
+    "options: [(0.25, \"0.25\\u{00D7}\"), (0.5, \"0.5\\u{00D7}\"), (0.75, \"0.75\\u{00D7}\"), (1.5, \"1.5\\u{00D7}\"), (2.0, \"2\\u{00D7}\"), (3.0, \"3\\u{00D7}\"), (4.0, \"4\\u{00D7}\"), (6.0, \"6\\u{00D7}\")]) { v in change(g) { $0.mouseSpeed = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2296"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "8\\u{00D7}",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "value: e.anisotropy, globalText: \"the game's own\", options: [(1, \"1\\u{00D7}\"), (2, \"2\\u{00D7}\"), (4, \"4\\u{00D7}\"), (8, \"8\\u{00D7}\")]) { v in change(g) { $0.anisotropy = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2297"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Reduced-precision x87",
+   "lines": [
+    33
+   ],
+   "contexts": [
+    "OverrideRow(id: \"ge-x87\", symbol: \"function\", title: \"Reduced-precision x87\", info: \"Makes old floating-point instructions faster and less exact. The engine turns it on by itself for 32-bit games; Off asks for full precision, which some games need (Assassin's Creed's character cannot be moved with t"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2298"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Makes old floating-point instructions faster and less exact. The engine turns it on by itself for 32-bit games; Off asks for full precision, which some games need (Assassin's Creed's character cannot be moved with the left stick otherwise). Leave it alone for games that run well.",
+   "lines": [
+    33
+   ],
+   "contexts": [
+    "OverrideRow(id: \"ge-x87\", symbol: \"function\", title: \"Reduced-precision x87\", info: \"Makes old floating-point instructions faster and less exact. The engine turns it on by itself for 32-bit games; Off asks for full precision, which some games need (Assassin's Creed's character cannot be moved with t"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2299"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "the engine's own (on for 32-bit games)",
+   "lines": [
+    34
+   ],
+   "contexts": [
+    "value: e.reducedX87, globalText: \"the engine's own (on for 32-bit games)\", options: [(true, \"On\"), (false, \"Off\")]) { v in change(g) { $0.reducedX87 = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2300"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Graphics card the game sees",
+   "lines": [
+    35
+   ],
+   "contexts": [
+    "OverrideRow(id: \"ge-gpu\", symbol: \"display\", title: \"Graphics card the game sees\", info: \"Which graphics card this game is told it has, everywhere it can ask: Direct3D 9, 10, 11 and 12, Windows' own adapter list and NVIDIA's NVAPI. For a game that refuses to start or picks poor settings because it d"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2301"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "the engine's own",
+   "lines": [
+    36
+   ],
+   "contexts": [
+    "value: e.gpuCard, globalText: \"the engine's own\", options: GPUCards.all.map { ($0.id, $0.title) }) { v in change(g) { $0.gpuCard = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2302"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Large memory reservations",
+   "lines": [
+    37
+   ],
+   "contexts": [
+    "OverrideRow(id: \"ge-oversize\", symbol: \"arrow.up.left.and.arrow.down.right\", title: \"Large memory reservations\", info: \"Turn this on when a game quits at start because it reserves far more address space than iOS gives the app (64 GB or more, as Final Fantasy Tactics - The Ivalice Chronicles does). P"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2303"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Turn this on when a game quits at start because it reserves far more address space than iOS gives the app (64 GB or more, as Final Fantasy Tactics - The Ivalice Chronicles does). Porthole then really backs 16 GB of it and tells the game it got everything. Off (the default) leaves such a reservation to fail, as before.",
+   "lines": [
+    37
+   ],
+   "contexts": [
+    "OverrideRow(id: \"ge-oversize\", symbol: \"arrow.up.left.and.arrow.down.right\", title: \"Large memory reservations\", info: \"Turn this on when a game quits at start because it reserves far more address space than iOS gives the app (64 GB or more, as Final Fantasy Tactics - The Ivalice Chronicles does). P"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2304"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Keyboard and mouse",
+   "lines": [
+    40,
+    54
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Keyboard and mouse\") {",
+    "value: e.controllerMode, globalText: \"Automatic\", options: [(\"xbox\", \"Xbox controller\"), (\"hid\", \"DualSense (HID) and Xbox\"), (\"keys\", \"Keyboard and mouse\"), (\"dinput\", \"Xbox and DirectInput joystick\")]) { v in change(g) { $0.controllerMode = v; $0.padAuto = nil } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2305"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Mouse speed",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "OverrideRow(id: \"ge-mouse-speed\", symbol: \"computermouse\", title: \"Mouse speed\", info: \"How fast the mouse turns this game's camera. 1\\u{00D7} sends the mouse's own movement unchanged. Applies at once.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2306"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "How fast the mouse turns this game's camera. 1\\u{00D7} sends the mouse's own movement unchanged. Applies at once.",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "OverrideRow(id: \"ge-mouse-speed\", symbol: \"computermouse\", title: \"Mouse speed\", info: \"How fast the mouse turns this game's camera. 1\\u{00D7} sends the mouse's own movement unchanged. Applies at once.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2307"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "0.25\\u{00D7}",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "options: [(0.25, \"0.25\\u{00D7}\"), (0.5, \"0.5\\u{00D7}\"), (0.75, \"0.75\\u{00D7}\"), (1.5, \"1.5\\u{00D7}\"), (2.0, \"2\\u{00D7}\"), (3.0, \"3\\u{00D7}\"), (4.0, \"4\\u{00D7}\"), (6.0, \"6\\u{00D7}\")]) { v in change(g) { $0.mouseSpeed = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2308"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "0.5\\u{00D7}",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "options: [(0.25, \"0.25\\u{00D7}\"), (0.5, \"0.5\\u{00D7}\"), (0.75, \"0.75\\u{00D7}\"), (1.5, \"1.5\\u{00D7}\"), (2.0, \"2\\u{00D7}\"), (3.0, \"3\\u{00D7}\"), (4.0, \"4\\u{00D7}\"), (6.0, \"6\\u{00D7}\")]) { v in change(g) { $0.mouseSpeed = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2309"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "0.75\\u{00D7}",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "options: [(0.25, \"0.25\\u{00D7}\"), (0.5, \"0.5\\u{00D7}\"), (0.75, \"0.75\\u{00D7}\"), (1.5, \"1.5\\u{00D7}\"), (2.0, \"2\\u{00D7}\"), (3.0, \"3\\u{00D7}\"), (4.0, \"4\\u{00D7}\"), (6.0, \"6\\u{00D7}\")]) { v in change(g) { $0.mouseSpeed = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2310"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "1.5\\u{00D7}",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "options: [(0.25, \"0.25\\u{00D7}\"), (0.5, \"0.5\\u{00D7}\"), (0.75, \"0.75\\u{00D7}\"), (1.5, \"1.5\\u{00D7}\"), (2.0, \"2\\u{00D7}\"), (3.0, \"3\\u{00D7}\"), (4.0, \"4\\u{00D7}\"), (6.0, \"6\\u{00D7}\")]) { v in change(g) { $0.mouseSpeed = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2311"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "3\\u{00D7}",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "options: [(0.25, \"0.25\\u{00D7}\"), (0.5, \"0.5\\u{00D7}\"), (0.75, \"0.75\\u{00D7}\"), (1.5, \"1.5\\u{00D7}\"), (2.0, \"2\\u{00D7}\"), (3.0, \"3\\u{00D7}\"), (4.0, \"4\\u{00D7}\"), (6.0, \"6\\u{00D7}\")]) { v in change(g) { $0.mouseSpeed = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2312"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "6\\u{00D7}",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "options: [(0.25, \"0.25\\u{00D7}\"), (0.5, \"0.5\\u{00D7}\"), (0.75, \"0.75\\u{00D7}\"), (1.5, \"1.5\\u{00D7}\"), (2.0, \"2\\u{00D7}\"), (3.0, \"3\\u{00D7}\"), (4.0, \"4\\u{00D7}\"), (6.0, \"6\\u{00D7}\")]) { v in change(g) { $0.mouseSpeed = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2313"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Always use the mouse to look",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "OverrideRow(id: \"ge-mouse-look\", symbol: \"viewfinder\", title: \"Always use the mouse to look\", info: \"For a game that turns the camera with the mouse but never says it hides its cursor: the mouse always moves the camera and the pointer is locked to the game (Ctrl+Alt+P frees it). Off lets the game's"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2314"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "For a game that turns the camera with the mouse but never says it hides its cursor: the mouse always moves the camera and the pointer is locked to the game (Ctrl+Alt+P frees it). Off lets the game's cursor decide.",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "OverrideRow(id: \"ge-mouse-look\", symbol: \"viewfinder\", title: \"Always use the mouse to look\", info: \"For a game that turns the camera with the mouse but never says it hides its cursor: the mouse always moves the camera and the pointer is locked to the game (Ctrl+Alt+P frees it). Off lets the game's"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2315"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "the game decides",
+   "lines": [
+    45
+   ],
+   "contexts": [
+    "value: e.mouseLook, globalText: EngineOptions.value(InputSettings.relativeKey) == \"1\" ? \"On\" : \"the game decides\", options: [(true, \"On\"), (false, \"Off\")]) { v in change(g) { $0.mouseLook = v } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2316"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Controller",
+   "lines": [
+    48,
+    53
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Controller\") {",
+    "OverrideRow(id: \"ge-pad\", symbol: \"gamecontroller.fill\", title: \"Controller\", info: \"Automatic (the default): the controller appears to the game as an Xbox pad, and if the game does not read it at all within about 25 seconds it becomes keyboard and mouse instead (and goes back to an Xbox pad the mom"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2317"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Controller as keyboard and mouse",
+   "lines": [
+    49
+   ],
+   "contexts": [
+    "ToggleRow(id: \"ge-padkeys\", symbol: \"keyboard\", title: \"Controller as keyboard and mouse\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2318"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "A bind set with controller binds is in use and decides",
+   "lines": [
+    50
+   ],
+   "contexts": [
+    "subtitle: g.activeBindSet?.pad != nil ? \"A bind set with controller binds is in use and decides\" : nil,"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2319"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Forces this game to use the controller as a keyboard and mouse (left stick W A S D, right stick the mouse, buttons as keys), for games with no controller support. Off goes back to Automatic. Change what each button does under Controller buttons.",
+   "lines": [
+    51
+   ],
+   "contexts": [
+    "info: \"Forces this game to use the controller as a keyboard and mouse (left stick W A S D, right stick the mouse, buttons as keys), for games with no controller support. Off goes back to Automatic. Change what each button does under Controller buttons.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2320"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Automatic (the default): the controller appears to the game as an Xbox pad, and if the game does not read it at all within about 25 seconds it becomes keyboard and mouse instead (and goes back to an Xbox pad the moment the game starts reading it). Xbox controller: always an Xbox pad. DualSense (HID) and Xbox: the pad is also shown as a DualSense on the HID path, for games that look for a HID gamepad and ignore XInput (Hollow Knight: Silksong); rumble does not work in this mode. Keyboard and mouse: always keys and mouse, for games with no controller support. Also DirectInput joystick: the same Xbox pad plus an old-style joystick for games that only look for one.",
+   "lines": [
+    53
+   ],
+   "contexts": [
+    "OverrideRow(id: \"ge-pad\", symbol: \"gamecontroller.fill\", title: \"Controller\", info: \"Automatic (the default): the controller appears to the game as an Xbox pad, and if the game does not read it at all within about 25 seconds it becomes keyboard and mouse instead (and goes back to an Xbox pad the mom"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2321"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Automatic",
+   "lines": [
+    54
+   ],
+   "contexts": [
+    "value: e.controllerMode, globalText: \"Automatic\", options: [(\"xbox\", \"Xbox controller\"), (\"hid\", \"DualSense (HID) and Xbox\"), (\"keys\", \"Keyboard and mouse\"), (\"dinput\", \"Xbox and DirectInput joystick\")]) { v in change(g) { $0.controllerMode = v; $0.padAuto = nil } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2322"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Xbox controller",
+   "lines": [
+    54
+   ],
+   "contexts": [
+    "value: e.controllerMode, globalText: \"Automatic\", options: [(\"xbox\", \"Xbox controller\"), (\"hid\", \"DualSense (HID) and Xbox\"), (\"keys\", \"Keyboard and mouse\"), (\"dinput\", \"Xbox and DirectInput joystick\")]) { v in change(g) { $0.controllerMode = v; $0.padAuto = nil } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2323"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "DualSense (HID) and Xbox",
+   "lines": [
+    54
+   ],
+   "contexts": [
+    "value: e.controllerMode, globalText: \"Automatic\", options: [(\"xbox\", \"Xbox controller\"), (\"hid\", \"DualSense (HID) and Xbox\"), (\"keys\", \"Keyboard and mouse\"), (\"dinput\", \"Xbox and DirectInput joystick\")]) { v in change(g) { $0.controllerMode = v; $0.padAuto = nil } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2324"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Xbox and DirectInput joystick",
+   "lines": [
+    54
+   ],
+   "contexts": [
+    "value: e.controllerMode, globalText: \"Automatic\", options: [(\"xbox\", \"Xbox controller\"), (\"hid\", \"DualSense (HID) and Xbox\"), (\"keys\", \"Keyboard and mouse\"), (\"dinput\", \"Xbox and DirectInput joystick\")]) { v in change(g) { $0.controllerMode = v; $0.padAuto = nil } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2325"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Controller buttons",
+   "lines": [
+    55,
+    135
+   ],
+   "contexts": [
+    "ActionRow(id: \"ge-binds\", symbol: \"gamecontroller\", title: \"Controller buttons\", subtitle: (e.binds?.isEmpty ?? true) ? \"Standard layout\" : \"\\(e.binds?.count ?? 0) changed\") { showBinds = true }",
+    "Text(\"Controller buttons\").font(.system(size: 26, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "named-param-string-component",
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2326"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Standard layout",
+   "lines": [
+    55
+   ],
+   "contexts": [
+    "ActionRow(id: \"ge-binds\", symbol: \"gamecontroller\", title: \"Controller buttons\", subtitle: (e.binds?.isEmpty ?? true) ? \"Standard layout\" : \"\\(e.binds?.count ?? 0) changed\") { showBinds = true }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2327"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "\\(e.binds?.count ?? 0) changed",
+   "lines": [
+    55
+   ],
+   "contexts": [
+    "ActionRow(id: \"ge-binds\", symbol: \"gamecontroller\", title: \"Controller buttons\", subtitle: (e.binds?.isEmpty ?? true) ? \"Standard layout\" : \"\\(e.binds?.count ?? 0) changed\") { showBinds = true }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2328"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Remap buttons",
+   "lines": [
+    57
+   ],
+   "contexts": [
+    "ActionRow(id: \"ge-remap\", symbol: \"arrow.left.arrow.right\", title: \"Remap buttons\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2329"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Standard buttons",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "subtitle: PadRemap(map: e.padRemap ?? [:]).isEmpty ? \"Standard buttons\" : \"\\((e.padRemap ?? [:]).filter { $0.key != $0.value }.count) changed\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2330"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "\\((e.padRemap ?? [:]).filter { $0.key != $0.value }.count) changed",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "subtitle: PadRemap(map: e.padRemap ?? [:]).isEmpty ? \"Standard buttons\" : \"\\((e.padRemap ?? [:]).filter { $0.key != $0.value }.count) changed\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2331"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Changes which controller button the game sees for each button on your pad, for this game only: swap A and B, put a bumper on a trigger, turn a button off. It applies while the controller is an Xbox or DualSense pad for the game.",
+   "lines": [
+    59
+   ],
+   "contexts": [
+    "info: \"Changes which controller button the game sees for each button on your pad, for this game only: swap A and B, put a bumper on a trigger, turn a button off. It applies while the controller is an Xbox or DualSense pad for the game.\") { showRemap = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2332"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Right stick up and down speed",
+   "lines": [
+    62
+   ],
+   "contexts": [
+    "SliderRow(id: \"ge-vert\", symbol: \"arrow.up.and.down\", title: \"Right stick up and down speed\", info: \"How fast the mouse moves up and down compared with left and right. Many games turn the view at different speeds in each direction.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2333"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "How fast the mouse moves up and down compared with left and right. Many games turn the view at different speeds in each direction.",
+   "lines": [
+    62
+   ],
+   "contexts": [
+    "SliderRow(id: \"ge-vert\", symbol: \"arrow.up.and.down\", title: \"Right stick up and down speed\", info: \"How fast the mouse moves up and down compared with left and right. Many games turn the view at different speeds in each direction.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2334"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "%.2f\\u{00D7}",
+   "lines": [
+    63
+   ],
+   "contexts": [
+    "value: Binding(get: { e.padMouseVertical ?? 1 }, set: { v in change(g) { $0.padMouseVertical = abs(v - 1) < 0.05 ? nil : v } }), range: 0.25...2.0, step: 0.05, format: { String(format: \"%.2f\\u{00D7}\", $0) })"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2335"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Starting",
+   "lines": [
+    68
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Starting\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2336"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "Working folder",
+   "lines": [
+    69
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"ge-workdir\", symbol: \"folder.fill\", title: \"Working folder\", placeholder: \"the program's own\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2337"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "the program's own",
+   "lines": [
+    69
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"ge-workdir\", symbol: \"folder.fill\", title: \"Working folder\", placeholder: \"the program's own\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2338"
+  },
+  {
+   "file": "app/Sources/UI/Game/GameEngineSection.swift",
+   "text": "This game's engine lines",
+   "lines": [
+    72
+   ],
+   "contexts": [
+    "ActionRow(id: \"ge-config\", symbol: \"text.alignleft\", title: \"This game's engine lines\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2339"
+  }
+ ]
+}

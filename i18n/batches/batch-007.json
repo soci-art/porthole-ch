@@ -1,0 +1,2919 @@
+{
+ "batch": 7,
+ "units": [
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "Install",
+   "lines": [
+    190,
+    267
+   ],
+   "contexts": [
+    "let attempts = [Attempt(command: \"Install\", developer: true), Attempt(command: \"Upgrade\", developer: true), Attempt(command: \"Upgrade\", developer: false)]",
+    "command == \"Install\" ? installation_proxy_install_with_callback(installer, path, options, callback, box.toOpaque())"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1080"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "Upgrade",
+   "lines": [
+    190
+   ],
+   "contexts": [
+    "let attempts = [Attempt(command: \"Install\", developer: true), Attempt(command: \"Upgrade\", developer: true), Attempt(command: \"Upgrade\", developer: false)]"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1081"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "attempt \\(index + 1) of \\(attempts.count): \\(attempt.command)\\(attempt.developer ? ",
+   "lines": [
+    194
+   ],
+   "contexts": [
+    "log(\"attempt \\(index + 1) of \\(attempts.count): \\(attempt.command)\\(attempt.developer ? \" as a developer package\" : \" with no options\")\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1082"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "iOS reports \\(percent)%",
+   "lines": [
+    202
+   ],
+   "contexts": [
+    "if percent % 10 == 0 { log(\"iOS reports \\(percent)%\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1083"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "attempt \\(index + 1) ended with an error after \\(now.reports) report(s): \\(error.localizedDescription)",
+   "lines": [
+    216
+   ],
+   "contexts": [
+    "log(\"attempt \\(index + 1) ended with an error after \\(now.reports) report(s): \\(error.localizedDescription)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1084"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "iOS says the install is complete (attempt \\(index + 1))",
+   "lines": [
+    221
+   ],
+   "contexts": [
+    "log(\"iOS says the install is complete (attempt \\(index + 1))\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1085"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "Installed",
+   "lines": [
+    222
+   ],
+   "contexts": [
+    "progress(\"Installed\", 1)"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1086"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "attempt \\(index + 1): no answer after \\(Int(attemptSilence)) s, trying the next way",
+   "lines": [
+    226
+   ],
+   "contexts": [
+    "log(\"attempt \\(index + 1): no answer after \\(Int(attemptSilence)) s, trying the next way\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1087"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "iOS did not answer any way of asking it to install. Unlock the device and try again; if it keeps happening, send the log.",
+   "lines": [
+    232
+   ],
+   "contexts": [
+    "throw lastFailure ?? Failure(\"iOS did not answer any way of asking it to install. Unlock the device and try again; if it keeps happening, send the log.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1088"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "Couldn't open the device's installer",
+   "lines": [
+    250
+   ],
+   "contexts": [
+    "try check(installation_proxy_connect_rsd(adapter, handshake, &installer), \"Couldn't open the device's installer\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1089"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "iOS refused the install",
+   "lines": [
+    269
+   ],
+   "contexts": [
+    "}, \"iOS refused the install\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1090"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "too small to split",
+   "lines": [
+    293
+   ],
+   "contexts": [
+    "guard size > Int64(streams) * Int64(chunk) else { throw Failure(\"too small to split\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1091"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "Couldn't create the staging file on the device",
+   "lines": [
+    302,
+    361
+   ],
+   "contexts": [
+    "try check(remote.withCString { afc_file_open(first, $0, 3, &firstHandle) }, \"Couldn't create the staging file on the device\")",
+    "try check(remote.withCString { afc_file_open(afc, $0, 3, &handle) }, \"Couldn't create the staging file on the device\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1092"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "Couldn't open another connection to the device's file service",
+   "lines": [
+    306
+   ],
+   "contexts": [
+    "try check(afc_client_connect_rsd(adapter, handshake, &client), \"Couldn't open another connection to the device's file service\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1093"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "Couldn't open the staging file again",
+   "lines": [
+    309
+   ],
+   "contexts": [
+    "try check(remote.withCString { afc_file_open(client, $0, 2, &handle) }, \"Couldn't open the staging file again\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1094"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "Moving within the staging file failed",
+   "lines": [
+    327
+   ],
+   "contexts": [
+    "try check(afc_file_seek(handle, start, 0, &position), \"Moving within the staging file failed\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1095"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "The file ended early.",
+   "lines": [
+    335
+   ],
+   "contexts": [
+    "guard let data = try reader.read(upToCount: want), !data.isEmpty else { throw Failure(\"The file ended early.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1096"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "Copying to the device failed",
+   "lines": [
+    338,
+    369
+   ],
+   "contexts": [
+    "}, \"Copying to the device failed\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1097"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "Sending to the installer",
+   "lines": [
+    341,
+    371
+   ],
+   "contexts": [
+    "progress(\"Sending to the installer\", Double(total) / Double(size))",
+    "progress(\"Sending to the installer\", total > 0 ? sent / total : 0)"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1098"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "Only \\(tally.done) of \\(size) bytes were copied.",
+   "lines": [
+    350
+   ],
+   "contexts": [
+    "guard tally.done == size else { throw Failure(\"Only \\(tally.done) of \\(size) bytes were copied.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1099"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "Finishing the copy failed",
+   "lines": [
+    353,
+    374
+   ],
+   "contexts": [
+    "for handle in open { try check(afc_file_close(handle), \"Finishing the copy failed\") }",
+    "try check(afc_file_close(handle), \"Finishing the copy failed\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1100"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "error: \\(fallback) code=\\(code) message=\\(detail ?? ",
+   "lines": [
+    383
+   ],
+   "contexts": [
+    "log(\"error: \\(fallback) code=\\(code) message=\\(detail ?? \"-\")\")"
+   ],
+   "reasons": [
+    "visible-name-target"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1101"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": "\\(fallback)\\(detail.map { ",
+   "lines": [
+    384
+   ],
+   "contexts": [
+    "throw Failure(\"\\(fallback)\\(detail.map { \" (\\($0))\" } ?? \" (error \\(code))\").\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1102"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": " } ?? ",
+   "lines": [
+    384
+   ],
+   "contexts": [
+    "throw Failure(\"\\(fallback)\\(detail.map { \" (\\($0))\" } ?? \" (error \\(code))\").\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1103"
+  },
+  {
+   "file": "app/Sources/Core/OnDeviceInstaller.swift",
+   "text": ").",
+   "lines": [
+    384
+   ],
+   "contexts": [
+    "throw Failure(\"\\(fallback)\\(detail.map { \" (\\($0))\" } ?? \" (error \\(code))\").\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1104"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "W A S D keys",
+   "lines": [
+    18
+   ],
+   "contexts": [
+    "static let stickModes: [(id: String, label: String)] = [(\"wasd\", \"W A S D keys\"), (\"arrows\", \"Arrow keys\"), (\"mouse\", \"Mouse\"), (\"none\", \"Nothing\")]"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1105"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Arrow keys",
+   "lines": [
+    18
+   ],
+   "contexts": [
+    "static let stickModes: [(id: String, label: String)] = [(\"wasd\", \"W A S D keys\"), (\"arrows\", \"Arrow keys\"), (\"mouse\", \"Mouse\"), (\"none\", \"Nothing\")]"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1106"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Mouse",
+   "lines": [
+    18,
+    53
+   ],
+   "contexts": [
+    "static let stickModes: [(id: String, label: String)] = [(\"wasd\", \"W A S D keys\"), (\"arrows\", \"Arrow keys\"), (\"mouse\", \"Mouse\"), (\"none\", \"Nothing\")]",
+    "return [(\"Letters\", letters), (\"Numbers and F keys\", numbers), (\"Special keys\", special), (\"Mouse\", [\"lmb\", \"rmb\", \"mmb\", \"wheelup\", \"wheeldown\"]), (\"Screen\", [\"lookmode\"])]"
+   ],
+   "reasons": [
+    "choice-label",
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1107"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Nothing",
+   "lines": [
+    18,
+    22
+   ],
+   "contexts": [
+    "static let stickModes: [(id: String, label: String)] = [(\"wasd\", \"W A S D keys\"), (\"arrows\", \"Arrow keys\"), (\"mouse\", \"Mouse\"), (\"none\", \"Nothing\")]",
+    "var l: [(String, String, PadAction)] = [(\"none\", \"Nothing\", .none), (\"lmb\", \"Left mouse button\", .mouse(0)), (\"rmb\", \"Right mouse button\", .mouse(1)),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1108"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Left mouse button",
+   "lines": [
+    22
+   ],
+   "contexts": [
+    "var l: [(String, String, PadAction)] = [(\"none\", \"Nothing\", .none), (\"lmb\", \"Left mouse button\", .mouse(0)), (\"rmb\", \"Right mouse button\", .mouse(1)),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1109"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Right mouse button",
+   "lines": [
+    22
+   ],
+   "contexts": [
+    "var l: [(String, String, PadAction)] = [(\"none\", \"Nothing\", .none), (\"lmb\", \"Left mouse button\", .mouse(0)), (\"rmb\", \"Right mouse button\", .mouse(1)),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1110"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Middle mouse button",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "(\"mmb\", \"Middle mouse button\", .mouse(2)), (\"wheelup\", \"Mouse wheel up\", .wheel(120)), (\"wheeldown\", \"Mouse wheel down\", .wheel(-120)),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1111"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Mouse wheel up",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "(\"mmb\", \"Middle mouse button\", .mouse(2)), (\"wheelup\", \"Mouse wheel up\", .wheel(120)), (\"wheeldown\", \"Mouse wheel down\", .wheel(-120)),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1112"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Mouse wheel down",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "(\"mmb\", \"Middle mouse button\", .mouse(2)), (\"wheelup\", \"Mouse wheel up\", .wheel(120)), (\"wheeldown\", \"Mouse wheel down\", .wheel(-120)),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1113"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Space",
+   "lines": [
+    24
+   ],
+   "contexts": [
+    "(\"space\", \"Space\", .key(0x20)), (\"enter\", \"Enter\", .key(0x0D)), (\"esc\", \"Esc\", .key(0x1B)), (\"tab\", \"Tab\", .key(0x09)),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1114"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Enter",
+   "lines": [
+    24
+   ],
+   "contexts": [
+    "(\"space\", \"Space\", .key(0x20)), (\"enter\", \"Enter\", .key(0x0D)), (\"esc\", \"Esc\", .key(0x1B)), (\"tab\", \"Tab\", .key(0x09)),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1115"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Esc",
+   "lines": [
+    24
+   ],
+   "contexts": [
+    "(\"space\", \"Space\", .key(0x20)), (\"enter\", \"Enter\", .key(0x0D)), (\"esc\", \"Esc\", .key(0x1B)), (\"tab\", \"Tab\", .key(0x09)),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1116"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Tab",
+   "lines": [
+    24
+   ],
+   "contexts": [
+    "(\"space\", \"Space\", .key(0x20)), (\"enter\", \"Enter\", .key(0x0D)), (\"esc\", \"Esc\", .key(0x1B)), (\"tab\", \"Tab\", .key(0x09)),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1117"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Shift",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "(\"shift\", \"Shift\", .key(0x10)), (\"ctrl\", \"Ctrl\", .key(0x11)), (\"alt\", \"Alt\", .key(0x12)), (\"backspace\", \"Backspace\", .key(0x08)),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1118"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Ctrl",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "(\"shift\", \"Shift\", .key(0x10)), (\"ctrl\", \"Ctrl\", .key(0x11)), (\"alt\", \"Alt\", .key(0x12)), (\"backspace\", \"Backspace\", .key(0x08)),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1119"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Alt",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "(\"shift\", \"Shift\", .key(0x10)), (\"ctrl\", \"Ctrl\", .key(0x11)), (\"alt\", \"Alt\", .key(0x12)), (\"backspace\", \"Backspace\", .key(0x08)),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1120"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Backspace",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "(\"shift\", \"Shift\", .key(0x10)), (\"ctrl\", \"Ctrl\", .key(0x11)), (\"alt\", \"Alt\", .key(0x12)), (\"backspace\", \"Backspace\", .key(0x08)),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1121"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Up arrow",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "(\"up\", \"Up arrow\", .key(0x26)), (\"down\", \"Down arrow\", .key(0x28)), (\"left\", \"Left arrow\", .key(0x25)), (\"right\", \"Right arrow\", .key(0x27))]"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1122"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Down arrow",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "(\"up\", \"Up arrow\", .key(0x26)), (\"down\", \"Down arrow\", .key(0x28)), (\"left\", \"Left arrow\", .key(0x25)), (\"right\", \"Right arrow\", .key(0x27))]"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1123"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Left arrow",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "(\"up\", \"Up arrow\", .key(0x26)), (\"down\", \"Down arrow\", .key(0x28)), (\"left\", \"Left arrow\", .key(0x25)), (\"right\", \"Right arrow\", .key(0x27))]"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1124"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Right arrow",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "(\"up\", \"Up arrow\", .key(0x26)), (\"down\", \"Down arrow\", .key(0x28)), (\"left\", \"Left arrow\", .key(0x25)), (\"right\", \"Right arrow\", .key(0x27))]"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1125"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "f\\(f)",
+   "lines": [
+    29
+   ],
+   "contexts": [
+    "for f in 1...12 { l.append((\"f\\(f)\", \"F\\(f)\", .key(Int32(0x6F + f)))) }"
+   ],
+   "reasons": [
+    "choice-label"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1126"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "F\\(f)",
+   "lines": [
+    29
+   ],
+   "contexts": [
+    "for f in 1...12 { l.append((\"f\\(f)\", \"F\\(f)\", .key(Int32(0x6F + f)))) }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1127"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Switch look / mouse mode",
+   "lines": [
+    33
+   ],
+   "contexts": [
+    "static let touchOnly: [(id: String, label: String, action: PadAction)] = [(\"lookmode\", \"Switch look / mouse mode\", .lookToggle)]"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1128"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Wh\\u{2191}",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "\"wheelup\": \"Wh\\u{2191}\", \"wheeldown\": \"Wh\\u{2193}\", \"lookmode\": \"Look\"]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1129"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Wh\\u{2193}",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "\"wheelup\": \"Wh\\u{2191}\", \"wheeldown\": \"Wh\\u{2193}\", \"lookmode\": \"Look\"]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1130"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Look",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "\"wheelup\": \"Wh\\u{2191}\", \"wheeldown\": \"Wh\\u{2193}\", \"lookmode\": \"Look\"]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1131"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Letters",
+   "lines": [
+    53
+   ],
+   "contexts": [
+    "return [(\"Letters\", letters), (\"Numbers and F keys\", numbers), (\"Special keys\", special), (\"Mouse\", [\"lmb\", \"rmb\", \"mmb\", \"wheelup\", \"wheeldown\"]), (\"Screen\", [\"lookmode\"])]"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1132"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Numbers and F keys",
+   "lines": [
+    53
+   ],
+   "contexts": [
+    "return [(\"Letters\", letters), (\"Numbers and F keys\", numbers), (\"Special keys\", special), (\"Mouse\", [\"lmb\", \"rmb\", \"mmb\", \"wheelup\", \"wheeldown\"]), (\"Screen\", [\"lookmode\"])]"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1133"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Special keys",
+   "lines": [
+    53
+   ],
+   "contexts": [
+    "return [(\"Letters\", letters), (\"Numbers and F keys\", numbers), (\"Special keys\", special), (\"Mouse\", [\"lmb\", \"rmb\", \"mmb\", \"wheelup\", \"wheeldown\"]), (\"Screen\", [\"lookmode\"])]"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1134"
+  },
+  {
+   "file": "app/Sources/Core/PadActions.swift",
+   "text": "Screen",
+   "lines": [
+    53
+   ],
+   "contexts": [
+    "return [(\"Letters\", letters), (\"Numbers and F keys\", numbers), (\"Special keys\", special), (\"Mouse\", [\"lmb\", \"rmb\", \"mmb\", \"wheelup\", \"wheeldown\"]), (\"Screen\", [\"lookmode\"])]"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1135"
+  },
+  {
+   "file": "app/Sources/Core/PadChord.swift",
+   "text": "both stick clicks",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "case l3r3: \"both stick clicks\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1136"
+  },
+  {
+   "file": "app/Sources/Core/PadInput.swift",
+   "text": "Automatic",
+   "lines": [
+    107
+   ],
+   "contexts": [
+    "let autoHIDNow = identityHID || (!gameHID && hid)         // what \"Automatic\" shows the game: the identity, or the app-wide HID choice"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1137"
+  },
+  {
+   "file": "app/Sources/Core/PadInput.swift",
+   "text": "Hold \\(name) for half a second to open the Porthole menu.",
+   "lines": [
+    229
+   ],
+   "contexts": [
+    "AppModel.shared.session.showPadNotice(\"Hold \\(name) for half a second to open the Porthole menu.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1138"
+  },
+  {
+   "file": "app/Sources/Core/PadInput.swift",
+   "text": "\\($0.source.rawValue)/\\($0.when.rawValue)/\\($0.turn.rawValue)/\\($0.output.rawValue)",
+   "lines": [
+    266
+   ],
+   "contexts": [
+    "let gyroText = assistNow.map { $0.gyro ? \"\\($0.source.rawValue)/\\($0.when.rawValue)/\\($0.turn.rawValue)/\\($0.output.rawValue)\" : \"off\" } ?? \"off\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1139"
+  },
+  {
+   "file": "app/Sources/Core/PadInput.swift",
+   "text": "This game isn't reading the controller, so it works as keyboard and mouse. Game details > Controller changes this.",
+   "lines": [
+    464
+   ],
+   "contexts": [
+    "AppModel.shared.session.showPadNotice(\"This game isn't reading the controller, so it works as keyboard and mouse. Game details > Controller changes this.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1140"
+  },
+  {
+   "file": "app/Sources/Core/PadInput.swift",
+   "text": "This game reads the controller now, so it works as an Xbox controller.",
+   "lines": [
+    471
+   ],
+   "contexts": [
+    "AppModel.shared.session.showPadNotice(\"This game reads the controller now, so it works as an Xbox controller.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1141"
+  },
+  {
+   "file": "app/Sources/Core/PadRumble.swift",
+   "text": "haptic engine: ",
+   "lines": [
+    100
+   ],
+   "contexts": [
+    "if m.engine == nil, let error = buildEngine(m, controller: controller, side: side) { note(\"haptic engine: \" + error); return }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1142"
+  },
+  {
+   "file": "app/Sources/Core/PadRumble.swift",
+   "text": "motor: ",
+   "lines": [
+    104
+   ],
+   "contexts": [
+    "t.setEventHandler { [weak self, weak m] in guard let self, let m else { return }; if let error = self.pulse(m) { self.note(\"motor: \" + error); self.silence(m); m.engine = nil } }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1143"
+  },
+  {
+   "file": "app/Sources/Core/PadRumble.swift",
+   "text": "No controller is connected to this app.",
+   "lines": [
+    140
+   ],
+   "contexts": [
+    "let text = controllers.isEmpty ? \"No controller is connected to this app.\" : \"Connected (\\(controllers.map(\\.productCategory).joined(separator: \", \"))) but with no haptics.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1144"
+  },
+  {
+   "file": "app/Sources/Core/PadRumble.swift",
+   "text": "Connected (\\(controllers.map(\\.productCategory).joined(separator: ",
+   "lines": [
+    140
+   ],
+   "contexts": [
+    "let text = controllers.isEmpty ? \"No controller is connected to this app.\" : \"Connected (\\(controllers.map(\\.productCategory).joined(separator: \", \"))) but with no haptics.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1145"
+  },
+  {
+   "file": "app/Sources/Core/PadRumble.swift",
+   "text": "))) but with no haptics.",
+   "lines": [
+    140
+   ],
+   "contexts": [
+    "let text = controllers.isEmpty ? \"No controller is connected to this app.\" : \"Connected (\\(controllers.map(\\.productCategory).joined(separator: \", \"))) but with no haptics.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1146"
+  },
+  {
+   "file": "app/Sources/Core/PadRumble.swift",
+   "text": "\\(controller.productCategory); localities: ",
+   "lines": [
+    146
+   ],
+   "contexts": [
+    "out.append(\"\\(controller.productCategory); localities: \" + haptics.supportedLocalities.map(\\.rawValue).sorted().joined(separator: \", \"))"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1147"
+  },
+  {
+   "file": "app/Sources/Core/PadRumble.swift",
+   "text": "\\(name): no engine",
+   "lines": [
+    148
+   ],
+   "contexts": [
+    "guard let engine = haptics.createEngine(withLocality: locality) else { out.append(\"\\(name): no engine\"); continue }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1148"
+  },
+  {
+   "file": "app/Sources/Core/PadRumble.swift",
+   "text": "\\(name): played",
+   "lines": [
+    155
+   ],
+   "contexts": [
+    "out.append(\"\\(name): played\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1149"
+  },
+  {
+   "file": "app/Sources/Core/PadRumble.swift",
+   "text": "\\(name): \\(error.localizedDescription)",
+   "lines": [
+    157
+   ],
+   "contexts": [
+    "} catch { out.append(\"\\(name): \\(error.localizedDescription)\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1150"
+  },
+  {
+   "file": "app/Sources/Core/PadRumble.swift",
+   "text": "as a game: \\(error)",
+   "lines": [
+    163
+   ],
+   "contexts": [
+    "if let error = buildEngine(m, controller: controller, side: 0) { out.append(\"as a game: \\(error)\") }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1151"
+  },
+  {
+   "file": "app/Sources/Core/PadRumble.swift",
+   "text": "as a game: \\($0)",
+   "lines": [
+    168
+   ],
+   "contexts": [
+    "out.append(failure.map { \"as a game: \\($0)\" } ?? \"as a game: played\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1152"
+  },
+  {
+   "file": "app/Sources/Core/PadRumble.swift",
+   "text": "as a game: played",
+   "lines": [
+    168
+   ],
+   "contexts": [
+    "out.append(failure.map { \"as a game: \\($0)\" } ?? \"as a game: played\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1153"
+  },
+  {
+   "file": "app/Sources/Core/PowerManager.swift",
+   "text": "Performance",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "case .performance: \"Performance\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1154"
+  },
+  {
+   "file": "app/Sources/Core/PowerManager.swift",
+   "text": "Balanced",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "case .balanced: \"Balanced\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1155"
+  },
+  {
+   "file": "app/Sources/Core/PowerManager.swift",
+   "text": "Battery saver",
+   "lines": [
+    22
+   ],
+   "contexts": [
+    "case .saver: \"Battery saver\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1156"
+  },
+  {
+   "file": "app/Sources/Core/PowerManager.swift",
+   "text": "Auto",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "case .auto: \"Auto\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1157"
+  },
+  {
+   "file": "app/Sources/Core/PowerManager.swift",
+   "text": "up to \\(PowerMode.screenMaxFPS) FPS",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "case .performance: PowerMode.screenMaxFPS > 60 ? \"up to \\(PowerMode.screenMaxFPS) FPS\" : \"60 FPS\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1158"
+  },
+  {
+   "file": "app/Sources/Core/PowerManager.swift",
+   "text": "60 FPS",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "case .performance: PowerMode.screenMaxFPS > 60 ? \"up to \\(PowerMode.screenMaxFPS) FPS\" : \"60 FPS\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1159"
+  },
+  {
+   "file": "app/Sources/Core/PowerManager.swift",
+   "text": "30 FPS",
+   "lines": [
+    31
+   ],
+   "contexts": [
+    "case .balanced: \"30 FPS\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1160"
+  },
+  {
+   "file": "app/Sources/Core/PowerManager.swift",
+   "text": "30 FPS + Eco",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "case .saver: \"30 FPS + Eco\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1161"
+  },
+  {
+   "file": "app/Sources/Core/PowerManager.swift",
+   "text": "60 FPS, steady 30 when the phone slows down",
+   "lines": [
+    33
+   ],
+   "contexts": [
+    "case .auto: \"60 FPS, steady 30 when the phone slows down\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1162"
+  },
+  {
+   "file": "app/Sources/Core/PowerManager.swift",
+   "text": "very hot",
+   "lines": [
+    123
+   ],
+   "contexts": [
+    "case .critical: \"very hot\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1163"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "Porthole \\(version) (\\(build))",
+   "lines": [
+    55
+   ],
+   "contexts": [
+    "lines.append(\"Porthole \\(version) (\\(build))\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1164"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "Engine: \\(CompatEngine.label)",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    "lines.append(\"Engine: \\(CompatEngine.label)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1165"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "Device: \\(device?.name ?? ",
+   "lines": [
+    57
+   ],
+   "contexts": [
+    "lines.append(\"Device: \\(device?.name ?? \"unknown\") [\\(device?.id ?? \"?\")], iOS \\(UIDevice.current.systemVersion), \\(gigabytes) GB memory, \\(ByteCountFormatter.string(fromByteCount: free, countStyle: .file)) free\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1166"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": ") [\\(device?.id ?? ",
+   "lines": [
+    57
+   ],
+   "contexts": [
+    "lines.append(\"Device: \\(device?.name ?? \"unknown\") [\\(device?.id ?? \"?\")], iOS \\(UIDevice.current.systemVersion), \\(gigabytes) GB memory, \\(ByteCountFormatter.string(fromByteCount: free, countStyle: .file)) free\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1167"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": ")], iOS \\(UIDevice.current.systemVersion), \\(gigabytes) GB memory, \\(ByteCountFormatter.string(fromByteCount: free, countStyle: .file)) free",
+   "lines": [
+    57
+   ],
+   "contexts": [
+    "lines.append(\"Device: \\(device?.name ?? \"unknown\") [\\(device?.id ?? \"?\")], iOS \\(UIDevice.current.systemVersion), \\(gigabytes) GB memory, \\(ByteCountFormatter.string(fromByteCount: free, countStyle: .file)) free\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1168"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "Install: \\(InstallCheck.layoutTitle); JIT helper \\(InstallCheck.hasJITHelper ? ",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "lines.append(\"Install: \\(InstallCheck.layoutTitle); JIT helper \\(InstallCheck.hasJITHelper ? \"yes\" : \"no\"), tunnel \\(InstallCheck.hasTunnel ? \"yes\" : \"no\"), download card \\(InstallCheck.hasActivityExtension ? \"yes\" : \"no\"), donor memory \\(InstallCheck.hasMemoryHost ? \"yes\" : \"no\")\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1169"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "), tunnel \\(InstallCheck.hasTunnel ? ",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "lines.append(\"Install: \\(InstallCheck.layoutTitle); JIT helper \\(InstallCheck.hasJITHelper ? \"yes\" : \"no\"), tunnel \\(InstallCheck.hasTunnel ? \"yes\" : \"no\"), download card \\(InstallCheck.hasActivityExtension ? \"yes\" : \"no\"), donor memory \\(InstallCheck.hasMemoryHost ? \"yes\" : \"no\")\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1170"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "), download card \\(InstallCheck.hasActivityExtension ? ",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "lines.append(\"Install: \\(InstallCheck.layoutTitle); JIT helper \\(InstallCheck.hasJITHelper ? \"yes\" : \"no\"), tunnel \\(InstallCheck.hasTunnel ? \"yes\" : \"no\"), download card \\(InstallCheck.hasActivityExtension ? \"yes\" : \"no\"), donor memory \\(InstallCheck.hasMemoryHost ? \"yes\" : \"no\")\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1171"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "), donor memory \\(InstallCheck.hasMemoryHost ? ",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "lines.append(\"Install: \\(InstallCheck.layoutTitle); JIT helper \\(InstallCheck.hasJITHelper ? \"yes\" : \"no\"), tunnel \\(InstallCheck.hasTunnel ? \"yes\" : \"no\"), download card \\(InstallCheck.hasActivityExtension ? \"yes\" : \"no\"), donor memory \\(InstallCheck.hasMemoryHost ? \"yes\" : \"no\")\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1172"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "Bundle id: \\(Bundle.main.bundleIdentifier == ",
+   "lines": [
+    59
+   ],
+   "contexts": [
+    "lines.append(\"Bundle id: \\(Bundle.main.bundleIdentifier == \"site.portholehq.app\" ? \"the default\" : \"custom\")\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1173"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "), LocalDevVPN \\(TunnelManager.useLocalDevVPN ? ",
+   "lines": [
+    60
+   ],
+   "contexts": [
+    "lines.append(\"JIT: \\(JITMethod.current.rawValue), pairing file \\(BuiltinJIT.hasPairing ? \"yes\" : \"no\"), LocalDevVPN \\(TunnelManager.useLocalDevVPN ? \"on\" : \"off\")\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1174"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "Games in the library: \\(AppModel.shared.games.count)",
+   "lines": [
+    61
+   ],
+   "contexts": [
+    "lines.append(\"Games in the library: \\(AppModel.shared.games.count)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1175"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "Install check (\\(finding.level)): \\(finding.title)",
+   "lines": [
+    62
+   ],
+   "contexts": [
+    "for finding in InstallCheck.findings() where finding.level != .good { lines.append(\"Install check (\\(finding.level)): \\(finding.title)\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1176"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "[Crash: \\(crash.record.game)] ",
+   "lines": [
+    88
+   ],
+   "contexts": [
+    "note = \"[Crash: \\(crash.record.game)] \" + note"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1177"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "## \\(title)\\n",
+   "lines": [
+    99
+   ],
+   "contexts": [
+    "out.append(Data(\"## \\(title)\\n\".utf8)); out.append(cleaned); out.append(Data(\"\\n\\n\".utf8))"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1178"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "\\(label), \\(megabytes(cleaned.count))",
+   "lines": [
+    100
+   ],
+   "contexts": [
+    "parts.append(\"\\(label), \\(megabytes(cleaned.count))\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1179"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "Log of the run that ended unexpectedly: \\(crash.record.game)",
+   "lines": [
+    103
+   ],
+   "contexts": [
+    "add(\"Log of the run that ended unexpectedly: \\(crash.record.game)\", crash.runLog.flatMap { read($0) }, label: \"the run that ended\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1180"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "the run that ended",
+   "lines": [
+    103
+   ],
+   "contexts": [
+    "add(\"Log of the run that ended unexpectedly: \\(crash.record.game)\", crash.runLog.flatMap { read($0) }, label: \"the run that ended\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1181"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "The game's own log",
+   "lines": [
+    104
+   ],
+   "contexts": [
+    "add(\"The game's own log\", crash.gameLog.flatMap { read($0, cap: 40 * 1024 * 1024) }, label: \"the game's own log\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1182"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "the game's own log",
+   "lines": [
+    104
+   ],
+   "contexts": [
+    "add(\"The game's own log\", crash.gameLog.flatMap { read($0, cap: 40 * 1024 * 1024) }, label: \"the game's own log\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1183"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "Log of the launch after it (the end of it)",
+   "lines": [
+    105
+   ],
+   "contexts": [
+    "add(\"Log of the launch after it (the end of it)\", tail(of: current, bytes: 1_000_000), label: \"the launch after it\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1184"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "the launch after it",
+   "lines": [
+    105
+   ],
+   "contexts": [
+    "add(\"Log of the launch after it (the end of it)\", tail(of: current, bytes: 1_000_000), label: \"the launch after it\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1185"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "Log of this run",
+   "lines": [
+    107
+   ],
+   "contexts": [
+    "add(\"Log of this run\", read(current), label: \"this run\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1186"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "this run",
+   "lines": [
+    107
+   ],
+   "contexts": [
+    "add(\"Log of this run\", read(current), label: \"this run\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1187"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "Log of the run before",
+   "lines": [
+    108
+   ],
+   "contexts": [
+    "add(\"Log of the run before\", read(previous), label: \"the run before\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1188"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "the run before",
+   "lines": [
+    108
+   ],
+   "contexts": [
+    "add(\"Log of the run before\", read(previous), label: \"the run before\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1189"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "# Porthole problem report\\n\\n## What went wrong\\n\\(b.note.isEmpty ? ",
+   "lines": [
+    118,
+    137
+   ],
+   "contexts": [
+    "var out = \"# Porthole problem report\\n\\n## What went wrong\\n\\(b.note.isEmpty ? \"(not described)\" : b.note)\\n\\n## About this install\\n\\(b.facts)\\n\"",
+    "var data = Data(\"# Porthole problem report\\n\\n## What went wrong\\n\\(b.note.isEmpty ? \"(not described)\" : b.note)\\n\\n## About this install\\n\\(b.facts)\\n\\n\".utf8)"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1190"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": " : b.note)\\n\\n## About this install\\n\\(b.facts)\\n",
+   "lines": [
+    118
+   ],
+   "contexts": [
+    "var out = \"# Porthole problem report\\n\\n## What went wrong\\n\\(b.note.isEmpty ? \"(not described)\" : b.note)\\n\\n## About this install\\n\\(b.facts)\\n\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1191"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "\\n(The log is left out.)\\n",
+   "lines": [
+    119
+   ],
+   "contexts": [
+    "guard includeLog else { return out + \"\\n(The log is left out.)\\n\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1192"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "\\n## The log that goes with it\\n\\(b.parts.isEmpty ? ",
+   "lines": [
+    120
+   ],
+   "contexts": [
+    "out += \"\\n## The log that goes with it\\n\\(b.parts.isEmpty ? \"(no log found)\" : b.parts.joined(separator: \"\\n\"))\\nAltogether \\(megabytes(b.log.count)) of text, which is sent packed (about a tenth of that). Below are its first and last parts; everything in between is sent too, cleaned in the same way."
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1193"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": " : b.parts.joined(separator: ",
+   "lines": [
+    120
+   ],
+   "contexts": [
+    "out += \"\\n## The log that goes with it\\n\\(b.parts.isEmpty ? \"(no log found)\" : b.parts.joined(separator: \"\\n\"))\\nAltogether \\(megabytes(b.log.count)) of text, which is sent packed (about a tenth of that). Below are its first and last parts; everything in between is sent too, cleaned in the same way."
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1194"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "))\\nAltogether \\(megabytes(b.log.count)) of text, which is sent packed (about a tenth of that). Below are its first and last parts; everything in between is sent too, cleaned in the same way.\\n\\n",
+   "lines": [
+    120
+   ],
+   "contexts": [
+    "out += \"\\n## The log that goes with it\\n\\(b.parts.isEmpty ? \"(no log found)\" : b.parts.joined(separator: \"\\n\"))\\nAltogether \\(megabytes(b.log.count)) of text, which is sent packed (about a tenth of that). Below are its first and last parts; everything in between is sent too, cleaned in the same way."
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1195"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "\\n\\n[... \\(megabytes(b.log.count - head - tail)) not shown here, but sent ...]\\n\\n",
+   "lines": [
+    125
+   ],
+   "contexts": [
+    "out += \"\\n\\n[... \\(megabytes(b.log.count - head - tail)) not shown here, but sent ...]\\n\\n\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1196"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "Porthole-report-\\(info?[",
+   "lines": [
+    135
+   ],
+   "contexts": [
+    "let name = \"Porthole-report-\\(info?[\"CFBundleShortVersionString\"] as? String ?? \"x\")-\\(info?[\"CFBundleVersion\"] as? String ?? \"x\").txt\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1197"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": "] as? String ?? ",
+   "lines": [
+    135
+   ],
+   "contexts": [
+    "let name = \"Porthole-report-\\(info?[\"CFBundleShortVersionString\"] as? String ?? \"x\")-\\(info?[\"CFBundleVersion\"] as? String ?? \"x\").txt\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1198"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": ")-\\(info?[",
+   "lines": [
+    135
+   ],
+   "contexts": [
+    "let name = \"Porthole-report-\\(info?[\"CFBundleShortVersionString\"] as? String ?? \"x\")-\\(info?[\"CFBundleVersion\"] as? String ?? \"x\").txt\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1199"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": ").txt",
+   "lines": [
+    135
+   ],
+   "contexts": [
+    "let name = \"Porthole-report-\\(info?[\"CFBundleShortVersionString\"] as? String ?? \"x\")-\\(info?[\"CFBundleVersion\"] as? String ?? \"x\").txt\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1200"
+  },
+  {
+   "file": "app/Sources/Core/ProblemReport.swift",
+   "text": " : b.note)\\n\\n## About this install\\n\\(b.facts)\\n\\n",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "var data = Data(\"# Porthole problem report\\n\\n## What went wrong\\n\\(b.note.isEmpty ? \"(not described)\" : b.note)\\n\\n## About this install\\n\\(b.facts)\\n\\n\".utf8)"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1201"
+  },
+  {
+   "file": "app/Sources/Core/RecommendedSettings.swift",
+   "text": "Start",
+   "lines": [
+    40
+   ],
+   "contexts": [
+    "if steamGame { add(\"launch\", \"Start\", recommended.launch, current.launch) { $0 == \"steam\" ? \"Through Steam\" : \"Run directly\" } }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1202"
+  },
+  {
+   "file": "app/Sources/Core/RecommendedSettings.swift",
+   "text": "Through Steam",
+   "lines": [
+    40
+   ],
+   "contexts": [
+    "if steamGame { add(\"launch\", \"Start\", recommended.launch, current.launch) { $0 == \"steam\" ? \"Through Steam\" : \"Run directly\" } }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1203"
+  },
+  {
+   "file": "app/Sources/Core/RecommendedSettings.swift",
+   "text": "Run directly",
+   "lines": [
+    40
+   ],
+   "contexts": [
+    "if steamGame { add(\"launch\", \"Start\", recommended.launch, current.launch) { $0 == \"steam\" ? \"Through Steam\" : \"Run directly\" } }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1204"
+  },
+  {
+   "file": "app/Sources/Core/RecommendedSettings.swift",
+   "text": "Power mode",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "add(\"power\", \"Power mode\", recommended.power, current.power) { $0 == \"performance\" ? \"Performance\" : $0 == \"saver\" ? \"Battery saver\" : \"Balanced\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1205"
+  },
+  {
+   "file": "app/Sources/Core/RecommendedSettings.swift",
+   "text": "Performance",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "add(\"power\", \"Power mode\", recommended.power, current.power) { $0 == \"performance\" ? \"Performance\" : $0 == \"saver\" ? \"Battery saver\" : \"Balanced\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1206"
+  },
+  {
+   "file": "app/Sources/Core/RecommendedSettings.swift",
+   "text": "Battery saver",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "add(\"power\", \"Power mode\", recommended.power, current.power) { $0 == \"performance\" ? \"Performance\" : $0 == \"saver\" ? \"Battery saver\" : \"Balanced\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1207"
+  },
+  {
+   "file": "app/Sources/Core/RecommendedSettings.swift",
+   "text": "Balanced",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "add(\"power\", \"Power mode\", recommended.power, current.power) { $0 == \"performance\" ? \"Performance\" : $0 == \"saver\" ? \"Battery saver\" : \"Balanced\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1208"
+  },
+  {
+   "file": "app/Sources/Core/RecommendedSettings.swift",
+   "text": "Swap",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "add(\"swapMB\", \"Swap\", recommended.swapMB, current.swapMB) { $0 <= 0 ? \"Off\" : \"\\($0 / 1024 >= 1 && $0 % 1024 == 0 ? \"\\($0 / 1024) GB\" : \"\\($0) MB\")\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1209"
+  },
+  {
+   "file": "app/Sources/Core/RecommendedSettings.swift",
+   "text": "Off",
+   "lines": [
+    42,
+    47,
+    48
+   ],
+   "contexts": [
+    "add(\"swapMB\", \"Swap\", recommended.swapMB, current.swapMB) { $0 <= 0 ? \"Off\" : \"\\($0 / 1024 >= 1 && $0 % 1024 == 0 ? \"\\($0 / 1024) GB\" : \"\\($0) MB\")\" }",
+    "add(\"preciseMath\", \"Precise shader math\", recommended.preciseMath, current.preciseMath) { $0 ? \"On\" : \"Off\" }",
+    "add(\"desktopDisplay\", \"Wine desktop display\", recommended.desktopDisplay, current.desktopDisplay) { $0 ? \"On\" : \"Off\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1210"
+  },
+  {
+   "file": "app/Sources/Core/RecommendedSettings.swift",
+   "text": "Swap covers",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "add(\"swapCoverage\", \"Swap covers\", recommended.swapCoverage, current.swapCoverage) { $0.isEmpty ? \"Large (8 MB+)\" : $0 == \"blocks\" ? \"All 1 MB+\" : $0 == \"broad\" ? \"Broad\" : \"1 MB+ and overflow\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1211"
+  },
+  {
+   "file": "app/Sources/Core/RecommendedSettings.swift",
+   "text": "Large (8 MB+)",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "add(\"swapCoverage\", \"Swap covers\", recommended.swapCoverage, current.swapCoverage) { $0.isEmpty ? \"Large (8 MB+)\" : $0 == \"blocks\" ? \"All 1 MB+\" : $0 == \"broad\" ? \"Broad\" : \"1 MB+ and overflow\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1212"
+  },
+  {
+   "file": "app/Sources/Core/RecommendedSettings.swift",
+   "text": "All 1 MB+",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "add(\"swapCoverage\", \"Swap covers\", recommended.swapCoverage, current.swapCoverage) { $0.isEmpty ? \"Large (8 MB+)\" : $0 == \"blocks\" ? \"All 1 MB+\" : $0 == \"broad\" ? \"Broad\" : \"1 MB+ and overflow\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1213"
+  },
+  {
+   "file": "app/Sources/Core/RecommendedSettings.swift",
+   "text": "Broad",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "add(\"swapCoverage\", \"Swap covers\", recommended.swapCoverage, current.swapCoverage) { $0.isEmpty ? \"Large (8 MB+)\" : $0 == \"blocks\" ? \"All 1 MB+\" : $0 == \"broad\" ? \"Broad\" : \"1 MB+ and overflow\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1214"
+  },
+  {
+   "file": "app/Sources/Core/RecommendedSettings.swift",
+   "text": "1 MB+ and overflow",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "add(\"swapCoverage\", \"Swap covers\", recommended.swapCoverage, current.swapCoverage) { $0.isEmpty ? \"Large (8 MB+)\" : $0 == \"blocks\" ? \"All 1 MB+\" : $0 == \"broad\" ? \"Broad\" : \"1 MB+ and overflow\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1215"
+  },
+  {
+   "file": "app/Sources/Core/RecommendedSettings.swift",
+   "text": "Video memory",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "add(\"vramMB\", \"Video memory\", recommended.vramMB, current.vramMB) { $0 <= 0 ? \"Automatic\" : \"\\($0) MB\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1216"
+  },
+  {
+   "file": "app/Sources/Core/RecommendedSettings.swift",
+   "text": "Automatic",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "add(\"vramMB\", \"Video memory\", recommended.vramMB, current.vramMB) { $0 <= 0 ? \"Automatic\" : \"\\($0) MB\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1217"
+  },
+  {
+   "file": "app/Sources/Core/RecommendedSettings.swift",
+   "text": "\\($0) MB",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "add(\"vramMB\", \"Video memory\", recommended.vramMB, current.vramMB) { $0 <= 0 ? \"Automatic\" : \"\\($0) MB\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1218"
+  },
+  {
+   "file": "app/Sources/Core/RecommendedSettings.swift",
+   "text": "Precise shader math",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "add(\"preciseMath\", \"Precise shader math\", recommended.preciseMath, current.preciseMath) { $0 ? \"On\" : \"Off\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1219"
+  },
+  {
+   "file": "app/Sources/Core/RecommendedSettings.swift",
+   "text": "On",
+   "lines": [
+    47,
+    48
+   ],
+   "contexts": [
+    "add(\"preciseMath\", \"Precise shader math\", recommended.preciseMath, current.preciseMath) { $0 ? \"On\" : \"Off\" }",
+    "add(\"desktopDisplay\", \"Wine desktop display\", recommended.desktopDisplay, current.desktopDisplay) { $0 ? \"On\" : \"Off\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1220"
+  },
+  {
+   "file": "app/Sources/Core/RecommendedSettings.swift",
+   "text": "Wine desktop display",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "add(\"desktopDisplay\", \"Wine desktop display\", recommended.desktopDisplay, current.desktopDisplay) { $0 ? \"On\" : \"Off\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1221"
+  },
+  {
+   "file": "app/Sources/Core/ReleaseSignature.swift",
+   "text": "porthole-release-v1\\n\\(app)\\n\\(version)\\n\\(build)\\n\\(sha256.lowercased())",
+   "lines": [
+    22
+   ],
+   "contexts": [
+    "Data(\"porthole-release-v1\\n\\(app)\\n\\(version)\\n\\(build)\\n\\(sha256.lowercased())\".utf8)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1222"
+  },
+  {
+   "file": "app/Sources/Core/ReleaseSignature.swift",
+   "text": "This update has no checksum, so it cannot be checked. It was not installed.",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "guard let sha = release.sha256, sha.count == 64 else { return \"This update has no checksum, so it cannot be checked. It was not installed.\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1223"
+  },
+  {
+   "file": "app/Sources/Core/ReleaseSignature.swift",
+   "text": "This update is not signed by the maintainer, so it was not installed. If you did not expect this, do not install it.",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "return \"This update is not signed by the maintainer, so it was not installed. If you did not expect this, do not install it.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1224"
+  },
+  {
+   "file": "app/Sources/Core/ReleaseSignature.swift",
+   "text": "This update's signature is not valid, so it was not installed. The update server may have been tampered with.",
+   "lines": [
+    33
+   ],
+   "contexts": [
+    "return \"This update's signature is not valid, so it was not installed. The update server may have been tampered with.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1225"
+  },
+  {
+   "file": "app/Sources/Core/RestartCoordinator.swift",
+   "text": "\\(game.name) did not close",
+   "lines": [
+    80
+   ],
+   "contexts": [
+    "let alert = UIAlertController(title: \"\\(game.name) did not close\", message: \"Some games ignore the close request. Stop it now and start it again? Anything not saved in the game is lost.\", preferredStyle: .alert)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1226"
+  },
+  {
+   "file": "app/Sources/Core/RestartCoordinator.swift",
+   "text": "Some games ignore the close request. Stop it now and start it again? Anything not saved in the game is lost.",
+   "lines": [
+    80
+   ],
+   "contexts": [
+    "let alert = UIAlertController(title: \"\\(game.name) did not close\", message: \"Some games ignore the close request. Stop it now and start it again? Anything not saved in the game is lost.\", preferredStyle: .alert)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1227"
+  },
+  {
+   "file": "app/Sources/Core/RestartCoordinator.swift",
+   "text": "Keep playing",
+   "lines": [
+    81
+   ],
+   "contexts": [
+    "alert.addAction(UIAlertAction(title: \"Keep playing\", style: .cancel) { [weak self] _ in self?.answer = .keep })"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1228"
+  },
+  {
+   "file": "app/Sources/Core/RestartCoordinator.swift",
+   "text": "Stop and restart",
+   "lines": [
+    82
+   ],
+   "contexts": [
+    "alert.addAction(UIAlertAction(title: \"Stop and restart\", style: .destructive) { [weak self] _ in self?.answer = .stop })"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1229"
+  },
+  {
+   "file": "app/Sources/Core/RestartCoordinator.swift",
+   "text": "Start \\(game.name) again",
+   "lines": [
+    91
+   ],
+   "contexts": [
+    "content.title = \"Start \\(game.name) again\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1230"
+  },
+  {
+   "file": "app/Sources/Core/RestartCoordinator.swift",
+   "text": "Tap to open Porthole. It starts the game with your new Workshop items.",
+   "lines": [
+    92
+   ],
+   "contexts": [
+    "content.body = \"Tap to open Porthole. It starts the game with your new Workshop items.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1231"
+  },
+  {
+   "file": "app/Sources/Core/SaveBackup.swift",
+   "text": "The zip is truncated.",
+   "lines": [
+    89,
+    126,
+    159
+   ],
+   "contexts": [
+    "guard o >= 0, o + 2 <= b.count else { throw fail(\"The zip is truncated.\") }",
+    "guard q + 46 + nlen <= b.count else { throw fail(\"The zip is truncated.\") }",
+    "guard e.compressedSize >= 0, start + e.compressedSize <= b.count else { throw SaveError.message(\"The zip is truncated.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1232"
+  },
+  {
+   "file": "app/Sources/Core/SaveBackup.swift",
+   "text": "The zip is too large.",
+   "lines": [
+    95
+   ],
+   "contexts": [
+    "guard hi < 0x10000 else { throw fail(\"The zip is too large.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1233"
+  },
+  {
+   "file": "app/Sources/Core/SaveBackup.swift",
+   "text": "Not a zip file.",
+   "lines": [
+    98,
+    106
+   ],
+   "contexts": [
+    "guard b.count >= 22 else { throw fail(\"Not a zip file.\") }",
+    "guard eocd >= 0 else { throw fail(\"Not a zip file.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1234"
+  },
+  {
+   "file": "app/Sources/Core/SaveBackup.swift",
+   "text": "Broken zip64 record.",
+   "lines": [
+    111,
+    113
+   ],
+   "contexts": [
+    "guard try u32(loc) == 0x0706_4b50 else { throw fail(\"Broken zip64 record.\") }",
+    "guard try u32(z) == 0x0606_4b50 else { throw fail(\"Broken zip64 record.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1235"
+  },
+  {
+   "file": "app/Sources/Core/SaveBackup.swift",
+   "text": "Broken zip directory.",
+   "lines": [
+    120
+   ],
+   "contexts": [
+    "guard try u32(q) == 0x0201_4b50 else { throw fail(\"Broken zip directory.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1236"
+  },
+  {
+   "file": "app/Sources/Core/SaveBackup.swift",
+   "text": "Broken zip entry \\(e.name).",
+   "lines": [
+    154
+   ],
+   "contexts": [
+    "throw SaveError.message(\"Broken zip entry \\(e.name).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1237"
+  },
+  {
+   "file": "app/Sources/Core/SaveBackup.swift",
+   "text": "\\(e.name) could not be decompressed.",
+   "lines": [
+    174
+   ],
+   "contexts": [
+    "guard written == e.size else { throw SaveError.message(\"\\(e.name) could not be decompressed.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1238"
+  },
+  {
+   "file": "app/Sources/Core/SaveBackup.swift",
+   "text": "\\(e.name) uses zip method \\(e.method), which is not supported.",
+   "lines": [
+    177
+   ],
+   "contexts": [
+    "throw SaveError.message(\"\\(e.name) uses zip method \\(e.method), which is not supported.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1239"
+  },
+  {
+   "file": "app/Sources/Core/SaveBackup.swift",
+   "text": "There is no Windows drive yet.",
+   "lines": [
+    243
+   ],
+   "contexts": [
+    "guard fm.fileExists(atPath: AppModel.driveC.appendingPathComponent(\"users\").path) else { throw SaveError.message(\"There is no Windows drive yet.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1240"
+  },
+  {
+   "file": "app/Sources/Core/SaveBackup.swift",
+   "text": "That zip holds no saves (nothing under users/).",
+   "lines": [
+    280
+   ],
+   "contexts": [
+    "if n == 0 { throw SaveError.message(\"That zip holds no saves (nothing under users/).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1241"
+  },
+  {
+   "file": "app/Sources/Core/SchedHints.swift",
+   "text": "Porthole is running a game",
+   "lines": [
+    14
+   ],
+   "contexts": [
+    "token = ProcessInfo.processInfo.beginActivity(options: [.userInitiated, .latencyCritical, .idleSystemSleepDisabled], reason: \"Porthole is running a game\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1242"
+  },
+  {
+   "file": "app/Sources/Core/SegmentedDownload.swift",
+   "text": "Content-Range",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "guard http.statusCode == 206, let range = http.value(forHTTPHeaderField: \"Content-Range\"), let slash = range.lastIndex(of: \"/\"),"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1243"
+  },
+  {
+   "file": "app/Sources/Core/SegmentedDownload.swift",
+   "text": "The download ended early. Try again (it carries on from where it stopped).",
+   "lines": [
+    67
+   ],
+   "contexts": [
+    "guard written == total else { throw GogInstallError.invalid(\"The download ended early. Try again (it carries on from where it stopped).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1244"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "On-screen controls",
+   "lines": [
+    158
+   ],
+   "contexts": [
+    "var set = BindSet(name: \"On-screen controls\", touch: template)"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1245"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "On-screen controls \\(n)",
+   "lines": [
+    159
+   ],
+   "contexts": [
+    "var n = 2; while (g.bindSets ?? []).contains(where: { $0.name == set.name }) { set.name = \"On-screen controls \\(n)\"; n += 1 }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1246"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "StikDebug is not installed. Install it and try again.",
+   "lines": [
+    198
+   ],
+   "contexts": [
+    "state = .failed(\"StikDebug is not installed. Install it and try again.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1247"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Could not open StikDebug.",
+   "lines": [
+    205,
+    733
+   ],
+   "contexts": [
+    "if !ok { self?.state = .failed(\"Could not open StikDebug.\") }",
+    "if ok { proceed() } else { self.state = .failed(\"Could not open StikDebug.\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1248"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Porthole has to close and open again before the next game starts. Use Close Porthole on the Home screen, then open it again.",
+   "lines": [
+    285
+   ],
+   "contexts": [
+    "state = .failed(\"Porthole has to close and open again before the next game starts. Use Close Porthole on the Home screen, then open it again.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1249"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "\\(game.name) is built on Microsoft's .NET Framework, which needs Wine Mono (about 42 MB). Download it, then start the game again.",
+   "lines": [
+    336
+   ],
+   "contexts": [
+    "state = .failed(\"\\(game.name) is built on Microsoft's .NET Framework, which needs Wine Mono (about 42 MB). Download it, then start the game again.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1250"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Steam launching is not built into this app. Turn on \\\"Run directly\\\" for this game.",
+   "lines": [
+    412
+   ],
+   "contexts": [
+    "guard MadeiraDock.enabled else { return fail(\"Steam launching is not built into this app. Turn on \\\"Run directly\\\" for this game.\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1251"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Sign in to Steam first (Steam panel on the home screen).",
+   "lines": [
+    413
+   ],
+   "contexts": [
+    "guard SteamSignIn.isSignedIn else { return fail(\"Sign in to Steam first (Steam panel on the home screen).\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1252"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Steam's client files are not installed yet. Open the Steam screen and download them, or run this game directly.",
+   "lines": [
+    414
+   ],
+   "contexts": [
+    "guard MadeiraDock.clientInstalled else { return fail(\"Steam's client files are not installed yet. Open the Steam screen and download them, or run this game directly.\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1253"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Steam does not list \\(game.name) as installed. Download it again from the Steam screen.",
+   "lines": [
+    417
+   ],
+   "contexts": [
+    "return fail(\"Steam does not list \\(game.name) as installed. Download it again from the Steam screen.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1254"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Checking your Steam Cloud files…",
+   "lines": [
+    434
+   ],
+   "contexts": [
+    "dockStatus = \"Checking your Steam Cloud files…\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1255"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Steam Cloud: \\(name) (\\(done) of \\(total))",
+   "lines": [
+    441
+   ],
+   "contexts": [
+    "Task { @MainActor in self?.dockStatus = \"Steam Cloud: \\(name) (\\(done) of \\(total))\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1256"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "could be reached",
+   "lines": [
+    446
+   ],
+   "contexts": [
+    "if why.contains(\"could be reached\") || why.contains(\"TLS\") || why.contains(\"No internet\") { self?.steamUnreachable = true }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1257"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "No internet",
+   "lines": [
+    446
+   ],
+   "contexts": [
+    "if why.contains(\"could be reached\") || why.contains(\"TLS\") || why.contains(\"No internet\") { self?.steamUnreachable = true }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1258"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Installing Steam's shared files (\\(name))…",
+   "lines": [
+    477,
+    483
+   ],
+   "contexts": [
+    "dockStatus = \"Installing Steam's shared files (\\(name))…\"",
+    "self?.dockStatus = progress.totalBytes == 0 ? \"Installing Steam's shared files (\\(name))…\" : \"Installing Steam's shared files (\\(name)): \\(percent)%\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1259"
+  }
+ ]
+}

@@ -1,0 +1,2914 @@
+{
+ "batch": 16,
+ "units": [
+  {
+   "file": "app/Sources/UI/Game/SharedSetupSheet.swift",
+   "text": "A setup is a \\u{201C}.\\(GameSetupShare.fileExtension)\\u{201D} file or one line of text that starts with \\u{201C}porthole-setup1:\\u{201D}, made with Share this game's setup.",
+   "lines": [
+    40
+   ],
+   "contexts": [
+    "Text(\"A setup is a \\u{201C}.\\(GameSetupShare.fileExtension)\\u{201D} file or one line of text that starts with \\u{201C}porthole-setup1:\\u{201D}, made with Share this game's setup.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2700"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedSetupSheet.swift",
+   "text": "That file is not a Porthole setup.",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "if let setup = GameSetupShare.parse(file: url) { found = setup; message = nil } else { message = \"That file is not a Porthole setup.\" }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2701"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedSetupSheet.swift",
+   "text": "The clipboard does not hold a Porthole setup.",
+   "lines": [
+    54
+   ],
+   "contexts": [
+    "else { message = \"The clipboard does not hold a Porthole setup.\" }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2702"
+  },
+  {
+   "file": "app/Sources/UI/Game/TestedSetupGroup.swift",
+   "text": "Madeira\\u{2019}s tested setup",
+   "lines": [
+    17
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Madeira\\u{2019}s tested setup\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2703"
+  },
+  {
+   "file": "app/Sources/UI/Game/TestedSetupGroup.swift",
+   "text": "The Madeira project found these settings to work for \\(rec.title) on its own builds. They have not been tested on Porthole\\u{2019}s engine: use them if the game does not start or runs badly, and undo them if it gets worse.",
+   "lines": [
+    18
+   ],
+   "contexts": [
+    "Text(\"The Madeira project found these settings to work for \\(rec.title) on its own builds. They have not been tested on Porthole\\u{2019}s engine: use them if the game does not start or runs badly, and undo them if it gets worse.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2704"
+  },
+  {
+   "file": "app/Sources/UI/Game/TestedSetupGroup.swift",
+   "text": "Engine lines",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "ValueRow(id: \"ts-lines\", symbol: \"text.alignleft\", title: \"Engine lines\", value: \"\\(plan.lines)\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2705"
+  },
+  {
+   "file": "app/Sources/UI/Game/TestedSetupGroup.swift",
+   "text": "\\(plan.lines)",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "ValueRow(id: \"ts-lines\", symbol: \"text.alignleft\", title: \"Engine lines\", value: \"\\(plan.lines)\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2706"
+  },
+  {
+   "file": "app/Sources/UI/Game/TestedSetupGroup.swift",
+   "text": "Also sets",
+   "lines": [
+    22
+   ],
+   "contexts": [
+    "ValueRow(id: \"ts-switches\", symbol: \"slider.horizontal.3\", title: \"Also sets\", value: plan.applied.joined(separator: \", \"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2707"
+  },
+  {
+   "file": "app/Sources/UI/Game/TestedSetupGroup.swift",
+   "text": "Not applied (Porthole keeps these elsewhere): ",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "Text(\"Not applied (Porthole keeps these elsewhere): \" + plan.skipped.joined(separator: \"; \") + \".\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2708"
+  },
+  {
+   "file": "app/Sources/UI/Game/TestedSetupGroup.swift",
+   "text": "Use this setup",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "ActionRow(id: \"ts-apply\", symbol: \"checkmark.circle.fill\", title: \"Use this setup\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2709"
+  },
+  {
+   "file": "app/Sources/UI/Game/TestedSetupGroup.swift",
+   "text": "Only for this game; you can undo it",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "subtitle: (g.engine?.config ?? \"\").isEmpty ? \"Only for this game; you can undo it\" : \"Replaces this game\\u{2019}s engine lines; you can undo it\", chevron: false, prominent: true) { confirm = true }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2710"
+  },
+  {
+   "file": "app/Sources/UI/Game/TestedSetupGroup.swift",
+   "text": "Replaces this game\\u{2019}s engine lines; you can undo it",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "subtitle: (g.engine?.config ?? \"\").isEmpty ? \"Only for this game; you can undo it\" : \"Replaces this game\\u{2019}s engine lines; you can undo it\", chevron: false, prominent: true) { confirm = true }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2711"
+  },
+  {
+   "file": "app/Sources/UI/Game/TestedSetupGroup.swift",
+   "text": "Undo Madeira\\u{2019}s tested setup",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "ActionRow(id: \"ts-undo\", symbol: \"arrow.uturn.backward\", title: \"Undo Madeira\\u{2019}s tested setup\", subtitle: \"Puts this game\\u{2019}s engine lines and settings back as they were\", chevron: false) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2712"
+  },
+  {
+   "file": "app/Sources/UI/Game/TestedSetupGroup.swift",
+   "text": "Puts this game\\u{2019}s engine lines and settings back as they were",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "ActionRow(id: \"ts-undo\", symbol: \"arrow.uturn.backward\", title: \"Undo Madeira\\u{2019}s tested setup\", subtitle: \"Puts this game\\u{2019}s engine lines and settings back as they were\", chevron: false) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2713"
+  },
+  {
+   "file": "app/Sources/UI/Game/TestedSetupGroup.swift",
+   "text": "Use Madeira\\u{2019}s tested setup?",
+   "lines": [
+    38
+   ],
+   "contexts": [
+    ".confirm(\"Use Madeira\\u{2019}s tested setup?\", message: (g.engine?.config ?? \"\").isEmpty ? \"Writes \\(plan.lines) engine lines and the switches above for this game only. You can undo it.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2714"
+  },
+  {
+   "file": "app/Sources/UI/Game/TestedSetupGroup.swift",
+   "text": "Writes \\(plan.lines) engine lines and the switches above for this game only. You can undo it.",
+   "lines": [
+    38
+   ],
+   "contexts": [
+    ".confirm(\"Use Madeira\\u{2019}s tested setup?\", message: (g.engine?.config ?? \"\").isEmpty ? \"Writes \\(plan.lines) engine lines and the switches above for this game only. You can undo it.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2715"
+  },
+  {
+   "file": "app/Sources/UI/Game/TestedSetupGroup.swift",
+   "text": "Replaces this game\\u{2019}s engine lines with \\(plan.lines) lines and sets the switches above. Your current lines are kept for Undo.",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    ": \"Replaces this game\\u{2019}s engine lines with \\(plan.lines) lines and sets the switches above. Your current lines are kept for Undo.\", confirmTitle: \"Use it\", isPresented: $confirm) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2716"
+  },
+  {
+   "file": "app/Sources/UI/Game/TestedSetupGroup.swift",
+   "text": "Use it",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    ": \"Replaces this game\\u{2019}s engine lines with \\(plan.lines) lines and sets the switches above. Your current lines are kept for Undo.\", confirmTitle: \"Use it\", isPresented: $confirm) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2717"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Sign in to GOG",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "Text(\"Sign in to GOG\").font(.system(size: 24, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2718"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "You sign in on GOG's own page. The sign-in token stays in this device's Keychain; Porthole never sees your password. Your games that have a Windows version are listed here.",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "Text(\"You sign in on GOG's own page. The sign-in token stays in this device's Keychain; Porthole never sees your password. Your games that have a Windows version are listed here.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2719"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Sign in",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "PillButton(id: \"gog-signin\", title: \"Sign in\", symbol: \"person.badge.key.fill\", style: .primary) { signIn = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2720"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "\\(Int((install?.progress.fraction ?? 0) * 100))%",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "case .active?: return BadgeData(symbol: \"arrow.down.circle.fill\", text: \"\\(Int((install?.progress.fraction ?? 0) * 100))%\", tint: Theme.accent)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2721"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Waiting",
+   "lines": [
+    45
+   ],
+   "contexts": [
+    "case .queued?: return BadgeData(symbol: \"hourglass\", text: \"Waiting\", tint: Theme.textDim)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2722"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Paused",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "case .paused?: return BadgeData(symbol: \"pause.circle.fill\", text: \"Paused\", tint: Theme.warn)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2723"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Failed",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "case .failed?: return BadgeData(symbol: \"exclamationmark.triangle.fill\", text: \"Failed\", tint: Theme.bad)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2724"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Ready to install",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "case .ready?: return BadgeData(symbol: \"shippingbox.fill\", text: \"Ready to install\", tint: Theme.accent)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2725"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Installing",
+   "lines": [
+    49
+   ],
+   "contexts": [
+    "case .running?: return BadgeData(symbol: \"gearshape.fill\", text: \"Installing\", tint: Theme.accent)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2726"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Installed",
+   "lines": [
+    50
+   ],
+   "contexts": [
+    "case .installed?: return BadgeData(symbol: \"checkmark.circle.fill\", text: \"Installed\", tint: Theme.good)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2727"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Refresh the list",
+   "lines": [
+    96
+   ],
+   "contexts": [
+    "else { IconPillButton(id: \"go-refresh\", symbol: \"arrow.clockwise\", label: \"Refresh the list\") { library.refresh() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2728"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "GOG account",
+   "lines": [
+    98
+   ],
+   "contexts": [
+    "IconPillButton(id: \"go-account\", symbol: \"person.crop.circle\", label: \"GOG account\") { showAccount = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2729"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "No games with a Windows version found on this account yet.",
+   "lines": [
+    102
+   ],
+   "contexts": [
+    "Text(library.games.isEmpty ? \"No games with a Windows version found on this account yet.\" : \"No games match.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2730"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "No games match.",
+   "lines": [
+    102
+   ],
+   "contexts": [
+    "Text(library.games.isEmpty ? \"No games with a Windows version found on this account yet.\" : \"No games match.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2731"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "GOG games install by downloading GOG's own setup file and running it inside Porthole. Achievements and other Galaxy features work for games installed from GOG's own builds (Settings > Stores > GOG).",
+   "lines": [
+    108
+   ],
+   "contexts": [
+    "Text(\"GOG games install by downloading GOG's own setup file and running it inside Porthole. Achievements and other Galaxy features work for games installed from GOG's own builds (Settings > Stores > GOG).\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2732"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Search \\(library.games.count) game\\(library.games.count == 1 ? ",
+   "lines": [
+    116
+   ],
+   "contexts": [
+    "private var searchField: some View { SearchField(id: \"go-search\", prompt: \"Search \\(library.games.count) game\\(library.games.count == 1 ? \"\" : \"s\")\", text: $search) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2733"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Open on GOG",
+   "lines": [
+    132
+   ],
+   "contexts": [
+    "if let page = game.storePage { Link(destination: page) { Label(\"Open on GOG\", systemImage: \"safari\") }.font(.subheadline) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2734"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Uninstall \\(game.title)?",
+   "lines": [
+    134
+   ],
+   "contexts": [
+    ".confirm(\"Uninstall \\(game.title)?\", message: \"The game's folder is removed from this device. Your GOG library and your save files in Porthole's backups are not touched.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2735"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "The game's folder is removed from this device. Your GOG library and your save files in Porthole's backups are not touched.",
+   "lines": [
+    134
+   ],
+   "contexts": [
+    ".confirm(\"Uninstall \\(game.title)?\", message: \"The game's folder is removed from this device. Your GOG library and your save files in Porthole's backups are not touched.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2736"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Uninstall and delete its files",
+   "lines": [
+    135
+   ],
+   "contexts": [
+    "confirmTitle: \"Uninstall and delete its files\", destructive: true, isPresented: $confirmUninstall) { installer.uninstall(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2737"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Install",
+   "lines": [
+    142
+   ],
+   "contexts": [
+    "button(\"Install\", symbol: \"arrow.down.circle.fill\", prominent: true) { installer.install(game) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2738"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Downloads the game straight from GOG (or GOG's setup file for older games). Keep the app open while it installs.",
+   "lines": [
+    143
+   ],
+   "contexts": [
+    "note(\"Downloads the game straight from GOG (or GOG's setup file for older games). Keep the app open while it installs.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2739"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Waiting for its turn\\u{2026}",
+   "lines": [
+    145
+   ],
+   "contexts": [
+    "Label(\"Waiting for its turn\\u{2026}\", systemImage: \"hourglass\").foregroundStyle(.secondary)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2740"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Cancel",
+   "lines": [
+    146,
+    153
+   ],
+   "contexts": [
+    "button(\"Cancel\", symbol: \"xmark\") { installer.cancel(game.id) }",
+    "button(\"Cancel\", symbol: \"xmark\", role: .destructive) { installer.cancel(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2741"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Pause",
+   "lines": [
+    152
+   ],
+   "contexts": [
+    "button(\"Pause\", symbol: \"pause.fill\") { installer.pause(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2742"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Resume",
+   "lines": [
+    158
+   ],
+   "contexts": [
+    "button(\"Resume\", symbol: \"play.fill\", prominent: true) { installer.install(game) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2743"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Remove",
+   "lines": [
+    159,
+    165
+   ],
+   "contexts": [
+    "button(\"Remove\", symbol: \"trash\", role: .destructive) { installer.cancel(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2744"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Try again",
+   "lines": [
+    164
+   ],
+   "contexts": [
+    "button(\"Try again\", symbol: \"arrow.clockwise\", prominent: true) { installer.install(game) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2745"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Downloaded",
+   "lines": [
+    168
+   ],
+   "contexts": [
+    "Label(\"Downloaded\", systemImage: \"checkmark.circle.fill\").foregroundStyle(.green)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2746"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Run the installer",
+   "lines": [
+    169
+   ],
+   "contexts": [
+    "button(\"Run the installer\", symbol: \"shippingbox.fill\", prominent: true) { installer.runInstaller(game.id); dismiss() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2747"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "The setup runs in Porthole's Wine. When it ends, the game is added to your library by itself.",
+   "lines": [
+    170
+   ],
+   "contexts": [
+    "note(\"The setup runs in Porthole's Wine. When it ends, the game is added to your library by itself.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2748"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Remove the download",
+   "lines": [
+    171
+   ],
+   "contexts": [
+    "button(\"Remove the download\", symbol: \"trash\", role: .destructive) { installer.cancel(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2749"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Installing\\u{2026}",
+   "lines": [
+    173
+   ],
+   "contexts": [
+    "Label(\"Installing\\u{2026}\", systemImage: \"gearshape.fill\").foregroundStyle(.secondary)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2750"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "The setup is running. When it ends, the game is added to your library by itself.",
+   "lines": [
+    174
+   ],
+   "contexts": [
+    "note(\"The setup is running. When it ends, the game is added to your library by itself.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2751"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Installed. Find it in your library.",
+   "lines": [
+    176
+   ],
+   "contexts": [
+    "Label(\"Installed. Find it in your library.\", systemImage: \"checkmark.seal.fill\").foregroundStyle(.green)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2752"
+  },
+  {
+   "file": "app/Sources/UI/GogLibraryScreens.swift",
+   "text": "Uninstall",
+   "lines": [
+    177
+   ],
+   "contexts": [
+    "button(\"Uninstall\", symbol: \"trash\", role: .destructive) { confirmUninstall = true }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2753"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GameTourView.swift",
+   "text": "Before \\($0) starts",
+   "lines": [
+    54
+   ],
+   "contexts": [
+    "Text(gameName.map { \"Before \\($0) starts\" } ?? \"How to play\").font(.footnote.weight(.bold)).foregroundStyle(Theme.textDim).textCase(.uppercase).tracking(0.6).lineLimit(1)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2754"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GameTourView.swift",
+   "text": "How to play",
+   "lines": [
+    54
+   ],
+   "contexts": [
+    "Text(gameName.map { \"Before \\($0) starts\" } ?? \"How to play\").font(.footnote.weight(.bold)).foregroundStyle(Theme.textDim).textCase(.uppercase).tracking(0.6).lineLimit(1)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2755"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GameTourView.swift",
+   "text": "\\(index + 1) of \\(steps.count)",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    "Text(\"\\(index + 1) of \\(steps.count)\").font(.footnote.monospacedDigit()).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2756"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GameTourView.swift",
+   "text": "Back",
+   "lines": [
+    75
+   ],
+   "contexts": [
+    "if index > 0 { PillButton(id: \"tour-back\", title: \"Back\", symbol: \"chevron.left\") { go(-1) } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2757"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GameTourView.swift",
+   "text": "Done",
+   "lines": [
+    76
+   ],
+   "contexts": [
+    "PillButton(id: \"tour-next\", title: last ? (gameName == nil ? \"Done\" : \"Start the game\") : \"Next\", symbol: last ? (gameName == nil ? \"checkmark\" : \"play.fill\") : \"chevron.right\", style: .primary) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2758"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GameTourView.swift",
+   "text": "Start the game",
+   "lines": [
+    76
+   ],
+   "contexts": [
+    "PillButton(id: \"tour-next\", title: last ? (gameName == nil ? \"Done\" : \"Start the game\") : \"Next\", symbol: last ? (gameName == nil ? \"checkmark\" : \"play.fill\") : \"chevron.right\", style: .primary) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2759"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GameTourView.swift",
+   "text": "Next",
+   "lines": [
+    76
+   ],
+   "contexts": [
+    "PillButton(id: \"tour-next\", title: last ? (gameName == nil ? \"Done\" : \"Start the game\") : \"Next\", symbol: last ? (gameName == nil ? \"checkmark\" : \"play.fill\") : \"chevron.right\", style: .primary) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2760"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GameTourView.swift",
+   "text": "Close",
+   "lines": [
+    81
+   ],
+   "contexts": [
+    "Button { onFinish() } label: { Text(gameName == nil ? \"Close\" : \"Skip and start\").font(.footnote.weight(.semibold)).foregroundStyle(Theme.textDim).padding(.vertical, 10).padding(.horizontal, 14) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2761"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GameTourView.swift",
+   "text": "Skip and start",
+   "lines": [
+    81
+   ],
+   "contexts": [
+    "Button { onFinish() } label: { Text(gameName == nil ? \"Close\" : \"Skip and start\").font(.footnote.weight(.semibold)).foregroundStyle(Theme.textDim).padding(.vertical, 10).padding(.horizontal, 14) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2762"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GameTourView.swift",
+   "text": "Do not show tips",
+   "lines": [
+    83
+   ],
+   "contexts": [
+    "Button { GuideCenter.shared.enabled = false; onFinish() } label: { Text(\"Do not show tips\").font(.footnote.weight(.semibold)).foregroundStyle(Theme.textDim).padding(.vertical, 10).padding(.horizontal, 14) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2763"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GameTourView.swift",
+   "text": "Tap",
+   "lines": [
+    151
+   ],
+   "contexts": [
+    "(\"hand.tap.fill\", \"Tap\", \"a click\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2764"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GameTourView.swift",
+   "text": "a click",
+   "lines": [
+    151
+   ],
+   "contexts": [
+    "(\"hand.tap.fill\", \"Tap\", \"a click\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2765"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GameTourView.swift",
+   "text": "Drag",
+   "lines": [
+    152
+   ],
+   "contexts": [
+    "(\"hand.draw.fill\", \"Drag\", \"holds the left button while you move\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2766"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GameTourView.swift",
+   "text": "holds the left button while you move",
+   "lines": [
+    152
+   ],
+   "contexts": [
+    "(\"hand.draw.fill\", \"Drag\", \"holds the left button while you move\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2767"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GameTourView.swift",
+   "text": "Press and hold, or tap with two fingers",
+   "lines": [
+    153
+   ],
+   "contexts": [
+    "(\"hand.point.up.fill\", \"Press and hold, or tap with two fingers\", \"the right button\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2768"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GameTourView.swift",
+   "text": "the right button",
+   "lines": [
+    153
+   ],
+   "contexts": [
+    "(\"hand.point.up.fill\", \"Press and hold, or tap with two fingers\", \"the right button\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2769"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GameTourView.swift",
+   "text": "Pinch",
+   "lines": [
+    154
+   ],
+   "contexts": [
+    "(\"arrow.up.left.and.arrow.down.right\", \"Pinch\", \"the mouse wheel (spread to zoom in)\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2770"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GameTourView.swift",
+   "text": "the mouse wheel (spread to zoom in)",
+   "lines": [
+    154
+   ],
+   "contexts": [
+    "(\"arrow.up.left.and.arrow.down.right\", \"Pinch\", \"the mouse wheel (spread to zoom in)\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2771"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Stores",
+   "lines": [
+    47,
+    166
+   ],
+   "contexts": [
+    "ForEach(Array([\"Home\", \"Stores\", \"Reports\", \"Settings\"].enumerated()), id: \\.offset) { i, t in",
+    "row(\"gamecontroller.fill\", .blue, \"Play\"); row(\"storefront.fill\", .indigo, \"Stores\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2772"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Reports",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "ForEach(Array([\"Home\", \"Stores\", \"Reports\", \"Settings\"].enumerated()), id: \\.offset) { i, t in"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2773"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Settings",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "ForEach(Array([\"Home\", \"Stores\", \"Reports\", \"Settings\"].enumerated()), id: \\.offset) { i, t in"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2774"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Play",
+   "lines": [
+    74,
+    166,
+    180
+   ],
+   "contexts": [
+    "if play { pill(\"Play\", ringed: ringPlay).padding(.top, 3) }",
+    "row(\"gamecontroller.fill\", .blue, \"Play\"); row(\"storefront.fill\", .indigo, \"Stores\")",
+    "pill(\"Play\", ringed: true).padding(.top, 2)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2775"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Tap a card to open that game's page",
+   "lines": [
+    105
+   ],
+   "contexts": [
+    "Text(\"Tap a card to open that game's page\").font(.system(size: 9, weight: .semibold)).foregroundStyle(Theme.textDim).padding(.horizontal, 16)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2776"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Add a game",
+   "lines": [
+    115
+   ],
+   "contexts": [
+    ".overlay(VStack(spacing: 4) { Image(systemName: \"plus\").font(.system(size: 16, weight: .heavy)); Text(\"Add a game\").font(.system(size: 9, weight: .bold, design: .rounded)) }.foregroundStyle(Theme.accent))"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2777"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Waiting for JIT",
+   "lines": [
+    125
+   ],
+   "contexts": [
+    "notice(\"hourglass\", \"Waiting for JIT\", \"Cancel\", ringed: false)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2778"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Cancel",
+   "lines": [
+    125
+   ],
+   "contexts": [
+    "notice(\"hourglass\", \"Waiting for JIT\", \"Cancel\", ringed: false)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2779"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "An update is ready",
+   "lines": [
+    126
+   ],
+   "contexts": [
+    "notice(\"arrow.down.circle.fill\", \"An update is ready\", \"Install\", ringed: true)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2780"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Install",
+   "lines": [
+    126
+   ],
+   "contexts": [
+    "notice(\"arrow.down.circle.fill\", \"An update is ready\", \"Install\", ringed: true)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2781"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "S",
+   "lines": [
+    135
+   ],
+   "contexts": [
+    "store(\"S\", .blue, \"Steam\", ringed: true); store(\"E\", .indigo, \"Epic Games\"); store(\"G\", .purple, \"GOG\"); store(\"i\", .red, \"itch.io\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2782"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "E",
+   "lines": [
+    135
+   ],
+   "contexts": [
+    "store(\"S\", .blue, \"Steam\", ringed: true); store(\"E\", .indigo, \"Epic Games\"); store(\"G\", .purple, \"GOG\"); store(\"i\", .red, \"itch.io\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2783"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "G",
+   "lines": [
+    135
+   ],
+   "contexts": [
+    "store(\"S\", .blue, \"Steam\", ringed: true); store(\"E\", .indigo, \"Epic Games\"); store(\"G\", .purple, \"GOG\"); store(\"i\", .red, \"itch.io\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2784"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "All games",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    "row(\"square.grid.2x2.fill\", .blue, \"All games\", value: \"every library\", ringed: true)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2785"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "every library",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    "row(\"square.grid.2x2.fill\", .blue, \"All games\", value: \"every library\", ringed: true)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2786"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Downloads",
+   "lines": [
+    145
+   ],
+   "contexts": [
+    "row(\"arrow.down.circle.fill\", .green, \"Downloads\", value: \"2 in progress\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2787"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "2 in progress",
+   "lines": [
+    145
+   ],
+   "contexts": [
+    "row(\"arrow.down.circle.fill\", .green, \"Downloads\", value: \"2 in progress\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2788"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "signed in",
+   "lines": [
+    146
+   ],
+   "contexts": [
+    "row(\"checkmark.circle.fill\", Theme.accent, \"Steam\", value: \"signed in\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2789"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Factorio",
+   "lines": [
+    155
+   ],
+   "contexts": [
+    "report(\"Factorio\", \"12 reports\", \"Works great\", .green, ringed: true)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2790"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "12 reports",
+   "lines": [
+    155
+   ],
+   "contexts": [
+    "report(\"Factorio\", \"12 reports\", \"Works great\", .green, ringed: true)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2791"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Works great",
+   "lines": [
+    155
+   ],
+   "contexts": [
+    "report(\"Factorio\", \"12 reports\", \"Works great\", .green, ringed: true)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2792"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Another game",
+   "lines": [
+    156
+   ],
+   "contexts": [
+    "report(\"Another game\", \"5 reports\", \"Playable\", .orange)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2793"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "5 reports",
+   "lines": [
+    156
+   ],
+   "contexts": [
+    "report(\"Another game\", \"5 reports\", \"Playable\", .orange)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2794"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Playable",
+   "lines": [
+    156
+   ],
+   "contexts": [
+    "report(\"Another game\", \"5 reports\", \"Playable\", .orange)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2795"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "A third game",
+   "lines": [
+    157
+   ],
+   "contexts": [
+    "report(\"A third game\", \"2 reports\", \"Doesn't start\", .red)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2796"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "2 reports",
+   "lines": [
+    157
+   ],
+   "contexts": [
+    "report(\"A third game\", \"2 reports\", \"Doesn't start\", .red)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2797"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Doesn't start",
+   "lines": [
+    157
+   ],
+   "contexts": [
+    "report(\"A third game\", \"2 reports\", \"Doesn't start\", .red)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2798"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "JIT and connection",
+   "lines": [
+    167
+   ],
+   "contexts": [
+    "row(\"bolt.horizontal.fill\", .green, \"JIT and connection\"); row(\"externaldrive.fill\", .teal, \"Saves\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2799"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Saves",
+   "lines": [
+    167
+   ],
+   "contexts": [
+    "row(\"bolt.horizontal.fill\", .green, \"JIT and connection\"); row(\"externaldrive.fill\", .teal, \"Saves\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2800"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Storage",
+   "lines": [
+    168
+   ],
+   "contexts": [
+    "row(\"internaldrive.fill\", .orange, \"Storage\"); row(\"arrow.down.circle.fill\", .mint, \"Updates\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2801"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Updates",
+   "lines": [
+    168
+   ],
+   "contexts": [
+    "row(\"internaldrive.fill\", .orange, \"Storage\"); row(\"arrow.down.circle.fill\", .mint, \"Updates\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2802"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Advanced",
+   "lines": [
+    169
+   ],
+   "contexts": [
+    "row(\"wrench.and.screwdriver.fill\", .gray, \"Advanced\"); row(\"exclamationmark.bubble.fill\", .red, \"Report a problem\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2803"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Report a problem",
+   "lines": [
+    169
+   ],
+   "contexts": [
+    "row(\"wrench.and.screwdriver.fill\", .gray, \"Advanced\"); row(\"exclamationmark.bubble.fill\", .red, \"Report a problem\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2804"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Resolution",
+   "lines": [
+    185,
+    193
+   ],
+   "contexts": [
+    "row(\"rectangle.expand.vertical\", .blue, \"Resolution\", value: \"Default\")",
+    "row(\"rectangle.expand.vertical\", .blue, \"Resolution\", value: \"Default\", ringed: false).padding(.horizontal, 14)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2805"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Default",
+   "lines": [
+    185,
+    187,
+    193
+   ],
+   "contexts": [
+    "row(\"rectangle.expand.vertical\", .blue, \"Resolution\", value: \"Default\")",
+    "row(\"bolt.fill\", .orange, \"Power mode\", value: \"Default\").padding(.horizontal, 14)",
+    "row(\"rectangle.expand.vertical\", .blue, \"Resolution\", value: \"Default\", ringed: false).padding(.horizontal, 14)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2806"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Power mode",
+   "lines": [
+    187,
+    194
+   ],
+   "contexts": [
+    "row(\"bolt.fill\", .orange, \"Power mode\", value: \"Default\").padding(.horizontal, 14)",
+    "row(\"bolt.fill\", .orange, \"Power mode\", value: \"Performance\", ringed: true).padding(.horizontal, 14)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2807"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "PLAY",
+   "lines": [
+    192
+   ],
+   "contexts": [
+    "Text(\"PLAY\").font(.system(size: 9, weight: .bold)).foregroundStyle(Theme.textDim).padding(.horizontal, 16).padding(.top, 14)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2808"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Performance",
+   "lines": [
+    194,
+    215
+   ],
+   "contexts": [
+    "row(\"bolt.fill\", .orange, \"Power mode\", value: \"Performance\", ringed: true).padding(.horizontal, 14)",
+    "pill(\"Performance\", prominent: true, ringed: true); pill(\"Controls\", prominent: false); pill(\"Game\", prominent: false)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2809"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Swap",
+   "lines": [
+    195
+   ],
+   "contexts": [
+    "row(\"internaldrive.fill\", .gray, \"Swap\", value: \"Off\").padding(.horizontal, 14)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2810"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Off",
+   "lines": [
+    195,
+    218,
+    219
+   ],
+   "contexts": [
+    "row(\"internaldrive.fill\", .gray, \"Swap\", value: \"Off\").padding(.horizontal, 14)",
+    "row(\"leaf.fill\", .green, \"Eco mode\", value: \"Off\")",
+    "row(\"speedometer\", Theme.accent, \"Show overlay\", value: \"Off\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2811"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "A row that says Default follows Settings",
+   "lines": [
+    196
+   ],
+   "contexts": [
+    "Text(\"A row that says Default follows Settings\").font(.system(size: 9, weight: .semibold)).foregroundStyle(Theme.textDim).padding(.horizontal, 16)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2812"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Import a game folder",
+   "lines": [
+    201
+   ],
+   "contexts": [
+    "row(\"folder.badge.plus\", Theme.accent, \"Import a game folder\", value: \"From Files\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2813"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "From Files",
+   "lines": [
+    201
+   ],
+   "contexts": [
+    "row(\"folder.badge.plus\", Theme.accent, \"Import a game folder\", value: \"From Files\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2814"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Download from Steam",
+   "lines": [
+    202
+   ],
+   "contexts": [
+    "row(\"arrow.down.circle.fill\", .blue, \"Download from Steam\", value: \"Games you own\", ringed: true)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2815"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Games you own",
+   "lines": [
+    202
+   ],
+   "contexts": [
+    "row(\"arrow.down.circle.fill\", .blue, \"Download from Steam\", value: \"Games you own\", ringed: true)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2816"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Download from Epic Games",
+   "lines": [
+    203
+   ],
+   "contexts": [
+    "row(\"arrow.down.circle.fill\", .indigo, \"Download from Epic Games\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2817"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Download from GOG",
+   "lines": [
+    204
+   ],
+   "contexts": [
+    "row(\"arrow.down.circle.fill\", .purple, \"Download from GOG\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2818"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Download from itch.io",
+   "lines": [
+    205
+   ],
+   "contexts": [
+    "row(\"arrow.down.circle.fill\", .red, \"Download from itch.io\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2819"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Run a Windows installer",
+   "lines": [
+    206
+   ],
+   "contexts": [
+    "row(\"shippingbox.fill\", .orange, \"Run a Windows installer\", value: \"Disc or setup file\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2820"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Disc or setup file",
+   "lines": [
+    206
+   ],
+   "contexts": [
+    "row(\"shippingbox.fill\", .orange, \"Run a Windows installer\", value: \"Disc or setup file\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2821"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Menu",
+   "lines": [
+    213
+   ],
+   "contexts": [
+    "Text(\"Menu\").font(.system(size: 12, weight: .bold, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2822"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Controls",
+   "lines": [
+    215
+   ],
+   "contexts": [
+    "pill(\"Performance\", prominent: true, ringed: true); pill(\"Controls\", prominent: false); pill(\"Game\", prominent: false)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2823"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Game",
+   "lines": [
+    215
+   ],
+   "contexts": [
+    "pill(\"Performance\", prominent: true, ringed: true); pill(\"Controls\", prominent: false); pill(\"Game\", prominent: false)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2824"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Power",
+   "lines": [
+    217
+   ],
+   "contexts": [
+    "row(\"bolt.fill\", .orange, \"Power\", value: \"Balanced\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2825"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Balanced",
+   "lines": [
+    217
+   ],
+   "contexts": [
+    "row(\"bolt.fill\", .orange, \"Power\", value: \"Balanced\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2826"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Eco mode",
+   "lines": [
+    218
+   ],
+   "contexts": [
+    "row(\"leaf.fill\", .green, \"Eco mode\", value: \"Off\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2827"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideArt.swift",
+   "text": "Show overlay",
+   "lines": [
+    219
+   ],
+   "contexts": [
+    "row(\"speedometer\", Theme.accent, \"Show overlay\", value: \"Off\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2828"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Add a game now",
+   "lines": [
+    14
+   ],
+   "contexts": [
+    "case .addGame: \"Add a game now\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2829"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Open \\(store.title)",
+   "lines": [
+    15
+   ],
+   "contexts": [
+    "case .openStore(let store): \"Open \\(store.title)\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2830"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Open these settings",
+   "lines": [
+    16
+   ],
+   "contexts": [
+    "case .openSettings: \"Open these settings\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2831"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Home",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "static let home = Guide(id: \"home\", title: \"Home\", symbol: \"house.fill\", steps: ["
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2832"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Your games",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"gamecontroller.fill\", title: \"Your games\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2833"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Everything you can play is on Home. The big card is the game you played last; press Play to start it. Tap any other card to open that game's page.",
+   "lines": [
+    49
+   ],
+   "contexts": [
+    "text: \"Everything you can play is on Home. The big card is the game you played last; press Play to start it. Tap any other card to open that game's page.\", art: .home),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2834"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Add a game",
+   "lines": [
+    50,
+    97
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"plus.circle.fill\", title: \"Add a game\",",
+    "static let addGame = Guide(id: \"addgame\", title: \"Add a game\", symbol: \"plus.circle.fill\", steps: ["
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2835"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Add a game brings one in from a store you are signed in to (Steam, Epic Games, GOG or itch.io), or from a Windows program or installer in the Files app.",
+   "lines": [
+    51
+   ],
+   "contexts": [
+    "text: \"Add a game brings one in from a store you are signed in to (Steam, Epic Games, GOG or itch.io), or from a Windows program or installer in the Files app.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2836"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Notices",
+   "lines": [
+    53
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"bell.badge.fill\", title: \"Notices\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2837"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Cards above your games tell you what needs attention: JIT waiting, an update, a download. Tap one to act on it, or the x to hide it.",
+   "lines": [
+    54
+   ],
+   "contexts": [
+    "text: \"Cards above your games tell you what needs attention: JIT waiting, an update, a download. Tap one to act on it, or the x to hide it.\", art: .notices),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2838"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Stores",
+   "lines": [
+    57,
+    76
+   ],
+   "contexts": [
+    "static let stores = Guide(id: \"stores\", title: \"Stores\", symbol: \"square.grid.2x2.fill\", steps: [",
+    "GuideStep(symbol: \"storefront.fill\", title: \"Stores\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2839"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Where games come from",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"square.grid.2x2.fill\", title: \"Where games come from\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2840"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Open a store to sign in and see its library. Games that have a Windows version can be installed from there.",
+   "lines": [
+    59
+   ],
+   "contexts": [
+    "text: \"Open a store to sign in and see its library. Games that have a Windows version can be installed from there.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2841"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "All games and Downloads",
+   "lines": [
+    61
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"tray.full.fill\", title: \"All games and Downloads\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2842"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "All games shows every library together. Downloads lists what is being installed and how far along it is.",
+   "lines": [
+    62
+   ],
+   "contexts": [
+    "text: \"All games shows every library together. Downloads lists what is being installed and how far along it is.\", art: .storesLists),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2843"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Reports",
+   "lines": [
+    65
+   ],
+   "contexts": [
+    "static let reports = Guide(id: \"reports\", title: \"Reports\", symbol: \"checkmark.seal.fill\", steps: ["
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2844"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "How games run on devices like yours",
+   "lines": [
+    66
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"checkmark.seal.fill\", title: \"How games run on devices like yours\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2845"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Write your own",
+   "lines": [
+    68
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"square.and.pencil\", title: \"Write your own\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2846"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Settings",
+   "lines": [
+    72
+   ],
+   "contexts": [
+    "static let settings = Guide(id: \"settings\", title: \"Settings\", symbol: \"gearshape.fill\", steps: ["
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2847"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Play",
+   "lines": [
+    73,
+    88
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"gamecontroller.fill\", title: \"Play\",",
+    "GuideStep(symbol: \"play.fill\", title: \"Play\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2848"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "The picture, speed, sound and controls every game starts with. Each game's own page can change any of them for that game only.",
+   "lines": [
+    74
+   ],
+   "contexts": [
+    "text: \"The picture, speed, sound and controls every game starts with. Each game's own page can change any of them for that game only.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2849"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Your Steam, Epic, GOG, itch.io, Amazon and EA sign-ins, and each store's library and downloads.",
+   "lines": [
+    77
+   ],
+   "contexts": [
+    "text: \"Your Steam, Epic, GOG, itch.io, Amazon and EA sign-ins, and each store's library and downloads.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2850"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "JIT and connection",
+   "lines": [
+    79
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"bolt.horizontal.fill\", title: \"JIT and connection\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2851"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "The connection that lets games run fast: how JIT is switched on, the tunnel, your VPN and cellular data. If a game will not start, look here first.",
+   "lines": [
+    80
+   ],
+   "contexts": [
+    "text: \"The connection that lets games run fast: how JIT is switched on, the tunnel, your VPN and cellular data. If a game will not start, look here first.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2852"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Advanced and Report a problem",
+   "lines": [
+    82
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"wrench.and.screwdriver.fill\", title: \"Advanced and Report a problem\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2853"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Advanced holds the engine options, Windows components such as .NET, and the log. Search at the top of Settings finds any setting by name. Report a problem sends the log to the developer when something goes wrong.",
+   "lines": [
+    83
+   ],
+   "contexts": [
+    "text: \"Advanced holds the engine options, Windows components such as .NET, and the log. Search at the top of Settings finds any setting by name. Report a problem sends the log to the developer when something goes wrong.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2854"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "A game's page",
+   "lines": [
+    87
+   ],
+   "contexts": [
+    "static let gamePage = Guide(id: \"gamepage\", title: \"A game's page\", symbol: \"gamecontroller.fill\", steps: ["
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2855"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Play starts the game. The first start can take a while; Porthole turns JIT on first and then launches.",
+   "lines": [
+    89
+   ],
+   "contexts": [
+    "text: \"Play starts the game. The first start can take a while; Porthole turns JIT on first and then launches.\", art: .gamePage),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2856"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Settings for this game",
+   "lines": [
+    90
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"slider.horizontal.3\", title: \"Settings for this game\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2857"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Resolution, power mode, swap and the other rows here apply to this game only. A row that says Default follows Settings.",
+   "lines": [
+    91
+   ],
+   "contexts": [
+    "text: \"Resolution, power mode, swap and the other rows here apply to this game only. A row that says Default follows Settings.\", art: .gameRows),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2858"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "On-screen controls",
+   "lines": [
+    92
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"hand.tap.fill\", title: \"On-screen controls\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2859"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Choose how the touch controls work for this game. Inside the game, the pencil lets you move and resize them.",
+   "lines": [
+    93
+   ],
+   "contexts": [
+    "text: \"Choose how the touch controls work for this game. Inside the game, the pencil lets you move and resize them.\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2860"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Choose where the game is",
+   "lines": [
+    98
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"list.bullet\", title: \"Choose where the game is\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2861"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Import a game folder from Files, download a game you own from Steam, Epic Games, GOG or itch.io, or run a Windows installer from a disc or a setup file.",
+   "lines": [
+    99
+   ],
+   "contexts": [
+    "text: \"Import a game folder from Files, download a game you own from Steam, Epic Games, GOG or itch.io, or run a Windows installer from a disc or a setup file.\", art: .addSources),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2862"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Already in the app",
+   "lines": [
+    100
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"checkmark.circle.fill\", title: \"Already in the app\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2863"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Games Porthole finds in its own folders are listed under Already in the app. Add puts one in your library.",
+   "lines": [
+    101
+   ],
+   "contexts": [
+    "text: \"Games Porthole finds in its own folders are listed under Already in the app. Add puts one in your library.\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2864"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Add by path",
+   "lines": [
+    102
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"terminal.fill\", title: \"Add by path\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2865"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "The game menu",
+   "lines": [
+    107
+   ],
+   "contexts": [
+    "static let gameMenu = Guide(id: \"menu\", title: \"The game menu\", symbol: \"line.3.horizontal\", steps: ["
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2866"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Performance",
+   "lines": [
+    108
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"speedometer\", title: \"Performance\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2867"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Power mode, Eco mode, and the performance overlay, which is off until you turn it on. Use it when the game runs slowly or the phone gets hot.",
+   "lines": [
+    109
+   ],
+   "contexts": [
+    "text: \"Power mode, Eco mode, and the performance overlay, which is off until you turn it on. Use it when the game runs slowly or the phone gets hot.\", art: .gameMenu),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2868"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Controls",
+   "lines": [
+    110
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"hand.tap.fill\", title: \"Controls\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2869"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "How touch works for this game, whether the on-screen controls show, the keyboard, and the pencil that edits the controls.",
+   "lines": [
+    111
+   ],
+   "contexts": [
+    "text: \"How touch works for this game, whether the on-screen controls show, the keyboard, and the pencil that edits the controls.\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2870"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Game",
+   "lines": [
+    112
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"gamecontroller.fill\", title: \"Game\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2871"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Report how the game runs, the touch controls guide, capture a frame for a bug report, the edge handle, and Close game.",
+   "lines": [
+    113
+   ],
+   "contexts": [
+    "text: \"Report how the game runs, the touch controls guide, capture a frame for a bug report, the edge handle, and Close game.\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2872"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Playing a game",
+   "lines": [
+    117
+   ],
+   "contexts": [
+    "static let inGame = Guide(id: \"ingame\", title: \"Playing a game\", symbol: \"gamecontroller.fill\", steps: ["
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2873"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Edit the controls",
+   "lines": [
+    118
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"pencil\", title: \"Edit the controls\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2874"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Once the game is running, the pencil at the top lets you move, resize and add the on-screen buttons and sticks for this game.",
+   "lines": [
+    119
+   ],
+   "contexts": [
+    "text: \"Once the game is running, the pencil at the top lets you move, resize and add the on-screen buttons and sticks for this game.\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2875"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Keyboard",
+   "lines": [
+    120
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"keyboard\", title: \"Keyboard\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2876"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Next to it, the keyboard button brings up the on-screen keyboard when a game wants you to type.",
+   "lines": [
+    121
+   ],
+   "contexts": [
+    "text: \"Next to it, the keyboard button brings up the on-screen keyboard when a game wants you to type.\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2877"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Swipe in from the right",
+   "lines": [
+    122
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"arrow.left\", title: \"Swipe in from the right\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2878"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Swipe in from the right edge of the screen to open the menu: performance, controls and the rest.",
+   "lines": [
+    123
+   ],
+   "contexts": [
+    "text: \"Swipe in from the right edge of the screen to open the menu: performance, controls and the rest.\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2879"
+  }
+ ]
+}

@@ -1,0 +1,2911 @@
+{
+ "batch": 8,
+ "units": [
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Installing Steam's shared files (\\(name)): \\(percent)%",
+   "lines": [
+    483
+   ],
+   "contexts": [
+    "self?.dockStatus = progress.totalBytes == 0 ? \"Installing Steam's shared files (\\(name))…\" : \"Installing Steam's shared files (\\(name)): \\(percent)%\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1260"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Connecting your SSD\\u{2026}",
+   "lines": [
+    512
+   ],
+   "contexts": [
+    "dockStatus = \"Connecting your SSD\\u{2026}\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1261"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "from the saved library",
+   "lines": [
+    531
+   ],
+   "contexts": [
+    "var launchOptionSource = \"from the saved library\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1262"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "fresh from Steam",
+   "lines": [
+    534
+   ],
+   "contexts": [
+    "resolvedOption = key; launchOptionSource = \"fresh from Steam\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1263"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "this game's launch list was not available; using the default",
+   "lines": [
+    535
+   ],
+   "contexts": [
+    "} else { launchOptionSource = \"this game's launch list was not available; using the default\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1264"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "from Valve's own cached list (ours had no entry it knows)",
+   "lines": [
+    544
+   ],
+   "contexts": [
+    "resolvedOption = key; launchOptionSource = \"from Valve's own cached list (ours had no entry it knows)\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1265"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "/common/",
+   "lines": [
+    549
+   ],
+   "contexts": [
+    "let gameFolder = storageRoot.flatMap { try? SteamStoragePath.native(dockGame.library + \"/common/\" + dockGame.installDir, root: $0) }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1266"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Sign in to Steam again.",
+   "lines": [
+    570
+   ],
+   "contexts": [
+    "guard let credentials = SteamSignIn.credentialsForDock() else { throw DockError.message(\"Sign in to Steam again.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1267"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Waiting for Steam\\u{2026}",
+   "lines": [
+    655
+   ],
+   "contexts": [
+    "dockStatus = \"Waiting for Steam\\u{2026}\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1268"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Steam says \\(owned.name) needs an update. Close the game, open it under Stores > Steam and tap Update, then start it again.",
+   "lines": [
+    673
+   ],
+   "contexts": [
+    "self.dockStatus = \"Steam says \\(owned.name) needs an update. Close the game, open it under Stores > Steam and tap Update, then start it again.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1269"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Steam is waiting for content this game needs, which it cannot download here. Close the game and start it again: Porthole will install shared files first. If it stays like this, open the game under Stores > Steam > Details and files and use Verify files (it fixes files Steam marked as damaged).",
+   "lines": [
+    675
+   ],
+   "contexts": [
+    "self.dockStatus = \"Steam is waiting for content this game needs, which it cannot download here. Close the game and start it again: Porthole will install shared files first. If it stays like this, open the game under Stores > Steam > Details and files and use Verify files (it fixes files Steam marked"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1270"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Steam started the game. Loading\\u{2026} the screen stays black until the game opens its window (first start can take a few minutes).",
+   "lines": [
+    679
+   ],
+   "contexts": [
+    "self.dockStatus = \"Steam started the game. Loading\\u{2026} the screen stays black until the game opens its window (first start can take a few minutes).\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1271"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Licence confirmed by Steam. Starting the game\\u{2026}",
+   "lines": [
+    682
+   ],
+   "contexts": [
+    "self.dockStatus = \"Licence confirmed by Steam. Starting the game\\u{2026}\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1272"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Steam is checking your licence\\u{2026}",
+   "lines": [
+    685
+   ],
+   "contexts": [
+    "self.dockStatus = \"Steam is checking your licence\\u{2026}\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1273"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Starting Steam\\u{2026}",
+   "lines": [
+    688
+   ],
+   "contexts": [
+    "self.dockStatus = \"Starting Steam\\u{2026}\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1274"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Steam hasn't signed in yet. Check your internet connection, then start the game again. Porthole keeps trying meanwhile.",
+   "lines": [
+    698
+   ],
+   "contexts": [
+    "self.dockStatus = \"Steam hasn't signed in yet. Check your internet connection, then start the game again. Porthole keeps trying meanwhile.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1275"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "In-app JIT needs a pairing file. Open Settings \\u{203A} Setup guide to import one, or choose a different JIT method there.",
+   "lines": [
+    712
+   ],
+   "contexts": [
+    "state = .failed(\"In-app JIT needs a pairing file. Open Settings \\u{203A} Setup guide to import one, or choose a different JIT method there.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1276"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "StikDebug is not installed. Install it, or choose a different JIT method in Settings \\u{203A} Setup guide.",
+   "lines": [
+    724
+   ],
+   "contexts": [
+    "state = .failed(\"StikDebug is not installed. Install it, or choose a different JIT method in Settings \\u{203A} Setup guide.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1277"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Waiting for JIT. Turn it on for Porthole with your tool now, then come back to this app.",
+   "lines": [
+    745
+   ],
+   "contexts": [
+    "jitWaitMessage = \"Waiting for JIT. Turn it on for Porthole with your tool now, then come back to this app.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1278"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "JIT was not turned on within five minutes. Try again, or pick a different JIT method in Settings \\u{203A} Setup guide.",
+   "lines": [
+    758
+   ],
+   "contexts": [
+    "self.state = .failed(\"JIT was not turned on within five minutes. Try again, or pick a different JIT method in Settings \\u{203A} Setup guide.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1279"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "turn on JIT",
+   "lines": [
+    768,
+    773
+   ],
+   "contexts": [
+    "guard await CellularGuard.shared.confirm(for: \"turn on JIT\") else {",
+    "guard await VPNGuard.shared.confirmPause(for: \"turn on JIT\", until: state == .enablingJIT ? \"the game closes\" : \"JIT is on\") else {"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1280"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "the game closes",
+   "lines": [
+    773
+   ],
+   "contexts": [
+    "guard await VPNGuard.shared.confirmPause(for: \"turn on JIT\", until: state == .enablingJIT ? \"the game closes\" : \"JIT is on\") else {"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1281"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "JIT is on",
+   "lines": [
+    773
+   ],
+   "contexts": [
+    "guard await VPNGuard.shared.confirmPause(for: \"turn on JIT\", until: state == .enablingJIT ? \"the game closes\" : \"JIT is on\") else {"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1282"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Cellular data could not be switched off, so the private connection cannot work.",
+   "lines": [
+    795
+   ],
+   "contexts": [
+    "self.state = .failed(CellularGuard.shared.lastProblem ?? \"Cellular data could not be switched off, so the private connection cannot work.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1283"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "JIT pool allocation failed. Force-quit the app and try again.",
+   "lines": [
+    990
+   ],
+   "contexts": [
+    "self?.state = .failed(\"JIT pool allocation failed. Force-quit the app and try again.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1284"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "iOS left too little room for this game on this start of Porthole (\\(usablePool >> 20) MB of the \\(minimumPool >> 20) MB it needs). Close Porthole and open it again, then start the game: it is different each time.",
+   "lines": [
+    1012
+   ],
+   "contexts": [
+    "self?.state = .failed(\"iOS left too little room for this game on this start of Porthole (\\(usablePool >> 20) MB of the \\(minimumPool >> 20) MB it needs). Close Porthole and open it again, then start the game: it is different each time.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1285"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "iOS put something in the part of memory this game's program has to load at (it needs \\(widenedWindowMB) MB there) on this start of Porthole. Close Porthole and open it again, then start the game: it is different each time.",
+   "lines": [
+    1029
+   ],
+   "contexts": [
+    "self?.state = .failed(\"iOS put something in the part of memory this game's program has to load at (it needs \\(widenedWindowMB) MB there) on this start of Porthole. Close Porthole and open it again, then start the game: it is different each time.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1286"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "wineserver failed to start",
+   "lines": [
+    1061
+   ],
+   "contexts": [
+    "DispatchQueue.main.async { self?.state = .failed(\"wineserver failed to start\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1287"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Wine process failed to start",
+   "lines": [
+    1068
+   ],
+   "contexts": [
+    "DispatchQueue.main.async { self?.state = .failed(\"Wine process failed to start\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1288"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Turn on JIT",
+   "lines": [
+    1164,
+    1165
+   ],
+   "contexts": [
+    "? [(.jit, \"Turn on JIT\"), (.prepare, \"Get Steam ready\"), (.steam, \"Start Steam\"), (.signIn, \"Sign in to Steam\"), (.load, \"Load the game\")]",
+    ": [(.jit, \"Turn on JIT\"), (.load, \"Start the game\")]"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1289"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Get Steam ready",
+   "lines": [
+    1164
+   ],
+   "contexts": [
+    "? [(.jit, \"Turn on JIT\"), (.prepare, \"Get Steam ready\"), (.steam, \"Start Steam\"), (.signIn, \"Sign in to Steam\"), (.load, \"Load the game\")]"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1290"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Start Steam",
+   "lines": [
+    1164
+   ],
+   "contexts": [
+    "? [(.jit, \"Turn on JIT\"), (.prepare, \"Get Steam ready\"), (.steam, \"Start Steam\"), (.signIn, \"Sign in to Steam\"), (.load, \"Load the game\")]"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1291"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Sign in to Steam",
+   "lines": [
+    1164
+   ],
+   "contexts": [
+    "? [(.jit, \"Turn on JIT\"), (.prepare, \"Get Steam ready\"), (.steam, \"Start Steam\"), (.signIn, \"Sign in to Steam\"), (.load, \"Load the game\")]"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1292"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Load the game",
+   "lines": [
+    1164
+   ],
+   "contexts": [
+    "? [(.jit, \"Turn on JIT\"), (.prepare, \"Get Steam ready\"), (.steam, \"Start Steam\"), (.signIn, \"Sign in to Steam\"), (.load, \"Load the game\")]"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1293"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Start the game",
+   "lines": [
+    1165
+   ],
+   "contexts": [
+    ": [(.jit, \"Turn on JIT\"), (.load, \"Start the game\")]"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1294"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Waiting for JIT",
+   "lines": [
+    1173
+   ],
+   "contexts": [
+    "headline = jitWaitMessage != nil ? \"Waiting for JIT\" : \"Turning on JIT\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1295"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Turning on JIT",
+   "lines": [
+    1173
+   ],
+   "contexts": [
+    "headline = jitWaitMessage != nil ? \"Waiting for JIT\" : \"Turning on JIT\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1296"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "JIT lets games run at full speed. Porthole switches it on through a private link on this device; the first time can take a little while.",
+   "lines": [
+    1174
+   ],
+   "contexts": [
+    "detail = jitWaitMessage ?? \"JIT lets games run at full speed. Porthole switches it on through a private link on this device; the first time can take a little while.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1297"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Getting Steam ready",
+   "lines": [
+    1176
+   ],
+   "contexts": [
+    "headline = (dockStatus ?? \"Getting Steam ready\").replacingOccurrences(of: \"\\u{2026}\", with: \"\")"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1298"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Before Steam starts, Porthole brings down your Steam Cloud saves and installs any shared files the game needs.",
+   "lines": [
+    1177
+   ],
+   "contexts": [
+    "detail = \"Before Steam starts, Porthole brings down your Steam Cloud saves and installs any shared files the game needs.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1299"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Starting Steam",
+   "lines": [
+    1179
+   ],
+   "contexts": [
+    "headline = \"Starting Steam\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1300"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Valve's own Steam client runs inside Porthole. It checks that you own the game before it opens.",
+   "lines": [
+    1180
+   ],
+   "contexts": [
+    "detail = \"Valve's own Steam client runs inside Porthole. It checks that you own the game before it opens.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1301"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Steam won't start the game yet",
+   "lines": [
+    1182
+   ],
+   "contexts": [
+    "headline = launchHold ? \"Steam won't start the game yet\" : \"Signing in to Steam\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1302"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Signing in to Steam",
+   "lines": [
+    1182
+   ],
+   "contexts": [
+    "headline = launchHold ? \"Steam won't start the game yet\" : \"Signing in to Steam\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1303"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Steam needs this game's files to be up to date first.",
+   "lines": [
+    1183
+   ],
+   "contexts": [
+    "detail = launchHold ? (dockStatus ?? \"Steam needs this game's files to be up to date first.\") : \"Steam is confirming your licence for this game.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1304"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Steam is confirming your licence for this game.",
+   "lines": [
+    1183
+   ],
+   "contexts": [
+    "detail = launchHold ? (dockStatus ?? \"Steam needs this game's files to be up to date first.\") : \"Steam is confirming your licence for this game.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1305"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Loading the game",
+   "lines": [
+    1185
+   ],
+   "contexts": [
+    "headline = \"Loading the game\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1306"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "The first start of a game can take a few minutes while it builds its caches. The screen stays here until the game's window appears.",
+   "lines": [
+    1186
+   ],
+   "contexts": [
+    "detail = \"The first start of a game can take a few minutes while it builds its caches. The screen stays here until the game's window appears.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1307"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Through Steam",
+   "lines": [
+    1188
+   ],
+   "contexts": [
+    "var chips = [LaunchSettingChip(symbol: steam ? \"shield.checkered\" : \"play.fill\", text: steam ? \"Through Steam\" : \"Run directly\"),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1308"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Run directly",
+   "lines": [
+    1188
+   ],
+   "contexts": [
+    "var chips = [LaunchSettingChip(symbol: steam ? \"shield.checkered\" : \"play.fill\", text: steam ? \"Through Steam\" : \"Run directly\"),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1309"
+  },
+  {
+   "file": "app/Sources/Core/SessionController.swift",
+   "text": "Swap \\(activeSettings.swapMB / 1024) GB",
+   "lines": [
+    1191
+   ],
+   "contexts": [
+    "if activeSettings.swapMB > 0 { chips.append(LaunchSettingChip(symbol: \"internaldrive\", text: \"Swap \\(activeSettings.swapMB / 1024) GB\")) }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1310"
+  },
+  {
+   "file": "app/Sources/Core/ShortcutRouter.swift",
+   "text": "Start \\(game.name)?",
+   "lines": [
+    87
+   ],
+   "contexts": [
+    "let alert = UIAlertController(title: \"Start \\(game.name)?\", message: \"A link outside Porthole asked to start this game.\", preferredStyle: .alert)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1311"
+  },
+  {
+   "file": "app/Sources/Core/ShortcutRouter.swift",
+   "text": "A link outside Porthole asked to start this game.",
+   "lines": [
+    87
+   ],
+   "contexts": [
+    "let alert = UIAlertController(title: \"Start \\(game.name)?\", message: \"A link outside Porthole asked to start this game.\", preferredStyle: .alert)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1312"
+  },
+  {
+   "file": "app/Sources/Core/ShortcutRouter.swift",
+   "text": "Cancel",
+   "lines": [
+    88
+   ],
+   "contexts": [
+    "alert.addAction(UIAlertAction(title: \"Cancel\", style: .cancel) { _ in LogStore.shared.log(\"[shortcut] the person declined the link\") })"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1313"
+  },
+  {
+   "file": "app/Sources/Core/ShortcutRouter.swift",
+   "text": "Start",
+   "lines": [
+    89
+   ],
+   "contexts": [
+    "alert.addAction(UIAlertAction(title: \"Start\", style: .default) { _ in go() })"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1314"
+  },
+  {
+   "file": "app/Sources/Core/SteamAchievementProgress.swift",
+   "text": "All \\(e.total) unlocked",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "return e.unlocked >= e.total ? \"All \\(e.total) unlocked\" : \"\\(e.unlocked) of \\(e.total) unlocked\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1315"
+  },
+  {
+   "file": "app/Sources/Core/SteamAchievementProgress.swift",
+   "text": "\\(e.unlocked) of \\(e.total) unlocked",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "return e.unlocked >= e.total ? \"All \\(e.total) unlocked\" : \"\\(e.unlocked) of \\(e.total) unlocked\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1316"
+  },
+  {
+   "file": "app/Sources/Core/SteamBackground.swift",
+   "text": "Downloading \\(name)",
+   "lines": [
+    72
+   ],
+   "contexts": [
+    "task.updateTitle(\"Downloading \\(name)\", subtitle: \"Steam \\u{00B7} Preparing\\u{2026}\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1317"
+  },
+  {
+   "file": "app/Sources/Core/SteamBackground.swift",
+   "text": "Steam \\u{00B7} Preparing\\u{2026}",
+   "lines": [
+    72
+   ],
+   "contexts": [
+    "task.updateTitle(\"Downloading \\(name)\", subtitle: \"Steam \\u{00B7} Preparing\\u{2026}\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1318"
+  },
+  {
+   "file": "app/Sources/Core/SteamBackground.swift",
+   "text": "Downloading \\(currentName)",
+   "lines": [
+    87,
+    132
+   ],
+   "contexts": [
+    "task.updateTitle(\"Downloading \\(currentName)\", subtitle: DownloadCardText.subtitle(progress, waiting: store?.queueOrder.count ?? 0))",
+    "let request = BGContinuedProcessingTaskRequest(identifier: identifier, title: \"Downloading \\(currentName)\", subtitle: \"Steam download\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1319"
+  },
+  {
+   "file": "app/Sources/Core/SteamBackground.swift",
+   "text": "\\(name) is ready to play",
+   "lines": [
+    98,
+    105
+   ],
+   "contexts": [
+    "case .completed: notify(\"\\(name) is ready to play\", body: \"The Steam download finished.\")",
+    "case .completed: DownloadActivity.shared.end(store: \"steam\", failed: false, message: \"\\(name) is ready to play\", finished: true)"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible",
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1320"
+  },
+  {
+   "file": "app/Sources/Core/SteamBackground.swift",
+   "text": "The Steam download finished.",
+   "lines": [
+    98
+   ],
+   "contexts": [
+    "case .completed: notify(\"\\(name) is ready to play\", body: \"The Steam download finished.\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1321"
+  },
+  {
+   "file": "app/Sources/Core/SteamBackground.swift",
+   "text": "\\(name) download stopped",
+   "lines": [
+    99
+   ],
+   "contexts": [
+    "case .failed(let reason): notify(\"\\(name) download stopped\", body: reason)"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1322"
+  },
+  {
+   "file": "app/Sources/Core/SteamBackground.swift",
+   "text": "\\(name) stopped: \\(reason)",
+   "lines": [
+    106
+   ],
+   "contexts": [
+    "case .failed(let reason): DownloadActivity.shared.end(store: \"steam\", failed: true, message: \"\\(name) stopped: \\(reason)\", finished: true)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1323"
+  },
+  {
+   "file": "app/Sources/Core/SteamBackground.swift",
+   "text": "Steam download",
+   "lines": [
+    132,
+    172
+   ],
+   "contexts": [
+    "let request = BGContinuedProcessingTaskRequest(identifier: identifier, title: \"Downloading \\(currentName)\", subtitle: \"Steam download\")",
+    "graceTask = UIApplication.shared.beginBackgroundTask(withName: \"Steam download\") { [weak self] in"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1324"
+  },
+  {
+   "file": "app/Sources/Core/SteamBackground.swift",
+   "text": "Download paused",
+   "lines": [
+    152,
+    178
+   ],
+   "contexts": [
+    "self?.notify(\"Download paused\", body: \"Open the app to continue downloading.\")",
+    "self.notify(\"Download paused\", body: \"Open the app to continue downloading.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1325"
+  },
+  {
+   "file": "app/Sources/Core/SteamBackground.swift",
+   "text": "Open the app to continue downloading.",
+   "lines": [
+    152,
+    178
+   ],
+   "contexts": [
+    "self?.notify(\"Download paused\", body: \"Open the app to continue downloading.\")",
+    "self.notify(\"Download paused\", body: \"Open the app to continue downloading.\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1326"
+  },
+  {
+   "file": "app/Sources/Core/SteamBackground.swift",
+   "text": "continued-processing running",
+   "lines": [
+    156
+   ],
+   "contexts": [
+    "log(\"continued-processing running\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1327"
+  },
+  {
+   "file": "app/Sources/Core/SteamBackground.swift",
+   "text": "background grace begun continued=\\(continued == nil ? 0 : 1)",
+   "lines": [
+    183
+   ],
+   "contexts": [
+    "log(\"background grace begun continued=\\(continued == nil ? 0 : 1)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1328"
+  },
+  {
+   "file": "app/Sources/Core/SteamControllerLayer.swift",
+   "text": "Steam's own controller layer (Steam Input) needs a 64-bit library the Steam client files do not include. This downloads that one file, about 1.3 MB, from Valve's server and checks it against its known fingerprint before using it; nothing else is installed. Games such as Portal and Portal 2 read their controller through Steam Input. Remove puts the original file back.",
+   "lines": [
+    15
+   ],
+   "contexts": [
+    "static let info = \"Steam's own controller layer (Steam Input) needs a 64-bit library the Steam client files do not include. This downloads that one file, about 1.3 MB, from Valve's server and checks it against its known fingerprint before using it; nothing else is installed. Games such as Portal and"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1329"
+  },
+  {
+   "file": "app/Sources/Core/SteamControllerLayer.swift",
+   "text": "Working\\u{2026}",
+   "lines": [
+    24
+   ],
+   "contexts": [
+    "if busy { return status ?? \"Working\\u{2026}\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1330"
+  },
+  {
+   "file": "app/Sources/Core/SteamControllerLayer.swift",
+   "text": "Installed",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "return status ?? (installed ? \"Installed\" : \"Needed by games that take their controller from Steam, like Portal\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1331"
+  },
+  {
+   "file": "app/Sources/Core/SteamControllerLayer.swift",
+   "text": "Needed by games that take their controller from Steam, like Portal",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "return status ?? (installed ? \"Installed\" : \"Needed by games that take their controller from Steam, like Portal\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1332"
+  },
+  {
+   "file": "app/Sources/Core/SteamControllerLayer.swift",
+   "text": "Starting\\u{2026}",
+   "lines": [
+    31
+   ],
+   "contexts": [
+    "busy = true; status = \"Starting\\u{2026}\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1333"
+  },
+  {
+   "file": "app/Sources/Core/SteamSDL3.swift",
+   "text": "Download the Steam client first.",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "case .noSteam: \"Download the Steam client first.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1334"
+  },
+  {
+   "file": "app/Sources/Core/SteamSDL3.swift",
+   "text": "Close the running game first.",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "case .activeSession: \"Close the running game first.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1335"
+  },
+  {
+   "file": "app/Sources/Core/SteamSDL3.swift",
+   "text": "Valve's server did not give the file. Try again.",
+   "lines": [
+    29
+   ],
+   "contexts": [
+    "case .download: \"Valve's server did not give the file. Try again.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1336"
+  },
+  {
+   "file": "app/Sources/Core/SteamSDL3.swift",
+   "text": "The file did not match what was expected, so it was not used.",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "case .mismatch: \"The file did not match what was expected, so it was not used.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1337"
+  },
+  {
+   "file": "app/Sources/Core/SteamSDL3.swift",
+   "text": "Downloading from Valve\\u{2026}",
+   "lines": [
+    68
+   ],
+   "contexts": [
+    "await progress(\"Downloading from Valve\\u{2026}\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1338"
+  },
+  {
+   "file": "app/Sources/Core/SteamSDL3.swift",
+   "text": "Checking the file\\u{2026}",
+   "lines": [
+    78
+   ],
+   "contexts": [
+    "await progress(\"Checking the file\\u{2026}\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1339"
+  },
+  {
+   "file": "app/Sources/Core/SteamSDL3.swift",
+   "text": "Done.",
+   "lines": [
+    96
+   ],
+   "contexts": [
+    "await progress(\"Done.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1340"
+  },
+  {
+   "file": "app/Sources/Core/SteamStore.swift",
+   "text": "Demo",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "switch kind { case \"demo\"?: \"Demo\"; case \"beta\"?: \"Beta\"; case \"application\"?: \"Software\"; default: nil }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1341"
+  },
+  {
+   "file": "app/Sources/Core/SteamStore.swift",
+   "text": "Beta",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "switch kind { case \"demo\"?: \"Demo\"; case \"beta\"?: \"Beta\"; case \"application\"?: \"Software\"; default: nil }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1342"
+  },
+  {
+   "file": "app/Sources/Core/SteamStore.swift",
+   "text": "Software",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "switch kind { case \"demo\"?: \"Demo\"; case \"beta\"?: \"Beta\"; case \"application\"?: \"Software\"; default: nil }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1343"
+  },
+  {
+   "file": "app/Sources/Core/SteamStore.swift",
+   "text": "That password does not open a beta of this game.",
+   "lines": [
+    207
+   ],
+   "contexts": [
+    "guard let first = opened.first else { throw SteamFailure(message: \"That password does not open a beta of this game.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1344"
+  },
+  {
+   "file": "app/Sources/Core/SteamStore.swift",
+   "text": "Sign in to Steam first.",
+   "lines": [
+    267
+   ],
+   "contexts": [
+    "guard signedIn else { error = \"Sign in to Steam first.\"; return }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1345"
+  },
+  {
+   "file": "app/Sources/Core/SteamStore.swift",
+   "text": "Steam game",
+   "lines": [
+    275,
+    436,
+    442
+   ],
+   "contexts": [
+    "_ = try lib.assign(appID: id, name: game?.name ?? \"Steam game\", folder: game?.folderName ?? \"app_\\(id)\", libraryID: choice)",
+    "SteamBackground.shared.downloadStarted(name: owned.first(where: { $0.id == id })?.name ?? \"Steam game\")",
+    "let name = owned.first(where: { $0.id == id })?.name ?? \"Steam game\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1346"
+  },
+  {
+   "file": "app/Sources/Core/SteamStore.swift",
+   "text": "No program to run was found in \\(game.name)'s files. Verify and update them from the game's page, or use Add a game to pick it.",
+   "lines": [
+    346,
+    357
+   ],
+   "contexts": [
+    "self.error = \"No program to run was found in \\(game.name)'s files. Verify and update them from the game's page, or use Add a game to pick it.\"",
+    "error = \"No program to run was found in \\(game.name)'s files. Verify and update them from the game's page, or use Add a game to pick it.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1347"
+  },
+  {
+   "file": "app/Sources/Core/SteamStore.swift",
+   "text": ")\\(access != nil ? ",
+   "lines": [
+    480
+   ],
+   "contexts": [
+    "SteamLog.event(\"[steam-depot] installed app=\\(id) exe=\\(exe == nil ? \"none\" : \"found\")\\(access != nil ? \" (SSD)\" : \"\")\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1348"
+  },
+  {
+   "file": "app/Sources/Core/SteamWorkshopStore.swift",
+   "text": "Item \\(file.id)",
+   "lines": [
+    119
+   ],
+   "contexts": [
+    "var item = details[file.id] ?? SteamWorkshopItem(id: file.id, appID: appID, title: \"Item \\(file.id)\", summary: \"\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1349"
+  },
+  {
+   "file": "app/Sources/Core/SteamWorkshopStore.swift",
+   "text": "Item \\(id)",
+   "lines": [
+    138
+   ],
+   "contexts": [
+    "var item = found[id] ?? SteamWorkshopItem(id: id, appID: appID, title: \"Item \\(id)\", summary: \"\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1350"
+  },
+  {
+   "file": "app/Sources/Core/SteamWorkshopStore.swift",
+   "text": "Steam no longer lists this item.",
+   "lines": [
+    296
+   ],
+   "contexts": [
+    "throw SteamFailure(message: \"Steam no longer lists this item.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1351"
+  },
+  {
+   "file": "app/Sources/Core/SteamWorkshopStore.swift",
+   "text": "\\u{201C}\\(job.title)\\u{201D} has no files to download.",
+   "lines": [
+    299
+   ],
+   "contexts": [
+    "guard job.manifest != 0 || job.fileURL != nil else { throw SteamFailure(message: \"\\u{201C}\\(job.title)\\u{201D} has no files to download.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1352"
+  },
+  {
+   "file": "app/Sources/Core/Telemetry.swift",
+   "text": "in swap %.2f GB",
+   "lines": [
+    55
+   ],
+   "contexts": [
+    "if let backed = engine.swapBackedMB { detail += String(format: \"in swap %.2f GB\", Double(backed) / 1024) }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1353"
+  },
+  {
+   "file": "app/Sources/Core/Telemetry.swift",
+   "text": "%@peak %.2f GB",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    "if let peak = engine.swapPeakMB { detail += String(format: \"%@peak %.2f GB\", detail.isEmpty ? \"\" : \"   \", Double(peak) / 1024) }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1354"
+  },
+  {
+   "file": "app/Sources/Core/Telemetry.swift",
+   "text": "   refused \\(refused)",
+   "lines": [
+    57
+   ],
+   "contexts": [
+    "if let refused = engine.swapRefused, refused > 0 { detail += \"   refused \\(refused)\" }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1355"
+  },
+  {
+   "file": "app/Sources/Core/Telemetry.swift",
+   "text": "   covers \\(coverage)",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "if let coverage = engine.swapCoverage { detail += \"   covers \\(coverage)\" }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1356"
+  },
+  {
+   "file": "app/Sources/Core/TunnelManager.swift",
+   "text": "Porthole JIT tunnel",
+   "lines": [
+    148
+   ],
+   "contexts": [
+    "static let configurationName = \"Porthole JIT tunnel\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1357"
+  },
+  {
+   "file": "app/Sources/Core/TunnelManager.swift",
+   "text": "The tunnel extension is missing from this build.",
+   "lines": [
+    222
+   ],
+   "contexts": [
+    "case .missingExtension: \"The tunnel extension is missing from this build.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1358"
+  },
+  {
+   "file": "app/Sources/Core/TunnelManager.swift",
+   "text": "iOS wouldn't start the tunnel. After an app update this usually clears by restarting the device. Restart it and try again; your games and settings are not affected.",
+   "lines": [
+    223
+   ],
+   "contexts": [
+    "case .refusedAtStart: \"iOS wouldn't start the tunnel. After an app update this usually clears by restarting the device. Restart it and try again; your games and settings are not affected.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1359"
+  },
+  {
+   "file": "app/Sources/Core/TunnelManager.swift",
+   "text": "The tunnel did not connect. Allow the VPN when iOS asks, and check the tunnel extension is signed with a profile that has the Network Extension (packet tunnel) entitlement.",
+   "lines": [
+    224
+   ],
+   "contexts": [
+    "case .notConnected: \"The tunnel did not connect. Allow the VPN when iOS asks, and check the tunnel extension is signed with a profile that has the Network Extension (packet tunnel) entitlement.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1360"
+  },
+  {
+   "file": "app/Sources/Core/VCRuntime.swift",
+   "text": "What was downloaded is not the Microsoft installer this app expects, so it was not used. Try again.",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "case .notTheExpectedInstaller: return \"What was downloaded is not the Microsoft installer this app expects, so it was not used. Try again.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1361"
+  },
+  {
+   "file": "app/Sources/Core/VCRuntime.swift",
+   "text": "The Microsoft installer could not be unpacked (\\(why)).",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "case .unreadable(let why): return \"The Microsoft installer could not be unpacked (\\(why)).\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1362"
+  },
+  {
+   "file": "app/Sources/Core/VCRuntime.swift",
+   "text": "\\(name) does not match Microsoft's original, so it was not used.",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "case .mismatch(let name): return \"\\(name) does not match Microsoft's original, so it was not used.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1363"
+  },
+  {
+   "file": "app/Sources/Core/VCRuntime.swift",
+   "text": "no package container",
+   "lines": [
+    60
+   ],
+   "contexts": [
+    "guard let container = candidates.first, container.size > 1 << 20 else { throw Failure.unreadable(\"no package container\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1364"
+  },
+  {
+   "file": "app/Sources/Core/VCRuntime.swift",
+   "text": "x64 runtime not found",
+   "lines": [
+    74
+   ],
+   "contexts": [
+    "guard let found = wanted else { throw Failure.unreadable(\"x64 runtime not found\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1365"
+  },
+  {
+   "file": "app/Sources/Core/VCRuntime.swift",
+   "text": "\\(entry.name) is missing",
+   "lines": [
+    78
+   ],
+   "contexts": [
+    "guard let content = found[entry.name] else { throw Failure.unreadable(\"\\(entry.name) is missing\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1366"
+  },
+  {
+   "file": "app/Sources/Core/VCRuntime.swift",
+   "text": "cabinet is cut short",
+   "lines": [
+    160
+   ],
+   "contexts": [
+    "guard p + 8 + dataReserve <= limit else { throw VCRuntimeFiles.Failure.unreadable(\"cabinet is cut short\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1367"
+  },
+  {
+   "file": "app/Sources/Core/VCRuntime.swift",
+   "text": "bad block",
+   "lines": [
+    164
+   ],
+   "contexts": [
+    "data[data.startIndex + p] == 0x43, data[data.startIndex + p + 1] == 0x4B else { throw VCRuntimeFiles.Failure.unreadable(\"bad block\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1368"
+  },
+  {
+   "file": "app/Sources/Core/VCRuntime.swift",
+   "text": "files run past the end of the cabinet",
+   "lines": [
+    175
+   ],
+   "contexts": [
+    "guard next == entries.count else { throw VCRuntimeFiles.Failure.unreadable(\"files run past the end of the cabinet\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1369"
+  },
+  {
+   "file": "app/Sources/Core/VCRuntime.swift",
+   "text": "a block would not unpack",
+   "lines": [
+    198
+   ],
+   "contexts": [
+    "guard ok else { throw VCRuntimeFiles.Failure.unreadable(\"a block would not unpack\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1370"
+  },
+  {
+   "file": "app/Sources/Core/VCRuntimeInstaller.swift",
+   "text": "Microsoft's server answered \\(response.statusCode)",
+   "lines": [
+    49
+   ],
+   "contexts": [
+    "guard response.statusCode == 200 else { throw VCRuntimeFiles.Failure.unreadable(\"Microsoft's server answered \\(response.statusCode)\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1371"
+  },
+  {
+   "file": "app/Sources/Core/VCRuntimeInstaller.swift",
+   "text": "The files were not saved. Check that the device has free space.",
+   "lines": [
+    65
+   ],
+   "contexts": [
+    "state = installed ? .idle : .failed(\"The files were not saved. Check that the device has free space.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1372"
+  },
+  {
+   "file": "app/Sources/Core/VCRuntimeInstaller.swift",
+   "text": "Couldn't download it: \\(error.localizedDescription)",
+   "lines": [
+    69
+   ],
+   "contexts": [
+    "state = .failed(\"Couldn't download it: \\(error.localizedDescription)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1373"
+  },
+  {
+   "file": "app/Sources/Core/VPNGuard.swift",
+   "text": "Porthole then runs your \\u{201C}\\(shortcutName)\\u{201D} shortcut to turn it back on.",
+   "lines": [
+    71
+   ],
+   "contexts": [
+    "let back = hasShortcut ? \"Porthole then runs your \\u{201C}\\(shortcutName)\\u{201D} shortcut to turn it back on.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1374"
+  },
+  {
+   "file": "app/Sources/Core/VPNGuard.swift",
+   "text": "Porthole cannot turn it back on by itself: iOS only allows that through a Shortcut you make once (Settings \\u{203A} JIT and connection \\u{203A} Your own VPN). Until then it stays off after the game starts.",
+   "lines": [
+    72
+   ],
+   "contexts": [
+    ": \"Porthole cannot turn it back on by itself: iOS only allows that through a Shortcut you make once (Settings \\u{203A} JIT and connection \\u{203A} Your own VPN). Until then it stays off after the game starts.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1375"
+  },
+  {
+   "file": "app/Sources/Core/VPNGuard.swift",
+   "text": "Porthole needs its own connection for a moment to \\(what). Your VPN switches off now and stays off until \\(early ? ",
+   "lines": [
+    74
+   ],
+   "contexts": [
+    "let text = \"Porthole needs its own connection for a moment to \\(what). Your VPN switches off now and stays off until \\(early ? \"JIT is on\" : until). \\(back)\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1376"
+  },
+  {
+   "file": "app/Sources/Core/VPNGuard.swift",
+   "text": " : until). \\(back)",
+   "lines": [
+    74
+   ],
+   "contexts": [
+    "let text = \"Porthole needs its own connection for a moment to \\(what). Your VPN switches off now and stays off until \\(early ? \"JIT is on\" : until). \\(back)\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1377"
+  },
+  {
+   "file": "app/Sources/Core/VPNGuard.swift",
+   "text": "Pause your VPN?",
+   "lines": [
+    219
+   ],
+   "contexts": [
+    "ConfirmSheet(title: \"Pause your VPN?\", message: message, confirmTitle: \"Pause it\", scope: scope, done: done)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1378"
+  },
+  {
+   "file": "app/Sources/EA/EAInstaller.swift",
+   "text": "Program Files/EA Games",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "static let installRoot = \"Program Files/EA Games\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1379"
+  },
+  {
+   "file": "app/Sources/EA/EAInstaller.swift",
+   "text": "Could not save EA installs: ",
+   "lines": [
+    106
+   ],
+   "contexts": [
+    "} catch { self.error = \"Could not save EA installs: \" + error.localizedDescription }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1380"
+  },
+  {
+   "file": "app/Sources/EA/EAInstaller.swift",
+   "text": "unknown-game",
+   "lines": [
+    141
+   ],
+   "contexts": [
+    "guard let title = title(for: id) else { error = EAAPIError.invalid(\"unknown-game\").localizedDescription; return }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1381"
+  },
+  {
+   "file": "app/Sources/EA/EAInstaller.swift",
+   "text": "End the game session before uninstalling.",
+   "lines": [
+    217
+   ],
+   "contexts": [
+    "error = \"End the game session before uninstalling.\"; return"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1382"
+  },
+  {
+   "file": "app/Sources/EA/EAInstaller.swift",
+   "text": "Finding the newest build",
+   "lines": [
+    290
+   ],
+   "contexts": [
+    "step(\"Finding the newest build\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1383"
+  },
+  {
+   "file": "app/Sources/EA/EAInstaller.swift",
+   "text": "Getting the download address",
+   "lines": [
+    292
+   ],
+   "contexts": [
+    "step(\"Getting the download address\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1384"
+  },
+  {
+   "file": "app/Sources/EA/EAInstaller.swift",
+   "text": "Reading the build's file list",
+   "lines": [
+    294
+   ],
+   "contexts": [
+    "step(\"Reading the build's file list\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1385"
+  },
+  {
+   "file": "app/Sources/EA/EAInstaller.swift",
+   "text": "the game's content id is unknown",
+   "lines": [
+    410
+   ],
+   "contexts": [
+    "guard !record.contentID.isEmpty else { throw EAAPIError.license(\"the game's content id is unknown\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1386"
+  },
+  {
+   "file": "app/Sources/EA/EALibrary.swift",
+   "text": "EA did not say how large this game is.",
+   "lines": [
+    191
+   ],
+   "contexts": [
+    "sizes[id] = .unavailable((error as? EAAPIError)?.errorDescription ?? \"EA did not say how large this game is.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1387"
+  },
+  {
+   "file": "app/Sources/EA/EALibrary.swift",
+   "text": "size id=\\(id)",
+   "lines": [
+    192
+   ],
+   "contexts": [
+    "Self.note(error, context: \"size id=\\(id)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1388"
+  },
+  {
+   "file": "app/Sources/EA/EASignInView.swift",
+   "text": "Signing in\\u{2026}",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "ProgressView(\"Signing in\\u{2026}\").padding(20).background(.regularMaterial, in: RoundedRectangle(cornerRadius: 14))"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1389"
+  },
+  {
+   "file": "app/Sources/EA/EASignInView.swift",
+   "text": "Paste the sign-in address",
+   "lines": [
+    37
+   ],
+   "contexts": [
+    "Button(\"Paste the sign-in address\", systemImage: \"doc.on.clipboard\") { pasted = \"\"; pasting = true }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1390"
+  },
+  {
+   "file": "app/Sources/EA/EASignInView.swift",
+   "text": "Reload",
+   "lines": [
+    38
+   ],
+   "contexts": [
+    "Button(\"Reload\", systemImage: \"arrow.clockwise\") { reload += 1 }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1391"
+  },
+  {
+   "file": "app/Sources/EA/EASignInView.swift",
+   "text": "More",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    "} label: { Label(\"More\", systemImage: \"ellipsis.circle\") }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1392"
+  },
+  {
+   "file": "app/Sources/EA/EASignInView.swift",
+   "text": "Sign in with an address",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    ".alert(\"Sign in with an address\", isPresented: $pasting) {"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1393"
+  },
+  {
+   "file": "app/Sources/EA/EASignInView.swift",
+   "text": "qrc:///html/login_successful.html?code=\\u{2026}",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "TextField(\"qrc:///html/login_successful.html?code=\\u{2026}\", text: $pasted).autocorrectionDisabled().textInputAutocapitalization(.never)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1394"
+  },
+  {
+   "file": "app/Sources/EA/EASignInView.swift",
+   "text": "Sign in",
+   "lines": [
+    45
+   ],
+   "contexts": [
+    "Button(\"Sign in\") { submit(pasted) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1395"
+  },
+  {
+   "file": "app/Sources/EA/EASignInView.swift",
+   "text": "Cancel",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "Button(\"Cancel\", role: .cancel) {}"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1396"
+  },
+  {
+   "file": "app/Sources/EA/EASignInView.swift",
+   "text": "If the page shows an address that ends in login_successful.html with a code, copy that whole address and paste it here.",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "Text(\"If the page shows an address that ends in login_successful.html with a code, copy that whole address and paste it here.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1397"
+  },
+  {
+   "file": "app/Sources/EA/EASignInView.swift",
+   "text": "OK",
+   "lines": [
+    51
+   ],
+   "contexts": [
+    "Button(\"OK\", role: .cancel) { failure = nil; reload += 1 }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1398"
+  },
+  {
+   "file": "app/Sources/EA/EASignInView.swift",
+   "text": "Signed in as",
+   "lines": [
+    59
+   ],
+   "contexts": [
+    "LabeledContent(\"Signed in as\", value: auth.accountName ?? \"EA account\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1399"
+  },
+  {
+   "file": "app/Sources/EA/EASignInView.swift",
+   "text": "EA account",
+   "lines": [
+    59
+   ],
+   "contexts": [
+    "LabeledContent(\"Signed in as\", value: auth.accountName ?? \"EA account\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1400"
+  },
+  {
+   "file": "app/Sources/EA/EASignInView.swift",
+   "text": "Games",
+   "lines": [
+    60
+   ],
+   "contexts": [
+    "LabeledContent(\"Games\", value: library.isLoading ? \"Loading\\u{2026}\" : \"\\(library.games.count)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1401"
+  },
+  {
+   "file": "app/Sources/EA/EASignInView.swift",
+   "text": "Loading\\u{2026}",
+   "lines": [
+    60
+   ],
+   "contexts": [
+    "LabeledContent(\"Games\", value: library.isLoading ? \"Loading\\u{2026}\" : \"\\(library.games.count)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1402"
+  },
+  {
+   "file": "app/Sources/EA/EASignInView.swift",
+   "text": "\\(library.games.count)",
+   "lines": [
+    60
+   ],
+   "contexts": [
+    "LabeledContent(\"Games\", value: library.isLoading ? \"Loading\\u{2026}\" : \"\\(library.games.count)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1403"
+  },
+  {
+   "file": "app/Sources/EA/EASignInView.swift",
+   "text": "Sign out of the EA app",
+   "lines": [
+    61
+   ],
+   "contexts": [
+    "Button(\"Sign out of the EA app\", role: .destructive) { auth.signOut() }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1404"
+  },
+  {
+   "file": "app/Sources/EA/EASignInView.swift",
+   "text": "Games you installed stay, but an EA game needs this sign-in to start: its licence comes from your account.",
+   "lines": [
+    63
+   ],
+   "contexts": [
+    "Text(\"Games you installed stay, but an EA game needs this sign-in to start: its licence comes from your account.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1405"
+  },
+  {
+   "file": "app/Sources/EA/EASignInView.swift",
+   "text": "This is not an EA sign-in address. Copy the address of the page EA opens after you sign in.",
+   "lines": [
+    74
+   ],
+   "contexts": [
+    "failure = \"This is not an EA sign-in address. Copy the address of the page EA opens after you sign in.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1406"
+  },
+  {
+   "file": "app/Sources/Epic/EpicAuth.swift",
+   "text": "Sign in to Epic Games first.",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "case .notSignedIn: return \"Sign in to Epic Games first.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1407"
+  },
+  {
+   "file": "app/Sources/Epic/EpicAuth.swift",
+   "text": "Could not reach Epic Games. Check your connection and try again.",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "case .network: return \"Could not reach Epic Games. Check your connection and try again.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1408"
+  },
+  {
+   "file": "app/Sources/Epic/EpicAuth.swift",
+   "text": "Epic Games refused the sign-in (\\(code)). Try again.",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "case .rejected(let code): return \"Epic Games refused the sign-in (\\(code)). Try again.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1409"
+  },
+  {
+   "file": "app/Sources/Epic/EpicAuth.swift",
+   "text": "Epic Games needs an extra step: \\(detail ?? ",
+   "lines": [
+    29
+   ],
+   "contexts": [
+    "return \"Epic Games needs an extra step: \\(detail ?? \"open Epic's site and follow the prompt\").\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1410"
+  },
+  {
+   "file": "app/Sources/Epic/EpicAuth.swift",
+   "text": ").",
+   "lines": [
+    29
+   ],
+   "contexts": [
+    "return \"Epic Games needs an extra step: \\(detail ?? \"open Epic's site and follow the prompt\").\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1411"
+  },
+  {
+   "file": "app/Sources/Epic/EpicAuth.swift",
+   "text": "Epic returned invalid launch parameters.",
+   "lines": [
+    174
+   ],
+   "contexts": [
+    "throw EpicContentError.invalid(\"Epic returned invalid launch parameters.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1412"
+  },
+  {
+   "file": "app/Sources/Epic/EpicBackground.swift",
+   "text": "Downloading \\(name)",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    "if let task = continued as? BGContinuedProcessingTask { task.updateTitle(\"Downloading \\(name)\", subtitle: \"\\(label) \\u{00B7} Preparing\\u{2026}\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1413"
+  },
+  {
+   "file": "app/Sources/Epic/EpicBackground.swift",
+   "text": "\\(label) \\u{00B7} Preparing\\u{2026}",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    "if let task = continued as? BGContinuedProcessingTask { task.updateTitle(\"Downloading \\(name)\", subtitle: \"\\(label) \\u{00B7} Preparing\\u{2026}\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1414"
+  },
+  {
+   "file": "app/Sources/Epic/EpicBackground.swift",
+   "text": "Downloading \\(currentName)",
+   "lines": [
+    72,
+    103
+   ],
+   "contexts": [
+    "task.updateTitle(\"Downloading \\(currentName)\", subtitle: DownloadCardText.subtitle(progress, waiting: waiting))",
+    "let request = BGContinuedProcessingTaskRequest(identifier: identifier, title: \"Downloading \\(currentName)\", subtitle: label)"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1415"
+  },
+  {
+   "file": "app/Sources/Epic/EpicBackground.swift",
+   "text": "\\(name) is ready to play",
+   "lines": [
+    79
+   ],
+   "contexts": [
+    "case .completed: DownloadActivity.shared.end(store: store, failed: false, message: \"\\(name) is ready to play\", finished: true)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1416"
+  },
+  {
+   "file": "app/Sources/Epic/EpicBackground.swift",
+   "text": "\\(name) is downloaded. Open Porthole to install it",
+   "lines": [
+    80
+   ],
+   "contexts": [
+    "case .downloaded: DownloadActivity.shared.end(store: store, failed: false, message: \"\\(name) is downloaded. Open Porthole to install it\", finished: true)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1417"
+  },
+  {
+   "file": "app/Sources/Epic/EpicBackground.swift",
+   "text": "\\(name) stopped: \\(reason)",
+   "lines": [
+    81
+   ],
+   "contexts": [
+    "case .failed(let reason): DownloadActivity.shared.end(store: store, failed: true, message: \"\\(name) stopped: \\(reason)\", finished: true)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1418"
+  },
+  {
+   "file": "app/Sources/Epic/EpicBackground.swift",
+   "text": "\\(label) download",
+   "lines": [
+    130
+   ],
+   "contexts": [
+    "grace = UIApplication.shared.beginBackgroundTask(withName: \"\\(label) download\") { [weak self] in"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1419"
+  },
+  {
+   "file": "app/Sources/Epic/EpicChunk.swift",
+   "text": "Epic download failed (HTTP \\(status)). Try again.",
+   "lines": [
+    14
+   ],
+   "contexts": [
+    "case .httpStatus(let status): return \"Epic download failed (HTTP \\(status)). Try again.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1420"
+  },
+  {
+   "file": "app/Sources/Epic/EpicChunk.swift",
+   "text": "Truncated Epic content.",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "throw EpicContentError.invalid(\"Truncated Epic content.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1421"
+  },
+  {
+   "file": "app/Sources/Epic/EpicChunk.swift",
+   "text": "Invalid Epic string.",
+   "lines": [
+    45
+   ],
+   "contexts": [
+    "throw EpicContentError.invalid(\"Invalid Epic string.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1422"
+  },
+  {
+   "file": "app/Sources/Epic/EpicChunk.swift",
+   "text": "Invalid Epic list length.",
+   "lines": [
+    55
+   ],
+   "contexts": [
+    "guard count <= data.count - position else { throw EpicContentError.invalid(\"Invalid Epic list length.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1423"
+  },
+  {
+   "file": "app/Sources/Epic/EpicChunk.swift",
+   "text": "Invalid Epic section size.",
+   "lines": [
+    60
+   ],
+   "contexts": [
+    "guard size >= 5 else { throw EpicContentError.invalid(\"Invalid Epic section size.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1424"
+  },
+  {
+   "file": "app/Sources/Epic/EpicChunk.swift",
+   "text": "Epic content exceeds the decompression limit.",
+   "lines": [
+    125
+   ],
+   "contexts": [
+    "guard size > 0, size <= limit else { throw EpicContentError.invalid(\"Epic content exceeds the decompression limit.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1425"
+  },
+  {
+   "file": "app/Sources/Epic/EpicChunk.swift",
+   "text": "Invalid Epic zlib stream.",
+   "lines": [
+    134
+   ],
+   "contexts": [
+    "guard status == Z_OK, length == size else { throw EpicContentError.invalid(\"Invalid Epic zlib stream.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1426"
+  },
+  {
+   "file": "app/Sources/Epic/EpicChunk.swift",
+   "text": "Invalid Epic chunk magic.",
+   "lines": [
+    140
+   ],
+   "contexts": [
+    "guard try r.u32() == 0xB1FE3AA2 else { throw EpicContentError.invalid(\"Invalid Epic chunk magic.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1427"
+  },
+  {
+   "file": "app/Sources/Epic/EpicChunk.swift",
+   "text": "Encrypted or unsupported Epic chunk.",
+   "lines": [
+    145
+   ],
+   "contexts": [
+    "throw EpicContentError.invalid(\"Encrypted or unsupported Epic chunk.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1428"
+  },
+  {
+   "file": "app/Sources/Epic/EpicChunk.swift",
+   "text": "Invalid Epic chunk size.",
+   "lines": [
+    151
+   ],
+   "contexts": [
+    "throw EpicContentError.invalid(\"Invalid Epic chunk size.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1429"
+  },
+  {
+   "file": "app/Sources/Epic/EpicChunk.swift",
+   "text": "Epic chunk SHA-1 mismatch.",
+   "lines": [
+    157
+   ],
+   "contexts": [
+    "throw EpicContentError.invalid(\"Epic chunk SHA-1 mismatch.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1430"
+  },
+  {
+   "file": "app/Sources/Epic/EpicChunk.swift",
+   "text": "Epic chunk does not match its manifest.",
+   "lines": [
+    162
+   ],
+   "contexts": [
+    "throw EpicContentError.invalid(\"Epic chunk does not match its manifest.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1431"
+  },
+  {
+   "file": "app/Sources/Epic/EpicChunk.swift",
+   "text": "A manifest SHA-1 is required to verify this chunk.",
+   "lines": [
+    165
+   ],
+   "contexts": [
+    "throw EpicContentError.invalid(\"A manifest SHA-1 is required to verify this chunk.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1432"
+  },
+  {
+   "file": "app/Sources/Epic/EpicInstaller.swift",
+   "text": "Could not read Epic installs: ",
+   "lines": [
+    62
+   ],
+   "contexts": [
+    "} catch { self.error = \"Could not read Epic installs: \" + error.localizedDescription }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1433"
+  },
+  {
+   "file": "app/Sources/Epic/EpicInstaller.swift",
+   "text": "Could not save Epic installs: ",
+   "lines": [
+    97
+   ],
+   "contexts": [
+    "catch { self.error = \"Could not save Epic installs: \" + error.localizedDescription }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1434"
+  },
+  {
+   "file": "app/Sources/Epic/EpicInstaller.swift",
+   "text": "End the game session before uninstalling.",
+   "lines": [
+    191
+   ],
+   "contexts": [
+    "error = \"End the game session before uninstalling.\"; return"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1435"
+  },
+  {
+   "file": "app/Sources/Epic/EpicInstaller.swift",
+   "text": "Could not remove Epic files: ",
+   "lines": [
+    205
+   ],
+   "contexts": [
+    "} catch { installs[id] = Install(state: .failed(\"Could not remove Epic files: \" + error.localizedDescription)) }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1436"
+  },
+  {
+   "file": "app/Sources/Epic/EpicInstaller.swift",
+   "text": "Refresh your Epic library, then try installing again.",
+   "lines": [
+    220
+   ],
+   "contexts": [
+    "throw EpicContentError.invalid(\"Refresh your Epic library, then try installing again.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1437"
+  },
+  {
+   "file": "app/Sources/Epic/EpicInstaller.swift",
+   "text": "Unsafe path in Epic content.",
+   "lines": [
+    277
+   ],
+   "contexts": [
+    "throw EpicContentError.invalid(\"Unsafe path in Epic content.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1438"
+  },
+  {
+   "file": "app/Sources/Epic/EpicInstaller.swift",
+   "text": "Epic install path contains a symbolic link.",
+   "lines": [
+    286
+   ],
+   "contexts": [
+    "type == .typeSymbolicLink { throw EpicContentError.invalid(\"Epic install path contains a symbolic link.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1439"
+  }
+ ]
+}

@@ -1,0 +1,2916 @@
+{
+ "batch": 26,
+ "units": [
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "\\(badge?.earlier?.reports ?? 0) earlier report\\((badge?.earlier?.reports ?? 0) == 1 ? ",
+   "lines": [
+    312
+   ],
+   "contexts": [
+    "ValueRow(id: \"sp-c-verdict\", symbol: past.symbol, title: past.text, value: \"\\(badge?.earlier?.reports ?? 0) earlier report\\((badge?.earlier?.reports ?? 0) == 1 ? \"\" : \"s\")\", statusColor: past.color)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4500"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Engine changed",
+   "lines": [
+    315
+   ],
+   "contexts": [
+    "ValueRow(id: \"sp-c-verdict\", symbol: \"questionmark.circle.fill\", title: \"Not yet tested\", value: \"Engine changed\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4501"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "No reports",
+   "lines": [
+    317
+   ],
+   "contexts": [
+    "ValueRow(id: \"sp-c-verdict\", symbol: \"questionmark.circle.fill\", title: \"Not yet tested\", value: \"No reports\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4502"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Details",
+   "lines": [
+    325
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Details\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4503"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Developer",
+   "lines": [
+    327
+   ],
+   "contexts": [
+    "if !page.developers.isEmpty { ValueRow(id: \"sp-d-dev\", symbol: \"hammer.fill\", title: \"Developer\", value: page.developers.joined(separator: \", \")) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4504"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Publisher",
+   "lines": [
+    328
+   ],
+   "contexts": [
+    "if !page.publishers.isEmpty, page.publishers != page.developers { ValueRow(id: \"sp-d-pub\", symbol: \"building.2.fill\", title: \"Publisher\", value: page.publishers.joined(separator: \", \")) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4505"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Download size",
+   "lines": [
+    331
+   ],
+   "contexts": [
+    "if game.sizeBytes > 0 { ValueRow(id: \"sp-d-size\", symbol: \"arrow.down.circle\", title: \"Download size\", value: SteamGameTile.size(game.sizeBytes)) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4506"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Size on this device",
+   "lines": [
+    332
+   ],
+   "contexts": [
+    "if let disk = game.diskBytes, disk > 0 { ValueRow(id: \"sp-d-disk\", symbol: \"externaldrive.fill\", title: \"Size on this device\", value: SteamGameTile.size(disk)) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4507"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Latest version",
+   "lines": [
+    333
+   ],
+   "contexts": [
+    "ValueRow(id: \"sp-d-ver\", symbol: \"number\", title: \"Latest version\", value: \"Build \\(game.buildID)\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4508"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Build \\(game.buildID)",
+   "lines": [
+    333
+   ],
+   "contexts": [
+    "ValueRow(id: \"sp-d-ver\", symbol: \"number\", title: \"Latest version\", value: \"Build \\(game.buildID)\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4509"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Installed version",
+   "lines": [
+    335
+   ],
+   "contexts": [
+    "ValueRow(id: \"sp-d-have\", symbol: \"checkmark.circle.fill\", title: \"Installed version\", value: \"Build \\(have)\", statusColor: have < game.buildID ? Theme.warn : Theme.good)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4510"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Build \\(have)",
+   "lines": [
+    335
+   ],
+   "contexts": [
+    "ValueRow(id: \"sp-d-have\", symbol: \"checkmark.circle.fill\", title: \"Installed version\", value: \"Build \\(have)\", statusColor: have < game.buildID ? Theme.warn : Theme.good)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4511"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "\\(summary.percent)% of \\(summary.total.formatted())",
+   "lines": [
+    343
+   ],
+   "contexts": [
+    "ValueRow(id: \"sp-r-sum\", symbol: \"hand.thumbsup.fill\", title: summary.label, value: \"\\(summary.percent)% of \\(summary.total.formatted())\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4512"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "\\(r.hours) h played \\u{00B7} \\(r.helpful) found it helpful",
+   "lines": [
+    347
+   ],
+   "contexts": [
+    "title: r.text.replacingOccurrences(of: \"\\n\", with: \" \"), subtitle: \"\\(r.hours) h played \\u{00B7} \\(r.helpful) found it helpful\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4513"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Recommended",
+   "lines": [
+    348,
+    358
+   ],
+   "contexts": [
+    "action: { reading = Reading(title: r.positive ? \"Recommended\" : \"Not recommended\", text: r.text) }) { EmptyView() }",
+    "if let r = page.recommendedRequirements { ActionRow(id: \"sp-q-rec\", symbol: \"cpu.fill\", title: \"Recommended\", chevron: true) { reading = Reading(title: \"Recommended requirements\", text: r) } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4514"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Not recommended",
+   "lines": [
+    348
+   ],
+   "contexts": [
+    "action: { reading = Reading(title: r.positive ? \"Recommended\" : \"Not recommended\", text: r.text) }) { EmptyView() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4515"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "System requirements",
+   "lines": [
+    356
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"System requirements\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4516"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Minimum",
+   "lines": [
+    357
+   ],
+   "contexts": [
+    "if let m = page.minimumRequirements { ActionRow(id: \"sp-q-min\", symbol: \"cpu\", title: \"Minimum\", chevron: true) { reading = Reading(title: \"Minimum requirements\", text: m) } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4517"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Minimum requirements",
+   "lines": [
+    357
+   ],
+   "contexts": [
+    "if let m = page.minimumRequirements { ActionRow(id: \"sp-q-min\", symbol: \"cpu\", title: \"Minimum\", chevron: true) { reading = Reading(title: \"Minimum requirements\", text: m) } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4518"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Recommended requirements",
+   "lines": [
+    358
+   ],
+   "contexts": [
+    "if let r = page.recommendedRequirements { ActionRow(id: \"sp-q-rec\", symbol: \"cpu.fill\", title: \"Recommended\", chevron: true) { reading = Reading(title: \"Recommended requirements\", text: r) } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4519"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Not enough free space: it needs about \\(SteamGameTile.size(game.diskBytes ?? game.sizeBytes)) on the device and it has \\(SteamGameTile.size(UInt64(free))).",
+   "lines": [
+    368
+   ],
+   "contexts": [
+    "notice = \"Not enough free space: it needs about \\(SteamGameTile.size(game.diskBytes ?? game.sizeBytes)) on the device and it has \\(SteamGameTile.size(UInt64(free))).\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4520"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Preparing\\u{2026}",
+   "lines": [
+    376
+   ],
+   "contexts": [
+    "case .preparing: return \"Preparing\\u{2026}\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4521"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Finishing\\u{2026}",
+   "lines": [
+    377
+   ],
+   "contexts": [
+    "case .finishing: return \"Finishing\\u{2026}\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4522"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "\\(SteamGameTile.size(p.doneBytes)) of \\(SteamGameTile.size(p.totalBytes))",
+   "lines": [
+    378
+   ],
+   "contexts": [
+    "case .downloading: return \"\\(SteamGameTile.size(p.doneBytes)) of \\(SteamGameTile.size(p.totalBytes))\" + (p.bytesPerSecond > 0 ? \" \\u{00B7} \\(SteamGameTile.size(UInt64(p.bytesPerSecond)))/s\" : \"\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4523"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": " \\u{00B7} \\(SteamGameTile.size(UInt64(p.bytesPerSecond)))/s",
+   "lines": [
+    378
+   ],
+   "contexts": [
+    "case .downloading: return \"\\(SteamGameTile.size(p.doneBytes)) of \\(SteamGameTile.size(p.totalBytes))\" + (p.bytesPerSecond > 0 ? \" \\u{00B7} \\(SteamGameTile.size(UInt64(p.bytesPerSecond)))/s\" : \"\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4524"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "\\(index + 1) of \\(items.count)",
+   "lines": [
+    411
+   ],
+   "contexts": [
+    "Text(\"\\(index + 1) of \\(items.count)\").font(.footnote.weight(.bold)).foregroundStyle(.white).padding(.horizontal, 12).padding(.vertical, 6).background(.black.opacity(0.5), in: Capsule())"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4525"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Close",
+   "lines": [
+    413
+   ],
+   "contexts": [
+    "PillButton(id: \"mv-close\", title: \"Close\", symbol: \"xmark\", action: close)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4526"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Previous",
+   "lines": [
+    417
+   ],
+   "contexts": [
+    "PillButton(id: \"mv-prev\", title: \"Previous\", symbol: \"chevron.left\", enabled: index > 0) { step(-1) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4527"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Pause",
+   "lines": [
+    418
+   ],
+   "contexts": [
+    "if item?.isVideo == true { PillButton(id: \"mv-play\", title: playing ? \"Pause\" : \"Play\", symbol: playing ? \"pause.fill\" : \"play.fill\", style: .primary, action: toggle) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4528"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Next",
+   "lines": [
+    419
+   ],
+   "contexts": [
+    "PillButton(id: \"mv-next\", title: \"Next\", symbol: \"chevron.right\", enabled: index < items.count - 1) { step(1) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4529"
+  },
+  {
+   "file": "app/Sources/UI/SteamVersions.swift",
+   "text": "Try again",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "ActionRow(id: \"sv-retry\", symbol: \"arrow.clockwise\", title: \"Try again\", chevron: false) { Task { await load() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4530"
+  },
+  {
+   "file": "app/Sources/UI/SteamVersions.swift",
+   "text": "Version",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Version\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4531"
+  },
+  {
+   "file": "app/Sources/UI/SteamVersions.swift",
+   "text": "Beta password",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"sv-password\", symbol: \"key.fill\", title: \"Beta password\", placeholder: \"Have a code?\", info: \"Some games have private betas. A code from the developer, typed here, opens the beta it belongs to.\", secure: false, text: $password)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4532"
+  },
+  {
+   "file": "app/Sources/UI/SteamVersions.swift",
+   "text": "Have a code?",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"sv-password\", symbol: \"key.fill\", title: \"Beta password\", placeholder: \"Have a code?\", info: \"Some games have private betas. A code from the developer, typed here, opens the beta it belongs to.\", secure: false, text: $password)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4533"
+  },
+  {
+   "file": "app/Sources/UI/SteamVersions.swift",
+   "text": "Some games have private betas. A code from the developer, typed here, opens the beta it belongs to.",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"sv-password\", symbol: \"key.fill\", title: \"Beta password\", placeholder: \"Have a code?\", info: \"Some games have private betas. A code from the developer, typed here, opens the beta it belongs to.\", secure: false, text: $password)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4534"
+  },
+  {
+   "file": "app/Sources/UI/SteamVersions.swift",
+   "text": "Checking\\u{2026}",
+   "lines": [
+    49
+   ],
+   "contexts": [
+    "ActionRow(id: \"sv-unlock\", symbol: \"lock.open.fill\", title: checking ? \"Checking\\u{2026}\" : \"Use this password\", chevron: false) { unlock() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4535"
+  },
+  {
+   "file": "app/Sources/UI/SteamVersions.swift",
+   "text": "Use this password",
+   "lines": [
+    49
+   ],
+   "contexts": [
+    "ActionRow(id: \"sv-unlock\", symbol: \"lock.open.fill\", title: checking ? \"Checking\\u{2026}\" : \"Use this password\", chevron: false) { unlock() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4536"
+  },
+  {
+   "file": "app/Sources/UI/SteamVersions.swift",
+   "text": "Normal version",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    "branch.name == SteamBranch.publicName ? \"Normal version\" : branch.name"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4537"
+  },
+  {
+   "file": "app/Sources/UI/SteamVersions.swift",
+   "text": "Build \\(build)",
+   "lines": [
+    61
+   ],
+   "contexts": [
+    "if let build = branch.buildID { parts.append(\"Build \\(build)\") }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4538"
+  },
+  {
+   "file": "app/Sources/UI/SteamVersions.swift",
+   "text": "needs a password",
+   "lines": [
+    63
+   ],
+   "contexts": [
+    "if branch.passwordRequired && !unlocked(branch) { parts.append(\"needs a password\") }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4539"
+  },
+  {
+   "file": "app/Sources/UI/SteamVersions.swift",
+   "text": "\\u{201C}\\(branch.name)\\u{201D} needs a password. Type it above.",
+   "lines": [
+    73
+   ],
+   "contexts": [
+    "if branch.passwordRequired && !unlocked(branch) { note = \"\\u{201C}\\(branch.name)\\u{201D} needs a password. Type it above.\"; return }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4540"
+  },
+  {
+   "file": "app/Sources/UI/SteamVersions.swift",
+   "text": "\\u{201C}\\(branch)\\u{201D} is chosen. Download the changes to switch.",
+   "lines": [
+    86
+   ],
+   "contexts": [
+    "note = \"\\u{201C}\\(branch)\\u{201D} is chosen. Download the changes to switch.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4541"
+  },
+  {
+   "file": "app/Sources/UI/SteamVersions.swift",
+   "text": "DLC",
+   "lines": [
+    95
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"DLC\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4542"
+  },
+  {
+   "file": "app/Sources/UI/SteamVersions.swift",
+   "text": "DLC you own is installed with the game, as in Steam. Turning one off keeps files already on the device; it only stops new ones from being downloaded.",
+   "lines": [
+    102
+   ],
+   "contexts": [
+    "Text(\"DLC you own is installed with the game, as in Steam. Turning one off keeps files already on the device; it only stops new ones from being downloaded.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4543"
+  },
+  {
+   "file": "app/Sources/UI/SteamVersions.swift",
+   "text": "Not owned on this account",
+   "lines": [
+    112
+   ],
+   "contexts": [
+    "case false?: return \"Not owned on this account\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4544"
+  },
+  {
+   "file": "app/Sources/UI/SteamVersions.swift",
+   "text": "Ownership not known",
+   "lines": [
+    113
+   ],
+   "contexts": [
+    "default: return \"Ownership not known\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4545"
+  },
+  {
+   "file": "app/Sources/UI/SteamVersions.swift",
+   "text": "Download changes",
+   "lines": [
+    121
+   ],
+   "contexts": [
+    "ActionRow(id: \"sv-apply\", symbol: \"arrow.down.circle.fill\", title: installed ? \"Download changes\" : \"Install with these choices\", subtitle: installed"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4546"
+  },
+  {
+   "file": "app/Sources/UI/SteamVersions.swift",
+   "text": "Install with these choices",
+   "lines": [
+    121
+   ],
+   "contexts": [
+    "ActionRow(id: \"sv-apply\", symbol: \"arrow.down.circle.fill\", title: installed ? \"Download changes\" : \"Install with these choices\", subtitle: installed"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4547"
+  },
+  {
+   "file": "app/Sources/UI/SteamVersions.swift",
+   "text": "Fetches only what differs from the files on this device.",
+   "lines": [
+    122
+   ],
+   "contexts": [
+    "? \"Fetches only what differs from the files on this device.\" : nil, prominent: true, action: apply)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4548"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Sign in to Steam",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "PageScaffold(title: \"Sign in to Steam\", symbol: \"person.badge.key.fill\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4549"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Use my account name and password instead",
+   "lines": [
+    36
+   ],
+   "contexts": [
+    "ActionRow(id: \"ss-qr\", symbol: useQR ? \"keyboard\" : \"qrcode\", title: useQR ? \"Use my account name and password instead\" : \"Sign in with a QR code instead\", chevron: false) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4550"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Sign in with a QR code instead",
+   "lines": [
+    36
+   ],
+   "contexts": [
+    "ActionRow(id: \"ss-qr\", symbol: useQR ? \"keyboard\" : \"qrcode\", title: useQR ? \"Use my account name and password instead\" : \"Sign in with a QR code instead\", chevron: false) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4551"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "A QR code signs in without this app ever seeing your password. If you type your password instead, it is encrypted before it leaves the device and is never saved. Only a sign-in token is kept, in this device's Keychain. Porthole is unofficial and is not affiliated with or endorsed by Valve.",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "Text(\"A QR code signs in without this app ever seeing your password. If you type your password instead, it is encrypted before it leaves the device and is never saved. Only a sign-in token is kept, in this device's Keychain. Porthole is unofficial and is not affiliated with or endorsed by Valve.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4552"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Enter the code from the Steam mobile app.",
+   "lines": [
+    54
+   ],
+   "contexts": [
+    "Text(type == .device ? \"Enter the code from the Steam mobile app.\" : \"Enter the code Steam emailed you\\(prompt.hint.isEmpty ? \"\" : \" (\\(prompt.hint))\").\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4553"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Enter the code Steam emailed you\\(prompt.hint.isEmpty ? ",
+   "lines": [
+    54
+   ],
+   "contexts": [
+    "Text(type == .device ? \"Enter the code from the Steam mobile app.\" : \"Enter the code Steam emailed you\\(prompt.hint.isEmpty ? \"\" : \" (\\(prompt.hint))\").\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4554"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Steam Guard code",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"ss-code\", symbol: \"shield.fill\", title: \"Steam Guard code\", placeholder: \"Code\", text: $code)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4555"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Code",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"ss-code\", symbol: \"shield.fill\", title: \"Steam Guard code\", placeholder: \"Code\", text: $code)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4556"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Submit code",
+   "lines": [
+    57
+   ],
+   "contexts": [
+    "ActionRow(id: \"ss-submit\", symbol: \"checkmark\", title: \"Submit code\", chevron: false) { if !code.isEmpty { model.submitGuardCode(code) } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4557"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "You can also approve this sign-in in the Steam mobile app; this screen continues by itself.",
+   "lines": [
+    60
+   ],
+   "contexts": [
+    "Text(\"You can also approve this sign-in in the Steam mobile app; this screen continues by itself.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4558"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Account name",
+   "lines": [
+    64
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"ss-account\", symbol: \"person.fill\", title: \"Account name\", placeholder: \"Steam account name\", text: $account)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4559"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Steam account name",
+   "lines": [
+    64
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"ss-account\", symbol: \"person.fill\", title: \"Account name\", placeholder: \"Steam account name\", text: $account)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4560"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Password",
+   "lines": [
+    65
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"ss-password\", symbol: \"lock.fill\", title: \"Password\", placeholder: \"Password\", secure: true, text: $password)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4561"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Signing in\\u{2026}",
+   "lines": [
+    66
+   ],
+   "contexts": [
+    "ActionRow(id: \"ss-go\", symbol: \"arrow.right.circle.fill\", title: model.signInBusy ? \"Signing in\\u{2026}\" : \"Sign in\", chevron: false) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4562"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Sign in",
+   "lines": [
+    66
+   ],
+   "contexts": [
+    "ActionRow(id: \"ss-go\", symbol: \"arrow.right.circle.fill\", title: model.signInBusy ? \"Signing in\\u{2026}\" : \"Sign in\", chevron: false) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4563"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Open the Steam mobile app, choose Sign in with QR code and scan this.",
+   "lines": [
+    78
+   ],
+   "contexts": [
+    "Text(\"Open the Steam mobile app, choose Sign in with QR code and scan this.\").font(.footnote).foregroundStyle(Theme.textDim).multilineTextAlignment(.center)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4564"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Queued \\(queued) of \\(games.count). The other \\(skipped) need more free space than the device has left.",
+   "lines": [
+    182
+   ],
+   "contexts": [
+    "notice = skipped > 0 ? \"Queued \\(queued) of \\(games.count). The other \\(skipped) need more free space than the device has left.\" : nil"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4565"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "\\(games.count) selected \\u{00B7} \\(SteamGameTile.size(total)) to download \\u{00B7} \\(SteamGameTile.size(UInt64(max(free, 0)))) free",
+   "lines": [
+    193
+   ],
+   "contexts": [
+    "Text(\"\\(games.count) selected \\u{00B7} \\(SteamGameTile.size(total)) to download \\u{00B7} \\(SteamGameTile.size(UInt64(max(free, 0)))) free\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4566"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Select all",
+   "lines": [
+    197
+   ],
+   "contexts": [
+    "PillButton(id: \"sel-all\", title: \"Select all\", symbol: \"checkmark.circle\") { selected = Set(shown.filter(needsDownload).map(\\.id)) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4567"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Clear",
+   "lines": [
+    198
+   ],
+   "contexts": [
+    "PillButton(id: \"sel-clear\", title: \"Clear\", symbol: \"circle\", enabled: !selected.isEmpty) { selected = [] }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4568"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Download",
+   "lines": [
+    199,
+    230,
+    236,
+    376
+   ],
+   "contexts": [
+    "PillButton(id: \"sel-go\", title: games.isEmpty ? \"Download\" : \"Download \\(games.count)\", symbol: \"arrow.down.circle.fill\", style: .primary, enabled: !games.isEmpty) { downloadSelected() }",
+    "detail: clientBusy ? nil : \"Download\", info: \"Valve's own client files start your Steam games and check your licence. About 73 MB from Valve; nothing else is installed.\", chevron: false) {",
+    "detail: controllerLayer.busy ? nil : \"Download\", info: SteamControllerLayer.info, chevron: false) {"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4569"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Download \\(games.count)",
+   "lines": [
+    199
+   ],
+   "contexts": [
+    "PillButton(id: \"sel-go\", title: games.isEmpty ? \"Download\" : \"Download \\(games.count)\", symbol: \"arrow.down.circle.fill\", style: .primary, enabled: !games.isEmpty) { downloadSelected() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4570"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Done",
+   "lines": [
+    200
+   ],
+   "contexts": [
+    "PillButton(id: \"sel-done\", title: \"Done\", symbol: \"xmark\") { selecting = false; selected = [] }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4571"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Refresh the list",
+   "lines": [
+    221
+   ],
+   "contexts": [
+    "else { IconPillButton(id: \"so-refresh\", symbol: \"arrow.clockwise\", label: \"Refresh the list\") { Task { await store.refresh() } } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4572"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "All",
+   "lines": [
+    223
+   ],
+   "contexts": [
+    "SegmentedPills(options: [.init(id: \"all\", title: \"All\"), .init(id: \"installed\", title: \"Installed\"), .init(id: \"controller\", title: \"Controller\")], selection: filter) { filter = $0 }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4573"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Installed",
+   "lines": [
+    223
+   ],
+   "contexts": [
+    "SegmentedPills(options: [.init(id: \"all\", title: \"All\"), .init(id: \"installed\", title: \"Installed\"), .init(id: \"controller\", title: \"Controller\")], selection: filter) { filter = $0 }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4574"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Controller",
+   "lines": [
+    223
+   ],
+   "contexts": [
+    "SegmentedPills(options: [.init(id: \"all\", title: \"All\"), .init(id: \"installed\", title: \"Installed\"), .init(id: \"controller\", title: \"Controller\")], selection: filter) { filter = $0 }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4575"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Friends",
+   "lines": [
+    224,
+    253
+   ],
+   "contexts": [
+    "IconPillButton(id: \"so-friends\", symbol: \"person.2.fill\", label: \"Friends\") { showFriends = true }",
+    "GameSubSheet(title: \"Friends\", scope: friendsScope, close: { showFriends = false }) { SteamFriendsList() }.preferredColorScheme(Theme.scheme)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4576"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Sort: \\(sort.title)",
+   "lines": [
+    225
+   ],
+   "contexts": [
+    "IconPillButton(id: \"so-sort\", symbol: \"arrow.up.arrow.down\", label: \"Sort: \\(sort.title)\") { showSort = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4577"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Stop selecting",
+   "lines": [
+    226
+   ],
+   "contexts": [
+    "IconPillButton(id: \"so-f-select\", symbol: \"checkmark.circle\", label: selecting ? \"Stop selecting\" : \"Select several to download\", on: selecting) { selecting.toggle(); if !selecting { selected = [] } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4578"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Select several to download",
+   "lines": [
+    226
+   ],
+   "contexts": [
+    "IconPillButton(id: \"so-f-select\", symbol: \"checkmark.circle\", label: selecting ? \"Stop selecting\" : \"Select several to download\", on: selecting) { selecting.toggle(); if !selecting { selected = [] } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4579"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Steam client",
+   "lines": [
+    229
+   ],
+   "contexts": [
+    "ActionRow(id: \"so-client\", symbol: \"shield.lefthalf.filled\", tint: Theme.warn, title: \"Steam client\", subtitle: clientBusy ? (clientStatus ?? \"Working\\u{2026}\") : \"Needed to start Steam games\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4580"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Working\\u{2026}",
+   "lines": [
+    229
+   ],
+   "contexts": [
+    "ActionRow(id: \"so-client\", symbol: \"shield.lefthalf.filled\", tint: Theme.warn, title: \"Steam client\", subtitle: clientBusy ? (clientStatus ?? \"Working\\u{2026}\") : \"Needed to start Steam games\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4581"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Needed to start Steam games",
+   "lines": [
+    229
+   ],
+   "contexts": [
+    "ActionRow(id: \"so-client\", symbol: \"shield.lefthalf.filled\", tint: Theme.warn, title: \"Steam client\", subtitle: clientBusy ? (clientStatus ?? \"Working\\u{2026}\") : \"Needed to start Steam games\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4582"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Valve's own client files start your Steam games and check your licence. About 73 MB from Valve; nothing else is installed.",
+   "lines": [
+    230
+   ],
+   "contexts": [
+    "detail: clientBusy ? nil : \"Download\", info: \"Valve's own client files start your Steam games and check your licence. About 73 MB from Valve; nothing else is installed.\", chevron: false) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4583"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Steam controller support",
+   "lines": [
+    235
+   ],
+   "contexts": [
+    "ActionRow(id: \"so-controller\", symbol: \"gamecontroller.fill\", tint: Theme.warn, title: \"Steam controller support\", subtitle: controllerLayer.subtitle,"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4584"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "No installable Windows games found on this account yet.",
+   "lines": [
+    243
+   ],
+   "contexts": [
+    "Text(store.owned.isEmpty ? \"No installable Windows games found on this account yet.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4585"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Asking Steam which games work with a controller\\u{2026}",
+   "lines": [
+    244
+   ],
+   "contexts": [
+    ": filter == \"controller\" && !store.owned.allSatisfy({ controllers.isKnown($0.id) }) ? \"Asking Steam which games work with a controller\\u{2026}\" : \"No games match.\").foregroundStyle(Theme.textDim).frame(maxWidth: .infinity).padding(.top, 30)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4586"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "No games match.",
+   "lines": [
+    244
+   ],
+   "contexts": [
+    ": filter == \"controller\" && !store.owned.allSatisfy({ controllers.isKnown($0.id) }) ? \"Asking Steam which games work with a controller\\u{2026}\" : \"No games match.\").foregroundStyle(Theme.textDim).frame(maxWidth: .infinity).padding(.top, 30)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4587"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Sort by",
+   "lines": [
+    256
+   ],
+   "contexts": [
+    "ChoiceSheet(title: \"Sort by\", options: StoreSort.options(includingSize: true), selected: sort, scope: sortScope) { value in"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4588"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Remove \\(removing?.name ?? ",
+   "lines": [
+    265
+   ],
+   "contexts": [
+    ".confirm(\"Remove \\(removing?.name ?? \"\")?\", message: \"This deletes the game's files from the device. You can download it again.\", confirmTitle: \"Delete files\", destructive: true,"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4589"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "This deletes the game's files from the device. You can download it again.",
+   "lines": [
+    265
+   ],
+   "contexts": [
+    ".confirm(\"Remove \\(removing?.name ?? \"\")?\", message: \"This deletes the game's files from the device. You can download it again.\", confirmTitle: \"Delete files\", destructive: true,"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4590"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Delete files",
+   "lines": [
+    265
+   ],
+   "contexts": [
+    ".confirm(\"Remove \\(removing?.name ?? \"\")?\", message: \"This deletes the game's files from the device. You can download it again.\", confirmTitle: \"Delete files\", destructive: true,"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4591"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Search \\(store.owned.count) games",
+   "lines": [
+    271
+   ],
+   "contexts": [
+    "private var searchField: some View { SearchField(id: \"so-search\", prompt: \"Search \\(store.owned.count) games\", text: $search) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4592"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Starting\\u{2026}",
+   "lines": [
+    274
+   ],
+   "contexts": [
+    "clientBusy = true; clientStatus = \"Starting\\u{2026}\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4593"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "The download finished but the client files are not in place.",
+   "lines": [
+    279
+   ],
+   "contexts": [
+    "clientStatus = clientInstalled ? nil : \"The download finished but the client files are not in place.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4594"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Select",
+   "lines": [
+    331
+   ],
+   "contexts": [
+    ".focusTarget(\"sg-\\(game.id)\", radius: 18, scale: 1.1, secondary: selecting ? nil : primary, label: selecting ? \"Select\" : \"Details\", secondaryLabel: primaryLabel, action: open)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4595"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Details",
+   "lines": [
+    331
+   ],
+   "contexts": [
+    ".focusTarget(\"sg-\\(game.id)\", radius: 18, scale: 1.1, secondary: selecting ? nil : primary, label: selecting ? \"Select\" : \"Details\", secondaryLabel: primaryLabel, action: open)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4596"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "\\(Int(d.progress.fraction * 100))%",
+   "lines": [
+    344
+   ],
+   "contexts": [
+    "case .active: return BadgeData(symbol: \"arrow.down.circle.fill\", text: \"\\(Int(d.progress.fraction * 100))%\", tint: Theme.accent)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4597"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Waiting",
+   "lines": [
+    345
+   ],
+   "contexts": [
+    "case .queued: return BadgeData(symbol: \"hourglass\", text: \"Waiting\", tint: Theme.textDim)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4598"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Paused",
+   "lines": [
+    346,
+    362
+   ],
+   "contexts": [
+    "case .paused: return BadgeData(symbol: \"pause.circle.fill\", text: \"Paused\", tint: Theme.warn)",
+    "case .paused: TileProgress(value: d.progress.fraction, paused: true); Text(\"Paused\").font(.caption).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4599"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Failed",
+   "lines": [
+    347
+   ],
+   "contexts": [
+    "case .failed: return BadgeData(symbol: \"exclamationmark.triangle.fill\", text: \"Failed\", tint: Theme.bad)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4600"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Update",
+   "lines": [
+    351,
+    375
+   ],
+   "contexts": [
+    "if store.updateAvailable(game) { return BadgeData(symbol: \"arrow.triangle.2.circlepath.circle.fill\", text: \"Update\", tint: Theme.accent) }",
+    "if installed { return store.updateAvailable(game) ? \"Update\" : (!inLibrary ? \"Add\" : \"Open\") }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4601"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "In library",
+   "lines": [
+    352
+   ],
+   "contexts": [
+    "return inLibrary ? BadgeData(symbol: \"checkmark.circle.fill\", text: \"In library\", tint: Theme.good) : BadgeData(symbol: \"plus.circle.fill\", text: \"Add to library\", tint: Theme.accent)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4602"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Add to library",
+   "lines": [
+    352
+   ],
+   "contexts": [
+    "return inLibrary ? BadgeData(symbol: \"checkmark.circle.fill\", text: \"In library\", tint: Theme.good) : BadgeData(symbol: \"plus.circle.fill\", text: \"Add to library\", tint: Theme.accent)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4603"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Waiting\\u{2026}",
+   "lines": [
+    361
+   ],
+   "contexts": [
+    "case .queued: Text(\"Waiting\\u{2026}\").font(.caption).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4604"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "\\(Self.size(game.sizeBytes)) download",
+   "lines": [
+    368
+   ],
+   "contexts": [
+    "Text(game.sizeBytes > 0 ? \"\\(Self.size(game.sizeBytes)) download\" + (game.diskBytes.map { $0 > game.sizeBytes ? \" \\u{00B7} \\(Self.size($0)) on disk\" : \"\" } ?? \"\") : \"Size unknown\").font(.caption).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4605"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": " \\u{00B7} \\(Self.size($0)) on disk",
+   "lines": [
+    368
+   ],
+   "contexts": [
+    "Text(game.sizeBytes > 0 ? \"\\(Self.size(game.sizeBytes)) download\" + (game.diskBytes.map { $0 > game.sizeBytes ? \" \\u{00B7} \\(Self.size($0)) on disk\" : \"\" } ?? \"\") : \"Size unknown\").font(.caption).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4606"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Size unknown",
+   "lines": [
+    368
+   ],
+   "contexts": [
+    "Text(game.sizeBytes > 0 ? \"\\(Self.size(game.sizeBytes)) download\" + (game.diskBytes.map { $0 > game.sizeBytes ? \" \\u{00B7} \\(Self.size($0)) on disk\" : \"\" } ?? \"\") : \"Size unknown\").font(.caption).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4607"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Pause",
+   "lines": [
+    374
+   ],
+   "contexts": [
+    "if let d = download { return d.state == .active || d.state == .queued ? \"Pause\" : \"Resume\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4608"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Resume",
+   "lines": [
+    374
+   ],
+   "contexts": [
+    "if let d = download { return d.state == .active || d.state == .queued ? \"Pause\" : \"Resume\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4609"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Add",
+   "lines": [
+    375
+   ],
+   "contexts": [
+    "if installed { return store.updateAvailable(game) ? \"Update\" : (!inLibrary ? \"Add\" : \"Open\") }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4610"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Open",
+   "lines": [
+    375
+   ],
+   "contexts": [
+    "if installed { return store.updateAvailable(game) ? \"Update\" : (!inLibrary ? \"Add\" : \"Open\") }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4611"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Not enough free space for \\(game.name): it needs about \\(Self.size(game.diskBytes ?? game.sizeBytes)) on the device and it has \\(Self.size(UInt64(free))).",
+   "lines": [
+    393
+   ],
+   "contexts": [
+    "notice = \"Not enough free space for \\(game.name): it needs about \\(Self.size(game.diskBytes ?? game.sizeBytes)) on the device and it has \\(Self.size(UInt64(free))).\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4612"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Preparing\\u{2026}",
+   "lines": [
+    401
+   ],
+   "contexts": [
+    "case .preparing: return \"Preparing\\u{2026}\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4613"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "Finishing\\u{2026}",
+   "lines": [
+    402
+   ],
+   "contexts": [
+    "case .finishing: return \"Finishing\\u{2026}\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4614"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": "\\(Self.size(p.doneBytes)) of \\(Self.size(p.totalBytes))",
+   "lines": [
+    403
+   ],
+   "contexts": [
+    "case .downloading: return \"\\(Self.size(p.doneBytes)) of \\(Self.size(p.totalBytes))\" + (p.bytesPerSecond > 0 ? \" \\u{00B7} \\(Self.size(UInt64(p.bytesPerSecond)))/s\" : \"\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4615"
+  },
+  {
+   "file": "app/Sources/UI/SteamViews.swift",
+   "text": " \\u{00B7} \\(Self.size(UInt64(p.bytesPerSecond)))/s",
+   "lines": [
+    403
+   ],
+   "contexts": [
+    "case .downloading: return \"\\(Self.size(p.doneBytes)) of \\(Self.size(p.totalBytes))\" + (p.bytesPerSecond > 0 ? \" \\u{00B7} \\(Self.size(UInt64(p.bytesPerSecond)))/s\" : \"\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4616"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Workshop is in beta",
+   "lines": [
+    12
+   ],
+   "contexts": [
+    "static let headline = \"Workshop is in beta\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4617"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "It is mostly untested: only a few games have been tried. Portal 2 (maps) and American Truck Simulator (mods) are known to work. Other games, especially older ones, may not pick up their items yet, and some Workshop items can only be downloaded when the game is closed.",
+   "lines": [
+    13
+   ],
+   "contexts": [
+    "static let text = \"It is mostly untested: only a few games have been tried. Portal 2 (maps) and American Truck Simulator (mods) are known to work. Other games, especially older ones, may not pick up their items yet, and some Workshop items can only be downloaded when the game is closed.\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4618"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "I understand",
+   "lines": [
+    29
+   ],
+   "contexts": [
+    "Text(\"I understand\").font(.system(size: compact ? 13 : 14, weight: .bold, design: .rounded)).foregroundStyle(Theme.onAccent)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4619"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Show",
+   "lines": [
+    75
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"sw-mode\", symbol: \"square.stack.3d.down.right.fill\", title: \"Show\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4620"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Subscribed",
+   "lines": [
+    76,
+    114,
+    183
+   ],
+   "contexts": [
+    "options: [(Mode.subscribed, \"Subscribed\"), (Mode.browse, \"Browse and search\")], selection: $mode)",
+    "SettingsGroup(title: \"Subscribed\") { ForEach(subscribedItems) { row($0) } }",
+    "else { Text(\"Subscribed\").font(.caption).foregroundStyle(Theme.textDim) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "named-param-string-component",
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4621"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Browse and search",
+   "lines": [
+    76
+   ],
+   "contexts": [
+    "options: [(Mode.subscribed, \"Subscribed\"), (Mode.browse, \"Browse and search\")], selection: $mode)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4622"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Order",
+   "lines": [
+    78
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"sw-sort\", symbol: \"arrow.up.arrow.down\", title: \"Order\", options: SteamWorkshopSort.allCases.map { ($0, $0.title) }, selection: $sort)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4623"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Search",
+   "lines": [
+    79,
+    80
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"sw-search\", symbol: \"magnifyingglass\", title: \"Search\", placeholder: \"Name of an item\", info: nil, secure: false, text: $search)",
+    "ActionRow(id: \"sw-go\", symbol: \"arrow.right.circle.fill\", title: \"Search\", chevron: false) { Task { await startBrowse() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4624"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Name of an item",
+   "lines": [
+    79
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"sw-search\", symbol: \"magnifyingglass\", title: \"Search\", placeholder: \"Name of an item\", info: nil, secure: false, text: $search)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4625"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Try again",
+   "lines": [
+    86
+   ],
+   "contexts": [
+    "ActionRow(id: \"sw-retry\", symbol: \"arrow.clockwise\", title: \"Try again\", chevron: false) { Task { await reload() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4626"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Items are saved with the game's other Steam files, where the game and Steam look for them. Subscribing and unsubscribing happen on your Steam account.",
+   "lines": [
+    92
+   ],
+   "contexts": [
+    "Text(\"Items are saved with the game's other Steam files, where the game and Steam look for them. Subscribing and unsubscribing happen on your Steam account.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4627"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Remove \\(removing?.title ?? ",
+   "lines": [
+    100
+   ],
+   "contexts": [
+    ".confirm(\"Remove \\(removing?.title ?? \"this item\")?\", message: \"This unsubscribes you on Steam and deletes its files from this device.\", confirmTitle: \"Remove\", destructive: true, isPresented: $confirmRemove) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4628"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "This unsubscribes you on Steam and deletes its files from this device.",
+   "lines": [
+    100
+   ],
+   "contexts": [
+    ".confirm(\"Remove \\(removing?.title ?? \"this item\")?\", message: \"This unsubscribes you on Steam and deletes its files from this device.\", confirmTitle: \"Remove\", destructive: true, isPresented: $confirmRemove) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4629"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Remove",
+   "lines": [
+    100
+   ],
+   "contexts": [
+    ".confirm(\"Remove \\(removing?.title ?? \"this item\")?\", message: \"This unsubscribes you on Steam and deletes its files from this device.\", confirmTitle: \"Remove\", destructive: true, isPresented: $confirmRemove) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4630"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "You are not subscribed to any \\(name) Workshop items. Choose \\u{201C}Browse and search\\u{201D} to find some.",
+   "lines": [
+    111
+   ],
+   "contexts": [
+    "Text(\"You are not subscribed to any \\(name) Workshop items. Choose \\u{201C}Browse and search\\u{201D} to find some.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4631"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Update mods automatically",
+   "lines": [
+    115
+   ],
+   "contexts": [
+    "ToggleRow(id: \"sw-auto\", symbol: \"arrow.down.circle\", title: \"Update mods automatically\", subtitle: \"Checks when this game's page opens\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4632"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Checks when this game's page opens",
+   "lines": [
+    115
+   ],
+   "contexts": [
+    "ToggleRow(id: \"sw-auto\", symbol: \"arrow.down.circle\", title: \"Update mods automatically\", subtitle: \"Checks when this game's page opens\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4633"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "When a mod you are subscribed to has a newer version on Steam, Porthole downloads it when you open the game's page. Turn this off to update only with the button below.",
+   "lines": [
+    116
+   ],
+   "contexts": [
+    "info: \"When a mod you are subscribed to has a newer version on Steam, Porthole downloads it when you open the game's page. Turn this off to update only with the button below.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4634"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Download missing and updated items",
+   "lines": [
+    118
+   ],
+   "contexts": [
+    "ActionRow(id: \"sw-sync\", symbol: \"arrow.triangle.2.circlepath\", title: \"Download missing and updated items\", chevron: false) { Task { await loadSubscribed(sync: true, force: true) } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4635"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "\\(name) has no Workshop items.",
+   "lines": [
+    126
+   ],
+   "contexts": [
+    "Text(searched.isEmpty ? \"\\(name) has no Workshop items.\" : \"Nothing found for \\u{201C}\\(searched)\\u{201D}.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4636"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Nothing found for \\u{201C}\\(searched)\\u{201D}.",
+   "lines": [
+    126
+   ],
+   "contexts": [
+    "Text(searched.isEmpty ? \"\\(name) has no Workshop items.\" : \"Nothing found for \\u{201C}\\(searched)\\u{201D}.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4637"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Results",
+   "lines": [
+    128
+   ],
+   "contexts": [
+    "SettingsGroup(title: searched.isEmpty ? sort.title : \"Results\") { ForEach(browseItems) { row($0) } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4638"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Loading\\u{2026}",
+   "lines": [
+    130
+   ],
+   "contexts": [
+    "ActionRow(id: \"sw-more\", symbol: \"ellipsis.circle\", title: loading ? \"Loading\\u{2026}\" : \"Show more\", subtitle: \"\\(browseItems.count) of \\(browseTotal)\", chevron: false) { Task { await loadMore() } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4639"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Show more",
+   "lines": [
+    130
+   ],
+   "contexts": [
+    "ActionRow(id: \"sw-more\", symbol: \"ellipsis.circle\", title: loading ? \"Loading\\u{2026}\" : \"Show more\", subtitle: \"\\(browseItems.count) of \\(browseTotal)\", chevron: false) { Task { await loadMore() } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4640"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "\\(browseItems.count) of \\(browseTotal)",
+   "lines": [
+    130
+   ],
+   "contexts": [
+    "ActionRow(id: \"sw-more\", symbol: \"ellipsis.circle\", title: loading ? \"Loading\\u{2026}\" : \"Show more\", subtitle: \"\\(browseItems.count) of \\(browseTotal)\", chevron: false) { Task { await loadMore() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4641"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Downloading\\u{2026}",
+   "lines": [
+    171
+   ],
+   "contexts": [
+    "Text(\"Downloading\\u{2026}\").font(.caption).foregroundStyle(Theme.accent)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4642"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Waiting\\u{2026}",
+   "lines": [
+    173
+   ],
+   "contexts": [
+    "Text(\"Waiting\\u{2026}\").font(.caption).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4643"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Subscribed \\u{00B7} downloads when the game closes",
+   "lines": [
+    175
+   ],
+   "contexts": [
+    "Text(\"Subscribed \\u{00B7} downloads when the game closes\").font(.caption).foregroundStyle(Theme.accent)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4644"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Tap to try again",
+   "lines": [
+    178
+   ],
+   "contexts": [
+    "Text(\"Tap to try again\").font(.caption).foregroundStyle(Theme.accent)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4645"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Subscribed \\u{00B7} on this device \\u{00B7} tap to remove",
+   "lines": [
+    181
+   ],
+   "contexts": [
+    "if present != nil { Text(\"Subscribed \\u{00B7} on this device \\u{00B7} tap to remove\").font(.caption).foregroundStyle(Theme.good) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4646"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Subscribed \\u{00B7} tap to download",
+   "lines": [
+    182
+   ],
+   "contexts": [
+    "else if item.canDownload { Text(\"Subscribed \\u{00B7} tap to download\").font(.caption).foregroundStyle(Theme.accent) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4647"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Tap to subscribe and download",
+   "lines": [
+    185
+   ],
+   "contexts": [
+    "Text(item.canDownload ? \"Tap to subscribe and download\" : \"Tap to subscribe\").font(.caption).foregroundStyle(Theme.accent)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4648"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Tap to subscribe",
+   "lines": [
+    185
+   ],
+   "contexts": [
+    "Text(item.canDownload ? \"Tap to subscribe and download\" : \"Tap to subscribe\").font(.caption).foregroundStyle(Theme.accent)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4649"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "\\(Int((rating * 100).rounded()))% liked",
+   "lines": [
+    192
+   ],
+   "contexts": [
+    "if let rating = item.rating { parts.append(\"\\(Int((rating * 100).rounded()))% liked\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4650"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "\\(item.subscriptions.formatted(.number.notation(.compactName))) subscribers",
+   "lines": [
+    193
+   ],
+   "contexts": [
+    "if item.subscriptions > 0 { parts.append(\"\\(item.subscriptions.formatted(.number.notation(.compactName))) subscribers\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4651"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": "Downloading \\(queued) item\\(queued == 1 ? ",
+   "lines": [
+    242
+   ],
+   "contexts": [
+    "note = queued > 0 ? \"Downloading \\(queued) item\\(queued == 1 ? \"\" : \"s\")\\u{2026}\" : nil"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4652"
+  },
+  {
+   "file": "app/Sources/UI/SteamWorkshopPage.swift",
+   "text": ")\\u{2026}",
+   "lines": [
+    242
+   ],
+   "contexts": [
+    "note = queued > 0 ? \"Downloading \\(queued) item\\(queued == 1 ? \"\" : \"s\")\\u{2026}\" : nil"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4653"
+  },
+  {
+   "file": "app/Sources/UI/StoresScreen.swift",
+   "text": "All games",
+   "lines": [
+    56,
+    231,
+    239
+   ],
+   "contexts": [
+    "switcher(id: \"stores-go-all\", selected: router.storesSelection == .all, label: \"All games\") {",
+    "SteamGamePage(game: steam.owned.first { $0.id == game.id } ?? game, store: steam, backTitle: \"All games\") {",
+    "EpicGamePage(game: epicLibrary.games.first { $0.appName == game.appName } ?? game, backTitle: \"All games\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4654"
+  },
+  {
+   "file": "app/Sources/UI/StoresScreen.swift",
+   "text": "Stores",
+   "lines": [
+    106
+   ],
+   "contexts": [
+    ".scrollBounceBehavior(.basedOnSize)      // a list that fits does not bounce: a half-dragged page left the \"Stores\" title cut off under the bar"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4655"
+  },
+  {
+   "file": "app/Sources/UI/StoresScreen.swift",
+   "text": "Sign in to Epic Games",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "Text(\"Sign in to Epic Games\").font(.system(size: 24, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4656"
+  },
+  {
+   "file": "app/Sources/UI/StoresScreen.swift",
+   "text": "You sign in on Epic's own page. The sign-in token stays in this device's Keychain; Porthole never sees your password. Your games that have a Windows version are listed here, and install straight from Epic's servers.",
+   "lines": [
+    138
+   ],
+   "contexts": [
+    "Text(\"You sign in on Epic's own page. The sign-in token stays in this device's Keychain; Porthole never sees your password. Your games that have a Windows version are listed here, and install straight from Epic's servers.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4657"
+  },
+  {
+   "file": "app/Sources/UI/StoresScreen.swift",
+   "text": "Sign in",
+   "lines": [
+    140
+   ],
+   "contexts": [
+    "PillButton(id: \"epic-signin\", title: \"Sign in\", symbol: \"person.badge.key.fill\", style: .primary) { signIn = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4658"
+  },
+  {
+   "file": "app/Sources/UI/StoresScreen.swift",
+   "text": "Sort by",
+   "lines": [
+    219
+   ],
+   "contexts": [
+    "ChoiceSheet(title: \"Sort by\", options: StoreSort.options(includingSize: false), selected: sort == .size ? .installed : sort, scope: sortScope) { value in"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4659"
+  },
+  {
+   "file": "app/Sources/UI/StoresScreen.swift",
+   "text": "All",
+   "lines": [
+    255
+   ],
+   "contexts": [
+    "SegmentedPills(options: [.init(id: \"all\", title: \"All\"), .init(id: \"installed\", title: \"Installed\")], selection: filter) { filter = $0 }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4660"
+  },
+  {
+   "file": "app/Sources/UI/StoresScreen.swift",
+   "text": "Installed",
+   "lines": [
+    255
+   ],
+   "contexts": [
+    "SegmentedPills(options: [.init(id: \"all\", title: \"All\"), .init(id: \"installed\", title: \"Installed\")], selection: filter) { filter = $0 }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4661"
+  },
+  {
+   "file": "app/Sources/UI/StoresScreen.swift",
+   "text": "Sort: \\(sort.title)",
+   "lines": [
+    256
+   ],
+   "contexts": [
+    "IconPillButton(id: \"all-sort\", symbol: \"arrow.up.arrow.down\", label: \"Sort: \\(sort.title)\") { showSort = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4662"
+  },
+  {
+   "file": "app/Sources/UI/StoresScreen.swift",
+   "text": "\\(list.count) game\\(list.count == 1 ? ",
+   "lines": [
+    257
+   ],
+   "contexts": [
+    "Text(\"\\(list.count) game\\(list.count == 1 ? \"\" : \"s\")\").font(.footnote.weight(.semibold)).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4663"
+  },
+  {
+   "file": "app/Sources/UI/StoresScreen.swift",
+   "text": "Sign in to a store to see its games here.",
+   "lines": [
+    261
+   ],
+   "contexts": [
+    "Text(\"Sign in to a store to see its games here.\").foregroundStyle(Theme.textDim).frame(maxWidth: .infinity).padding(.top, 30)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4664"
+  },
+  {
+   "file": "app/Sources/UI/StoresScreen.swift",
+   "text": "No games match.",
+   "lines": [
+    263
+   ],
+   "contexts": [
+    "Text(\"No games match.\").foregroundStyle(Theme.textDim).frame(maxWidth: .infinity).padding(.top, 30)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4665"
+  },
+  {
+   "file": "app/Sources/UI/StoresScreen.swift",
+   "text": "Search every store",
+   "lines": [
+    300
+   ],
+   "contexts": [
+    "private var searchField: some View { SearchField(id: \"all-search\", prompt: \"Search every store\", text: $search) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4666"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "\\(Int((overall(job) * 100).rounded()))%",
+   "lines": [
+    63
+   ],
+   "contexts": [
+    "Text(\"\\(Int((overall(job) * 100).rounded()))%\").font(.system(size: 15, weight: .heavy, design: .rounded)).monospacedDigit().foregroundStyle(Theme.accent)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4667"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Cancel the update",
+   "lines": [
+    67
+   ],
+   "contexts": [
+    "PillButton(id: \"upd-cancel\", title: \"Cancel the update\", symbol: \"xmark\", style: .danger) { updates.pipeline.cancel() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4668"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Pause your VPN?",
+   "lines": [
+    89
+   ],
+   "contexts": [
+    "Text(\"Pause your VPN?\").font(.system(size: 17, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4669"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Pause it",
+   "lines": [
+    94
+   ],
+   "contexts": [
+    "PillButton(id: \"upd-vpn-yes\", title: \"Pause it\", symbol: \"pause.fill\", style: .primary) { VPNGuard.shared.answerHosted(true) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4670"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Keep it on",
+   "lines": [
+    95,
+    117
+   ],
+   "contexts": [
+    "PillButton(id: \"upd-vpn-no\", title: \"Keep it on\", symbol: \"xmark\") { VPNGuard.shared.answerHosted(false) }",
+    "PillButton(id: \"upd-cell-no\", title: \"Keep it on\", symbol: \"xmark\") { CellularGuard.shared.answerHosted(false) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4671"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Switch cellular data off?",
+   "lines": [
+    111
+   ],
+   "contexts": [
+    "Text(\"Switch cellular data off?\").font(.system(size: 17, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4672"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Switch it off",
+   "lines": [
+    116
+   ],
+   "contexts": [
+    "PillButton(id: \"upd-cell-yes\", title: \"Switch it off\", symbol: \"antenna.radiowaves.left.and.right.slash\", style: .primary) { CellularGuard.shared.answerHosted(true) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4673"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Keep Porthole open",
+   "lines": [
+    131
+   ],
+   "contexts": [
+    "Text(\"Keep Porthole open\").font(.system(size: 16, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4674"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Stay on this screen. Do not close the app, switch to another one or lock the phone until this says it is done, or the update stops half way.",
+   "lines": [
+    132
+   ],
+   "contexts": [
+    "Text(\"Stay on this screen. Do not close the app, switch to another one or lock the phone until this says it is done, or the update stops half way.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4675"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "You left the app for a moment. If the percentage below does not move, tap Cancel and start the update again.",
+   "lines": [
+    135
+   ],
+   "contexts": [
+    "Text(\"You left the app for a moment. If the percentage below does not move, tap Cancel and start the update again.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4676"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Porthole is installed. It restarts by itself; if it does not, open it from the Home Screen.",
+   "lines": [
+    149
+   ],
+   "contexts": [
+    "Text(\"Porthole is installed. It restarts by itself; if it does not, open it from the Home Screen.\").font(.subheadline).foregroundStyle(Theme.text.opacity(0.9)).multilineTextAlignment(.center)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4677"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "The new version was signed but this device could not install it by itself. The signed file is kept: Settings > Updates offers it to save or share.",
+   "lines": [
+    151
+   ],
+   "contexts": [
+    "Text(\"The new version was signed but this device could not install it by itself. The signed file is kept: Settings > Updates offers it to save or share.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4678"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Close",
+   "lines": [
+    157
+   ],
+   "contexts": [
+    "PillButton(id: \"upd-close\", title: \"Close\", symbol: \"checkmark\", style: .primary) { closedJob = job.id }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4679"
+  }
+ ]
+}

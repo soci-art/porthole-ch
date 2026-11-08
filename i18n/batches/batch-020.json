@@ -1,0 +1,2907 @@
+{
+ "batch": 20,
+ "units": [
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "You haven't sent any reports. Open one of your games and tell people how it ran.",
+   "lines": [
+    224
+   ],
+   "contexts": [
+    "if mine.isEmpty && !loading && error == nil { Text(\"You haven't sent any reports. Open one of your games and tell people how it ran.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3420"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Delete this report?",
+   "lines": [
+    229
+   ],
+   "contexts": [
+    ".confirm(\"Delete this report?\", message: deleting.map { \"\\($0.gameTitle) \\u{2014} \\($0.rating.title)\" }, confirmTitle: \"Delete\", destructive: true,"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3421"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "\\($0.gameTitle) \\u{2014} \\($0.rating.title)",
+   "lines": [
+    229
+   ],
+   "contexts": [
+    ".confirm(\"Delete this report?\", message: deleting.map { \"\\($0.gameTitle) \\u{2014} \\($0.rating.title)\" }, confirmTitle: \"Delete\", destructive: true,"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3422"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Delete",
+   "lines": [
+    229
+   ],
+   "contexts": [
+    ".confirm(\"Delete this report?\", message: deleting.map { \"\\($0.gameTitle) \\u{2014} \\($0.rating.title)\" }, confirmTitle: \"Delete\", destructive: true,"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3423"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": " \\u{00B7} waiting for review",
+   "lines": [
+    237
+   ],
+   "contexts": [
+    "switch status { case \"pending\"?: \" \\u{00B7} waiting for review\"; case \"rejected\"?: \" \\u{00B7} not accepted\"; default: \"\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3424"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": " \\u{00B7} not accepted",
+   "lines": [
+    237
+   ],
+   "contexts": [
+    "switch status { case \"pending\"?: \" \\u{00B7} waiting for review\"; case \"rejected\"?: \" \\u{00B7} not accepted\"; default: \"\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3425"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Game",
+   "lines": [
+    279
+   ],
+   "contexts": [
+    "PageScaffold(title: detail?.title ?? fallbackTitle ?? \"Game\", symbol: \"checkmark.seal.fill\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3426"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "this page needs a connection",
+   "lines": [
+    286
+   ],
+   "contexts": [
+    "else { OfflineChip(detail: \"this page needs a connection\").padding(.horizontal, 6) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3427"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Update my report",
+   "lines": [
+    307
+   ],
+   "contexts": [
+    "if reported { return \"Update my report\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3428"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Report how it runs on this version",
+   "lines": [
+    308
+   ],
+   "contexts": [
+    "if badge?.verdict == nil { return (badge?.earlier?.reports ?? 0) > 0 ? \"Report how it runs on this version\" : \"Be the first to report\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3429"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Be the first to report",
+   "lines": [
+    308
+   ],
+   "contexts": [
+    "if badge?.verdict == nil { return (badge?.earlier?.reports ?? 0) > 0 ? \"Report how it runs on this version\" : \"Be the first to report\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3430"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Write a report",
+   "lines": [
+    309
+   ],
+   "contexts": [
+    "return \"Write a report\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3431"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "You reported on this version.",
+   "lines": [
+    313
+   ],
+   "contexts": [
+    "if reported { return \"You reported on this version.\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3432"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Nobody has told us how it runs on this version yet. It takes under a minute.",
+   "lines": [
+    314
+   ],
+   "contexts": [
+    "return badge?.verdict == nil ? \"Nobody has told us how it runs on this version yet. It takes under a minute.\" : \"Add how it ran for you.\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3433"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Add how it ran for you.",
+   "lines": [
+    314
+   ],
+   "contexts": [
+    "return badge?.verdict == nil ? \"Nobody has told us how it runs on this version yet. It takes under a minute.\" : \"Add how it ran for you.\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3434"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "From \\(overall.reports) report\\(overall.reports == 1 ? ",
+   "lines": [
+    325
+   ],
+   "contexts": [
+    "d.heroDetail = \"From \\(overall.reports) report\\(overall.reports == 1 ? \"\" : \"s\") on this version of the engine\" + (overall.confidence == \"low\" ? \" \\u{00B7} not many yet\" : \"\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3435"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": ") on this version of the engine",
+   "lines": [
+    325
+   ],
+   "contexts": [
+    "d.heroDetail = \"From \\(overall.reports) report\\(overall.reports == 1 ? \"\" : \"s\") on this version of the engine\" + (overall.confidence == \"low\" ? \" \\u{00B7} not many yet\" : \"\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3436"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": " \\u{00B7} not many yet",
+   "lines": [
+    325
+   ],
+   "contexts": [
+    "d.heroDetail = \"From \\(overall.reports) report\\(overall.reports == 1 ? \"\" : \"s\") on this version of the engine\" + (overall.confidence == \"low\" ? \" \\u{00B7} not many yet\" : \"\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3437"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "), none on this version",
+   "lines": [
+    328
+   ],
+   "contexts": [
+    "d.heroDetail = \"\\(earlier) earlier report\\(earlier == 1 ? \"\" : \"s\"), none on this version\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3438"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Not yet tested",
+   "lines": [
+    331,
+    334
+   ],
+   "contexts": [
+    "d.heroTitle = \"Not yet tested\"; d.heroDetail = \"The engine changed since the \\(earlier) earlier report\\(earlier == 1 ? \"\" : \"s\")\"",
+    "d.heroTitle = \"Not yet tested\"; d.heroDetail = \"No reports yet\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3439"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "The engine changed since the \\(earlier) earlier report\\(earlier == 1 ? ",
+   "lines": [
+    331
+   ],
+   "contexts": [
+    "d.heroTitle = \"Not yet tested\"; d.heroDetail = \"The engine changed since the \\(earlier) earlier report\\(earlier == 1 ? \"\" : \"s\")\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3440"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "How this game runs may be different now. The earlier reports are kept for reference below.",
+   "lines": [
+    332
+   ],
+   "contexts": [
+    "d.note = \"How this game runs may be different now. The earlier reports are kept for reference below.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3441"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Play it for a few minutes and send the first report.",
+   "lines": [
+    335
+   ],
+   "contexts": [
+    "if libraryGame != nil { d.note = \"Play it for a few minutes and send the first report.\" }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3442"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": " \\u{00B7} the bar counts the newest \\(reports.count)",
+   "lines": [
+    341
+   ],
+   "contexts": [
+    "if !loadedAll { d.heroDetail += \" \\u{00B7} the bar counts the newest \\(reports.count)\" }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3443"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "When it works great, people use",
+   "lines": [
+    346
+   ],
+   "contexts": [
+    "d.factsTitle = \"When it works great, people use\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3444"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "\\($0.count) of \\(summary.reports)",
+   "lines": [
+    348
+   ],
+   "contexts": [
+    ".init(id: $0.key, title: CompatSettings.describe($0.key, $0.value), value: \"\\($0.count) of \\(summary.reports)\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3445"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "iOS \\(r.ios) \\u{00B7} app \\(r.appVersion) \\u{00B7} \\(r.stability.title) \\u{00B7} files from \\(r.source.title.components(separatedBy: ",
+   "lines": [
+    358
+   ],
+   "contexts": [
+    "var lines = [showDetail ? \"iOS \\(r.ios) \\u{00B7} app \\(r.appVersion) \\u{00B7} \\(r.stability.title) \\u{00B7} files from \\(r.source.title.components(separatedBy: \" (\").first ?? r.source.title)\" : r.stability.title]"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3446"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": ").first ?? r.source.title)",
+   "lines": [
+    358
+   ],
+   "contexts": [
+    "var lines = [showDetail ? \"iOS \\(r.ios) \\u{00B7} app \\(r.appVersion) \\u{00B7} \\(r.stability.title) \\u{00B7} files from \\(r.source.title.components(separatedBy: \" (\").first ?? r.source.title)\" : r.stability.title]"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3447"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Earlier engine (\\(CompatEngine.describe(r.engine))): not counted",
+   "lines": [
+    359
+   ],
+   "contexts": [
+    "if r.onThisEngine == false { lines.append(\"Earlier engine (\\(CompatEngine.describe(r.engine))): not counted\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3448"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "%.0f fps avg",
+   "lines": [
+    361
+   ],
+   "contexts": [
+    "lines.append([p.fpsAvg.map { String(format: \"%.0f fps avg\", $0) }, p.fpsLow.map { String(format: \"%.0f low\", $0) }, p.minutes.map { \"\\($0) min\" }].compactMap { $0 }.joined(separator: \" \\u{00B7} \"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3449"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "%.0f low",
+   "lines": [
+    361
+   ],
+   "contexts": [
+    "lines.append([p.fpsAvg.map { String(format: \"%.0f fps avg\", $0) }, p.fpsLow.map { String(format: \"%.0f low\", $0) }, p.minutes.map { \"\\($0) min\" }].compactMap { $0 }.joined(separator: \" \\u{00B7} \"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3450"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "\\($0) min",
+   "lines": [
+    361
+   ],
+   "contexts": [
+    "lines.append([p.fpsAvg.map { String(format: \"%.0f fps avg\", $0) }, p.fpsLow.map { String(format: \"%.0f low\", $0) }, p.minutes.map { \"\\($0) min\" }].compactMap { $0 }.joined(separator: \" \\u{00B7} \"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3451"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "\\u{201C}\\(c)\\u{201D}",
+   "lines": [
+    365
+   ],
+   "contexts": [
+    "if let c = r.comment, !c.isEmpty { lines.append(\"\\u{201C}\\(c)\\u{201D}\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3452"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "\\(r.device) \\u{00B7} \\(CompatDeviceInfo.date(r.date))",
+   "lines": [
+    366
+   ],
+   "contexts": [
+    "return .init(id: r.id, rating: r.rating, title: \"\\(r.device) \\u{00B7} \\(CompatDeviceInfo.date(r.date))\", subtitle: lines.joined(separator: \"\\n\"), earlier: r.onThisEngine == false)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3453"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Thanks. If other people flag it too, it's hidden until it has been looked at.",
+   "lines": [
+    399
+   ],
+   "contexts": [
+    "do { try await CompatClient.standard().flag(reportID: r.id); return \"Thanks. If other people flag it too, it's hidden until it has been looked at.\" }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3454"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Sent from \\(CompatEngine.describe(r.engine)), an earlier version of the game engine. It is kept for reference and does not count toward the verdict.",
+   "lines": [
+    413
+   ],
+   "contexts": [
+    "if r.onThisEngine == false { earlierNote = \"Sent from \\(CompatEngine.describe(r.engine)), an earlier version of the game engine. It is kept for reference and does not count toward the verdict.\" }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3455"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Crashes",
+   "lines": [
+    417
+   ],
+   "contexts": [
+    "var happened: [Row] = [.init(id: \"crash\", label: \"Crashes\", value: r.stability.title)]"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3456"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Average frame rate",
+   "lines": [
+    419
+   ],
+   "contexts": [
+    "if let fps = p.fpsAvg { happened.append(.init(id: \"fps\", label: \"Average frame rate\", value: String(format: \"%.0f fps\", fps))) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3457"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "%.0f fps",
+   "lines": [
+    419,
+    420
+   ],
+   "contexts": [
+    "if let fps = p.fpsAvg { happened.append(.init(id: \"fps\", label: \"Average frame rate\", value: String(format: \"%.0f fps\", fps))) }",
+    "if let low = p.fpsLow { happened.append(.init(id: \"low\", label: \"Lowest frame rate\", value: String(format: \"%.0f fps\", low))) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3458"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Lowest frame rate",
+   "lines": [
+    420
+   ],
+   "contexts": [
+    "if let low = p.fpsLow { happened.append(.init(id: \"low\", label: \"Lowest frame rate\", value: String(format: \"%.0f fps\", low))) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3459"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Played for",
+   "lines": [
+    421
+   ],
+   "contexts": [
+    "if let minutes = p.minutes { happened.append(.init(id: \"min\", label: \"Played for\", value: \"\\(minutes) min\")) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3460"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "\\(minutes) min",
+   "lines": [
+    421
+   ],
+   "contexts": [
+    "if let minutes = p.minutes { happened.append(.init(id: \"min\", label: \"Played for\", value: \"\\(minutes) min\")) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3461"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Device heat",
+   "lines": [
+    422
+   ],
+   "contexts": [
+    "if let thermal = p.thermal, !thermal.isEmpty { happened.append(.init(id: \"heat\", label: \"Device heat\", value: thermal.prefix(1).uppercased() + thermal.dropFirst())) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3462"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "How it ran",
+   "lines": [
+    424
+   ],
+   "contexts": [
+    "groups.append(.init(id: \"ran\", title: \"How it ran\", note: p(r) ? nil : \"This report has no measurements: the person chose not to include them, or the game ended before there were any.\", rows: happened))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3463"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "This report has no measurements: the person chose not to include them, or the game ended before there were any.",
+   "lines": [
+    424
+   ],
+   "contexts": [
+    "groups.append(.init(id: \"ran\", title: \"How it ran\", note: p(r) ? nil : \"This report has no measurements: the person chose not to include them, or the game ended before there were any.\", rows: happened))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3464"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "What it ran on",
+   "lines": [
+    426
+   ],
+   "contexts": [
+    "groups.append(.init(id: \"on\", title: \"What it ran on\", note: nil, rows: ["
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3465"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Device",
+   "lines": [
+    427
+   ],
+   "contexts": [
+    ".init(id: \"device\", label: \"Device\", value: r.device),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3466"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "iOS",
+   "lines": [
+    428
+   ],
+   "contexts": [
+    ".init(id: \"ios\", label: \"iOS\", value: r.ios),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3467"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Game engine",
+   "lines": [
+    430
+   ],
+   "contexts": [
+    ".init(id: \"engine\", label: \"Game engine\", value: CompatEngine.describe(r.engine) + (r.onThisEngine == true ? \" (this version)\" : \"\")),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3468"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": " (this version)",
+   "lines": [
+    430
+   ],
+   "contexts": [
+    ".init(id: \"engine\", label: \"Game engine\", value: CompatEngine.describe(r.engine) + (r.onThisEngine == true ? \" (this version)\" : \"\")),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3469"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Game files from",
+   "lines": [
+    431
+   ],
+   "contexts": [
+    ".init(id: \"files\", label: \"Game files from\", value: r.source.title),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3470"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Performance",
+   "lines": [
+    435
+   ],
+   "contexts": [
+    "let power = s.power == \"performance\" ? \"Performance\" : (s.power == \"saver\" ? \"Battery saver\" : \"Balanced\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3471"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Battery saver",
+   "lines": [
+    435
+   ],
+   "contexts": [
+    "let power = s.power == \"performance\" ? \"Performance\" : (s.power == \"saver\" ? \"Battery saver\" : \"Balanced\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3472"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Balanced",
+   "lines": [
+    435
+   ],
+   "contexts": [
+    "let power = s.power == \"performance\" ? \"Performance\" : (s.power == \"saver\" ? \"Battery saver\" : \"Balanced\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3473"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Large blocks (8 MB and up)",
+   "lines": [
+    436
+   ],
+   "contexts": [
+    "let coverage: [String: String] = [\"\": \"Large blocks (8 MB and up)\", \"blocks\": \"All blocks of 1 MB and up\", \"wide\": \"1 MB and up, and overflow\", \"broad\": \"Broad\"]"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3474"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "All blocks of 1 MB and up",
+   "lines": [
+    436
+   ],
+   "contexts": [
+    "let coverage: [String: String] = [\"\": \"Large blocks (8 MB and up)\", \"blocks\": \"All blocks of 1 MB and up\", \"wide\": \"1 MB and up, and overflow\", \"broad\": \"Broad\"]"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3475"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "1 MB and up, and overflow",
+   "lines": [
+    436
+   ],
+   "contexts": [
+    "let coverage: [String: String] = [\"\": \"Large blocks (8 MB and up)\", \"blocks\": \"All blocks of 1 MB and up\", \"wide\": \"1 MB and up, and overflow\", \"broad\": \"Broad\"]"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3476"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Broad",
+   "lines": [
+    436
+   ],
+   "contexts": [
+    "let coverage: [String: String] = [\"\": \"Large blocks (8 MB and up)\", \"blocks\": \"All blocks of 1 MB and up\", \"wide\": \"1 MB and up, and overflow\", \"broad\": \"Broad\"]"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3477"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Started",
+   "lines": [
+    438
+   ],
+   "contexts": [
+    ".init(id: \"launch\", label: \"Started\", value: s.launch == \"steam\" ? \"Through Steam\" : \"Run directly, not through Steam\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3478"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Through Steam",
+   "lines": [
+    438
+   ],
+   "contexts": [
+    ".init(id: \"launch\", label: \"Started\", value: s.launch == \"steam\" ? \"Through Steam\" : \"Run directly, not through Steam\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3479"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Run directly, not through Steam",
+   "lines": [
+    438
+   ],
+   "contexts": [
+    ".init(id: \"launch\", label: \"Started\", value: s.launch == \"steam\" ? \"Through Steam\" : \"Run directly, not through Steam\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3480"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Power mode",
+   "lines": [
+    439
+   ],
+   "contexts": [
+    ".init(id: \"power\", label: \"Power mode\", value: power),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3481"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Keeps its mode when hot",
+   "lines": [
+    440
+   ],
+   "contexts": [
+    ".init(id: \"hot\", label: \"Keeps its mode when hot\", value: s.keepModeWhenHot ? \"Yes\" : \"No, drops to battery saver\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3482"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Yes",
+   "lines": [
+    440
+   ],
+   "contexts": [
+    ".init(id: \"hot\", label: \"Keeps its mode when hot\", value: s.keepModeWhenHot ? \"Yes\" : \"No, drops to battery saver\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3483"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "No, drops to battery saver",
+   "lines": [
+    440
+   ],
+   "contexts": [
+    ".init(id: \"hot\", label: \"Keeps its mode when hot\", value: s.keepModeWhenHot ? \"Yes\" : \"No, drops to battery saver\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3484"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Swap",
+   "lines": [
+    441
+   ],
+   "contexts": [
+    ".init(id: \"swap\", label: \"Swap\", value: s.swapMB == 0 ? \"Off\" : \"\\(s.swapMB) MB\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3485"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Off",
+   "lines": [
+    441,
+    447,
+    448
+   ],
+   "contexts": [
+    ".init(id: \"swap\", label: \"Swap\", value: s.swapMB == 0 ? \"Off\" : \"\\(s.swapMB) MB\"),",
+    ".init(id: \"math\", label: \"Precise shader math\", value: s.preciseMath ? \"On\" : \"Off\"),",
+    ".init(id: \"desk\", label: \"Wine desktop display\", value: s.desktopDisplay ? \"On\" : \"Off\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3486"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "\\(s.swapMB) MB",
+   "lines": [
+    441
+   ],
+   "contexts": [
+    ".init(id: \"swap\", label: \"Swap\", value: s.swapMB == 0 ? \"Off\" : \"\\(s.swapMB) MB\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3487"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Swap covers",
+   "lines": [
+    443
+   ],
+   "contexts": [
+    "if s.swapMB > 0 { rows.append(.init(id: \"cover\", label: \"Swap covers\", value: coverage[s.swapCoverage] ?? s.swapCoverage)) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3488"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Video memory",
+   "lines": [
+    445
+   ],
+   "contexts": [
+    ".init(id: \"vram\", label: \"Video memory\", value: s.vramMB == 0 ? \"Automatic\" : \"\\(s.vramMB) MB\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3489"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Automatic",
+   "lines": [
+    445
+   ],
+   "contexts": [
+    ".init(id: \"vram\", label: \"Video memory\", value: s.vramMB == 0 ? \"Automatic\" : \"\\(s.vramMB) MB\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3490"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "\\(s.vramMB) MB",
+   "lines": [
+    445
+   ],
+   "contexts": [
+    ".init(id: \"vram\", label: \"Video memory\", value: s.vramMB == 0 ? \"Automatic\" : \"\\(s.vramMB) MB\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3491"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Audio buffer",
+   "lines": [
+    446
+   ],
+   "contexts": [
+    ".init(id: \"audio\", label: \"Audio buffer\", value: \"\\(s.audioCushionMs) ms\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3492"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "\\(s.audioCushionMs) ms",
+   "lines": [
+    446
+   ],
+   "contexts": [
+    ".init(id: \"audio\", label: \"Audio buffer\", value: \"\\(s.audioCushionMs) ms\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3493"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Precise shader math",
+   "lines": [
+    447
+   ],
+   "contexts": [
+    ".init(id: \"math\", label: \"Precise shader math\", value: s.preciseMath ? \"On\" : \"Off\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3494"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "On",
+   "lines": [
+    447,
+    448
+   ],
+   "contexts": [
+    ".init(id: \"math\", label: \"Precise shader math\", value: s.preciseMath ? \"On\" : \"Off\"),",
+    ".init(id: \"desk\", label: \"Wine desktop display\", value: s.desktopDisplay ? \"On\" : \"Off\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3495"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Wine desktop display",
+   "lines": [
+    448
+   ],
+   "contexts": [
+    ".init(id: \"desk\", label: \"Wine desktop display\", value: s.desktopDisplay ? \"On\" : \"Off\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3496"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Controls",
+   "lines": [
+    449
+   ],
+   "contexts": [
+    ".init(id: \"controls\", label: \"Controls\", value: s.controls == \"firstPerson\" ? \"First person\" : \"Standard\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3497"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "First person",
+   "lines": [
+    449
+   ],
+   "contexts": [
+    ".init(id: \"controls\", label: \"Controls\", value: s.controls == \"firstPerson\" ? \"First person\" : \"Standard\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3498"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Standard",
+   "lines": [
+    449
+   ],
+   "contexts": [
+    ".init(id: \"controls\", label: \"Controls\", value: s.controls == \"firstPerson\" ? \"First person\" : \"Standard\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3499"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Settings used",
+   "lines": [
+    451,
+    453
+   ],
+   "contexts": [
+    "groups.append(.init(id: \"set\", title: \"Settings used\", note: \"What the person had set for this game when they reported.\", rows: rows))",
+    "groups.append(.init(id: \"set\", title: \"Settings used\", note: \"This person did not share their settings.\", rows: []))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3500"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "What the person had set for this game when they reported.",
+   "lines": [
+    451
+   ],
+   "contexts": [
+    "groups.append(.init(id: \"set\", title: \"Settings used\", note: \"What the person had set for this game when they reported.\", rows: rows))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3501"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "This person did not share their settings.",
+   "lines": [
+    453
+   ],
+   "contexts": [
+    "groups.append(.init(id: \"set\", title: \"Settings used\", note: \"This person did not share their settings.\", rows: []))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3502"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Report",
+   "lines": [
+    475
+   ],
+   "contexts": [
+    "Text(\"Report\").font(.system(size: 26, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3503"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Close",
+   "lines": [
+    477
+   ],
+   "contexts": [
+    "PillButton(id: \"rd-close\", title: \"Close\", symbol: \"xmark\", action: done)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3504"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Something wrong with it?",
+   "lines": [
+    483
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Something wrong with it?\", note: \"If it breaks the rules (insults, spam, someone else's details), flag it. If other people flag it too, it is hidden until it has been looked at.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3505"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "If it breaks the rules (insults, spam, someone else's details), flag it. If other people flag it too, it is hidden until it has been looked at.",
+   "lines": [
+    483
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Something wrong with it?\", note: \"If it breaks the rules (insults, spam, someone else's details), flag it. If other people flag it too, it is hidden until it has been looked at.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3506"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Flag this report",
+   "lines": [
+    484
+   ],
+   "contexts": [
+    "ActionRow(id: \"rd-flag\", symbol: \"flag.fill\", title: flagged == nil ? \"Flag this report\" : \"Flagged\", subtitle: flagged, destructive: flagged == nil, chevron: false) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3507"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Flagged",
+   "lines": [
+    484
+   ],
+   "contexts": [
+    "ActionRow(id: \"rd-flag\", symbol: \"flag.fill\", title: flagged == nil ? \"Flag this report\" : \"Flagged\", subtitle: flagged, destructive: flagged == nil, chevron: false) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3508"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Flag this report?",
+   "lines": [
+    496
+   ],
+   "contexts": [
+    ".confirm(\"Flag this report?\", message: \"If other people flag it too, it's hidden until it has been looked at.\", confirmTitle: \"Flag it\", isPresented: $confirmFlag) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3509"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "If other people flag it too, it's hidden until it has been looked at.",
+   "lines": [
+    496
+   ],
+   "contexts": [
+    ".confirm(\"Flag this report?\", message: \"If other people flag it too, it's hidden until it has been looked at.\", confirmTitle: \"Flag it\", isPresented: $confirmFlag) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3510"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Flag it",
+   "lines": [
+    496
+   ],
+   "contexts": [
+    ".confirm(\"Flag this report?\", message: \"If other people flag it too, it's hidden until it has been looked at.\", confirmTitle: \"Flag it\", isPresented: $confirmFlag) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3511"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Close",
+   "lines": [
+    19
+   ],
+   "contexts": [
+    "HStack { Spacer(); PillButton(id: \"cgs-close\", title: \"Close\", symbol: \"xmark\", action: done) }.padding(.horizontal, 24).padding(.top, 16)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3512"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Choose how it ran.",
+   "lines": [
+    63
+   ],
+   "contexts": [
+    "guard let rating else { return \"Choose how it ran.\" }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3513"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Say where the game's files came from.",
+   "lines": [
+    64
+   ],
+   "contexts": [
+    "if !fromSteam && source == nil { return \"Say where the game's files came from.\" }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3514"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "A game that won't start can only be reported as \\\"Doesn't work\\\".",
+   "lines": [
+    65
+   ],
+   "contexts": [
+    "if stability == .wont_launch && rating != .broken { return \"A game that won't start can only be reported as \\\"Doesn't work\\\".\" }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3515"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "A game that crashes all the time can't be \\\"Works great\\\".",
+   "lines": [
+    66
+   ],
+   "contexts": [
+    "if stability == .constantly && rating == .great { return \"A game that crashes all the time can't be \\\"Works great\\\".\" }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3516"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Play for at least \\(CompatRules.minMinutesForWorking) minutes before reporting that it works.",
+   "lines": [
+    67
+   ],
+   "contexts": [
+    "if rating != .broken && !enoughPlay { return \"Play for at least \\(CompatRules.minMinutesForWorking) minutes before reporting that it works.\" }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3517"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Report",
+   "lines": [
+    76
+   ],
+   "contexts": [
+    "Text(\"Report\").font(.system(size: 26, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3518"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Cancel",
+   "lines": [
+    78
+   ],
+   "contexts": [
+    "PillButton(id: \"rp-close\", title: outcome == nil ? \"Cancel\" : \"Done\", symbol: \"xmark\") { dismiss() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3519"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Done",
+   "lines": [
+    78,
+    170
+   ],
+   "contexts": [
+    "PillButton(id: \"rp-close\", title: outcome == nil ? \"Cancel\" : \"Done\", symbol: \"xmark\") { dismiss() }",
+    "PillButton(id: \"rp-done\", title: \"Done\", style: .primary) { dismiss() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3520"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "rp-v-\\(CompatVerdict.allCases.first?.rawValue ?? ",
+   "lines": [
+    88
+   ],
+   "contexts": [
+    ".onAppear { scope.onBack = { dismiss() }; scope.defaultFocus = \"rp-v-\\(CompatVerdict.allCases.first?.rawValue ?? \"\")\"; scope.focused = scope.defaultFocus }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3521"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "How did \\(game.name) run?",
+   "lines": [
+    96
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"How did \\(game.name) run?\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3522"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "You've played \\(minutes) min. Play for at least \\(CompatRules.minMinutesForWorking) minutes to report that it works; a game that won't start can be reported at any time.",
+   "lines": [
+    104
+   ],
+   "contexts": [
+    "if !enoughPlay { Text(\"You've played \\(minutes) min. Play for at least \\(CompatRules.minMinutesForWorking) minutes to report that it works; a game that won't start can be reported at any time.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3523"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Did it crash?",
+   "lines": [
+    106
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Did it crash?\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3524"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Crashes",
+   "lines": [
+    107
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"rp-crash\", symbol: \"bolt.trianglebadge.exclamationmark.fill\", title: \"Crashes\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3525"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "The app closed on its own while you were playing, so this starts on \\\"Crashes sometimes\\\". Change it if that's wrong.",
+   "lines": [
+    108
+   ],
+   "contexts": [
+    "info: crashed ? \"The app closed on its own while you were playing, so this starts on \\\"Crashes sometimes\\\". Change it if that's wrong.\" : nil,"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3526"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Anything else?",
+   "lines": [
+    111
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Anything else?\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3527"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "rp-tag-\\(tag.rawValue)",
+   "lines": [
+    121
+   ],
+   "contexts": [
+    ".focusTarget(\"rp-tag-\\(tag.rawValue)\", radius: 20, scale: 1.05) { if on { tags.remove(tag) } else { tags.insert(tag) } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3528"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Where did the game come from?",
+   "lines": [
+    125
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Where did the game come from?\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3529"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Files from",
+   "lines": [
+    126,
+    128
+   ],
+   "contexts": [
+    "if fromSteam { ValueRow(id: \"rp-src\", symbol: \"shippingbox.fill\", title: \"Files from\", value: \"Steam\") }",
+    "ChoiceRow(id: \"rp-src\", symbol: \"shippingbox.fill\", title: \"Files from\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3530"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Different stores can ship different builds of the same game, so this matters. Pick from the list.",
+   "lines": [
+    129
+   ],
+   "contexts": [
+    "info: \"Different stores can ship different builds of the same game, so this matters. Pick from the list.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3531"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Choose\\u{2026}",
+   "lines": [
+    130
+   ],
+   "contexts": [
+    "options: [(CompatSource?.none, \"Choose\\u{2026}\")] + CompatSource.allCases.map { (Optional($0), $0.title) }, selection: $source)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3532"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "What to include",
+   "lines": [
+    133
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"What to include\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3533"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Include what the app measured",
+   "lines": [
+    134
+   ],
+   "contexts": [
+    "ToggleRow(id: \"rp-measured\", symbol: \"chart.bar.fill\", title: \"Include what the app measured\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3534"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "\\(liveStats != nil ? ",
+   "lines": [
+    135
+   ],
+   "contexts": [
+    "subtitle: stats.map { \"\\(liveStats != nil ? \"This session\" : \"Last session\"): \\($0.summary)\" } ?? \"No measurements from a recent session. The report will only say how long you've played.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3535"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "): \\($0.summary)",
+   "lines": [
+    135
+   ],
+   "contexts": [
+    "subtitle: stats.map { \"\\(liveStats != nil ? \"This session\" : \"Last session\"): \\($0.summary)\" } ?? \"No measurements from a recent session. The report will only say how long you've played.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3536"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "No measurements from a recent session. The report will only say how long you've played.",
+   "lines": [
+    135
+   ],
+   "contexts": [
+    "subtitle: stats.map { \"\\(liveStats != nil ? \"This session\" : \"Last session\"): \\($0.summary)\" } ?? \"No measurements from a recent session. The report will only say how long you've played.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3537"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "The game's log",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "ValueRow(id: \"rp-log\", symbol: \"doc.text.fill\", title: \"The game's log\", value: logLoading ? \"Reading\\u{2026}\" : (log == nil ? \"None found\" : \"Sent with it\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3538"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Reading\\u{2026}",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "ValueRow(id: \"rp-log\", symbol: \"doc.text.fill\", title: \"The game's log\", value: logLoading ? \"Reading\\u{2026}\" : (log == nil ? \"None found\" : \"Sent with it\"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3539"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "None found",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "ValueRow(id: \"rp-log\", symbol: \"doc.text.fill\", title: \"The game's log\", value: logLoading ? \"Reading\\u{2026}\" : (log == nil ? \"None found\" : \"Sent with it\"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3540"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Sent with it",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "ValueRow(id: \"rp-log\", symbol: \"doc.text.fill\", title: \"The game's log\", value: logLoading ? \"Reading\\u{2026}\" : (log == nil ? \"None found\" : \"Sent with it\"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3541"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Looking for the log of the last run.",
+   "lines": [
+    138
+   ],
+   "contexts": [
+    "Text(logLoading ? \"Looking for the log of the last run.\" : (log.map { \"\\($0.summary). Private: only the developer reads it, to see what happened; it is never shown in Reports. Personal paths and account names are taken out first.\" }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3542"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "\\($0.summary). Private: only the developer reads it, to see what happened; it is never shown in Reports. Personal paths and account names are taken out first.",
+   "lines": [
+    138
+   ],
+   "contexts": [
+    "Text(logLoading ? \"Looking for the log of the last run.\" : (log.map { \"\\($0.summary). Private: only the developer reads it, to see what happened; it is never shown in Reports. Personal paths and account names are taken out first.\" }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3543"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "No log was found, so the report goes without one. A report without a log is checked with less to go on.",
+   "lines": [
+    139
+   ],
+   "contexts": [
+    "?? \"No log was found, so the report goes without one. A report without a log is checked with less to go on.\"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3544"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Share my settings for this game",
+   "lines": [
+    141
+   ],
+   "contexts": [
+    "ToggleRow(id: \"rp-settings\", symbol: \"slider.horizontal.3\", title: \"Share my settings for this game\", subtitle: compat.currentSettings(for: game).summary,"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3545"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "How the game was started and the performance settings it used. This helps people get the same result. Launch options you typed are never shared.",
+   "lines": [
+    142
+   ],
+   "contexts": [
+    "info: \"How the game was started and the performance settings it used. This helps people get the same result. Launch options you typed are never shared.\", isOn: $shareSettings)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3546"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Your note",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Your note\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3547"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Optional note",
+   "lines": [
+    145
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"rp-note\", symbol: \"text.bubble.fill\", title: \"Optional note\", placeholder: \"settings that helped, glitches\\u{2026}\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3548"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "settings that helped, glitches\\u{2026}",
+   "lines": [
+    145
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"rp-note\", symbol: \"text.bubble.fill\", title: \"Optional note\", placeholder: \"settings that helped, glitches\\u{2026}\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3549"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "A person checks notes before they appear, so yours won't show straight away. Please don't mention where to get game files.",
+   "lines": [
+    146
+   ],
+   "contexts": [
+    "info: \"A person checks notes before they appear, so yours won't show straight away. Please don't mention where to get game files.\", text: Binding(get: { comment }, set: { comment = String($0.prefix(400)) }))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3550"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "this list needs a connection",
+   "lines": [
+    150
+   ],
+   "contexts": [
+    "else { OfflineChip(detail: \"this list needs a connection\").padding(.horizontal, 6) } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3551"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Sending\\u{2026}",
+   "lines": [
+    152
+   ],
+   "contexts": [
+    "PillButton(id: \"rp-send\", title: sending ? \"Sending\\u{2026}\" : \"Send report\", symbol: \"paperplane.fill\", style: .primary, enabled: problem == nil && !sending) { Task { await send() } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3552"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Send report",
+   "lines": [
+    152
+   ],
+   "contexts": [
+    "PillButton(id: \"rp-send\", title: sending ? \"Sending\\u{2026}\" : \"Send report\", symbol: \"paperplane.fill\", style: .primary, enabled: problem == nil && !sending) { Task { await send() } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3553"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Sent: your device model, iOS and app version, the version of the game engine (\\(CompatEngine.label)), the answers above, and the game's log (private: only the developer reads it, and it is cleaned of personal paths and account names). Not sent: your name or any account. Every report is checked before it appears in Reports.",
+   "lines": [
+    153
+   ],
+   "contexts": [
+    "Text(\"Sent: your device model, iOS and app version, the version of the game engine (\\(CompatEngine.label)), the answers above, and the game's log (private: only the developer reads it, and it is cleaned of personal paths and account names). Not sent: your name or any account. Every report is checked"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3554"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Thank you",
+   "lines": [
+    164
+   ],
+   "contexts": [
+    "Text(\"Thank you\").font(.system(size: 24, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3555"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Your report and the game's log are in. Every report is checked before it appears in Reports, so yours will show once it has been approved.",
+   "lines": [
+    166
+   ],
+   "contexts": [
+    "case .sent(let logSent): Text(logSent ? \"Your report and the game's log are in. Every report is checked before it appears in Reports, so yours will show once it has been approved.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3556"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "Your report is in, without a log. Every report is checked before it appears in Reports, so yours will show once it has been approved.",
+   "lines": [
+    167
+   ],
+   "contexts": [
+    ": \"Your report is in, without a log. Every report is checked before it appears in Reports, so yours will show once it has been approved.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3557"
+  },
+  {
+   "file": "app/Sources/UI/ReportsViews.swift",
+   "text": "The compatibility server couldn't be reached, so your report is saved and will be sent when it can.",
+   "lines": [
+    168
+   ],
+   "contexts": [
+    "case .queued: Text(\"The compatibility server couldn't be reached, so your report is saved and will be sent when it can.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3558"
+  },
+  {
+   "file": "app/Sources/UI/RootView.swift",
+   "text": "Home",
+   "lines": [
+    16
+   ],
+   "contexts": [
+    "private static let tabs = [ShellTab(id: \"home\", title: \"Home\", symbol: \"house.fill\"), ShellTab(id: \"stores\", title: \"Stores\", symbol: \"square.grid.2x2.fill\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3559"
+  },
+  {
+   "file": "app/Sources/UI/RootView.swift",
+   "text": "Stores",
+   "lines": [
+    16
+   ],
+   "contexts": [
+    "private static let tabs = [ShellTab(id: \"home\", title: \"Home\", symbol: \"house.fill\"), ShellTab(id: \"stores\", title: \"Stores\", symbol: \"square.grid.2x2.fill\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3560"
+  },
+  {
+   "file": "app/Sources/UI/RootView.swift",
+   "text": "Reports",
+   "lines": [
+    17
+   ],
+   "contexts": [
+    "ShellTab(id: \"reports\", title: \"Reports\", symbol: \"checkmark.seal.fill\"), ShellTab(id: \"settings\", title: \"Settings\", symbol: \"gearshape.fill\")]"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3561"
+  },
+  {
+   "file": "app/Sources/UI/RootView.swift",
+   "text": "Settings",
+   "lines": [
+    17
+   ],
+   "contexts": [
+    "ShellTab(id: \"reports\", title: \"Reports\", symbol: \"checkmark.seal.fill\"), ShellTab(id: \"settings\", title: \"Settings\", symbol: \"gearshape.fill\")]"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3562"
+  },
+  {
+   "file": "app/Sources/UI/RootView.swift",
+   "text": "Cannot run that",
+   "lines": [
+    82
+   ],
+   "contexts": [
+    ".confirm(\"Cannot run that\", message: installerError, confirmTitle: \"OK\", isPresented: Binding(get: { installerError != nil }, set: { if !$0 { installerError = nil } })) {}"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3563"
+  },
+  {
+   "file": "app/Sources/UI/RootView.swift",
+   "text": "OK",
+   "lines": [
+    82
+   ],
+   "contexts": [
+    ".confirm(\"Cannot run that\", message: installerError, confirmTitle: \"OK\", isPresented: Binding(get: { installerError != nil }, set: { if !$0 { installerError = nil } })) {}"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3564"
+  },
+  {
+   "file": "app/Sources/UI/RootView.swift",
+   "text": "f4.problemsSent",
+   "lines": [
+    98
+   ],
+   "contexts": [
+    "if phase == .active, UserDefaults.standard.bool(forKey: \"f4.problemsSent\") { Task { await ProblemTracker.shared.refresh() } }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3565"
+  },
+  {
+   "file": "app/Sources/UI/RootView.swift",
+   "text": "\\(game.name) downloaded, but no program to run was found. Use Add a game to pick it.",
+   "lines": [
+    111
+   ],
+   "contexts": [
+    "else { SteamStore.shared.error = \"\\(game.name) downloaded, but no program to run was found. Use Add a game to pick it.\" }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3566"
+  },
+  {
+   "file": "app/Sources/UI/SessionView.swift",
+   "text": "guest=%.0fx%.0f bounds=%.0fx%.0f -> rect=(%.0f,%.0f %.0fx%.0f)",
+   "lines": [
+    274
+   ],
+   "contexts": [
+    "let line = String(format: \"guest=%.0fx%.0f bounds=%.0fx%.0f -> rect=(%.0f,%.0f %.0fx%.0f)\", gw, gh, bounds.width, bounds.height, fit.minX, fit.minY, fit.width, fit.height)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3567"
+  },
+  {
+   "file": "app/Sources/UI/SessionView.swift",
+   "text": "press \\(b) at \\(desktopPoint(p))",
+   "lines": [
+    417
+   ],
+   "contexts": [
+    "logGesture(\"press \\(b) at \\(desktopPoint(p))\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3568"
+  },
+  {
+   "file": "app/Sources/UI/SessionView.swift",
+   "text": "release \\(b)",
+   "lines": [
+    421
+   ],
+   "contexts": [
+    "logGesture(\"release \\(b)\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3569"
+  },
+  {
+   "file": "app/Sources/UI/SessionView.swift",
+   "text": "click \\(b) at \\(desktopPoint(p))",
+   "lines": [
+    425
+   ],
+   "contexts": [
+    "logGesture(\"click \\(b) at \\(desktopPoint(p))\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3570"
+  },
+  {
+   "file": "app/Sources/UI/SessionView.swift",
+   "text": "wheel \\(delta)",
+   "lines": [
+    431
+   ],
+   "contexts": [
+    "logGesture(\"wheel \\(delta)\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3571"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Advanced",
+   "lines": [
+    29
+   ],
+   "contexts": [
+    "PageScaffold(title: \"Advanced\", symbol: \"wrench.and.screwdriver.fill\", subtitle: \"Engine switches and diagnostics\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3572"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Engine switches and diagnostics",
+   "lines": [
+    29
+   ],
+   "contexts": [
+    "PageScaffold(title: \"Advanced\", symbol: \"wrench.and.screwdriver.fill\", subtitle: \"Engine switches and diagnostics\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3573"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Most people never need this page. Everything here starts on its default, which is what Porthole was tested with.",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "Text(\"Most people never need this page. Everything here starts on its default, which is what Porthole was tested with.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3574"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Options",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Options\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3575"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Show technical options",
+   "lines": [
+    33
+   ],
+   "contexts": [
+    "ToggleRow(id: \"ad-tech\", symbol: \"slider.horizontal.3\", title: \"Show technical options\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3576"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Shows swap and video memory, shader math, tunnel and JIT status, and technical readouts. Most people never need them.",
+   "lines": [
+    34
+   ],
+   "contexts": [
+    "info: \"Shows swap and video memory, shader math, tunnel and JIT status, and technical readouts. Most people never need them.\", isOn: $advanced)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3577"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Bigger code pool when the game allows it",
+   "lines": [
+    35
+   ],
+   "contexts": [
+    "ToggleRow(id: \"ad-pool\", symbol: \"memorychip\", title: \"Bigger code pool when the game allows it\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3578"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "The emulator keeps a stretch of memory free for the rare game that can only load at one fixed address. When none of a game's programs needs it, this gives it back so the code pool can be larger (fewer freezes in big games). Turn it off to go back to the previous behaviour if a game that started before no longer does.",
+   "lines": [
+    36
+   ],
+   "contexts": [
+    "info: \"The emulator keeps a stretch of memory free for the rare game that can only load at one fixed address. When none of a game's programs needs it, this gives it back so the code pool can be larger (fewer freezes in big games). Turn it off to go back to the previous behaviour if a game that start"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3579"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Engine",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Engine\", note: \"The switches of the game engine that have no screen of their own.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3580"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "The switches of the game engine that have no screen of their own.",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Engine\", note: \"The switches of the game engine that have no screen of their own.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3581"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Engine options",
+   "lines": [
+    40
+   ],
+   "contexts": [
+    "ActionRow(id: SettingsSub.engineGroups.rowID, symbol: \"slider.horizontal.2.square\", title: \"Engine options\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3582"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "\\(optionCount) options in \\(EngineOptions.groups.count) groups",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "subtitle: \"\\(optionCount) options in \\(EngineOptions.groups.count) groups\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3583"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "\\(changedCount) changed",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "detail: changedCount == 0 ? nil : \"\\(changedCount) changed\") { router.settingsSub = .engineGroups }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3584"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Windows",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Windows\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3585"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Windows components",
+   "lines": [
+    45
+   ],
+   "contexts": [
+    "ActionRow(id: SettingsSub.components.rowID, symbol: \"shippingbox.fill\", title: \"Windows components\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3586"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Visual C++ runtime: \\(vc.available ? ",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "subtitle: \"Visual C++ runtime: \\(vc.available ? \"ready\" : \"not installed\") \\u{00B7} .NET: \\(WineMonoModel.available ? \"ready\" : \"not installed\") \\u{00B7} Web pages: \\(WineGeckoModel.available ? \"ready\" : \"not installed\")\") { router.settingsSub = .components }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3587"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": ") \\u{00B7} .NET: \\(WineMonoModel.available ? ",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "subtitle: \"Visual C++ runtime: \\(vc.available ? \"ready\" : \"not installed\") \\u{00B7} .NET: \\(WineMonoModel.available ? \"ready\" : \"not installed\") \\u{00B7} Web pages: \\(WineGeckoModel.available ? \"ready\" : \"not installed\")\") { router.settingsSub = .components }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3588"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": ") \\u{00B7} Web pages: \\(WineGeckoModel.available ? ",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "subtitle: \"Visual C++ runtime: \\(vc.available ? \"ready\" : \"not installed\") \\u{00B7} .NET: \\(WineMonoModel.available ? \"ready\" : \"not installed\") \\u{00B7} Web pages: \\(WineGeckoModel.available ? \"ready\" : \"not installed\")\") { router.settingsSub = .components }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3589"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Safety and testing",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Safety and testing\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3590"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Links and remote control",
+   "lines": [
+    49
+   ],
+   "contexts": [
+    "ActionRow(id: SettingsSub.links.rowID, symbol: \"link\", title: \"Links and remote control\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3591"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "What a porthole:// link may do",
+   "lines": [
+    50
+   ],
+   "contexts": [
+    "subtitle: \"What a porthole:// link may do\") { router.settingsSub = .links }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3592"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Diagnostics",
+   "lines": [
+    51
+   ],
+   "contexts": [
+    "ActionRow(id: SettingsSub.diagnostics.rowID, symbol: \"stethoscope\", title: \"Diagnostics\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3593"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "The log, window pictures and Wine debug channels",
+   "lines": [
+    52
+   ],
+   "contexts": [
+    "subtitle: \"The log, window pictures and Wine debug channels\") { router.settingsSub = .diagnostics }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3594"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Runtimes",
+   "lines": [
+    68
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Runtimes\", note: \"Programs many games need and Windows would normally have. Each is a one-time download, checked against a fixed fingerprint before it is used.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3595"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Programs many games need and Windows would normally have. Each is a one-time download, checked against a fixed fingerprint before it is used.",
+   "lines": [
+    68
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Runtimes\", note: \"Programs many games need and Windows would normally have. Each is a one-time download, checked against a fixed fingerprint before it is used.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3596"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Visual C++ runtime",
+   "lines": [
+    70
+   ],
+   "contexts": [
+    "title: \"Visual C++ runtime\", subtitle: vcSubtitle, detail: !installer.available && !installer.busy ? \"Download\" : nil,"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3597"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Download",
+   "lines": [
+    70,
+    79,
+    88,
+    97
+   ],
+   "contexts": [
+    "title: \"Visual C++ runtime\", subtitle: vcSubtitle, detail: !installer.available && !installer.busy ? \"Download\" : nil,",
+    "title: \".NET Framework (Wine Mono)\", subtitle: mono.error ?? mono.status, detail: !WineMonoModel.available && !mono.busy ? \"Download\" : nil,",
+    "title: \"32-bit Visual C++ runtime\", subtitle: vc32.error ?? vc32.status, detail: !vc32.complete && !vc32.busy ? \"Download\" : nil,"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3598"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Microsoft's runtime that many games need. About 25 MB, downloaded from Microsoft's own installer and checked against a fixed fingerprint before anything is used. Without it some games won't start.",
+   "lines": [
+    71
+   ],
+   "contexts": [
+    "info: \"Microsoft's runtime that many games need. About 25 MB, downloaded from Microsoft's own installer and checked against a fixed fingerprint before anything is used. Without it some games won't start.\", chevron: false) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3599"
+  }
+ ]
+}

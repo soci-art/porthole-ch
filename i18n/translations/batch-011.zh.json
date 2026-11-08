@@ -1,0 +1,722 @@
+[
+ {
+  "id": "u1800",
+  "zh": "Steam 下载：正在续传，磁盘上已有 \\(done.count) 个数据块。"
+ },
+ {
+  "id": "u1801",
+  "zh": "正在检查设备上已有的文件\\u{2026}"
+ },
+ {
+  "id": "u1802",
+  "zh": "Steam 下载：\\(self.name)：\\(found.done.count) 个数据块（\\(Self.size(Int64(found.bytes)))），分布在设备上的 \\(found.files) 个文件中，已与 Steam 的一致，检查耗时 \\(String(format: "
+ },
+ {
+  "id": "u1803",
+  "zh": ", Date().timeIntervalSince(began))) 秒。"
+ },
+ {
+  "id": "u1804",
+  "zh": "正在检查设备上已有的文件\\u{2026} \\(percent)%"
+ },
+ {
+  "id": "u1805",
+  "zh": "Steam 下载：需要获取 \\(items.count) 个数据块，需下载 \\(Self.size(Int64(netTotal)))（磁盘占用 \\(Self.size(Int64(total)))）。"
+ },
+ {
+  "id": "u1806",
+  "zh": "无法连接 Steam 的内容服务器。"
+ },
+ {
+  "id": "u1807",
+  "zh": "无法解包"
+ },
+ {
+  "id": "u1808",
+  "zh": "解包得到 \\(plain!.count) 字节，预期为 \\(chunk.originalSize) 字节"
+ },
+ {
+  "id": "u1809",
+  "zh": "其哈希值不一致"
+ },
+ {
+  "id": "u1810",
+  "zh": "无法写入"
+ },
+ {
+  "id": "u1811",
+  "zh": "某个数据块校验未通过"
+ },
+ {
+  "id": "u1812",
+  "zh": "Steam 拒绝了此次下载（\\(error.message)）。请重新登录后再下载。"
+ },
+ {
+  "id": "u1813",
+  "zh": "\\(name) 的下载已停止：\\(reason)（已重试 \\(retriesPerChunk) 次）。该下载可以续传。"
+ },
+ {
+  "id": "u1814",
+  "zh": "游戏的某个文件无法写入。"
+ },
+ {
+  "id": "u1815",
+  "zh": "磁盘写入失败。设备存储空间可能不足。"
+ },
+ {
+  "id": "u1816",
+  "zh": "Steam 下载：\\(name) 已安装。"
+ },
+ {
+  "id": "u1817",
+  "zh": "\\t\\\"appid\\\"\\t\\t\\(quoted(String(appid)))"
+ },
+ {
+  "id": "u1818",
+  "zh": "\\t\\\"Universe\\\"\\t\\t\\\"1\\\""
+ },
+ {
+  "id": "u1819",
+  "zh": "\\t\\\"name\\\"\\t\\t\\(quoted(name))"
+ },
+ {
+  "id": "u1820",
+  "zh": "\\t\\\"StateFlags\\\"\\t\\t\\\"4\\\""
+ },
+ {
+  "id": "u1821",
+  "zh": "\\t\\\"LastOwner\\\"\\t\\t\\(quoted(owner))"
+ },
+ {
+  "id": "u1822",
+  "zh": "\\t\\\"installdir\\\"\\t\\t\\(quoted(installDir))"
+ },
+ {
+  "id": "u1823",
+  "zh": "\\t\\\"LastUpdated\\\"\\t\\t\\(quoted(String(Int(updated.timeIntervalSince1970))))"
+ },
+ {
+  "id": "u1824",
+  "zh": "\\t\\\"SizeOnDisk\\\"\\t\\t\\(quoted(String(sizeOnDisk)))"
+ },
+ {
+  "id": "u1825",
+  "zh": "\\t\\\"buildid\\\"\\t\\t\\(quoted(buildID))"
+ },
+ {
+  "id": "u1826",
+  "zh": "\\t\\\"InstalledDepots\\\""
+ },
+ {
+  "id": "u1827",
+  "zh": "\\t{"
+ },
+ {
+  "id": "u1828",
+  "zh": "\\t\\t{"
+ },
+ {
+  "id": "u1829",
+  "zh": "\\t\\t\\t\\\"manifest\\\"\\t\\t\\(quoted(String(depot.manifest)))"
+ },
+ {
+  "id": "u1830",
+  "zh": "\\t\\t\\t\\\"size\\\"\\t\\t\\(quoted(String(depot.size)))"
+ },
+ {
+  "id": "u1831",
+  "zh": "\\t\\t\\t\\\"dlcappid\\\"\\t\\t\\(quoted(String(dlc)))"
+ },
+ {
+  "id": "u1832",
+  "zh": "\\t\\t}"
+ },
+ {
+  "id": "u1833",
+  "zh": "Steam 未发送你的游戏列表。请重试。"
+ },
+ {
+  "id": "u1834",
+  "zh": "Showing overlay"
+ },
+ {
+  "id": "u1835",
+  "zh": "游戏目前正在使用 Steam。请在游戏关闭后重试。"
+ },
+ {
+  "id": "u1836",
+  "zh": "请先登录 Steam。"
+ },
+ {
+  "id": "u1837",
+  "zh": "重新登录以进行下载"
+ },
+ {
+  "id": "u1838",
+  "zh": "用于下载的登录已过期"
+ },
+ {
+  "id": "u1839",
+  "zh": "Steam：保存的登录信息在登录时再次被拒绝；正在退出登录。"
+ },
+ {
+  "id": "u1840",
+  "zh": "Steam：保存的登录信息在登录时被拒绝；暂时保留。"
+ },
+ {
+  "id": "u1841",
+  "zh": "DLC \\(dlcApp)"
+ },
+ {
+  "id": "u1842",
+  "zh": "该项目的文件无法下载。"
+ },
+ {
+  "id": "u1843",
+  "zh": "该项目的文件无法下载（HTTP \\((result.1 as? HTTPURLResponse)?.statusCode ?? 0)）。"
+ },
+ {
+  "id": "u1844",
+  "zh": "该项目的文件无法下载（HTTP \\(status)）。"
+ },
+ {
+  "id": "u1845",
+  "zh": "下载已完成，但 Steam 中关于该游戏的信息已丢失。"
+ },
+ {
+  "id": "u1846",
+  "zh": "无网络连接。"
+ },
+ {
+  "id": "u1847",
+  "zh": "无法连接 Steam（\\(error.localizedDescription)）。"
+ },
+ {
+  "id": "u1848",
+  "zh": "api eresult=\\(error.eresult.map(String.init) ?? "
+ },
+ {
+  "id": "u1849",
+  "zh": ") http=\\(error.http.map(String.init) ?? "
+ },
+ {
+  "id": "u1850",
+  "zh": "network \\(error.code.rawValue)"
+ },
+ {
+  "id": "u1851",
+  "zh": "Approve"
+ },
+ {
+  "id": "u1852",
+  "zh": "sent to "
+ },
+ {
+  "id": "u1853",
+  "zh": "M"
+ },
+ {
+  "id": "u1854",
+  "zh": "Deck 已验证"
+ },
+ {
+  "id": "u1855",
+  "zh": "Deck 可玩"
+ },
+ {
+  "id": "u1856",
+  "zh": "Deck 不支持"
+ },
+ {
+  "id": "u1857",
+  "zh": "Deck 未评级"
+ },
+ {
+  "id": "u1858",
+  "zh": "热门"
+ },
+ {
+  "id": "u1859",
+  "zh": "最新"
+ },
+ {
+  "id": "u1860",
+  "zh": "订阅最多"
+ },
+ {
+  "id": "u1861",
+  "zh": "评分最高"
+ },
+ {
+  "id": "u1862",
+  "zh": "无法读取 Steam 的已订阅项目列表。"
+ },
+ {
+  "id": "u1863",
+  "zh": "Steam 未能列出已订阅项目（错误 \\(code)）。"
+ },
+ {
+  "id": "u1864",
+  "zh": "\\\"\\\"\\n{\\n\\t\\\"filename\\\"\\t\\t\\\"\\(filename)\\\"\\n\\t\\\"appid\\\"\\t\\t\\\"\\(appID)\\\"\\n\\t\\\"creator\\\"\\t\\t\\\"\\(creator)\\\"\\n\\t\\\"sha1\\\"\\t\\t\\\"\\(sha1)\\\"\\n}\\n"
+ },
+ {
+  "id": "u1865",
+  "zh": "\\t\\\"appid\\\"\\t\\t\\(q(String(appID)))"
+ },
+ {
+  "id": "u1866",
+  "zh": "\\t\\\"SizeOnDisk\\\"\\t\\t\\(q(String(items.reduce(0) { $0 + $1.size })))"
+ },
+ {
+  "id": "u1867",
+  "zh": "\\t\\\"NeedsUpdate\\\"\\t\\t\\\"0\\\""
+ },
+ {
+  "id": "u1868",
+  "zh": "\\t\\\"NeedsDownload\\\"\\t\\t\\\"0\\\""
+ },
+ {
+  "id": "u1869",
+  "zh": "\\t\\\"TimeLastUpdated\\\"\\t\\t\\(q(stamp))"
+ },
+ {
+  "id": "u1870",
+  "zh": "\\t\\\"TimeLastAppRan\\\"\\t\\t\\\"0\\\""
+ },
+ {
+  "id": "u1871",
+  "zh": "\\t\\\"WorkshopItemsInstalled\\\""
+ },
+ {
+  "id": "u1872",
+  "zh": "\\t{"
+ },
+ {
+  "id": "u1873",
+  "zh": "\\t\\t{"
+ },
+ {
+  "id": "u1874",
+  "zh": "\\t\\t\\t\\\"size\\\"\\t\\t\\(q(String(item.size)))"
+ },
+ {
+  "id": "u1875",
+  "zh": "\\t\\t\\t\\\"timeupdated\\\"\\t\\t\\(q(String(Int((item.updated ?? now).timeIntervalSince1970))))"
+ },
+ {
+  "id": "u1876",
+  "zh": "\\t\\t\\t\\\"manifest\\\"\\t\\t\\(q(String(item.manifest)))"
+ },
+ {
+  "id": "u1877",
+  "zh": "\\t\\t}"
+ },
+ {
+  "id": "u1878",
+  "zh": "\\t\\\"WorkshopItemDetails\\\""
+ },
+ {
+  "id": "u1879",
+  "zh": "\\t\\t\\t\\\"manifest\\\"\\t\\t\\(q(single ? "
+ },
+ {
+  "id": "u1880",
+  "zh": " : String(item.manifest)))"
+ },
+ {
+  "id": "u1881",
+  "zh": "\\t\\t\\t\\\"ugchandle\\\"\\t\\t\\(q(String(item.ugcHandle)))"
+ },
+ {
+  "id": "u1882",
+  "zh": "\\t\\t\\t\\\"timetouched\\\"\\t\\t\\(q(stamp))"
+ },
+ {
+  "id": "u1883",
+  "zh": "\\t\\t\\t\\\"subscribedby\\\"\\t\\t\\(q(subscribedBy))"
+ },
+ {
+  "id": "u1884",
+  "zh": "\\t\\t\\t\\\"latest_timeupdated\\\"\\t\\t\\(q(updated))"
+ },
+ {
+  "id": "u1885",
+  "zh": "\\t\\t\\t\\\"latest_manifest\\\"\\t\\t\\(q(single ? "
+ },
+ {
+  "id": "u1886",
+  "zh": "\\(SteamAPI.host)/ISteamRemoteStorage/GetPublishedFileDetails/v1/"
+ },
+ {
+  "id": "u1887",
+  "zh": "URL 无效"
+ },
+ {
+  "id": "u1888",
+  "zh": "itemcount=\\(ids.count)"
+ },
+ {
+  "id": "u1889",
+  "zh": "&publishedfileids%5B\\(index)%5D=\\(id)"
+ },
+ {
+  "id": "u1890",
+  "zh": "添加游戏"
+ },
+ {
+  "id": "u1891",
+  "zh": "取消"
+ },
+ {
+  "id": "u1892",
+  "zh": "返回"
+ },
+ {
+  "id": "u1893",
+  "zh": "你想如何添加？"
+ },
+ {
+  "id": "u1894",
+  "zh": "导入游戏文件夹"
+ },
+ {
+  "id": "u1895",
+  "zh": "在「文件」中打开游戏的文件夹，然后点「打开」"
+ },
+ {
+  "id": "u1896",
+  "zh": "从 Steam 下载"
+ },
+ {
+  "id": "u1897",
+  "zh": "你拥有的游戏"
+ },
+ {
+  "id": "u1898",
+  "zh": "你在 Steam 上拥有的游戏，直接安装到应用中。"
+ },
+ {
+  "id": "u1899",
+  "zh": "从 Epic Games 下载"
+ },
+ {
+  "id": "u1900",
+  "zh": "你在 Epic Games 上拥有的游戏，直接安装到应用中。你在 Epic 自己的页面上登录。"
+ },
+ {
+  "id": "u1901",
+  "zh": "从 GOG 下载"
+ },
+ {
+  "id": "u1902",
+  "zh": "你在 GOG 上拥有的游戏，直接安装到应用中。你在 GOG 自己的页面上登录。"
+ },
+ {
+  "id": "u1903",
+  "zh": "从 itch.io 下载"
+ },
+ {
+  "id": "u1904",
+  "zh": "你拥有或已领取的游戏"
+ },
+ {
+  "id": "u1905",
+  "zh": "你在 itch.io 上购买、领取或收藏的游戏，直接安装到应用中。你使用自己的 API 密钥登录。"
+ },
+ {
+  "id": "u1906",
+  "zh": "从 Amazon Games 下载"
+ },
+ {
+  "id": "u1907",
+  "zh": "你在 Amazon 上购买或通过 Prime Gaming 领取的游戏，直接安装到应用中。你在 Amazon 自己的页面上登录。"
+ },
+ {
+  "id": "u1908",
+  "zh": "从 EA app 下载"
+ },
+ {
+  "id": "u1909",
+  "zh": "你 EA 账户中的 PC 游戏，直接安装到应用中，无需 EA app 即可启动。你在 EA 自己的页面上登录。带有 EA 内核级反作弊的游戏无法运行。"
+ },
+ {
+  "id": "u1910",
+  "zh": "运行 Windows 安装程序"
+ },
+ {
+  "id": "u1911",
+  "zh": "光盘或安装文件"
+ },
+ {
+  "id": "u1912",
+  "zh": "适用于你已有的光盘或安装文件中的游戏。选择安装文件，运行它，然后添加它安装的内容。"
+ },
+ {
+  "id": "u1913",
+  "zh": "已在应用中"
+ },
+ {
+  "id": "u1914",
+  "zh": "正在查找游戏\\u{2026}"
+ },
+ {
+  "id": "u1915",
+  "zh": "尚未找到游戏。你导入、下载或安装的文件会显示在这里。"
+ },
+ {
+  "id": "u1916",
+  "zh": "找到的全部内容都已在你的游戏库中。"
+ },
+ {
+  "id": "u1917",
+  "zh": "搜索"
+ },
+ {
+  "id": "u1918",
+  "zh": "游戏名称"
+ },
+ {
+  "id": "u1919",
+  "zh": "启动 \\($0.fileName)"
+ },
+ {
+  "id": "u1920",
+  "zh": "选择程序"
+ },
+ {
+  "id": "u1921",
+  "zh": "添加"
+ },
+ {
+  "id": "u1922",
+  "zh": "没有与\\u{201C}\\(query)\\u{201D}匹配的结果。"
+ },
+ {
+  "id": "u1923",
+  "zh": "按路径添加"
+ },
+ {
+  "id": "u1924",
+  "zh": "隐藏"
+ },
+ {
+  "id": "u1925",
+  "zh": "程序"
+ },
+ {
+  "id": "u1926",
+  "zh": "只找到了工具"
+ },
+ {
+  "id": "u1927",
+  "zh": "最可能"
+ },
+ {
+  "id": "u1928",
+  "zh": "\\(bits) 位"
+ },
+ {
+  "id": "u1929",
+  "zh": "添加\\u{201C}\\(name)\\u{201D}"
+ },
+ {
+  "id": "u1930",
+  "zh": "不是这个？"
+ },
+ {
+  "id": "u1931",
+  "zh": "程序名称"
+ },
+ {
+  "id": "u1932",
+  "zh": "没有找到其他内容。"
+ },
+ {
+  "id": "u1933",
+  "zh": "无匹配结果。"
+ },
+ {
+  "id": "u1934",
+  "zh": "显示安装程序和工具（\\(hiddenTools)）"
+ },
+ {
+  "id": "u1935",
+  "zh": "正在复制到应用中"
+ },
+ {
+  "id": "u1936",
+  "zh": "无法导入"
+ },
+ {
+  "id": "u1937",
+  "zh": "关闭"
+ },
+ {
+  "id": "u1938",
+  "zh": "\\(ByteCountFormatter.string(fromByteCount: p.copied, countStyle: .file)) / \\(ByteCountFormatter.string(fromByteCount: p.total, countStyle: .file))"
+ },
+ {
+  "id": "u1939",
+  "zh": "\\(Int(Double(p.copied) / Double(max(p.total, 1)) * 100))%"
+ },
+ {
+  "id": "u1940",
+  "zh": "正在读取文件夹\\u{2026}"
+ },
+ {
+  "id": "u1941",
+  "zh": "下载"
+ },
+ {
+  "id": "u1942",
+  "zh": "下载 \\u{00B7} \\(live.count)"
+ },
+ {
+  "id": "u1943",
+  "zh": "\\(Int(running[0].progress.fraction * 100))%"
+ },
+ {
+  "id": "u1944",
+  "zh": "\\(running.count) 个正在下载"
+ },
+ {
+  "id": "u1945",
+  "zh": " \\u{00B7} \\(EpicText.size(UInt64(rate)))/秒"
+ },
+ {
+  "id": "u1946",
+  "zh": " \\u{00B7} +\\(waiting)"
+ },
+ {
+  "id": "u1947",
+  "zh": "\\(running) 个正在下载"
+ },
+ {
+  "id": "u1948",
+  "zh": "\\(waiting) 个等待中"
+ },
+ {
+  "id": "u1949",
+  "zh": "\\(stopped) 个已暂停"
+ },
+ {
+  "id": "u1950",
+  "zh": "\\(ready) 个可安装"
+ },
+ {
+  "id": "u1951",
+  "zh": "没有正在下载的内容"
+ },
+ {
+  "id": "u1952",
+  "zh": "\\(count)"
+ },
+ {
+  "id": "u1953",
+  "zh": "全部游戏"
+ },
+ {
+  "id": "u1954",
+  "zh": "商店"
+ },
+ {
+  "id": "u1955",
+  "zh": "全部暂停"
+ },
+ {
+  "id": "u1956",
+  "zh": "全部继续"
+ },
+ {
+  "id": "u1957",
+  "zh": "已暂停"
+ },
+ {
+  "id": "u1958",
+  "zh": "可安装"
+ },
+ {
+  "id": "u1959",
+  "zh": "浏览你的游戏"
+ },
+ {
+  "id": "u1960",
+  "zh": "\\(Int(p.fraction * 100))%"
+ },
+ {
+  "id": "u1961",
+  "zh": "暂停"
+ },
+ {
+  "id": "u1962",
+  "zh": "取消"
+ },
+ {
+  "id": "u1963",
+  "zh": "\\(item.store.title) \\u{00B7} \\(line)"
+ },
+ {
+  "id": "u1964",
+  "zh": "等待中 \\u{00B7} \\(EpicText.size(item.sizeBytes))"
+ },
+ {
+  "id": "u1965",
+  "zh": "等待中"
+ },
+ {
+  "id": "u1966",
+  "zh": "立即下载"
+ },
+ {
+  "id": "u1967",
+  "zh": "移除"
+ },
+ {
+  "id": "u1968",
+  "zh": "已暂停在 \\(Int(item.progress.fraction * 100))%"
+ },
+ {
+  "id": "u1969",
+  "zh": "重试"
+ },
+ {
+  "id": "u1970",
+  "zh": "继续"
+ },
+ {
+  "id": "u1971",
+  "zh": "正在安装\\u{2026}"
+ },
+ {
+  "id": "u1972",
+  "zh": "已下载。运行其安装程序以完成。"
+ },
+ {
+  "id": "u1973",
+  "zh": "安装"
+ },
+ {
+  "id": "u1974",
+  "zh": " \\u{00B7} 还剩 \\(EpicText.duration(s))"
+ },
+ {
+  "id": "u1975",
+  "zh": "登录 Amazon Games"
+ },
+ {
+  "id": "u1976",
+  "zh": "你在 Amazon 自己的页面上登录。登录令牌会保存在此设备的 Keychain 中；Porthole 永远不会看到你的密码。你在 Amazon 上购买或通过 Prime Gaming 领取的游戏会列在这里。"
+ },
+ {
+  "id": "u1977",
+  "zh": "登录"
+ },
+ {
+  "id": "u1978",
+  "zh": "\\(Int((install?.progress.fraction ?? 0) * 100))%"
+ },
+ {
+  "id": "u1979",
+  "zh": "等待中"
+ }
+]

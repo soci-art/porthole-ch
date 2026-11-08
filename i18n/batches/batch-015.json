@@ -1,0 +1,2900 @@
+{
+ "batch": 15,
+ "units": [
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Delete downloaded files",
+   "lines": [
+    393
+   ],
+   "contexts": [
+    "ActionRow(id: \"gp-delete\", symbol: \"trash\", title: \"Delete downloaded files\", destructive: true, chevron: false) { ask { confirmDelete = true } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2520"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Remove from library",
+   "lines": [
+    395
+   ],
+   "contexts": [
+    "ActionRow(id: \"gp-remove\", symbol: \"minus.circle\", title: \"Remove from library\", destructive: true, chevron: false) { ask { confirmRemove = true } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2521"
+  },
+  {
+   "file": "app/Sources/UI/Game/GamePage.swift",
+   "text": "Default (\\(globalText))",
+   "lines": [
+    420
+   ],
+   "contexts": [
+    "options: [(nil as T?, \"Default (\\(globalText))\")] + options.map { (Optional($0.0), $0.1) },"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2522"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "Gyro aim",
+   "lines": [
+    25,
+    26
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Gyro aim\") {",
+    "ToggleRow(id: \"pa-gyro\", symbol: \"gyroscope\", title: \"Gyro aim\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2523"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "Moving the controller (or this device) aims. Automatic gyro uses the controller's sensors (DualSense, DualShock 4, Switch Pro) and the device's own otherwise. Automatic output moves the right stick, or the mouse when the game gets no controller from the pad.",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "info: \"Moving the controller (or this device) aims. Automatic gyro uses the controller's sensors (DualSense, DualShock 4, Switch Pro) and the device's own otherwise. Automatic output moves the right stick, or the mouse when the game gets no controller from the pad.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2524"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "Gyro from",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"pa-source\", symbol: \"dot.radiowaves.left.and.right\", title: \"Gyro from\", options: [(PadAssistSettings.Source.auto, \"Automatic\"), (.controller, \"Controller\"), (.device, \"This device\")], selection: bind(\\.source))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2525"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "Automatic",
+   "lines": [
+    30,
+    32
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"pa-source\", symbol: \"dot.radiowaves.left.and.right\", title: \"Gyro from\", options: [(PadAssistSettings.Source.auto, \"Automatic\"), (.controller, \"Controller\"), (.device, \"This device\")], selection: bind(\\.source))",
+    "ChoiceRow(id: \"pa-output\", symbol: \"arrow.up.left.and.arrow.down.right\", title: \"Moves\", options: [(PadAssistSettings.Output.auto, \"Automatic\"), (.stick, \"Right stick\"), (.mouse, \"Mouse\")], selection: bind(\\.output))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2526"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "Controller",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"pa-source\", symbol: \"dot.radiowaves.left.and.right\", title: \"Gyro from\", options: [(PadAssistSettings.Source.auto, \"Automatic\"), (.controller, \"Controller\"), (.device, \"This device\")], selection: bind(\\.source))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2527"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "This device",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"pa-source\", symbol: \"dot.radiowaves.left.and.right\", title: \"Gyro from\", options: [(PadAssistSettings.Source.auto, \"Automatic\"), (.controller, \"Controller\"), (.device, \"This device\")], selection: bind(\\.source))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2528"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "Active",
+   "lines": [
+    31
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"pa-when\", symbol: \"hand.tap\", title: \"Active\", options: [(PadAssistSettings.When.always, \"Always\"), (.lt, \"While holding LT\"), (.lb, \"While holding LB\"), (.rb, \"While holding RB\")], selection: bind(\\.when))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2529"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "Always",
+   "lines": [
+    31
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"pa-when\", symbol: \"hand.tap\", title: \"Active\", options: [(PadAssistSettings.When.always, \"Always\"), (.lt, \"While holding LT\"), (.lb, \"While holding LB\"), (.rb, \"While holding RB\")], selection: bind(\\.when))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2530"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "While holding LT",
+   "lines": [
+    31
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"pa-when\", symbol: \"hand.tap\", title: \"Active\", options: [(PadAssistSettings.When.always, \"Always\"), (.lt, \"While holding LT\"), (.lb, \"While holding LB\"), (.rb, \"While holding RB\")], selection: bind(\\.when))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2531"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "While holding LB",
+   "lines": [
+    31
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"pa-when\", symbol: \"hand.tap\", title: \"Active\", options: [(PadAssistSettings.When.always, \"Always\"), (.lt, \"While holding LT\"), (.lb, \"While holding LB\"), (.rb, \"While holding RB\")], selection: bind(\\.when))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2532"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "While holding RB",
+   "lines": [
+    31
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"pa-when\", symbol: \"hand.tap\", title: \"Active\", options: [(PadAssistSettings.When.always, \"Always\"), (.lt, \"While holding LT\"), (.lb, \"While holding LB\"), (.rb, \"While holding RB\")], selection: bind(\\.when))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2533"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "Moves",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"pa-output\", symbol: \"arrow.up.left.and.arrow.down.right\", title: \"Moves\", options: [(PadAssistSettings.Output.auto, \"Automatic\"), (.stick, \"Right stick\"), (.mouse, \"Mouse\")], selection: bind(\\.output))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2534"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "Right stick",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"pa-output\", symbol: \"arrow.up.left.and.arrow.down.right\", title: \"Moves\", options: [(PadAssistSettings.Output.auto, \"Automatic\"), (.stick, \"Right stick\"), (.mouse, \"Mouse\")], selection: bind(\\.output))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2535"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "Mouse",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"pa-output\", symbol: \"arrow.up.left.and.arrow.down.right\", title: \"Moves\", options: [(PadAssistSettings.Output.auto, \"Automatic\"), (.stick, \"Right stick\"), (.mouse, \"Mouse\")], selection: bind(\\.output))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2536"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "Turn with",
+   "lines": [
+    33
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"pa-turn\", symbol: \"arrow.left.and.right\", title: \"Turn with\", options: [(PadAssistSettings.Turn.yaw, \"Twist (yaw)\"), (.roll, \"Tilt (roll)\")], selection: bind(\\.turn))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2537"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "Twist (yaw)",
+   "lines": [
+    33
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"pa-turn\", symbol: \"arrow.left.and.right\", title: \"Turn with\", options: [(PadAssistSettings.Turn.yaw, \"Twist (yaw)\"), (.roll, \"Tilt (roll)\")], selection: bind(\\.turn))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2538"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "Tilt (roll)",
+   "lines": [
+    33
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"pa-turn\", symbol: \"arrow.left.and.right\", title: \"Turn with\", options: [(PadAssistSettings.Turn.yaw, \"Twist (yaw)\"), (.roll, \"Tilt (roll)\")], selection: bind(\\.turn))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2539"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "Sensitivity",
+   "lines": [
+    34
+   ],
+   "contexts": [
+    "SliderRow(id: \"pa-sens\", symbol: \"speedometer\", title: \"Sensitivity\", value: bind(\\.sensitivity), range: 0.25...4, step: 0.05, format: { String(format: \"%.2g\\u{00D7}\", $0) })"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2540"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "%.2g\\u{00D7}",
+   "lines": [
+    34
+   ],
+   "contexts": [
+    "SliderRow(id: \"pa-sens\", symbol: \"speedometer\", title: \"Sensitivity\", value: bind(\\.sensitivity), range: 0.25...4, step: 0.05, format: { String(format: \"%.2g\\u{00D7}\", $0) })"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2541"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "Anti-dead zone",
+   "lines": [
+    35
+   ],
+   "contexts": [
+    "SliderRow(id: \"pa-dead\", symbol: \"circle.dashed\", title: \"Anti-dead zone\", info: \"The least stick push a slow movement gives, so it gets past the game's own dead zone. Raise it if slow aiming does nothing.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2542"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "The least stick push a slow movement gives, so it gets past the game's own dead zone. Raise it if slow aiming does nothing.",
+   "lines": [
+    35
+   ],
+   "contexts": [
+    "SliderRow(id: \"pa-dead\", symbol: \"circle.dashed\", title: \"Anti-dead zone\", info: \"The least stick push a slow movement gives, so it gets past the game's own dead zone. Raise it if slow aiming does nothing.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2543"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "\\(Int(($0 * 100).rounded()))%",
+   "lines": [
+    36
+   ],
+   "contexts": [
+    "value: bind(\\.antiDeadzone), range: 0...0.5, step: 0.01, format: { \"\\(Int(($0 * 100).rounded()))%\" })"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2544"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "Invert up and down",
+   "lines": [
+    37
+   ],
+   "contexts": [
+    "ToggleRow(id: \"pa-invy\", symbol: \"arrow.up.and.down\", title: \"Invert up and down\", isOn: bind(\\.invertY))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2545"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "Invert left and right",
+   "lines": [
+    38
+   ],
+   "contexts": [
+    "ToggleRow(id: \"pa-invx\", symbol: \"arrow.left.and.right\", title: \"Invert left and right\", isOn: bind(\\.invertX))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2546"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "Turbo",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Turbo\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2547"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "Turbo \\(name)",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "ToggleRow(id: \"pa-turbo-\\(name)\", symbol: \"bolt.fill\", title: \"Turbo \\(name)\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2548"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "A turbo button repeats while you hold it, on the controller and on touch controls.",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "info: name == PadAssistSettings.turboChoices.first ? \"A turbo button repeats while you hold it, on the controller and on touch controls.\" : nil,"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2549"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "Presses a second",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "SliderRow(id: \"pa-turbo-rate\", symbol: \"metronome\", title: \"Presses a second\", value: bind(\\.turboRate), range: 5...30, step: 1, format: { \"\\(Int($0))\" })"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2550"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadAssistRows.swift",
+   "text": "\\(Int($0))",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "SliderRow(id: \"pa-turbo-rate\", symbol: \"metronome\", title: \"Presses a second\", value: bind(\\.turboRate), range: 5...30, step: 1, format: { \"\\(Int($0))\" })"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2551"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadPressListener.swift",
+   "text": "A",
+   "lines": [
+    50
+   ],
+   "contexts": [
+    "let buttons: [(String, GCControllerButtonInput?)] = [(\"A\", pad.buttonA), (\"B\", pad.buttonB), (\"X\", pad.buttonX), (\"Y\", pad.buttonY), (\"LB\", pad.leftShoulder), (\"RB\", pad.rightShoulder),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2552"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadPressListener.swift",
+   "text": "B",
+   "lines": [
+    50
+   ],
+   "contexts": [
+    "let buttons: [(String, GCControllerButtonInput?)] = [(\"A\", pad.buttonA), (\"B\", pad.buttonB), (\"X\", pad.buttonX), (\"Y\", pad.buttonY), (\"LB\", pad.leftShoulder), (\"RB\", pad.rightShoulder),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2553"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadPressListener.swift",
+   "text": "Y",
+   "lines": [
+    50
+   ],
+   "contexts": [
+    "let buttons: [(String, GCControllerButtonInput?)] = [(\"A\", pad.buttonA), (\"B\", pad.buttonB), (\"X\", pad.buttonX), (\"Y\", pad.buttonY), (\"LB\", pad.leftShoulder), (\"RB\", pad.rightShoulder),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2554"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadPressListener.swift",
+   "text": "L3",
+   "lines": [
+    51
+   ],
+   "contexts": [
+    "(\"L3\", pad.leftThumbstickButton), (\"R3\", pad.rightThumbstickButton), (\"Menu\", pad.buttonMenu), (\"View\", pad.buttonOptions),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2555"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadPressListener.swift",
+   "text": "R3",
+   "lines": [
+    51
+   ],
+   "contexts": [
+    "(\"L3\", pad.leftThumbstickButton), (\"R3\", pad.rightThumbstickButton), (\"Menu\", pad.buttonMenu), (\"View\", pad.buttonOptions),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2556"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadPressListener.swift",
+   "text": "Menu",
+   "lines": [
+    51
+   ],
+   "contexts": [
+    "(\"L3\", pad.leftThumbstickButton), (\"R3\", pad.rightThumbstickButton), (\"Menu\", pad.buttonMenu), (\"View\", pad.buttonOptions),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2557"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadPressListener.swift",
+   "text": "View",
+   "lines": [
+    51
+   ],
+   "contexts": [
+    "(\"L3\", pad.leftThumbstickButton), (\"R3\", pad.rightThumbstickButton), (\"Menu\", pad.buttonMenu), (\"View\", pad.buttonOptions),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2558"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadPressListener.swift",
+   "text": "D\\u{2191}",
+   "lines": [
+    52
+   ],
+   "contexts": [
+    "(\"D\\u{2191}\", pad.dpad.up), (\"D\\u{2193}\", pad.dpad.down), (\"D\\u{2190}\", pad.dpad.left), (\"D\\u{2192}\", pad.dpad.right)]"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2559"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadPressListener.swift",
+   "text": "D\\u{2193}",
+   "lines": [
+    52
+   ],
+   "contexts": [
+    "(\"D\\u{2191}\", pad.dpad.up), (\"D\\u{2193}\", pad.dpad.down), (\"D\\u{2190}\", pad.dpad.left), (\"D\\u{2192}\", pad.dpad.right)]"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2560"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadPressListener.swift",
+   "text": "D\\u{2190}",
+   "lines": [
+    52
+   ],
+   "contexts": [
+    "(\"D\\u{2191}\", pad.dpad.up), (\"D\\u{2193}\", pad.dpad.down), (\"D\\u{2190}\", pad.dpad.left), (\"D\\u{2192}\", pad.dpad.right)]"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2561"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadPressListener.swift",
+   "text": "D\\u{2192}",
+   "lines": [
+    52
+   ],
+   "contexts": [
+    "(\"D\\u{2191}\", pad.dpad.up), (\"D\\u{2193}\", pad.dpad.down), (\"D\\u{2190}\", pad.dpad.left), (\"D\\u{2192}\", pad.dpad.right)]"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2562"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "Remap buttons",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "Text(\"Remap buttons\").font(.system(size: 26, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2563"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "Done",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "PillButton(id: \"pr-close\", title: \"Done\", symbol: \"checkmark\") { dismiss() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2564"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "Which button the game sees when you press each one on the controller. Pick what a button should do instead; to swap two buttons, change both. This works while the controller is an Xbox or DualSense pad for the game, not in keyboard-and-mouse mode (use Controller buttons there). Hold Menu + View for half a second still opens the Porthole menu.",
+   "lines": [
+    35
+   ],
+   "contexts": [
+    "Text(\"Which button the game sees when you press each one on the controller. Pick what a button should do instead; to swap two buttons, change both. This works while the controller is an Xbox or DualSense pad for the game, not in keyboard-and-mouse mode (use Controller buttons there). Hold Menu + Vie"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2565"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "Change one by pressing it",
+   "lines": [
+    37
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Change one by pressing it\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2566"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "Press the button now\\u{2026}",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    "ActionRow(id: \"pr-listen\", symbol: \"gamecontroller.fill\", title: \"Press the button now\\u{2026}\", subtitle: \"Tap here to cancel\", chevron: false) { listener.stop() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2567"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "Tap here to cancel",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    "ActionRow(id: \"pr-listen\", symbol: \"gamecontroller.fill\", title: \"Press the button now\\u{2026}\", subtitle: \"Tap here to cancel\", chevron: false) { listener.stop() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2568"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "Press a controller button to change it",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "ActionRow(id: \"pr-press\", symbol: \"hand.point.up.left.fill\", title: \"Press a controller button to change it\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2569"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "Then pick what the game sees",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "subtitle: heardNote ?? \"Then pick what the game sees\", chevron: false) { listen() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2570"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "\\(padKind.label(name)) acts as",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "if let name = picked, PadActions.buttons.contains(name) { row(g, name, map: map, id: \"pr-picked\", title: \"\\(padKind.label(name)) acts as\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2571"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "Buttons",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Buttons\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2572"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "Quick changes",
+   "lines": [
+    49
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Quick changes\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2573"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "Swap A and B",
+   "lines": [
+    50
+   ],
+   "contexts": [
+    "ActionRow(id: \"pr-swapab\", symbol: \"arrow.left.arrow.right\", title: \"Swap A and B\", subtitle: \"Confirm and cancel the other way round\", chevron: false) { swap(g, \"A\", \"B\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2574"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "Confirm and cancel the other way round",
+   "lines": [
+    50
+   ],
+   "contexts": [
+    "ActionRow(id: \"pr-swapab\", symbol: \"arrow.left.arrow.right\", title: \"Swap A and B\", subtitle: \"Confirm and cancel the other way round\", chevron: false) { swap(g, \"A\", \"B\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2575"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "A",
+   "lines": [
+    50
+   ],
+   "contexts": [
+    "ActionRow(id: \"pr-swapab\", symbol: \"arrow.left.arrow.right\", title: \"Swap A and B\", subtitle: \"Confirm and cancel the other way round\", chevron: false) { swap(g, \"A\", \"B\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2576"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "B",
+   "lines": [
+    50
+   ],
+   "contexts": [
+    "ActionRow(id: \"pr-swapab\", symbol: \"arrow.left.arrow.right\", title: \"Swap A and B\", subtitle: \"Confirm and cancel the other way round\", chevron: false) { swap(g, \"A\", \"B\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2577"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "Swap X and Y",
+   "lines": [
+    51
+   ],
+   "contexts": [
+    "ActionRow(id: \"pr-swapxy\", symbol: \"arrow.left.arrow.right\", title: \"Swap X and Y\", chevron: false) { swap(g, \"X\", \"Y\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2578"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "Y",
+   "lines": [
+    51
+   ],
+   "contexts": [
+    "ActionRow(id: \"pr-swapxy\", symbol: \"arrow.left.arrow.right\", title: \"Swap X and Y\", chevron: false) { swap(g, \"X\", \"Y\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2579"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "Swap the triggers with the bumpers",
+   "lines": [
+    52
+   ],
+   "contexts": [
+    "ActionRow(id: \"pr-swaptrig\", symbol: \"arrow.left.arrow.right\", title: \"Swap the triggers with the bumpers\", subtitle: \"\\(padKind.glyph(\"LT\")) and \\(padKind.glyph(\"RT\")) on \\(padKind.glyph(\"LB\")) and \\(padKind.glyph(\"RB\"))\", chevron: false) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2580"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "\\(padKind.glyph(",
+   "lines": [
+    52
+   ],
+   "contexts": [
+    "ActionRow(id: \"pr-swaptrig\", symbol: \"arrow.left.arrow.right\", title: \"Swap the triggers with the bumpers\", subtitle: \"\\(padKind.glyph(\"LT\")) and \\(padKind.glyph(\"RT\")) on \\(padKind.glyph(\"LB\")) and \\(padKind.glyph(\"RB\"))\", chevron: false) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2581"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": ")) and \\(padKind.glyph(",
+   "lines": [
+    52
+   ],
+   "contexts": [
+    "ActionRow(id: \"pr-swaptrig\", symbol: \"arrow.left.arrow.right\", title: \"Swap the triggers with the bumpers\", subtitle: \"\\(padKind.glyph(\"LT\")) and \\(padKind.glyph(\"RT\")) on \\(padKind.glyph(\"LB\")) and \\(padKind.glyph(\"RB\"))\", chevron: false) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2582"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": ")) on \\(padKind.glyph(",
+   "lines": [
+    52
+   ],
+   "contexts": [
+    "ActionRow(id: \"pr-swaptrig\", symbol: \"arrow.left.arrow.right\", title: \"Swap the triggers with the bumpers\", subtitle: \"\\(padKind.glyph(\"LT\")) and \\(padKind.glyph(\"RT\")) on \\(padKind.glyph(\"LB\")) and \\(padKind.glyph(\"RB\"))\", chevron: false) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2583"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "Back to the standard buttons",
+   "lines": [
+    57
+   ],
+   "contexts": [
+    "ActionRow(id: \"pr-reset\", symbol: \"arrow.counterclockwise\", title: \"Back to the standard buttons\", chevron: false) { clear(g) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2584"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "Nothing",
+   "lines": [
+    73
+   ],
+   "contexts": [
+    "options: PadRemap.targets.map { target in (target, target == \"none\" ? \"Nothing\" : (target == name ? \"\\(padKind.label(target)) (standard)\" : padKind.label(target))) },"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2585"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "\\(padKind.label(target)) (standard)",
+   "lines": [
+    73
+   ],
+   "contexts": [
+    "options: PadRemap.targets.map { target in (target, target == \"none\" ? \"Nothing\" : (target == name ? \"\\(padKind.label(target)) (standard)\" : padKind.label(target))) },"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2586"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "No controller is connected.",
+   "lines": [
+    81
+   ],
+   "contexts": [
+    "case \"\": heardNote = \"No controller is connected.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2587"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "Nothing was pressed.",
+   "lines": [
+    82
+   ],
+   "contexts": [
+    "case \"-\": heardNote = \"Nothing was pressed.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2588"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "Sticks cannot be remapped here.",
+   "lines": [
+    83
+   ],
+   "contexts": [
+    "case \"LS\", \"RS\": heardNote = \"Sticks cannot be remapped here.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2589"
+  },
+  {
+   "file": "app/Sources/UI/Game/PadRemapSheet.swift",
+   "text": "You pressed \\(name). Pick what the game sees below.",
+   "lines": [
+    86
+   ],
+   "contexts": [
+    "heardNote = \"You pressed \\(name). Pick what the game sees below.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2590"
+  },
+  {
+   "file": "app/Sources/UI/Game/RecommendedSettingsGroup.swift",
+   "text": "What works for others",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"What works for others\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2591"
+  },
+  {
+   "file": "app/Sources/UI/Game/RecommendedSettingsGroup.swift",
+   "text": "Undo the last applied suggestions",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "ActionRow(id: \"rec-undo\", symbol: \"arrow.uturn.backward\", title: \"Undo the last applied suggestions\", subtitle: \"Puts this game's settings back as they were\", chevron: false) { model.update(g) { RecommendedSettings.undo(&$0) }; state = .idle; Task { await load(g, force: true) } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2592"
+  },
+  {
+   "file": "app/Sources/UI/Game/RecommendedSettingsGroup.swift",
+   "text": "Puts this game's settings back as they were",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "ActionRow(id: \"rec-undo\", symbol: \"arrow.uturn.backward\", title: \"Undo the last applied suggestions\", subtitle: \"Puts this game's settings back as they were\", chevron: false) { model.update(g) { RecommendedSettings.undo(&$0) }; state = .idle; Task { await load(g, force: true) } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2593"
+  },
+  {
+   "file": "app/Sources/UI/Game/RecommendedSettingsGroup.swift",
+   "text": "Use these settings?",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    ".confirm(\"Use these settings?\", message: \"Changes only this game's own settings. You can undo it.\", confirmTitle: \"Apply\", isPresented: $confirm) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2594"
+  },
+  {
+   "file": "app/Sources/UI/Game/RecommendedSettingsGroup.swift",
+   "text": "Changes only this game's own settings. You can undo it.",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    ".confirm(\"Use these settings?\", message: \"Changes only this game's own settings. You can undo it.\", confirmTitle: \"Apply\", isPresented: $confirm) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2595"
+  },
+  {
+   "file": "app/Sources/UI/Game/RecommendedSettingsGroup.swift",
+   "text": "Apply",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    ".confirm(\"Use these settings?\", message: \"Changes only this game's own settings. You can undo it.\", confirmTitle: \"Apply\", isPresented: $confirm) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2596"
+  },
+  {
+   "file": "app/Sources/UI/Game/RecommendedSettingsGroup.swift",
+   "text": "Looking at what others use\\u{2026}",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    "HStack { ProgressView(); Text(\"Looking at what others use\\u{2026}\").foregroundStyle(Theme.textDim) }.padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2597"
+  },
+  {
+   "file": "app/Sources/UI/Game/RecommendedSettingsGroup.swift",
+   "text": "Nobody who says this game works great has shared their settings yet. Share yours when you report on it and it will help the next person.",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "Text(\"Nobody who says this game works great has shared their settings yet. Share yours when you report on it and it will help the next person.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2598"
+  },
+  {
+   "file": "app/Sources/UI/Game/RecommendedSettingsGroup.swift",
+   "text": "This game's settings already match what most of the \\(plan.reports) people who say it works great use.",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "Text(\"This game's settings already match what most of the \\(plan.reports) people who say it works great use.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2599"
+  },
+  {
+   "file": "app/Sources/UI/Game/RecommendedSettingsGroup.swift",
+   "text": "Most of \\(plan.reports) people who say it works great\\(plan.earlierEngine ? ",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "Text(\"Most of \\(plan.reports) people who say it works great\\(plan.earlierEngine ? \" (on earlier versions of the engine)\" : \"\") use:\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2600"
+  },
+  {
+   "file": "app/Sources/UI/Game/RecommendedSettingsGroup.swift",
+   "text": ") use:",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "Text(\"Most of \\(plan.reports) people who say it works great\\(plan.earlierEngine ? \" (on earlier versions of the engine)\" : \"\") use:\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2601"
+  },
+  {
+   "file": "app/Sources/UI/Game/RecommendedSettingsGroup.swift",
+   "text": "\\(c.from) \\u{2192} \\(c.to)  (\\(c.count) of \\(plan.reports))",
+   "lines": [
+    50
+   ],
+   "contexts": [
+    "ValueRow(id: \"rec-\\(c.key)\", symbol: \"arrow.right.circle.fill\", title: c.title, value: \"\\(c.from) \\u{2192} \\(c.to)  (\\(c.count) of \\(plan.reports))\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2602"
+  },
+  {
+   "file": "app/Sources/UI/Game/RecommendedSettingsGroup.swift",
+   "text": "Use these \\(plan.changes.count) setting\\(plan.changes.count == 1 ? ",
+   "lines": [
+    52
+   ],
+   "contexts": [
+    "ActionRow(id: \"rec-apply\", symbol: \"checkmark.circle.fill\", title: \"Use these \\(plan.changes.count) setting\\(plan.changes.count == 1 ? \"\" : \"s\")\", subtitle: \"Only for this game; you can undo it\", chevron: false, prominent: true) { confirm = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2603"
+  },
+  {
+   "file": "app/Sources/UI/Game/RecommendedSettingsGroup.swift",
+   "text": "Only for this game; you can undo it",
+   "lines": [
+    52
+   ],
+   "contexts": [
+    "ActionRow(id: \"rec-apply\", symbol: \"checkmark.circle.fill\", title: \"Use these \\(plan.changes.count) setting\\(plan.changes.count == 1 ? \"\" : \"s\")\", subtitle: \"Only for this game; you can undo it\", chevron: false, prominent: true) { confirm = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2604"
+  },
+  {
+   "file": "app/Sources/UI/Game/RecommendedSettingsGroup.swift",
+   "text": "This build is not connected to a community server, so there is nothing to compare with.",
+   "lines": [
+    63
+   ],
+   "contexts": [
+    "guard client.baseURL != nil else { state = .failed(\"This build is not connected to a community server, so there is nothing to compare with.\"); return }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2605"
+  },
+  {
+   "file": "app/Sources/UI/Game/RecommendedSettingsGroup.swift",
+   "text": "engine",
+   "lines": [
+    69
+   ],
+   "contexts": [
+    "var detail = try? await client.get(path, [(\"engine\", CompatEngine.id)], as: CompatGameDetail.self)"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2606"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Shared binds",
+   "lines": [
+    31
+   ],
+   "contexts": [
+    "Text(\"Shared binds\").font(.system(size: 26, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2607"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Done",
+   "lines": [
+    33,
+    113
+   ],
+   "contexts": [
+    "PillButton(id: \"sb-close\", title: \"Done\", symbol: \"checkmark\") { dismiss() }",
+    "PillButton(id: \"sd-close\", title: \"Done\", symbol: \"checkmark\") { dismiss() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2608"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Controller binds and touch layouts other people shared for \\(game?.name ?? ",
+   "lines": [
+    38
+   ],
+   "contexts": [
+    "Text(\"Controller binds and touch layouts other people shared for \\(game?.name ?? \"this game\"). Adding one puts a copy in your sets; it is only used when you pick it.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2609"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "). Adding one puts a copy in your sets; it is only used when you pick it.",
+   "lines": [
+    38
+   ],
+   "contexts": [
+    "Text(\"Controller binds and touch layouts other people shared for \\(game?.name ?? \"this game\"). Adding one puts a copy in your sets; it is only used when you pick it.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2610"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Sort by",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"sb-sort\", symbol: \"arrow.up.arrow.down\", title: \"Sort by\", options: [(\"top\", \"Best rated\"), (\"downloads\", \"Most downloaded\"), (\"new\", \"Newest\")],"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2611"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Best rated",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"sb-sort\", symbol: \"arrow.up.arrow.down\", title: \"Sort by\", options: [(\"top\", \"Best rated\"), (\"downloads\", \"Most downloaded\"), (\"new\", \"Newest\")],"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2612"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Most downloaded",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"sb-sort\", symbol: \"arrow.up.arrow.down\", title: \"Sort by\", options: [(\"top\", \"Best rated\"), (\"downloads\", \"Most downloaded\"), (\"new\", \"Newest\")],"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2613"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Newest",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"sb-sort\", symbol: \"arrow.up.arrow.down\", title: \"Sort by\", options: [(\"top\", \"Best rated\"), (\"downloads\", \"Most downloaded\"), (\"new\", \"Newest\")],"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2614"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Looking\\u{2026}",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "if loading && items.isEmpty { HStack { ProgressView(); Text(\"Looking\\u{2026}\").foregroundStyle(Theme.textDim) }.padding(.horizontal, 6) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2615"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Porthole can't tell which game this is yet, so there is nothing to look up.",
+   "lines": [
+    52
+   ],
+   "contexts": [
+    "Text(unidentified ? \"Porthole can't tell which game this is yet, so there is nothing to look up.\" : \"Nobody has shared binds for this game yet. Be the first from one of your own sets.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2616"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Nobody has shared binds for this game yet. Be the first from one of your own sets.",
+   "lines": [
+    52
+   ],
+   "contexts": [
+    "Text(unidentified ? \"Porthole can't tell which game this is yet, so there is nothing to look up.\" : \"Nobody has shared binds for this game yet. Be the first from one of your own sets.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2617"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "No ratings",
+   "lines": [
+    70
+   ],
+   "contexts": [
+    "let rating = votes == 0 ? \"No ratings\" : \"\\(Int((item.approval ?? 0) * 100))% (\\(votes))\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2618"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "\\(Int((item.approval ?? 0) * 100))% (\\(votes))",
+   "lines": [
+    70
+   ],
+   "contexts": [
+    "let rating = votes == 0 ? \"No ratings\" : \"\\(Int((item.approval ?? 0) * 100))% (\\(votes))\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2619"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "\\(rating) \\u{00B7} \\(item.downloads) added",
+   "lines": [
+    71
+   ],
+   "contexts": [
+    "return item.downloads > 0 ? \"\\(rating) \\u{00B7} \\(item.downloads) added\" : rating"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2620"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "This build is not connected to a community server, so shared binds are not available.",
+   "lines": [
+    75
+   ],
+   "contexts": [
+    "guard store.available else { error = \"This build is not connected to a community server, so shared binds are not available.\"; return }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2621"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "About",
+   "lines": [
+    118
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"About\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2622"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Contains",
+   "lines": [
+    119
+   ],
+   "contexts": [
+    "ValueRow(id: \"sd-contents\", symbol: \"square.stack.3d.up.fill\", title: \"Contains\", value: shown.contents)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2623"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Rating",
+   "lines": [
+    120
+   ],
+   "contexts": [
+    "ValueRow(id: \"sd-rating\", symbol: \"hand.thumbsup.fill\", title: \"Rating\", value: shown.approval.map { \"\\(Int($0 * 100))% of \\(shown.up + shown.down)\" } ?? \"Not rated yet\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2624"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "\\(Int($0 * 100))% of \\(shown.up + shown.down)",
+   "lines": [
+    120
+   ],
+   "contexts": [
+    "ValueRow(id: \"sd-rating\", symbol: \"hand.thumbsup.fill\", title: \"Rating\", value: shown.approval.map { \"\\(Int($0 * 100))% of \\(shown.up + shown.down)\" } ?? \"Not rated yet\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2625"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Not rated yet",
+   "lines": [
+    120
+   ],
+   "contexts": [
+    "ValueRow(id: \"sd-rating\", symbol: \"hand.thumbsup.fill\", title: \"Rating\", value: shown.approval.map { \"\\(Int($0 * 100))% of \\(shown.up + shown.down)\" } ?? \"Not rated yet\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2626"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Added by",
+   "lines": [
+    121
+   ],
+   "contexts": [
+    "ValueRow(id: \"sd-adds\", symbol: \"arrow.down.circle.fill\", title: \"Added by\", value: \"\\(shown.downloads)\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2627"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "\\(shown.downloads)",
+   "lines": [
+    121
+   ],
+   "contexts": [
+    "ValueRow(id: \"sd-adds\", symbol: \"arrow.down.circle.fill\", title: \"Added by\", value: \"\\(shown.downloads)\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2628"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Updated",
+   "lines": [
+    122
+   ],
+   "contexts": [
+    "ValueRow(id: \"sd-updated\", symbol: \"clock.fill\", title: \"Updated\", value: shown.updated)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2629"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "The author's name and notes show here once they have been approved.",
+   "lines": [
+    124
+   ],
+   "contexts": [
+    "else { Text(\"The author's name and notes show here once they have been approved.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2630"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Use it",
+   "lines": [
+    126
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Use it\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2631"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Already in your sets",
+   "lines": [
+    127
+   ],
+   "contexts": [
+    "ActionRow(id: \"sd-add\", symbol: alreadyAdded ? \"checkmark.circle.fill\" : \"plus.circle.fill\", title: alreadyAdded ? \"Already in your sets\" : \"Add to my sets\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2632"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Add to my sets",
+   "lines": [
+    127
+   ],
+   "contexts": [
+    "ActionRow(id: \"sd-add\", symbol: alreadyAdded ? \"checkmark.circle.fill\" : \"plus.circle.fill\", title: alreadyAdded ? \"Already in your sets\" : \"Add to my sets\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2633"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "A copy you can change. It is not used until you pick it.",
+   "lines": [
+    128
+   ],
+   "contexts": [
+    "subtitle: \"A copy you can change. It is not used until you pick it.\", chevron: false) { add() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2634"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Reviews",
+   "lines": [
+    132
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Reviews\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2635"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Rate it",
+   "lines": [
+    133
+   ],
+   "contexts": [
+    "ActionRow(id: \"sd-up\", symbol: \"hand.thumbsup\", title: \"Rate it\", subtitle: \"Thumbs up or down, and an optional comment\", chevron: true) { reviewing = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2636"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Thumbs up or down, and an optional comment",
+   "lines": [
+    133
+   ],
+   "contexts": [
+    "ActionRow(id: \"sd-up\", symbol: \"hand.thumbsup\", title: \"Rate it\", subtitle: \"Thumbs up or down, and an optional comment\", chevron: true) { reviewing = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2637"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Thumbs up",
+   "lines": [
+    135,
+    248
+   ],
+   "contexts": [
+    "RowBase(id: \"rv-\\(r.id)\", symbol: r.thumb == \"up\" ? \"hand.thumbsup.fill\" : \"hand.thumbsdown.fill\", tint: r.thumb == \"up\" ? .green : .red, title: r.comment.isEmpty ? (r.thumb == \"up\" ? \"Thumbs up\" : \"Thumbs down\") : r.comment, subtitle: r.date, action: {}) { EmptyView() }",
+    "ChoiceRow(id: \"rs-thumb\", symbol: \"hand.thumbsup.fill\", title: \"Did it work for you?\", options: [(true, \"Thumbs up\"), (false, \"Thumbs down\")], selection: $thumbUp)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2638"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Thumbs down",
+   "lines": [
+    135,
+    248
+   ],
+   "contexts": [
+    "RowBase(id: \"rv-\\(r.id)\", symbol: r.thumb == \"up\" ? \"hand.thumbsup.fill\" : \"hand.thumbsdown.fill\", tint: r.thumb == \"up\" ? .green : .red, title: r.comment.isEmpty ? (r.thumb == \"up\" ? \"Thumbs up\" : \"Thumbs down\") : r.comment, subtitle: r.date, action: {}) { EmptyView() }",
+    "ChoiceRow(id: \"rs-thumb\", symbol: \"hand.thumbsup.fill\", title: \"Did it work for you?\", options: [(true, \"Thumbs up\"), (false, \"Thumbs down\")], selection: $thumbUp)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2639"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "No comments yet.",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "if reviews.isEmpty { Text(\"No comments yet.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2640"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Report this set",
+   "lines": [
+    140
+   ],
+   "contexts": [
+    "ActionRow(id: \"sd-flag\", symbol: \"flag\", title: \"Report this set\", subtitle: \"If it is spam or not what it says. Several reports hide it.\", chevron: false) { confirmFlag = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2641"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "If it is spam or not what it says. Several reports hide it.",
+   "lines": [
+    140
+   ],
+   "contexts": [
+    "ActionRow(id: \"sd-flag\", symbol: \"flag\", title: \"Report this set\", subtitle: \"If it is spam or not what it says. Several reports hide it.\", chevron: false) { confirmFlag = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2642"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "pending",
+   "lines": [
+    152,
+    322
+   ],
+   "contexts": [
+    "message = result.commentStatus == \"pending\" ? \"Thanks. Your comment shows once it has been approved.\" : \"Thanks for rating it.\"",
+    "message = result.textStatus == \"pending\" ? \"Shared. The name and notes show after they have been approved.\" : \"Shared.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2643"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Thanks. Your comment shows once it has been approved.",
+   "lines": [
+    152
+   ],
+   "contexts": [
+    "message = result.commentStatus == \"pending\" ? \"Thanks. Your comment shows once it has been approved.\" : \"Thanks for rating it.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2644"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Thanks for rating it.",
+   "lines": [
+    152
+   ],
+   "contexts": [
+    "message = result.commentStatus == \"pending\" ? \"Thanks. Your comment shows once it has been approved.\" : \"Thanks for rating it.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2645"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Report this set?",
+   "lines": [
+    155
+   ],
+   "contexts": [
+    ".confirm(\"Report this set?\", message: \"Use this for spam or sets that are not what they say.\", confirmTitle: \"Report\", destructive: true, isPresented: $confirmFlag) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2646"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Use this for spam or sets that are not what they say.",
+   "lines": [
+    155
+   ],
+   "contexts": [
+    ".confirm(\"Report this set?\", message: \"Use this for spam or sets that are not what they say.\", confirmTitle: \"Report\", destructive: true, isPresented: $confirmFlag) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2647"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Report",
+   "lines": [
+    155
+   ],
+   "contexts": [
+    ".confirm(\"Report this set?\", message: \"Use this for spam or sets that are not what they say.\", confirmTitle: \"Report\", destructive: true, isPresented: $confirmFlag) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2648"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Reported. Thank you.",
+   "lines": [
+    156
+   ],
+   "contexts": [
+    "Task { do { try await store.flag(id: summary.id); message = \"Reported. Thank you.\" } catch { message = error.localizedDescription } }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2649"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Controller",
+   "lines": [
+    162
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Controller\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2650"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Left stick",
+   "lines": [
+    164
+   ],
+   "contexts": [
+    "ValueRow(id: \"sd-ls\", symbol: \"l.joystick.fill\", title: \"Left stick\", value: PadActions.stickModes.first { $0.id == (pad.binds[\"LS\"] ?? \"wasd\") }?.label ?? \"\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2651"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Right stick",
+   "lines": [
+    165
+   ],
+   "contexts": [
+    "ValueRow(id: \"sd-rs\", symbol: \"r.joystick.fill\", title: \"Right stick\", value: PadActions.stickModes.first { $0.id == (pad.binds[\"RS\"] ?? \"mouse\") }?.label ?? \"\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2652"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "The standard button layout.",
+   "lines": [
+    169
+   ],
+   "contexts": [
+    "if pad.binds.filter({ PadActions.buttons.contains($0.key) }).isEmpty { Text(\"The standard button layout.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2653"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Touch layout",
+   "lines": [
+    173
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Touch layout\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2654"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Still loading. Try again in a moment.",
+   "lines": [
+    187
+   ],
+   "contexts": [
+    "guard let g = game, let d = detail else { message = \"Still loading. Try again in a moment.\"; return }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2655"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "That set is already in your list.",
+   "lines": [
+    188
+   ],
+   "contexts": [
+    "if alreadyAdded { message = \"That set is already in your list.\"; return }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2656"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "That set has nothing usable in it.",
+   "lines": [
+    189
+   ],
+   "contexts": [
+    "guard let set = BindsShare.localSet(from: d, existingNames: (g.bindSets ?? []).map(\\.name)) else { message = \"That set has nothing usable in it.\"; return }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2657"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Added as \\u{201C}\\(set.name)\\u{201D}. Pick it under Bind set in use when you want it.",
+   "lines": [
+    191
+   ],
+   "contexts": [
+    "message = \"Added as \\u{201C}\\(set.name)\\u{201D}. Pick it under Bind set in use when you want it.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2658"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "\\u{2191}\\u{2190}\\u{2192}\\u{2193}",
+   "lines": [
+    211
+   ],
+   "contexts": [
+    "Text(c.isStick ? (c.action == \"stick-arrows\" ? \"\\u{2191}\\u{2190}\\u{2192}\\u{2193}\" : \"WASD\") : c.label)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2659"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Rate this set",
+   "lines": [
+    240
+   ],
+   "contexts": [
+    "Text(\"Rate this set\").font(.system(size: 26, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2660"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Cancel",
+   "lines": [
+    242
+   ],
+   "contexts": [
+    "PillButton(id: \"rs-close\", title: \"Cancel\", symbol: \"xmark\") { dismiss() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2661"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Did it work for you?",
+   "lines": [
+    248
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"rs-thumb\", symbol: \"hand.thumbsup.fill\", title: \"Did it work for you?\", options: [(true, \"Thumbs up\"), (false, \"Thumbs down\")], selection: $thumbUp)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2662"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Comment",
+   "lines": [
+    249
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"rs-comment\", symbol: \"text.bubble\", title: \"Comment\", placeholder: \"optional (300 characters)\", text: Binding(get: { comment }, set: { comment = String($0.prefix(300)) }))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2663"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "optional (300 characters)",
+   "lines": [
+    249
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"rs-comment\", symbol: \"text.bubble\", title: \"Comment\", placeholder: \"optional (300 characters)\", text: Binding(get: { comment }, set: { comment = String($0.prefix(300)) }))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2664"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "A comment is shown to others only after it has been approved. Your thumb counts at once. Rating again replaces your earlier rating.",
+   "lines": [
+    250
+   ],
+   "contexts": [
+    "Text(\"A comment is shown to others only after it has been approved. Your thumb counts at once. Rating again replaces your earlier rating.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2665"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Sending\\u{2026}",
+   "lines": [
+    253
+   ],
+   "contexts": [
+    "ActionRow(id: \"rs-send\", symbol: \"paperplane.fill\", title: sending ? \"Sending\\u{2026}\" : \"Send\", chevron: false, prominent: true) { send() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2666"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Send",
+   "lines": [
+    253
+   ],
+   "contexts": [
+    "ActionRow(id: \"rs-send\", symbol: \"paperplane.fill\", title: sending ? \"Sending\\u{2026}\" : \"Send\", chevron: false, prominent: true) { send() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2667"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Community",
+   "lines": [
+    294
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Community\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2668"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Shared",
+   "lines": [
+    296
+   ],
+   "contexts": [
+    "ValueRow(id: \"sh-state\", symbol: \"person.2.fill\", title: \"Shared\", value: remote.hidden ? \"Hidden\" : \"Yes\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2669"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Hidden",
+   "lines": [
+    296
+   ],
+   "contexts": [
+    "ValueRow(id: \"sh-state\", symbol: \"person.2.fill\", title: \"Shared\", value: remote.hidden ? \"Hidden\" : \"Yes\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2670"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Yes",
+   "lines": [
+    296
+   ],
+   "contexts": [
+    "ValueRow(id: \"sh-state\", symbol: \"person.2.fill\", title: \"Shared\", value: remote.hidden ? \"Hidden\" : \"Yes\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2671"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "\\(remote.statusText). \\(remote.up) up, \\(remote.down) down, added by \\(remote.downloads).",
+   "lines": [
+    297
+   ],
+   "contexts": [
+    "Text(\"\\(remote.statusText). \\(remote.up) up, \\(remote.down) down, added by \\(remote.downloads).\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2672"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Update the shared copy",
+   "lines": [
+    298
+   ],
+   "contexts": [
+    "ActionRow(id: \"sh-update\", symbol: \"arrow.triangle.2.circlepath\", title: \"Update the shared copy\", subtitle: \"Sends this version. Changed text waits for approval again.\", chevron: false) { confirmShare = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2673"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Sends this version. Changed text waits for approval again.",
+   "lines": [
+    298
+   ],
+   "contexts": [
+    "ActionRow(id: \"sh-update\", symbol: \"arrow.triangle.2.circlepath\", title: \"Update the shared copy\", subtitle: \"Sends this version. Changed text waits for approval again.\", chevron: false) { confirmShare = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2674"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Stop sharing",
+   "lines": [
+    299,
+    309
+   ],
+   "contexts": [
+    "ActionRow(id: \"sh-stop\", symbol: \"person.2.slash\", title: \"Stop sharing\", destructive: true, chevron: false) { confirmStop = true }",
+    ".confirm(\"Stop sharing?\", message: \"The shared copy is removed with its ratings. Your own set stays.\", confirmTitle: \"Stop sharing\", destructive: true, isPresented: $confirmStop) { stop(g, s) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2675"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Share this set",
+   "lines": [
+    301
+   ],
+   "contexts": [
+    "ActionRow(id: \"sh-share\", symbol: \"square.and.arrow.up.on.square\", title: \"Share this set\", subtitle: \"Anyone with Porthole can find it for this game\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2676"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Anyone with Porthole can find it for this game",
+   "lines": [
+    301
+   ],
+   "contexts": [
+    "ActionRow(id: \"sh-share\", symbol: \"square.and.arrow.up.on.square\", title: \"Share this set\", subtitle: \"Anyone with Porthole can find it for this game\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2677"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Shares the controller binds and the touch layout so other people can add them. The name, notes and control labels you typed are shown to others only after they have been approved. No account or name of yours is sent.",
+   "lines": [
+    302
+   ],
+   "contexts": [
+    "info: \"Shares the controller binds and the touch layout so other people can add them. The name, notes and control labels you typed are shown to others only after they have been approved. No account or name of yours is sent.\", chevron: false) { confirmShare = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2678"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Share \\u{201C}\\(s.name)\\u{201D}?",
+   "lines": [
+    307
+   ],
+   "contexts": [
+    ".confirm(remote == nil ? \"Share \\u{201C}\\(s.name)\\u{201D}?\" : \"Update the shared copy?\", message: \"Everyone using Porthole can see its binds and layout. Its name, notes and control labels appear after approval. You can stop sharing at any time.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2679"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Update the shared copy?",
+   "lines": [
+    307
+   ],
+   "contexts": [
+    ".confirm(remote == nil ? \"Share \\u{201C}\\(s.name)\\u{201D}?\" : \"Update the shared copy?\", message: \"Everyone using Porthole can see its binds and layout. Its name, notes and control labels appear after approval. You can stop sharing at any time.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2680"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Everyone using Porthole can see its binds and layout. Its name, notes and control labels appear after approval. You can stop sharing at any time.",
+   "lines": [
+    307
+   ],
+   "contexts": [
+    ".confirm(remote == nil ? \"Share \\u{201C}\\(s.name)\\u{201D}?\" : \"Update the shared copy?\", message: \"Everyone using Porthole can see its binds and layout. Its name, notes and control labels appear after approval. You can stop sharing at any time.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2681"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Share",
+   "lines": [
+    308
+   ],
+   "contexts": [
+    "confirmTitle: remote == nil ? \"Share\" : \"Update\", isPresented: $confirmShare) { share(g, s) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2682"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Update",
+   "lines": [
+    308
+   ],
+   "contexts": [
+    "confirmTitle: remote == nil ? \"Share\" : \"Update\", isPresented: $confirmShare) { share(g, s) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2683"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Stop sharing?",
+   "lines": [
+    309
+   ],
+   "contexts": [
+    ".confirm(\"Stop sharing?\", message: \"The shared copy is removed with its ratings. Your own set stays.\", confirmTitle: \"Stop sharing\", destructive: true, isPresented: $confirmStop) { stop(g, s) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2684"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "The shared copy is removed with its ratings. Your own set stays.",
+   "lines": [
+    309
+   ],
+   "contexts": [
+    ".confirm(\"Stop sharing?\", message: \"The shared copy is removed with its ratings. Your own set stays.\", confirmTitle: \"Stop sharing\", destructive: true, isPresented: $confirmStop) { stop(g, s) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2685"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "This build is not connected to a community server, so sharing is not available.",
+   "lines": [
+    316
+   ],
+   "contexts": [
+    "guard store.available else { message = \"This build is not connected to a community server, so sharing is not available.\"; return }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2686"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Sharing\\u{2026}",
+   "lines": [
+    317
+   ],
+   "contexts": [
+    "busy = true; message = \"Sharing\\u{2026}\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2687"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Shared. The name and notes show after they have been approved.",
+   "lines": [
+    322
+   ],
+   "contexts": [
+    "message = result.textStatus == \"pending\" ? \"Shared. The name and notes show after they have been approved.\" : \"Shared.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2688"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "Shared.",
+   "lines": [
+    322
+   ],
+   "contexts": [
+    "message = result.textStatus == \"pending\" ? \"Shared. The name and notes show after they have been approved.\" : \"Shared.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2689"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedBindsViews.swift",
+   "text": "No longer shared.",
+   "lines": [
+    335
+   ],
+   "contexts": [
+    "message = \"No longer shared.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2690"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedSetupSheet.swift",
+   "text": "Apply a shared setup",
+   "lines": [
+    18
+   ],
+   "contexts": [
+    "GameSubSheet(title: \"Apply a shared setup\", scope: scope, close: { dismiss() }) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2691"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedSetupSheet.swift",
+   "text": "Made for \\(found.name)",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Made for \\(found.name)\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2692"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedSetupSheet.swift",
+   "text": "This setup was made for a different game (\\(found.programName)). Settings that suit one game can break another.",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "Text(\"This setup was made for a different game (\\(found.programName)). Settings that suit one game can break another.\").font(.footnote).foregroundStyle(Theme.warn)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2693"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedSetupSheet.swift",
+   "text": "Applying replaces this game's launch options, per-game settings, engine choices and saved controls. Its program, art and play time stay.",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "Text(\"Applying replaces this game's launch options, per-game settings, engine choices and saved controls. Its program, art and play time stay.\").font(.footnote).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2694"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedSetupSheet.swift",
+   "text": "Apply to \\(game?.name ?? ",
+   "lines": [
+    29
+   ],
+   "contexts": [
+    "PillButton(id: \"ss-apply\", title: \"Apply to \\(game?.name ?? \"this game\")\", symbol: \"checkmark\", style: .primary) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2695"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedSetupSheet.swift",
+   "text": "Use a different setup",
+   "lines": [
+    33
+   ],
+   "contexts": [
+    "PillButton(id: \"ss-other\", title: \"Use a different setup\", symbol: \"arrow.uturn.backward\") { self.found = nil; message = nil }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2696"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedSetupSheet.swift",
+   "text": "Where is the setup?",
+   "lines": [
+    35
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Where is the setup?\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2697"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedSetupSheet.swift",
+   "text": "Read it from the clipboard",
+   "lines": [
+    36
+   ],
+   "contexts": [
+    "PillButton(id: \"ss-clip\", title: \"Read it from the clipboard\", symbol: \"doc.on.clipboard\") { fromClipboard() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2698"
+  },
+  {
+   "file": "app/Sources/UI/Game/SharedSetupSheet.swift",
+   "text": "Choose a file",
+   "lines": [
+    37
+   ],
+   "contexts": [
+    "PillButton(id: \"ss-file\", title: \"Choose a file\", symbol: \"folder\") { picking = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2699"
+  }
+ ]
+}

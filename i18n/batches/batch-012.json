@@ -1,0 +1,2951 @@
+{
+ "batch": 12,
+ "units": [
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Paused",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "case .paused?: return BadgeData(symbol: \"pause.circle.fill\", text: \"Paused\", tint: Theme.warn)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1980"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Failed",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "case .failed?: return BadgeData(symbol: \"exclamationmark.triangle.fill\", text: \"Failed\", tint: Theme.bad)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1981"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Installed",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "case .installed?: return BadgeData(symbol: \"checkmark.circle.fill\", text: \"Installed\", tint: Theme.good)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1982"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Refresh the list",
+   "lines": [
+    94
+   ],
+   "contexts": [
+    "else { IconPillButton(id: \"am-refresh\", symbol: \"arrow.clockwise\", label: \"Refresh the list\") { library.refresh() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1983"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Amazon account",
+   "lines": [
+    96
+   ],
+   "contexts": [
+    "IconPillButton(id: \"am-account\", symbol: \"person.crop.circle\", label: \"Amazon account\") { showAccount = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1984"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "No games found on this account yet. Games from Prime Gaming show up once they are claimed.",
+   "lines": [
+    100
+   ],
+   "contexts": [
+    "Text(library.games.isEmpty ? \"No games found on this account yet. Games from Prime Gaming show up once they are claimed.\" : \"No games match.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1985"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "No games match.",
+   "lines": [
+    100
+   ],
+   "contexts": [
+    "Text(library.games.isEmpty ? \"No games found on this account yet. Games from Prime Gaming show up once they are claimed.\" : \"No games match.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1986"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Amazon games are downloaded straight from Amazon's servers. Some need the Amazon Games app's online services to start and may not run.",
+   "lines": [
+    106
+   ],
+   "contexts": [
+    "Text(\"Amazon games are downloaded straight from Amazon's servers. Some need the Amazon Games app's online services to start and may not run.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1987"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Search \\(library.games.count) game\\(library.games.count == 1 ? ",
+   "lines": [
+    114
+   ],
+   "contexts": [
+    "private var searchField: some View { SearchField(id: \"am-search\", prompt: \"Search \\(library.games.count) game\\(library.games.count == 1 ? \"\" : \"s\")\", text: $search) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1988"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Uninstall \\(game.title)?",
+   "lines": [
+    131
+   ],
+   "contexts": [
+    ".confirm(\"Uninstall \\(game.title)?\", message: \"The game's folder is removed from this device. Your Amazon library and your save files in Porthole's backups are not touched.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1989"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "The game's folder is removed from this device. Your Amazon library and your save files in Porthole's backups are not touched.",
+   "lines": [
+    131
+   ],
+   "contexts": [
+    ".confirm(\"Uninstall \\(game.title)?\", message: \"The game's folder is removed from this device. Your Amazon library and your save files in Porthole's backups are not touched.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1990"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Uninstall and delete its files",
+   "lines": [
+    132
+   ],
+   "contexts": [
+    "confirmTitle: \"Uninstall and delete its files\", destructive: true, isPresented: $confirmUninstall) { installer.uninstall(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1991"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Install",
+   "lines": [
+    139
+   ],
+   "contexts": [
+    "button(\"Install\", symbol: \"arrow.down.circle.fill\", prominent: true) { installer.install(game) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1992"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Downloads the game straight from Amazon. Keep the app open while it installs.",
+   "lines": [
+    140
+   ],
+   "contexts": [
+    "note(\"Downloads the game straight from Amazon. Keep the app open while it installs.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1993"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Waiting for its turn\\u{2026}",
+   "lines": [
+    142
+   ],
+   "contexts": [
+    "Label(\"Waiting for its turn\\u{2026}\", systemImage: \"hourglass\").foregroundStyle(.secondary)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1994"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Cancel",
+   "lines": [
+    143,
+    150
+   ],
+   "contexts": [
+    "button(\"Cancel\", symbol: \"xmark\") { installer.cancel(game.id) }",
+    "button(\"Cancel\", symbol: \"xmark\", role: .destructive) { installer.cancel(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1995"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Pause",
+   "lines": [
+    149
+   ],
+   "contexts": [
+    "button(\"Pause\", symbol: \"pause.fill\") { installer.pause(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1996"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Resume",
+   "lines": [
+    155
+   ],
+   "contexts": [
+    "button(\"Resume\", symbol: \"play.fill\", prominent: true) { installer.install(game) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1997"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Remove",
+   "lines": [
+    156,
+    162
+   ],
+   "contexts": [
+    "button(\"Remove\", symbol: \"trash\", role: .destructive) { installer.cancel(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1998"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Try again",
+   "lines": [
+    161
+   ],
+   "contexts": [
+    "button(\"Try again\", symbol: \"arrow.clockwise\", prominent: true) { installer.install(game) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1999"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Installed. Find it in your library.",
+   "lines": [
+    165
+   ],
+   "contexts": [
+    "Label(\"Installed. Find it in your library.\", systemImage: \"checkmark.seal.fill\").foregroundStyle(.green)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2000"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Uninstall",
+   "lines": [
+    166
+   ],
+   "contexts": [
+    "button(\"Uninstall\", symbol: \"trash\", role: .destructive) { confirmUninstall = true }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2001"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Done",
+   "lines": [
+    17
+   ],
+   "contexts": [
+    "private let doneButton = ControlsEditorView.chip(\"Done\", prominent: true)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2002"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Undo",
+   "lines": [
+    18
+   ],
+   "contexts": [
+    "private let undoButton = ControlsEditorView.chip(\"Undo\"), redoButton = ControlsEditorView.chip(\"Redo\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2003"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Redo",
+   "lines": [
+    18
+   ],
+   "contexts": [
+    "private let undoButton = ControlsEditorView.chip(\"Undo\"), redoButton = ControlsEditorView.chip(\"Redo\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2004"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "+ Add",
+   "lines": [
+    19,
+    199
+   ],
+   "contexts": [
+    "private let addButton = ControlsEditorView.chip(\"+ Add\"), startButton = ControlsEditorView.chip(\"Presets \\u{25BE}\"), lookButton = ControlsEditorView.chip(\"Look off\")",
+    "addButton.setTitle(trayOpen ? \"\\u{2212} Tray\" : \"+ Add\", for: .normal)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2005"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Presets \\u{25BE}",
+   "lines": [
+    19
+   ],
+   "contexts": [
+    "private let addButton = ControlsEditorView.chip(\"+ Add\"), startButton = ControlsEditorView.chip(\"Presets \\u{25BE}\"), lookButton = ControlsEditorView.chip(\"Look off\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2006"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Look off",
+   "lines": [
+    19
+   ],
+   "contexts": [
+    "private let addButton = ControlsEditorView.chip(\"+ Add\"), startButton = ControlsEditorView.chip(\"Presets \\u{25BE}\"), lookButton = ControlsEditorView.chip(\"Look off\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2007"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Latch: off",
+   "lines": [
+    29,
+    226
+   ],
+   "contexts": [
+    "private let latchButton = ControlsEditorView.chip(\"Latch: off\")",
+    "latchButton.setTitle(latched ? \"Latch: on\" : \"Latch: off\", for: .normal)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2008"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Copy",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "private let copyButton = ControlsEditorView.chip(\"Copy\"), deleteButton = ControlsEditorView.chip(\"Delete\"), closeButton = ControlsEditorView.chip(\"\\u{2715}\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2009"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Delete",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "private let copyButton = ControlsEditorView.chip(\"Copy\"), deleteButton = ControlsEditorView.chip(\"Delete\"), closeButton = ControlsEditorView.chip(\"\\u{2715}\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2010"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "W A S D",
+   "lines": [
+    40,
+    401
+   ],
+   "contexts": [
+    "(\"stick-wasd\", \"W A S D\"), (\"stick-arrows\", \"Arrows\"),",
+    "b.setTitle(id.hasPrefix(\"stick\") ? (id == \"stick-arrows\" ? \"Arrow keys\" : \"W A S D\") : (id == \"lookmode\" ? \"Look / Mouse switch\" : PadActions.shortLabel(id).isEmpty ? PadActions.label(id) : PadActions.shortLabel(id)), for: .normal)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2011"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Arrows",
+   "lines": [
+    40
+   ],
+   "contexts": [
+    "(\"stick-wasd\", \"W A S D\"), (\"stick-arrows\", \"Arrows\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2012"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Wh\\u{2191}",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "(\"lmb\", \"LMB\"), (\"rmb\", \"RMB\"), (\"mmb\", \"MMB\"), (\"wheelup\", \"Wh\\u{2191}\"), (\"wheeldown\", \"Wh\\u{2193}\"), (\"lookmode\", \"Look/Mouse\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2013"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Wh\\u{2193}",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "(\"lmb\", \"LMB\"), (\"rmb\", \"RMB\"), (\"mmb\", \"MMB\"), (\"wheelup\", \"Wh\\u{2191}\"), (\"wheeldown\", \"Wh\\u{2193}\"), (\"lookmode\", \"Look/Mouse\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2014"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Look/Mouse",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "(\"lmb\", \"LMB\"), (\"rmb\", \"RMB\"), (\"mmb\", \"MMB\"), (\"wheelup\", \"Wh\\u{2191}\"), (\"wheeldown\", \"Wh\\u{2193}\"), (\"lookmode\", \"Look/Mouse\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2015"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Space",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "(\"space\", \"Space\"), (\"shift\", \"Shift\"), (\"ctrl\", \"Ctrl\"), (\"alt\", \"Alt\"), (\"key-E\", \"E\"), (\"key-F\", \"F\"), (\"key-R\", \"R\"), (\"key-Q\", \"Q\"), (\"key-C\", \"C\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2016"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Shift",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "(\"space\", \"Space\"), (\"shift\", \"Shift\"), (\"ctrl\", \"Ctrl\"), (\"alt\", \"Alt\"), (\"key-E\", \"E\"), (\"key-F\", \"F\"), (\"key-R\", \"R\"), (\"key-Q\", \"Q\"), (\"key-C\", \"C\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2017"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Ctrl",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "(\"space\", \"Space\"), (\"shift\", \"Shift\"), (\"ctrl\", \"Ctrl\"), (\"alt\", \"Alt\"), (\"key-E\", \"E\"), (\"key-F\", \"F\"), (\"key-R\", \"R\"), (\"key-Q\", \"Q\"), (\"key-C\", \"C\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2018"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Alt",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "(\"space\", \"Space\"), (\"shift\", \"Shift\"), (\"ctrl\", \"Ctrl\"), (\"alt\", \"Alt\"), (\"key-E\", \"E\"), (\"key-F\", \"F\"), (\"key-R\", \"R\"), (\"key-Q\", \"Q\"), (\"key-C\", \"C\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2019"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "E",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "(\"space\", \"Space\"), (\"shift\", \"Shift\"), (\"ctrl\", \"Ctrl\"), (\"alt\", \"Alt\"), (\"key-E\", \"E\"), (\"key-F\", \"F\"), (\"key-R\", \"R\"), (\"key-Q\", \"Q\"), (\"key-C\", \"C\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2020"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "F",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "(\"space\", \"Space\"), (\"shift\", \"Shift\"), (\"ctrl\", \"Ctrl\"), (\"alt\", \"Alt\"), (\"key-E\", \"E\"), (\"key-F\", \"F\"), (\"key-R\", \"R\"), (\"key-Q\", \"Q\"), (\"key-C\", \"C\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2021"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "R",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "(\"space\", \"Space\"), (\"shift\", \"Shift\"), (\"ctrl\", \"Ctrl\"), (\"alt\", \"Alt\"), (\"key-E\", \"E\"), (\"key-F\", \"F\"), (\"key-R\", \"R\"), (\"key-Q\", \"Q\"), (\"key-C\", \"C\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2022"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Q",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "(\"space\", \"Space\"), (\"shift\", \"Shift\"), (\"ctrl\", \"Ctrl\"), (\"alt\", \"Alt\"), (\"key-E\", \"E\"), (\"key-F\", \"F\"), (\"key-R\", \"R\"), (\"key-Q\", \"Q\"), (\"key-C\", \"C\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2023"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "C",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "(\"space\", \"Space\"), (\"shift\", \"Shift\"), (\"ctrl\", \"Ctrl\"), (\"alt\", \"Alt\"), (\"key-E\", \"E\"), (\"key-F\", \"F\"), (\"key-R\", \"R\"), (\"key-Q\", \"Q\"), (\"key-C\", \"C\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2024"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "V",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "(\"key-V\", \"V\"), (\"key-G\", \"G\"), (\"key-X\", \"X\"), (\"key-Z\", \"Z\"), (\"tab\", \"Tab\"), (\"esc\", \"Esc\"), (\"enter\", \"Enter\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2025"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "G",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "(\"key-V\", \"V\"), (\"key-G\", \"G\"), (\"key-X\", \"X\"), (\"key-Z\", \"Z\"), (\"tab\", \"Tab\"), (\"esc\", \"Esc\"), (\"enter\", \"Enter\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2026"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Z",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "(\"key-V\", \"V\"), (\"key-G\", \"G\"), (\"key-X\", \"X\"), (\"key-Z\", \"Z\"), (\"tab\", \"Tab\"), (\"esc\", \"Esc\"), (\"enter\", \"Enter\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2027"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Tab",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "(\"key-V\", \"V\"), (\"key-G\", \"G\"), (\"key-X\", \"X\"), (\"key-Z\", \"Z\"), (\"tab\", \"Tab\"), (\"esc\", \"Esc\"), (\"enter\", \"Enter\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2028"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Esc",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "(\"key-V\", \"V\"), (\"key-G\", \"G\"), (\"key-X\", \"X\"), (\"key-Z\", \"Z\"), (\"tab\", \"Tab\"), (\"esc\", \"Esc\"), (\"enter\", \"Enter\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2029"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Enter",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "(\"key-V\", \"V\"), (\"key-G\", \"G\"), (\"key-X\", \"X\"), (\"key-Z\", \"Z\"), (\"tab\", \"Tab\"), (\"esc\", \"Esc\"), (\"enter\", \"Enter\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2030"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "F1",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "(\"key-1\", \"1\"), (\"key-2\", \"2\"), (\"key-3\", \"3\"), (\"key-4\", \"4\"), (\"key-5\", \"5\"), (\"f1\", \"F1\"), (\"f5\", \"F5\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2031"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "F5",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "(\"key-1\", \"1\"), (\"key-2\", \"2\"), (\"key-3\", \"3\"), (\"key-4\", \"4\"), (\"key-5\", \"5\"), (\"f1\", \"F1\"), (\"f5\", \"F5\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2032"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "  Tap + Add, then tap a tile or hold it and drag it in \\u{00B7} drag to move \\u{00B7} drag the corner dot or pinch to resize \\u{00B7} tap a control to change it  ",
+   "lines": [
+    81
+   ],
+   "contexts": [
+    "hint.text = \"  Tap + Add, then tap a tile or hold it and drag it in \\u{00B7} drag to move \\u{00B7} drag the corner dot or pinch to resize \\u{00B7} tap a control to change it  \""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2033"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Replace every control with\\u{2026} (Undo brings them back)",
+   "lines": [
+    90
+   ],
+   "contexts": [
+    "startButton.menu = UIMenu(title: \"Replace every control with\\u{2026} (Undo brings them back)\", children: ["
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2034"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Mouse and keys layout",
+   "lines": [
+    91
+   ],
+   "contexts": [
+    "UIAction(title: \"Mouse and keys layout\") { [weak self] _ in self?.controls?.replaceLayout(.mouseAndKeys) },"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2035"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "First person layout",
+   "lines": [
+    92
+   ],
+   "contexts": [
+    "UIAction(title: \"First person layout\") { [weak self] _ in self?.controls?.replaceLayout(.firstPerson) },"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2036"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Empty screen",
+   "lines": [
+    93
+   ],
+   "contexts": [
+    "UIAction(title: \"Empty screen\", attributes: .destructive) { [weak self] _ in self?.controls?.replaceLayout(TouchLayout()) },"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2037"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "More\\u{2026}",
+   "lines": [
+    112
+   ],
+   "contexts": [
+    "trayStack.addArrangedSubview(TrayTile(action: \"more\", face: \"More\\u{2026}\", editor: self))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2038"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Size",
+   "lines": [
+    125
+   ],
+   "contexts": [
+    "let second = UIStackView(arrangedSubviews: [latchButton, Self.caption(\"Size\"), sizeSlider, sizeLabel])"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2039"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Look \\(c.layout?.look == true ? ",
+   "lines": [
+    194
+   ],
+   "contexts": [
+    "lookButton.setTitle(\"Look \\(c.layout?.look == true ? \"on\" : \"off\")\", for: .normal)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2040"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "\\u{2212} Tray",
+   "lines": [
+    199
+   ],
+   "contexts": [
+    "addButton.setTitle(trayOpen ? \"\\u{2212} Tray\" : \"+ Add\", for: .normal)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2041"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Stick: \\(sel.action == ",
+   "lines": [
+    223
+   ],
+   "contexts": [
+    "doesButton.setTitle(sel.isStick ? \"Stick: \\(sel.action == \"stick-arrows\" ? \"arrows\" : \"W A S D\") \\u{25BE}\" : \"Does: \\(PadActions.label(sel.action).prefix(16)) \\u{25BE}\", for: .normal)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2042"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": ") \\u{25BE}",
+   "lines": [
+    223
+   ],
+   "contexts": [
+    "doesButton.setTitle(sel.isStick ? \"Stick: \\(sel.action == \"stick-arrows\" ? \"arrows\" : \"W A S D\") \\u{25BE}\" : \"Does: \\(PadActions.label(sel.action).prefix(16)) \\u{25BE}\", for: .normal)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2043"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Does: \\(PadActions.label(sel.action).prefix(16)) \\u{25BE}",
+   "lines": [
+    223
+   ],
+   "contexts": [
+    "doesButton.setTitle(sel.isStick ? \"Stick: \\(sel.action == \"stick-arrows\" ? \"arrows\" : \"W A S D\") \\u{25BE}\" : \"Does: \\(PadActions.label(sel.action).prefix(16)) \\u{25BE}\", for: .normal)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2044"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Latch: on",
+   "lines": [
+    226
+   ],
+   "contexts": [
+    "latchButton.setTitle(latched ? \"Latch: on\" : \"Latch: off\", for: .normal)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2045"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "\\(Int(sel.size))",
+   "lines": [
+    231
+   ],
+   "contexts": [
+    "sizeLabel.text = \"\\(Int(sel.size))\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2046"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "\\(Int(sizeSlider.value.rounded()))",
+   "lines": [
+    237
+   ],
+   "contexts": [
+    "sizeLabel.text = \"\\(Int(sizeSlider.value.rounded()))\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2047"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Label",
+   "lines": [
+    267
+   ],
+   "contexts": [
+    "let alert = UIAlertController(title: \"Label\", message: \"Up to 8 characters shown on the control.\", preferredStyle: .alert)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2048"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Up to 8 characters shown on the control.",
+   "lines": [
+    267
+   ],
+   "contexts": [
+    "let alert = UIAlertController(title: \"Label\", message: \"Up to 8 characters shown on the control.\", preferredStyle: .alert)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2049"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Cancel",
+   "lines": [
+    269,
+    389
+   ],
+   "contexts": [
+    "alert.addAction(UIAlertAction(title: \"Cancel\", style: .cancel))",
+    "let close = UIButton(type: .system); close.setTitle(\"Cancel\", for: .normal); close.setTitleColor(.white, for: .normal); close.titleLabel?.font = .systemFont(ofSize: 14, weight: .semibold)"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2050"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Set",
+   "lines": [
+    270
+   ],
+   "contexts": [
+    "alert.addAction(UIAlertAction(title: \"Set\", style: .default) { [weak self, weak alert] _ in"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2051"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "\\u{25CE}\\n\\(face)",
+   "lines": [
+    355
+   ],
+   "contexts": [
+    "let l = UILabel(); l.text = action.hasPrefix(\"stick\") ? \"\\u{25CE}\\n\\(face)\" : face"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2052"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Add \\(face)",
+   "lines": [
+    367
+   ],
+   "contexts": [
+    "accessibilityLabel = \"Add \\(face)\"; accessibilityTraits = .button"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2053"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Stick",
+   "lines": [
+    383
+   ],
+   "contexts": [
+    "groups = sticks ? [(\"Stick\", [\"stick-wasd\", \"stick-arrows\"])] : PadActions.groups"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2054"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Which keys the stick holds",
+   "lines": [
+    388
+   ],
+   "contexts": [
+    "let title = UILabel(); title.text = sticks ? \"Which keys the stick holds\" : \"What it does\"; title.textColor = .white; title.font = .systemFont(ofSize: 15, weight: .bold)"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2055"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "What it does",
+   "lines": [
+    388
+   ],
+   "contexts": [
+    "let title = UILabel(); title.text = sticks ? \"Which keys the stick holds\" : \"What it does\"; title.textColor = .white; title.font = .systemFont(ofSize: 15, weight: .bold)"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2056"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Arrow keys",
+   "lines": [
+    401
+   ],
+   "contexts": [
+    "b.setTitle(id.hasPrefix(\"stick\") ? (id == \"stick-arrows\" ? \"Arrow keys\" : \"W A S D\") : (id == \"lookmode\" ? \"Look / Mouse switch\" : PadActions.shortLabel(id).isEmpty ? PadActions.label(id) : PadActions.shortLabel(id)), for: .normal)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2057"
+  },
+  {
+   "file": "app/Sources/UI/ControlsEditor.swift",
+   "text": "Look / Mouse switch",
+   "lines": [
+    401
+   ],
+   "contexts": [
+    "b.setTitle(id.hasPrefix(\"stick\") ? (id == \"stick-arrows\" ? \"Arrow keys\" : \"W A S D\") : (id == \"lookmode\" ? \"Look / Mouse switch\" : PadActions.shortLabel(id).isEmpty ? PadActions.label(id) : PadActions.shortLabel(id)), for: .normal)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2058"
+  },
+  {
+   "file": "app/Sources/UI/ControlsKit.swift",
+   "text": "Tab",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "case VK.tab: \"Tab\"; case VK.esc: \"Esc\"; case VK.enter: \"Enter\"; case VK.space: \"Space\"; case VK.backspace: \"Del\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2059"
+  },
+  {
+   "file": "app/Sources/UI/ControlsKit.swift",
+   "text": "Esc",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "case VK.tab: \"Tab\"; case VK.esc: \"Esc\"; case VK.enter: \"Enter\"; case VK.space: \"Space\"; case VK.backspace: \"Del\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2060"
+  },
+  {
+   "file": "app/Sources/UI/ControlsKit.swift",
+   "text": "Enter",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "case VK.tab: \"Tab\"; case VK.esc: \"Esc\"; case VK.enter: \"Enter\"; case VK.space: \"Space\"; case VK.backspace: \"Del\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2061"
+  },
+  {
+   "file": "app/Sources/UI/ControlsKit.swift",
+   "text": "Space",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "case VK.tab: \"Tab\"; case VK.esc: \"Esc\"; case VK.enter: \"Enter\"; case VK.space: \"Space\"; case VK.backspace: \"Del\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2062"
+  },
+  {
+   "file": "app/Sources/UI/ControlsKit.swift",
+   "text": "Del",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "case VK.tab: \"Tab\"; case VK.esc: \"Esc\"; case VK.enter: \"Enter\"; case VK.space: \"Space\"; case VK.backspace: \"Del\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2063"
+  },
+  {
+   "file": "app/Sources/UI/ControlsKit.swift",
+   "text": "Shift",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "case VK.shift: \"Shift\"; case VK.ctrl: \"Ctrl\"; case VK.alt: \"Alt\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2064"
+  },
+  {
+   "file": "app/Sources/UI/ControlsKit.swift",
+   "text": "Ctrl",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "case VK.shift: \"Shift\"; case VK.ctrl: \"Ctrl\"; case VK.alt: \"Alt\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2065"
+  },
+  {
+   "file": "app/Sources/UI/ControlsKit.swift",
+   "text": "Alt",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "case VK.shift: \"Shift\"; case VK.ctrl: \"Ctrl\"; case VK.alt: \"Alt\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2066"
+  },
+  {
+   "file": "app/Sources/UI/CustomControls.swift",
+   "text": "Look",
+   "lines": [
+    405,
+    416
+   ],
+   "contexts": [
+    "custom = (title.isEmpty || title == \"Look\") ? nil : title",
+    "setTitle(custom ?? (lookOn ? \"Look\" : \"Mouse\"), for: .normal)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2067"
+  },
+  {
+   "file": "app/Sources/UI/CustomControls.swift",
+   "text": "Mouse",
+   "lines": [
+    416
+   ],
+   "contexts": [
+    "setTitle(custom ?? (lookOn ? \"Look\" : \"Mouse\"), for: .normal)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2068"
+  },
+  {
+   "file": "app/Sources/UI/CustomControls.swift",
+   "text": "Left",
+   "lines": [
+    440
+   ],
+   "contexts": [
+    "accessibilityLabel = (button == 0 ? \"Left\" : button == 1 ? \"Right\" : \"Middle\") + \" mouse button\" + (title.isEmpty ? \"\" : \", \\(title)\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2069"
+  },
+  {
+   "file": "app/Sources/UI/CustomControls.swift",
+   "text": "Right",
+   "lines": [
+    440
+   ],
+   "contexts": [
+    "accessibilityLabel = (button == 0 ? \"Left\" : button == 1 ? \"Right\" : \"Middle\") + \" mouse button\" + (title.isEmpty ? \"\" : \", \\(title)\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2070"
+  },
+  {
+   "file": "app/Sources/UI/CustomControls.swift",
+   "text": "Middle",
+   "lines": [
+    440
+   ],
+   "contexts": [
+    "accessibilityLabel = (button == 0 ? \"Left\" : button == 1 ? \"Right\" : \"Middle\") + \" mouse button\" + (title.isEmpty ? \"\" : \", \\(title)\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2071"
+  },
+  {
+   "file": "app/Sources/UI/CustomControls.swift",
+   "text": " mouse button",
+   "lines": [
+    440
+   ],
+   "contexts": [
+    "accessibilityLabel = (button == 0 ? \"Left\" : button == 1 ? \"Right\" : \"Middle\") + \" mouse button\" + (title.isEmpty ? \"\" : \", \\(title)\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2072"
+  },
+  {
+   "file": "app/Sources/UI/CustomControls.swift",
+   "text": ", \\(title)",
+   "lines": [
+    440
+   ],
+   "contexts": [
+    "accessibilityLabel = (button == 0 ? \"Left\" : button == 1 ? \"Right\" : \"Middle\") + \" mouse button\" + (title.isEmpty ? \"\" : \", \\(title)\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2073"
+  },
+  {
+   "file": "app/Sources/UI/CustomControls.swift",
+   "text": "Movement stick, arrow keys",
+   "lines": [
+    466
+   ],
+   "contexts": [
+    "accessibilityLabel = arrows ? \"Movement stick, arrow keys\" : \"Movement stick, W A S D\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2074"
+  },
+  {
+   "file": "app/Sources/UI/CustomControls.swift",
+   "text": "Movement stick, W A S D",
+   "lines": [
+    466
+   ],
+   "contexts": [
+    "accessibilityLabel = arrows ? \"Movement stick, arrow keys\" : \"Movement stick, W A S D\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2075"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Sign in to the EA app",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "Text(\"Sign in to the EA app\").font(.system(size: 24, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2076"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "You sign in on EA's own page. The sign-in token stays in this device's Keychain; Porthole never sees your password. The PC games on your EA account are listed here, and Porthole starts them without the EA app: it asks EA for each game's licence itself and answers the game's questions the way the EA app would.",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "Text(\"You sign in on EA's own page. The sign-in token stays in this device's Keychain; Porthole never sees your password. The PC games on your EA account are listed here, and Porthole starts them without the EA app: it asks EA for each game's licence itself and answers the game's questions the way t"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2077"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Sign in",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "PillButton(id: \"ea-signin\", title: \"Sign in\", symbol: \"person.badge.key.fill\", style: .primary) { signIn = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2078"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "\\(Int((install?.progress.fraction ?? 0) * 100))%",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "case .active?: return BadgeData(symbol: \"arrow.down.circle.fill\", text: \"\\(Int((install?.progress.fraction ?? 0) * 100))%\", tint: Theme.accent)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2079"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Waiting",
+   "lines": [
+    45
+   ],
+   "contexts": [
+    "case .queued?: return BadgeData(symbol: \"hourglass\", text: \"Waiting\", tint: Theme.textDim)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2080"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Paused",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "case .paused?: return BadgeData(symbol: \"pause.circle.fill\", text: \"Paused\", tint: Theme.warn)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2081"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Failed",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "case .failed?: return BadgeData(symbol: \"exclamationmark.triangle.fill\", text: \"Failed\", tint: Theme.bad)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2082"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Installed",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "case .installed?: return BadgeData(symbol: \"checkmark.circle.fill\", text: \"Installed\", tint: Theme.good)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2083"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Refresh the list",
+   "lines": [
+    95
+   ],
+   "contexts": [
+    "else { IconPillButton(id: \"ea-refresh\", symbol: \"arrow.clockwise\", label: \"Refresh the list\") { library.refresh() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2084"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Search \\(library.games.count) game\\(library.games.count == 1 ? ",
+   "lines": [
+    96
+   ],
+   "contexts": [
+    "SearchField(id: \"ea-search\", prompt: \"Search \\(library.games.count) game\\(library.games.count == 1 ? \"\" : \"s\")\", text: $search)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2085"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "EA account",
+   "lines": [
+    97
+   ],
+   "contexts": [
+    "IconPillButton(id: \"ea-account\", symbol: \"person.crop.circle\", label: \"EA account\") { showAccount = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2086"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "No PC games were found in this EA account.",
+   "lines": [
+    101
+   ],
+   "contexts": [
+    "Text(library.games.isEmpty ? \"No PC games were found in this EA account.\" : \"No games match.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2087"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "No games match.",
+   "lines": [
+    101
+   ],
+   "contexts": [
+    "Text(library.games.isEmpty ? \"No PC games were found in this EA account.\" : \"No games match.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2088"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "EA games download straight from EA's servers. Games that use EA's kernel anti-cheat (Battlefield 2042 and later, EA SPORTS FC, Madden) cannot run here. Cloud saves, friends and EA's in-game overlay are not supported.",
+   "lines": [
+    107
+   ],
+   "contexts": [
+    "Text(\"EA games download straight from EA's servers. Games that use EA's kernel anti-cheat (Battlefield 2042 and later, EA SPORTS FC, Madden) cannot run here. Cloud saves, friends and EA's in-game overlay are not supported.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2089"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Uninstall \\(game.title)?",
+   "lines": [
+    132
+   ],
+   "contexts": [
+    ".confirm(\"Uninstall \\(game.title)?\", message: \"The game's folder is removed from this device. Your EA library and your save files in Porthole's backups are not touched.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2090"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "The game's folder is removed from this device. Your EA library and your save files in Porthole's backups are not touched.",
+   "lines": [
+    132
+   ],
+   "contexts": [
+    ".confirm(\"Uninstall \\(game.title)?\", message: \"The game's folder is removed from this device. Your EA library and your save files in Porthole's backups are not touched.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2091"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Uninstall and delete its files",
+   "lines": [
+    133
+   ],
+   "contexts": [
+    "confirmTitle: \"Uninstall and delete its files\", destructive: true, isPresented: $confirmUninstall) { installer.uninstall(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2092"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Download \\(ByteCountFormatter.string(fromByteCount: download, countStyle: .file)) \\u{00B7} installed \\(ByteCountFormatter.string(fromByteCount: size, countStyle: .file))",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    "Text(\"Download \\(ByteCountFormatter.string(fromByteCount: download, countStyle: .file)) \\u{00B7} installed \\(ByteCountFormatter.string(fromByteCount: size, countStyle: .file))\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2093"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Looking up the size\\u{2026}",
+   "lines": [
+    149
+   ],
+   "contexts": [
+    "if installer.installed[game.id] == nil { Text(\"Looking up the size\\u{2026}\").font(.footnote).foregroundStyle(.secondary) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2094"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Install",
+   "lines": [
+    157
+   ],
+   "contexts": [
+    "button(\"Install\", symbol: \"arrow.down.circle.fill\", prominent: true) { installer.install(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2095"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Downloads the game straight from EA. Keep the app open while it installs.",
+   "lines": [
+    158
+   ],
+   "contexts": [
+    "note(\"Downloads the game straight from EA. Keep the app open while it installs.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2096"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Waiting for its turn\\u{2026}",
+   "lines": [
+    160
+   ],
+   "contexts": [
+    "Label(\"Waiting for its turn\\u{2026}\", systemImage: \"hourglass\").foregroundStyle(.secondary)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2097"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Cancel",
+   "lines": [
+    161,
+    168
+   ],
+   "contexts": [
+    "button(\"Cancel\", symbol: \"xmark\") { installer.cancel(game.id) }",
+    "button(\"Cancel\", symbol: \"xmark\", role: .destructive) { installer.cancel(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2098"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Preparing\\u{2026}",
+   "lines": [
+    165
+   ],
+   "contexts": [
+    "Text(progress.phase == .preparing ? (install?.step ?? \"Preparing\\u{2026}\") : EpicText.progress(progress)).font(.footnote).foregroundStyle(.secondary)"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2099"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Pause",
+   "lines": [
+    167
+   ],
+   "contexts": [
+    "button(\"Pause\", symbol: \"pause.fill\") { installer.pause(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2100"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Resume",
+   "lines": [
+    173
+   ],
+   "contexts": [
+    "button(\"Resume\", symbol: \"play.fill\", prominent: true) { installer.resume(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2101"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Stop",
+   "lines": [
+    174,
+    180
+   ],
+   "contexts": [
+    "button(installed ? \"Stop\" : \"Remove\", symbol: installed ? \"xmark\" : \"trash\", role: .destructive) { installer.cancel(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2102"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Remove",
+   "lines": [
+    174,
+    180
+   ],
+   "contexts": [
+    "button(installed ? \"Stop\" : \"Remove\", symbol: installed ? \"xmark\" : \"trash\", role: .destructive) { installer.cancel(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2103"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Try again",
+   "lines": [
+    179
+   ],
+   "contexts": [
+    "button(\"Try again\", symbol: \"arrow.clockwise\", prominent: true) { installer.resume(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2104"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Installed. Find it in your library.",
+   "lines": [
+    183
+   ],
+   "contexts": [
+    "Label(\"Installed. Find it in your library.\", systemImage: \"checkmark.seal.fill\").foregroundStyle(.green)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2105"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Update",
+   "lines": [
+    185
+   ],
+   "contexts": [
+    "button(\"Update\", symbol: \"arrow.triangle.2.circlepath\", prominent: true) { installer.install(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2106"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Check and repair files",
+   "lines": [
+    187
+   ],
+   "contexts": [
+    "button(\"Check and repair files\", symbol: \"wrench.and.screwdriver\") { installer.repair(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2107"
+  },
+  {
+   "file": "app/Sources/UI/EALibraryScreens.swift",
+   "text": "Uninstall",
+   "lines": [
+    188
+   ],
+   "contexts": [
+    "button(\"Uninstall\", symbol: \"trash\", role: .destructive) { confirmUninstall = true }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2108"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": ")-\\(near)",
+   "lines": [
+    54
+   ],
+   "contexts": [
+    ".task(id: \"\\(url?.absoluteString ?? \"\")-\\(near)\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2109"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Preparing\\u{2026}",
+   "lines": [
+    69,
+    72
+   ],
+   "contexts": [
+    "case .preparing: return \"Preparing\\u{2026}\"",
+    "guard p.totalBytes > 0 else { return \"Preparing\\u{2026}\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2110"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Finishing\\u{2026}",
+   "lines": [
+    70
+   ],
+   "contexts": [
+    "case .finishing: return \"Finishing\\u{2026}\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2111"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "\\(size(p.doneBytes)) of \\(size(p.totalBytes))",
+   "lines": [
+    73
+   ],
+   "contexts": [
+    "return \"\\(size(p.doneBytes)) of \\(size(p.totalBytes))\" + (p.bytesPerSecond > 0 ? \" \\u{00B7} \\(size(UInt64(p.bytesPerSecond)))/s\" : \"\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2112"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": " \\u{00B7} \\(size(UInt64(p.bytesPerSecond)))/s",
+   "lines": [
+    73
+   ],
+   "contexts": [
+    "return \"\\(size(p.doneBytes)) of \\(size(p.totalBytes))\" + (p.bytesPerSecond > 0 ? \" \\u{00B7} \\(size(UInt64(p.bytesPerSecond)))/s\" : \"\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2113"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "under a minute",
+   "lines": [
+    79
+   ],
+   "contexts": [
+    "if s < 60 { return \"under a minute\" }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2114"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "\\(s / 60) min",
+   "lines": [
+    80
+   ],
+   "contexts": [
+    "if s < 3600 { return \"\\(s / 60) min\" }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2115"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "\\(s / 3600) h \\((s % 3600) / 60) min",
+   "lines": [
+    81
+   ],
+   "contexts": [
+    "return \"\\(s / 3600) h \\((s % 3600) / 60) min\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2116"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Details",
+   "lines": [
+    116,
+    508
+   ],
+   "contexts": [
+    ".focusTarget(\"eg-\\(game.appName)\", radius: 18, scale: 1.1, secondary: primary, label: \"Details\", secondaryLabel: primaryLabel, action: open)",
+    "SettingsGroup(title: \"Details\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2117"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "\\(Int((install?.progress.fraction ?? 0) * 100))%",
+   "lines": [
+    127
+   ],
+   "contexts": [
+    "case .active?: return BadgeData(symbol: \"arrow.down.circle.fill\", text: \"\\(Int((install?.progress.fraction ?? 0) * 100))%\", tint: Theme.accent)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2118"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Waiting",
+   "lines": [
+    128
+   ],
+   "contexts": [
+    "case .queued?: return BadgeData(symbol: \"hourglass\", text: \"Waiting\", tint: Theme.textDim)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2119"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Paused",
+   "lines": [
+    129,
+    146,
+    444
+   ],
+   "contexts": [
+    "case .paused?: return BadgeData(symbol: \"pause.circle.fill\", text: \"Paused\", tint: Theme.warn)",
+    "Text(\"Paused\").font(.caption).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2120"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Failed",
+   "lines": [
+    130
+   ],
+   "contexts": [
+    "case .failed?: return BadgeData(symbol: \"exclamationmark.triangle.fill\", text: \"Failed\", tint: Theme.bad)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2121"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Update",
+   "lines": [
+    132,
+    159,
+    427
+   ],
+   "contexts": [
+    "if installer.updateAvailable(game.appName) { return BadgeData(symbol: \"arrow.triangle.2.circlepath.circle.fill\", text: \"Update\", tint: Theme.accent) }",
+    "case .installed?: return installer.updateAvailable(game.appName) ? \"Update\" : \"Open\"",
+    "PillButton(id: \"ep-update\", title: \"Update\", symbol: \"arrow.triangle.2.circlepath\", style: .primary) { installer.update(game) }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2122"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Installed",
+   "lines": [
+    133,
+    246,
+    386,
+    398
+   ],
+   "contexts": [
+    "return BadgeData(symbol: \"checkmark.circle.fill\", text: \"Installed\", tint: Theme.good)",
+    "SegmentedPills(options: [.init(id: \"all\", title: \"All\"), .init(id: \"installed\", title: \"Installed\")], selection: filter) { filter = $0 }",
+    "let status = !isInstalled ? \"Not installed\" : (installer.updateAvailable(game.appName) ? \"Update ready\" : \"Installed\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "group:ui-residual-reviewed",
+    "named-param-string-component",
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2123"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Waiting\\u{2026}",
+   "lines": [
+    143,
+    441
+   ],
+   "contexts": [
+    "case .queued?: Text(\"Waiting\\u{2026}\").font(.caption).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2124"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Not installed",
+   "lines": [
+    149,
+    386
+   ],
+   "contexts": [
+    "case nil: Text(game.developer ?? \"Not installed\").font(.caption).foregroundStyle(Theme.textDim).lineLimit(1)",
+    "let status = !isInstalled ? \"Not installed\" : (installer.updateAvailable(game.appName) ? \"Update ready\" : \"Installed\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2125"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Pause",
+   "lines": [
+    156,
+    420
+   ],
+   "contexts": [
+    "case .active?, .queued?: return \"Pause\"",
+    "PillButton(id: \"ep-main\", title: \"Pause\", symbol: \"pause.fill\", style: .primary) { installer.pause(game.appName) }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2126"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Resume",
+   "lines": [
+    157,
+    423
+   ],
+   "contexts": [
+    "case .paused?, .failed?: return \"Resume\"",
+    "PillButton(id: \"ep-main\", title: install?.state == .paused ? \"Resume\" : \"Try again\", symbol: \"play.fill\", style: .primary) { installer.install(game) }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2127"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Install",
+   "lines": [
+    158,
+    434
+   ],
+   "contexts": [
+    "case nil: return \"Install\"",
+    "PillButton(id: \"ep-main\", title: \"Install\", symbol: \"arrow.down.circle.fill\", style: .primary) { installer.install(game) }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2128"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Open",
+   "lines": [
+    159
+   ],
+   "contexts": [
+    "case .installed?: return installer.updateAvailable(game.appName) ? \"Update\" : \"Open\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2129"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Sort by",
+   "lines": [
+    230
+   ],
+   "contexts": [
+    "ChoiceSheet(title: \"Sort by\", options: StoreSort.options(includingSize: false), selected: sort, scope: sortScope) { value in"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2130"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Refresh the list",
+   "lines": [
+    244
+   ],
+   "contexts": [
+    "else { IconPillButton(id: \"eo-refresh\", symbol: \"arrow.clockwise\", label: \"Refresh the list\") { library.refresh() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2131"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "All",
+   "lines": [
+    246
+   ],
+   "contexts": [
+    "SegmentedPills(options: [.init(id: \"all\", title: \"All\"), .init(id: \"installed\", title: \"Installed\")], selection: filter) { filter = $0 }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2132"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Sort: \\(sort.title)",
+   "lines": [
+    247
+   ],
+   "contexts": [
+    "IconPillButton(id: \"eo-sort\", symbol: \"arrow.up.arrow.down\", label: \"Sort: \\(sort.title)\") { showSort = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2133"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "No games with a Windows version found on this account yet.",
+   "lines": [
+    251
+   ],
+   "contexts": [
+    "Text(library.games.isEmpty ? \"No games with a Windows version found on this account yet.\" : \"No games match.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2134"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "No games match.",
+   "lines": [
+    251
+   ],
+   "contexts": [
+    "Text(library.games.isEmpty ? \"No games with a Windows version found on this account yet.\" : \"No games match.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2135"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Epic's overlay, anti-cheat and third-party launchers are not supported, so some games will not run.",
+   "lines": [
+    257
+   ],
+   "contexts": [
+    "Text(\"Epic's overlay, anti-cheat and third-party launchers are not supported, so some games will not run.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2136"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Search \\(library.games.count) games",
+   "lines": [
+    262
+   ],
+   "contexts": [
+    "private var searchField: some View { SearchField(id: \"eo-search\", prompt: \"Search \\(library.games.count) games\", text: $search) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2137"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Details and files",
+   "lines": [
+    293,
+    496
+   ],
+   "contexts": [
+    "var title: String { \"Details and files\" }",
+    "ActionRow(id: \"ep-door-details\", symbol: \"info.circle.fill\", title: \"Details and files\", subtitle: isInstalled ? \"Version, delete files\" : \"About this game\") { door = .details }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2138"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Delete \\(game.title)'s files?",
+   "lines": [
+    350
+   ],
+   "contexts": [
+    ".confirm(\"Delete \\(game.title)'s files?\", message: \"This frees the space on the device, including saves kept in the game's folder. You can download it again.\", confirmTitle: \"Delete files\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2139"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "This frees the space on the device, including saves kept in the game's folder. You can download it again.",
+   "lines": [
+    350
+   ],
+   "contexts": [
+    ".confirm(\"Delete \\(game.title)'s files?\", message: \"This frees the space on the device, including saves kept in the game's folder. You can download it again.\", confirmTitle: \"Delete files\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2140"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Delete files",
+   "lines": [
+    350
+   ],
+   "contexts": [
+    ".confirm(\"Delete \\(game.title)'s files?\", message: \"This frees the space on the device, including saves kept in the game's folder. You can download it again.\", confirmTitle: \"Delete files\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2141"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Update ready",
+   "lines": [
+    386
+   ],
+   "contexts": [
+    "let status = !isInstalled ? \"Not installed\" : (installer.updateAvailable(game.appName) ? \"Update ready\" : \"Installed\")"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2142"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "On this device",
+   "lines": [
+    387
+   ],
+   "contexts": [
+    "out.append(GameHeroStat(symbol: isInstalled ? \"checkmark.circle.fill\" : \"arrow.down.circle\", title: \"On this device\", value: status))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2143"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Developer",
+   "lines": [
+    388,
+    510
+   ],
+   "contexts": [
+    "if let developer = game.developer, !developer.isEmpty { out.append(GameHeroStat(symbol: \"person.fill\", title: \"Developer\", value: developer)) }",
+    "if let developer = game.developer { ValueRow(id: \"ep-d-dev\", symbol: \"hammer.fill\", title: \"Developer\", value: developer) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2144"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Build",
+   "lines": [
+    389
+   ],
+   "contexts": [
+    "if let build = game.latestBuild, !build.isEmpty, build.count <= 14 { out.append(GameHeroStat(symbol: \"number\", title: \"Build\", value: build)) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2145"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Update available",
+   "lines": [
+    397
+   ],
+   "contexts": [
+    "if installer.updateAvailable(game.appName) { chip(\"arrow.triangle.2.circlepath.circle.fill\", \"Update available\", Theme.accent) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2146"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Not yet tested",
+   "lines": [
+    406,
+    501,
+    504
+   ],
+   "contexts": [
+    "else if compat.showBadges, compat.isUntested(entry) { BadgePill(badge: BadgeData(symbol: \"questionmark.circle.fill\", text: \"Not yet tested\", tint: Theme.textDim)) }",
+    "guard let entry = libraryGame else { return \"Not yet tested\" }",
+    "return \"Not yet tested\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2147"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Cancel",
+   "lines": [
+    421,
+    424
+   ],
+   "contexts": [
+    "PillButton(id: \"ep-cancel\", title: \"Cancel\", symbol: \"xmark\") { installer.cancel(game.appName) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2148"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Try again",
+   "lines": [
+    423
+   ],
+   "contexts": [
+    "PillButton(id: \"ep-main\", title: install?.state == .paused ? \"Resume\" : \"Try again\", symbol: \"play.fill\", style: .primary) { installer.install(game) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2149"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Busy",
+   "lines": [
+    430
+   ],
+   "contexts": [
+    "PillButton(id: \"ep-play\", title: session.isActive ? \"Busy\" : \"Play\", symbol: \"play.fill\", style: installer.updateAvailable(game.appName) ? .glass : .primary, enabled: !session.isActive) { session.start(libraryGame) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2150"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Play",
+   "lines": [
+    430
+   ],
+   "contexts": [
+    "PillButton(id: \"ep-play\", title: session.isActive ? \"Busy\" : \"Play\", symbol: \"play.fill\", style: installer.updateAvailable(game.appName) ? .glass : .primary, enabled: !session.isActive) { session.start(libraryGame) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2151"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Game settings",
+   "lines": [
+    431
+   ],
+   "contexts": [
+    "PillButton(id: \"ep-open\", title: \"Game settings\", symbol: \"slider.horizontal.3\") { router.tab = .library; router.homePath.append(libraryGame.id) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2152"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Screenshots",
+   "lines": [
+    454
+   ],
+   "contexts": [
+    "Theme.label(\"Screenshots\").padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2153"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "ep-media-\\(i)",
+   "lines": [
+    466
+   ],
+   "contexts": [
+    ".focusTarget(\"ep-media-\\(i)\", radius: 14, scale: 1.06) { viewing = i }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2154"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "About this game",
+   "lines": [
+    477,
+    496
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"About this game\") {",
+    "ActionRow(id: \"ep-door-details\", symbol: \"info.circle.fill\", title: \"Details and files\", subtitle: isInstalled ? \"Version, delete files\" : \"About this game\") { door = .details }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2155"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Read the full description",
+   "lines": [
+    485
+   ],
+   "contexts": [
+    "ActionRow(id: \"ep-more\", symbol: \"text.alignleft\", title: \"Read the full description\", chevron: true) { reading = .init(title: game.title, text: summary) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2156"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "How it runs on Porthole",
+   "lines": [
+    494
+   ],
+   "contexts": [
+    "ActionRow(id: \"ep-door-compat\", symbol: \"checkmark.seal.fill\", title: \"How it runs on Porthole\", subtitle: compatSummary) { showReports = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2157"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Version, delete files",
+   "lines": [
+    496
+   ],
+   "contexts": [
+    "ActionRow(id: \"ep-door-details\", symbol: \"info.circle.fill\", title: \"Details and files\", subtitle: isInstalled ? \"Version, delete files\" : \"About this game\") { door = .details }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2158"
+  },
+  {
+   "file": "app/Sources/UI/EpicLibraryScreens.swift",
+   "text": "Store",
+   "lines": [
+    509
+   ],
+   "contexts": [
+    "ValueRow(id: \"ep-d-store\", symbol: \"bag.fill\", title: \"Store\", value: \"Epic Games\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2159"
+  }
+ ]
+}

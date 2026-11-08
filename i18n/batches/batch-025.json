@@ -1,0 +1,2944 @@
+{
+ "batch": 25,
+ "units": [
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "chevron.right",
+   "lines": [
+    188,
+    239
+   ],
+   "contexts": [
+    "PillButton(id: \"su-next\", title: primaryTitle, symbol: step == .done ? \"play.fill\" : \"chevron.right\", style: primaryIsMain ? .primary : .glass) {"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4320"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "f4.setupDone",
+   "lines": [
+    189,
+    240
+   ],
+   "contexts": [
+    "if step == .done { UserDefaults.standard.set(true, forKey: \"f4.setupDone\"); dismiss() } else { go(1) }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4321"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Close",
+   "lines": [
+    191,
+    209
+   ],
+   "contexts": [
+    "IconPillButton(id: \"su-later\", symbol: \"xmark\", label: step == .done ? \"Close\" : \"Finish later\") { dismiss() }",
+    "PillButton(id: \"su-later\", title: step == .done ? \"Close\" : \"Finish later\", symbol: \"xmark\") { dismiss() }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4322"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Finish later",
+   "lines": [
+    191,
+    209
+   ],
+   "contexts": [
+    "IconPillButton(id: \"su-later\", symbol: \"xmark\", label: step == .done ? \"Close\" : \"Finish later\") { dismiss() }",
+    "PillButton(id: \"su-later\", title: step == .done ? \"Close\" : \"Finish later\", symbol: \"xmark\") { dismiss() }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4323"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Games won't start until this is done",
+   "lines": [
+    194,
+    235
+   ],
+   "contexts": [
+    "Label(\"Games won't start until this is done\", systemImage: \"exclamationmark.triangle.fill\").font(.caption.weight(.semibold)).foregroundStyle(Theme.warn)",
+    "Label(\"Games won't start until this is done\", systemImage: \"exclamationmark.triangle.fill\").font(.footnote.weight(.semibold)).foregroundStyle(Theme.warn)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4324"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Components",
+   "lines": [
+    206
+   ],
+   "contexts": [
+    "SetupStepper(names: [\"Speed\", \"Components\", \"Games\"], current: n, done: [complete(.speed), complete(.downloads), complete(.games)]).frame(maxWidth: 360)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4325"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Let's start",
+   "lines": [
+    225
+   ],
+   "contexts": [
+    "case .welcome: \"Let's start\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4326"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Start playing",
+   "lines": [
+    226
+   ],
+   "contexts": [
+    "case .done: jitReady && tunnelAllowed ? \"Start playing\" : \"Finish for now\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4327"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Finish for now",
+   "lines": [
+    226
+   ],
+   "contexts": [
+    "case .done: jitReady && tunnelAllowed ? \"Start playing\" : \"Finish for now\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4328"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Skip for now",
+   "lines": [
+    227
+   ],
+   "contexts": [
+    "default: complete(step) ? \"Continue\" : \"Skip for now\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4329"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Continue",
+   "lines": [
+    227
+   ],
+   "contexts": [
+    "default: complete(step) ? \"Continue\" : \"Skip for now\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4330"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "More",
+   "lines": [
+    252
+   ],
+   "contexts": [
+    "private func header(_ title: String, info: String? = nil, infoTitle: String = \"More\") -> some View {"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4331"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "About 2 minutes",
+   "lines": [
+    264
+   ],
+   "contexts": [
+    "SetupStepCard(id: \"su-o-1\", number: 1, symbol: \"bolt.fill\", title: \"Full speed\", subtitle: \"About 2 minutes\", tag: complete(.speed) ? \"Done\" : Need.needed.label, tagGood: complete(.speed)) { step = .speed }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4332"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "About 25 MB",
+   "lines": [
+    265
+   ],
+   "contexts": [
+    "SetupStepCard(id: \"su-o-2\", number: 2, symbol: \"shippingbox.fill\", title: \"Windows components\", subtitle: \"About 25 MB\", tag: complete(.downloads) ? \"Done\" : Need.recommended.label, tagGood: complete(.downloads)) { step = .downloads }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4333"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Add your games",
+   "lines": [
+    266,
+    363
+   ],
+   "contexts": [
+    "SetupStepCard(id: \"su-o-3\", number: 3, symbol: \"gamecontroller.fill\", title: \"Add your games\", subtitle: \"Steam, Epic Games, GOG, itch.io, Amazon Games, EA or Files\", tag: complete(.games) ? \"Done\" : Need.optional.label, tagGood: complete(.games)) { step = .games }",
+    "header(\"Add your games\", info: \"Bring in the games you already own, from a store or from Files. You can do any of them, all of them, or none now; they are always available from the home screen and the Stores tab later.\", infoTitle: \"Adding games\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4334"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Steam, Epic Games, GOG, itch.io, Amazon Games, EA or Files",
+   "lines": [
+    266
+   ],
+   "contexts": [
+    "SetupStepCard(id: \"su-o-3\", number: 3, symbol: \"gamecontroller.fill\", title: \"Add your games\", subtitle: \"Steam, Epic Games, GOG, itch.io, Amazon Games, EA or Files\", tag: complete(.games) ? \"Done\" : Need.optional.label, tagGood: complete(.games)) { step = .games }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4335"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Stays on this device",
+   "lines": [
+    268
+   ],
+   "contexts": [
+    "RowBase(id: \"su-privacy\", symbol: \"lock.shield.fill\", tint: Theme.good, title: \"Stays on this device\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4336"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Your store sign-ins stay in this device\\u{2019}s Keychain and go only to the store itself. Porthole goes online to download what you ask for (Microsoft\\u{2019}s components, your game downloads and updates), to check for updates, and to load compatibility badges. It asks for the whole list of badges, so nobody is told which games you own. A compatibility report or a problem report is sent only when you choose to send one; a problem log is cleaned of account names, e-mail addresses and public IP addresses first.",
+   "lines": [
+    269
+   ],
+   "contexts": [
+    "info: \"Your store sign-ins stay in this device\\u{2019}s Keychain and go only to the store itself. Porthole goes online to download what you ask for (Microsoft\\u{2019}s components, your game downloads and updates), to check for updates, and to load compatibility badges. It asks for the whole list of"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4337"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Get ready to play",
+   "lines": [
+    275
+   ],
+   "contexts": [
+    "header(\"Get ready to play\", info: \"iOS keeps a speed feature called JIT switched off. Games on Porthole need it, so something has to switch it on each time you play. JIT lets an app create and run new machine code while it is running; Apple doesn't let normal apps switch it on, so a helper asks iOS"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4338"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "iOS keeps a speed feature called JIT switched off. Games on Porthole need it, so something has to switch it on each time you play. JIT lets an app create and run new machine code while it is running; Apple doesn't let normal apps switch it on, so a helper asks iOS for it.",
+   "lines": [
+    275
+   ],
+   "contexts": [
+    "header(\"Get ready to play\", info: \"iOS keeps a speed feature called JIT switched off. Games on Porthole need it, so something has to switch it on each time you play. JIT lets an app create and run new machine code while it is running; Apple doesn't let normal apps switch it on, so a helper asks iOS"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4339"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "What is JIT?",
+   "lines": [
+    275
+   ],
+   "contexts": [
+    "header(\"Get ready to play\", info: \"iOS keeps a speed feature called JIT switched off. Games on Porthole need it, so something has to switch it on each time you play. JIT lets an app create and run new machine code while it is running; Apple doesn't let normal apps switch it on, so a helper asks iOS"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4340"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Switched on by Porthole",
+   "lines": [
+    280
+   ],
+   "contexts": [
+    "RowBase(id: \"su-method-auto\", symbol: \"wand.and.stars\", title: \"Switched on by Porthole\", subtitle: \"The simplest way, and what most people use\", action: {}) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4341"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "The simplest way, and what most people use",
+   "lines": [
+    280
+   ],
+   "contexts": [
+    "RowBase(id: \"su-method-auto\", symbol: \"wand.and.stars\", title: \"Switched on by Porthole\", subtitle: \"The simplest way, and what most people use\", action: {}) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4342"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "\\u{2713} \\(m.pros)\\n\\u{2022} \\(m.cons)",
+   "lines": [
+    287
+   ],
+   "contexts": [
+    "info: \"\\u{2713} \\(m.pros)\\n\\u{2022} \\(m.cons)\", action: { method = m; JITMethod.current = m }) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4343"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Pairing file ready",
+   "lines": [
+    296
+   ],
+   "contexts": [
+    "ValueRow(id: \"su-pair-state\", symbol: hasPairing ? \"checkmark.circle.fill\" : \"circle.dashed\", title: hasPairing ? \"Pairing file ready\" : \"Pairing file needed\", value: hasPairing ? \"Done\" : \"Needed\", statusColor: hasPairing ? Theme.good : Theme.warn)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4344"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Pairing file needed",
+   "lines": [
+    296
+   ],
+   "contexts": [
+    "ValueRow(id: \"su-pair-state\", symbol: hasPairing ? \"checkmark.circle.fill\" : \"circle.dashed\", title: hasPairing ? \"Pairing file ready\" : \"Pairing file needed\", value: hasPairing ? \"Done\" : \"Needed\", statusColor: hasPairing ? Theme.good : Theme.warn)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4345"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Create it on this device",
+   "lines": [
+    299
+   ],
+   "contexts": [
+    "ActionRow(id: \"su-pair-here\", symbol: \"iphone.gen3\", title: \"Create it on this device\", subtitle: \"About a minute, no computer\", chevron: false, prominent: true) { pairHere = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4346"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "About a minute, no computer",
+   "lines": [
+    299
+   ],
+   "contexts": [
+    "ActionRow(id: \"su-pair-here\", symbol: \"iphone.gen3\", title: \"Create it on this device\", subtitle: \"About a minute, no computer\", chevron: false, prominent: true) { pairHere = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4347"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "I already have a pairing file",
+   "lines": [
+    300
+   ],
+   "contexts": [
+    "ActionRow(id: \"su-pair-pick\", symbol: \"doc.badge.plus\", title: \"I already have a pairing file\", chevron: false) { pickPairing = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4348"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Choose the pairing file",
+   "lines": [
+    302
+   ],
+   "contexts": [
+    "ActionRow(id: \"su-pair-pick\", symbol: \"doc.badge.plus\", title: \"Choose the pairing file\", subtitle: \"Made once on a computer\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4349"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Made once on a computer",
+   "lines": [
+    302
+   ],
+   "contexts": [
+    "ActionRow(id: \"su-pair-pick\", symbol: \"doc.badge.plus\", title: \"Choose the pairing file\", subtitle: \"Made once on a computer\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4350"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "1. On a computer, install a free pairing tool such as iloader or Jitterbug.\\n2. Plug in your device and tap Trust.\\n3. Save the pairing file for your device (.plist or .mobiledevicepairing).\\n4. Move it to this device (AirDrop, iCloud Drive or a cable).\\n5. Come back and choose it here.\\nYou only do this once.",
+   "lines": [
+    303
+   ],
+   "contexts": [
+    "info: \"1. On a computer, install a free pairing tool such as iloader or Jitterbug.\\n2. Plug in your device and tap Trust.\\n3. Save the pairing file for your device (.plist or .mobiledevicepairing).\\n4. Move it to this device (AirDrop, iCloud Drive or a cable).\\n5. Come back and choose it here.\\nYou"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4351"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Replace the pairing file",
+   "lines": [
+    306
+   ],
+   "contexts": [
+    "ActionRow(id: \"su-pair-replace\", symbol: \"arrow.triangle.2.circlepath\", title: \"Replace the pairing file\", chevron: false) { OnDevicePairing.isSupported ? (pairHere = true) : (pickPairing = true) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4352"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "StikDebug found",
+   "lines": [
+    312
+   ],
+   "contexts": [
+    "ValueRow(id: \"su-stik-state\", symbol: stikAvailable ? \"checkmark.circle.fill\" : \"circle.dashed\", title: stikAvailable ? \"StikDebug found\" : \"StikDebug not found\", value: stikAvailable ? \"Done\" : \"Needed\", statusColor: stikAvailable ? Theme.good : Theme.warn)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4353"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "StikDebug not found",
+   "lines": [
+    312
+   ],
+   "contexts": [
+    "ValueRow(id: \"su-stik-state\", symbol: stikAvailable ? \"checkmark.circle.fill\" : \"circle.dashed\", title: stikAvailable ? \"StikDebug found\" : \"StikDebug not found\", value: stikAvailable ? \"Done\" : \"Needed\", statusColor: stikAvailable ? Theme.good : Theme.warn)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4354"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Check again",
+   "lines": [
+    313
+   ],
+   "contexts": [
+    "ActionRow(id: \"su-stik-check\", symbol: \"arrow.clockwise\", title: \"Check again\", subtitle: stikAvailable ? nil : \"Install StikDebug first\", chevron: false) { stikAvailable = StikJITHelper.isAvailable }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4355"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Install StikDebug first",
+   "lines": [
+    313
+   ],
+   "contexts": [
+    "ActionRow(id: \"su-stik-check\", symbol: \"arrow.clockwise\", title: \"Check again\", subtitle: stikAvailable ? nil : \"Install StikDebug first\", chevron: false) { stikAvailable = StikJITHelper.isAvailable }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4356"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Press Play, switch JIT on with your tool, and the game starts by itself.",
+   "lines": [
+    316
+   ],
+   "contexts": [
+    "Text(\"Press Play, switch JIT on with your tool, and the game starts by itself.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4357"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Use a different method",
+   "lines": [
+    319
+   ],
+   "contexts": [
+    "ActionRow(id: \"su-other-methods\", symbol: \"ellipsis.circle\", title: \"Use a different method\", chevron: false) { showMethods = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4358"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Private link",
+   "lines": [
+    322,
+    328,
+    332
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Private link\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4359"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Comes from LocalDevVPN",
+   "lines": [
+    323,
+    329
+   ],
+   "contexts": [
+    "ValueRow(id: \"su-tunnel-none\", symbol: \"link\", title: \"Comes from LocalDevVPN\", value: \"Nothing to allow\", statusColor: Theme.good)",
+    "ValueRow(id: \"su-tunnel-localdev\", symbol: \"link\", title: \"Comes from LocalDevVPN\", value: \"Nothing to allow\", statusColor: Theme.good)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4360"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Nothing to allow",
+   "lines": [
+    323,
+    329
+   ],
+   "contexts": [
+    "ValueRow(id: \"su-tunnel-none\", symbol: \"link\", title: \"Comes from LocalDevVPN\", value: \"Nothing to allow\", statusColor: Theme.good)",
+    "ValueRow(id: \"su-tunnel-localdev\", symbol: \"link\", title: \"Comes from LocalDevVPN\", value: \"Nothing to allow\", statusColor: Theme.good)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4361"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "This install has no tunnel of its own, which saves an App ID and leaves your own VPN alone. If your JIT tool needs a private link, turn LocalDevVPN on before you press Play.",
+   "lines": [
+    325
+   ],
+   "contexts": [
+    "Text(\"This install has no tunnel of its own, which saves an App ID and leaves your own VPN alone. If your JIT tool needs a private link, turn LocalDevVPN on before you press Play.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4362"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Allowed",
+   "lines": [
+    333
+   ],
+   "contexts": [
+    "ValueRow(id: \"su-tunnel-state\", symbol: tunnelAllowed ? \"checkmark.circle.fill\" : \"circle.dashed\", title: tunnelAllowed ? \"Allowed\" : \"Not allowed yet\", value: tunnelAllowed ? \"Done\" : \"Needed\", statusColor: tunnelAllowed ? Theme.good : Theme.warn)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4363"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Not allowed yet",
+   "lines": [
+    333
+   ],
+   "contexts": [
+    "ValueRow(id: \"su-tunnel-state\", symbol: tunnelAllowed ? \"checkmark.circle.fill\" : \"circle.dashed\", title: tunnelAllowed ? \"Allowed\" : \"Not allowed yet\", value: tunnelAllowed ? \"Done\" : \"Needed\", statusColor: tunnelAllowed ? Theme.good : Theme.warn)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4364"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Checking\\u{2026}",
+   "lines": [
+    334
+   ],
+   "contexts": [
+    "ActionRow(id: \"su-tunnel\", symbol: \"link\", title: tunnelBusy ? \"Checking\\u{2026}\" : (tunnelAllowed ? \"Check it again\" : \"Allow the private link\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4365"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Check it again",
+   "lines": [
+    334
+   ],
+   "contexts": [
+    "ActionRow(id: \"su-tunnel\", symbol: \"link\", title: tunnelBusy ? \"Checking\\u{2026}\" : (tunnelAllowed ? \"Check it again\" : \"Allow the private link\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4366"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Allow the private link",
+   "lines": [
+    334
+   ],
+   "contexts": [
+    "ActionRow(id: \"su-tunnel\", symbol: \"link\", title: tunnelBusy ? \"Checking\\u{2026}\" : (tunnelAllowed ? \"Check it again\" : \"Allow the private link\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4367"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "To switch JIT on, Porthole reaches your device's own debug service through a small private link that exists only inside your device.\\n\\niOS will ask whether Porthole may add a VPN configuration. That is how iOS describes this link. It is not a real VPN: nothing goes over the internet and none of your other traffic is touched. Tap Allow.\\n\\niOS allows one VPN at a time, so another VPN app pauses for a few seconds; Porthole asks first and helps you turn it back on.",
+   "lines": [
+    335
+   ],
+   "contexts": [
+    "info: \"To switch JIT on, Porthole reaches your device's own debug service through a small private link that exists only inside your device.\\n\\niOS will ask whether Porthole may add a VPN configuration. That is how iOS describes this link. It is not a real VPN: nothing goes over the internet and none"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4368"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Many games need Microsoft's Visual C++ runtime. Porthole downloads it straight from Microsoft (about 25 MB), checks that it is the genuine file, and keeps it on this device. Without it some games won't start. Games built on Microsoft's .NET Framework (Celeste, many indie games) also need .NET support, Wine Mono, about 42 MB from WineHQ, and launchers or installers that show a web page need Wine Gecko, about 110 MB from WineHQ. Older 32-bit programs can use Microsoft's 32-bit runtime too, about 14 MB. Download them here if you want those. You can also do either later in Settings \\u{203A} Advanced \\u{203A} Windows components.",
+   "lines": [
+    353
+   ],
+   "contexts": [
+    "header(\"Windows components\", info: \"Many games need Microsoft's Visual C++ runtime. Porthole downloads it straight from Microsoft (about 25 MB), checks that it is the genuine file, and keeps it on this device. Without it some games won't start. Games built on Microsoft's .NET Framework (Celeste, man"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4369"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Why download this?",
+   "lines": [
+    353
+   ],
+   "contexts": [
+    "header(\"Windows components\", info: \"Many games need Microsoft's Visual C++ runtime. Porthole downloads it straight from Microsoft (about 25 MB), checks that it is the genuine file, and keeps it on this device. Without it some games won't start. Games built on Microsoft's .NET Framework (Celeste, man"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4370"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Bring in the games you already own, from a store or from Files. You can do any of them, all of them, or none now; they are always available from the home screen and the Stores tab later.",
+   "lines": [
+    363
+   ],
+   "contexts": [
+    "header(\"Add your games\", info: \"Bring in the games you already own, from a store or from Files. You can do any of them, all of them, or none now; they are always available from the home screen and the Stores tab later.\", infoTitle: \"Adding games\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4371"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Adding games",
+   "lines": [
+    363
+   ],
+   "contexts": [
+    "header(\"Add your games\", info: \"Bring in the games you already own, from a store or from Files. You can do any of them, all of them, or none now; they are always available from the home screen and the Stores tab later.\", infoTitle: \"Adding games\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4372"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Stores",
+   "lines": [
+    364
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Stores\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4373"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Files",
+   "lines": [
+    372
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Files\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4374"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "No games added yet",
+   "lines": [
+    373,
+    407
+   ],
+   "contexts": [
+    "ValueRow(id: \"su-files-state\", symbol: model.games.isEmpty ? \"circle.dashed\" : \"checkmark.circle.fill\", title: model.games.isEmpty ? \"No games added yet\" : \"\\(model.games.count) game\\(model.games.count == 1 ? \"\" : \"s\") added\", value: model.games.isEmpty ? \"Optional\" : \"Done\", statusColor: model.game",
+    "summaryRow(.games, anyStore || !model.games.isEmpty ? \"Games: \\([steam.signedIn ? \"Steam\" : nil, epic.signedIn ? \"Epic Games\" : nil, gog.signedIn ? \"GOG\" : nil, itch.signedIn ? \"itch.io\" : nil, amazon.signedIn ? \"Amazon Games\" : nil, ea.signedIn ? \"EA app\" : nil, model.games.isEmpty ? nil : \"\\(model"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4375"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "\\(model.games.count) game\\(model.games.count == 1 ? ",
+   "lines": [
+    373
+   ],
+   "contexts": [
+    "ValueRow(id: \"su-files-state\", symbol: model.games.isEmpty ? \"circle.dashed\" : \"checkmark.circle.fill\", title: model.games.isEmpty ? \"No games added yet\" : \"\\(model.games.count) game\\(model.games.count == 1 ? \"\" : \"s\") added\", value: model.games.isEmpty ? \"Optional\" : \"Done\", statusColor: model.game"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4376"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": ") added",
+   "lines": [
+    373
+   ],
+   "contexts": [
+    "ValueRow(id: \"su-files-state\", symbol: model.games.isEmpty ? \"circle.dashed\" : \"checkmark.circle.fill\", title: model.games.isEmpty ? \"No games added yet\" : \"\\(model.games.count) game\\(model.games.count == 1 ? \"\" : \"s\") added\", value: model.games.isEmpty ? \"Optional\" : \"Done\", statusColor: model.game"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4377"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "A few things that save people time. None of them needs anything from you now.",
+   "lines": [
+    381
+   ],
+   "contexts": [
+    "header(\"Good to know\", info: \"A few things that save people time. None of them needs anything from you now.\", infoTitle: \"Good to know\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4378"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "The first start takes longer",
+   "lines": [
+    383
+   ],
+   "contexts": [
+    "RowBase(id: \"su-tip-first\", symbol: \"hourglass\", tint: .orange, title: \"The first start takes longer\", subtitle: \"Later starts of the same game are quicker.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4379"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Later starts of the same game are quicker.",
+   "lines": [
+    383
+   ],
+   "contexts": [
+    "RowBase(id: \"su-tip-first\", symbol: \"hourglass\", tint: .orange, title: \"The first start takes longer\", subtitle: \"Later starts of the same game are quicker.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4380"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "The first time a game starts, everything has to be set up, and some games prepare their graphics as they run. The first start can take a minute or more, and the first frames may stutter. Keep Porthole open and the screen on while it loads.",
+   "lines": [
+    384
+   ],
+   "contexts": [
+    "info: \"The first time a game starts, everything has to be set up, and some games prepare their graphics as they run. The first start can take a minute or more, and the first frames may stutter. Keep Porthole open and the screen on while it loads.\", action: {}) { EmptyView() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4381"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Big games may need Swap",
+   "lines": [
+    385
+   ],
+   "contexts": [
+    "RowBase(id: \"su-tip-swap\", symbol: \"memorychip.fill\", tint: .blue, title: \"Big games may need Swap\", subtitle: \"If a game closes or stutters, give it more Swap.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4382"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "If a game closes or stutters, give it more Swap.",
+   "lines": [
+    385
+   ],
+   "contexts": [
+    "RowBase(id: \"su-tip-swap\", symbol: \"memorychip.fill\", tint: .blue, title: \"Big games may need Swap\", subtitle: \"If a game closes or stutters, give it more Swap.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4383"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "iOS closes an app that uses too much memory. Swap lets Porthole use storage as extra memory. If a game closes by itself or stutters, open the game, then its settings, and raise Swap. The Stats button while you play shows how full it is, and Porthole warns you when memory is nearly full.",
+   "lines": [
+    386
+   ],
+   "contexts": [
+    "info: \"iOS closes an app that uses too much memory. Swap lets Porthole use storage as extra memory. If a game closes by itself or stutters, open the game, then its settings, and raise Swap. The Stats button while you play shows how full it is, and Porthole warns you when memory is nearly full.\", act"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4384"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Controllers work out of the box",
+   "lines": [
+    387
+   ],
+   "contexts": [
+    "RowBase(id: \"su-tip-pad\", symbol: \"gamecontroller.fill\", tint: Theme.good, title: \"Controllers work out of the box\", subtitle: \"PlayStation, Xbox and other controllers iOS supports.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4385"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "PlayStation, Xbox and other controllers iOS supports.",
+   "lines": [
+    387
+   ],
+   "contexts": [
+    "RowBase(id: \"su-tip-pad\", symbol: \"gamecontroller.fill\", tint: Theme.good, title: \"Controllers work out of the box\", subtitle: \"PlayStation, Xbox and other controllers iOS supports.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4386"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Pair a controller in iOS Settings \\u{203A} Bluetooth. While one is in use, the on-screen controls hide. If a game doesn't see it, open the game's settings and try the DualSense (HID) and Xbox option. A game can also use the controller as a keyboard and mouse, and each game's controller buttons can be remapped.",
+   "lines": [
+    388
+   ],
+   "contexts": [
+    "info: \"Pair a controller in iOS Settings \\u{203A} Bluetooth. While one is in use, the on-screen controls hide. If a game doesn't see it, open the game's settings and try the DualSense (HID) and Xbox option. A game can also use the controller as a keyboard and mouse, and each game's controller button"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4387"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Performance mode goes up to 120 FPS",
+   "lines": [
+    389
+   ],
+   "contexts": [
+    "RowBase(id: \"su-tip-power\", symbol: \"bolt.fill\", tint: .yellow, title: \"Performance mode goes up to 120 FPS\", subtitle: \"On iPads and iPhones with ProMotion screens.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4388"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "On iPads and iPhones with ProMotion screens.",
+   "lines": [
+    389
+   ],
+   "contexts": [
+    "RowBase(id: \"su-tip-power\", symbol: \"bolt.fill\", tint: .yellow, title: \"Performance mode goes up to 120 FPS\", subtitle: \"On iPads and iPhones with ProMotion screens.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4389"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Choose the power mode with the Power button in the in-game menu. Performance mode uses more battery and makes the device warmer; Balanced and Battery saver do the opposite.",
+   "lines": [
+    390
+   ],
+   "contexts": [
+    "info: \"Choose the power mode with the Power button in the in-game menu. Performance mode uses more battery and makes the device warmer; Balanced and Battery saver do the opposite.\", action: {}) { EmptyView() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4390"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "You're all set",
+   "lines": [
+    400,
+    402
+   ],
+   "contexts": [
+    "if short { header(ready ? \"You're all set\" : \"Almost there\") }",
+    "if !short { header(ready ? \"You're all set\" : \"Almost there\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4391"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Almost there",
+   "lines": [
+    400,
+    402
+   ],
+   "contexts": [
+    "if short { header(ready ? \"You're all set\" : \"Almost there\") }",
+    "if !short { header(ready ? \"You're all set\" : \"Almost there\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4392"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Games won't start until full speed is set up.",
+   "lines": [
+    403
+   ],
+   "contexts": [
+    "if !ready { Text(\"Games won't start until full speed is set up.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4393"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Full speed: \\(method.title)",
+   "lines": [
+    405
+   ],
+   "contexts": [
+    "summaryRow(.speed, jitReady && (!tunnelNeeded || tunnelAllowed) ? \"Full speed: \\(method.title)\" : (jitReady ? \"Private link not allowed\" : \"Full speed isn't set up\"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4394"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Private link not allowed",
+   "lines": [
+    405
+   ],
+   "contexts": [
+    "summaryRow(.speed, jitReady && (!tunnelNeeded || tunnelAllowed) ? \"Full speed: \\(method.title)\" : (jitReady ? \"Private link not allowed\" : \"Full speed isn't set up\"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4395"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Full speed isn't set up",
+   "lines": [
+    405
+   ],
+   "contexts": [
+    "summaryRow(.speed, jitReady && (!tunnelNeeded || tunnelAllowed) ? \"Full speed: \\(method.title)\" : (jitReady ? \"Private link not allowed\" : \"Full speed isn't set up\"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4396"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Windows components ready",
+   "lines": [
+    406
+   ],
+   "contexts": [
+    "summaryRow(.downloads, runtimeReady ? \"Windows components ready\" : \"Windows components missing\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4397"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Windows components missing",
+   "lines": [
+    406
+   ],
+   "contexts": [
+    "summaryRow(.downloads, runtimeReady ? \"Windows components ready\" : \"Windows components missing\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4398"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Games: \\([steam.signedIn ? ",
+   "lines": [
+    407
+   ],
+   "contexts": [
+    "summaryRow(.games, anyStore || !model.games.isEmpty ? \"Games: \\([steam.signedIn ? \"Steam\" : nil, epic.signedIn ? \"Epic Games\" : nil, gog.signedIn ? \"GOG\" : nil, itch.signedIn ? \"itch.io\" : nil, amazon.signedIn ? \"Amazon Games\" : nil, ea.signedIn ? \"EA app\" : nil, model.games.isEmpty ? nil : \"\\(model"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4399"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": " : nil, epic.signedIn ? ",
+   "lines": [
+    407
+   ],
+   "contexts": [
+    "summaryRow(.games, anyStore || !model.games.isEmpty ? \"Games: \\([steam.signedIn ? \"Steam\" : nil, epic.signedIn ? \"Epic Games\" : nil, gog.signedIn ? \"GOG\" : nil, itch.signedIn ? \"itch.io\" : nil, amazon.signedIn ? \"Amazon Games\" : nil, ea.signedIn ? \"EA app\" : nil, model.games.isEmpty ? nil : \"\\(model"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4400"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": " : nil, gog.signedIn ? ",
+   "lines": [
+    407
+   ],
+   "contexts": [
+    "summaryRow(.games, anyStore || !model.games.isEmpty ? \"Games: \\([steam.signedIn ? \"Steam\" : nil, epic.signedIn ? \"Epic Games\" : nil, gog.signedIn ? \"GOG\" : nil, itch.signedIn ? \"itch.io\" : nil, amazon.signedIn ? \"Amazon Games\" : nil, ea.signedIn ? \"EA app\" : nil, model.games.isEmpty ? nil : \"\\(model"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4401"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": " : nil, itch.signedIn ? ",
+   "lines": [
+    407
+   ],
+   "contexts": [
+    "summaryRow(.games, anyStore || !model.games.isEmpty ? \"Games: \\([steam.signedIn ? \"Steam\" : nil, epic.signedIn ? \"Epic Games\" : nil, gog.signedIn ? \"GOG\" : nil, itch.signedIn ? \"itch.io\" : nil, amazon.signedIn ? \"Amazon Games\" : nil, ea.signedIn ? \"EA app\" : nil, model.games.isEmpty ? nil : \"\\(model"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4402"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": " : nil, amazon.signedIn ? ",
+   "lines": [
+    407
+   ],
+   "contexts": [
+    "summaryRow(.games, anyStore || !model.games.isEmpty ? \"Games: \\([steam.signedIn ? \"Steam\" : nil, epic.signedIn ? \"Epic Games\" : nil, gog.signedIn ? \"GOG\" : nil, itch.signedIn ? \"itch.io\" : nil, amazon.signedIn ? \"Amazon Games\" : nil, ea.signedIn ? \"EA app\" : nil, model.games.isEmpty ? nil : \"\\(model"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4403"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": " : nil, ea.signedIn ? ",
+   "lines": [
+    407
+   ],
+   "contexts": [
+    "summaryRow(.games, anyStore || !model.games.isEmpty ? \"Games: \\([steam.signedIn ? \"Steam\" : nil, epic.signedIn ? \"Epic Games\" : nil, gog.signedIn ? \"GOG\" : nil, itch.signedIn ? \"itch.io\" : nil, amazon.signedIn ? \"Amazon Games\" : nil, ea.signedIn ? \"EA app\" : nil, model.games.isEmpty ? nil : \"\\(model"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4404"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": " : nil, model.games.isEmpty ? nil : ",
+   "lines": [
+    407
+   ],
+   "contexts": [
+    "summaryRow(.games, anyStore || !model.games.isEmpty ? \"Games: \\([steam.signedIn ? \"Steam\" : nil, epic.signedIn ? \"Epic Games\" : nil, gog.signedIn ? \"GOG\" : nil, itch.signedIn ? \"itch.io\" : nil, amazon.signedIn ? \"Amazon Games\" : nil, ea.signedIn ? \"EA app\" : nil, model.games.isEmpty ? nil : \"\\(model"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4405"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "].compactMap { $0 }.joined(separator: ",
+   "lines": [
+    407
+   ],
+   "contexts": [
+    "summaryRow(.games, anyStore || !model.games.isEmpty ? \"Games: \\([steam.signedIn ? \"Steam\" : nil, epic.signedIn ? \"Epic Games\" : nil, gog.signedIn ? \"GOG\" : nil, itch.signedIn ? \"itch.io\" : nil, amazon.signedIn ? \"Amazon Games\" : nil, ea.signedIn ? \"EA app\" : nil, model.games.isEmpty ? nil : \"\\(model"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4406"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Signing certificate",
+   "lines": [
+    430
+   ],
+   "contexts": [
+    "KitSheet(title: \"Signing certificate\", closeTitle: \"Done\", closeSymbol: \"checkmark\", scope: scope, close: { dismiss() }) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4407"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "What is it?",
+   "lines": [
+    432
+   ],
+   "contexts": [
+    "section(\"What is it?\", Theme.text, ["
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4408"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Apps that don't come from the App Store have to be digitally signed with a certificate tied to an Apple account, or iOS refuses to open them. The service or account that installed this app gave you two files for that: a certificate (a .p12 file protected by a password) and a profile (a .mobileprovision file).",
+   "lines": [
+    433
+   ],
+   "contexts": [
+    "\"Apps that don't come from the App Store have to be digitally signed with a certificate tied to an Apple account, or iOS refuses to open them. The service or account that installed this app gave you two files for that: a certificate (a .p12 file protected by a password) and a profile (a .mobileprovi"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4409"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "If you give this app those two files, it can sign new versions of itself on your device.",
+   "lines": [
+    434
+   ],
+   "contexts": [
+    "\"If you give this app those two files, it can sign new versions of itself on your device.\"])"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4410"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "If you add them",
+   "lines": [
+    435
+   ],
+   "contexts": [
+    "section(\"If you add them\", Theme.good, ["
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4411"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "\\u{2713} Update from inside the app, with no computer.",
+   "lines": [
+    436
+   ],
+   "contexts": [
+    "\"\\u{2713} Update from inside the app, with no computer.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4412"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "\\u{2713} Your games, settings and store sign-ins stay where they are.",
+   "lines": [
+    437
+   ],
+   "contexts": [
+    "\"\\u{2713} Your games, settings and store sign-ins stay where they are.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4413"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "\\u{2713} The files stay on this device, in the encrypted Keychain.",
+   "lines": [
+    438
+   ],
+   "contexts": [
+    "\"\\u{2713} The files stay on this device, in the encrypted Keychain.\"])"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4414"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "The catches",
+   "lines": [
+    439
+   ],
+   "contexts": [
+    "section(\"The catches\", Theme.warn, ["
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4415"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "\\u{2022} You need the files. Some signing services don't let you export them.",
+   "lines": [
+    440
+   ],
+   "contexts": [
+    "\"\\u{2022} You need the files. Some signing services don't let you export them.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4416"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "\\u{2022} A certificate and its password are powerful: only add them if you are comfortable with that. The app never sends them anywhere.",
+   "lines": [
+    441
+   ],
+   "contexts": [
+    "\"\\u{2022} A certificate and its password are powerful: only add them if you are comfortable with that. The app never sends them anywhere.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4417"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "\\u{2022} Profiles run out (7 days with a free Apple account, about a year with a paid one).",
+   "lines": [
+    442
+   ],
+   "contexts": [
+    "\"\\u{2022} Profiles run out (7 days with a free Apple account, about a year with a paid one).\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4418"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "\\u{2022} New versions must be signed by the same account that installed the app.",
+   "lines": [
+    443
+   ],
+   "contexts": [
+    "\"\\u{2022} New versions must be signed by the same account that installed the app.\"]"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4419"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "If you don't",
+   "lines": [
+    446
+   ],
+   "contexts": [
+    "section(\"If you don't\", Theme.text, ["
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4420"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Everything else works the same. To update, install the newer .ipa yourself the way you installed this one; your games and settings are kept (use the same account).",
+   "lines": [
+    447
+   ],
+   "contexts": [
+    "\"Everything else works the same. To update, install the newer .ipa yourself the way you installed this one; your games and settings are kept (use the same account).\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4421"
+  },
+  {
+   "file": "app/Sources/UI/SetupGuideView.swift",
+   "text": "Not sure? Say No for now. You can add the files later in Settings \\u{203A} Updates.",
+   "lines": [
+    448
+   ],
+   "contexts": [
+    "\"Not sure? Say No for now. You can add the files later in Settings \\u{203A} Updates.\"])"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4422"
+  },
+  {
+   "file": "app/Sources/UI/SteamAchievementsPage.swift",
+   "text": "Try again",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "ActionRow(id: \"sa-retry\", symbol: \"arrow.clockwise\", title: \"Try again\", chevron: false) { Task { await load() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4423"
+  },
+  {
+   "file": "app/Sources/UI/SteamAchievementsPage.swift",
+   "text": "This game has no achievements on Steam.",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "Text(\"This game has no achievements on Steam.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4424"
+  },
+  {
+   "file": "app/Sources/UI/SteamAchievementsPage.swift",
+   "text": "Unlocked",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "if !parts.unlocked.isEmpty { SettingsGroup(title: \"Unlocked\") { ForEach(parts.unlocked) { row($0) } } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4425"
+  },
+  {
+   "file": "app/Sources/UI/SteamAchievementsPage.swift",
+   "text": "Still to unlock",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "if !parts.locked.isEmpty { SettingsGroup(title: \"Still to unlock\") { ForEach(parts.locked) { row($0) } } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4426"
+  },
+  {
+   "file": "app/Sources/UI/SteamAchievementsPage.swift",
+   "text": "Shown as Steam has them. Achievements earned while playing here appear after Steam has recorded them.",
+   "lines": [
+    29
+   ],
+   "contexts": [
+    "Text(\"Shown as Steam has them. Achievements earned while playing here appear after Steam has recorded them.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4427"
+  },
+  {
+   "file": "app/Sources/UI/SteamAchievementsPage.swift",
+   "text": "\\(unlocked) of \\(total) unlocked",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    "Text(\"\\(unlocked) of \\(total) unlocked\").font(.system(size: 17, weight: .bold, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4428"
+  },
+  {
+   "file": "app/Sources/UI/SteamAchievementsPage.swift",
+   "text": "Hidden achievement",
+   "lines": [
+    57
+   ],
+   "contexts": [
+    "Text(secret ? \"Hidden achievement\" : item.name).font(.system(size: 16, weight: .semibold, design: .rounded)).foregroundStyle(Theme.text).lineLimit(2)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4429"
+  },
+  {
+   "file": "app/Sources/UI/SteamAchievementsPage.swift",
+   "text": "Unlocked ",
+   "lines": [
+    72
+   ],
+   "contexts": [
+    "if let date = item.unlocked { parts.append(\"Unlocked \" + date.formatted(date: .abbreviated, time: .shortened)) }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4430"
+  },
+  {
+   "file": "app/Sources/UI/SteamAchievementsPage.swift",
+   "text": "%.1f%% of players",
+   "lines": [
+    73
+   ],
+   "contexts": [
+    "if let percent = item.percent { parts.append(String(format: \"%.1f%% of players\", percent)) }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4431"
+  },
+  {
+   "file": "app/Sources/UI/SteamFriendsView.swift",
+   "text": "Try again",
+   "lines": [
+    20,
+    49
+   ],
+   "contexts": [
+    "button(\"Try again\", symbol: \"arrow.clockwise\") { Task { await store.refresh(force: true) } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4432"
+  },
+  {
+   "file": "app/Sources/UI/SteamFriendsView.swift",
+   "text": "There is nobody on this Steam account's friends list.",
+   "lines": [
+    22
+   ],
+   "contexts": [
+    "Text(\"There is nobody on this Steam account's friends list.\").font(.footnote).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4433"
+  },
+  {
+   "file": "app/Sources/UI/SteamFriendsView.swift",
+   "text": "Playing",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "if !store.playing.isEmpty { section(\"Playing\", store.playing) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4434"
+  },
+  {
+   "file": "app/Sources/UI/SteamFriendsView.swift",
+   "text": "Online",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "if !store.online.isEmpty { section(\"Online\", store.online) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4435"
+  },
+  {
+   "file": "app/Sources/UI/SteamFriendsView.swift",
+   "text": "Hide offline friends",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "button(showOffline ? \"Hide offline friends\" : \"Show offline friends (\\(store.offline.count))\", symbol: showOffline ? \"chevron.up\" : \"chevron.down\") { showOffline.toggle() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4436"
+  },
+  {
+   "file": "app/Sources/UI/SteamFriendsView.swift",
+   "text": "Show offline friends (\\(store.offline.count))",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "button(showOffline ? \"Hide offline friends\" : \"Show offline friends (\\(store.offline.count))\", symbol: showOffline ? \"chevron.up\" : \"chevron.down\") { showOffline.toggle() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4437"
+  },
+  {
+   "file": "app/Sources/UI/SteamFriendsView.swift",
+   "text": "Offline",
+   "lines": [
+    29
+   ],
+   "contexts": [
+    "if showOffline { section(\"Offline\", store.offline) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4438"
+  },
+  {
+   "file": "app/Sources/UI/SteamFriendsView.swift",
+   "text": "Steam did not give online status just now, only names.",
+   "lines": [
+    31
+   ],
+   "contexts": [
+    "if !store.hasState { Text(\"Steam did not give online status just now, only names.\").font(.footnote).foregroundStyle(Theme.textDim) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4439"
+  },
+  {
+   "file": "app/Sources/UI/SteamFriendsView.swift",
+   "text": "Refreshing\\u{2026}",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "button(store.loading ? \"Refreshing\\u{2026}\" : \"Refresh\", symbol: \"arrow.clockwise\") { Task { await store.refresh(force: true) } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4440"
+  },
+  {
+   "file": "app/Sources/UI/SteamFriendsView.swift",
+   "text": "Refresh",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "button(store.loading ? \"Refreshing\\u{2026}\" : \"Refresh\", symbol: \"arrow.clockwise\") { Task { await store.refresh(force: true) } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4441"
+  },
+  {
+   "file": "app/Sources/UI/SteamFriendsView.swift",
+   "text": "None of your friends are playing this right now.",
+   "lines": [
+    51
+   ],
+   "contexts": [
+    "Text(\"None of your friends are playing this right now.\").font(.footnote).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4442"
+  },
+  {
+   "file": "app/Sources/UI/SteamFriendsView.swift",
+   "text": "Playing now",
+   "lines": [
+    53
+   ],
+   "contexts": [
+    "section(\"Playing now\", here)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4443"
+  },
+  {
+   "file": "app/Sources/UI/SteamFriendsView.swift",
+   "text": "\\(store.friends.count) friends \\u{00B7} \\(online) online",
+   "lines": [
+    59
+   ],
+   "contexts": [
+    "return Text(\"\\(store.friends.count) friends \\u{00B7} \\(online) online\" + (playing > 0 ? \" \\u{00B7} \\(playing) playing\" : \"\"))"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4444"
+  },
+  {
+   "file": "app/Sources/UI/SteamFriendsView.swift",
+   "text": " \\u{00B7} \\(playing) playing",
+   "lines": [
+    59
+   ],
+   "contexts": [
+    "return Text(\"\\(store.friends.count) friends \\u{00B7} \\(online) online\" + (playing > 0 ? \" \\u{00B7} \\(playing) playing\" : \"\"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4445"
+  },
+  {
+   "file": "app/Sources/UI/SteamFriendsView.swift",
+   "text": "Status not available",
+   "lines": [
+    86
+   ],
+   "contexts": [
+    "Text(store.hasState ? friend.status() : \"Status not available\").font(.system(size: 12))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4446"
+  },
+  {
+   "file": "app/Sources/UI/SteamFriendsView.swift",
+   "text": "fr-btn-\\(title)",
+   "lines": [
+    108
+   ],
+   "contexts": [
+    ".focusTarget(\"fr-btn-\\(title)\", radius: 12, scale: 1.0, action: action)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4447"
+  },
+  {
+   "file": "app/Sources/UI/SteamNewsView.swift",
+   "text": "Steam has no news for this game.",
+   "lines": [
+    18
+   ],
+   "contexts": [
+    "Text(\"Steam has no news for this game.\").font(.footnote).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4448"
+  },
+  {
+   "file": "app/Sources/UI/SteamNewsView.swift",
+   "text": "Steam's news could not be loaded. Check your internet connection.",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "Text(\"Steam's news could not be loaded. Check your internet connection.\").font(.footnote).foregroundStyle(Theme.warn)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4449"
+  },
+  {
+   "file": "app/Sources/UI/SteamNewsView.swift",
+   "text": "Try again",
+   "lines": [
+    24
+   ],
+   "contexts": [
+    "Button(\"Try again\") { Task { await load() } }.font(.system(size: 14, weight: .semibold)).foregroundStyle(Theme.accent).frame(minHeight: 44)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4450"
+  },
+  {
+   "file": "app/Sources/UI/SteamNewsView.swift",
+   "text": "Read on Steam",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "Text(\"Read on Steam\").font(.system(size: 12, weight: .semibold)).foregroundStyle(Theme.accent).padding(.top, 2)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4451"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "How it runs on Porthole",
+   "lines": [
+    42,
+    268
+   ],
+   "contexts": [
+    "var title: String { switch self { case .compat: \"How it runs on Porthole\"; case .reviews: \"Steam reviews\"; case .news: \"News and patch notes\"; case .details: \"Details and files\"; case .versions: \"Version and DLC\"; case .achievements: \"Achievements\"; case .workshop: \"Workshop\" } }",
+    "ActionRow(id: \"sp-door-compat\", symbol: \"checkmark.seal.fill\", title: \"How it runs on Porthole\", subtitle: compatSummary) { door = .compat }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4452"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Steam reviews",
+   "lines": [
+    42,
+    270,
+    342
+   ],
+   "contexts": [
+    "var title: String { switch self { case .compat: \"How it runs on Porthole\"; case .reviews: \"Steam reviews\"; case .news: \"News and patch notes\"; case .details: \"Details and files\"; case .versions: \"Version and DLC\"; case .achievements: \"Achievements\"; case .workshop: \"Workshop\" } }",
+    "ActionRow(id: \"sp-door-reviews\", symbol: \"hand.thumbsup.fill\", title: \"Steam reviews\", subtitle: \"\\(r.label) \\u{00B7} \\(r.percent)%\") { door = .reviews }",
+    "SettingsGroup(title: \"Steam reviews\") {"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4453"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "News and patch notes",
+   "lines": [
+    42,
+    272
+   ],
+   "contexts": [
+    "var title: String { switch self { case .compat: \"How it runs on Porthole\"; case .reviews: \"Steam reviews\"; case .news: \"News and patch notes\"; case .details: \"Details and files\"; case .versions: \"Version and DLC\"; case .achievements: \"Achievements\"; case .workshop: \"Workshop\" } }",
+    "ActionRow(id: \"sp-door-news\", symbol: \"newspaper.fill\", title: \"News and patch notes\", subtitle: \"From Steam\") { door = .news }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4454"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Details and files",
+   "lines": [
+    42,
+    280
+   ],
+   "contexts": [
+    "var title: String { switch self { case .compat: \"How it runs on Porthole\"; case .reviews: \"Steam reviews\"; case .news: \"News and patch notes\"; case .details: \"Details and files\"; case .versions: \"Version and DLC\"; case .achievements: \"Achievements\"; case .workshop: \"Workshop\" } }",
+    "ActionRow(id: \"sp-door-details\", symbol: \"info.circle.fill\", title: \"Details and files\", subtitle: installed ? \"Version, requirements, delete files\" : \"Version, requirements\") { door = .details }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4455"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Version and DLC",
+   "lines": [
+    42,
+    274
+   ],
+   "contexts": [
+    "var title: String { switch self { case .compat: \"How it runs on Porthole\"; case .reviews: \"Steam reviews\"; case .news: \"News and patch notes\"; case .details: \"Details and files\"; case .versions: \"Version and DLC\"; case .achievements: \"Achievements\"; case .workshop: \"Workshop\" } }",
+    "ActionRow(id: \"sp-door-versions\", symbol: \"square.stack.3d.up.fill\", title: \"Version and DLC\", subtitle: versionsSummary) { door = .versions }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4456"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Achievements",
+   "lines": [
+    42,
+    277
+   ],
+   "contexts": [
+    "var title: String { switch self { case .compat: \"How it runs on Porthole\"; case .reviews: \"Steam reviews\"; case .news: \"News and patch notes\"; case .details: \"Details and files\"; case .versions: \"Version and DLC\"; case .achievements: \"Achievements\"; case .workshop: \"Workshop\" } }",
+    "ActionRow(id: \"sp-door-achievements\", symbol: \"trophy.fill\", title: \"Achievements\", subtitle: progress.summary(for: game.id) ?? \"Your progress on Steam\") { door = .achievements }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4457"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Workshop",
+   "lines": [
+    42,
+    278
+   ],
+   "contexts": [
+    "var title: String { switch self { case .compat: \"How it runs on Porthole\"; case .reviews: \"Steam reviews\"; case .news: \"News and patch notes\"; case .details: \"Details and files\"; case .versions: \"Version and DLC\"; case .achievements: \"Achievements\"; case .workshop: \"Workshop\" } }",
+    "ActionRow(id: \"sp-door-workshop\", symbol: \"puzzlepiece.extension.fill\", title: \"Workshop\", subtitle: \"Mods and community items\", badge: \"Beta\") { door = .workshop }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4458"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Remove \\(game.name)?",
+   "lines": [
+    111
+   ],
+   "contexts": [
+    ".confirm(\"Remove \\(game.name)?\", message: \"This deletes the game's files from the device. You can download it again.\", confirmTitle: \"Delete files\", destructive: true, isPresented: $confirmRemove) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4459"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "This deletes the game's files from the device. You can download it again.",
+   "lines": [
+    111
+   ],
+   "contexts": [
+    ".confirm(\"Remove \\(game.name)?\", message: \"This deletes the game's files from the device. You can download it again.\", confirmTitle: \"Delete files\", destructive: true, isPresented: $confirmRemove) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4460"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Delete files",
+   "lines": [
+    111
+   ],
+   "contexts": [
+    ".confirm(\"Remove \\(game.name)?\", message: \"This deletes the game's files from the device. You can download it again.\", confirmTitle: \"Delete files\", destructive: true, isPresented: $confirmRemove) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4461"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "The Steam page couldn't be loaded. Check the connection and open this again.",
+   "lines": [
+    155
+   ],
+   "contexts": [
+    "else if page == nil { Text(\"The Steam page couldn't be loaded. Check the connection and open this again.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4462"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Download",
+   "lines": [
+    161
+   ],
+   "contexts": [
+    "if game.sizeBytes > 0 { out.append(GameHeroStat(symbol: \"arrow.down.circle.fill\", title: \"Download\", value: SteamGameTile.size(game.sizeBytes))) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4463"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "On this device",
+   "lines": [
+    162
+   ],
+   "contexts": [
+    "if let disk = game.diskBytes, disk > 0 { out.append(GameHeroStat(symbol: \"internaldrive.fill\", title: \"On this device\", value: SteamGameTile.size(disk))) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4464"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Released",
+   "lines": [
+    163,
+    329
+   ],
+   "contexts": [
+    "if let released = page?.released, !released.isEmpty { out.append(GameHeroStat(symbol: \"calendar\", title: \"Released\", value: released)) }",
+    "if let r = page.released { ValueRow(id: \"sp-d-rel\", symbol: \"calendar\", title: \"Released\", value: r) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4465"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "\\(r.label) \\u{00B7} \\(r.percent)%",
+   "lines": [
+    171,
+    270
+   ],
+   "contexts": [
+    "if let r = page?.reviewSummary { chip(\"hand.thumbsup.fill\", \"\\(r.label) \\u{00B7} \\(r.percent)%\", r.percent >= 70 ? Theme.good : r.percent >= 40 ? Theme.warn : Theme.bad) }",
+    "ActionRow(id: \"sp-door-reviews\", symbol: \"hand.thumbsup.fill\", title: \"Steam reviews\", subtitle: \"\\(r.label) \\u{00B7} \\(r.percent)%\") { door = .reviews }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4466"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Update available",
+   "lines": [
+    172
+   ],
+   "contexts": [
+    "if installed { chip(store.updateAvailable(game) ? \"arrow.triangle.2.circlepath.circle.fill\" : \"checkmark.circle.fill\", store.updateAvailable(game) ? \"Update available\" : \"Installed\", store.updateAvailable(game) ? Theme.accent : Theme.good) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4467"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Installed",
+   "lines": [
+    172
+   ],
+   "contexts": [
+    "if installed { chip(store.updateAvailable(game) ? \"arrow.triangle.2.circlepath.circle.fill\" : \"checkmark.circle.fill\", store.updateAvailable(game) ? \"Update available\" : \"Installed\", store.updateAvailable(game) ? Theme.accent : Theme.good) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4468"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Metacritic \\(m)",
+   "lines": [
+    174
+   ],
+   "contexts": [
+    "if let m = page?.metacritic { chip(\"star.fill\", \"Metacritic \\(m)\", Theme.textDim) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4469"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Resume",
+   "lines": [
+    194
+   ],
+   "contexts": [
+    "case .paused, .failed: PillButton(id: \"sp-main\", title: \"Resume\", symbol: \"play.fill\", style: .primary) { start() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4470"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Cancel",
+   "lines": [
+    196
+   ],
+   "contexts": [
+    "PillButton(id: \"sp-cancel\", title: \"Cancel\", symbol: \"xmark\") { store.cancel(game.id) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4471"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Update",
+   "lines": [
+    199
+   ],
+   "contexts": [
+    "PillButton(id: \"sp-main\", title: \"Update\", symbol: \"arrow.triangle.2.circlepath\", style: .primary) { start() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4472"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Busy",
+   "lines": [
+    202
+   ],
+   "contexts": [
+    "PillButton(id: \"sp-play\", title: session.isActive ? \"Busy\" : \"Play\", symbol: \"play.fill\", style: store.updateAvailable(game) ? .glass : .primary, enabled: !session.isActive) { session.start(libraryGame) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4473"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Play",
+   "lines": [
+    202,
+    418
+   ],
+   "contexts": [
+    "PillButton(id: \"sp-play\", title: session.isActive ? \"Busy\" : \"Play\", symbol: \"play.fill\", style: store.updateAvailable(game) ? .glass : .primary, enabled: !session.isActive) { session.start(libraryGame) }",
+    "if item?.isVideo == true { PillButton(id: \"mv-play\", title: playing ? \"Pause\" : \"Play\", symbol: playing ? \"pause.fill\" : \"play.fill\", style: .primary, action: toggle) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4474"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Game settings",
+   "lines": [
+    203
+   ],
+   "contexts": [
+    "PillButton(id: \"sp-open\", title: \"Game settings\", symbol: \"slider.horizontal.3\") { router.tab = .library; router.homePath.append(libraryGame.id) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4475"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Add to library",
+   "lines": [
+    205
+   ],
+   "contexts": [
+    "PillButton(id: \"sp-add\", title: \"Add to library\", symbol: \"plus\", style: store.updateAvailable(game) ? .glass : .primary) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4476"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Install \\u{00B7} \\(SteamGameTile.size(game.sizeBytes))",
+   "lines": [
+    210
+   ],
+   "contexts": [
+    "PillButton(id: \"sp-main\", title: game.sizeBytes > 0 ? \"Install \\u{00B7} \\(SteamGameTile.size(game.sizeBytes))\" : \"Install\", symbol: \"arrow.down.circle.fill\", style: .primary) { start() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4477"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Install",
+   "lines": [
+    210
+   ],
+   "contexts": [
+    "PillButton(id: \"sp-main\", title: game.sizeBytes > 0 ? \"Install \\u{00B7} \\(SteamGameTile.size(game.sizeBytes))\" : \"Install\", symbol: \"arrow.down.circle.fill\", style: .primary) { start() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4478"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Waiting\\u{2026}",
+   "lines": [
+    216
+   ],
+   "contexts": [
+    "case .queued: Text(\"Waiting\\u{2026}\").font(.caption).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4479"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Paused",
+   "lines": [
+    217
+   ],
+   "contexts": [
+    "case .paused: TileProgress(value: d.progress.fraction, paused: true); Text(\"Paused\").font(.caption).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4480"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Videos and screenshots",
+   "lines": [
+    227
+   ],
+   "contexts": [
+    "Theme.label(\"Videos and screenshots\").padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4481"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "sp-media-\\(item.id)",
+   "lines": [
+    240
+   ],
+   "contexts": [
+    ".focusTarget(\"sp-media-\\(item.id)\", radius: 14, scale: 1.06) { viewing = i }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4482"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "About this game",
+   "lines": [
+    251
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"About this game\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4483"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Genres",
+   "lines": [
+    258
+   ],
+   "contexts": [
+    "if !page.genres.isEmpty { ValueRow(id: \"sp-genres\", symbol: \"tag.fill\", title: \"Genres\", value: page.genres.prefix(4).joined(separator: \", \")) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4484"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Read the full description",
+   "lines": [
+    260
+   ],
+   "contexts": [
+    "ActionRow(id: \"sp-more\", symbol: \"text.alignleft\", title: \"Read the full description\", chevron: true) { reading = Reading(title: game.name, text: page.about) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4485"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Explore",
+   "lines": [
+    267
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Explore\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4486"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "From Steam",
+   "lines": [
+    272
+   ],
+   "contexts": [
+    "ActionRow(id: \"sp-door-news\", symbol: \"newspaper.fill\", title: \"News and patch notes\", subtitle: \"From Steam\") { door = .news }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4487"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Your progress on Steam",
+   "lines": [
+    277
+   ],
+   "contexts": [
+    "ActionRow(id: \"sp-door-achievements\", symbol: \"trophy.fill\", title: \"Achievements\", subtitle: progress.summary(for: game.id) ?? \"Your progress on Steam\") { door = .achievements }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4488"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Mods and community items",
+   "lines": [
+    278
+   ],
+   "contexts": [
+    "ActionRow(id: \"sp-door-workshop\", symbol: \"puzzlepiece.extension.fill\", title: \"Workshop\", subtitle: \"Mods and community items\", badge: \"Beta\") { door = .workshop }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4489"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Beta",
+   "lines": [
+    278
+   ],
+   "contexts": [
+    "ActionRow(id: \"sp-door-workshop\", symbol: \"puzzlepiece.extension.fill\", title: \"Workshop\", subtitle: \"Mods and community items\", badge: \"Beta\") { door = .workshop }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4490"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Version, requirements, delete files",
+   "lines": [
+    280
+   ],
+   "contexts": [
+    "ActionRow(id: \"sp-door-details\", symbol: \"info.circle.fill\", title: \"Details and files\", subtitle: installed ? \"Version, requirements, delete files\" : \"Version, requirements\") { door = .details }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4491"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Version, requirements",
+   "lines": [
+    280
+   ],
+   "contexts": [
+    "ActionRow(id: \"sp-door-details\", symbol: \"info.circle.fill\", title: \"Details and files\", subtitle: installed ? \"Version, requirements, delete files\" : \"Version, requirements\") { door = .details }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4492"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Normal version",
+   "lines": [
+    286
+   ],
+   "contexts": [
+    "var parts = [choice.branch == SteamBranch.publicName ? \"Normal version\" : choice.branch]"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4493"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "\\(choice.disabledDLC.count) DLC off",
+   "lines": [
+    287
+   ],
+   "contexts": [
+    "if !choice.disabledDLC.isEmpty { parts.append(\"\\(choice.disabledDLC.count) DLC off\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4494"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Not yet tested",
+   "lines": [
+    294,
+    315,
+    317
+   ],
+   "contexts": [
+    "return \"Not yet tested\"",
+    "ValueRow(id: \"sp-c-verdict\", symbol: \"questionmark.circle.fill\", title: \"Not yet tested\", value: \"Engine changed\")",
+    "ValueRow(id: \"sp-c-verdict\", symbol: \"questionmark.circle.fill\", title: \"Not yet tested\", value: \"No reports\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4495"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Files and links",
+   "lines": [
+    299
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Files and links\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4496"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "Open on Steam",
+   "lines": [
+    300
+   ],
+   "contexts": [
+    "ActionRow(id: \"sp-web\", symbol: \"safari\", title: \"Open on Steam\", chevron: false) { UIApplication.shared.open(page?.storeURL ?? URL(string: \"https://store.steampowered.com/app/\\(game.id)\")!) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4497"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "On Porthole",
+   "lines": [
+    308
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"On Porthole\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4498"
+  },
+  {
+   "file": "app/Sources/UI/SteamPage.swift",
+   "text": "\\(overall.reports) report\\(overall.reports == 1 ? ",
+   "lines": [
+    310
+   ],
+   "contexts": [
+    "ValueRow(id: \"sp-c-verdict\", symbol: overall.verdict.symbol, title: overall.verdict.title, value: \"\\(overall.reports) report\\(overall.reports == 1 ? \"\" : \"s\")\", statusColor: overall.verdict.color)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4499"
+  }
+ ]
+}

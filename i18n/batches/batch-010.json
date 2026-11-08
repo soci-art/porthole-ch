@@ -1,0 +1,2896 @@
+{
+ "batch": 10,
+ "units": [
+  {
+   "file": "app/Sources/Itch/ItchZip.swift",
+   "text": "This zip file is damaged (no ZIP64 record).",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "guard record.count >= 56, le32(record, 0) == 0x0606_4b50 else { throw ItchZipError.invalid(\"This zip file is damaged (no ZIP64 record).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1620"
+  },
+  {
+   "file": "app/Sources/Itch/ItchZip.swift",
+   "text": "This zip file is damaged (bad directory).",
+   "lines": [
+    64
+   ],
+   "contexts": [
+    "throw ItchZipError.invalid(\"This zip file is damaged (bad directory).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1621"
+  },
+  {
+   "file": "app/Sources/Itch/ItchZip.swift",
+   "text": "This zip file is damaged (short directory).",
+   "lines": [
+    68
+   ],
+   "contexts": [
+    "guard directory.count == Int(directorySize) else { throw ItchZipError.invalid(\"This zip file is damaged (short directory).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1622"
+  },
+  {
+   "file": "app/Sources/Itch/ItchZip.swift",
+   "text": "This zip file is damaged (bad entry).",
+   "lines": [
+    74
+   ],
+   "contexts": [
+    "guard p + 46 <= directory.count, le32(directory, p) == 0x0201_4b50 else { throw ItchZipError.invalid(\"This zip file is damaged (bad entry).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1623"
+  },
+  {
+   "file": "app/Sources/Itch/ItchZip.swift",
+   "text": "This zip file is damaged (entry overruns).",
+   "lines": [
+    83
+   ],
+   "contexts": [
+    "guard p + 46 + nameLength + extraLength + commentLength <= directory.count else { throw ItchZipError.invalid(\"This zip file is damaged (entry overruns).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1624"
+  },
+  {
+   "file": "app/Sources/Itch/ItchZip.swift",
+   "text": "This zip holds an unsafe path (\\(name.prefix(40))).",
+   "lines": [
+    106
+   ],
+   "contexts": [
+    "guard let safe = GogContent.safePath(name) else { throw ItchZipError.invalid(\"This zip holds an unsafe path (\\(name.prefix(40))).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1625"
+  },
+  {
+   "file": "app/Sources/Itch/ItchZip.swift",
+   "text": "The zip file is empty.",
+   "lines": [
+    117
+   ],
+   "contexts": [
+    "guard !all.isEmpty else { throw ItchZipError.invalid(\"The zip file is empty.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1626"
+  },
+  {
+   "file": "app/Sources/Itch/ItchZip.swift",
+   "text": "This zip file is password-protected.",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "guard !entry.encrypted else { throw ItchZipError.invalid(\"This zip file is password-protected.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1627"
+  },
+  {
+   "file": "app/Sources/Itch/ItchZip.swift",
+   "text": "This zip uses a compression method Porthole cannot unpack yet (method \\(entry.method)).",
+   "lines": [
+    139
+   ],
+   "contexts": [
+    "throw ItchZipError.invalid(\"This zip uses a compression method Porthole cannot unpack yet (method \\(entry.method)).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1628"
+  },
+  {
+   "file": "app/Sources/Itch/ItchZip.swift",
+   "text": "This zip file is damaged (bad local header).",
+   "lines": [
+    146
+   ],
+   "contexts": [
+    "guard local.count == 30, le32(local, 0) == 0x0403_4b50 else { throw ItchZipError.invalid(\"This zip file is damaged (bad local header).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1629"
+  },
+  {
+   "file": "app/Sources/Itch/ItchZip.swift",
+   "text": "This zip file is damaged (short data).",
+   "lines": [
+    180,
+    194
+   ],
+   "contexts": [
+    "guard chunk.count == want else { throw ItchZipError.invalid(\"This zip file is damaged (short data).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1630"
+  },
+  {
+   "file": "app/Sources/Itch/ItchZip.swift",
+   "text": "zlib could not start.",
+   "lines": [
+    186
+   ],
+   "contexts": [
+    "guard inflateInit2_(&stream, -MAX_WBITS, ZLIB_VERSION, Int32(MemoryLayout<z_stream>.size)) == Z_OK else { throw ItchZipError.invalid(\"zlib could not start.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1631"
+  },
+  {
+   "file": "app/Sources/Itch/ItchZip.swift",
+   "text": "A file in this zip is damaged.",
+   "lines": [
+    210
+   ],
+   "contexts": [
+    "if status != Z_OK && status != Z_BUF_ERROR { throw ItchZipError.invalid(\"A file in this zip is damaged.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1632"
+  },
+  {
+   "file": "app/Sources/Itch/ItchZip.swift",
+   "text": "A file in this zip ended early.",
+   "lines": [
+    214
+   ],
+   "contexts": [
+    "guard ended else { throw ItchZipError.invalid(\"A file in this zip ended early.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1633"
+  },
+  {
+   "file": "app/Sources/Itch/ItchZip.swift",
+   "text": "A file in this zip has the wrong size.",
+   "lines": [
+    216
+   ],
+   "contexts": [
+    "guard produced == entry.size else { throw ItchZipError.invalid(\"A file in this zip has the wrong size.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1634"
+  },
+  {
+   "file": "app/Sources/Itch/ItchZip.swift",
+   "text": "A file in this zip failed its checksum.",
+   "lines": [
+    217
+   ],
+   "contexts": [
+    "guard UInt32(truncatingIfNeeded: crc) == entry.crc else { throw ItchZipError.invalid(\"A file in this zip failed its checksum.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1635"
+  },
+  {
+   "file": "app/Sources/Itch/itch_rar.c",
+   "text": "ncrypt",
+   "lines": [
+    106,
+    133
+   ],
+   "contexts": [
+    "status = (why && (strstr(why, \"ncrypt\") || strstr(why, \"assphrase\") || strstr(why, \"assword\"))) ? IRAR_UNSUPPORTED : IRAR_DAMAGED;",
+    "status = (why && (strstr(why, \"ncrypt\") || strstr(why, \"assphrase\"))) ? IRAR_UNSUPPORTED : IRAR_DAMAGED;"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1636"
+  },
+  {
+   "file": "app/Sources/Itch/itch_rar.c",
+   "text": "assphrase",
+   "lines": [
+    106,
+    133
+   ],
+   "contexts": [
+    "status = (why && (strstr(why, \"ncrypt\") || strstr(why, \"assphrase\") || strstr(why, \"assword\"))) ? IRAR_UNSUPPORTED : IRAR_DAMAGED;",
+    "status = (why && (strstr(why, \"ncrypt\") || strstr(why, \"assphrase\"))) ? IRAR_UNSUPPORTED : IRAR_DAMAGED;"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1637"
+  },
+  {
+   "file": "app/Sources/Itch/itch_rar.c",
+   "text": "assword",
+   "lines": [
+    106
+   ],
+   "contexts": [
+    "status = (why && (strstr(why, \"ncrypt\") || strstr(why, \"assphrase\") || strstr(why, \"assword\"))) ? IRAR_UNSUPPORTED : IRAR_DAMAGED;"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1638"
+  },
+  {
+   "file": "app/Sources/Itch/itch_rar.c",
+   "text": "encrypted",
+   "lines": [
+    107,
+    134
+   ],
+   "contexts": [
+    "if (status == IRAR_UNSUPPORTED) say(reason, reason_size, \"encrypted\");"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1639"
+  },
+  {
+   "file": "app/Sources/Pairing/OnDevicePairing.swift",
+   "text": "On-device pairing follows the protocol documented by the idevice project and shown working by StikPair. The code in this app is a separate Swift implementation.",
+   "lines": [
+    11
+   ],
+   "contexts": [
+    "static let text = \"On-device pairing follows the protocol documented by the idevice project and shown working by StikPair. The code in this app is a separate Swift implementation.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1640"
+  },
+  {
+   "file": "app/Sources/Pairing/OnDevicePairing.swift",
+   "text": "Pair with ...",
+   "lines": [
+    24
+   ],
+   "contexts": [
+    "case waiting                     // advertising; waiting for the person to tap \"Pair with ...\" in Settings"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1641"
+  },
+  {
+   "file": "app/Sources/Pairing/OnDevicePairing.swift",
+   "text": "The app ran out of background time before the iPhone connected. Tap Start and go to Settings straight away.",
+   "lines": [
+    69
+   ],
+   "contexts": [
+    "self.fail(\"The app ran out of background time before the iPhone connected. Tap Start and go to Settings straight away.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1642"
+  },
+  {
+   "file": "app/Sources/Pairing/OnDevicePairing.swift",
+   "text": "Pairing",
+   "lines": [
+    84,
+    139
+   ],
+   "contexts": [
+    "let request = BGContinuedProcessingTaskRequest(identifier: Self.taskIdentifier, title: \"Pairing\", subtitle: \"Waiting for this iPhone to connect…\")",
+    "task.updateTitle(\"Pairing\", subtitle: \"Enter code \\(pin) on this iPhone\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1643"
+  },
+  {
+   "file": "app/Sources/Pairing/OnDevicePairing.swift",
+   "text": "Waiting for this iPhone to connect…",
+   "lines": [
+    84
+   ],
+   "contexts": [
+    "let request = BGContinuedProcessingTaskRequest(identifier: Self.taskIdentifier, title: \"Pairing\", subtitle: \"Waiting for this iPhone to connect…\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1644"
+  },
+  {
+   "file": "app/Sources/Pairing/OnDevicePairing.swift",
+   "text": "Pairing could not start (\\(why)). Allow Local Network for this app in Settings › Privacy & Security › Local Network, and make sure Wi-Fi is on.",
+   "lines": [
+    110
+   ],
+   "contexts": [
+    "self.fail(\"Pairing could not start (\\(why)). Allow Local Network for this app in Settings › Privacy & Security › Local Network, and make sure Wi-Fi is on.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1645"
+  },
+  {
+   "file": "app/Sources/Pairing/OnDevicePairing.swift",
+   "text": "Enter code \\(pin) on this iPhone",
+   "lines": [
+    139
+   ],
+   "contexts": [
+    "task.updateTitle(\"Pairing\", subtitle: \"Enter code \\(pin) on this iPhone\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1646"
+  },
+  {
+   "file": "app/Sources/Pairing/OnDevicePairing.swift",
+   "text": "Pairing code: \\(pin)",
+   "lines": [
+    141
+   ],
+   "contexts": [
+    "notify(id: \"f4.pairing.pin\", title: \"Pairing code: \\(pin)\", body: \"Type \\(pin) on the screen that asks for it.\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1647"
+  },
+  {
+   "file": "app/Sources/Pairing/OnDevicePairing.swift",
+   "text": "Type \\(pin) on the screen that asks for it.",
+   "lines": [
+    141
+   ],
+   "contexts": [
+    "notify(id: \"f4.pairing.pin\", title: \"Pairing code: \\(pin)\", body: \"Type \\(pin) on the screen that asks for it.\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1648"
+  },
+  {
+   "file": "app/Sources/Pairing/OnDevicePairing.swift",
+   "text": "Pairing complete",
+   "lines": [
+    155
+   ],
+   "contexts": [
+    "notify(id: \"f4.pairing.done\", title: \"Pairing complete\", body: \"Return to the app. JIT can now be switched on from inside it.\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1649"
+  },
+  {
+   "file": "app/Sources/Pairing/OnDevicePairing.swift",
+   "text": "Return to the app. JIT can now be switched on from inside it.",
+   "lines": [
+    155
+   ],
+   "contexts": [
+    "notify(id: \"f4.pairing.done\", title: \"Pairing complete\", body: \"Return to the app. JIT can now be switched on from inside it.\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1650"
+  },
+  {
+   "file": "app/Sources/Pairing/OnDevicePairing.swift",
+   "text": "Paired, but the pairing file could not be saved: \\(error.localizedDescription)",
+   "lines": [
+    158
+   ],
+   "contexts": [
+    "phase = .failed(\"Paired, but the pairing file could not be saved: \\(error.localizedDescription)\")"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1651"
+  },
+  {
+   "file": "app/Sources/Pairing/PairingCodecs.swift",
+   "text": "TLV entry runs past the end",
+   "lines": [
+    40
+   ],
+   "contexts": [
+    "guard i + len <= bytes.count else { throw PairingError.malformed(\"TLV entry runs past the end\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1652"
+  },
+  {
+   "file": "app/Sources/Pairing/PairingCodecs.swift",
+   "text": "unknown TLV type \\(t)",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "guard let type = PairingTLVType(rawValue: t) else { throw PairingError.malformed(\"unknown TLV type \\(t)\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1653"
+  },
+  {
+   "file": "app/Sources/Pairing/PairingCodecs.swift",
+   "text": "The iPhone sent something unreadable (\\(s)).",
+   "lines": [
+    62
+   ],
+   "contexts": [
+    "case .malformed(let s): \"The iPhone sent something unreadable (\\(s)).\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1654"
+  },
+  {
+   "file": "app/Sources/Pairing/PairingCodecs.swift",
+   "text": "Pairing went off script: \\(s).",
+   "lines": [
+    63
+   ],
+   "contexts": [
+    "case .unexpected(let s): \"Pairing went off script: \\(s).\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1655"
+  },
+  {
+   "file": "app/Sources/Pairing/PairingCodecs.swift",
+   "text": "The code was wrong. Start again and type the new code.",
+   "lines": [
+    64
+   ],
+   "contexts": [
+    "case .wrongPIN: \"The code was wrong. Start again and type the new code.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1656"
+  },
+  {
+   "file": "app/Sources/Pairing/PairingCodecs.swift",
+   "text": "Pairing was cancelled.",
+   "lines": [
+    65
+   ],
+   "contexts": [
+    "case .cancelled: \"Pairing was cancelled.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1657"
+  },
+  {
+   "file": "app/Sources/Pairing/PairingCodecs.swift",
+   "text": "OPACK ended early",
+   "lines": [
+    140
+   ],
+   "contexts": [
+    "guard n >= 0, i + n <= bytes.count else { throw PairingError.malformed(\"OPACK ended early\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1658"
+  },
+  {
+   "file": "app/Sources/Pairing/PairingCodecs.swift",
+   "text": "OPACK string is not UTF-8",
+   "lines": [
+    160
+   ],
+   "contexts": [
+    "guard let s = String(bytes: try take(bytes, &i, n), encoding: .utf8) else { throw PairingError.malformed(\"OPACK string is not UTF-8\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1659"
+  },
+  {
+   "file": "app/Sources/Pairing/PairingCodecs.swift",
+   "text": "OPACK key is not a string",
+   "lines": [
+    172
+   ],
+   "contexts": [
+    "func entry() throws { guard case .string(let k) = try read(bytes, &i) else { throw PairingError.malformed(\"OPACK key is not a string\") }; pairs.append((k, try read(bytes, &i))) }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1660"
+  },
+  {
+   "file": "app/Sources/Pairing/PairingCodecs.swift",
+   "text": "unsupported OPACK tag 0x%02x",
+   "lines": [
+    176
+   ],
+   "contexts": [
+    "default: throw PairingError.malformed(String(format: \"unsupported OPACK tag 0x%02x\", tag))"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1661"
+  },
+  {
+   "file": "app/Sources/Pairing/RemotePairingHost.swift",
+   "text": "Mac17,7",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "private let model = \"Mac17,7\"        // the device treats the host as a computer"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1662"
+  },
+  {
+   "file": "app/Sources/Pairing/RemotePairingHost.swift",
+   "text": "Too many wrong codes. Pairing was stopped; start it again.",
+   "lines": [
+    103
+   ],
+   "contexts": [
+    "if wrongCodes >= 5 { throw PairingError.unexpected(\"Too many wrong codes. Pairing was stopped; start it again.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1663"
+  },
+  {
+   "file": "app/Sources/Pairing/RemotePairingHost.swift",
+   "text": "The network listener stopped.",
+   "lines": [
+    108
+   ],
+   "contexts": [
+    "throw cancelled ? PairingError.cancelled : PairingError.network(\"The network listener stopped.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1664"
+  },
+  {
+   "file": "app/Sources/Pairing/RemotePairingHost.swift",
+   "text": "RPPairing",
+   "lines": [
+    167
+   ],
+   "contexts": [
+    "private static let magic = Array(\"RPPairing\".utf8)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1665"
+  },
+  {
+   "file": "app/Sources/Pairing/RemotePairingHost.swift",
+   "text": "The iPhone closed the connection.",
+   "lines": [
+    175
+   ],
+   "contexts": [
+    "else if isComplete { cont.resume(throwing: PairingError.network(\"The iPhone closed the connection.\")) }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1666"
+  },
+  {
+   "file": "app/Sources/Pairing/RemotePairingHost.swift",
+   "text": "The connection ended.",
+   "lines": [
+    176
+   ],
+   "contexts": [
+    "else { cont.resume(throwing: PairingError.network(\"The connection ended.\")) }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1667"
+  },
+  {
+   "file": "app/Sources/Pairing/RemotePairingHost.swift",
+   "text": "message too large",
+   "lines": [
+    202
+   ],
+   "contexts": [
+    "guard json.count <= 0xFFFF else { throw PairingError.unexpected(\"message too large\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1668"
+  },
+  {
+   "file": "app/Sources/Pairing/RemotePairingHost.swift",
+   "text": "bad frame marker",
+   "lines": [
+    209
+   ],
+   "contexts": [
+    "guard magic == Self.magic else { throw PairingError.malformed(\"bad frame marker\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1669"
+  },
+  {
+   "file": "app/Sources/Pairing/RemotePairingHost.swift",
+   "text": "not a JSON object",
+   "lines": [
+    213
+   ],
+   "contexts": [
+    "guard let object = try JSONSerialization.jsonObject(with: Data(body)) as? [String: Any] else { throw PairingError.malformed(\"not a JSON object\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1670"
+  },
+  {
+   "file": "app/Sources/Pairing/RemotePairingHost.swift",
+   "text": "no handshake request",
+   "lines": [
+    241
+   ],
+   "contexts": [
+    "throw PairingError.unexpected(\"no handshake request\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1671"
+  },
+  {
+   "file": "app/Sources/Pairing/RemotePairingHost.swift",
+   "text": "the iPhone wants to re-verify an existing pairing; only a new pairing is supported",
+   "lines": [
+    244
+   ],
+   "contexts": [
+    "throw PairingError.unexpected(\"the iPhone wants to re-verify an existing pairing; only a new pairing is supported\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1672"
+  },
+  {
+   "file": "app/Sources/Pairing/RemotePairingHost.swift",
+   "text": "no pairing data in the message",
+   "lines": [
+    284
+   ],
+   "contexts": [
+    "throw PairingError.unexpected(\"no pairing data in the message\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1673"
+  },
+  {
+   "file": "app/Sources/Pairing/RemotePairingHost.swift",
+   "text": "the iPhone reported error \\(error.data)",
+   "lines": [
+    290
+   ],
+   "contexts": [
+    "if let error = entries.first(where: { $0.type == .errorResponse }) { throw PairingError.unexpected(\"the iPhone reported error \\(error.data)\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1674"
+  },
+  {
+   "file": "app/Sources/Pairing/RemotePairingHost.swift",
+   "text": "expected pair-setup step \\(state)",
+   "lines": [
+    291
+   ],
+   "contexts": [
+    "guard entries.first(where: { $0.type == .state })?.data.first == state else { throw PairingError.unexpected(\"expected pair-setup step \\(state)\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1675"
+  },
+  {
+   "file": "app/Sources/Pairing/RemotePairingHost.swift",
+   "text": "pair-setup step 3 is incomplete",
+   "lines": [
+    329
+   ],
+   "contexts": [
+    "guard !clientPublic.isEmpty, !clientProof.isEmpty else { throw PairingError.unexpected(\"pair-setup step 3 is incomplete\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1676"
+  },
+  {
+   "file": "app/Sources/Pairing/RemotePairingHost.swift",
+   "text": "pair-setup step 5 is empty",
+   "lines": [
+    348
+   ],
+   "contexts": [
+    "guard sealed.count > 16 else { throw PairingError.unexpected(\"pair-setup step 5 is empty\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1677"
+  },
+  {
+   "file": "app/Sources/Pairing/RemotePairingHost.swift",
+   "text": "could not decrypt the iPhone's identity",
+   "lines": [
+    352
+   ],
+   "contexts": [
+    "do { plain5 = try ChaChaPoly.open(box5, using: setupKey) } catch { throw PairingError.unexpected(\"could not decrypt the iPhone's identity\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1678"
+  },
+  {
+   "file": "app/Sources/Shared/DownloadActivityAttributes.swift",
+   "text": "Store",
+   "lines": [
+    43,
+    55,
+    67
+   ],
+   "contexts": [
+    "@Parameter(title: \"Store\", default: \"\") var store: String"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1679"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAchievements.swift",
+   "text": "Steam's answer about achievements could not be read.",
+   "lines": [
+    38
+   ],
+   "contexts": [
+    "guard let fields = PBFields(body) else { return .failure(SteamContentError(message: \"Steam's answer about achievements could not be read.\")) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1680"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAchievements.swift",
+   "text": "Steam has no achievements for this game.",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "return .failure(SteamContentError(message: code == 8 || code == 2 ? \"Steam has no achievements for this game.\" : \"Steam would not give the achievements (error \\(code)).\"))"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1681"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAchievements.swift",
+   "text": "Steam would not give the achievements (error \\(code)).",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "return .failure(SteamContentError(message: code == 8 || code == 2 ? \"Steam has no achievements for this game.\" : \"Steam would not give the achievements (error \\(code)).\"))"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1682"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAchievements.swift",
+   "text": "Achievement unlocked",
+   "lines": [
+    209
+   ],
+   "contexts": [
+    "var achievement = definitions[item.key] ?? SteamAchievement(apiName: \"stat\\(item.key.stat)bit\\(item.key.bit)\", name: \"Achievement unlocked\", detail: \"\", hidden: false)"
+   ],
+   "reasons": [
+    "visible-name-target"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1683"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "You are not signed in to Steam.",
+   "lines": [
+    19
+   ],
+   "contexts": [
+    "static let notSignedIn = SteamAPIError(eresult: nil, http: nil, detail: \"You are not signed in to Steam.\")"
+   ],
+   "reasons": [
+    "error-constructor-arg"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1684"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam could not be reached (\\(text)). Check the internet connection.",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "SteamAPIError(eresult: nil, http: nil, detail: \"Steam could not be reached (\\(text)). Check the internet connection.\")"
+   ],
+   "reasons": [
+    "error-constructor-arg"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1685"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam did not accept the sign-in token.",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "if let http { return http == 401 || http == 403 ? \"Steam did not accept the sign-in token.\" : \"Steam answered with HTTP \\(http).\" }"
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1686"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam answered with HTTP \\(http).",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "if let http { return http == 401 || http == 403 ? \"Steam did not accept the sign-in token.\" : \"Steam answered with HTTP \\(http).\" }"
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1687"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Something went wrong talking to Steam.",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "return detail.isEmpty ? \"Something went wrong talking to Steam.\" : detail"
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1688"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam says the username or password is not right.",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "case 5: return \"Steam says the username or password is not right.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1689"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam is limiting sign-in attempts. Wait a few minutes and try again.",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "case 84: return \"Steam is limiting sign-in attempts. Wait a few minutes and try again.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1690"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam has paused sign-ins from this network. Try again later.",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "case 87: return \"Steam has paused sign-ins from this network. Try again later.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1691"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam wants a Steam Guard code for this sign-in.",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "case 63, 85: return \"Steam wants a Steam Guard code for this sign-in.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1692"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "That Steam Guard code was not right.",
+   "lines": [
+    45
+   ],
+   "contexts": [
+    "case 65, 88, 89: return \"That Steam Guard code was not right.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1693"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "The sign-in expired. Start again.",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "case 27: return \"The sign-in expired. Start again.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1694"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam could not be reached. Check the internet connection.",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "case 3: return \"Steam could not be reached. Check the internet connection.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1695"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam refused access.",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "case 15: return \"Steam refused access.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1696"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam says this device is not signed in.",
+   "lines": [
+    49
+   ],
+   "contexts": [
+    "case 21: return \"Steam says this device is not signed in.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1697"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam took too long to answer.",
+   "lines": [
+    50
+   ],
+   "contexts": [
+    "case 16: return \"Steam took too long to answer.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1698"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam answered with error \\(code).",
+   "lines": [
+    51
+   ],
+   "contexts": [
+    "default: return \"Steam answered with error \\(code).\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1699"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "no HTTP response",
+   "lines": [
+    77
+   ],
+   "contexts": [
+    "guard let http = response as? HTTPURLResponse else { completion(.failure(SteamAPIError.unexpected(\"no HTTP response\"))); return }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1700"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam's answer was not understood.",
+   "lines": [
+    157
+   ],
+   "contexts": [
+    "return .failure(.unexpected(\"Steam's answer was not understood.\"))"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1701"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam: the sign-in could not be kept in the Keychain (status \\(status)); you will sign in again next time.",
+   "lines": [
+    208
+   ],
+   "contexts": [
+    "if status != errSecSuccess { SteamLog.event(\"Steam: the sign-in could not be kept in the Keychain (status \\(status)); you will sign in again next time.\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1702"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam's answer to the QR request was not understood.",
+   "lines": [
+    338
+   ],
+   "contexts": [
+    "let link = SteamJSON.string(reply[\"challenge_url\"]) else { self.fail(\"Steam's answer to the QR request was not understood.\"); return }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1703"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam did not give a usable key for this account. Check the username.",
+   "lines": [
+    361
+   ],
+   "contexts": [
+    "self.fail(\"Steam did not give a usable key for this account. Check the username.\"); return"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1704"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam's answer to the sign-in was not understood.",
+   "lines": [
+    379
+   ],
+   "contexts": [
+    "fail(\"Steam's answer to the sign-in was not understood.\"); return"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1705"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Approve the sign-in in the Steam app on your phone, or enter the code the app shows.",
+   "lines": [
+    388
+   ],
+   "contexts": [
+    "let message = types.contains(4) ? \"Approve the sign-in in the Steam app on your phone, or enter the code the app shows.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1706"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Enter the code from the Steam app on your phone.",
+   "lines": [
+    389
+   ],
+   "contexts": [
+    ": \"Enter the code from the Steam app on your phone.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1707"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam Guard code from the Steam app",
+   "lines": [
+    391
+   ],
+   "contexts": [
+    "if codeKinds.contains(.device) { emit(.needsCode(.device, \"Steam Guard code from the Steam app\")) }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1708"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam sent a code by email",
+   "lines": [
+    393
+   ],
+   "contexts": [
+    "emit(.approve(\"Steam sent a code by email\" + (emailHint.map { \" to \\($0)\" } ?? \"\") + \".\"))"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1709"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": " to \\($0)",
+   "lines": [
+    393
+   ],
+   "contexts": [
+    "emit(.approve(\"Steam sent a code by email\" + (emailHint.map { \" to \\($0)\" } ?? \"\") + \".\"))"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1710"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Code from the email",
+   "lines": [
+    394
+   ],
+   "contexts": [
+    "emit(.needsCode(.email, \"Code from the email\" + (emailHint.map { \" sent to \\($0)\" } ?? \"\")))"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1711"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": " sent to \\($0)",
+   "lines": [
+    394
+   ],
+   "contexts": [
+    "emit(.needsCode(.email, \"Code from the email\" + (emailHint.map { \" sent to \\($0)\" } ?? \"\")))"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1712"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam sent you an email. Approve the sign-in from it.",
+   "lines": [
+    396
+   ],
+   "contexts": [
+    "emit(.approve(\"Steam sent you an email. Approve the sign-in from it.\"))"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1713"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Signing in…",
+   "lines": [
+    398
+   ],
+   "contexts": [
+    "emit(.approve(\"Signing in…\"))"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1714"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Waiting for Steam…",
+   "lines": [
+    400
+   ],
+   "contexts": [
+    "emit(.approve(\"Waiting for Steam…\"))"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1715"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Code sent. Signing in…",
+   "lines": [
+    413
+   ],
+   "contexts": [
+    "case .success: self.emit(.approve(\"Code sent. Signing in…\")); self.pollNow(mine)"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1716"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Scanned. Approve the sign-in in the Steam app.",
+   "lines": [
+    443
+   ],
+   "contexts": [
+    "if reply[\"had_remote_interaction\"] as? Bool == true, self.lastQR != nil { self.emit(.approve(\"Scanned. Approve the sign-in in the Steam app.\")) }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1717"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam signed in but did not say which account.",
+   "lines": [
+    450
+   ],
+   "contexts": [
+    "guard let id = steamID ?? SteamJWT.subject(refreshToken), !id.isEmpty else { fail(\"Steam signed in but did not say which account.\"); return }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1718"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam account",
+   "lines": [
+    451
+   ],
+   "contexts": [
+    "let account = SteamJSON.string(reply[\"account_name\"]) ?? (enteredAccount.isEmpty ? \"Steam account\" : enteredAccount)"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1719"
+  },
+  {
+   "file": "app/Sources/Steam/SteamAuth.swift",
+   "text": "Steam did not give a new access token.",
+   "lines": [
+    530
+   ],
+   "contexts": [
+    "completion(.failure(.unexpected(\"Steam did not give a new access token.\"))); return"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1720"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCM.swift",
+   "text": "timed out",
+   "lines": [
+    37
+   ],
+   "contexts": [
+    "self.opened = nil; opened(\"timed out\"); self.close()"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1721"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCM.swift",
+   "text": "The connection to Steam closed (\\(text)).",
+   "lines": [
+    98
+   ],
+   "contexts": [
+    "case .closed(let text): return \"The connection to Steam closed (\\(text)).\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1722"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCM.swift",
+   "text": "Steam did not answer in time.",
+   "lines": [
+    99
+   ],
+   "contexts": [
+    "case .timedOut: return \"Steam did not answer in time.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1723"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCM.swift",
+   "text": "Steam did not accept the saved sign-in for downloads. Sign in for downloads again.",
+   "lines": [
+    102
+   ],
+   "contexts": [
+    "case 5: return \"Steam did not accept the saved sign-in for downloads. Sign in for downloads again.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1724"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCM.swift",
+   "text": "Steam refused the sign-in for downloads. Sign in for downloads again.",
+   "lines": [
+    103
+   ],
+   "contexts": [
+    "case 15: return \"Steam refused the sign-in for downloads. Sign in for downloads again.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1725"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCM.swift",
+   "text": "Steam wants a Steam Guard code for downloads.",
+   "lines": [
+    104
+   ],
+   "contexts": [
+    "case 65: return \"Steam wants a Steam Guard code for downloads.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1726"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCM.swift",
+   "text": "Steam is limiting sign-ins right now. Wait a few minutes and try again.",
+   "lines": [
+    105
+   ],
+   "contexts": [
+    "case 84: return \"Steam is limiting sign-ins right now. Wait a few minutes and try again.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1727"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCM.swift",
+   "text": "The sign-in for downloads has expired. Sign in for downloads again.",
+   "lines": [
+    106
+   ],
+   "contexts": [
+    "case 27, 8, 21: return \"The sign-in for downloads has expired. Sign in for downloads again.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1728"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCM.swift",
+   "text": "Steam refused the sign-in for downloads (error \\(code)).",
+   "lines": [
+    107
+   ],
+   "contexts": [
+    "default: return \"Steam refused the sign-in for downloads (error \\(code)).\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1729"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCM.swift",
+   "text": "wss://\\(first)/cmsocket/",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "guard let first = endpoints.first, let url = URL(string: \"wss://\\(first)/cmsocket/\") else { completion(.failure(.failed(\"No Steam server could be reached.\"))); return }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1730"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCM.swift",
+   "text": "No Steam server could be reached.",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "guard let first = endpoints.first, let url = URL(string: \"wss://\\(first)/cmsocket/\") else { completion(.failure(.failed(\"No Steam server could be reached.\"))); return }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1731"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCM.swift",
+   "text": "Steam: could not open a connection to a Steam server (\\(error ?? ",
+   "lines": [
+    148
+   ],
+   "contexts": [
+    "SteamLog.event(\"Steam: could not open a connection to a Steam server (\\(error ?? \"\")).\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1732"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCM.swift",
+   "text": "\\(SteamAPI.host)/ISteamDirectory/GetCMListForConnect/v1/?cellid=0&cmtype=websockets&format=json",
+   "lines": [
+    154
+   ],
+   "contexts": [
+    "var request = URLRequest(url: URL(string: \"\\(SteamAPI.host)/ISteamDirectory/GetCMListForConnect/v1/?cellid=0&cmtype=websockets&format=json\")!)"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1733"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCM.swift",
+   "text": "Steam's server list could not be loaded",
+   "lines": [
+    160
+   ],
+   "contexts": [
+    "completion(.failure(.failed(\"Steam's server list could not be loaded\" + (error.map { \" (\\($0.localizedDescription))\" } ?? \"\") + \".\"))); return"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1734"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCM.swift",
+   "text": " (\\($0.localizedDescription))",
+   "lines": [
+    160
+   ],
+   "contexts": [
+    "completion(.failure(.failed(\"Steam's server list could not be loaded\" + (error.map { \" (\\($0.localizedDescription))\" } ?? \"\") + \".\"))); return"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1735"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCM.swift",
+   "text": "Steam answered \\(name) with error \\(code).",
+   "lines": [
+    258
+   ],
+   "contexts": [
+    "if let code = reply.eresult, code != 1 { completion(.failure(.failed(\"Steam answered \\(name) with error \\(code).\"))) } else { completion(.success(reply.body)) }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1736"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCloud.swift",
+   "text": "skipped (deleted on Steam)",
+   "lines": [
+    235
+   ],
+   "contexts": [
+    "if info.explicitDelete { return .skipped(\"skipped (deleted on Steam)\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1737"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCloud.swift",
+   "text": "failed (Steam sent it encrypted; not supported)",
+   "lines": [
+    236
+   ],
+   "contexts": [
+    "if info.encrypted { return .failed(\"failed (Steam sent it encrypted; not supported)\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1738"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCloud.swift",
+   "text": "failed (the download did not match Steam's checksum: \\(served.count) bytes served, \\(job.file.size) listed; not saved)",
+   "lines": [
+    239
+   ],
+   "contexts": [
+    "return .failed(\"failed (the download did not match Steam's checksum: \\(served.count) bytes served, \\(job.file.size) listed; not saved)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1739"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCloud.swift",
+   "text": ".porthole-part",
+   "lines": [
+    242
+   ],
+   "contexts": [
+    "let part = URL(fileURLWithPath: job.dest.path + \".porthole-part\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1740"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCloud.swift",
+   "text": "failed (\\((error as? SteamContentError)?.message ?? error.localizedDescription))",
+   "lines": [
+    249
+   ],
+   "contexts": [
+    "return .failed(\"failed (\\((error as? SteamContentError)?.message ?? error.localizedDescription))\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1741"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCloud.swift",
+   "text": "\\(error)",
+   "lines": [
+    290
+   ],
+   "contexts": [
+    "case .failure(let error): continuation.resume(throwing: SteamContentError(message: \"\\(error)\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1742"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCloud.swift",
+   "text": "Steam's cloud file list could not be read.",
+   "lines": [
+    299
+   ],
+   "contexts": [
+    "guard let list = SteamCloudMessages.parseChangelist(reply) else { throw SteamContentError(message: \"Steam's cloud file list could not be read.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1743"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCloud.swift",
+   "text": "Steam gave no download link for the file.",
+   "lines": [
+    305
+   ],
+   "contexts": [
+    "guard let info = SteamCloudMessages.parseDownload(reply) else { throw SteamContentError(message: \"Steam gave no download link for the file.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1744"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCloud.swift",
+   "text": "Steam's download link was not usable.",
+   "lines": [
+    310
+   ],
+   "contexts": [
+    "guard let url = info.url else { throw SteamContentError(message: \"Steam's download link was not usable.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1745"
+  },
+  {
+   "file": "app/Sources/Steam/SteamCloud.swift",
+   "text": "The download answered \\((response as? HTTPURLResponse)?.statusCode ?? 0).",
+   "lines": [
+    315
+   ],
+   "contexts": [
+    "throw SteamContentError(message: \"The download answered \\((response as? HTTPURLResponse)?.statusCode ?? 0).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1746"
+  },
+  {
+   "file": "app/Sources/Steam/SteamContent.swift",
+   "text": "/",
+   "lines": [
+    370
+   ],
+   "contexts": [
+    "guard !parts.isEmpty, !name.hasPrefix(\"/\"), !parts.contains(\"..\"), !parts.contains(\".\"), !name.contains(\"\\0\") else { throw Failure.badFilenames }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1747"
+  },
+  {
+   "file": "app/Sources/Steam/SteamContent.swift",
+   "text": ".",
+   "lines": [
+    370
+   ],
+   "contexts": [
+    "guard !parts.isEmpty, !name.hasPrefix(\"/\"), !parts.contains(\"..\"), !parts.contains(\".\"), !name.contains(\"\\0\") else { throw Failure.badFilenames }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1748"
+  },
+  {
+   "file": "app/Sources/Steam/SteamContent.swift",
+   "text": "This connection cannot list subscribed Workshop items.",
+   "lines": [
+    438
+   ],
+   "contexts": [
+    "completion(.failure(SteamContentError(message: \"This connection cannot list subscribed Workshop items.\")))"
+   ],
+   "reasons": [
+    "error-constructor-arg"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1749"
+  },
+  {
+   "file": "app/Sources/Steam/SteamContent.swift",
+   "text": "This connection cannot read achievements.",
+   "lines": [
+    441
+   ],
+   "contexts": [
+    "completion(.failure(SteamContentError(message: \"This connection cannot read achievements.\")))"
+   ],
+   "reasons": [
+    "error-constructor-arg"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1750"
+  },
+  {
+   "file": "app/Sources/Steam/SteamContent.swift",
+   "text": "This connection cannot check beta passwords.",
+   "lines": [
+    444
+   ],
+   "contexts": [
+    "completion(.failure(SteamContentError(message: \"This connection cannot check beta passwords.\")))"
+   ],
+   "reasons": [
+    "error-constructor-arg"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1751"
+  },
+  {
+   "file": "app/Sources/Steam/SteamContent.swift",
+   "text": "Steam: connected to Steam's servers.",
+   "lines": [
+    492
+   ],
+   "contexts": [
+    "case .success: SteamLog.event(\"Steam: connected to Steam's servers.\"); finish(.success(()))"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1752"
+  },
+  {
+   "file": "app/Sources/Steam/SteamContent.swift",
+   "text": "Steam: the sign-in for downloads was refused (result \\(code)).",
+   "lines": [
+    494
+   ],
+   "contexts": [
+    "if case .logOnRefused(let code) = error { SteamLog.event(\"Steam: the sign-in for downloads was refused (result \\(code)).\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1753"
+  },
+  {
+   "file": "app/Sources/Steam/SteamContent.swift",
+   "text": "Steam gave no information for app \\(appid) (the account may not own it).",
+   "lines": [
+    535
+   ],
+   "contexts": [
+    "completion(.failure(SteamContentError(message: \"Steam gave no information for app \\(appid) (the account may not own it).\", notOwned: true))); return"
+   ],
+   "reasons": [
+    "error-constructor-arg"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1754"
+  },
+  {
+   "file": "app/Sources/Steam/SteamContent.swift",
+   "text": "This account does not own depot \\(depot).",
+   "lines": [
+    557
+   ],
+   "contexts": [
+    "else { completion(.failure(SteamContentError(message: code == 15 ? \"This account does not own depot \\(depot).\" : \"Steam would not give the key for depot \\(depot) (error \\(code)).\", notOwned: code == 15))) }"
+   ],
+   "reasons": [
+    "error-constructor-arg"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1755"
+  },
+  {
+   "file": "app/Sources/Steam/SteamContent.swift",
+   "text": "Steam would not give the key for depot \\(depot) (error \\(code)).",
+   "lines": [
+    557
+   ],
+   "contexts": [
+    "else { completion(.failure(SteamContentError(message: code == 15 ? \"This account does not own depot \\(depot).\" : \"Steam would not give the key for depot \\(depot) (error \\(code)).\", notOwned: code == 15))) }"
+   ],
+   "reasons": [
+    "error-constructor-arg"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1756"
+  },
+  {
+   "file": "app/Sources/Steam/SteamContent.swift",
+   "text": "Steam does not accept that password.",
+   "lines": [
+    576
+   ],
+   "contexts": [
+    "completion(.failure(SteamContentError(message: code == 5 ? \"Steam does not accept that password.\" : \"Steam could not check the password (error \\(code)).\")))"
+   ],
+   "reasons": [
+    "error-constructor-arg"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1757"
+  },
+  {
+   "file": "app/Sources/Steam/SteamContent.swift",
+   "text": "Steam could not check the password (error \\(code)).",
+   "lines": [
+    576
+   ],
+   "contexts": [
+    "completion(.failure(SteamContentError(message: code == 5 ? \"Steam does not accept that password.\" : \"Steam could not check the password (error \\(code)).\")))"
+   ],
+   "reasons": [
+    "error-constructor-arg"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1758"
+  },
+  {
+   "file": "app/Sources/Steam/SteamContent.swift",
+   "text": "That password does not open a beta of this game.",
+   "lines": [
+    583
+   ],
+   "contexts": [
+    "if found.isEmpty { completion(.failure(SteamContentError(message: \"That password does not open a beta of this game.\"))) } else { completion(.success(found)) }"
+   ],
+   "reasons": [
+    "error-constructor-arg"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1759"
+  },
+  {
+   "file": "app/Sources/Steam/SteamContent.swift",
+   "text": "HTTP \\(status)",
+   "lines": [
+    660
+   ],
+   "contexts": [
+    "else { completion(.failure(SteamContentError(message: error?.localizedDescription ?? \"HTTP \\(status)\", notOwned: status == 401 || status == 403))) }"
+   ],
+   "reasons": [
+    "error-constructor-arg"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1760"
+  },
+  {
+   "file": "app/Sources/Steam/SteamFriends.swift",
+   "text": "In \\(gameName)",
+   "lines": [
+    24
+   ],
+   "contexts": [
+    "if let gameName { return \"In \\(gameName)\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1761"
+  },
+  {
+   "file": "app/Sources/Steam/SteamFriends.swift",
+   "text": "In a game",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "if isPlaying { return \"In a game\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1762"
+  },
+  {
+   "file": "app/Sources/Steam/SteamFriends.swift",
+   "text": "Online",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "case 1: return \"Online\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1763"
+  },
+  {
+   "file": "app/Sources/Steam/SteamFriends.swift",
+   "text": "Busy",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "case 2: return \"Busy\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1764"
+  },
+  {
+   "file": "app/Sources/Steam/SteamFriends.swift",
+   "text": "Away",
+   "lines": [
+    29
+   ],
+   "contexts": [
+    "case 3: return \"Away\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1765"
+  },
+  {
+   "file": "app/Sources/Steam/SteamFriends.swift",
+   "text": "Snoozing",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "case 4: return \"Snoozing\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1766"
+  },
+  {
+   "file": "app/Sources/Steam/SteamFriends.swift",
+   "text": "Looking to trade",
+   "lines": [
+    31
+   ],
+   "contexts": [
+    "case 5: return \"Looking to trade\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1767"
+  },
+  {
+   "file": "app/Sources/Steam/SteamFriends.swift",
+   "text": "Looking to play",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "case 6: return \"Looking to play\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1768"
+  },
+  {
+   "file": "app/Sources/Steam/SteamFriends.swift",
+   "text": "Offline",
+   "lines": [
+    34
+   ],
+   "contexts": [
+    "guard let lastLogoff, lastLogoff > Date(timeIntervalSince1970: 86_400) else { return \"Offline\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1769"
+  },
+  {
+   "file": "app/Sources/Steam/SteamFriends.swift",
+   "text": "Offline \\u{00B7} \\(max(1, Int(seconds / 60))) min ago",
+   "lines": [
+    36
+   ],
+   "contexts": [
+    "if seconds < 3600 { return \"Offline \\u{00B7} \\(max(1, Int(seconds / 60))) min ago\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1770"
+  },
+  {
+   "file": "app/Sources/Steam/SteamFriends.swift",
+   "text": "Offline \\u{00B7} \\(Int(seconds / 3600)) h ago",
+   "lines": [
+    37
+   ],
+   "contexts": [
+    "if seconds < 86_400 { return \"Offline \\u{00B7} \\(Int(seconds / 3600)) h ago\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1771"
+  },
+  {
+   "file": "app/Sources/Steam/SteamFriends.swift",
+   "text": "Offline \\u{00B7} \\(Int(seconds / 86_400)) d ago",
+   "lines": [
+    38
+   ],
+   "contexts": [
+    "return \"Offline \\u{00B7} \\(Int(seconds / 86_400)) d ago\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1772"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Asking Steam about \\(name)…",
+   "lines": [
+    119
+   ],
+   "contexts": [
+    "state = .preparing(\"Asking Steam about \\(name)…\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1773"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Steam download: starting Workshop item \\(workshop.item) of app \\(appid).",
+   "lines": [
+    121
+   ],
+   "contexts": [
+    "SteamLog.event(\"Steam download: starting Workshop item \\(workshop.item) of app \\(appid).\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1774"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Steam download: starting app \\(appid).",
+   "lines": [
+    125
+   ],
+   "contexts": [
+    "SteamLog.event(\"Steam download: starting app \\(appid).\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1775"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Steam download: cancelled (what was downloaded is kept, so it can resume).",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "SteamLog.event(\"Steam download: cancelled (what was downloaded is kept, so it can resume).\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1776"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Steam download failed: \\(message)",
+   "lines": [
+    146
+   ],
+   "contexts": [
+    "SteamLog.event(\"Steam download failed: \\(message)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1777"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Steam does not list \\(self.name) for this account.",
+   "lines": [
+    156
+   ],
+   "contexts": [
+    "case .failure(let error): self.fail(error.notOwned ? \"Steam does not list \\(self.name) for this account.\" : error.message, id)"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1778"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Steam does not list a version called \\u{201C}\\(self.selection.branch)\\u{201D} of \\(self.name).",
+   "lines": [
+    161
+   ],
+   "contexts": [
+    "self.fail(\"Steam does not list a version called \\u{201C}\\(self.selection.branch)\\u{201D} of \\(self.name).\", id); return"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1779"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "The \\u{201C}\\(self.selection.branch)\\u{201D} version of \\(self.name) needs its password.",
+   "lines": [
+    169
+   ],
+   "contexts": [
+    "self.fail(needsKey ? \"The \\u{201C}\\(self.selection.branch)\\u{201D} version of \\(self.name) needs its password.\" : self.selection.branch == SteamBranch.publicName"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1780"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "\\(self.name) has no Windows version on Steam.",
+   "lines": [
+    170
+   ],
+   "contexts": [
+    "? \"\\(self.name) has no Windows version on Steam.\" : \"The \\u{201C}\\(self.selection.branch)\\u{201D} version of \\(self.name) has no Windows files.\", id); return"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1781"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "The \\u{201C}\\(self.selection.branch)\\u{201D} version of \\(self.name) has no Windows files.",
+   "lines": [
+    170
+   ],
+   "contexts": [
+    "? \"\\(self.name) has no Windows version on Steam.\" : \"The \\u{201C}\\(self.selection.branch)\\u{201D} version of \\(self.name) has no Windows files.\", id); return"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1782"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Reading the list of files…",
+   "lines": [
+    207
+   ],
+   "contexts": [
+    "state = .preparing(\"Reading the list of files…\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1783"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Steam gave no files to download for \\(name).",
+   "lines": [
+    212
+   ],
+   "contexts": [
+    "guard !allJobs.isEmpty else { fail(\"Steam gave no files to download for \\(name).\", id); return }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1784"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Steam download: \\(keptDepots.count) depot(s) already installed at the right version: \\(keptDepots.map { String($0.id) }.joined(separator: ",
+   "lines": [
+    221
+   ],
+   "contexts": [
+    "if !keptDepots.isEmpty { SteamLog.event(\"Steam download: \\(keptDepots.count) depot(s) already installed at the right version: \\(keptDepots.map { String($0.id) }.joined(separator: \", \")).\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1785"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Steam download: \\(name) is up to date.",
+   "lines": [
+    228
+   ],
+   "contexts": [
+    "SteamLog.event(\"Steam download: \\(name) is up to date.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1786"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Steam's content servers could not be reached. Check the internet connection.",
+   "lines": [
+    234
+   ],
+   "contexts": [
+    "guard !found.isEmpty else { self.fail(\"Steam's content servers could not be reached. Check the internet connection.\", id); return }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1787"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "\\($0.host.replacingOccurrences(of: ",
+   "lines": [
+    237
+   ],
+   "contexts": [
+    "SteamLog.event(\"[steam-perf] \\(found.count) content servers: \" + found.prefix(6).map { \"\\($0.host.replacingOccurrences(of: \".steamcontent.com\", with: \"\")) load \\($0.load)\" }.joined(separator: \", \"))"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1788"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": ", with: ",
+   "lines": [
+    237
+   ],
+   "contexts": [
+    "SteamLog.event(\"[steam-perf] \\(found.count) content servers: \" + found.prefix(6).map { \"\\($0.host.replacingOccurrences(of: \".steamcontent.com\", with: \"\")) load \\($0.load)\" }.joined(separator: \", \"))"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1789"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": ")) load \\($0.load)",
+   "lines": [
+    237
+   ],
+   "contexts": [
+    "SteamLog.event(\"[steam-perf] \\(found.count) content servers: \" + found.prefix(6).map { \"\\($0.host.replacingOccurrences(of: \".steamcontent.com\", with: \"\")) load \\($0.load)\" }.joined(separator: \", \"))"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1790"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "No depot of \\(self.name) could be downloaded.",
+   "lines": [
+    243
+   ],
+   "contexts": [
+    "guard !loaded.isEmpty else { self.fail(skipped.first ?? \"No depot of \\(self.name) could be downloaded.\", id); return }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1791"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Getting the file list (\\(index + 1) of \\(jobs.count))…",
+   "lines": [
+    248
+   ],
+   "contexts": [
+    "self.state = .preparing(\"Getting the file list (\\(index + 1) of \\(jobs.count))…\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1792"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Steam download: skipping depot \\(job.depot.id): \\(error.message)",
+   "lines": [
+    253
+   ],
+   "contexts": [
+    "if error.notOwned { skipped.append(error.message); SteamLog.event(\"Steam download: skipping depot \\(job.depot.id): \\(error.message)\"); next(index + 1) }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1793"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "The file list for \\(name) could not be downloaded from Steam's servers.",
+   "lines": [
+    278
+   ],
+   "contexts": [
+    "completion(.failure(ManifestFailure(\"The file list for \\(name) could not be downloaded from Steam's servers.\"))); return"
+   ],
+   "reasons": [
+    "error-constructor-arg"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1794"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Steam's file list for \\(self.name) could not be read.",
+   "lines": [
+    286
+   ],
+   "contexts": [
+    "else { completion(.failure(ManifestFailure(\"Steam's file list for \\(self.name) could not be read.\"))) }"
+   ],
+   "reasons": [
+    "error-constructor-arg"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1795"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "downloading/workshop_\\(appid)_\\(workshop.item)",
+   "lines": [
+    305
+   ],
+   "contexts": [
+    "progressFolder = steamApps.appendingPathComponent(\"downloading/workshop_\\(appid)_\\(workshop.item)\")"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1796"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "There is not enough space on this device: \\(name) needs \\(Self.size(Int64(total))) and \\(Self.size(max(0, free))) is free.",
+   "lines": [
+    322
+   ],
+   "contexts": [
+    "fail(\"There is not enough space on this device: \\(name) needs \\(Self.size(Int64(total))) and \\(Self.size(max(0, free))) is free.\", id); return"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1797"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "The game's folder could not be created (\\(error.localizedDescription)).",
+   "lines": [
+    332
+   ],
+   "contexts": [
+    "} catch { fail(\"The game's folder could not be created (\\(error.localizedDescription)).\", id); return }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1798"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "\\($0.depotID):\\($0.manifestID)",
+   "lines": [
+    335
+   ],
+   "contexts": [
+    "let plan = manifests.map { \"\\($0.depotID):\\($0.manifestID)\" }.joined(separator: \",\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": false,
+   "id": "u1799"
+  }
+ ]
+}

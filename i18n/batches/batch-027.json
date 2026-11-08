@@ -1,0 +1,901 @@
+{
+ "batch": 27,
+ "units": [
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Download",
+   "lines": [
+    165
+   ],
+   "contexts": [
+    "var title: String { switch self { case .download: \"Download\"; case .sign: \"Sign\"; case .install: \"Install\" } }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4680"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Sign",
+   "lines": [
+    165
+   ],
+   "contexts": [
+    "var title: String { switch self { case .download: \"Download\"; case .sign: \"Sign\"; case .install: \"Install\" } }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4681"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Install",
+   "lines": [
+    165
+   ],
+   "contexts": [
+    "var title: String { switch self { case .download: \"Download\"; case .sign: \"Sign\"; case .install: \"Install\" } }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4682"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Downloading the new version \\u{00B7} \\(Int((p * 100).rounded()))%",
+   "lines": [
+    207
+   ],
+   "contexts": [
+    "case .downloading(let p): return p > 0 ? \"Downloading the new version \\u{00B7} \\(Int((p * 100).rounded()))%\" : \"Downloading the new version\\u{2026}\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4683"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Downloading the new version\\u{2026}",
+   "lines": [
+    207
+   ],
+   "contexts": [
+    "case .downloading(let p): return p > 0 ? \"Downloading the new version \\u{00B7} \\(Int((p * 100).rounded()))%\" : \"Downloading the new version\\u{2026}\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4684"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Signing with your certificate \\u{00B7} \\(step)",
+   "lines": [
+    208
+   ],
+   "contexts": [
+    "case .signing(let step): return \"Signing with your certificate \\u{00B7} \\(step)\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4685"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Installing \\u{00B7} \\(stage)",
+   "lines": [
+    209
+   ],
+   "contexts": [
+    "case .installing(let stage, _): return \"Installing \\u{00B7} \\(stage)\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4686"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Installed",
+   "lines": [
+    216
+   ],
+   "contexts": [
+    "case .installed: \"Installed\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4687"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Signed, not installed",
+   "lines": [
+    217
+   ],
+   "contexts": [
+    "case .saved: \"Signed, not installed\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4688"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "The update did not finish",
+   "lines": [
+    218
+   ],
+   "contexts": [
+    "case .failed: \"The update did not finish\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4689"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Going back to an older version",
+   "lines": [
+    219
+   ],
+   "contexts": [
+    "default: job.kind == .downgrade ? \"Going back to an older version\" : \"Updating Porthole\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4690"
+  },
+  {
+   "file": "app/Sources/UI/UpdateProgressOverlay.swift",
+   "text": "Updating Porthole",
+   "lines": [
+    219
+   ],
+   "contexts": [
+    "default: job.kind == .downgrade ? \"Going back to an older version\" : \"Updating Porthole\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4691"
+  },
+  {
+   "file": "app/Sources/UI/VCRedist32Panel.swift",
+   "text": "32-bit programs (optional)",
+   "lines": [
+    10
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"32-bit programs (optional)\", note: \"Older games and many launchers are 32-bit programs. They run on Wine's own C++ runtime unless you add Microsoft's. You can also do this later in Settings \\u{203A} Advanced \\u{203A} Windows components.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4692"
+  },
+  {
+   "file": "app/Sources/UI/VCRedist32Panel.swift",
+   "text": "Older games and many launchers are 32-bit programs. They run on Wine's own C++ runtime unless you add Microsoft's. You can also do this later in Settings \\u{203A} Advanced \\u{203A} Windows components.",
+   "lines": [
+    10
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"32-bit programs (optional)\", note: \"Older games and many launchers are 32-bit programs. They run on Wine's own C++ runtime unless you add Microsoft's. You can also do this later in Settings \\u{203A} Advanced \\u{203A} Windows components.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4693"
+  },
+  {
+   "file": "app/Sources/UI/VCRedist32Panel.swift",
+   "text": "32-bit Visual C++ runtime",
+   "lines": [
+    11
+   ],
+   "contexts": [
+    "ValueRow(id: \"vc32-state\", symbol: vc.complete ? \"checkmark.seal.fill\" : \"shippingbox.fill\", title: \"32-bit Visual C++ runtime\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4694"
+  },
+  {
+   "file": "app/Sources/UI/VCRedist32Panel.swift",
+   "text": "Installed",
+   "lines": [
+    12
+   ],
+   "contexts": [
+    "value: vc.complete ? \"Installed\" : (vc.busy ? \"Working\\u{2026}\" : \"Not installed\"), statusColor: vc.complete ? Theme.good : Theme.textDim)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4695"
+  },
+  {
+   "file": "app/Sources/UI/VCRedist32Panel.swift",
+   "text": "Working\\u{2026}",
+   "lines": [
+    12
+   ],
+   "contexts": [
+    "value: vc.complete ? \"Installed\" : (vc.busy ? \"Working\\u{2026}\" : \"Not installed\"), statusColor: vc.complete ? Theme.good : Theme.textDim)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4696"
+  },
+  {
+   "file": "app/Sources/UI/VCRedist32Panel.swift",
+   "text": "Not installed",
+   "lines": [
+    12
+   ],
+   "contexts": [
+    "value: vc.complete ? \"Installed\" : (vc.busy ? \"Working\\u{2026}\" : \"Not installed\"), statusColor: vc.complete ? Theme.good : Theme.textDim)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4697"
+  },
+  {
+   "file": "app/Sources/UI/VCRedist32Panel.swift",
+   "text": "\\(Int(fraction * 100))%",
+   "lines": [
+    15
+   ],
+   "contexts": [
+    "HStack(spacing: 10) { ProgressView(value: fraction).tint(Theme.accent); Text(\"\\(Int(fraction * 100))%\").font(.footnote.monospacedDigit()).foregroundStyle(Theme.textDim) }.padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4698"
+  },
+  {
+   "file": "app/Sources/UI/VCRedist32Panel.swift",
+   "text": "Checking \\(Int(fraction * 100))%",
+   "lines": [
+    17
+   ],
+   "contexts": [
+    "HStack(spacing: 10) { ProgressView(value: fraction).tint(Theme.accent); Text(\"Checking \\(Int(fraction * 100))%\").font(.footnote.monospacedDigit()).foregroundStyle(Theme.textDim) }.padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4699"
+  },
+  {
+   "file": "app/Sources/UI/VCRedist32Panel.swift",
+   "text": "Download",
+   "lines": [
+    22
+   ],
+   "contexts": [
+    "ActionRow(id: \"vc32-main\", symbol: \"arrow.down.circle.fill\", title: \"Download\", subtitle: \"About \\(VCRedistPin.totalMegabytes) MB, from Microsoft\", chevron: false) { vc.install() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4700"
+  },
+  {
+   "file": "app/Sources/UI/VCRedist32Panel.swift",
+   "text": "About \\(VCRedistPin.totalMegabytes) MB, from Microsoft",
+   "lines": [
+    22
+   ],
+   "contexts": [
+    "ActionRow(id: \"vc32-main\", symbol: \"arrow.down.circle.fill\", title: \"Download\", subtitle: \"About \\(VCRedistPin.totalMegabytes) MB, from Microsoft\", chevron: false) { vc.install() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4701"
+  },
+  {
+   "file": "app/Sources/UI/VCRedist32Panel.swift",
+   "text": "Remove the downloaded copy",
+   "lines": [
+    24
+   ],
+   "contexts": [
+    "ActionRow(id: \"vc32-remove\", symbol: \"trash.fill\", title: \"Remove the downloaded copy\", destructive: true, chevron: false) { vc.remove() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4702"
+  },
+  {
+   "file": "app/Sources/UI/VCRuntimePanel.swift",
+   "text": "Visual C++ runtime",
+   "lines": [
+    11
+   ],
+   "contexts": [
+    "ValueRow(id: \"vc-state\", symbol: installer.available ? \"checkmark.seal.fill\" : \"shippingbox.fill\", title: \"Visual C++ runtime\", value: installer.available ? (installer.installed ? \"Installed\" : \"Included\") : \"Not downloaded\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4703"
+  },
+  {
+   "file": "app/Sources/UI/VCRuntimePanel.swift",
+   "text": "Installed",
+   "lines": [
+    11
+   ],
+   "contexts": [
+    "ValueRow(id: \"vc-state\", symbol: installer.available ? \"checkmark.seal.fill\" : \"shippingbox.fill\", title: \"Visual C++ runtime\", value: installer.available ? (installer.installed ? \"Installed\" : \"Included\") : \"Not downloaded\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4704"
+  },
+  {
+   "file": "app/Sources/UI/VCRuntimePanel.swift",
+   "text": "Included",
+   "lines": [
+    11
+   ],
+   "contexts": [
+    "ValueRow(id: \"vc-state\", symbol: installer.available ? \"checkmark.seal.fill\" : \"shippingbox.fill\", title: \"Visual C++ runtime\", value: installer.available ? (installer.installed ? \"Installed\" : \"Included\") : \"Not downloaded\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4705"
+  },
+  {
+   "file": "app/Sources/UI/VCRuntimePanel.swift",
+   "text": "Not downloaded",
+   "lines": [
+    11
+   ],
+   "contexts": [
+    "ValueRow(id: \"vc-state\", symbol: installer.available ? \"checkmark.seal.fill\" : \"shippingbox.fill\", title: \"Visual C++ runtime\", value: installer.available ? (installer.installed ? \"Installed\" : \"Included\") : \"Not downloaded\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4706"
+  },
+  {
+   "file": "app/Sources/UI/VCRuntimePanel.swift",
+   "text": "\\(Int(fraction * 100))%",
+   "lines": [
+    15
+   ],
+   "contexts": [
+    "HStack(spacing: 10) { ProgressView(value: fraction).tint(Theme.accent); Text(\"\\(Int(fraction * 100))%\").font(.footnote.monospacedDigit()).foregroundStyle(Theme.textDim) }.padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4707"
+  },
+  {
+   "file": "app/Sources/UI/VCRuntimePanel.swift",
+   "text": "Checking and unpacking\\u{2026}",
+   "lines": [
+    17
+   ],
+   "contexts": [
+    "HStack(spacing: 8) { ProgressView().tint(Theme.accent); Text(\"Checking and unpacking\\u{2026}\").font(.footnote).foregroundStyle(Theme.textDim) }.padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4708"
+  },
+  {
+   "file": "app/Sources/UI/VCRuntimePanel.swift",
+   "text": "Download",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "ActionRow(id: \"vc-main\", symbol: \"arrow.down.circle.fill\", title: \"Download\", subtitle: \"About 25 MB, from Microsoft\", chevron: false, prominent: true) { Task { await installer.install() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4709"
+  },
+  {
+   "file": "app/Sources/UI/VCRuntimePanel.swift",
+   "text": "About 25 MB, from Microsoft",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "ActionRow(id: \"vc-main\", symbol: \"arrow.down.circle.fill\", title: \"Download\", subtitle: \"About 25 MB, from Microsoft\", chevron: false, prominent: true) { Task { await installer.install() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4710"
+  },
+  {
+   "file": "app/Sources/UI/VCRuntimePanel.swift",
+   "text": "Remove the downloaded copy",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "ActionRow(id: \"vc-remove\", symbol: \"trash.fill\", title: \"Remove the downloaded copy\", destructive: true, chevron: false) { installer.remove() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4711"
+  },
+  {
+   "file": "app/Sources/UI/VCRuntimePanel.swift",
+   "text": "Working\\u{2026}",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "ValueRow(id: \"vc-main\", symbol: \"hourglass\", title: installer.busy ? \"Working\\u{2026}\" : \"Ready\", value: \"\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4712"
+  },
+  {
+   "file": "app/Sources/UI/VCRuntimePanel.swift",
+   "text": "Ready",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "ValueRow(id: \"vc-main\", symbol: \"hourglass\", title: installer.busy ? \"Working\\u{2026}\" : \"Ready\", value: \"\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4713"
+  },
+  {
+   "file": "app/Sources/UI/WineGeckoPanel.swift",
+   "text": "Web pages in programs (optional)",
+   "lines": [
+    10
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Web pages in programs (optional)\", note: \"Launchers and installers that show a web page need Wine's web engine. Without it Wine stops on its own download window, which can hang. You can also do this later in Settings \\u{203A} Advanced \\u{203A} Windows components.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4714"
+  },
+  {
+   "file": "app/Sources/UI/WineGeckoPanel.swift",
+   "text": "Launchers and installers that show a web page need Wine's web engine. Without it Wine stops on its own download window, which can hang. You can also do this later in Settings \\u{203A} Advanced \\u{203A} Windows components.",
+   "lines": [
+    10
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Web pages in programs (optional)\", note: \"Launchers and installers that show a web page need Wine's web engine. Without it Wine stops on its own download window, which can hang. You can also do this later in Settings \\u{203A} Advanced \\u{203A} Windows components.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4715"
+  },
+  {
+   "file": "app/Sources/UI/WineGeckoPanel.swift",
+   "text": "Web engine (Wine Gecko)",
+   "lines": [
+    11
+   ],
+   "contexts": [
+    "ValueRow(id: \"wg-state\", symbol: WineGeckoModel.available ? \"checkmark.seal.fill\" : \"globe\", title: \"Web engine (Wine Gecko)\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4716"
+  },
+  {
+   "file": "app/Sources/UI/WineGeckoPanel.swift",
+   "text": "Installed",
+   "lines": [
+    12
+   ],
+   "contexts": [
+    "value: gecko.installed ? \"Installed\" : (gecko.busy ? \"Working\\u{2026}\" : \"Not installed\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4717"
+  },
+  {
+   "file": "app/Sources/UI/WineGeckoPanel.swift",
+   "text": "Working\\u{2026}",
+   "lines": [
+    12
+   ],
+   "contexts": [
+    "value: gecko.installed ? \"Installed\" : (gecko.busy ? \"Working\\u{2026}\" : \"Not installed\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4718"
+  },
+  {
+   "file": "app/Sources/UI/WineGeckoPanel.swift",
+   "text": "Not installed",
+   "lines": [
+    12
+   ],
+   "contexts": [
+    "value: gecko.installed ? \"Installed\" : (gecko.busy ? \"Working\\u{2026}\" : \"Not installed\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4719"
+  },
+  {
+   "file": "app/Sources/UI/WineGeckoPanel.swift",
+   "text": "\\(Int(progress * 100))%",
+   "lines": [
+    15
+   ],
+   "contexts": [
+    "HStack(spacing: 10) { ProgressView(value: progress).tint(Theme.accent); Text(\"\\(Int(progress * 100))%\").font(.footnote.monospacedDigit()).foregroundStyle(Theme.textDim) }.padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4720"
+  },
+  {
+   "file": "app/Sources/UI/WineGeckoPanel.swift",
+   "text": "Download",
+   "lines": [
+    19
+   ],
+   "contexts": [
+    "ActionRow(id: \"wg-main\", symbol: \"arrow.down.circle.fill\", title: \"Download\", subtitle: \"About 110 MB, from WineHQ\", chevron: false) { gecko.install() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4721"
+  },
+  {
+   "file": "app/Sources/UI/WineGeckoPanel.swift",
+   "text": "About 110 MB, from WineHQ",
+   "lines": [
+    19
+   ],
+   "contexts": [
+    "ActionRow(id: \"wg-main\", symbol: \"arrow.down.circle.fill\", title: \"Download\", subtitle: \"About 110 MB, from WineHQ\", chevron: false) { gecko.install() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4722"
+  },
+  {
+   "file": "app/Sources/UI/WineGeckoPanel.swift",
+   "text": "Remove the downloaded copy",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "ActionRow(id: \"wg-remove\", symbol: \"trash.fill\", title: \"Remove the downloaded copy\", destructive: true, chevron: false) { gecko.remove() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4723"
+  },
+  {
+   "file": "app/Sources/UI/WineMonoPanel.swift",
+   "text": ".NET (optional)",
+   "lines": [
+    10
+   ],
+   "contexts": [
+    "SettingsGroup(title: \".NET (optional)\", note: \"Only for games built on Microsoft's .NET Framework, such as Celeste. You can also download it later in Settings \\u{203A} Advanced \\u{203A} Windows components.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4724"
+  },
+  {
+   "file": "app/Sources/UI/WineMonoPanel.swift",
+   "text": "Only for games built on Microsoft's .NET Framework, such as Celeste. You can also download it later in Settings \\u{203A} Advanced \\u{203A} Windows components.",
+   "lines": [
+    10
+   ],
+   "contexts": [
+    "SettingsGroup(title: \".NET (optional)\", note: \"Only for games built on Microsoft's .NET Framework, such as Celeste. You can also download it later in Settings \\u{203A} Advanced \\u{203A} Windows components.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4725"
+  },
+  {
+   "file": "app/Sources/UI/WineMonoPanel.swift",
+   "text": ".NET support (Wine Mono)",
+   "lines": [
+    11
+   ],
+   "contexts": [
+    "ValueRow(id: \"wm-state\", symbol: WineMonoModel.available ? \"checkmark.seal.fill\" : \"shippingbox.fill\", title: \".NET support (Wine Mono)\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4726"
+  },
+  {
+   "file": "app/Sources/UI/WineMonoPanel.swift",
+   "text": "Included",
+   "lines": [
+    12
+   ],
+   "contexts": [
+    "value: WineMonoModel.bundled ? \"Included\" : (mono.installed ? \"Installed\" : (mono.busy ? \"Working\\u{2026}\" : \"Not installed\")),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4727"
+  },
+  {
+   "file": "app/Sources/UI/WineMonoPanel.swift",
+   "text": "Installed",
+   "lines": [
+    12
+   ],
+   "contexts": [
+    "value: WineMonoModel.bundled ? \"Included\" : (mono.installed ? \"Installed\" : (mono.busy ? \"Working\\u{2026}\" : \"Not installed\")),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4728"
+  },
+  {
+   "file": "app/Sources/UI/WineMonoPanel.swift",
+   "text": "Working\\u{2026}",
+   "lines": [
+    12
+   ],
+   "contexts": [
+    "value: WineMonoModel.bundled ? \"Included\" : (mono.installed ? \"Installed\" : (mono.busy ? \"Working\\u{2026}\" : \"Not installed\")),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4729"
+  },
+  {
+   "file": "app/Sources/UI/WineMonoPanel.swift",
+   "text": "Not installed",
+   "lines": [
+    12
+   ],
+   "contexts": [
+    "value: WineMonoModel.bundled ? \"Included\" : (mono.installed ? \"Installed\" : (mono.busy ? \"Working\\u{2026}\" : \"Not installed\")),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4730"
+  },
+  {
+   "file": "app/Sources/UI/WineMonoPanel.swift",
+   "text": "\\(Int(fraction * 100))%",
+   "lines": [
+    16
+   ],
+   "contexts": [
+    "HStack(spacing: 10) { ProgressView(value: fraction).tint(Theme.accent); Text(\"\\(Int(fraction * 100))%\").font(.footnote.monospacedDigit()).foregroundStyle(Theme.textDim) }.padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4731"
+  },
+  {
+   "file": "app/Sources/UI/WineMonoPanel.swift",
+   "text": "Unpacking \\(Int(fraction * 100))%",
+   "lines": [
+    18
+   ],
+   "contexts": [
+    "HStack(spacing: 10) { ProgressView(value: fraction).tint(Theme.accent); Text(\"Unpacking \\(Int(fraction * 100))%\").font(.footnote.monospacedDigit()).foregroundStyle(Theme.textDim) }.padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u4732"
+  },
+  {
+   "file": "app/Sources/UI/WineMonoPanel.swift",
+   "text": "Download",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "ActionRow(id: \"wm-main\", symbol: \"arrow.down.circle.fill\", title: \"Download\", subtitle: \"About 42 MB, from WineHQ\", chevron: false) { mono.install() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4733"
+  },
+  {
+   "file": "app/Sources/UI/WineMonoPanel.swift",
+   "text": "About 42 MB, from WineHQ",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "ActionRow(id: \"wm-main\", symbol: \"arrow.down.circle.fill\", title: \"Download\", subtitle: \"About 42 MB, from WineHQ\", chevron: false) { mono.install() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4734"
+  },
+  {
+   "file": "app/Sources/UI/WineMonoPanel.swift",
+   "text": "Remove the downloaded copy",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "ActionRow(id: \"wm-remove\", symbol: \"trash.fill\", title: \"Remove the downloaded copy\", destructive: true, chevron: false) { mono.remove() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u4735"
+  }
+ ]
+}

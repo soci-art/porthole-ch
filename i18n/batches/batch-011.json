@@ -1,0 +1,2928 @@
+{
+ "batch": 11,
+ "units": [
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Steam download: resuming, \\(done.count) chunk(s) already on disk.",
+   "lines": [
+    342
+   ],
+   "contexts": [
+    "SteamLog.event(\"Steam download: resuming, \\(done.count) chunk(s) already on disk.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1800"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Checking the files already on the device\\u{2026}",
+   "lines": [
+    350
+   ],
+   "contexts": [
+    "state = .preparing(\"Checking the files already on the device\\u{2026}\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1801"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Steam download: \\(self.name): \\(found.done.count) chunk(s) (\\(Self.size(Int64(found.bytes)))) in \\(found.files) file(s) on the device already match Steam's, checked in \\(String(format: ",
+   "lines": [
+    358
+   ],
+   "contexts": [
+    "SteamLog.event(\"Steam download: \\(self.name): \\(found.done.count) chunk(s) (\\(Self.size(Int64(found.bytes)))) in \\(found.files) file(s) on the device already match Steam's, checked in \\(String(format: \"%.0f\", Date().timeIntervalSince(began))) s.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1802"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": ", Date().timeIntervalSince(began))) s.",
+   "lines": [
+    358
+   ],
+   "contexts": [
+    "SteamLog.event(\"Steam download: \\(self.name): \\(found.done.count) chunk(s) (\\(Self.size(Int64(found.bytes)))) in \\(found.files) file(s) on the device already match Steam's, checked in \\(String(format: \"%.0f\", Date().timeIntervalSince(began))) s.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1803"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Checking the files already on the device\\u{2026} \\(percent)%",
+   "lines": [
+    419
+   ],
+   "contexts": [
+    "if show { DispatchQueue.main.async { [weak self] in if let self, id == self.token, case .preparing = self.state { self.state = .preparing(\"Checking the files already on the device\\u{2026} \\(percent)%\") } } }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1804"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Steam download: \\(items.count) chunk(s) to fetch, \\(Self.size(Int64(netTotal))) to download (\\(Self.size(Int64(total))) on disk).",
+   "lines": [
+    461
+   ],
+   "contexts": [
+    "SteamLog.event(\"Steam download: \\(items.count) chunk(s) to fetch, \\(Self.size(Int64(netTotal))) to download (\\(Self.size(Int64(total))) on disk).\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1805"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Steam's content servers could not be reached.",
+   "lines": [
+    513
+   ],
+   "contexts": [
+    "setFailure(\"Steam's content servers could not be reached.\"); finished(); return"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1806"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "could not be unpacked",
+   "lines": [
+    535
+   ],
+   "contexts": [
+    "let why = plain == nil ? \"could not be unpacked\" : plain!.count != chunk.originalSize ? \"unpacked to \\(plain!.count) bytes, expected \\(chunk.originalSize)\" : plain == nil || SteamCipher.sha1(plain!) != chunk.sha ? \"its hash differs\" : \"could not be written\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1807"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "unpacked to \\(plain!.count) bytes, expected \\(chunk.originalSize)",
+   "lines": [
+    535
+   ],
+   "contexts": [
+    "let why = plain == nil ? \"could not be unpacked\" : plain!.count != chunk.originalSize ? \"unpacked to \\(plain!.count) bytes, expected \\(chunk.originalSize)\" : plain == nil || SteamCipher.sha1(plain!) != chunk.sha ? \"its hash differs\" : \"could not be written\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1808"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "its hash differs",
+   "lines": [
+    535
+   ],
+   "contexts": [
+    "let why = plain == nil ? \"could not be unpacked\" : plain!.count != chunk.originalSize ? \"unpacked to \\(plain!.count) bytes, expected \\(chunk.originalSize)\" : plain == nil || SteamCipher.sha1(plain!) != chunk.sha ? \"its hash differs\" : \"could not be written\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1809"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "could not be written",
+   "lines": [
+    535
+   ],
+   "contexts": [
+    "let why = plain == nil ? \"could not be unpacked\" : plain!.count != chunk.originalSize ? \"unpacked to \\(plain!.count) bytes, expected \\(chunk.originalSize)\" : plain == nil || SteamCipher.sha1(plain!) != chunk.sha ? \"its hash differs\" : \"could not be written\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1810"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "a chunk did not check out",
+   "lines": [
+    538
+   ],
+   "contexts": [
+    "self.retry(item, attempt: attempt, reason: \"a chunk did not check out\", finished: finished)"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1811"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Steam refused the download (\\(error.message)). Try signing in for downloads again.",
+   "lines": [
+    541
+   ],
+   "contexts": [
+    "if error.notOwned { self.setFailure(\"Steam refused the download (\\(error.message)). Try signing in for downloads again.\"); finished(); return }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1812"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Downloading \\(name) stopped: \\(reason) (after \\(retriesPerChunk) tries). The download can be resumed.",
+   "lines": [
+    550
+   ],
+   "contexts": [
+    "setFailure(\"Downloading \\(name) stopped: \\(reason) (after \\(retriesPerChunk) tries). The download can be resumed.\"); finished(); return"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1813"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "A file of the game could not be written.",
+   "lines": [
+    574
+   ],
+   "contexts": [
+    "guard let fd = descriptor else { setFailure(\"A file of the game could not be written.\"); return false }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1814"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "The disk write failed. The device may be out of space.",
+   "lines": [
+    576
+   ],
+   "contexts": [
+    "guard count == plain.count else { setFailure(\"The disk write failed. The device may be out of space.\"); return false }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1815"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "Steam download: \\(name) is installed.",
+   "lines": [
+    645
+   ],
+   "contexts": [
+    "SteamLog.event(\"Steam download: \\(name) is installed.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1816"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "\\t\\\"appid\\\"\\t\\t\\(quoted(String(appid)))",
+   "lines": [
+    668
+   ],
+   "contexts": [
+    "var lines = [\"\\\"AppState\\\"\", \"{\", \"\\t\\\"appid\\\"\\t\\t\\(quoted(String(appid)))\", \"\\t\\\"Universe\\\"\\t\\t\\\"1\\\"\", \"\\t\\\"name\\\"\\t\\t\\(quoted(name))\","
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1817"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "\\t\\\"Universe\\\"\\t\\t\\\"1\\\"",
+   "lines": [
+    668
+   ],
+   "contexts": [
+    "var lines = [\"\\\"AppState\\\"\", \"{\", \"\\t\\\"appid\\\"\\t\\t\\(quoted(String(appid)))\", \"\\t\\\"Universe\\\"\\t\\t\\\"1\\\"\", \"\\t\\\"name\\\"\\t\\t\\(quoted(name))\","
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1818"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "\\t\\\"name\\\"\\t\\t\\(quoted(name))",
+   "lines": [
+    668
+   ],
+   "contexts": [
+    "var lines = [\"\\\"AppState\\\"\", \"{\", \"\\t\\\"appid\\\"\\t\\t\\(quoted(String(appid)))\", \"\\t\\\"Universe\\\"\\t\\t\\\"1\\\"\", \"\\t\\\"name\\\"\\t\\t\\(quoted(name))\","
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1819"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "\\t\\\"StateFlags\\\"\\t\\t\\\"4\\\"",
+   "lines": [
+    669
+   ],
+   "contexts": [
+    "\"\\t\\\"StateFlags\\\"\\t\\t\\\"4\\\"\", \"\\t\\\"LastOwner\\\"\\t\\t\\(quoted(owner))\", \"\\t\\\"installdir\\\"\\t\\t\\(quoted(installDir))\","
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1820"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "\\t\\\"LastOwner\\\"\\t\\t\\(quoted(owner))",
+   "lines": [
+    669
+   ],
+   "contexts": [
+    "\"\\t\\\"StateFlags\\\"\\t\\t\\\"4\\\"\", \"\\t\\\"LastOwner\\\"\\t\\t\\(quoted(owner))\", \"\\t\\\"installdir\\\"\\t\\t\\(quoted(installDir))\","
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1821"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "\\t\\\"installdir\\\"\\t\\t\\(quoted(installDir))",
+   "lines": [
+    669
+   ],
+   "contexts": [
+    "\"\\t\\\"StateFlags\\\"\\t\\t\\\"4\\\"\", \"\\t\\\"LastOwner\\\"\\t\\t\\(quoted(owner))\", \"\\t\\\"installdir\\\"\\t\\t\\(quoted(installDir))\","
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1822"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "\\t\\\"LastUpdated\\\"\\t\\t\\(quoted(String(Int(updated.timeIntervalSince1970))))",
+   "lines": [
+    670
+   ],
+   "contexts": [
+    "\"\\t\\\"LastUpdated\\\"\\t\\t\\(quoted(String(Int(updated.timeIntervalSince1970))))\", \"\\t\\\"SizeOnDisk\\\"\\t\\t\\(quoted(String(sizeOnDisk)))\","
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1823"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "\\t\\\"SizeOnDisk\\\"\\t\\t\\(quoted(String(sizeOnDisk)))",
+   "lines": [
+    670
+   ],
+   "contexts": [
+    "\"\\t\\\"LastUpdated\\\"\\t\\t\\(quoted(String(Int(updated.timeIntervalSince1970))))\", \"\\t\\\"SizeOnDisk\\\"\\t\\t\\(quoted(String(sizeOnDisk)))\","
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1824"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "\\t\\\"buildid\\\"\\t\\t\\(quoted(buildID))",
+   "lines": [
+    671
+   ],
+   "contexts": [
+    "\"\\t\\\"buildid\\\"\\t\\t\\(quoted(buildID))\", \"\\t\\\"InstalledDepots\\\"\", \"\\t{\"]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1825"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "\\t\\\"InstalledDepots\\\"",
+   "lines": [
+    671
+   ],
+   "contexts": [
+    "\"\\t\\\"buildid\\\"\\t\\t\\(quoted(buildID))\", \"\\t\\\"InstalledDepots\\\"\", \"\\t{\"]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1826"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "\\t{",
+   "lines": [
+    671
+   ],
+   "contexts": [
+    "\"\\t\\\"buildid\\\"\\t\\t\\(quoted(buildID))\", \"\\t\\\"InstalledDepots\\\"\", \"\\t{\"]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1827"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "\\t\\t{",
+   "lines": [
+    673
+   ],
+   "contexts": [
+    "lines += [\"\\t\\t\\(quoted(String(depot.id)))\", \"\\t\\t{\", \"\\t\\t\\t\\\"manifest\\\"\\t\\t\\(quoted(String(depot.manifest)))\", \"\\t\\t\\t\\\"size\\\"\\t\\t\\(quoted(String(depot.size)))\"]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1828"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "\\t\\t\\t\\\"manifest\\\"\\t\\t\\(quoted(String(depot.manifest)))",
+   "lines": [
+    673
+   ],
+   "contexts": [
+    "lines += [\"\\t\\t\\(quoted(String(depot.id)))\", \"\\t\\t{\", \"\\t\\t\\t\\\"manifest\\\"\\t\\t\\(quoted(String(depot.manifest)))\", \"\\t\\t\\t\\\"size\\\"\\t\\t\\(quoted(String(depot.size)))\"]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1829"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "\\t\\t\\t\\\"size\\\"\\t\\t\\(quoted(String(depot.size)))",
+   "lines": [
+    673
+   ],
+   "contexts": [
+    "lines += [\"\\t\\t\\(quoted(String(depot.id)))\", \"\\t\\t{\", \"\\t\\t\\t\\\"manifest\\\"\\t\\t\\(quoted(String(depot.manifest)))\", \"\\t\\t\\t\\\"size\\\"\\t\\t\\(quoted(String(depot.size)))\"]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1830"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "\\t\\t\\t\\\"dlcappid\\\"\\t\\t\\(quoted(String(dlc)))",
+   "lines": [
+    674
+   ],
+   "contexts": [
+    "if let dlc = depot.dlcApp { lines.append(\"\\t\\t\\t\\\"dlcappid\\\"\\t\\t\\(quoted(String(dlc)))\") }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1831"
+  },
+  {
+   "file": "app/Sources/Steam/SteamInstaller.swift",
+   "text": "\\t\\t}",
+   "lines": [
+    675
+   ],
+   "contexts": [
+    "lines.append(\"\\t\\t}\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1832"
+  },
+  {
+   "file": "app/Sources/Steam/SteamLibraryCM.swift",
+   "text": "Steam did not send the list of your games. Try again.",
+   "lines": [
+    19
+   ],
+   "contexts": [
+    "guard let licenses else { completion(.failure(SteamContentError(message: \"Steam did not send the list of your games. Try again.\"))); return }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1833"
+  },
+  {
+   "file": "app/Sources/Steam/SteamOverlayWatcher.swift",
+   "text": "Showing overlay",
+   "lines": [
+    11
+   ],
+   "contexts": [
+    "text.split(separator: \"\\n\").filter { $0.contains(\"Showing overlay\") }.count"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1834"
+  },
+  {
+   "file": "app/Sources/Steam/SteamService.swift",
+   "text": "Steam is being used by the game right now. Try again when it has closed.",
+   "lines": [
+    60
+   ],
+   "contexts": [
+    "guard !suspended else { throw SteamFailure(message: \"Steam is being used by the game right now. Try again when it has closed.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1835"
+  },
+  {
+   "file": "app/Sources/Steam/SteamService.swift",
+   "text": "Sign in to Steam first.",
+   "lines": [
+    62,
+    164
+   ],
+   "contexts": [
+    "guard let session = account.session, !session.refreshToken.isEmpty else { throw SteamFailure(message: \"Sign in to Steam first.\") }",
+    "guard let steamID = account.session.flatMap({ UInt64($0.steamID) }) else { throw SteamFailure(message: \"Sign in to Steam first.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1836"
+  },
+  {
+   "file": "app/Sources/Steam/SteamService.swift",
+   "text": "Sign in for downloads again",
+   "lines": [
+    75
+   ],
+   "contexts": [
+    "guard text.contains(\"Sign in for downloads again\") || text.contains(\"sign-in for downloads has expired\") else { return }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1837"
+  },
+  {
+   "file": "app/Sources/Steam/SteamService.swift",
+   "text": "sign-in for downloads has expired",
+   "lines": [
+    75
+   ],
+   "contexts": [
+    "guard text.contains(\"Sign in for downloads again\") || text.contains(\"sign-in for downloads has expired\") else { return }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1838"
+  },
+  {
+   "file": "app/Sources/Steam/SteamService.swift",
+   "text": "Steam: the saved sign-in was refused again on logon; signing out.",
+   "lines": [
+    78
+   ],
+   "contexts": [
+    "SteamLog.event(\"Steam: the saved sign-in was refused again on logon; signing out.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1839"
+  },
+  {
+   "file": "app/Sources/Steam/SteamService.swift",
+   "text": "Steam: the saved sign-in was refused on logon; keeping it for now.",
+   "lines": [
+    84
+   ],
+   "contexts": [
+    "SteamLog.event(\"Steam: the saved sign-in was refused on logon; keeping it for now.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1840"
+  },
+  {
+   "file": "app/Sources/Steam/SteamService.swift",
+   "text": "DLC \\(dlcApp)",
+   "lines": [
+    131
+   ],
+   "contexts": [
+    "})?.name ?? \"DLC \\(dlcApp)\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1841"
+  },
+  {
+   "file": "app/Sources/Steam/SteamService.swift",
+   "text": "The item's file could not be downloaded.",
+   "lines": [
+    281
+   ],
+   "contexts": [
+    "var lastError: Error = SteamFailure(message: \"The item's file could not be downloaded.\")"
+   ],
+   "reasons": [
+    "error-constructor-arg"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1842"
+  },
+  {
+   "file": "app/Sources/Steam/SteamService.swift",
+   "text": "The item's file could not be downloaded (HTTP \\((result.1 as? HTTPURLResponse)?.statusCode ?? 0)).",
+   "lines": [
+    287
+   ],
+   "contexts": [
+    "lastError = SteamFailure(message: \"The item's file could not be downloaded (HTTP \\((result.1 as? HTTPURLResponse)?.statusCode ?? 0)).\")"
+   ],
+   "reasons": [
+    "error-constructor-arg"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1843"
+  },
+  {
+   "file": "app/Sources/Steam/SteamService.swift",
+   "text": "The item's file could not be downloaded (HTTP \\(status)).",
+   "lines": [
+    302
+   ],
+   "contexts": [
+    "if let status = (response as? HTTPURLResponse)?.statusCode, status != 200 { throw SteamFailure(message: \"The item's file could not be downloaded (HTTP \\(status)).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1844"
+  },
+  {
+   "file": "app/Sources/Steam/SteamService.swift",
+   "text": "The download finished but Steam's information about the game was lost.",
+   "lines": [
+    356
+   ],
+   "contexts": [
+    "else { finish(.failure(SteamFailure(message: \"The download finished but Steam's information about the game was lost.\"))) }"
+   ],
+   "reasons": [
+    "error-constructor-arg"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1845"
+  },
+  {
+   "file": "app/Sources/Steam/SteamSignIn.swift",
+   "text": "No internet connection.",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "return error.code == .notConnectedToInternet || error.code == .networkConnectionLost ? \"No internet connection.\" : \"Couldn't reach Steam (\\(error.localizedDescription)).\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1846"
+  },
+  {
+   "file": "app/Sources/Steam/SteamSignIn.swift",
+   "text": "Couldn't reach Steam (\\(error.localizedDescription)).",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "return error.code == .notConnectedToInternet || error.code == .networkConnectionLost ? \"No internet connection.\" : \"Couldn't reach Steam (\\(error.localizedDescription)).\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1847"
+  },
+  {
+   "file": "app/Sources/Steam/SteamSignIn.swift",
+   "text": "api eresult=\\(error.eresult.map(String.init) ?? ",
+   "lines": [
+    33
+   ],
+   "contexts": [
+    "if let error = error as? SteamAPIError { return \"api eresult=\\(error.eresult.map(String.init) ?? \"-\") http=\\(error.http.map(String.init) ?? \"-\")\" }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1848"
+  },
+  {
+   "file": "app/Sources/Steam/SteamSignIn.swift",
+   "text": ") http=\\(error.http.map(String.init) ?? ",
+   "lines": [
+    33
+   ],
+   "contexts": [
+    "if let error = error as? SteamAPIError { return \"api eresult=\\(error.eresult.map(String.init) ?? \"-\") http=\\(error.http.map(String.init) ?? \"-\")\" }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1849"
+  },
+  {
+   "file": "app/Sources/Steam/SteamSignIn.swift",
+   "text": "network \\(error.code.rawValue)",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    "if let error = error as? URLError { return \"network \\(error.code.rawValue)\" }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1850"
+  },
+  {
+   "file": "app/Sources/Steam/SteamSignIn.swift",
+   "text": "Approve",
+   "lines": [
+    96
+   ],
+   "contexts": [
+    "if text.contains(\"Approve\") || text.contains(\"approve\") { prompt.canApprove = true }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1851"
+  },
+  {
+   "file": "app/Sources/Steam/SteamSignIn.swift",
+   "text": "sent to ",
+   "lines": [
+    101
+   ],
+   "contexts": [
+    "if kind == .email, let range = text.range(of: \"sent to \") { prompt.hint = String(text[range.upperBound...]) }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1852"
+  },
+  {
+   "file": "app/Sources/Steam/SteamSignIn.swift",
+   "text": "M",
+   "lines": [
+    114
+   ],
+   "contexts": [
+    "filter.message = Data(text.utf8); filter.correctionLevel = \"M\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1853"
+  },
+  {
+   "file": "app/Sources/Steam/SteamStoreInfo.swift",
+   "text": "Deck Verified",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "switch self { case .verified: \"Deck Verified\"; case .playable: \"Deck Playable\"; case .unsupported: \"Deck Unsupported\"; case .unknown: \"Deck not rated\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1854"
+  },
+  {
+   "file": "app/Sources/Steam/SteamStoreInfo.swift",
+   "text": "Deck Playable",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "switch self { case .verified: \"Deck Verified\"; case .playable: \"Deck Playable\"; case .unsupported: \"Deck Unsupported\"; case .unknown: \"Deck not rated\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1855"
+  },
+  {
+   "file": "app/Sources/Steam/SteamStoreInfo.swift",
+   "text": "Deck Unsupported",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "switch self { case .verified: \"Deck Verified\"; case .playable: \"Deck Playable\"; case .unsupported: \"Deck Unsupported\"; case .unknown: \"Deck not rated\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1856"
+  },
+  {
+   "file": "app/Sources/Steam/SteamStoreInfo.swift",
+   "text": "Deck not rated",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "switch self { case .verified: \"Deck Verified\"; case .playable: \"Deck Playable\"; case .unsupported: \"Deck Unsupported\"; case .unknown: \"Deck not rated\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1857"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "Trending",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "var title: String { switch self { case .trending: \"Trending\"; case .newest: \"Newest\"; case .popular: \"Most subscribed\"; case .topRated: \"Top rated\" } }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1858"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "Newest",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "var title: String { switch self { case .trending: \"Trending\"; case .newest: \"Newest\"; case .popular: \"Most subscribed\"; case .topRated: \"Top rated\" } }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1859"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "Most subscribed",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "var title: String { switch self { case .trending: \"Trending\"; case .newest: \"Newest\"; case .popular: \"Most subscribed\"; case .topRated: \"Top rated\" } }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1860"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "Top rated",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "var title: String { switch self { case .trending: \"Trending\"; case .newest: \"Newest\"; case .popular: \"Most subscribed\"; case .topRated: \"Top rated\" } }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1861"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "Steam's list of subscribed items could not be read.",
+   "lines": [
+    94
+   ],
+   "contexts": [
+    "guard let fields = PBFields(body) else { return .failure(SteamContentError(message: \"Steam's list of subscribed items could not be read.\")) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1862"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "Steam would not list the subscribed items (error \\(code)).",
+   "lines": [
+    96
+   ],
+   "contexts": [
+    "guard code == 1 else { return .failure(SteamContentError(message: \"Steam would not list the subscribed items (error \\(code)).\")) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1863"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\\"\\\"\\n{\\n\\t\\\"filename\\\"\\t\\t\\\"\\(filename)\\\"\\n\\t\\\"appid\\\"\\t\\t\\\"\\(appID)\\\"\\n\\t\\\"creator\\\"\\t\\t\\\"\\(creator)\\\"\\n\\t\\\"sha1\\\"\\t\\t\\\"\\(sha1)\\\"\\n}\\n",
+   "lines": [
+    154
+   ],
+   "contexts": [
+    "\"\\\"\\\"\\n{\\n\\t\\\"filename\\\"\\t\\t\\\"\\(filename)\\\"\\n\\t\\\"appid\\\"\\t\\t\\\"\\(appID)\\\"\\n\\t\\\"creator\\\"\\t\\t\\\"\\(creator)\\\"\\n\\t\\\"sha1\\\"\\t\\t\\\"\\(sha1)\\\"\\n}\\n\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1864"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\t\\\"appid\\\"\\t\\t\\(q(String(appID)))",
+   "lines": [
+    192
+   ],
+   "contexts": [
+    "var lines = [\"\\\"AppWorkshop\\\"\", \"{\", \"\\t\\\"appid\\\"\\t\\t\\(q(String(appID)))\", \"\\t\\\"SizeOnDisk\\\"\\t\\t\\(q(String(items.reduce(0) { $0 + $1.size })))\","
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1865"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\t\\\"SizeOnDisk\\\"\\t\\t\\(q(String(items.reduce(0) { $0 + $1.size })))",
+   "lines": [
+    192
+   ],
+   "contexts": [
+    "var lines = [\"\\\"AppWorkshop\\\"\", \"{\", \"\\t\\\"appid\\\"\\t\\t\\(q(String(appID)))\", \"\\t\\\"SizeOnDisk\\\"\\t\\t\\(q(String(items.reduce(0) { $0 + $1.size })))\","
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1866"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\t\\\"NeedsUpdate\\\"\\t\\t\\\"0\\\"",
+   "lines": [
+    193
+   ],
+   "contexts": [
+    "\"\\t\\\"NeedsUpdate\\\"\\t\\t\\\"0\\\"\", \"\\t\\\"NeedsDownload\\\"\\t\\t\\\"0\\\"\", \"\\t\\\"TimeLastUpdated\\\"\\t\\t\\(q(stamp))\", \"\\t\\\"TimeLastAppRan\\\"\\t\\t\\\"0\\\"\","
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1867"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\t\\\"NeedsDownload\\\"\\t\\t\\\"0\\\"",
+   "lines": [
+    193
+   ],
+   "contexts": [
+    "\"\\t\\\"NeedsUpdate\\\"\\t\\t\\\"0\\\"\", \"\\t\\\"NeedsDownload\\\"\\t\\t\\\"0\\\"\", \"\\t\\\"TimeLastUpdated\\\"\\t\\t\\(q(stamp))\", \"\\t\\\"TimeLastAppRan\\\"\\t\\t\\\"0\\\"\","
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1868"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\t\\\"TimeLastUpdated\\\"\\t\\t\\(q(stamp))",
+   "lines": [
+    193
+   ],
+   "contexts": [
+    "\"\\t\\\"NeedsUpdate\\\"\\t\\t\\\"0\\\"\", \"\\t\\\"NeedsDownload\\\"\\t\\t\\\"0\\\"\", \"\\t\\\"TimeLastUpdated\\\"\\t\\t\\(q(stamp))\", \"\\t\\\"TimeLastAppRan\\\"\\t\\t\\\"0\\\"\","
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1869"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\t\\\"TimeLastAppRan\\\"\\t\\t\\\"0\\\"",
+   "lines": [
+    193
+   ],
+   "contexts": [
+    "\"\\t\\\"NeedsUpdate\\\"\\t\\t\\\"0\\\"\", \"\\t\\\"NeedsDownload\\\"\\t\\t\\\"0\\\"\", \"\\t\\\"TimeLastUpdated\\\"\\t\\t\\(q(stamp))\", \"\\t\\\"TimeLastAppRan\\\"\\t\\t\\\"0\\\"\","
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1870"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\t\\\"WorkshopItemsInstalled\\\"",
+   "lines": [
+    194
+   ],
+   "contexts": [
+    "\"\\t\\\"WorkshopItemsInstalled\\\"\", \"\\t{\"]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1871"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\t{",
+   "lines": [
+    194,
+    200
+   ],
+   "contexts": [
+    "\"\\t\\\"WorkshopItemsInstalled\\\"\", \"\\t{\"]",
+    "lines += [\"\\t}\", \"\\t\\\"WorkshopItemDetails\\\"\", \"\\t{\"]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1872"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\t\\t{",
+   "lines": [
+    197,
+    205
+   ],
+   "contexts": [
+    "lines += [\"\\t\\t\\(q(String(item.id)))\", \"\\t\\t{\", \"\\t\\t\\t\\\"size\\\"\\t\\t\\(q(String(item.size)))\",",
+    "lines += [\"\\t\\t\\(q(String(item.id)))\", \"\\t\\t{\", \"\\t\\t\\t\\\"manifest\\\"\\t\\t\\(q(single ? \"-1\" : String(item.manifest)))\"]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1873"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\t\\t\\t\\\"size\\\"\\t\\t\\(q(String(item.size)))",
+   "lines": [
+    197
+   ],
+   "contexts": [
+    "lines += [\"\\t\\t\\(q(String(item.id)))\", \"\\t\\t{\", \"\\t\\t\\t\\\"size\\\"\\t\\t\\(q(String(item.size)))\","
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1874"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\t\\t\\t\\\"timeupdated\\\"\\t\\t\\(q(String(Int((item.updated ?? now).timeIntervalSince1970))))",
+   "lines": [
+    198
+   ],
+   "contexts": [
+    "\"\\t\\t\\t\\\"timeupdated\\\"\\t\\t\\(q(String(Int((item.updated ?? now).timeIntervalSince1970))))\", \"\\t\\t\\t\\\"manifest\\\"\\t\\t\\(q(String(item.manifest)))\", \"\\t\\t}\"]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1875"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\t\\t\\t\\\"manifest\\\"\\t\\t\\(q(String(item.manifest)))",
+   "lines": [
+    198
+   ],
+   "contexts": [
+    "\"\\t\\t\\t\\\"timeupdated\\\"\\t\\t\\(q(String(Int((item.updated ?? now).timeIntervalSince1970))))\", \"\\t\\t\\t\\\"manifest\\\"\\t\\t\\(q(String(item.manifest)))\", \"\\t\\t}\"]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1876"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\t\\t}",
+   "lines": [
+    198,
+    209
+   ],
+   "contexts": [
+    "\"\\t\\t\\t\\\"timeupdated\\\"\\t\\t\\(q(String(Int((item.updated ?? now).timeIntervalSince1970))))\", \"\\t\\t\\t\\\"manifest\\\"\\t\\t\\(q(String(item.manifest)))\", \"\\t\\t}\"]",
+    "\"\\t\\t\\t\\\"latest_timeupdated\\\"\\t\\t\\(q(updated))\", \"\\t\\t\\t\\\"latest_manifest\\\"\\t\\t\\(q(single ? \"-1\" : String(item.manifest)))\", \"\\t\\t}\"]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1877"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\t\\\"WorkshopItemDetails\\\"",
+   "lines": [
+    200
+   ],
+   "contexts": [
+    "lines += [\"\\t}\", \"\\t\\\"WorkshopItemDetails\\\"\", \"\\t{\"]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1878"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\t\\t\\t\\\"manifest\\\"\\t\\t\\(q(single ? ",
+   "lines": [
+    205
+   ],
+   "contexts": [
+    "lines += [\"\\t\\t\\(q(String(item.id)))\", \"\\t\\t{\", \"\\t\\t\\t\\\"manifest\\\"\\t\\t\\(q(single ? \"-1\" : String(item.manifest)))\"]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1879"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": " : String(item.manifest)))",
+   "lines": [
+    205,
+    209
+   ],
+   "contexts": [
+    "lines += [\"\\t\\t\\(q(String(item.id)))\", \"\\t\\t{\", \"\\t\\t\\t\\\"manifest\\\"\\t\\t\\(q(single ? \"-1\" : String(item.manifest)))\"]",
+    "\"\\t\\t\\t\\\"latest_timeupdated\\\"\\t\\t\\(q(updated))\", \"\\t\\t\\t\\\"latest_manifest\\\"\\t\\t\\(q(single ? \"-1\" : String(item.manifest)))\", \"\\t\\t}\"]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1880"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\t\\t\\t\\\"ugchandle\\\"\\t\\t\\(q(String(item.ugcHandle)))",
+   "lines": [
+    206
+   ],
+   "contexts": [
+    "if single { lines.append(\"\\t\\t\\t\\\"ugchandle\\\"\\t\\t\\(q(String(item.ugcHandle)))\") }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1881"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\t\\t\\t\\\"timetouched\\\"\\t\\t\\(q(stamp))",
+   "lines": [
+    208
+   ],
+   "contexts": [
+    "\"\\t\\t\\t\\\"timetouched\\\"\\t\\t\\(q(stamp))\", \"\\t\\t\\t\\\"subscribedby\\\"\\t\\t\\(q(subscribedBy))\","
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1882"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\t\\t\\t\\\"subscribedby\\\"\\t\\t\\(q(subscribedBy))",
+   "lines": [
+    208
+   ],
+   "contexts": [
+    "\"\\t\\t\\t\\\"timetouched\\\"\\t\\t\\(q(stamp))\", \"\\t\\t\\t\\\"subscribedby\\\"\\t\\t\\(q(subscribedBy))\","
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1883"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\t\\t\\t\\\"latest_timeupdated\\\"\\t\\t\\(q(updated))",
+   "lines": [
+    209
+   ],
+   "contexts": [
+    "\"\\t\\t\\t\\\"latest_timeupdated\\\"\\t\\t\\(q(updated))\", \"\\t\\t\\t\\\"latest_manifest\\\"\\t\\t\\(q(single ? \"-1\" : String(item.manifest)))\", \"\\t\\t}\"]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1884"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\t\\t\\t\\\"latest_manifest\\\"\\t\\t\\(q(single ? ",
+   "lines": [
+    209
+   ],
+   "contexts": [
+    "\"\\t\\t\\t\\\"latest_timeupdated\\\"\\t\\t\\(q(updated))\", \"\\t\\t\\t\\\"latest_manifest\\\"\\t\\t\\(q(single ? \"-1\" : String(item.manifest)))\", \"\\t\\t}\"]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1885"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "\\(SteamAPI.host)/ISteamRemoteStorage/GetPublishedFileDetails/v1/",
+   "lines": [
+    269
+   ],
+   "contexts": [
+    "guard let url = URL(string: \"\\(SteamAPI.host)/ISteamRemoteStorage/GetPublishedFileDetails/v1/\") else { completion(.failure(.unexpected(\"bad URL\"))); return }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1886"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "bad URL",
+   "lines": [
+    269
+   ],
+   "contexts": [
+    "guard let url = URL(string: \"\\(SteamAPI.host)/ISteamRemoteStorage/GetPublishedFileDetails/v1/\") else { completion(.failure(.unexpected(\"bad URL\"))); return }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1887"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "itemcount=\\(ids.count)",
+   "lines": [
+    270
+   ],
+   "contexts": [
+    "var form = \"itemcount=\\(ids.count)\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1888"
+  },
+  {
+   "file": "app/Sources/Steam/SteamWorkshop.swift",
+   "text": "&publishedfileids%5B\\(index)%5D=\\(id)",
+   "lines": [
+    271
+   ],
+   "contexts": [
+    "for (index, id) in ids.enumerated() { form += \"&publishedfileids%5B\\(index)%5D=\\(id)\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1889"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Add a game",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "KitSheet(title: choosing?.name ?? \"Add a game\", closeTitle: choosing == nil ? \"Cancel\" : \"Back\", closeSymbol: choosing == nil ? \"xmark\" : \"chevron.left\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1890"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Cancel",
+   "lines": [
+    47,
+    278
+   ],
+   "contexts": [
+    "KitSheet(title: choosing?.name ?? \"Add a game\", closeTitle: choosing == nil ? \"Cancel\" : \"Back\", closeSymbol: choosing == nil ? \"xmark\" : \"chevron.left\",",
+    "PillButton(id: \"imp-cancel\", title: \"Cancel\", symbol: \"xmark\") { importer.cancel() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1891"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Back",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "KitSheet(title: choosing?.name ?? \"Add a game\", closeTitle: choosing == nil ? \"Cancel\" : \"Back\", closeSymbol: choosing == nil ? \"xmark\" : \"chevron.left\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1892"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "How do you want to add it?",
+   "lines": [
+    72
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"How do you want to add it?\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1893"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Import a game folder",
+   "lines": [
+    73
+   ],
+   "contexts": [
+    "ActionRow(id: \"add-folder\", symbol: \"folder.badge.plus\", title: \"Import a game folder\", subtitle: \"In Files, open the game's folder, then tap Open\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1894"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "In Files, open the game's folder, then tap Open",
+   "lines": [
+    73
+   ],
+   "contexts": [
+    "ActionRow(id: \"add-folder\", symbol: \"folder.badge.plus\", title: \"Import a game folder\", subtitle: \"In Files, open the game's folder, then tap Open\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1895"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Download from Steam",
+   "lines": [
+    75
+   ],
+   "contexts": [
+    "ActionRow(id: \"add-steam\", symbol: \"arrow.down.circle.fill\", tint: .blue, title: \"Download from Steam\", subtitle: \"Games you own\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1896"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Games you own",
+   "lines": [
+    75,
+    77,
+    79,
+    85
+   ],
+   "contexts": [
+    "ActionRow(id: \"add-steam\", symbol: \"arrow.down.circle.fill\", tint: .blue, title: \"Download from Steam\", subtitle: \"Games you own\",",
+    "ActionRow(id: \"add-epic\", symbol: \"arrow.down.circle.fill\", tint: .indigo, title: \"Download from Epic Games\", subtitle: \"Games you own\",",
+    "ActionRow(id: \"add-gog\", symbol: \"arrow.down.circle.fill\", tint: .purple, title: \"Download from GOG\", subtitle: \"Games you own\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1897"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Games you own on Steam, installed straight into the app.",
+   "lines": [
+    76
+   ],
+   "contexts": [
+    "info: \"Games you own on Steam, installed straight into the app.\") { dismiss(); onSteam() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1898"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Download from Epic Games",
+   "lines": [
+    77
+   ],
+   "contexts": [
+    "ActionRow(id: \"add-epic\", symbol: \"arrow.down.circle.fill\", tint: .indigo, title: \"Download from Epic Games\", subtitle: \"Games you own\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1899"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Games you own on Epic Games, installed straight into the app. You sign in on Epic's own page.",
+   "lines": [
+    78
+   ],
+   "contexts": [
+    "info: \"Games you own on Epic Games, installed straight into the app. You sign in on Epic's own page.\") { dismiss(); onEpic() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1900"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Download from GOG",
+   "lines": [
+    79
+   ],
+   "contexts": [
+    "ActionRow(id: \"add-gog\", symbol: \"arrow.down.circle.fill\", tint: .purple, title: \"Download from GOG\", subtitle: \"Games you own\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1901"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Games you own on GOG, installed straight into the app. You sign in on GOG's own page.",
+   "lines": [
+    80
+   ],
+   "contexts": [
+    "info: \"Games you own on GOG, installed straight into the app. You sign in on GOG's own page.\") { dismiss(); onGog() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1902"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Download from itch.io",
+   "lines": [
+    81
+   ],
+   "contexts": [
+    "ActionRow(id: \"add-itch\", symbol: \"arrow.down.circle.fill\", tint: .red, title: \"Download from itch.io\", subtitle: \"Games you own or claimed\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1903"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Games you own or claimed",
+   "lines": [
+    81,
+    83
+   ],
+   "contexts": [
+    "ActionRow(id: \"add-itch\", symbol: \"arrow.down.circle.fill\", tint: .red, title: \"Download from itch.io\", subtitle: \"Games you own or claimed\",",
+    "ActionRow(id: \"add-amazon\", symbol: \"arrow.down.circle.fill\", tint: .orange, title: \"Download from Amazon Games\", subtitle: \"Games you own or claimed\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1904"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Games you bought, claimed or collected on itch.io, installed straight into the app. You sign in with your own API key.",
+   "lines": [
+    82
+   ],
+   "contexts": [
+    "info: \"Games you bought, claimed or collected on itch.io, installed straight into the app. You sign in with your own API key.\") { dismiss(); onItch() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1905"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Download from Amazon Games",
+   "lines": [
+    83
+   ],
+   "contexts": [
+    "ActionRow(id: \"add-amazon\", symbol: \"arrow.down.circle.fill\", tint: .orange, title: \"Download from Amazon Games\", subtitle: \"Games you own or claimed\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1906"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Games you bought on Amazon or claimed with Prime Gaming, installed straight into the app. You sign in on Amazon's own page.",
+   "lines": [
+    84
+   ],
+   "contexts": [
+    "info: \"Games you bought on Amazon or claimed with Prime Gaming, installed straight into the app. You sign in on Amazon's own page.\") { dismiss(); onAmazon() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1907"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Download from the EA app",
+   "lines": [
+    85
+   ],
+   "contexts": [
+    "ActionRow(id: \"add-ea\", symbol: \"arrow.down.circle.fill\", tint: .red, title: \"Download from the EA app\", subtitle: \"Games you own\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1908"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "PC games on your EA account, installed straight into the app and started without the EA app. You sign in on EA's own page. Games with EA's kernel anti-cheat cannot run.",
+   "lines": [
+    86
+   ],
+   "contexts": [
+    "info: \"PC games on your EA account, installed straight into the app and started without the EA app. You sign in on EA's own page. Games with EA's kernel anti-cheat cannot run.\") { dismiss(); onEA() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1909"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Run a Windows installer",
+   "lines": [
+    87
+   ],
+   "contexts": [
+    "ActionRow(id: \"add-installer\", symbol: \"shippingbox.fill\", tint: .orange, title: \"Run a Windows installer\", subtitle: \"A disc or a setup file\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1910"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "A disc or a setup file",
+   "lines": [
+    87
+   ],
+   "contexts": [
+    "ActionRow(id: \"add-installer\", symbol: \"shippingbox.fill\", tint: .orange, title: \"Run a Windows installer\", subtitle: \"A disc or a setup file\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1911"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "For games from a disc or a setup file you already have. Pick the setup file, run it, then add what it installed.",
+   "lines": [
+    88
+   ],
+   "contexts": [
+    "info: \"For games from a disc or a setup file you already have. Pick the setup file, run it, then add what it installed.\") { dismiss(); onInstaller() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1912"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Already in the app",
+   "lines": [
+    99
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Already in the app\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1913"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Looking for games\\u{2026}",
+   "lines": [
+    101
+   ],
+   "contexts": [
+    "HStack(spacing: 10) { ProgressView().tint(Theme.accent); Text(\"Looking for games\\u{2026}\").foregroundStyle(Theme.textDim) }.padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1914"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "No games found yet. Files you import, download or install show up here.",
+   "lines": [
+    103
+   ],
+   "contexts": [
+    "Text(discovered.isEmpty ? \"No games found yet. Files you import, download or install show up here.\" : \"Everything found is already in your library.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1915"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Everything found is already in your library.",
+   "lines": [
+    103
+   ],
+   "contexts": [
+    "Text(discovered.isEmpty ? \"No games found yet. Files you import, download or install show up here.\" : \"Everything found is already in your library.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1916"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Search",
+   "lines": [
+    106,
+    224
+   ],
+   "contexts": [
+    "if discovered.count > 6 { TextFieldRow(id: \"add-search\", symbol: \"magnifyingglass\", title: \"Search\", placeholder: \"Game name\", text: $query) }",
+    "if programs.count > 12 { TextFieldRow(id: \"pc-search\", symbol: \"magnifyingglass\", title: \"Search\", placeholder: \"Program name\", text: $query) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1917"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Game name",
+   "lines": [
+    106
+   ],
+   "contexts": [
+    "if discovered.count > 6 { TextFieldRow(id: \"add-search\", symbol: \"magnifyingglass\", title: \"Search\", placeholder: \"Game name\", text: $query) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1918"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Starts \\($0.fileName)",
+   "lines": [
+    108,
+    175
+   ],
+   "contexts": [
+    "RowBase(id: \"add-d-\\(game.id)\", symbol: \"gamecontroller.fill\", title: game.name, subtitle: game.best.map { \"Starts \\($0.fileName)\" } ?? \"Choose a program\", action: { choose(game) }) {",
+    "Text(game.best.map { \"Starts \\($0.fileName)\" } ?? \"Choose a program\").font(.footnote).foregroundStyle(Theme.textDim).lineLimit(1)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1919"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Choose a program",
+   "lines": [
+    108,
+    175
+   ],
+   "contexts": [
+    "RowBase(id: \"add-d-\\(game.id)\", symbol: \"gamecontroller.fill\", title: game.name, subtitle: game.best.map { \"Starts \\($0.fileName)\" } ?? \"Choose a program\", action: { choose(game) }) {",
+    "Text(game.best.map { \"Starts \\($0.fileName)\" } ?? \"Choose a program\").font(.footnote).foregroundStyle(Theme.textDim).lineLimit(1)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1920"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Add",
+   "lines": [
+    109,
+    122,
+    178
+   ],
+   "contexts": [
+    "Text(\"Add\").font(.system(size: 14, weight: .heavy, design: .rounded)).foregroundStyle(Theme.onAccent).padding(.horizontal, 12).padding(.vertical, 5).background(Theme.accentGradient, in: Capsule())",
+    "PillButton(id: \"add-path-go\", title: \"Add\", symbol: \"plus\", style: .primary, enabled: !manual.isEmpty) { model.add(exe: manual); dismiss() }",
+    "Text(\"Add\").font(.subheadline.weight(.semibold)).foregroundStyle(Theme.accent)"
+   ],
+   "reasons": [
+    "named-param-string-component",
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1921"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "No match for \\u{201C}\\(query)\\u{201D}.",
+   "lines": [
+    112
+   ],
+   "contexts": [
+    "if available.isEmpty { Text(\"No match for \\u{201C}\\(query)\\u{201D}.\").foregroundStyle(Theme.textDim).padding(.horizontal, 6) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1922"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Add by path",
+   "lines": [
+    119
+   ],
+   "contexts": [
+    "ActionRow(id: \"add-path-toggle\", symbol: \"terminal.fill\", title: \"Add by path\", detail: showManual ? \"Hide\" : nil, chevron: !showManual) { showManual.toggle() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1923"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Hide",
+   "lines": [
+    119
+   ],
+   "contexts": [
+    "ActionRow(id: \"add-path-toggle\", symbol: \"terminal.fill\", title: \"Add by path\", detail: showManual ? \"Hide\" : nil, chevron: !showManual) { showManual.toggle() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1924"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Program",
+   "lines": [
+    121
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"add-path\", symbol: \"pencil\", title: \"Program\", placeholder: #\"C:\\Games\\Foo\\foo.exe\"#, monospaced: true, text: $manual)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1925"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Only tools were found",
+   "lines": [
+    211
+   ],
+   "contexts": [
+    "SettingsGroup(title: best.kind == .tool ? \"Only tools were found\" : \"Most likely\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1926"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Most likely",
+   "lines": [
+    211
+   ],
+   "contexts": [
+    "SettingsGroup(title: best.kind == .tool ? \"Only tools were found\" : \"Most likely\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1927"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "\\(bits)-bit",
+   "lines": [
+    215
+   ],
+   "contexts": [
+    "if let bits { Text(\"\\(bits)-bit\").font(.footnote).foregroundStyle(Theme.textDim) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1928"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Add \\u{201C}\\(name)\\u{201D}",
+   "lines": [
+    218
+   ],
+   "contexts": [
+    "PillButton(id: \"pc-add\", title: actionTitle ?? \"Add \\u{201C}\\(name)\\u{201D}\", symbol: actionTitle == nil ? \"plus\" : \"checkmark\", style: .primary) { onPick(best) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1929"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Not the right one?",
+   "lines": [
+    223
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Not the right one?\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1930"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Program name",
+   "lines": [
+    224
+   ],
+   "contexts": [
+    "if programs.count > 12 { TextFieldRow(id: \"pc-search\", symbol: \"magnifyingglass\", title: \"Search\", placeholder: \"Program name\", text: $query) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1931"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Nothing else was found.",
+   "lines": [
+    230
+   ],
+   "contexts": [
+    "if others.isEmpty { Text(query.isEmpty ? \"Nothing else was found.\" : \"No match.\").foregroundStyle(Theme.textDim).padding(.horizontal, 6) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1932"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "No match.",
+   "lines": [
+    230
+   ],
+   "contexts": [
+    "if others.isEmpty { Text(query.isEmpty ? \"Nothing else was found.\" : \"No match.\").foregroundStyle(Theme.textDim).padding(.horizontal, 6) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1933"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Show installers and tools (\\(hiddenTools))",
+   "lines": [
+    231
+   ],
+   "contexts": [
+    "if hiddenTools > 0 || showTools { ToggleRow(id: \"pc-tools\", symbol: \"wrench.and.screwdriver.fill\", title: \"Show installers and tools (\\(hiddenTools))\", isOn: $showTools) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1934"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Copying into the app",
+   "lines": [
+    259
+   ],
+   "contexts": [
+    "Text(error == nil ? \"Copying into the app\" : \"Couldn't import it\").font(.subheadline).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1935"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Couldn't import it",
+   "lines": [
+    259
+   ],
+   "contexts": [
+    "Text(error == nil ? \"Copying into the app\" : \"Couldn't import it\").font(.subheadline).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1936"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Close",
+   "lines": [
+    263
+   ],
+   "contexts": [
+    "PillButton(id: \"imp-close\", title: \"Close\", symbol: \"xmark\", style: .primary) { onCancel() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1937"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "\\(ByteCountFormatter.string(fromByteCount: p.copied, countStyle: .file)) of \\(ByteCountFormatter.string(fromByteCount: p.total, countStyle: .file))",
+   "lines": [
+    269
+   ],
+   "contexts": [
+    "Text(\"\\(ByteCountFormatter.string(fromByteCount: p.copied, countStyle: .file)) of \\(ByteCountFormatter.string(fromByteCount: p.total, countStyle: .file))\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1938"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "\\(Int(Double(p.copied) / Double(max(p.total, 1)) * 100))%",
+   "lines": [
+    271
+   ],
+   "contexts": [
+    "Text(\"\\(Int(Double(p.copied) / Double(max(p.total, 1)) * 100))%\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1939"
+  },
+  {
+   "file": "app/Sources/UI/AddGameFlow.swift",
+   "text": "Reading the folder\\u{2026}",
+   "lines": [
+    275
+   ],
+   "contexts": [
+    "} else { ProgressView(\"Reading the folder\\u{2026}\").tint(Theme.accent) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1940"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Downloads",
+   "lines": [
+    189,
+    288
+   ],
+   "contexts": [
+    "if running.isEmpty { return live.isEmpty ? \"Downloads\" : \"Downloads \\u{00B7} \\(live.count)\" }",
+    "PageScaffold(title: \"Downloads\", symbol: \"arrow.down.circle.fill\") {"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1941"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Downloads \\u{00B7} \\(live.count)",
+   "lines": [
+    189
+   ],
+   "contexts": [
+    "if running.isEmpty { return live.isEmpty ? \"Downloads\" : \"Downloads \\u{00B7} \\(live.count)\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1942"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "\\(Int(running[0].progress.fraction * 100))%",
+   "lines": [
+    191
+   ],
+   "contexts": [
+    "let head = running.count == 1 ? \"\\(Int(running[0].progress.fraction * 100))%\" : \"\\(running.count) downloading\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1943"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "\\(running.count) downloading",
+   "lines": [
+    191
+   ],
+   "contexts": [
+    "let head = running.count == 1 ? \"\\(Int(running[0].progress.fraction * 100))%\" : \"\\(running.count) downloading\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1944"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": " \\u{00B7} \\(EpicText.size(UInt64(rate)))/s",
+   "lines": [
+    192
+   ],
+   "contexts": [
+    "return head + (rate > 0 ? \" \\u{00B7} \\(EpicText.size(UInt64(rate)))/s\" : \"\") + (waiting > 0 ? \" \\u{00B7} +\\(waiting)\" : \"\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1945"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": " \\u{00B7} +\\(waiting)",
+   "lines": [
+    192
+   ],
+   "contexts": [
+    "return head + (rate > 0 ? \" \\u{00B7} \\(EpicText.size(UInt64(rate)))/s\" : \"\") + (waiting > 0 ? \" \\u{00B7} +\\(waiting)\" : \"\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1946"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "\\(running) downloading",
+   "lines": [
+    199
+   ],
+   "contexts": [
+    "if running > 0 { parts.append(\"\\(running) downloading\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1947"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "\\(waiting) waiting",
+   "lines": [
+    200
+   ],
+   "contexts": [
+    "if waiting > 0 { parts.append(\"\\(waiting) waiting\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1948"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "\\(stopped) paused",
+   "lines": [
+    201
+   ],
+   "contexts": [
+    "if stopped > 0 { parts.append(\"\\(stopped) paused\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1949"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "\\(ready) ready to install",
+   "lines": [
+    202
+   ],
+   "contexts": [
+    "if ready > 0 { parts.append(\"\\(ready) ready to install\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1950"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Nothing is downloading",
+   "lines": [
+    203,
+    304
+   ],
+   "contexts": [
+    "return parts.isEmpty ? \"Nothing is downloading\" : parts.joined(separator: \" \\u{00B7} \")",
+    "Text(\"Nothing is downloading\").font(.system(size: 18, weight: .bold, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1951"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "\\(count)",
+   "lines": [
+    240
+   ],
+   "contexts": [
+    "Text(\"\\(count)\").font(.system(size: 12, weight: .heavy, design: .rounded)).foregroundStyle(Theme.onAccent)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1952"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "All games",
+   "lines": [
+    268
+   ],
+   "contexts": [
+    "return router.downloadsReturn == .all ? \"All games\" : \"Stores\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1953"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Stores",
+   "lines": [
+    268
+   ],
+   "contexts": [
+    "return router.downloadsReturn == .all ? \"All games\" : \"Stores\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1954"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Pause all",
+   "lines": [
+    282
+   ],
+   "contexts": [
+    "if !running.isEmpty || !waiting.isEmpty { PillButton(id: \"dl-pause-all\", title: \"Pause all\", symbol: \"pause.fill\") { Downloads.pauseAll() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1955"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Resume all",
+   "lines": [
+    283
+   ],
+   "contexts": [
+    "if !stopped.isEmpty { PillButton(id: \"dl-resume-all\", title: \"Resume all\", symbol: \"play.fill\", style: .primary) { Downloads.resumeAll() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1956"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Paused",
+   "lines": [
+    295,
+    384
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Paused\") { ForEach(stopped) { pausedRow($0) } }",
+    "let line = item.failure ?? (item.progress.totalBytes > 0 ? \"Paused at \\(Int(item.progress.fraction * 100))%\" : \"Paused\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1957"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Ready to install",
+   "lines": [
+    298
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Ready to install\") { ForEach(ready) { readyRow($0) } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1958"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Browse your games",
+   "lines": [
+    305
+   ],
+   "contexts": [
+    "PillButton(id: \"dl-browse\", title: \"Browse your games\", symbol: \"square.grid.2x2.fill\", action: back)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1959"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "\\(Int(p.fraction * 100))%",
+   "lines": [
+    336
+   ],
+   "contexts": [
+    "Text(\"\\(Int(p.fraction * 100))%\").font(.system(size: 26, weight: .heavy, design: .rounded).monospacedDigit()).foregroundStyle(Theme.accent)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1960"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Pause",
+   "lines": [
+    347
+   ],
+   "contexts": [
+    "PillButton(id: \"dl-now-pause-\\(item.id)\", title: \"Pause\", symbol: \"pause.fill\", style: .primary) { Downloads.pause(item) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1961"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Cancel",
+   "lines": [
+    348,
+    387
+   ],
+   "contexts": [
+    "PillButton(id: \"dl-now-cancel-\\(item.id)\", title: \"Cancel\", symbol: \"xmark\", style: .danger) { Downloads.cancel(item) }",
+    "PillButton(id: \"dl-cancel-\\(item.id)\", title: \"Cancel\", symbol: \"xmark\", style: .danger) { Downloads.cancel(item) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1962"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "\\(item.store.title) \\u{00B7} \\(line)",
+   "lines": [
+    362
+   ],
+   "contexts": [
+    "Text(\"\\(item.store.title) \\u{00B7} \\(line)\").font(.caption).foregroundStyle(lineColor).lineLimit(3)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1963"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Waiting \\u{00B7} \\(EpicText.size(item.sizeBytes))",
+   "lines": [
+    376
+   ],
+   "contexts": [
+    "row(item, line: item.sizeBytes > 0 ? \"Waiting \\u{00B7} \\(EpicText.size(item.sizeBytes))\" : \"Waiting\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1964"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Waiting",
+   "lines": [
+    376
+   ],
+   "contexts": [
+    "row(item, line: item.sizeBytes > 0 ? \"Waiting \\u{00B7} \\(EpicText.size(item.sizeBytes))\" : \"Waiting\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1965"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Download now",
+   "lines": [
+    377
+   ],
+   "contexts": [
+    "PillButton(id: \"dl-start-\\(item.id)\", title: \"Download now\", symbol: \"forward.end.fill\") { Downloads.startNow(item) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1966"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Remove",
+   "lines": [
+    378,
+    394
+   ],
+   "contexts": [
+    "PillButton(id: \"dl-cancel-\\(item.id)\", title: \"Remove\", symbol: \"xmark\", style: .danger) { Downloads.cancel(item) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1967"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Paused at \\(Int(item.progress.fraction * 100))%",
+   "lines": [
+    384
+   ],
+   "contexts": [
+    "let line = item.failure ?? (item.progress.totalBytes > 0 ? \"Paused at \\(Int(item.progress.fraction * 100))%\" : \"Paused\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1968"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Try again",
+   "lines": [
+    386
+   ],
+   "contexts": [
+    "PillButton(id: \"dl-resume-\\(item.id)\", title: failed ? \"Try again\" : \"Resume\", symbol: failed ? \"arrow.clockwise\" : \"play.fill\", style: .primary) { Downloads.resume(item) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1969"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Resume",
+   "lines": [
+    386
+   ],
+   "contexts": [
+    "PillButton(id: \"dl-resume-\\(item.id)\", title: failed ? \"Try again\" : \"Resume\", symbol: failed ? \"arrow.clockwise\" : \"play.fill\", style: .primary) { Downloads.resume(item) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1970"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Installing\\u{2026}",
+   "lines": [
+    392
+   ],
+   "contexts": [
+    "row(item, line: item.kind == .installing ? \"Installing\\u{2026}\" : \"Downloaded. Run its setup to finish.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1971"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Downloaded. Run its setup to finish.",
+   "lines": [
+    392
+   ],
+   "contexts": [
+    "row(item, line: item.kind == .installing ? \"Installing\\u{2026}\" : \"Downloaded. Run its setup to finish.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1972"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": "Install",
+   "lines": [
+    393
+   ],
+   "contexts": [
+    "if item.kind == .ready { PillButton(id: \"dl-setup-\\(item.id)\", title: \"Install\", symbol: \"play.fill\", style: .primary) { Downloads.runSetup(item) } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1973"
+  },
+  {
+   "file": "app/Sources/UI/AllDownloadsScreen.swift",
+   "text": " \\u{00B7} \\(EpicText.duration(s)) left",
+   "lines": [
+    400
+   ],
+   "contexts": [
+    "if p.phase == .downloading, let s = p.secondsLeft { text += \" \\u{00B7} \\(EpicText.duration(s)) left\" }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1974"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Sign in to Amazon Games",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "Text(\"Sign in to Amazon Games\").font(.system(size: 24, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1975"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "You sign in on Amazon's own page. The sign-in token stays in this device's Keychain; Porthole never sees your password. The games you bought on Amazon or claimed with Prime Gaming are listed here.",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "Text(\"You sign in on Amazon's own page. The sign-in token stays in this device's Keychain; Porthole never sees your password. The games you bought on Amazon or claimed with Prime Gaming are listed here.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1976"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Sign in",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "PillButton(id: \"amazon-signin\", title: \"Sign in\", symbol: \"person.badge.key.fill\", style: .primary) { signIn = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1977"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "\\(Int((install?.progress.fraction ?? 0) * 100))%",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "case .active?: return BadgeData(symbol: \"arrow.down.circle.fill\", text: \"\\(Int((install?.progress.fraction ?? 0) * 100))%\", tint: Theme.accent)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1978"
+  },
+  {
+   "file": "app/Sources/UI/AmazonLibraryScreens.swift",
+   "text": "Waiting",
+   "lines": [
+    45
+   ],
+   "contexts": [
+    "case .queued?: return BadgeData(symbol: \"hourglass\", text: \"Waiting\", tint: Theme.textDim)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1979"
+  }
+ ]
+}

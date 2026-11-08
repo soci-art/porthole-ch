@@ -1,0 +1,2898 @@
+{
+ "batch": 3,
+ "units": [
+  {
+   "file": "app/Runtime/SwiftEA/EADownloader.swift",
+   "text": "Not enough free space on this device: this download needs about \\(ByteCountFormatter.string(fromByteCount: needed, countStyle: .file)) more. Free some space, then try again.",
+   "lines": [
+    37
+   ],
+   "contexts": [
+    "return \"Not enough free space on this device: this download needs about \\(ByteCountFormatter.string(fromByteCount: needed, countStyle: .file)) more. Free some space, then try again.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0360"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EADownloader.swift",
+   "text": "A game file could not be downloaded from EA (\\(reason)). Try again to continue.",
+   "lines": [
+    38
+   ],
+   "contexts": [
+    "case .file(let reason): return \"A game file could not be downloaded from EA (\\(reason)). Try again to continue.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0361"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EADownloader.swift",
+   "text": "EA's build names a file outside the game's folder (\\(name)).",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    "case .unsafePath(let name): return \"EA's build names a file outside the game's folder (\\(name)).\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0362"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EADownloader.swift",
+   "text": "HTTP \\((response as? HTTPURLResponse)?.statusCode ?? 0) for the build's size",
+   "lines": [
+    75
+   ],
+   "contexts": [
+    "throw EADownloadError.file(\"HTTP \\((response as? HTTPURLResponse)?.statusCode ?? 0) for the build's size\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0363"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EADownloader.swift",
+   "text": "no size for the build",
+   "lines": [
+    78
+   ],
+   "contexts": [
+    "throw EADownloadError.file(\"no size for the build\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0364"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EADownloader.swift",
+   "text": "HTTP \\((response as? HTTPURLResponse)?.statusCode ?? 0)",
+   "lines": [
+    89
+   ],
+   "contexts": [
+    "throw EADownloadError.file(\"HTTP \\((response as? HTTPURLResponse)?.statusCode ?? 0)\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": false,
+   "id": "u0365"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EADownloader.swift",
+   "text": "zip64 record offset",
+   "lines": [
+    134
+   ],
+   "contexts": [
+    "guard offset >= 0, offset + 56 <= size else { throw EAZipError.bad(\"zip64 record offset\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0366"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EADownloader.swift",
+   "text": "central directory bounds",
+   "lines": [
+    138
+   ],
+   "contexts": [
+    "throw EAZipError.bad(\"central directory bounds\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0367"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EADownloader.swift",
+   "text": "Checking the game's folder",
+   "lines": [
+    278
+   ],
+   "contexts": [
+    "let meter = EAMeter(EADownloadProgress(phase: .preparing, step: \"Checking the game's folder\"), publish: publish)"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0368"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EADownloader.swift",
+   "text": "compression method \\(entry.method)",
+   "lines": [
+    409
+   ],
+   "contexts": [
+    "guard entry.method == 0 || entry.method == 8 else { throw EADownloadError.file(\"compression method \\(entry.method)\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0369"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EADownloader.swift",
+   "text": "local header",
+   "lines": [
+    449
+   ],
+   "contexts": [
+    "guard let length = EAZipDirectory.localHeaderLength(header) else { throw EADownloadError.file(\"local header\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0370"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EADownloader.swift",
+   "text": "short read",
+   "lines": [
+    479
+   ],
+   "contexts": [
+    "guard remaining == 0 else { throw EADownloadError.file(\"short read\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0371"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAFormats.swift",
+   "text": "EA's build file is not a zip Madeira can read (no central directory).",
+   "lines": [
+    443
+   ],
+   "contexts": [
+    "case .noDirectory: return \"EA's build file is not a zip Madeira can read (no central directory).\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0372"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAFormats.swift",
+   "text": "EA's build file could not be read (\\(what)).",
+   "lines": [
+    444
+   ],
+   "contexts": [
+    "case .bad(let what): return \"EA's build file could not be read (\\(what)).\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0373"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAFormats.swift",
+   "text": "zip64 locator",
+   "lines": [
+    483
+   ],
+   "contexts": [
+    "guard eocd >= 20, u32(bytes, eocd - 20) == 0x0706_4b50 else { throw EAZipError.bad(\"zip64 locator\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0374"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAFormats.swift",
+   "text": "zip64 record",
+   "lines": [
+    494
+   ],
+   "contexts": [
+    "guard bytes.count >= 56, u32(bytes, 0) == 0x0606_4b50 else { throw EAZipError.bad(\"zip64 record\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0375"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAFormats.swift",
+   "text": "over-subscribed code",
+   "lines": [
+    599
+   ],
+   "contexts": [
+    "if count[length] > 0, next[length] + count[length] > 1 << length { throw Failure.bad(\"over-subscribed code\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0376"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAFormats.swift",
+   "text": "invalid code",
+   "lines": [
+    666
+   ],
+   "contexts": [
+    "if available >= table.bits { throw Failure.bad(\"invalid code\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0377"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAFormats.swift",
+   "text": "too many codes",
+   "lines": [
+    685
+   ],
+   "contexts": [
+    "guard literals <= 286, distances <= 30 else { throw Failure.bad(\"too many codes\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0378"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAFormats.swift",
+   "text": "repeat with no length",
+   "lines": [
+    699
+   ],
+   "contexts": [
+    "guard let previous = lengths.last else { throw Failure.bad(\"repeat with no length\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0379"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAFormats.swift",
+   "text": "lengths overrun",
+   "lines": [
+    710
+   ],
+   "contexts": [
+    "guard lengths.count == literals + distances else { throw Failure.bad(\"lengths overrun\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0380"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAFormats.swift",
+   "text": "no end-of-block code",
+   "lines": [
+    711
+   ],
+   "contexts": [
+    "guard lengths[256] > 0 else { throw Failure.bad(\"no end-of-block code\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0381"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAFormats.swift",
+   "text": "stored length",
+   "lines": [
+    734
+   ],
+   "contexts": [
+    "guard length == ~inverse & 0xFFFF else { throw Failure.bad(\"stored length\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0382"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAFormats.swift",
+   "text": "block type 3",
+   "lines": [
+    742
+   ],
+   "contexts": [
+    "throw Failure.bad(\"block type 3\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0383"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAFormats.swift",
+   "text": "length code",
+   "lines": [
+    758
+   ],
+   "contexts": [
+    "guard index < 29 else { throw Failure.bad(\"length code\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0384"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAFormats.swift",
+   "text": "distance code",
+   "lines": [
+    762
+   ],
+   "contexts": [
+    "guard distanceCode < 30 else { throw Failure.bad(\"distance code\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0385"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAFormats.swift",
+   "text": "distance too far",
+   "lines": [
+    765
+   ],
+   "contexts": [
+    "guard distance <= min(total, 1 << 15) else { throw Failure.bad(\"distance too far\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0386"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAFormats.swift",
+   "text": "gameTitles",
+   "lines": [
+    815
+   ],
+   "contexts": [
+    "if let titles = root.child(\"gameTitles\") {"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0387"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAFormats.swift",
+   "text": "locale",
+   "lines": [
+    817
+   ],
+   "contexts": [
+    "out.title = (all.first { $0.attribute(\"locale\")?.lowercased().hasPrefix(\"en\") == true } ?? all.first)?"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0388"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAFormats.swift",
+   "text": "en",
+   "lines": [
+    817
+   ],
+   "contexts": [
+    "out.title = (all.first { $0.attribute(\"locale\")?.lowercased().hasPrefix(\"en\") == true } ?? all.first)?"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0389"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EALicense.swift",
+   "text": "bad signature",
+   "lines": [
+    75
+   ],
+   "contexts": [
+    "throw EAAPIError.license(\"bad signature\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0390"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EALicense.swift",
+   "text": "unreadable licence",
+   "lines": [
+    88
+   ],
+   "contexts": [
+    "guard let info = EALicenseInfo(xml: xml) else { throw EAAPIError.license(\"unreadable licence\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0391"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAService.swift",
+   "text": ")\\\" content=\\(request.value(",
+   "lines": [
+    225
+   ],
+   "contexts": [
+    "EALog.event(\"[ea-service] connection \\(number): game connected title=\\\"\\(request.value(\"Title\") ?? \"\")\\\" content=\\(request.value(\"ContentId\") ?? \"\") encryption=\\(version)\")"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0392"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAService.swift",
+   "text": ") encryption=\\(version)",
+   "lines": [
+    225
+   ],
+   "contexts": [
+    "EALog.event(\"[ea-service] connection \\(number): game connected title=\\\"\\(request.value(\"Title\") ?? \"\")\\\" content=\\(request.value(\"ContentId\") ?? \"\") encryption=\\(version)\")"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0393"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "Visual C++ 2015-2022 x64",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "arch: \"x64\", title: \"Visual C++ 2015-2022 x64\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0394"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "Visual C++ 2015-2022 x86",
+   "lines": [
+    51
+   ],
+   "contexts": [
+    "arch: \"x86\", title: \"Visual C++ 2015-2022 x86\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0395"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "\\(name) in the installer is not a Windows DLL.",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    "guard let facts = peFacts(data) else { throw VCRedistError.message(\"\\(name) in the installer is not a Windows DLL.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0396"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "\\(name) in the installer is for another architecture.",
+   "lines": [
+    146
+   ],
+   "contexts": [
+    "guard facts.machine == machine else { throw VCRedistError.message(\"\\(name) in the installer is for another architecture.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0397"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "\\(name) in the installer carries no signature.",
+   "lines": [
+    147
+   ],
+   "contexts": [
+    "guard facts.signed else { throw VCRedistError.message(\"\\(name) in the installer carries no signature.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0398"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "\\(name) in the installer is version \\(facts.version), older than the pinned \\(VCRedistPin.version).",
+   "lines": [
+    148
+   ],
+   "contexts": [
+    "guard atLeastPinned(facts.version) else { throw VCRedistError.message(\"\\(name) in the installer is version \\(facts.version), older than the pinned \\(VCRedistPin.version).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0399"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "\\(package.fileName) is not a Windows program.",
+   "lines": [
+    157
+   ],
+   "contexts": [
+    "throw VCRedistError.message(\"\\(package.fileName) is not a Windows program.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0400"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "\\(package.fileName) is damaged (\\(String(cString: madeira_cab_strerror(rc)))).",
+   "lines": [
+    181
+   ],
+   "contexts": [
+    "throw VCRedistError.message(\"\\(package.fileName) is damaged (\\(String(cString: madeira_cab_strerror(rc)))).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0401"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "\\(name) in the installer has an impossible size.",
+   "lines": [
+    192
+   ],
+   "contexts": [
+    "guard bytes > 0, bytes <= 64 << 20 else { throw VCRedistError.message(\"\\(name) in the installer has an impossible size.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0402"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "\\(name) could not be unpacked (\\(String(cString: madeira_cab_strerror(rc)))).",
+   "lines": [
+    196
+   ],
+   "contexts": [
+    "throw VCRedistError.message(\"\\(name) could not be unpacked (\\(String(cString: madeira_cab_strerror(rc)))).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0403"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "\\(package.fileName) did not hold \\(missing.joined(separator: ",
+   "lines": [
+    209
+   ],
+   "contexts": [
+    "throw VCRedistError.message(\"\\(package.fileName) did not hold \\(missing.joined(separator: \", \")). Microsoft may have changed the installer; this build pins \\(VCRedistPin.version).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0404"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": ")). Microsoft may have changed the installer; this build pins \\(VCRedistPin.version).",
+   "lines": [
+    209
+   ],
+   "contexts": [
+    "throw VCRedistError.message(\"\\(package.fileName) did not hold \\(missing.joined(separator: \", \")). Microsoft may have changed the installer; this build pins \\(VCRedistPin.version).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0405"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "Downloading… \\(Int((f * 100).rounded()))%",
+   "lines": [
+    288
+   ],
+   "contexts": [
+    "case .downloading(let f): return \"Downloading… \\(Int((f * 100).rounded()))%\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0406"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "Unpacking and checking… \\(Int((f * 100).rounded()))%",
+   "lines": [
+    289
+   ],
+   "contexts": [
+    "case .installing(let f): return \"Unpacking and checking… \\(Int((f * 100).rounded()))%\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0407"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "Installed",
+   "lines": [
+    293
+   ],
+   "contexts": [
+    "return \"Installed\" + (versions.count == 1 ? \" (\\(versions.first!))\" : \"\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0408"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": " (\\(versions.first!))",
+   "lines": [
+    293
+   ],
+   "contexts": [
+    "return \"Installed\" + (versions.count == 1 ? \" (\\(versions.first!))\" : \"\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0409"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "Not installed",
+   "lines": [
+    295
+   ],
+   "contexts": [
+    "if installed.isEmpty { return \"Not installed\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0410"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "Installed for ",
+   "lines": [
+    296
+   ],
+   "contexts": [
+    "return \"Installed for \" + installed.keys.sorted().joined(separator: \", \") + \" only\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0411"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "A session is running. Try again when it has ended.",
+   "lines": [
+    317
+   ],
+   "contexts": [
+    "error = \"A session is running. Try again when it has ended.\"; return"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0412"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": ")) \\(VCRedistPin.version), \\(VCRedistPin.totalMegabytes) MB from Microsoft",
+   "lines": [
+    321
+   ],
+   "contexts": [
+    "log(\"install: \\(Self.packages.map(\\.title).joined(separator: \", \")) \\(VCRedistPin.version), \\(VCRedistPin.totalMegabytes) MB from Microsoft\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0413"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "The DLLs were placed, but reading them back failed. Export the log.",
+   "lines": [
+    355
+   ],
+   "contexts": [
+    "self.fail(\"The DLLs were placed, but reading them back failed. Export the log.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0414"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "\\(package.fileName): already downloaded and verified",
+   "lines": [
+    368
+   ],
+   "contexts": [
+    "log(\"\\(package.fileName): already downloaded and verified\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0415"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "No response from Microsoft's download server.",
+   "lines": [
+    375
+   ],
+   "contexts": [
+    "continuation.resume(throwing: VCRedistError.message(\"No response from Microsoft's download server.\")); return"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0416"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "Microsoft's download server answered \\(http.statusCode) for \\(package.fileName).",
+   "lines": [
+    378
+   ],
+   "contexts": [
+    "continuation.resume(throwing: VCRedistError.message(\"Microsoft's download server answered \\(http.statusCode) for \\(package.fileName).\")); return"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0417"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "\\(package.fileName) was served from an unexpected address.",
+   "lines": [
+    381
+   ],
+   "contexts": [
+    "continuation.resume(throwing: VCRedistError.message(\"\\(package.fileName) was served from an unexpected address.\")); return"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0418"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "\\(package.fileName) has an unexpected size (\\(attrs[.size] ?? 0) bytes). Microsoft may have published a new version; this build pins \\(VCRedistPin.version).",
+   "lines": [
+    398
+   ],
+   "contexts": [
+    "throw VCRedistError.message(\"\\(package.fileName) has an unexpected size (\\(attrs[.size] ?? 0) bytes). Microsoft may have published a new version; this build pins \\(VCRedistPin.version).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0419"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "\\(package.fileName) does not match its pinned SHA-256. Nothing was installed.",
+   "lines": [
+    402
+   ],
+   "contexts": [
+    "throw VCRedistError.message(\"\\(package.fileName) does not match its pinned SHA-256. Nothing was installed.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0420"
+  },
+  {
+   "file": "app/Runtime/VCRedist.swift",
+   "text": "\\(package.fileName): \\(package.bytes) bytes, SHA-256 verified",
+   "lines": [
+    404
+   ],
+   "contexts": [
+    "log(\"\\(package.fileName): \\(package.bytes) bytes, SHA-256 verified\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0421"
+  },
+  {
+   "file": "app/Runtime/WineGecko.swift",
+   "text": "wine-gecko-\\(Self.version)-\\(arch).msi",
+   "lines": [
+    37
+   ],
+   "contexts": [
+    "var fileName: String { \"wine-gecko-\\(Self.version)-\\(arch).msi\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0422"
+  },
+  {
+   "file": "app/Runtime/WineGecko.swift",
+   "text": "Downloading… \\(Int((progress * 100).rounded()))%",
+   "lines": [
+    69
+   ],
+   "contexts": [
+    "if let progress { return \"Downloading… \\(Int((progress * 100).rounded()))%\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0423"
+  },
+  {
+   "file": "app/Runtime/WineGecko.swift",
+   "text": "Wine Gecko \\(WineGeckoPin.version) is ready",
+   "lines": [
+    70
+   ],
+   "contexts": [
+    "return installed ? \"Wine Gecko \\(WineGeckoPin.version) is ready\" : \"Not downloaded\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0424"
+  },
+  {
+   "file": "app/Runtime/WineGecko.swift",
+   "text": "Not downloaded",
+   "lines": [
+    70
+   ],
+   "contexts": [
+    "return installed ? \"Wine Gecko \\(WineGeckoPin.version) is ready\" : \"Not downloaded\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0425"
+  },
+  {
+   "file": "app/Runtime/WineGecko.swift",
+   "text": "Could not prepare the Wine Gecko folder: \\(error.localizedDescription)",
+   "lines": [
+    98
+   ],
+   "contexts": [
+    "fail(\"Could not prepare the Wine Gecko folder: \\(error.localizedDescription)\"); return"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0426"
+  },
+  {
+   "file": "app/Runtime/WineGecko.swift",
+   "text": "WineHQ answered \\(http.statusCode).",
+   "lines": [
+    128
+   ],
+   "contexts": [
+    "throw WineMonoInstallError.message(\"WineHQ answered \\(http.statusCode).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0427"
+  },
+  {
+   "file": "app/Runtime/WineGecko.swift",
+   "text": "The download does not match Wine Gecko \\(WineGeckoPin.version) (\\(pin.arch)).",
+   "lines": [
+    131
+   ],
+   "contexts": [
+    "throw WineMonoInstallError.message(\"The download does not match Wine Gecko \\(WineGeckoPin.version) (\\(pin.arch)).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0428"
+  },
+  {
+   "file": "app/Runtime/WineGecko.swift",
+   "text": "automatic download not done: \\(message)",
+   "lines": [
+    171
+   ],
+   "contexts": [
+    "log(\"automatic download not done: \\(message)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0429"
+  },
+  {
+   "file": "app/Runtime/WineGecko.swift",
+   "text": "The download failed: \\(message)",
+   "lines": [
+    173
+   ],
+   "contexts": [
+    "fail(\"The download failed: \\(message)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0430"
+  },
+  {
+   "file": "app/Runtime/WineGecko.swift",
+   "text": "failed: \\(message)",
+   "lines": [
+    180
+   ],
+   "contexts": [
+    "log(\"failed: \\(message)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0431"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "The xz decoder could not start.",
+   "lines": [
+    86
+   ],
+   "contexts": [
+    "throw WineMonoInstallError.message(\"The xz decoder could not start.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0432"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "The download ended early.",
+   "lines": [
+    119
+   ],
+   "contexts": [
+    "throw WineMonoInstallError.message(\"The download ended early.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0433"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "The download is not a readable xz archive.",
+   "lines": [
+    121
+   ],
+   "contexts": [
+    "default: throw WineMonoInstallError.message(\"The download is not a readable xz archive.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0434"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "mscorlib.dll is not the pinned build.",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "throw WineMonoInstallError.message(\"mscorlib.dll is not the pinned build.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0435"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "mscorlib.dll does not have the expected bytes to patch.",
+   "lines": [
+    141
+   ],
+   "contexts": [
+    "throw WineMonoInstallError.message(\"mscorlib.dll does not have the expected bytes to patch.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0436"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "The patched mscorlib.dll does not match the pinned result.",
+   "lines": [
+    145
+   ],
+   "contexts": [
+    "throw WineMonoInstallError.message(\"The patched mscorlib.dll does not match the pinned result.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0437"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "The archive ended in the middle of a file.",
+   "lines": [
+    192
+   ],
+   "contexts": [
+    "throw WineMonoInstallError.message(\"The archive ended in the middle of a file.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0438"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "The archive has a damaged header.",
+   "lines": [
+    205
+   ],
+   "contexts": [
+    "guard let value = Int64(text, radix: 8) else { throw WineMonoInstallError.message(\"The archive has a damaged header.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0439"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "Could not write \\(path).",
+   "lines": [
+    239
+   ],
+   "contexts": [
+    "throw WineMonoInstallError.message(\"Could not write \\(path).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0440"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "Downloading… \\(Int((f * total).rounded())) of \\(Int(total.rounded())) MB",
+   "lines": [
+    309
+   ],
+   "contexts": [
+    "return \"Downloading… \\(Int((f * total).rounded())) of \\(Int(total.rounded())) MB\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0441"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "Installing… \\(Int((f * 100).rounded()))%",
+   "lines": [
+    310
+   ],
+   "contexts": [
+    "case .installing(let f): return \"Installing… \\(Int((f * 100).rounded()))%\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0442"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "Included in this build",
+   "lines": [
+    312
+   ],
+   "contexts": [
+    "if Self.bundled { return \"Included in this build\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0443"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "Wine Mono \\(WineMonoPin.version) is installed",
+   "lines": [
+    313
+   ],
+   "contexts": [
+    "return installed ? \"Wine Mono \\(WineMonoPin.version) is installed\" : \"Not installed\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0444"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "Not installed",
+   "lines": [
+    313
+   ],
+   "contexts": [
+    "return installed ? \"Wine Mono \\(WineMonoPin.version) is installed\" : \"Not installed\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0445"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "Wine Mono needs about 450 MB of free space while it installs (about 130 MB once installed).",
+   "lines": [
+    329
+   ],
+   "contexts": [
+    "error = \"Wine Mono needs about 450 MB of free space while it installs (about 130 MB once installed).\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0446"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "Could not prepare the Wine Mono folder: \\(error.localizedDescription)",
+   "lines": [
+    333
+   ],
+   "contexts": [
+    "fail(\"Could not prepare the Wine Mono folder: \\(error.localizedDescription)\"); return"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0447"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "download \\(WineMonoPin.url.absoluteString)",
+   "lines": [
+    335
+   ],
+   "contexts": [
+    "log(\"download \\(WineMonoPin.url.absoluteString)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0448"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "WineHQ answered \\(http.statusCode).",
+   "lines": [
+    343
+   ],
+   "contexts": [
+    "moved = WineMonoInstallError.message(\"WineHQ answered \\(http.statusCode).\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0449"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "The download failed: \\(failure.localizedDescription)",
+   "lines": [
+    365
+   ],
+   "contexts": [
+    "fail(\"The download failed: \\(failure.localizedDescription)\"); return"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0450"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "The download does not match the pinned Wine Mono \\(WineMonoPin.version).",
+   "lines": [
+    374
+   ],
+   "contexts": [
+    "throw WineMonoInstallError.message(\"The download does not match the pinned Wine Mono \\(WineMonoPin.version).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0451"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "Installing Wine Mono failed: \\(message)",
+   "lines": [
+    394
+   ],
+   "contexts": [
+    "await MainActor.run { WineMonoModel.shared.fail(\"Installing Wine Mono failed: \\(message)\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0452"
+  },
+  {
+   "file": "app/Runtime/WineMono.swift",
+   "text": "failed: \\(message)",
+   "lines": [
+    408
+   ],
+   "contexts": [
+    "log(\"failed: \\(message)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0453"
+  },
+  {
+   "file": "app/Runtime/Winios/Winios.m",
+   "text": "repaints; this used to throw and kill the pseudo-process\\n",
+   "lines": [
+    2188
+   ],
+   "contexts": [
+    "\"repaints; this used to throw and kill the pseudo-process\\n\","
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0454"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonAuth.swift",
+   "text": "Sign in to Amazon Games first.",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "case .notSignedIn: return \"Sign in to Amazon Games first.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0455"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonAuth.swift",
+   "text": "Could not reach Amazon. Check your connection and try again.",
+   "lines": [
+    24
+   ],
+   "contexts": [
+    "case .network: return \"Could not reach Amazon. Check your connection and try again.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0456"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonAuth.swift",
+   "text": "Amazon refused the sign-in (\\(why)). Sign in again.",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "case .rejected(let why): return \"Amazon refused the sign-in (\\(why)). Sign in again.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0457"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonAuth.swift",
+   "text": "AGSLauncher/1.0.0",
+   "lines": [
+    50
+   ],
+   "contexts": [
+    "static let userAgent = \"AGSLauncher/1.0.0\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0458"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonAuth.swift",
+   "text": "the saved sign-in expired",
+   "lines": [
+    145
+   ],
+   "contexts": [
+    "if status == 400 || status == 401 { signOutLocally(); throw AmazonAuthError.rejected(\"the saved sign-in expired\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0459"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonAuth.swift",
+   "text": "status \\(status)",
+   "lines": [
+    146,
+    210
+   ],
+   "contexts": [
+    "throw AmazonAuthError.rejected(\"status \\(status)\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0460"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonInstaller.swift",
+   "text": "Could not read Amazon installs: ",
+   "lines": [
+    72
+   ],
+   "contexts": [
+    "} catch { self.error = \"Could not read Amazon installs: \" + error.localizedDescription }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0461"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonInstaller.swift",
+   "text": "Could not save Amazon installs: ",
+   "lines": [
+    93
+   ],
+   "contexts": [
+    "do { try await worker.save(store) } catch { self.error = \"Could not save Amazon installs: \" + error.localizedDescription }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0462"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonInstaller.swift",
+   "text": "End the game session before uninstalling.",
+   "lines": [
+    169
+   ],
+   "contexts": [
+    "error = \"End the game session before uninstalling.\"; return"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0463"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonInstaller.swift",
+   "text": "Amazon's file list holds an unsafe path, so nothing was installed.",
+   "lines": [
+    354
+   ],
+   "contexts": [
+    "guard let relative = Self.safeRelativePath(file.path) else { throw AmazonError.invalid(\"Amazon's file list holds an unsafe path, so nothing was installed.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0464"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonInstaller.swift",
+   "text": "This game's files use a checksum this version does not know.",
+   "lines": [
+    355
+   ],
+   "contexts": [
+    "guard file.hashAlgorithm == \"sha256\", file.hash.count == 32 else { throw AmazonError.invalid(\"This game's files use a checksum this version does not know.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0465"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonInstaller.swift",
+   "text": "Not enough free space: this game needs about \\(needed / 1_048_576) MB more.",
+   "lines": [
+    381
+   ],
+   "contexts": [
+    "throw AmazonError.invalid(\"Not enough free space: this game needs about \\(needed / 1_048_576) MB more.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0466"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonInstaller.swift",
+   "text": "Amazon did not give the file list for this game (answer \\(status)).",
+   "lines": [
+    422
+   ],
+   "contexts": [
+    "guard status == 200 else { throw AmazonError.invalid(\"Amazon did not give the file list for this game (answer \\(status)).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0467"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonInstaller.swift",
+   "text": "The download server answered \\(status).",
+   "lines": [
+    445
+   ],
+   "contexts": [
+    "guard status == 200 else { throw AmazonError.invalid(\"The download server answered \\(status).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0468"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonInstaller.swift",
+   "text": "A game file arrived with the wrong size. Try again.",
+   "lines": [
+    446
+   ],
+   "contexts": [
+    "guard UInt64(data.count) == expected else { throw AmazonError.invalid(\"A game file arrived with the wrong size. Try again.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0469"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonInstaller.swift",
+   "text": "A game file ended early. Try again (finished files are kept).",
+   "lines": [
+    462
+   ],
+   "contexts": [
+    "throw AmazonError.invalid(\"A game file ended early. Try again (finished files are kept).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0470"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonInstaller.swift",
+   "text": "\\(job.file.path.split(separator: ",
+   "lines": [
+    467
+   ],
+   "contexts": [
+    "throw AmazonError.invalid(\"\\(job.file.path.split(separator: \"\\\\\").last.map(String.init) ?? \"A game file\") failed Amazon's checksum. Try again.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0471"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonInstaller.swift",
+   "text": ").last.map(String.init) ?? ",
+   "lines": [
+    467
+   ],
+   "contexts": [
+    "throw AmazonError.invalid(\"\\(job.file.path.split(separator: \"\\\\\").last.map(String.init) ?? \"A game file\") failed Amazon's checksum. Try again.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0472"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonInstaller.swift",
+   "text": ") failed Amazon's checksum. Try again.",
+   "lines": [
+    467
+   ],
+   "contexts": [
+    "throw AmazonError.invalid(\"\\(job.file.path.split(separator: \"\\\\\").last.map(String.init) ?? \"A game file\") failed Amazon's checksum. Try again.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0473"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonInstaller.swift",
+   "text": "Could not finish a game file.",
+   "lines": [
+    471
+   ],
+   "contexts": [
+    "guard rename(part.path, job.target.path) == 0 else { throw AmazonError.invalid(\"Could not finish a game file.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0474"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonInstaller.swift",
+   "text": "The game installed, but Porthole could not tell which program starts it. Add it from Files with the + button (folder C:\\\\Amazon\\\\\\(folder)).",
+   "lines": [
+    520
+   ],
+   "contexts": [
+    "throw AmazonError.invalid(\"The game installed, but Porthole could not tell which program starts it. Add it from Files with the + button (folder C:\\\\Amazon\\\\\\(folder)).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0475"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonInstaller.swift",
+   "text": "The game installed but \\(program) is not there.",
+   "lines": [
+    525
+   ],
+   "contexts": [
+    "throw AmazonError.invalid(\"The game installed but \\(program) is not there.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0476"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonLibrary.swift",
+   "text": "Amazon did not list your games (answer \\(status)).",
+   "lines": [
+    65
+   ],
+   "contexts": [
+    "guard status == 200 else { throw AmazonError.invalid(\"Amazon did not list your games (answer \\(status)).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0477"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonLibrary.swift",
+   "text": "Amazon did not give a download for this game (answer \\(status)).",
+   "lines": [
+    80
+   ],
+   "contexts": [
+    "throw AmazonError.invalid(\"Amazon did not give a download for this game (answer \\(status)).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0478"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonLibrary.swift",
+   "text": "\\($0.key.isEmpty ? ",
+   "lines": [
+    159
+   ],
+   "contexts": [
+    "let summary = lines.sorted { $0.key < $1.key }.map { \"\\($0.key.isEmpty ? \"-\" : $0.key)=\\($0.value)\" }.joined(separator: \" \")"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0479"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonLibrary.swift",
+   "text": " : $0.key)=\\($0.value)",
+   "lines": [
+    159
+   ],
+   "contexts": [
+    "let summary = lines.sorted { $0.key < $1.key }.map { \"\\($0.key.isEmpty ? \"-\" : $0.key)=\\($0.value)\" }.joined(separator: \" \")"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0480"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonManifest.swift",
+   "text": "Amazon's manifest is too short.",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "guard bytes.count > 8 else { throw AmazonManifestError.invalid(\"Amazon's manifest is too short.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0481"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonManifest.swift",
+   "text": "Amazon's manifest header is damaged.",
+   "lines": [
+    49
+   ],
+   "contexts": [
+    "guard headerSize > 0, 4 + headerSize <= bytes.count else { throw AmazonManifestError.invalid(\"Amazon's manifest header is damaged.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0482"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonManifest.swift",
+   "text": "Amazon's manifest uses a compression this version does not know.",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    "default: throw AmazonManifestError.invalid(\"Amazon's manifest uses a compression this version does not know.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0483"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonManifest.swift",
+   "text": "Amazon's manifest uses a signature this version does not know.",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "guard header.signatureAlgorithm == 0 else { throw AmazonManifestError.invalid(\"Amazon's manifest uses a signature this version does not know.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0484"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonManifest.swift",
+   "text": "Amazon's manifest failed its signature check, so nothing was downloaded.",
+   "lines": [
+    60
+   ],
+   "contexts": [
+    "throw AmazonManifestError.invalid(\"Amazon's manifest failed its signature check, so nothing was downloaded.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0485"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonManifest.swift",
+   "text": "Amazon's manifest is damaged.",
+   "lines": [
+    76,
+    90,
+    94,
+    98,
+    100
+   ],
+   "contexts": [
+    "guard position < bytes.count, shift < 64 else { throw AmazonManifestError.invalid(\"Amazon's manifest is damaged.\") }",
+    "guard position + 8 <= bytes.count else { throw AmazonManifestError.invalid(\"Amazon's manifest is damaged.\") }",
+    "guard length >= 0, position + length <= bytes.count else { throw AmazonManifestError.invalid(\"Amazon's manifest is damaged.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0486"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonManifest.swift",
+   "text": "Amazon's manifest lists no files.",
+   "lines": [
+    150
+   ],
+   "contexts": [
+    "guard !files.isEmpty else { throw AmazonManifestError.invalid(\"Amazon's manifest lists no files.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0487"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonManifest.swift",
+   "text": "Amazon's manifest has a damaged file entry.",
+   "lines": [
+    171
+   ],
+   "contexts": [
+    "guard !path.isEmpty, size >= 0, !hash.isEmpty else { throw AmazonManifestError.invalid(\"Amazon's manifest has a damaged file entry.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0488"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonManifest.swift",
+   "text": "Amazon's manifest is packed in a way this version does not read.",
+   "lines": [
+    181
+   ],
+   "contexts": [
+    "throw AmazonManifestError.invalid(\"Amazon's manifest is packed in a way this version does not read.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0489"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonManifest.swift",
+   "text": "Amazon's manifest would not unpack.",
+   "lines": [
+    195
+   ],
+   "contexts": [
+    "throw AmazonManifestError.invalid(\"Amazon's manifest would not unpack.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0490"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonSignInView.swift",
+   "text": "Paste the address Amazon sent you to",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "Menu { Button(\"Paste the address Amazon sent you to\") { showPaste = true } } label: { Image(systemName: \"ellipsis.circle\") }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0491"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonSignInView.swift",
+   "text": "Sign-in address",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    ".alert(\"Sign-in address\", isPresented: $showPaste) {"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0492"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonSignInView.swift",
+   "text": "the address you were sent to",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "TextField(\"the address you were sent to\", text: $pasted).textInputAutocapitalization(.never).autocorrectionDisabled()"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0493"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonSignInView.swift",
+   "text": "Sign in",
+   "lines": [
+    29
+   ],
+   "contexts": [
+    "Button(\"Sign in\") { if let code = AmazonAuth.extractCode(from: pasted) { auth.finishLogin(code: code) } else { auth.signInError = \"That address has no sign-in code in it.\" }; pasted = \"\" }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0494"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonSignInView.swift",
+   "text": "Cancel",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "Button(\"Cancel\", role: .cancel) { pasted = \"\" }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0495"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonSignInView.swift",
+   "text": "Signing in\\u{2026}",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "ProgressView(\"Signing in\\u{2026}\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0496"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonSignInView.swift",
+   "text": "Signed in as",
+   "lines": [
+    60
+   ],
+   "contexts": [
+    "LabeledContent(\"Signed in as\", value: name)"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0497"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonSignInView.swift",
+   "text": "Games",
+   "lines": [
+    61
+   ],
+   "contexts": [
+    "LabeledContent(\"Games\", value: library.isLoading ? \"Loading\\u{2026}\" : \"\\(library.games.count)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0498"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonSignInView.swift",
+   "text": "Loading\\u{2026}",
+   "lines": [
+    61
+   ],
+   "contexts": [
+    "LabeledContent(\"Games\", value: library.isLoading ? \"Loading\\u{2026}\" : \"\\(library.games.count)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0499"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonSignInView.swift",
+   "text": "\\(library.games.count)",
+   "lines": [
+    61
+   ],
+   "contexts": [
+    "LabeledContent(\"Games\", value: library.isLoading ? \"Loading\\u{2026}\" : \"\\(library.games.count)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0500"
+  },
+  {
+   "file": "app/Sources/Amazon/AmazonSignInView.swift",
+   "text": "Sign out of Amazon Games",
+   "lines": [
+    62
+   ],
+   "contexts": [
+    "Button(\"Sign out of Amazon Games\", role: .destructive) { auth.signOut(); library.clear() }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0501"
+  },
+  {
+   "file": "app/Sources/App/AppModel.swift",
+   "text": "Standard (mouse and keys)",
+   "lines": [
+    77
+   ],
+   "contexts": [
+    "var title: String { self == .standard ? \"Standard (mouse and keys)\" : \"First person (look pad + sticks)\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0502"
+  },
+  {
+   "file": "app/Sources/App/AppModel.swift",
+   "text": "First person (look pad + sticks)",
+   "lines": [
+    77
+   ],
+   "contexts": [
+    "var title: String { self == .standard ? \"Standard (mouse and keys)\" : \"First person (look pad + sticks)\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0503"
+  },
+  {
+   "file": "app/Sources/App/AppModel.swift",
+   "text": "Pick a .exe or .msi installer.",
+   "lines": [
+    123
+   ],
+   "contexts": [
+    "guard ext == \"exe\" || ext == \"msi\" else { throw NSError(domain: \"Installer\", code: 1, userInfo: [NSLocalizedDescriptionKey: \"Pick a .exe or .msi installer.\"]) }"
+   ],
+   "reasons": [
+    "nserror-userinfo-key"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0504"
+  },
+  {
+   "file": "app/Sources/App/GameImporter.swift",
+   "text": "Could not read “\\(n)”. If the folder is in iCloud Drive, open it in Files and download it first (tap the cloud icon), then try again.",
+   "lines": [
+    17
+   ],
+   "contexts": [
+    "case .unreadable(let n): \"Could not read “\\(n)”. If the folder is in iCloud Drive, open it in Files and download it first (tap the cloud icon), then try again.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0505"
+  },
+  {
+   "file": "app/Sources/App/GameImporter.swift",
+   "text": "Not enough free space: the game needs \\(Self.size(need)) and the phone has \\(Self.size(free)) free.",
+   "lines": [
+    18
+   ],
+   "contexts": [
+    "case .notEnoughSpace(let need, let free): \"Not enough free space: the game needs \\(Self.size(need)) and the phone has \\(Self.size(free)) free.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0506"
+  },
+  {
+   "file": "app/Sources/App/GameImporter.swift",
+   "text": "Cancelled.",
+   "lines": [
+    19
+   ],
+   "contexts": [
+    "case .cancelled: \"Cancelled.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0507"
+  },
+  {
+   "file": "app/Sources/App/GameImporter.swift",
+   "text": "Copying “\\(f)” failed: \\(why)",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "case .copyFailed(let f, let why): \"Copying “\\(f)” failed: \\(why)\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0508"
+  },
+  {
+   "file": "app/Sources/App/GameImporter.swift",
+   "text": "cannot create the file",
+   "lines": [
+    87
+   ],
+   "contexts": [
+    "guard let output = try? FileHandle(forWritingTo: out) else { throw ImportError.copyFailed(f.rel, \"cannot create the file\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0509"
+  },
+  {
+   "file": "app/Sources/Compat/CompatBadges.swift",
+   "text": "Works great",
+   "lines": [
+    11,
+    15
+   ],
+   "contexts": [
+    "switch self { case .great: \"Works great\"; case .playable: \"Works, with problems\"; case .broken: \"Doesn't work\" }",
+    "switch self { case .great: \"Works great\"; case .playable: \"Playable\"; case .broken: \"Doesn't work\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0510"
+  },
+  {
+   "file": "app/Sources/Compat/CompatBadges.swift",
+   "text": "Works, with problems",
+   "lines": [
+    11
+   ],
+   "contexts": [
+    "switch self { case .great: \"Works great\"; case .playable: \"Works, with problems\"; case .broken: \"Doesn't work\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0511"
+  },
+  {
+   "file": "app/Sources/Compat/CompatBadges.swift",
+   "text": "Doesn't work",
+   "lines": [
+    11,
+    15
+   ],
+   "contexts": [
+    "switch self { case .great: \"Works great\"; case .playable: \"Works, with problems\"; case .broken: \"Doesn't work\" }",
+    "switch self { case .great: \"Works great\"; case .playable: \"Playable\"; case .broken: \"Doesn't work\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0512"
+  },
+  {
+   "file": "app/Sources/Compat/CompatBadges.swift",
+   "text": "Playable",
+   "lines": [
+    15
+   ],
+   "contexts": [
+    "switch self { case .great: \"Works great\"; case .playable: \"Playable\"; case .broken: \"Doesn't work\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0513"
+  },
+  {
+   "file": "app/Sources/Compat/CompatBadges.swift",
+   "text": "Runs well from start to finish.",
+   "lines": [
+    19
+   ],
+   "contexts": [
+    "case .great: \"Runs well from start to finish.\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0514"
+  },
+  {
+   "file": "app/Sources/Compat/CompatBadges.swift",
+   "text": "Runs, but it is slow or has problems.",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "case .playable: \"Runs, but it is slow or has problems.\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0515"
+  },
+  {
+   "file": "app/Sources/Compat/CompatBadges.swift",
+   "text": "Won't start, or crashes too often to play.",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "case .broken: \"Won't start, or crashes too often to play.\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0516"
+  },
+  {
+   "file": "app/Sources/Compat/CompatBadges.swift",
+   "text": "v\\($0)",
+   "lines": [
+    53
+   ],
+   "contexts": [
+    "private var where_: String { version.map { \"v\\($0)\" } ?? \"an earlier version\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0517"
+  },
+  {
+   "file": "app/Sources/Compat/CompatBadges.swift",
+   "text": "an earlier version",
+   "lines": [
+    53
+   ],
+   "contexts": [
+    "private var where_: String { version.map { \"v\\($0)\" } ?? \"an earlier version\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0518"
+  },
+  {
+   "file": "app/Sources/Compat/CompatBadges.swift",
+   "text": "Worked in \\(where_)",
+   "lines": [
+    55
+   ],
+   "contexts": [
+    "switch verdict { case .great: \"Worked in \\(where_)\"; case .playable: \"Somewhat worked in \\(where_)\"; case .broken: \"Didn't work in \\(where_)\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0519"
+  },
+  {
+   "file": "app/Sources/Compat/CompatBadges.swift",
+   "text": "Somewhat worked in \\(where_)",
+   "lines": [
+    55
+   ],
+   "contexts": [
+    "switch verdict { case .great: \"Worked in \\(where_)\"; case .playable: \"Somewhat worked in \\(where_)\"; case .broken: \"Didn't work in \\(where_)\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0520"
+  },
+  {
+   "file": "app/Sources/Compat/CompatBadges.swift",
+   "text": "Didn't work in \\(where_)",
+   "lines": [
+    55
+   ],
+   "contexts": [
+    "switch verdict { case .great: \"Worked in \\(where_)\"; case .playable: \"Somewhat worked in \\(where_)\"; case .broken: \"Didn't work in \\(where_)\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0521"
+  },
+  {
+   "file": "app/Sources/Compat/CompatBadges.swift",
+   "text": "Worked in",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "switch verdict { case .great: \"Worked in\"; case .playable: \"Somewhat worked in\"; case .broken: \"Didn't work in\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0522"
+  },
+  {
+   "file": "app/Sources/Compat/CompatBadges.swift",
+   "text": "Somewhat worked in",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "switch verdict { case .great: \"Worked in\"; case .playable: \"Somewhat worked in\"; case .broken: \"Didn't work in\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0523"
+  },
+  {
+   "file": "app/Sources/Compat/CompatBadges.swift",
+   "text": "Didn't work in",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "switch verdict { case .great: \"Worked in\"; case .playable: \"Somewhat worked in\"; case .broken: \"Didn't work in\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0524"
+  },
+  {
+   "file": "app/Sources/Compat/CompatBadges.swift",
+   "text": "Reported on an earlier version of the game engine. Each engine update mostly adds support, so a game that ran then usually still does, but nobody has confirmed it on this version yet.",
+   "lines": [
+    66
+   ],
+   "contexts": [
+    "case .great, .playable: \"Reported on an earlier version of the game engine. Each engine update mostly adds support, so a game that ran then usually still does, but nobody has confirmed it on this version yet.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0525"
+  },
+  {
+   "file": "app/Sources/Compat/CompatBadges.swift",
+   "text": "Reported on an earlier version of the game engine. Engine updates mostly add support, so it may well run now, but nobody has confirmed it yet.",
+   "lines": [
+    67
+   ],
+   "contexts": [
+    "case .broken: \"Reported on an earlier version of the game engine. Engine updates mostly add support, so it may well run now, but nobody has confirmed it yet.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0526"
+  },
+  {
+   "file": "app/Sources/Compat/CompatCore.swift",
+   "text": "Never crashed",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "switch self { case .never: \"Never crashed\"; case .sometimes: \"Crashes sometimes\"; case .constantly: \"Crashes all the time\"; case .wont_launch: \"Won't start\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0527"
+  },
+  {
+   "file": "app/Sources/Compat/CompatCore.swift",
+   "text": "Crashes sometimes",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "switch self { case .never: \"Never crashed\"; case .sometimes: \"Crashes sometimes\"; case .constantly: \"Crashes all the time\"; case .wont_launch: \"Won't start\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0528"
+  },
+  {
+   "file": "app/Sources/Compat/CompatCore.swift",
+   "text": "Crashes all the time",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "switch self { case .never: \"Never crashed\"; case .sometimes: \"Crashes sometimes\"; case .constantly: \"Crashes all the time\"; case .wont_launch: \"Won't start\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0529"
+  },
+  {
+   "file": "app/Sources/Compat/CompatCore.swift",
+   "text": "Won't start",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "switch self { case .never: \"Never crashed\"; case .sometimes: \"Crashes sometimes\"; case .constantly: \"Crashes all the time\"; case .wont_launch: \"Won't start\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0530"
+  },
+  {
+   "file": "app/Sources/Compat/CompatCore.swift",
+   "text": "Controls work",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "case .controller_ok: \"Controls work\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0531"
+  },
+  {
+   "file": "app/Sources/Compat/CompatCore.swift",
+   "text": "Controls are awkward",
+   "lines": [
+    33
+   ],
+   "contexts": [
+    "case .controller_bad: \"Controls are awkward\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0532"
+  },
+  {
+   "file": "app/Sources/Compat/CompatCore.swift",
+   "text": "Sound problems",
+   "lines": [
+    34
+   ],
+   "contexts": [
+    "case .audio_issues: \"Sound problems\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0533"
+  },
+  {
+   "file": "app/Sources/Compat/CompatCore.swift",
+   "text": "Graphics glitches",
+   "lines": [
+    35
+   ],
+   "contexts": [
+    "case .graphics_glitches: \"Graphics glitches\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0534"
+  },
+  {
+   "file": "app/Sources/Compat/CompatCore.swift",
+   "text": "Online works",
+   "lines": [
+    36
+   ],
+   "contexts": [
+    "case .online_works: \"Online works\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0535"
+  },
+  {
+   "file": "app/Sources/Compat/CompatCore.swift",
+   "text": "Online doesn't work",
+   "lines": [
+    37
+   ],
+   "contexts": [
+    "case .online_broken: \"Online doesn't work\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0536"
+  },
+  {
+   "file": "app/Sources/Compat/CompatCore.swift",
+   "text": "Slow to load",
+   "lines": [
+    38
+   ],
+   "contexts": [
+    "case .long_loading: \"Slow to load\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0537"
+  },
+  {
+   "file": "app/Sources/Compat/CompatCore.swift",
+   "text": "Phone gets hot",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    "case .overheats: \"Phone gets hot\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0538"
+  },
+  {
+   "file": "app/Sources/Compat/CompatCore.swift",
+   "text": "Drains the battery",
+   "lines": [
+    40
+   ],
+   "contexts": [
+    "case .drains_battery: \"Drains the battery\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0539"
+  }
+ ]
+}

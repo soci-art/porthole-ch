@@ -1,0 +1,2901 @@
+{
+ "batch": 1,
+ "units": [
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Models/Release.swift",
+   "text": "\\(version) (\\(build))",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "public var title: String { \"\\(version) (\\(build))\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0000"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Network/Transport.swift",
+   "text": "The server sent something unexpected.",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "case .badResponse: \"The server sent something unexpected.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0001"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Network/Transport.swift",
+   "text": "The server answered \\(status).",
+   "lines": [
+    24
+   ],
+   "contexts": [
+    "case .server(let status, let message): message.isEmpty ? \"The server answered \\(status).\" : message"
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0002"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Network/Transport.swift",
+   "text": "Couldn't read the server's answer (\\(detail)).",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "case .decoding(let detail): \"Couldn't read the server's answer (\\(detail)).\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0003"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Network/Transport.swift",
+   "text": "The download was damaged (its checksum doesn't match). Try again.",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "case .damaged: \"The download was damaged (its checksum doesn't match). Try again.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0004"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Network/UpdatesClient.swift",
+   "text": "versions.json isn't a list",
+   "lines": [
+    31
+   ],
+   "contexts": [
+    "guard let array = try JSONSerialization.jsonObject(with: data) as? [Any] else { throw NetworkError.decoding(\"versions.json isn't a list\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0005"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Network/UpdatesClient.swift",
+   "text": "The download failed (\\(response.statusCode)).",
+   "lines": [
+    49
+   ],
+   "contexts": [
+    "guard response.statusCode == 200 else { throw NetworkError.server(status: response.statusCode, message: \"The download failed (\\(response.statusCode)).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0006"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/CodeSigner.swift",
+   "text": "the signature grew unexpectedly",
+   "lines": [
+    68
+   ],
+   "contexts": [
+    "guard cms.count + 8 <= layout.cms else { throw SigningError.signingFailed(\"the signature grew unexpectedly\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0007"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/CodeSigner.swift",
+   "text": "unreadable certificate",
+   "lines": [
+    227
+   ],
+   "contexts": [
+    "guard let leaf = CertificateFields(der: identity.leafDER) else { throw SigningError.badCertificateFile(\"unreadable certificate\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0008"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/IPAInspector.swift",
+   "text": "no .app in Payload",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "guard let root = BundleLayout.appRoot(in: entries) else { throw SigningError.badApp(\"no .app in Payload\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0009"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/IPAInspector.swift",
+   "text": "no Info.plist or bundle identifier",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "throw SigningError.badApp(\"no Info.plist or bundle identifier\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0010"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/IPAInspector.swift",
+   "text": "\\(root) has no Info.plist",
+   "lines": [
+    139
+   ],
+   "contexts": [
+    "throw SigningError.badApp(\"\\(root) has no Info.plist\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0011"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/IPASigner.swift",
+   "text": "Reading the app…",
+   "lines": [
+    76
+   ],
+   "contexts": [
+    "progress?(\"Reading the app…\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0012"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/IPASigner.swift",
+   "text": "no .app in Payload",
+   "lines": [
+    78
+   ],
+   "contexts": [
+    "guard let root = BundleLayout.appRoot(in: entries) else { throw SigningError.badApp(\"no .app in Payload\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0013"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/IPASigner.swift",
+   "text": "no bundle identifier or executable",
+   "lines": [
+    98
+   ],
+   "contexts": [
+    "let originalID = mainInfo.dict[\"CFBundleIdentifier\"] as? String else { throw SigningError.badApp(\"no bundle identifier or executable\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0014"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/IPASigner.swift",
+   "text": "No profile covers \\(finalID); signing with “\\(any.name)” (for \\(any.applicationIdentifier)) instead.",
+   "lines": [
+    109
+   ],
+   "contexts": [
+    "warnings.append(\"No profile covers \\(finalID); signing with “\\(any.name)” (for \\(any.applicationIdentifier)) instead.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0015"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/IPASigner.swift",
+   "text": "Signing \\(path.split(separator: ",
+   "lines": [
+    138
+   ],
+   "contexts": [
+    "progress?(\"Signing \\(path.split(separator: \"/\").last.map(String.init) ?? \"a library\")…\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0016"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/IPASigner.swift",
+   "text": ").last.map(String.init) ?? ",
+   "lines": [
+    138
+   ],
+   "contexts": [
+    "progress?(\"Signing \\(path.split(separator: \"/\").last.map(String.init) ?? \"a library\")…\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0017"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/IPASigner.swift",
+   "text": "Signing \\(short)…",
+   "lines": [
+    152
+   ],
+   "contexts": [
+    "progress?(\"Signing \\(short)…\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0018"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/IPASigner.swift",
+   "text": "WKAppBundleIdentifier",
+   "lines": [
+    167
+   ],
+   "contexts": [
+    "for key in [\"WKCompanionAppBundleIdentifier\", \"WKAppBundleIdentifier\"] where info.dict[key] as? String == originalID {"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0019"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/IPASigner.swift",
+   "text": "No profile covers \\(nestedID); it is signed with “\\(nestedProfile.name)” (for \\(nestedProfile.applicationIdentifier)). iOS may refuse the install — import a profile for it, or remove extensions in the app's signing options.",
+   "lines": [
+    184
+   ],
+   "contexts": [
+    "warnings.append(\"No profile covers \\(nestedID); it is signed with “\\(nestedProfile.name)” (for \\(nestedProfile.applicationIdentifier)). iOS may refuse the install — import a profile for it, or remove extensions in the app's signing options.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0020"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/IPASigner.swift",
+   "text": "_CodeSignature/CodeResources",
+   "lines": [
+    197,
+    229
+   ],
+   "contexts": [
+    "entries.append(ZipEntry(name: bundle.root + \"_CodeSignature/CodeResources\", data: resources))",
+    "entries.append(ZipEntry(name: root + \"_CodeSignature/CodeResources\", data: resources))"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0021"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/IPASigner.swift",
+   "text": "Sealing the app’s files…",
+   "lines": [
+    225
+   ],
+   "contexts": [
+    "progress?(\"Sealing the app’s files…\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0022"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/IPASigner.swift",
+   "text": "the executable is missing",
+   "lines": [
+    226
+   ],
+   "contexts": [
+    "guard let executableIndex = entries.firstIndex(where: { $0.name == root + executableName }) else { throw SigningError.badApp(\"the executable is missing\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0023"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/IPASigner.swift",
+   "text": "Signing the app…",
+   "lines": [
+    230
+   ],
+   "contexts": [
+    "progress?(\"Signing the app…\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0024"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/IPASigner.swift",
+   "text": "Packing the IPA…",
+   "lines": [
+    241
+   ],
+   "contexts": [
+    "progress?(\"Packing the IPA…\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0025"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/MachOImage.swift",
+   "text": "not a Mach-O file",
+   "lines": [
+    22
+   ],
+   "contexts": [
+    "guard bytes.count > 64 else { throw SigningError.unsupportedBinary(\"not a Mach-O file\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0026"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/MachOImage.swift",
+   "text": "universal (fat) binaries",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "case 0xbebafeca, 0xcafebabe: throw SigningError.unsupportedBinary(\"universal (fat) binaries\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0027"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/MachOImage.swift",
+   "text": "not a 64-bit Mach-O executable",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "default: throw SigningError.unsupportedBinary(\"not a 64-bit Mach-O executable\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0028"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/MachOImage.swift",
+   "text": "truncated load commands",
+   "lines": [
+    35
+   ],
+   "contexts": [
+    "guard offset + 8 <= bytes.count else { throw SigningError.unsupportedBinary(\"truncated load commands\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0029"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/MachOImage.swift",
+   "text": "bad load command",
+   "lines": [
+    37
+   ],
+   "contexts": [
+    "guard size >= 8, offset + size <= bytes.count else { throw SigningError.unsupportedBinary(\"bad load command\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0030"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/MachOImage.swift",
+   "text": "__LINKEDIT",
+   "lines": [
+    40
+   ],
+   "contexts": [
+    "if name == \"__LINKEDIT\" { linkedit = offset }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0031"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/MachOImage.swift",
+   "text": "__TEXT",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "if name == \"__TEXT\" { textOffset = Self.u64(bytes, offset + 40); textSize = Self.u64(bytes, offset + 48) }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0032"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/MachOImage.swift",
+   "text": "no __LINKEDIT segment",
+   "lines": [
+    50
+   ],
+   "contexts": [
+    "guard let linkedit else { throw SigningError.unsupportedBinary(\"no __LINKEDIT segment\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0033"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/MachOImage.swift",
+   "text": "no room for a signature in the header",
+   "lines": [
+    74
+   ],
+   "contexts": [
+    "guard commandsEnd + 16 <= headerLimit else { throw SigningError.unsupportedBinary(\"no room for a signature in the header\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0034"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/MachOImage.swift",
+   "text": "__LINKEDIT isn't last in the file",
+   "lines": [
+    86
+   ],
+   "contexts": [
+    "guard UInt64(offset) >= linkeditStart else { throw SigningError.unsupportedBinary(\"__LINKEDIT isn't last in the file\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0035"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/ProfileMatcher.swift",
+   "text": "No provisioning profile has been imported yet.",
+   "lines": [
+    36
+   ],
+   "contexts": [
+    "if profiles.isEmpty { return \"No provisioning profile has been imported yet.\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0036"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/ProfileMatcher.swift",
+   "text": "None of your profiles covers \\(bundleID) (you have: \\(names)).",
+   "lines": [
+    40
+   ],
+   "contexts": [
+    "return \"None of your profiles covers \\(bundleID) (you have: \\(names)).\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0037"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/ProfileMatcher.swift",
+   "text": "The profile for \\(bundleID) has expired.",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "if covering.allSatisfy({ $0.isExpired }) { return \"The profile for \\(bundleID) has expired.\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0038"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/ProfileMatcher.swift",
+   "text": "The profile for \\(bundleID) doesn't include the selected certificate.",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "return \"The profile for \\(bundleID) doesn't include the selected certificate.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0039"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/ProfileMatcher.swift",
+   "text": "No usable profile for \\(bundleID).",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "return \"No usable profile for \\(bundleID).\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0040"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/SigningCredentials.swift",
+   "text": "The certificate password is wrong.",
+   "lines": [
+    22
+   ],
+   "contexts": [
+    "case .wrongPassword: \"The certificate password is wrong.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0041"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/SigningCredentials.swift",
+   "text": "Couldn't read that certificate file (\\(detail)).",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "case .badCertificateFile(let detail): \"Couldn't read that certificate file (\\(detail)).\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0042"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/SigningCredentials.swift",
+   "text": "Only RSA signing certificates are supported.",
+   "lines": [
+    24
+   ],
+   "contexts": [
+    "case .unsupportedKey: \"Only RSA signing certificates are supported.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0043"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/SigningCredentials.swift",
+   "text": "Couldn't read that provisioning profile (\\(detail)).",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "case .badProfile(let detail): \"Couldn't read that provisioning profile (\\(detail)).\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0044"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/SigningCredentials.swift",
+   "text": "The provisioning profile expired on \\(date.formatted(date: .abbreviated, time: .omitted)).",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "case .profileExpired(let date): \"The provisioning profile expired on \\(date.formatted(date: .abbreviated, time: .omitted)).\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0045"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/SigningCredentials.swift",
+   "text": "That provisioning profile doesn't include your certificate — use the profile that came with it.",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "case .profileDoesNotMatchCertificate: \"That provisioning profile doesn't include your certificate — use the profile that came with it.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0046"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/SigningCredentials.swift",
+   "text": "The profile is for \\(appID), but the app is \\(bundle).",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "case .profileDoesNotCoverApp(let bundle, let appID): \"The profile is for \\(appID), but the app is \\(bundle).\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0047"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/SigningCredentials.swift",
+   "text": "The app inside the IPA is unusual (\\(detail)).",
+   "lines": [
+    29
+   ],
+   "contexts": [
+    "case .badApp(let detail): \"The app inside the IPA is unusual (\\(detail)).\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0048"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/SigningCredentials.swift",
+   "text": "Can't sign this build (\\(detail)).",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "case .unsupportedBinary(let detail): \"Can't sign this build (\\(detail)).\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0049"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/SigningCredentials.swift",
+   "text": "Signing failed (\\(detail)).",
+   "lines": [
+    31
+   ],
+   "contexts": [
+    "case .signingFailed(let detail): \"Signing failed (\\(detail)).\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0050"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/SigningCredentials.swift",
+   "text": "no property list inside",
+   "lines": [
+    60
+   ],
+   "contexts": [
+    "throw SigningError.badProfile(\"no property list inside\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0051"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/SigningCredentials.swift",
+   "text": "missing entitlements",
+   "lines": [
+    66
+   ],
+   "contexts": [
+    "throw SigningError.badProfile(\"missing entitlements\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0052"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/SigningCredentials.swift",
+   "text": "error \\(status)",
+   "lines": [
+    143
+   ],
+   "contexts": [
+    "default: throw SigningError.badCertificateFile(\"error \\(status)\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0053"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/SigningCredentials.swift",
+   "text": "it has no signing identity",
+   "lines": [
+    146
+   ],
+   "contexts": [
+    "throw SigningError.badCertificateFile(\"it has no signing identity\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0054"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/SigningCredentials.swift",
+   "text": "no certificate",
+   "lines": [
+    151
+   ],
+   "contexts": [
+    "guard let certificate = certificateRef else { throw SigningError.badCertificateFile(\"no certificate\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0055"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/SigningCredentials.swift",
+   "text": "Certificate",
+   "lines": [
+    162
+   ],
+   "contexts": [
+    "commonName = SecCertificateCopySubjectSummary(certificate) as String? ?? \"Certificate\""
+   ],
+   "reasons": [
+    "ambiguous-after-context-review"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0056"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/SigningCredentials.swift",
+   "text": "the key refused",
+   "lines": [
+    180
+   ],
+   "contexts": [
+    "throw SigningError.signingFailed(error?.takeRetainedValue().localizedDescription ?? \"the key refused\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0057"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/ZipArchive.swift",
+   "text": "That file isn't a valid IPA (zip) archive.",
+   "lines": [
+    55
+   ],
+   "contexts": [
+    "case .notAZip: \"That file isn't a valid IPA (zip) archive.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0058"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/ZipArchive.swift",
+   "text": "The IPA is damaged (\\(detail)).",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    "case .corrupt(let detail): \"The IPA is damaged (\\(detail)).\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0059"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/ZipArchive.swift",
+   "text": "The IPA uses something unsupported (\\(detail)).",
+   "lines": [
+    57
+   ],
+   "contexts": [
+    "case .unsupported(let detail): \"The IPA uses something unsupported (\\(detail)).\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0060"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/ZipArchive.swift",
+   "text": "central directory",
+   "lines": [
+    86
+   ],
+   "contexts": [
+    "guard offset + 46 <= bytes.count, u32(bytes, offset) == 0x02014b50 else { throw ZipError.corrupt(\"central directory\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0061"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/ZipArchive.swift",
+   "text": "entry name",
+   "lines": [
+    94
+   ],
+   "contexts": [
+    "guard offset + 46 + nameLength <= bytes.count else { throw ZipError.corrupt(\"entry name\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0062"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/ZipArchive.swift",
+   "text": "local header of \\(name)",
+   "lines": [
+    98
+   ],
+   "contexts": [
+    "guard local + 30 <= bytes.count, u32(bytes, local) == 0x04034b50 else { throw ZipError.corrupt(\"local header of \\(name)\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0063"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/ZipArchive.swift",
+   "text": "data of \\(name)",
+   "lines": [
+    100
+   ],
+   "contexts": [
+    "guard start + compressed <= bytes.count else { throw ZipError.corrupt(\"data of \\(name)\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0064"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/ZipArchive.swift",
+   "text": "compression method \\(method) in \\(name)",
+   "lines": [
+    101
+   ],
+   "contexts": [
+    "guard method == 0 || method == 8 else { throw ZipError.unsupported(\"compression method \\(method) in \\(name)\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0065"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/ZipArchive.swift",
+   "text": "couldn't unpack \\(name)",
+   "lines": [
+    157
+   ],
+   "contexts": [
+    "guard written == expected else { throw ZipError.corrupt(\"couldn't unpack \\(name)\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0066"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Signing/ZipArchive.swift",
+   "text": "archives over 4 GB",
+   "lines": [
+    191
+   ],
+   "contexts": [
+    "guard out.count < 0xffff_ffff, payload.count < 0xffff_ffff else { throw ZipError.unsupported(\"archives over 4 GB\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0067"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/CatalogStore.swift",
+   "text": "This build has no update server set.",
+   "lines": [
+    154,
+    185
+   ],
+   "contexts": [
+    "current.phase = .failed(app.sourceID == BuiltIn.hubSourceID ? \"This build has no update server set.\" : \"This app's source is missing.\")",
+    "guard let hub = hub() else { hubMessage = \"This build has no update server set.\"; return 0 }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible",
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0068"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/CatalogStore.swift",
+   "text": "This app's source is missing.",
+   "lines": [
+    154
+   ],
+   "contexts": [
+    "current.phase = .failed(app.sourceID == BuiltIn.hubSourceID ? \"This build has no update server set.\" : \"This app's source is missing.\")"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0069"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/CredentialVault.swift",
+   "text": "Add a certificate (.p12) in Signing first.",
+   "lines": [
+    133
+   ],
+   "contexts": [
+    "guard !certificates.isEmpty else { return .failure(.noProfile(\"Add a certificate (.p12) in Signing first.\")) }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0070"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/CredentialVault.swift",
+   "text": "Every certificate you added has expired.",
+   "lines": [
+    134
+   ],
+   "contexts": [
+    "guard !usableCertificates.isEmpty else { return .failure(.noProfile(\"Every certificate you added has expired.\")) }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0071"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/CredentialVault.swift",
+   "text": "Add a provisioning profile (.mobileprovision) in Signing first.",
+   "lines": [
+    135
+   ],
+   "contexts": [
+    "guard !profiles.isEmpty else { return .failure(.noProfile(\"Add a provisioning profile (.mobileprovision) in Signing first.\")) }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0072"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/CredentialVault.swift",
+   "text": "The certificate has expired.",
+   "lines": [
+    173
+   ],
+   "contexts": [
+    "if end < now { result.append(.init(severity: .blocking, subject: entry.label, message: \"The certificate has expired.\", date: end)) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0073"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/CredentialVault.swift",
+   "text": "The certificate expires soon.",
+   "lines": [
+    174
+   ],
+   "contexts": [
+    "else if end < horizon { result.append(.init(severity: .warning, subject: entry.label, message: \"The certificate expires soon.\", date: end)) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0074"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/CredentialVault.swift",
+   "text": "The profile has expired.",
+   "lines": [
+    180
+   ],
+   "contexts": [
+    "if end < now { result.append(.init(severity: .blocking, subject: profile.name, message: \"The profile has expired.\", date: end)) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0075"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/CredentialVault.swift",
+   "text": "The profile expires soon.",
+   "lines": [
+    181
+   ],
+   "contexts": [
+    "else if end < horizon { result.append(.init(severity: .warning, subject: profile.name, message: \"The profile expires soon.\", date: end)) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0076"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/CredentialVault.swift",
+   "text": "None of your certificates is in this profile, so it can't be used.",
+   "lines": [
+    185
+   ],
+   "contexts": [
+    "result.append(.init(severity: .warning, subject: profile.name, message: \"None of your certificates is in this profile, so it can't be used.\", date: nil))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0077"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/CredentialVault.swift",
+   "text": "Certificate",
+   "lines": [
+    188
+   ],
+   "contexts": [
+    "if certificates.isEmpty { result.append(.init(severity: .blocking, subject: \"Certificate\", message: \"No certificate has been added.\", date: nil)) }"
+   ],
+   "reasons": [
+    "ambiguous-after-context-review"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0078"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/CredentialVault.swift",
+   "text": "No certificate has been added.",
+   "lines": [
+    188
+   ],
+   "contexts": [
+    "if certificates.isEmpty { result.append(.init(severity: .blocking, subject: \"Certificate\", message: \"No certificate has been added.\", date: nil)) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0079"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/CredentialVault.swift",
+   "text": "Profile",
+   "lines": [
+    189
+   ],
+   "contexts": [
+    "if profiles.isEmpty { result.append(.init(severity: .blocking, subject: \"Profile\", message: \"No provisioning profile has been added.\", date: nil)) }"
+   ],
+   "reasons": [
+    "ambiguous-after-context-review"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0080"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/CredentialVault.swift",
+   "text": "No provisioning profile has been added.",
+   "lines": [
+    189
+   ],
+   "contexts": [
+    "if profiles.isEmpty { result.append(.init(severity: .blocking, subject: \"Profile\", message: \"No provisioning profile has been added.\", date: nil)) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0081"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/CredentialVault.swift",
+   "text": "a provisioning profile",
+   "lines": [
+    208
+   ],
+   "contexts": [
+    "else { unreadable.append(\"a provisioning profile\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0082"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "Downloads",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "downloads: URL = FileStorage.cacheURL(\"Downloads\"), work: URL = FileStorage.cacheURL(\"Signed\")) {"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0083"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "Signed",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "downloads: URL = FileStorage.cacheURL(\"Downloads\"), work: URL = FileStorage.cacheURL(\"Signed\")) {"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0084"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "\\(app.name) \\(release.title)",
+   "lines": [
+    75
+   ],
+   "contexts": [
+    "job = Job(id: UUID(), appID: app.id, appName: app.name, title: \"\\(app.name) \\(release.title)\", kind: downgrade ? .downgrade : .install, phase: .downloading(0))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0085"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "\\(name) (from Files)",
+   "lines": [
+    82
+   ],
+   "contexts": [
+    "job = Job(id: UUID(), appID: \"local\", appName: name, title: \"\\(name) (from Files)\", kind: .signOnly, phase: .signing(\"Reading the file…\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0086"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "Reading the file…",
+   "lines": [
+    82
+   ],
+   "contexts": [
+    "job = Job(id: UUID(), appID: \"local\", appName: name, title: \"\\(name) (from Files)\", kind: .signOnly, phase: .signing(\"Reading the file…\"))"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0087"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "Cancelled.",
+   "lines": [
+    89,
+    156,
+    199
+   ],
+   "contexts": [
+    "if isBusy { job?.phase = .failed(\"Cancelled.\") }",
+    "job?.phase = .failed(\"Cancelled.\")"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0088"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "certificate: \\(vault.certificates.first { $0.id == selection.certificateID }?.label ?? ",
+   "lines": [
+    107
+   ],
+   "contexts": [
+    "note(\"certificate: \\(vault.certificates.first { $0.id == selection.certificateID }?.label ?? \"?\")\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0089"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "This app's source isn't set up.",
+   "lines": [
+    108
+   ],
+   "contexts": [
+    "guard let client = catalog.client(for: app) else { throw NetworkError.notConfigured(\"This app's source isn't set up.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0090"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "downloaded \\(release.file) (\\(Self.megabytes(file)))",
+   "lines": [
+    114
+   ],
+   "contexts": [
+    "note(\"downloaded \\(release.file) (\\(Self.megabytes(file)))\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0091"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "this device can't install it by itself",
+   "lines": [
+    123
+   ],
+   "contexts": [
+    "var whyNot = \"this device can't install it by itself\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0092"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "Connecting to this device",
+   "lines": [
+    126,
+    180
+   ],
+   "contexts": [
+    "job?.phase = .installing(\"Connecting to this device\", 0)"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0093"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "installed on this device",
+   "lines": [
+    131
+   ],
+   "contexts": [
+    "note(\"installed on this device\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0094"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "Installed \\(app.name) \\(release.title)",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "title: \"Installed \\(app.name) \\(release.title)\", detail: Self.detail(report, signedFile, seconds: Date().timeIntervalSince(started))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0095"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "on-device install failed: \\(whyNot)",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    "note(\"on-device install failed: \\(whyNot)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0096"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "on-device install is not available",
+   "lines": [
+    147
+   ],
+   "contexts": [
+    "note(\"on-device install is not available\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0097"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "Signed \\(app.name) \\(release.title)",
+   "lines": [
+    153
+   ],
+   "contexts": [
+    "title: \"Signed \\(app.name) \\(release.title)\", detail: Self.detail(report, signedFile, seconds: Date().timeIntervalSince(started))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0098"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "Signed \\(info.name) for export",
+   "lines": [
+    175
+   ],
+   "contexts": [
+    "title: \"Signed \\(info.name) for export\", detail: Self.detail(report, signedFile, seconds: Date().timeIntervalSince(started))))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0099"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "Installed \\(info.name) from Files",
+   "lines": [
+    187
+   ],
+   "contexts": [
+    "title: \"Installed \\(info.name) from Files\", detail: Self.detail(report, signedFile, seconds: Date().timeIntervalSince(started))))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0100"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "It was signed but not installed: \\(error.localizedDescription). The signed file is kept.",
+   "lines": [
+    192
+   ],
+   "contexts": [
+    "job?.warnings.append(\"It was signed but not installed: \\(error.localizedDescription). The signed file is kept.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0101"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "Signed \\(info.name) from Files",
+   "lines": [
+    197
+   ],
+   "contexts": [
+    "title: \"Signed \\(info.name) from Files\", detail: Self.detail(report, signedFile, seconds: Date().timeIntervalSince(started))))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0102"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "Couldn't sign \\(name)",
+   "lines": [
+    202
+   ],
+   "contexts": [
+    "activity.add(ActivityEntry(kind: .failure, appName: name, title: \"Couldn't sign \\(name)\", detail: (report + [error.localizedDescription]).joined(separator: \"\\n\"), succeeded: false))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0103"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "Checking the certificate chain…",
+   "lines": [
+    217
+   ],
+   "contexts": [
+    "job?.phase = .signing(\"Checking the certificate chain…\")"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0104"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "Signing…",
+   "lines": [
+    221
+   ],
+   "contexts": [
+    "job?.phase = .signing(\"Signing…\")"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0105"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "signed \\(result.bundles.count) bundle(s) → \\(Self.megabytes(output))",
+   "lines": [
+    235
+   ],
+   "contexts": [
+    "note(\"signed \\(result.bundles.count) bundle(s) → \\(Self.megabytes(output))\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0106"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "warning: \\(warning)",
+   "lines": [
+    236
+   ],
+   "contexts": [
+    "for warning in result.warnings { note(\"warning: \\(warning)\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0107"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "Couldn't install \\(app.name) \\(release.title)",
+   "lines": [
+    294
+   ],
+   "contexts": [
+    "title: \"Couldn't install \\(app.name) \\(release.title)\", detail: (report + [\"error: \\(message)\"]).joined(separator: \"\\n\"), succeeded: false"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0108"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "  \\(bundle.kind.rawValue) \\(bundle.path.isEmpty ? ",
+   "lines": [
+    301
+   ],
+   "contexts": [
+    "lines.append(\"  \\(bundle.kind.rawValue) \\(bundle.path.isEmpty ? \"(app)\" : bundle.path)  \\(bundle.identifier)\\(bundle.profileName.map { \"  profile “\\($0)”\" } ?? \"\")\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0109"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": " : bundle.path)  \\(bundle.identifier)\\(bundle.profileName.map { ",
+   "lines": [
+    301
+   ],
+   "contexts": [
+    "lines.append(\"  \\(bundle.kind.rawValue) \\(bundle.path.isEmpty ? \"(app)\" : bundle.path)  \\(bundle.identifier)\\(bundle.profileName.map { \"  profile “\\($0)”\" } ?? \"\")\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0110"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": "took \\(String(format: ",
+   "lines": [
+    303
+   ],
+   "contexts": [
+    "lines.append(\"took \\(String(format: \"%.1f\", seconds)) s\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0111"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Stores/InstallPipeline.swift",
+   "text": ", seconds)) s",
+   "lines": [
+    303
+   ],
+   "contexts": [
+    "lines.append(\"took \\(String(format: \"%.1f\", seconds)) s\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0112"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Support/SecretStore.swift",
+   "text": "The Keychain refused to save (error \\(status)).",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "case .keychain(let status): \"The Keychain refused to save (error \\(status)).\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0113"
+  },
+  {
+   "file": "Packages/LauncherCore/Sources/LauncherCore/Support/SecretStore.swift",
+   "text": "Couldn't save the secret (\\(detail)).",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "case .file(let detail): \"Couldn't save the secret (\\(detail)).\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0114"
+  },
+  {
+   "file": "app/Activity/DownloadLiveActivity.swift",
+   "text": "Resume",
+   "lines": [
+    86
+   ],
+   "contexts": [
+    "Button(intent: ResumeDownloadsIntent(store: store)) { Label(\"Resume\", systemImage: \"play.fill\").frame(maxWidth: .infinity) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0115"
+  },
+  {
+   "file": "app/Activity/DownloadLiveActivity.swift",
+   "text": "Pause",
+   "lines": [
+    88
+   ],
+   "contexts": [
+    "Button(intent: PauseDownloadsIntent(store: store)) { Label(\"Pause\", systemImage: \"pause.fill\").frame(maxWidth: .infinity) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0116"
+  },
+  {
+   "file": "app/Activity/DownloadLiveActivity.swift",
+   "text": "Cancel",
+   "lines": [
+    90
+   ],
+   "contexts": [
+    "Button(intent: CancelDownloadIntent(store: store)) { Label(\"Cancel\", systemImage: \"xmark\").frame(maxWidth: .infinity) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0117"
+  },
+  {
+   "file": "app/Helper/JITRequestHandler.swift",
+   "text": "Helper connected.",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "host?.preparation(\"Helper connected.\")"
+   ],
+   "reasons": [
+    "ambiguous-after-context-review"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0118"
+  },
+  {
+   "file": "app/Helper/JITRequestHandler.swift",
+   "text": "The JIT request did not match its host process.",
+   "lines": [
+    37
+   ],
+   "contexts": [
+    "host?.finished(\"The JIT request did not match its host process.\"); return"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0119"
+  },
+  {
+   "file": "app/Helper/JITRequestHandler.swift",
+   "text": "Checking the connection (the tunnel must be on).",
+   "lines": [
+    53
+   ],
+   "contexts": [
+    "case .checkingReachability: host?.preparation(\"Checking the connection (the tunnel must be on).\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0120"
+  },
+  {
+   "file": "app/Helper/JITRequestHandler.swift",
+   "text": "Checking Apple's developer support files.",
+   "lines": [
+    54
+   ],
+   "contexts": [
+    "case .checkingDDI: host?.preparation(\"Checking Apple's developer support files.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0121"
+  },
+  {
+   "file": "app/Helper/JITRequestHandler.swift",
+   "text": "Downloading Apple's developer support files.",
+   "lines": [
+    55
+   ],
+   "contexts": [
+    "case .downloadingDDI: host?.preparation(\"Downloading Apple's developer support files.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0122"
+  },
+  {
+   "file": "app/Helper/JITRequestHandler.swift",
+   "text": "Preparing this device for debugging.",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    "case .mountingDDI: host?.preparation(\"Preparing this device for debugging.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0123"
+  },
+  {
+   "file": "app/Helper/JITRequestHandler.swift",
+   "text": "Checking device preparation.",
+   "lines": [
+    57
+   ],
+   "contexts": [
+    "case .verifyingDDI: host?.preparation(\"Checking device preparation.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0124"
+  },
+  {
+   "file": "app/Helper/JITRequestHandler.swift",
+   "text": "Attaching and starting the JIT script.",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "case .ready: host?.preparation(\"Attaching and starting the JIT script.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0125"
+  },
+  {
+   "file": "app/Helper/JITRequestHandler.swift",
+   "text": "Preparing JIT.",
+   "lines": [
+    59
+   ],
+   "contexts": [
+    "@unknown default: host?.preparation(\"Preparing JIT.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0126"
+  },
+  {
+   "file": "app/Helper/JITRequestHandler.swift",
+   "text": "JIT failed: check that the tunnel (or LocalDevVPN) is on and the pairing file is current.",
+   "lines": [
+    65
+   ],
+   "contexts": [
+    "host?.finished(\"JIT failed: check that the tunnel (or LocalDevVPN) is on and the pairing file is current.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0127"
+  },
+  {
+   "file": "app/Runtime/BackgroundRun.swift",
+   "text": "after \\(Int(Self.gameMinutes)) min in the background",
+   "lines": [
+    285
+   ],
+   "contexts": [
+    "gameReason = \"after \\(Int(Self.gameMinutes)) min in the background\""
+   ],
+   "reasons": [
+    "ambiguous-after-context-review"
+   ],
+   "interpolated": true,
+   "whole_sentence": false,
+   "id": "u0128"
+  },
+  {
+   "file": "app/Runtime/BackgroundRun.swift",
+   "text": "Your game is paused",
+   "lines": [
+    352
+   ],
+   "contexts": [
+    "content.title = \"Your game is paused\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0129"
+  },
+  {
+   "file": "app/Runtime/BackgroundRun.swift",
+   "text": "Madeira kept it running for \\(minutes) minutes in the background. Open Madeira to carry on.",
+   "lines": [
+    353
+   ],
+   "contexts": [
+    "content.body = \"Madeira kept it running for \\(minutes) minutes in the background. Open Madeira to carry on.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0130"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": ".......abtnvfr.............e....",
+   "lines": [
+    356
+   ],
+   "contexts": [
+    "let escapes = Array(\".......abtnvfr.............e....\".utf8)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0131"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": "Runs first: ",
+   "lines": [
+    562
+   ],
+   "contexts": [
+    "if !names(.pending).isEmpty { parts.append(\"Runs first: \" + names(.pending)) }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0132"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": "Already done: ",
+   "lines": [
+    563
+   ],
+   "contexts": [
+    "if !names(.done).isEmpty { parts.append(\"Already done: \" + names(.done)) }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0133"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": "Installer file missing: ",
+   "lines": [
+    564
+   ],
+   "contexts": [
+    "if !names(.missing).isEmpty { parts.append(\"Installer file missing: \" + names(.missing)) }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0134"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": "Cannot run in this build: ",
+   "lines": [
+    565
+   ],
+   "contexts": [
+    "if !names(.unsupported).isEmpty { parts.append(\"Cannot run in this build: \" + names(.unsupported)) }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0135"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": "Next start: ",
+   "lines": [
+    566
+   ],
+   "contexts": [
+    "if !names(.limit).isEmpty { parts.append(\"Next start: \" + names(.limit)) }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0136"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": "One-time installs. ",
+   "lines": [
+    567
+   ],
+   "contexts": [
+    "return \"One-time installs. \" + parts.joined(separator: \". \") + \".\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0137"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": "To start the game, restart Madeira: swipe it away in the app switcher, open it again and start the game.",
+   "lines": [
+    771
+   ],
+   "contexts": [
+    "nonisolated static let restartWords = \"To start the game, restart Madeira: swipe it away in the app switcher, open it again and start the game.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0138"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": "This session now closes. Madeira asks you to restart it when it has; wait for that.",
+   "lines": [
+    774
+   ],
+   "contexts": [
+    "nonisolated static let closingWords = \"This session now closes. Madeira asks you to restart it when it has; wait for that.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0139"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": "Wine's own .NET is used",
+   "lines": [
+    939
+   ],
+   "contexts": [
+    "if skipDotNet && isDotNetFramework(process) { return \"Wine's own .NET is used\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0140"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": "Windows Installer package",
+   "lines": [
+    940
+   ],
+   "contexts": [
+    "if process.executable.lowercased().hasSuffix(\".msi\") { return hasMsiexec ? nil : \"Windows Installer package\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0141"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": "32-bit installer",
+   "lines": [
+    942
+   ],
+   "contexts": [
+    "return machine == 0x14c && !has32Bit ? \"32-bit installer\" : nil"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0142"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": " last-run=unfinished",
+   "lines": [
+    1234
+   ],
+   "contexts": [
+    "let lastRun: String = item.status != .done && unfinished.contains(run.name) ? \" last-run=unfinished\" : \"\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0143"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": "One-time installs skipped. To run them, choose Run at next start under One-time installs.",
+   "lines": [
+    1240
+   ],
+   "contexts": [
+    "note = \"One-time installs skipped. To run them, choose Run at next start under One-time installs.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0144"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": "This start runs only them; afterwards restart Madeira and start the game again.",
+   "lines": [
+    1244
+   ],
+   "contexts": [
+    "note = (note.map { $0 + \" \" } ?? \"\") + \"This start runs only them; afterwards restart Madeira and start the game again.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0145"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": "This start uses Wine's standard synchronization instead of madsync; the next start uses madsync again.",
+   "lines": [
+    1246
+   ],
+   "contexts": [
+    "note = (note.map { $0 + \" \" } ?? \"\") + \"This start uses Wine's standard synchronization instead of madsync; the next start uses madsync again.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0146"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": "Last run did not finish: \\(names) (its installer never closed). If it installed, choose Record as done under One-time installs.",
+   "lines": [
+    1256
+   ],
+   "contexts": [
+    "let words = \"Last run did not finish: \\(names) (its installer never closed). If it installed, choose Record as done under One-time installs.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0147"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": "Starting this game's one-time installs…",
+   "lines": [
+    1341
+   ],
+   "contexts": [
+    "guard let contents = try? Data(contentsOf: file), contents.count <= 16384 else { return \"Starting this game's one-time installs…\" }"
+   ],
+   "reasons": [
+    "item:visible-label-in-data-group"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0148"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": "If its window no longer changes, it may have finished without closing. Ending the session leaves it unrecorded; Record as done under One-time installs records it.",
+   "lines": [
+    1364
+   ],
+   "contexts": [
+    "let hint = \"If its window no longer changes, it may have finished without closing. Ending the session leaves it unrecorded; Record as done under One-time installs records it.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0149"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": "One-time installs completed successfully. Close Madeira and open it again to play the game.",
+   "lines": [
+    1391
+   ],
+   "contexts": [
+    "if allSucceeded { return \"One-time installs completed successfully. Close Madeira and open it again to play the game.\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0150"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": "One-time installs ended.",
+   "lines": [
+    1392
+   ],
+   "contexts": [
+    "return (ended ?? \"One-time installs ended.\") + \"\\nClose Madeira and open it again to play the game.\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0151"
+  },
+  {
+   "file": "app/Runtime/DockInstallers.swift",
+   "text": "\\nClose Madeira and open it again to play the game.",
+   "lines": [
+    1392
+   ],
+   "contexts": [
+    "return (ended ?? \"One-time installs ended.\") + \"\\nClose Madeira and open it again to play the game.\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0152"
+  },
+  {
+   "file": "app/Runtime/DockRegistryRepair.swift",
+   "text": "Ubisoft Connect",
+   "lines": [
+    34
+   ],
+   "contexts": [
+    "Repair(name: \"Ubisoft Connect\","
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0153"
+  },
+  {
+   "file": "app/Runtime/DockRegistryRepair.swift",
+   "text": "InstallDir",
+   "lines": [
+    37
+   ],
+   "contexts": [
+    "values: [(\"InstallDir\", \"C:\\\\Program Files (x86)\\\\Ubisoft\\\\Ubisoft Game Launcher\\\\\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0154"
+  },
+  {
+   "file": "app/Runtime/DockRegistryRepair.swift",
+   "text": "Steam location (32-bit view)",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "Repair(name: \"Steam location (32-bit view)\","
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0155"
+  },
+  {
+   "file": "app/Runtime/DockRegistryRepair.swift",
+   "text": "InstallPath",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "values: [(\"InstallPath\", \"C:\\\\Program Files (x86)\\\\Steam\")], force: true),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0156"
+  },
+  {
+   "file": "app/Runtime/DockRegistryRepair.swift",
+   "text": "Steam location (user)",
+   "lines": [
+    45
+   ],
+   "contexts": [
+    "Repair(name: \"Steam location (user)\","
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0157"
+  },
+  {
+   "file": "app/Runtime/DockRegistryRepair.swift",
+   "text": "SteamPath",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "values: [(\"SteamPath\", \"C:/Program Files (x86)/Steam\"), (\"SteamExe\", \"C:/Program Files (x86)/Steam/steam.exe\")], force: true),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0158"
+  },
+  {
+   "file": "app/Runtime/DockRegistryRepair.swift",
+   "text": "C:/Program Files (x86)/Steam",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "values: [(\"SteamPath\", \"C:/Program Files (x86)/Steam\"), (\"SteamExe\", \"C:/Program Files (x86)/Steam/steam.exe\")], force: true),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0159"
+  },
+  {
+   "file": "app/Runtime/DockRegistryRepair.swift",
+   "text": "SteamExe",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "values: [(\"SteamPath\", \"C:/Program Files (x86)/Steam\"), (\"SteamExe\", \"C:/Program Files (x86)/Steam/steam.exe\")], force: true),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0160"
+  },
+  {
+   "file": "app/Runtime/DockReset.swift",
+   "text": "system.reg could not be read",
+   "lines": [
+    520
+   ],
+   "contexts": [
+    "summary.failures.append(\"system.reg could not be read\"); return summary"
+   ],
+   "reasons": [
+    "ambiguous-after-context-review"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0161"
+  },
+  {
+   "file": "app/Runtime/DockReset.swift",
+   "text": "",
+   "lines": [
+    568,
+    571,
+    572,
+    574
+   ],
+   "contexts": [
+    "var list = [\"Madeira Dock reset of app \\(appID), \" + name, \"\",",
+    "list += [\"\", \"Uninstall entries removed from system.reg:\"] + summary.entries.map { \"  \" + $0 }",
+    "list += [\"\", \"Registry: \\(summary.keys) keys and \\(summary.values) values removed, \\(summary.restored) keys set back to a new prefix's values.\","
+   ],
+   "reasons": [
+    "empty-string"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0162"
+  },
+  {
+   "file": "app/Runtime/DockReset.swift",
+   "text": "Madeira Dock reset of app \\(appID), ",
+   "lines": [
+    568
+   ],
+   "contexts": [
+    "var list = [\"Madeira Dock reset of app \\(appID), \" + name, \"\","
+   ],
+   "reasons": [
+    "ambiguous-after-context-review"
+   ],
+   "interpolated": true,
+   "whole_sentence": false,
+   "id": "u0163"
+  },
+  {
+   "file": "app/Runtime/DockReset.swift",
+   "text": "Moved here from drive_c (put a folder back to undo):",
+   "lines": [
+    569
+   ],
+   "contexts": [
+    "\"Moved here from drive_c (put a folder back to undo):\"]"
+   ],
+   "reasons": [
+    "ambiguous-after-context-review"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0164"
+  },
+  {
+   "file": "app/Runtime/DockReset.swift",
+   "text": "  ",
+   "lines": [
+    571,
+    574
+   ],
+   "contexts": [
+    "list += [\"\", \"Uninstall entries removed from system.reg:\"] + summary.entries.map { \"  \" + $0 }",
+    "if !summary.failures.isEmpty { list += [\"\", \"Failed:\"] + summary.failures.map { \"  \" + $0 } }"
+   ],
+   "reasons": [
+    "empty-string"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0165"
+  },
+  {
+   "file": "app/Runtime/DockReset.swift",
+   "text": "Uninstall entries removed from system.reg:",
+   "lines": [
+    571
+   ],
+   "contexts": [
+    "list += [\"\", \"Uninstall entries removed from system.reg:\"] + summary.entries.map { \"  \" + $0 }"
+   ],
+   "reasons": [
+    "ambiguous-after-context-review"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0166"
+  },
+  {
+   "file": "app/Runtime/DockReset.swift",
+   "text": "Registry: \\(summary.keys) keys and \\(summary.values) values removed, \\(summary.restored) keys set back to a new prefix's values.",
+   "lines": [
+    572
+   ],
+   "contexts": [
+    "list += [\"\", \"Registry: \\(summary.keys) keys and \\(summary.values) values removed, \\(summary.restored) keys set back to a new prefix's values.\","
+   ],
+   "reasons": [
+    "ambiguous-after-context-review"
+   ],
+   "interpolated": true,
+   "whole_sentence": false,
+   "id": "u0167"
+  },
+  {
+   "file": "app/Runtime/DockReset.swift",
+   "text": "system.reg and user.reg here are the files as they were before the reset.",
+   "lines": [
+    573
+   ],
+   "contexts": [
+    "\"system.reg and user.reg here are the files as they were before the reset.\"]"
+   ],
+   "reasons": [
+    "ambiguous-after-context-review"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0168"
+  },
+  {
+   "file": "app/Runtime/DockReset.swift",
+   "text": "Failed:",
+   "lines": [
+    574
+   ],
+   "contexts": [
+    "if !summary.failures.isEmpty { list += [\"\", \"Failed:\"] + summary.failures.map { \"  \" + $0 } }"
+   ],
+   "reasons": [
+    "ambiguous-after-context-review"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0169"
+  },
+  {
+   "file": "app/Runtime/EntitlementChecker.swift",
+   "text": "JIT cannot be enabled on this copy of Madeira: it was signed without get-task-allow ",
+   "lines": [
+    78
+   ],
+   "contexts": [
+    "static let notDebuggableMessage = \"JIT cannot be enabled on this copy of Madeira: it was signed without get-task-allow \""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0170"
+  },
+  {
+   "file": "app/Runtime/ExternalStorage.swift",
+   "text": "The requested path leaves the external folder.",
+   "lines": [
+    12
+   ],
+   "contexts": [
+    "case .unsafePath: return \"The requested path leaves the external folder.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0171"
+  },
+  {
+   "file": "app/Runtime/ExternalStorage.swift",
+   "text": "The saved external drive registration is invalid.",
+   "lines": [
+    13
+   ],
+   "contexts": [
+    "case .invalidRecord: return \"The saved external drive registration is invalid.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0172"
+  },
+  {
+   "file": "app/Runtime/ExternalStorage.swift",
+   "text": "The external drive mapping is already in use. Existing files were kept.",
+   "lines": [
+    14
+   ],
+   "contexts": [
+    "case .mappingConflict: return \"The external drive mapping is already in use. Existing files were kept.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0173"
+  },
+  {
+   "file": "app/Runtime/ExternalStorage.swift",
+   "text": "This is not the registered folder. Select the original folder.",
+   "lines": [
+    15
+   ],
+   "contexts": [
+    "case .identityMismatch: return \"This is not the registered folder. Select the original folder.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0174"
+  },
+  {
+   "file": "app/Runtime/ExternalStorage.swift",
+   "text": "The external drive is not available. Reconnect it and try again.",
+   "lines": [
+    16
+   ],
+   "contexts": [
+    "case .unavailable: return \"The external drive is not available. Reconnect it and try again.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0175"
+  },
+  {
+   "file": "app/Runtime/GPUCards.swift",
+   "text": "Intel UHD Graphics 630",
+   "lines": [
+    66
+   ],
+   "contexts": [
+    "GPUCard(id: \"intel-uhd630\", title: \"Intel UHD Graphics 630\", vendor: intelVendor, device: 0x3e92,"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0176"
+  },
+  {
+   "file": "app/Runtime/GPUCards.swift",
+   "text": "This device's own GPU",
+   "lines": [
+    71
+   ],
+   "contexts": [
+    "GPUCard(id: \"apple\", title: \"This device's own GPU\", vendor: appleVendor, device: 0x0001, name: nil),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0177"
+  },
+  {
+   "file": "app/Runtime/GPUCards.swift",
+   "text": "sd3ddevice=",
+   "lines": [
+    140
+   ],
+   "contexts": [
+    "guard line.lowercased().hasPrefix(\"sd3ddevice=\") else { continue }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0178"
+  },
+  {
+   "file": "app/Runtime/GPUCards.swift",
+   "text": "\\\" \\t",
+   "lines": [
+    142
+   ],
+   "contexts": [
+    "let current = line.dropFirst(key.count + 1).trimmingCharacters(in: CharacterSet(charactersIn: \"\\\" \\t\"))"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0179"
+  }
+ ]
+}

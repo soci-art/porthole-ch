@@ -1,0 +1,2922 @@
+{
+ "batch": 19,
+ "units": [
+  {
+   "file": "app/Sources/UI/Kit/HomeViews.swift",
+   "text": "Steam lists this game as designed to be played with a controller from start to finish: the menus, the launcher and the game itself.\\n\\nPlug in or connect a controller and it should work without the touch screen or a keyboard.",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "return \"Steam lists this game as designed to be played with a controller from start to finish: the menus, the launcher and the game itself.\\n\\nPlug in or connect a controller and it should work without the touch screen or a keyboard.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3240"
+  },
+  {
+   "file": "app/Sources/UI/Kit/HomeViews.swift",
+   "text": "Steam lists this game as playable with a controller, but not completely. Some parts still expect a keyboard and mouse, usually menus, a launcher, text entry or certain actions, so the game may ask you to switch.\\n\\nOn Porthole you can still reach those parts: open the game's page, then Controls and key binds, to put keys on controller buttons or show the on-screen controls for the parts the controller cannot do.",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "return \"Steam lists this game as playable with a controller, but not completely. Some parts still expect a keyboard and mouse, usually menus, a launcher, text entry or certain actions, so the game may ask you to switch.\\n\\nOn Porthole you can still reach those parts: open the game's page, then Contr"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3241"
+  },
+  {
+   "file": "app/Sources/UI/Kit/HomeViews.swift",
+   "text": "Explains what this means",
+   "lines": [
+    73
+   ],
+   "contexts": [
+    ".accessibilityHint(\"Explains what this means\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3242"
+  },
+  {
+   "file": "app/Sources/UI/Kit/HomeViews.swift",
+   "text": "Direct",
+   "lines": [
+    82
+   ],
+   "contexts": [
+    "var launchChip: String?          // \"Steam\" / \"Direct\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3243"
+  },
+  {
+   "file": "app/Sources/UI/Kit/HomeViews.swift",
+   "text": "Details",
+   "lines": [
+    193,
+    268
+   ],
+   "contexts": [
+    ".focusTarget(game.id, radius: radius, scale: focusScale, secondary: play, label: \"Details\", secondaryLabel: \"Play\", onFocus: onFocus, action: open)",
+    "PillButton(id: \"hero-open\", title: \"Details\", symbol: \"slider.horizontal.3\", action: open)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3244"
+  },
+  {
+   "file": "app/Sources/UI/Kit/HomeViews.swift",
+   "text": "Play",
+   "lines": [
+    193,
+    267
+   ],
+   "contexts": [
+    ".focusTarget(game.id, radius: radius, scale: focusScale, secondary: play, label: \"Details\", secondaryLabel: \"Play\", onFocus: onFocus, action: open)",
+    "PillButton(id: \"hero-play\", title: playing ? \"Preparing\" : \"Play\", symbol: \"play.fill\", style: .primary, enabled: !playing, action: play)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3245"
+  },
+  {
+   "file": "app/Sources/UI/Kit/HomeViews.swift",
+   "text": "CONTINUE PLAYING",
+   "lines": [
+    248
+   ],
+   "contexts": [
+    "Text(mostRecent ? \"CONTINUE PLAYING\" : \"IN YOUR LIBRARY\").font(.system(size: 12, weight: .heavy, design: .rounded)).tracking(1.6)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3246"
+  },
+  {
+   "file": "app/Sources/UI/Kit/HomeViews.swift",
+   "text": "IN YOUR LIBRARY",
+   "lines": [
+    248
+   ],
+   "contexts": [
+    "Text(mostRecent ? \"CONTINUE PLAYING\" : \"IN YOUR LIBRARY\").font(.system(size: 12, weight: .heavy, design: .rounded)).tracking(1.6)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3247"
+  },
+  {
+   "file": "app/Sources/UI/Kit/HomeViews.swift",
+   "text": "Preparing",
+   "lines": [
+    267
+   ],
+   "contexts": [
+    "PillButton(id: \"hero-play\", title: playing ? \"Preparing\" : \"Play\", symbol: \"play.fill\", style: .primary, enabled: !playing, action: play)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3248"
+  },
+  {
+   "file": "app/Sources/UI/Kit/HomeViews.swift",
+   "text": "notice-dismiss-\\(n.id)",
+   "lines": [
+    344
+   ],
+   "contexts": [
+    ".focusTarget(\"notice-dismiss-\\(n.id)\", radius: 22, scale: 1.12) { dismiss(n) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3249"
+  },
+  {
+   "file": "app/Sources/UI/Kit/HomeViews.swift",
+   "text": "Hide this",
+   "lines": [
+    345
+   ],
+   "contexts": [
+    ".accessibilityLabel(\"Hide this\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3250"
+  },
+  {
+   "file": "app/Sources/UI/Kit/HomeViews.swift",
+   "text": "Add a game",
+   "lines": [
+    367,
+    376,
+    487
+   ],
+   "contexts": [
+    "Text(\"Add a game\").font(.system(size: 15, weight: .bold, design: .rounded)).foregroundStyle(Theme.text)",
+    ".accessibilityLabel(\"Add a game\")",
+    "PillButton(id: \"empty-add\", title: \"Add a game\", symbol: \"plus\", style: .primary, action: add)"
+   ],
+   "reasons": [
+    "named-param-string-component",
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3251"
+  },
+  {
+   "file": "app/Sources/UI/Kit/HomeViews.swift",
+   "text": "YOUR LIBRARY",
+   "lines": [
+    440
+   ],
+   "contexts": [
+    "Text(\"YOUR LIBRARY\").font(.system(size: 12, weight: .heavy, design: .rounded)).tracking(1.6).foregroundStyle(.white.opacity(0.6))"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3252"
+  },
+  {
+   "file": "app/Sources/UI/Kit/HomeViews.swift",
+   "text": "\\(games.count)",
+   "lines": [
+    441
+   ],
+   "contexts": [
+    "Text(\"\\(games.count)\").font(.system(size: 12, weight: .bold, design: .rounded).monospacedDigit()).foregroundStyle(.white.opacity(0.75))"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3253"
+  },
+  {
+   "file": "app/Sources/UI/Kit/HomeViews.swift",
+   "text": "\\(at + 1) of \\(games.count)",
+   "lines": [
+    445
+   ],
+   "contexts": [
+    "Text(\"\\(at + 1) of \\(games.count)\").font(.system(size: 12, weight: .semibold, design: .rounded).monospacedDigit()).foregroundStyle(.white.opacity(0.5)).contentTransition(.numericText())"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3254"
+  },
+  {
+   "file": "app/Sources/UI/Kit/HomeViews.swift",
+   "text": "Add your first game",
+   "lines": [
+    486
+   ],
+   "contexts": [
+    "Text(\"Add your first game\").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3255"
+  },
+  {
+   "file": "app/Sources/UI/Kit/LaunchView.swift",
+   "text": "Still working. The first start of a game can take a few minutes while it builds its caches.",
+   "lines": [
+    134
+   ],
+   "contexts": [
+    "Label(\"Still working. The first start of a game can take a few minutes while it builds its caches.\", systemImage: \"hourglass\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3256"
+  },
+  {
+   "file": "app/Sources/UI/Kit/LaunchView.swift",
+   "text": "Step \\(max(1, current)) of \\(data.steps.count)",
+   "lines": [
+    149
+   ],
+   "contexts": [
+    "Text(\"Step \\(max(1, current)) of \\(data.steps.count)\").font(.system(size: 13, weight: .semibold, design: .rounded)).foregroundStyle(.white.opacity(0.7)).contentTransition(.numericText())"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3257"
+  },
+  {
+   "file": "app/Sources/UI/Kit/LaunchView.swift",
+   "text": "Hide the steps",
+   "lines": [
+    156
+   ],
+   "contexts": [
+    "Text(showSteps ? \"Hide the steps\" : \"Show all steps\").font(.system(size: 13, weight: .semibold, design: .rounded))"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3258"
+  },
+  {
+   "file": "app/Sources/UI/Kit/LaunchView.swift",
+   "text": "Show all steps",
+   "lines": [
+    156
+   ],
+   "contexts": [
+    "Text(showSteps ? \"Hide the steps\" : \"Show all steps\").font(.system(size: 13, weight: .semibold, design: .rounded))"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3259"
+  },
+  {
+   "file": "app/Sources/UI/Kit/LaunchView.swift",
+   "text": "Couldn't start",
+   "lines": [
+    187
+   ],
+   "contexts": [
+    "Label(\"Couldn't start\", systemImage: \"exclamationmark.triangle.fill\").font(.system(size: 15, weight: .heavy, design: .rounded)).foregroundStyle(Theme.bad)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3260"
+  },
+  {
+   "file": "app/Sources/UI/Kit/LaunchView.swift",
+   "text": "Stop game",
+   "lines": [
+    198
+   ],
+   "contexts": [
+    "PillButton(id: \"launch-cancel\", title: failed ? \"Close\" : (data.cleanCancel ? \"Cancel\" : \"Stop game\"), symbol: failed ? \"xmark\" : \"stop.fill\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3261"
+  },
+  {
+   "file": "app/Sources/UI/Kit/LaunchView.swift",
+   "text": "Close",
+   "lines": [
+    198
+   ],
+   "contexts": [
+    "PillButton(id: \"launch-cancel\", title: failed ? \"Close\" : (data.cleanCancel ? \"Cancel\" : \"Stop game\"), symbol: failed ? \"xmark\" : \"stop.fill\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3262"
+  },
+  {
+   "file": "app/Sources/UI/Kit/LaunchView.swift",
+   "text": "Cancel",
+   "lines": [
+    198
+   ],
+   "contexts": [
+    "PillButton(id: \"launch-cancel\", title: failed ? \"Close\" : (data.cleanCancel ? \"Cancel\" : \"Stop game\"), symbol: failed ? \"xmark\" : \"stop.fill\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3263"
+  },
+  {
+   "file": "app/Sources/UI/Kit/LaunchView.swift",
+   "text": "Copied",
+   "lines": [
+    201
+   ],
+   "contexts": [
+    "PillButton(id: \"launch-copy\", title: copied ? \"Copied\" : \"Copy the message\", symbol: copied ? \"checkmark\" : \"doc.on.doc\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3264"
+  },
+  {
+   "file": "app/Sources/UI/Kit/LaunchView.swift",
+   "text": "Copy the message",
+   "lines": [
+    201
+   ],
+   "contexts": [
+    "PillButton(id: \"launch-copy\", title: copied ? \"Copied\" : \"Copy the message\", symbol: copied ? \"checkmark\" : \"doc.on.doc\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3265"
+  },
+  {
+   "file": "app/Sources/UI/Kit/LaunchView.swift",
+   "text": "\\(data.name): \\(failure)",
+   "lines": [
+    202
+   ],
+   "contexts": [
+    "UIPasteboard.general.string = \"\\(data.name): \\(failure)\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3266"
+  },
+  {
+   "file": "app/Sources/UI/Kit/LaunchView.swift",
+   "text": "Show Steam window",
+   "lines": [
+    206
+   ],
+   "contexts": [
+    "PillButton(id: \"launch-steam\", title: \"Show Steam window\", symbol: \"rectangle.on.rectangle\", action: showSteam)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3267"
+  },
+  {
+   "file": "app/Sources/UI/Kit/LaunchView.swift",
+   "text": "%d:%02d",
+   "lines": [
+    250
+   ],
+   "contexts": [
+    "Label(String(format: \"%d:%02d\", seconds / 60, seconds % 60), systemImage: \"clock\").labelStyle(.titleAndIcon)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3268"
+  },
+  {
+   "file": "app/Sources/UI/Kit/OfflineChip.swift",
+   "text": "showing your saved list",
+   "lines": [
+    7
+   ],
+   "contexts": [
+    "var detail = \"showing your saved list\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3269"
+  },
+  {
+   "file": "app/Sources/UI/Kit/OfflineChip.swift",
+   "text": "Offline",
+   "lines": [
+    11
+   ],
+   "contexts": [
+    "Text(\"Offline\").font(.system(size: 14, weight: .bold, design: .rounded))"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3270"
+  },
+  {
+   "file": "app/Sources/UI/Kit/OfflineChip.swift",
+   "text": "\\u{00B7} \\(detail)",
+   "lines": [
+    12
+   ],
+   "contexts": [
+    "if !detail.isEmpty { Text(\"\\u{00B7} \\(detail)\").font(.system(size: 13, weight: .medium)).foregroundStyle(Theme.textDim) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3271"
+  },
+  {
+   "file": "app/Sources/UI/Kit/OfflineChip.swift",
+   "text": "Offline, showing your saved list",
+   "lines": [
+    18
+   ],
+   "contexts": [
+    ".accessibilityLabel(\"Offline, showing your saved list\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3272"
+  },
+  {
+   "file": "app/Sources/UI/Kit/PadKeyboard.swift",
+   "text": "space",
+   "lines": [
+    96
+   ],
+   "contexts": [
+    "key(\"space\", label: \"space\", weight: 4.5, action: { insert(\" \") }),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3273"
+  },
+  {
+   "file": "app/Sources/UI/Kit/PadKeyboard.swift",
+   "text": "Cancel",
+   "lines": [
+    134
+   ],
+   "contexts": [
+    "Text(\"Cancel\").font(.system(size: 14, weight: .bold, design: .rounded)).foregroundStyle(Theme.text).padding(.horizontal, 14).frame(height: 34)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3274"
+  },
+  {
+   "file": "app/Sources/UI/Kit/PadKeyboard.swift",
+   "text": "\\(g(",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    "return Text(\"\\(g(\"A\")) type   \\(g(\"B\")) delete   \\(g(\"X\")) space   \\(g(\"Y\")) shift   \\(g(\"LB\")) \\(g(\"RB\")) cursor   \\(g(\"Menu\")) done\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3275"
+  },
+  {
+   "file": "app/Sources/UI/Kit/PadKeyboard.swift",
+   "text": ")) type   \\(g(",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    "return Text(\"\\(g(\"A\")) type   \\(g(\"B\")) delete   \\(g(\"X\")) space   \\(g(\"Y\")) shift   \\(g(\"LB\")) \\(g(\"RB\")) cursor   \\(g(\"Menu\")) done\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3276"
+  },
+  {
+   "file": "app/Sources/UI/Kit/PadKeyboard.swift",
+   "text": ")) delete   \\(g(",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    "return Text(\"\\(g(\"A\")) type   \\(g(\"B\")) delete   \\(g(\"X\")) space   \\(g(\"Y\")) shift   \\(g(\"LB\")) \\(g(\"RB\")) cursor   \\(g(\"Menu\")) done\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3277"
+  },
+  {
+   "file": "app/Sources/UI/Kit/PadKeyboard.swift",
+   "text": ")) space   \\(g(",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    "return Text(\"\\(g(\"A\")) type   \\(g(\"B\")) delete   \\(g(\"X\")) space   \\(g(\"Y\")) shift   \\(g(\"LB\")) \\(g(\"RB\")) cursor   \\(g(\"Menu\")) done\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3278"
+  },
+  {
+   "file": "app/Sources/UI/Kit/PadKeyboard.swift",
+   "text": ")) shift   \\(g(",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    "return Text(\"\\(g(\"A\")) type   \\(g(\"B\")) delete   \\(g(\"X\")) space   \\(g(\"Y\")) shift   \\(g(\"LB\")) \\(g(\"RB\")) cursor   \\(g(\"Menu\")) done\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3279"
+  },
+  {
+   "file": "app/Sources/UI/Kit/PadKeyboard.swift",
+   "text": ")) \\(g(",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    "return Text(\"\\(g(\"A\")) type   \\(g(\"B\")) delete   \\(g(\"X\")) space   \\(g(\"Y\")) shift   \\(g(\"LB\")) \\(g(\"RB\")) cursor   \\(g(\"Menu\")) done\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3280"
+  },
+  {
+   "file": "app/Sources/UI/Kit/PadKeyboard.swift",
+   "text": ")) cursor   \\(g(",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    "return Text(\"\\(g(\"A\")) type   \\(g(\"B\")) delete   \\(g(\"X\")) space   \\(g(\"Y\")) shift   \\(g(\"LB\")) \\(g(\"RB\")) cursor   \\(g(\"Menu\")) done\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3281"
+  },
+  {
+   "file": "app/Sources/UI/Kit/PadKeyboard.swift",
+   "text": ")) done",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    "return Text(\"\\(g(\"A\")) type   \\(g(\"B\")) delete   \\(g(\"X\")) space   \\(g(\"Y\")) shift   \\(g(\"LB\")) \\(g(\"RB\")) cursor   \\(g(\"Menu\")) done\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3282"
+  },
+  {
+   "file": "app/Sources/UI/Kit/PadKeyboard.swift",
+   "text": "Type",
+   "lines": [
+    279
+   ],
+   "contexts": [
+    ".focusTarget(id, radius: 20, scale: 1.02, label: \"Type\", action: { if TextEntry.padMode { padOpen = true } else { focused = true } })"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3283"
+  },
+  {
+   "file": "app/Sources/UI/Kit/PadKeyboard.swift",
+   "text": "Search",
+   "lines": [
+    280
+   ],
+   "contexts": [
+    ".sheet(isPresented: $padOpen) { PadKeyboardSheet(title: \"Search\", text: $text) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3284"
+  },
+  {
+   "file": "app/Sources/UI/Kit/PerfCard.swift",
+   "text": "FPS",
+   "lines": [
+    124,
+    158
+   ],
+   "contexts": [
+    "if let fps { HStack(spacing: 4) { Circle().fill(headTint).frame(width: 7, height: 7); Text(String(format: \"%.0f\", fps)).foregroundStyle(headTint); Text(\"FPS\").foregroundStyle(.white.opacity(0.55)) } }",
+    "Text(\"FPS\").font(.system(size: fontSize * 0.75, weight: .heavy, design: .rounded)).tracking(1).foregroundStyle(.white.opacity(0.55))"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3285"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Rows.swift",
+   "text": "Cancel",
+   "lines": [
+    197
+   ],
+   "contexts": [
+    "PillButton(id: \"choice-cancel\", title: \"Cancel\", symbol: \"xmark\") { done(nil) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3286"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Rows.swift",
+   "text": "Beta",
+   "lines": [
+    314
+   ],
+   "contexts": [
+    "var text = \"Beta\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3287"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Seasonal.swift",
+   "text": "Halloween",
+   "lines": [
+    12,
+    38
+   ],
+   "contexts": [
+    "var title: String { switch self { case .halloween: \"Halloween\"; case .thanksgiving: \"Thanksgiving\" } }",
+    "case .halloween: return Palette(id: \"halloween\", name: \"Halloween\", bgTop: 0x211033, bgBottom: 0x0B0613, accent: 0xFF7A1A, accent2: 0x9B5CFF, decor: .halloween)"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3288"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Seasonal.swift",
+   "text": "Thanksgiving",
+   "lines": [
+    12,
+    40
+   ],
+   "contexts": [
+    "var title: String { switch self { case .halloween: \"Halloween\"; case .thanksgiving: \"Thanksgiving\" } }",
+    "case .thanksgiving: return Palette(id: \"thanksgiving\", name: \"Thanksgiving\", bgTop: 0x2B170B, bgBottom: 0x120A06, accent: 0xF0A030, accent2: 0xC4452D, decor: .thanksgiving)"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3289"
+  },
+  {
+   "file": "app/Sources/UI/Kit/SetupKit.swift",
+   "text": "\\(number)",
+   "lines": [
+    25,
+    82
+   ],
+   "contexts": [
+    "else { Text(\"\\(number)\").font(.system(size: 14, weight: .heavy, design: .rounded)).foregroundStyle(number == current ? Theme.onAccent : Theme.textDim) }",
+    "Text(\"\\(number)\").font(.system(size: 11, weight: .heavy, design: .rounded)).foregroundStyle(Theme.onAccent)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3290"
+  },
+  {
+   "file": "app/Sources/UI/Kit/SetupKit.swift",
+   "text": "Step \\(number), \\(name)\\(done[index] ? ",
+   "lines": [
+    33
+   ],
+   "contexts": [
+    ".accessibilityLabel(\"Step \\(number), \\(name)\\(done[index] ? \", done\" : \"\")\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3291"
+  },
+  {
+   "file": "app/Sources/UI/Kit/SetupKit.swift",
+   "text": "Welcome to Porthole",
+   "lines": [
+    48,
+    55
+   ],
+   "contexts": [
+    "Text(\"Welcome to Porthole\").font(.system(size: 26, weight: .black, design: .rounded)).foregroundStyle(Theme.text)",
+    "Text(\"Welcome to Porthole\").font(.system(size: 34, weight: .black, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3292"
+  },
+  {
+   "file": "app/Sources/UI/Kit/SetupKit.swift",
+   "text": "Three quick steps. Stop any time.",
+   "lines": [
+    49
+   ],
+   "contexts": [
+    "Text(\"Three quick steps. Stop any time.\").font(.subheadline).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3293"
+  },
+  {
+   "file": "app/Sources/UI/Kit/SetupKit.swift",
+   "text": "Windows games on your iPhone and iPad.\\nThree quick steps, and you can stop any time.",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    "Text(\"Windows games on your iPhone and iPad.\\nThree quick steps, and you can stop any time.\").font(.system(size: 16, design: .rounded)).foregroundStyle(Theme.textDim).multilineTextAlignment(.center)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3294"
+  },
+  {
+   "file": "app/Sources/UI/Kit/SetupKit.swift",
+   "text": "Signed in",
+   "lines": [
+    120
+   ],
+   "contexts": [
+    "Text(signedIn ? \"Signed in\" : \"Not signed in\").font(.footnote).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3295"
+  },
+  {
+   "file": "app/Sources/UI/Kit/SetupKit.swift",
+   "text": "Not signed in",
+   "lines": [
+    120
+   ],
+   "contexts": [
+    "Text(signedIn ? \"Signed in\" : \"Not signed in\").font(.footnote).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3296"
+  },
+  {
+   "file": "app/Sources/UI/Kit/SetupKit.swift",
+   "text": "Open library",
+   "lines": [
+    124
+   ],
+   "contexts": [
+    "Text(signedIn ? \"Open library\" : \"Sign in\").font(.system(size: 13, weight: .heavy, design: .rounded)).foregroundStyle(signedIn ? Theme.text : Theme.onAccent)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3297"
+  },
+  {
+   "file": "app/Sources/UI/Kit/SetupKit.swift",
+   "text": "Sign in",
+   "lines": [
+    124
+   ],
+   "contexts": [
+    "Text(signedIn ? \"Open library\" : \"Sign in\").font(.system(size: 13, weight: .heavy, design: .rounded)).foregroundStyle(signedIn ? Theme.text : Theme.onAccent)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3298"
+  },
+  {
+   "file": "app/Sources/UI/Kit/ShellViews.swift",
+   "text": "LB",
+   "lines": [
+    108
+   ],
+   "contexts": [
+    "if showHints { ShoulderGlyph(text: ControllerInput.shared.kind.glyph(\"LB\")) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3299"
+  },
+  {
+   "file": "app/Sources/UI/Kit/ShellViews.swift",
+   "text": "RB",
+   "lines": [
+    110
+   ],
+   "contexts": [
+    "if showHints { ShoulderGlyph(text: ControllerInput.shared.kind.glyph(\"RB\")) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3300"
+  },
+  {
+   "file": "app/Sources/UI/Kit/ShellViews.swift",
+   "text": "Help for this screen",
+   "lines": [
+    132
+   ],
+   "contexts": [
+    ".accessibilityLabel(\"Help for this screen\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3301"
+  },
+  {
+   "file": "app/Sources/UI/Kit/StoreTile.swift",
+   "text": "\\(percent)",
+   "lines": [
+    24
+   ],
+   "contexts": [
+    "Text(\"\\(percent)\").font(.system(size: size * 0.34, weight: .heavy, design: .rounded).monospacedDigit()).foregroundStyle(.white)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3302"
+  },
+  {
+   "file": "app/Sources/UI/Kit/StoreTile.swift",
+   "text": "Downloading \\(percent) percent",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    ".accessibilityElement(children: .ignore).accessibilityLabel(\"Downloading \\(percent) percent\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3303"
+  },
+  {
+   "file": "app/Sources/UI/Kit/StoreTile.swift",
+   "text": "Done",
+   "lines": [
+    80
+   ],
+   "contexts": [
+    "PillButton(id: \"ss-done\", title: \"Done\", symbol: \"xmark\", action: close)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3304"
+  },
+  {
+   "file": "app/Sources/UI/Kit/StoresHub.swift",
+   "text": "More stores will show up here as Porthole learns them.",
+   "lines": [
+    64
+   ],
+   "contexts": [
+    "Text(\"More stores will show up here as Porthole learns them.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.top, 2)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3305"
+  },
+  {
+   "file": "app/Sources/UI/Kit/StoresHub.swift",
+   "text": "Stores",
+   "lines": [
+    72
+   ],
+   "contexts": [
+    "Text(\"Stores\").font(.system(size: tight ? 28 : 34, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3306"
+  },
+  {
+   "file": "app/Sources/UI/Kit/StoresHub.swift",
+   "text": "Sign in to a store and its games show up here, ready to download.",
+   "lines": [
+    73
+   ],
+   "contexts": [
+    "Text(connected == 0 ? \"Sign in to a store and its games show up here, ready to download.\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3307"
+  },
+  {
+   "file": "app/Sources/UI/Kit/StoresHub.swift",
+   "text": "\\(connected) of \\(cards.count) stores connected. Open one to see its library.",
+   "lines": [
+    74
+   ],
+   "contexts": [
+    ": \"\\(connected) of \\(cards.count) stores connected. Open one to see its library.\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3308"
+  },
+  {
+   "file": "app/Sources/UI/Kit/StoresHub.swift",
+   "text": "All games",
+   "lines": [
+    85
+   ],
+   "contexts": [
+    "Text(\"All games\").font(.system(size: 22, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3309"
+  },
+  {
+   "file": "app/Sources/UI/Kit/StoresHub.swift",
+   "text": "No games yet",
+   "lines": [
+    87,
+    155
+   ],
+   "contexts": [
+    "Text(\"No games yet\").font(.system(size: 14, design: .rounded)).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3310"
+  },
+  {
+   "file": "app/Sources/UI/Kit/StoresHub.swift",
+   "text": "\\(totalGames)",
+   "lines": [
+    90
+   ],
+   "contexts": [
+    "stat(\"\\(totalGames)\", totalGames == 1 ? \"game\" : \"games\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3311"
+  },
+  {
+   "file": "app/Sources/UI/Kit/StoresHub.swift",
+   "text": "\\(totalInstalled)",
+   "lines": [
+    91
+   ],
+   "contexts": [
+    "stat(\"\\(totalInstalled)\", \"installed\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3312"
+  },
+  {
+   "file": "app/Sources/UI/Kit/StoresHub.swift",
+   "text": "Signed in as \\($0)",
+   "lines": [
+    129
+   ],
+   "contexts": [
+    "Text(card.signedIn ? (card.account.map { \"Signed in as \\($0)\" } ?? \"Signed in\") : \"Not signed in\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3313"
+  },
+  {
+   "file": "app/Sources/UI/Kit/StoresHub.swift",
+   "text": "Signed in",
+   "lines": [
+    129
+   ],
+   "contexts": [
+    "Text(card.signedIn ? (card.account.map { \"Signed in as \\($0)\" } ?? \"Signed in\") : \"Not signed in\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3314"
+  },
+  {
+   "file": "app/Sources/UI/Kit/StoresHub.swift",
+   "text": "Not signed in",
+   "lines": [
+    129
+   ],
+   "contexts": [
+    "Text(card.signedIn ? (card.account.map { \"Signed in as \\($0)\" } ?? \"Signed in\") : \"Not signed in\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3315"
+  },
+  {
+   "file": "app/Sources/UI/Kit/StoresHub.swift",
+   "text": "\\(card.games)",
+   "lines": [
+    158
+   ],
+   "contexts": [
+    "stat(\"\\(card.games)\", card.games == 1 ? \"game\" : \"games\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3316"
+  },
+  {
+   "file": "app/Sources/UI/Kit/StoresHub.swift",
+   "text": "\\(card.installed)",
+   "lines": [
+    159
+   ],
+   "contexts": [
+    "stat(\"\\(card.installed)\", \"installed\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3317"
+  },
+  {
+   "file": "app/Sources/UI/Kit/StoresHub.swift",
+   "text": "Downloading \\(Int(fraction * 100))%",
+   "lines": [
+    167
+   ],
+   "contexts": [
+    "Label(\"Downloading \\(Int(fraction * 100))%\", systemImage: \"arrow.down.circle.fill\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3318"
+  },
+  {
+   "file": "app/Sources/UI/Kit/StoresHub.swift",
+   "text": "Sign in to see your games",
+   "lines": [
+    175
+   ],
+   "contexts": [
+    "Text(\"Sign in to see your games\").font(.system(size: 14, design: .rounded)).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3319"
+  },
+  {
+   "file": "app/Sources/UI/Kit/StoresHub.swift",
+   "text": "Sign in",
+   "lines": [
+    177
+   ],
+   "contexts": [
+    "Text(\"Sign in\").font(.system(size: 13, weight: .heavy, design: .rounded)).foregroundStyle(Theme.onAccent)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3320"
+  },
+  {
+   "file": "app/Sources/UI/Kit/StoresHub.swift",
+   "text": "Downloads",
+   "lines": [
+    188
+   ],
+   "contexts": [
+    "Text(\"Downloads\").font(.system(size: 18, weight: .bold, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3321"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Theme.swift",
+   "text": "Deep Sea",
+   "lines": [
+    18
+   ],
+   "contexts": [
+    "Palette(id: \"deepsea\", name: \"Deep Sea\", bgTop: 0x1B2838, bgBottom: 0x0B121B, accent: 0x4CB8F5, accent2: 0x7A6CFF),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3322"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Theme.swift",
+   "text": "Aurora",
+   "lines": [
+    19
+   ],
+   "contexts": [
+    "Palette(id: \"aurora\", name: \"Aurora\", bgTop: 0x0A1D1C, bgBottom: 0x050F12, accent: 0x3DDC97, accent2: 0x4CC9F0),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3323"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Theme.swift",
+   "text": "Sunset",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "Palette(id: \"sunset\", name: \"Sunset\", bgTop: 0x25122B, bgBottom: 0x120A18, accent: 0xFF8A5B, accent2: 0xFF4D8D),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3324"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Theme.swift",
+   "text": "Ember",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "Palette(id: \"ember\", name: \"Ember\", bgTop: 0x2A1210, bgBottom: 0x130909, accent: 0xFF5A4F, accent2: 0xFFB020),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3325"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Theme.swift",
+   "text": "Orchid",
+   "lines": [
+    22
+   ],
+   "contexts": [
+    "Palette(id: \"orchid\", name: \"Orchid\", bgTop: 0x1D1233, bgBottom: 0x0D0817, accent: 0xC77DFF, accent2: 0x5AC8FA),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3326"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Theme.swift",
+   "text": "Graphite",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "Palette(id: \"graphite\", name: \"Graphite\", bgTop: 0x1B1D22, bgBottom: 0x0B0C0F, accent: 0xE5E7EB, accent2: 0x8B93A1),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3327"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Theme.swift",
+   "text": "Custom",
+   "lines": [
+    35
+   ],
+   "contexts": [
+    "return Palette(id: \"custom\", name: \"Custom\", bgTop: hexOf(h, min(0.55, max(s, 0.25)), 0.19), bgBottom: hexOf(h, min(0.6, max(s, 0.25)), 0.09),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3328"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Theme.swift",
+   "text": "Off",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "var title: String { switch self { case .off: \"Off\"; case .soft: \"Soft\"; case .strong: \"Strong\" } }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3329"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Theme.swift",
+   "text": "Soft",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "var title: String { switch self { case .off: \"Off\"; case .soft: \"Soft\"; case .strong: \"Strong\" } }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3330"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Theme.swift",
+   "text": "Strong",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "var title: String { switch self { case .off: \"Off\"; case .soft: \"Soft\"; case .strong: \"Strong\" } }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3331"
+  },
+  {
+   "file": "app/Sources/UI/LaunchOverlay.swift",
+   "text": "Back to launch screen",
+   "lines": [
+    16
+   ],
+   "contexts": [
+    "Label(\"Back to launch screen\", systemImage: \"rectangle.on.rectangle\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3332"
+  },
+  {
+   "file": "app/Sources/UI/Library/SteamPicker.swift",
+   "text": "Steam artwork",
+   "lines": [
+    16
+   ],
+   "contexts": [
+    "KitSheet(title: \"Steam artwork\", scope: scope, defaultFocus: results.first.map { \"sp-\\($0.id)\" } ?? \"sp-search\", close: { dismiss() }) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3333"
+  },
+  {
+   "file": "app/Sources/UI/Library/SteamPicker.swift",
+   "text": "Game name",
+   "lines": [
+    19
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"sp-search\", symbol: \"magnifyingglass\", title: \"Game name\", placeholder: \"Search Steam\", text: $term)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3334"
+  },
+  {
+   "file": "app/Sources/UI/Library/SteamPicker.swift",
+   "text": "Search Steam",
+   "lines": [
+    19
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"sp-search\", symbol: \"magnifyingglass\", title: \"Game name\", placeholder: \"Search Steam\", text: $term)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3335"
+  },
+  {
+   "file": "app/Sources/UI/Library/SteamPicker.swift",
+   "text": "Searching\\u{2026}",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "PillButton(id: \"sp-go\", title: searching ? \"Searching\\u{2026}\" : \"Search\", symbol: \"magnifyingglass\", style: .primary, enabled: !searching) { Task { await run() } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3336"
+  },
+  {
+   "file": "app/Sources/UI/Library/SteamPicker.swift",
+   "text": "Search",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "PillButton(id: \"sp-go\", title: searching ? \"Searching\\u{2026}\" : \"Search\", symbol: \"magnifyingglass\", style: .primary, enabled: !searching) { Task { await run() } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3337"
+  },
+  {
+   "file": "app/Sources/UI/Library/SteamPicker.swift",
+   "text": "Pick the match",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Pick the match\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3338"
+  },
+  {
+   "file": "app/Sources/UI/Library/SteamPicker.swift",
+   "text": "No results.",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "Text(\"No results.\").foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3339"
+  },
+  {
+   "file": "app/Sources/UI/Library/SteamPicker.swift",
+   "text": "No artwork",
+   "lines": [
+    34
+   ],
+   "contexts": [
+    "ActionRow(id: \"sp-none\", symbol: \"photo.badge.minus\", title: \"No artwork\", chevron: false) { onPick(nil); dismiss() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3340"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "Pair this device",
+   "lines": [
+    13
+   ],
+   "contexts": [
+    "KitSheet(title: \"Pair this device\", closeTitle: \"Done\", closeSymbol: \"checkmark\", scope: scope, defaultFocus: \"pair-main\", close: { if pairing.isRunning { pairing.cancel() }; dismiss() }) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3341"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "Done",
+   "lines": [
+    13,
+    93
+   ],
+   "contexts": [
+    "KitSheet(title: \"Pair this device\", closeTitle: \"Done\", closeSymbol: \"checkmark\", scope: scope, defaultFocus: \"pair-main\", close: { if pairing.isRunning { pairing.cancel() }; dismiss() }) {",
+    "case .success: PillButton(id: \"pair-main\", title: \"Done\", symbol: \"checkmark\", style: .primary) { dismiss() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3342"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "That try didn't work: \\(note)",
+   "lines": [
+    19
+   ],
+   "contexts": [
+    "if let note = pairing.note { Text(\"That try didn't work: \\(note)\").font(.footnote).foregroundStyle(Theme.warn).padding(.horizontal, 6) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3343"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "Needs iOS 27+",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "Text(\"Needs iOS 27+\").font(.footnote).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3344"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "Before you start",
+   "lines": [
+    24
+   ],
+   "contexts": [
+    "InfoButton(id: \"pair-info\", title: \"Before you start\", text: \"Needs iOS 27 or later, Wi-Fi turned on, and the Local Network permission (iOS asks the first time).\\n\\n\\(PairingCredits.text)\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3345"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "Needs iOS 27 or later, Wi-Fi turned on, and the Local Network permission (iOS asks the first time).\\n\\n\\(PairingCredits.text)",
+   "lines": [
+    24
+   ],
+   "contexts": [
+    "InfoButton(id: \"pair-info\", title: \"Before you start\", text: \"Needs iOS 27 or later, Wi-Fi turned on, and the Local Network permission (iOS asks the first time).\\n\\n\\(PairingCredits.text)\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3346"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "Troubleshooting",
+   "lines": [
+    35
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Troubleshooting\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3347"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "Show details",
+   "lines": [
+    36
+   ],
+   "contexts": [
+    "ToggleRow(id: \"pair-details\", symbol: \"ladybug.fill\", title: \"Show details\", isOn: $showDetails)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3348"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "Copy",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    "ActionRow(id: \"pair-copy\", symbol: \"doc.on.doc\", title: \"Copy\", chevron: false) { UIPasteboard.general.string = pairing.trace.joined(separator: \"\\n\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3349"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "Needs iOS 27 or later",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "ValueRow(id: \"pair-unsupported\", symbol: \"exclamationmark.triangle.fill\", title: \"Needs iOS 27 or later\", value: \"\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3350"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "On older versions",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "RowBase(id: \"pair-older\", symbol: \"desktopcomputer\", title: \"On older versions\", subtitle: \"Make the file on a computer\", info: \"A pairing file has to be made on a computer with a pairing tool such as iloader or Jitterbug, then moved to this iPhone.\", action: {}) { EmptyView() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3351"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "Make the file on a computer",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "RowBase(id: \"pair-older\", symbol: \"desktopcomputer\", title: \"On older versions\", subtitle: \"Make the file on a computer\", info: \"A pairing file has to be made on a computer with a pairing tool such as iloader or Jitterbug, then moved to this iPhone.\", action: {}) { EmptyView() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3352"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "A pairing file has to be made on a computer with a pairing tool such as iloader or Jitterbug, then moved to this iPhone.",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "RowBase(id: \"pair-older\", symbol: \"desktopcomputer\", title: \"On older versions\", subtitle: \"Make the file on a computer\", info: \"A pairing file has to be made on a computer with a pairing tool such as iloader or Jitterbug, then moved to this iPhone.\", action: {}) { EmptyView() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3353"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "Press Start. Allow finding devices if iOS asks.",
+   "lines": [
+    53
+   ],
+   "contexts": [
+    "step(1, \"Press Start. Allow finding devices if iOS asks.\", active: pairing.phase == .idle || pairing.phase == .starting)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3354"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "Settings \\u{203A} Privacy & Security \\u{203A} Developer Mode \\u{203A} \\u{201C}Pair with \\(OnDevicePairing.hostName)\\u{201D}",
+   "lines": [
+    54
+   ],
+   "contexts": [
+    "step(2, \"Settings \\u{203A} Privacy & Security \\u{203A} Developer Mode \\u{203A} \\u{201C}Pair with \\(OnDevicePairing.hostName)\\u{201D}\", active: pairing.phase == .waiting)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3355"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "Type the six digits shown here",
+   "lines": [
+    55
+   ],
+   "contexts": [
+    "step(3, \"Type the six digits shown here\", active: isShowingPIN)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3356"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "Come back. The file is saved for you.",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    "step(4, \"Come back. The file is saved for you.\", active: isDone)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3357"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "\\(n)",
+   "lines": [
+    62
+   ],
+   "contexts": [
+    "Text(\"\\(n)\").font(.footnote.weight(.bold)).foregroundStyle(active ? Theme.onAccent : Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3358"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "Starting\\u{2026}",
+   "lines": [
+    74
+   ],
+   "contexts": [
+    "case .starting: HStack(spacing: 10) { ProgressView().tint(Theme.accent); Text(\"Starting\\u{2026}\").foregroundStyle(Theme.textDim) }.padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3359"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "Ready. Open Settings and tap \\u{201C}Pair with \\(OnDevicePairing.hostName)\\u{201D}.",
+   "lines": [
+    76
+   ],
+   "contexts": [
+    "HStack(spacing: 10) { ProgressView().tint(Theme.accent); Text(\"Ready. Open Settings and tap \\u{201C}Pair with \\(OnDevicePairing.hostName)\\u{201D}.\").foregroundStyle(Theme.text) }.font(.subheadline).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3360"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "Type this code",
+   "lines": [
+    79
+   ],
+   "contexts": [
+    "Text(\"Type this code\").font(.footnote).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3361"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "Paired with \\(name.trimmingCharacters(in: .whitespaces)). The file is saved.",
+   "lines": [
+    83
+   ],
+   "contexts": [
+    "Label(\"Paired with \\(name.trimmingCharacters(in: .whitespaces)). The file is saved.\", systemImage: \"checkmark.circle.fill\").foregroundStyle(Theme.good).font(.subheadline.weight(.semibold)).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3362"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "Start",
+   "lines": [
+    91
+   ],
+   "contexts": [
+    "case .idle, .failed: PillButton(id: \"pair-main\", title: \"Start\", symbol: \"play.fill\", style: .primary) { pairing.start() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3363"
+  },
+  {
+   "file": "app/Sources/UI/PairOnDeviceView.swift",
+   "text": "Cancel",
+   "lines": [
+    92
+   ],
+   "contexts": [
+    "case .starting, .waiting, .showPIN: PillButton(id: \"pair-main\", title: \"Cancel\", symbol: \"xmark\") { pairing.cancel() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3364"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsLayouts.swift",
+   "text": "Search games",
+   "lines": [
+    38
+   ],
+   "contexts": [
+    "SearchField(id: \"rs-search\", prompt: \"Search games\", text: $query, minWidth: 200)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3365"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsLayouts.swift",
+   "text": "Not yet tested",
+   "lines": [
+    61
+   ],
+   "contexts": [
+    "var heroTitle = \"Not yet tested\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3366"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsLayouts.swift",
+   "text": "What people mention",
+   "lines": [
+    123
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"What people mention\") { TagCloud(tags: data.tags).padding(.horizontal, 4) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3367"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsLayouts.swift",
+   "text": "By device",
+   "lines": [
+    135
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"By device\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3368"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsLayouts.swift",
+   "text": "\\(d.reports)",
+   "lines": [
+    138
+   ],
+   "contexts": [
+    "HStack(spacing: 8) { CompatBadgePill(verdict: d.verdict, compact: true); Text(\"\\(d.reports)\").font(.footnote.monospacedDigit()).foregroundStyle(Theme.textDim) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3369"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsLayouts.swift",
+   "text": "Reports",
+   "lines": [
+    146
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Reports\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3370"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsLayouts.swift",
+   "text": "All",
+   "lines": [
+    148
+   ],
+   "contexts": [
+    "ReportsChip(id: \"v-all\", title: \"All\", on: verdictFilter == nil) { verdictFilter = nil }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3371"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsLayouts.swift",
+   "text": "My device",
+   "lines": [
+    152
+   ],
+   "contexts": [
+    "if hasDevice { ReportsChip(id: \"mine\", title: \"My device\", on: myDeviceOnly) { myDeviceOnly.toggle() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3372"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsLayouts.swift",
+   "text": "Details",
+   "lines": [
+    153
+   ],
+   "contexts": [
+    "ReportsChip(id: \"detail\", title: \"Details\", on: showDetail) { showDetail.toggle() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3373"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsLayouts.swift",
+   "text": "Show more",
+   "lines": [
+    161
+   ],
+   "contexts": [
+    "else if data.canLoadMore { ActionRow(id: \"cg-more\", symbol: \"ellipsis.circle\", title: \"Show more\", chevron: false) { more() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3374"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsLayouts.swift",
+   "text": "Earlier versions",
+   "lines": [
+    164
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Earlier versions\", note: \"Sent from older versions of the game engine. They are kept for reference and do not count toward the verdict.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3375"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsLayouts.swift",
+   "text": "Press to read the whole report: what was measured, the device and settings, and their note. You can flag it from there.",
+   "lines": [
+    173
+   ],
+   "contexts": [
+    "info: \"Press to read the whole report: what was measured, the device and settings, and their note. You can flag it from there.\", action: { openReport(line.id) }) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3376"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsParts.swift",
+   "text": "\\(count)",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "if let count { Text(\"\\(count)\").monospacedDigit().opacity(0.75) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3377"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsParts.swift",
+   "text": "rs-chip-\\(id)",
+   "lines": [
+    57
+   ],
+   "contexts": [
+    ".focusTarget(\"rs-chip-\\(id)\", radius: 19, scale: 1.06, action: action)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3378"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsParts.swift",
+   "text": "On \\(yourDevice.name)",
+   "lines": [
+    131
+   ],
+   "contexts": [
+    "Text(\"On \\(yourDevice.name)\").font(.system(size: 15, weight: .semibold, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3379"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsParts.swift",
+   "text": "\\(count) \\(word)",
+   "lines": [
+    146
+   ],
+   "contexts": [
+    "Text(\"\\(count) \\(word)\").font(.system(size: 14, weight: .semibold, design: .rounded)).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3380"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsParts.swift",
+   "text": "\\(tags[i].count)",
+   "lines": [
+    160
+   ],
+   "contexts": [
+    "Text(\"\\(tags[i].count)\").monospacedDigit().foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3381"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsParts.swift",
+   "text": "Their note",
+   "lines": [
+    218
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Their note\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3382"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsParts.swift",
+   "text": "\\u{201C}\\(comment)\\u{201D}",
+   "lines": [
+    219
+   ],
+   "contexts": [
+    "Text(\"\\u{201C}\\(comment)\\u{201D}\").font(.system(size: 16, design: .rounded)).foregroundStyle(Theme.text).textSelection(.enabled)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3383"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsParts.swift",
+   "text": "They mentioned",
+   "lines": [
+    226
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"They mentioned\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3384"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Reports",
+   "lines": [
+    35,
+    84
+   ],
+   "contexts": [
+    "PillButton(id: \"rs-back\", title: \"Reports\", symbol: \"chevron.left\") { self.open = nil }.padding(.horizontal, 24).padding(.top, 8)",
+    "PageScaffold(title: \"Reports\", symbol: \"checkmark.seal.fill\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3385"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Untitled game",
+   "lines": [
+    66
+   ],
+   "contexts": [
+    "return ReportsItem(id: summary.id, gameID: summary.id, title: summary.title ?? \"Untitled game\", reportCount: summary.reportCount, lastReport: summary.lastReport, badge: summary.badge, libraryID: mine?.id)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3386"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "\\(earlier) earlier report\\(earlier == 1 ? ",
+   "lines": [
+    73,
+    328
+   ],
+   "contexts": [
+    "if earlier > 0 { return \"\\(earlier) earlier report\\(earlier == 1 ? \"\" : \"s\"). None on this version yet: report how it runs now.\" }",
+    "d.heroDetail = \"\\(earlier) earlier report\\(earlier == 1 ? \"\" : \"s\"), none on this version\""
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3387"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "). None on this version yet: report how it runs now.",
+   "lines": [
+    73
+   ],
+   "contexts": [
+    "if earlier > 0 { return \"\\(earlier) earlier report\\(earlier == 1 ? \"\" : \"s\"). None on this version yet: report how it runs now.\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3388"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Not tested on this version yet. Be the first to report.",
+   "lines": [
+    74
+   ],
+   "contexts": [
+    "return \"Not tested on this version yet. Be the first to report.\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3389"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "No reports yet",
+   "lines": [
+    76,
+    115,
+    334
+   ],
+   "contexts": [
+    "if item.reportCount == 0 { return \"No reports yet\" }",
+    "if s.total == 0 { return ownGames ? \"No games yet\" : \"No reports yet\" }",
+    "d.heroTitle = \"Not yet tested\"; d.heroDetail = \"No reports yet\""
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3390"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "\\(item.reportCount) report\\(item.reportCount == 1 ? ",
+   "lines": [
+    77
+   ],
+   "contexts": [
+    "var text = \"\\(item.reportCount) report\\(item.reportCount == 1 ? \"\" : \"s\")\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3391"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": " \\u{00B7} latest \\(CompatDeviceInfo.date(last))",
+   "lines": [
+    78
+   ],
+   "contexts": [
+    "if let last = item.lastReport { text += \" \\u{00B7} latest \\(CompatDeviceInfo.date(last))\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3392"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": " : query)",
+   "lines": [
+    94
+   ],
+   "contexts": [
+    ".task(id: \"\\(section.rawValue)|\\(bulk ? \"bulk\" : \"page\")|\\(order.rawValue)|\\(bulk ? \"\" : query)\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3393"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "No games yet",
+   "lines": [
+    115
+   ],
+   "contexts": [
+    "if s.total == 0 { return ownGames ? \"No games yet\" : \"No reports yet\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3394"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "\\(s.great) of \\(s.total) of your games work great",
+   "lines": [
+    116
+   ],
+   "contexts": [
+    "if ownGames { return \"\\(s.great) of \\(s.total) of your games work great\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3395"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "\\(s.great) of \\(s.total) reported games work great",
+   "lines": [
+    117
+   ],
+   "contexts": [
+    "return loadedAll || bulk ? \"\\(s.great) of \\(s.total) reported games work great\" : \"\\(s.great) of the first \\(s.total) work great\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3396"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "\\(s.great) of the first \\(s.total) work great",
+   "lines": [
+    117
+   ],
+   "contexts": [
+    "return loadedAll || bulk ? \"\\(s.great) of \\(s.total) reported games work great\" : \"\\(s.great) of the first \\(s.total) work great\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3397"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Add a game to see how it runs.",
+   "lines": [
+    121
+   ],
+   "contexts": [
+    "if s.total == 0 { return ownGames ? \"Add a game to see how it runs.\" : \"Nobody has sent a report yet.\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3398"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Nobody has sent a report yet.",
+   "lines": [
+    121
+   ],
+   "contexts": [
+    "if s.total == 0 { return ownGames ? \"Add a game to see how it runs.\" : \"Nobody has sent a report yet.\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3399"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "\\(s.tested) tested on this version of the engine \\u{00B7} \\(s.untested) not yet tested.",
+   "lines": [
+    123
+   ],
+   "contexts": [
+    "var text = \"\\(s.tested) tested on this version of the engine \\u{00B7} \\(s.untested) not yet tested.\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3400"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": " Open one to report how it runs.",
+   "lines": [
+    124
+   ],
+   "contexts": [
+    "if s.untested > 0 { text += \" Open one to report how it runs.\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3401"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "\\(s.tested) with a verdict on this version \\u{00B7} \\(s.untested) not yet tested on it.",
+   "lines": [
+    127
+   ],
+   "contexts": [
+    "return \"\\(s.tested) with a verdict on this version \\u{00B7} \\(s.untested) not yet tested on it.\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3402"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Showing the list saved on \\(cachedOn.formatted(date: .abbreviated, time: .omitted)). A connection is needed to refresh it.",
+   "lines": [
+    132
+   ],
+   "contexts": [
+    "Label(\"Showing the list saved on \\(cachedOn.formatted(date: .abbreviated, time: .omitted)). A connection is needed to refresh it.\", systemImage: \"wifi.slash\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3403"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Showing the first \\(total) games. Search to narrow the list.",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "if truncated { Text(\"Showing the first \\(total) games. Search to narrow the list.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3404"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "this list needs a connection",
+   "lines": [
+    141
+   ],
+   "contexts": [
+    "else { OfflineChip(detail: \"this list needs a connection\").padding(.horizontal, 6) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3405"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "The reports are stored on a home server, so they can be unavailable while it is off.",
+   "lines": [
+    142
+   ],
+   "contexts": [
+    "Text(\"The reports are stored on a home server, so they can be unavailable while it is off.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3406"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Try again",
+   "lines": [
+    143,
+    287
+   ],
+   "contexts": [
+    "ActionRow(id: \"rs-retry\", symbol: \"arrow.clockwise\", title: \"Try again\", chevron: false) { Task { await reload() } }",
+    "ActionRow(id: \"cg-retry\", symbol: \"arrow.clockwise\", title: \"Try again\", chevron: false) { Task { await reload() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3407"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "No game matches \\u{201C}\\(query)\\u{201D}.",
+   "lines": [
+    153
+   ],
+   "contexts": [
+    "if !query.isEmpty { return \"No game matches \\u{201C}\\(query)\\u{201D}.\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3408"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "No game is marked \\u{201C}\\(filter.title)\\u{201D}.",
+   "lines": [
+    154
+   ],
+   "contexts": [
+    "if filter != .all { return \"No game is marked \\u{201C}\\(filter.title)\\u{201D}.\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3409"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Add a game to the library and it appears here.",
+   "lines": [
+    155
+   ],
+   "contexts": [
+    "return ownGames ? \"Add a game to the library and it appears here.\" : \"No reports have been sent yet.\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3410"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "No reports have been sent yet.",
+   "lines": [
+    155
+   ],
+   "contexts": [
+    "return ownGames ? \"Add a game to the library and it appears here.\" : \"No reports have been sent yet.\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3411"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "\\(mine.count) report\\(mine.count == 1 ? ",
+   "lines": [
+    212
+   ],
+   "contexts": [
+    "SettingsGroup(title: mine.isEmpty ? nil : \"\\(mine.count) report\\(mine.count == 1 ? \"\" : \"s\") sent\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3412"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": ") sent",
+   "lines": [
+    212
+   ],
+   "contexts": [
+    "SettingsGroup(title: mine.isEmpty ? nil : \"\\(mine.count) report\\(mine.count == 1 ? \"\" : \"s\") sent\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3413"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "Press a report to delete it from the server. Reports carry a random key kept on this device, not your name, and the game's log, which only the developer can read.",
+   "lines": [
+    213
+   ],
+   "contexts": [
+    "note: \"Press a report to delete it from the server. Reports carry a random key kept on this device, not your name, and the game's log, which only the developer can read.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3414"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "\\(compat.queuedCount) report\\(compat.queuedCount == 1 ? ",
+   "lines": [
+    215
+   ],
+   "contexts": [
+    "Label(\"\\(compat.queuedCount) report\\(compat.queuedCount == 1 ? \"\" : \"s\") waiting to be sent.\", systemImage: \"clock.arrow.circlepath\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3415"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": ") waiting to be sent.",
+   "lines": [
+    215
+   ],
+   "contexts": [
+    "Label(\"\\(compat.queuedCount) report\\(compat.queuedCount == 1 ? \"\" : \"s\") waiting to be sent.\", systemImage: \"clock.arrow.circlepath\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3416"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "\\(r.device) \\u{00B7} \\(CompatDeviceInfo.date(r.date))\\(r.hidden ? ",
+   "lines": [
+    221
+   ],
+   "contexts": [
+    "subtitle: \"\\(r.device) \\u{00B7} \\(CompatDeviceInfo.date(r.date))\\(r.hidden ? \" \\u{00B7} hidden\" : \"\")\\(Self.statusText(r.status))\" + (r.comment.map { $0.isEmpty ? \"\" : \"\\n\\u{201C}\\($0)\\u{201D}\" } ?? \"\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3417"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": ")\\(Self.statusText(r.status))",
+   "lines": [
+    221
+   ],
+   "contexts": [
+    "subtitle: \"\\(r.device) \\u{00B7} \\(CompatDeviceInfo.date(r.date))\\(r.hidden ? \" \\u{00B7} hidden\" : \"\")\\(Self.statusText(r.status))\" + (r.comment.map { $0.isEmpty ? \"\" : \"\\n\\u{201C}\\($0)\\u{201D}\" } ?? \"\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3418"
+  },
+  {
+   "file": "app/Sources/UI/Reports/ReportsScreen.swift",
+   "text": "\\n\\u{201C}\\($0)\\u{201D}",
+   "lines": [
+    221
+   ],
+   "contexts": [
+    "subtitle: \"\\(r.device) \\u{00B7} \\(CompatDeviceInfo.date(r.date))\\(r.hidden ? \" \\u{00B7} hidden\" : \"\")\\(Self.statusText(r.status))\" + (r.comment.map { $0.isEmpty ? \"\" : \"\\n\\u{201C}\\($0)\\u{201D}\" } ?? \"\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3419"
+  }
+ ]
+}

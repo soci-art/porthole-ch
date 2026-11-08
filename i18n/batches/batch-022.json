@@ -1,0 +1,2923 @@
+{
+ "batch": 22,
+ "units": [
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "hourglass",
+   "lines": [
+    134
+   ],
+   "contexts": [
+    "private func symbol(_ e: ProblemEntry) -> String { e.status == \"fixed\" ? \"checkmark.seal.fill\" : e.status == \"reviewed\" ? \"eye.fill\" : \"hourglass\" }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3780"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "open",
+   "lines": [
+    137,
+    187
+   ],
+   "contexts": [
+    "let base = e.status == \"open\" ? \"Waiting to be looked at\" : e.status == \"reviewed\" ? \"Looked at\" : \"Fixed\"",
+    "Text(entry.status == \"open\" ? \"Nobody has answered yet. When the maintainer looks at it, the status and a note appear here.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3781"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Waiting to be looked at",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "let base = e.status == \"open\" ? \"Waiting to be looked at\" : e.status == \"reviewed\" ? \"Looked at\" : \"Fixed\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3782"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Looked at",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "let base = e.status == \"open\" ? \"Waiting to be looked at\" : e.status == \"reviewed\" ? \"Looked at\" : \"Fixed\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3783"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "\\(base) \\u{00B7} sent \\(date)",
+   "lines": [
+    138
+   ],
+   "contexts": [
+    "return e.note.isEmpty ? \"\\(base) \\u{00B7} sent \\(date)\" : \"\\(e.note)  \\u{00B7} sent \\(date)\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3784"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "\\(e.note)  \\u{00B7} sent \\(date)",
+   "lines": [
+    138
+   ],
+   "contexts": [
+    "return e.note.isEmpty ? \"\\(base) \\u{00B7} sent \\(date)\" : \"\\(e.note)  \\u{00B7} sent \\(date)\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3785"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Fixed in \\(entry.fixedIn)",
+   "lines": [
+    153
+   ],
+   "contexts": [
+    "case \"fixed\": entry.fixedIn.isEmpty ? \"Fixed\" : \"Fixed in \\(entry.fixedIn)\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3786"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Open: waiting to be looked at",
+   "lines": [
+    155
+   ],
+   "contexts": [
+    "default: \"Open: waiting to be looked at\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3787"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Your report",
+   "lines": [
+    164
+   ],
+   "contexts": [
+    "Text(\"Your report\").font(.system(size: 26, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3788"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Close",
+   "lines": [
+    166
+   ],
+   "contexts": [
+    "PillButton(id: \"pe-close\", title: \"Close\", symbol: \"xmark\", action: close)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3789"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "From the maintainer",
+   "lines": [
+    179
+   ],
+   "contexts": [
+    "Label(\"From the maintainer\", systemImage: \"text.bubble.fill\").font(.system(size: 14, weight: .heavy, design: .rounded)).foregroundStyle(Theme.accent)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3790"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Nobody has answered yet. When the maintainer looks at it, the status and a note appear here.",
+   "lines": [
+    187
+   ],
+   "contexts": [
+    "Text(entry.status == \"open\" ? \"Nobody has answered yet. When the maintainer looks at it, the status and a note appear here.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3791"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "The maintainer marked it without a note.",
+   "lines": [
+    188
+   ],
+   "contexts": [
+    ": \"The maintainer marked it without a note.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3792"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "What you sent",
+   "lines": [
+    191
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"What you sent\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3793"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "(no description, only the log)",
+   "lines": [
+    192
+   ],
+   "contexts": [
+    "Text(entry.description.isEmpty ? \"(no description, only the log)\" : entry.description)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3794"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "\\(entry.version) (\\(entry.build))",
+   "lines": [
+    197
+   ],
+   "contexts": [
+    "ValueRow(id: \"pe-ver\", symbol: \"app.badge.fill\", title: \"Porthole\", value: \"\\(entry.version) (\\(entry.build))\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3795"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Sent",
+   "lines": [
+    198
+   ],
+   "contexts": [
+    "ValueRow(id: \"pe-sent\", symbol: \"paperplane.fill\", title: \"Sent\", value: entry.created.formatted(date: .abbreviated, time: .shortened))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3796"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Answered",
+   "lines": [
+    199
+   ],
+   "contexts": [
+    "if entry.status != \"open\" { ValueRow(id: \"pe-upd\", symbol: \"clock.fill\", title: \"Answered\", value: entry.updated.formatted(date: .abbreviated, time: .shortened)) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3797"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Withdraw this report",
+   "lines": [
+    202
+   ],
+   "contexts": [
+    "ActionRow(id: \"pe-withdraw\", symbol: \"trash\", title: \"Withdraw this report\", destructive: true, chevron: false) { confirm = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3798"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Withdraw this report?",
+   "lines": [
+    214
+   ],
+   "contexts": [
+    ".confirm(\"Withdraw this report?\", message: \"It is deleted from the server.\", confirmTitle: \"Withdraw\", destructive: true, isPresented: $confirm) { withdraw() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3799"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "It is deleted from the server.",
+   "lines": [
+    214
+   ],
+   "contexts": [
+    ".confirm(\"Withdraw this report?\", message: \"It is deleted from the server.\", confirmTitle: \"Withdraw\", destructive: true, isPresented: $confirm) { withdraw() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3800"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Withdraw",
+   "lines": [
+    214
+   ],
+   "contexts": [
+    ".confirm(\"Withdraw this report?\", message: \"It is deleted from the server.\", confirmTitle: \"Withdraw\", destructive: true, isPresented: $confirm) { withdraw() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3801"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "Saves",
+   "lines": [
+    18
+   ],
+   "contexts": [
+    "PageScaffold(title: \"Saves\", symbol: \"externaldrive.badge.icloud\", subtitle: \"Backups of your games' saves\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3802"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "Backups of your games' saves",
+   "lines": [
+    18
+   ],
+   "contexts": [
+    "PageScaffold(title: \"Saves\", symbol: \"externaldrive.badge.icloud\", subtitle: \"Backups of your games' saves\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3803"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "Backup",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Backup\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3804"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "Back up saves",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "ActionRow(id: \"sv-backup\", symbol: \"square.and.arrow.up\", title: \"Back up saves\", subtitle: busy ? \"Working\\u{2026}\" : \"Every game's saves and settings in one zip\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3805"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "Working\\u{2026}",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "ActionRow(id: \"sv-backup\", symbol: \"square.and.arrow.up\", title: \"Back up saves\", subtitle: busy ? \"Working\\u{2026}\" : \"Every game's saves and settings in one zip\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3806"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "Every game's saves and settings in one zip",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "ActionRow(id: \"sv-backup\", symbol: \"square.and.arrow.up\", title: \"Back up saves\", subtitle: busy ? \"Working\\u{2026}\" : \"Every game's saves and settings in one zip\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3807"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "One zip of every Windows user's Documents, Saved Games and AppData (caches and Steam's own files left out), to keep in Files or iCloud Drive. A prefix reset or a reinstall takes saves with it; a backup does not.",
+   "lines": [
+    22
+   ],
+   "contexts": [
+    "info: \"One zip of every Windows user's Documents, Saved Games and AppData (caches and Steam's own files left out), to keep in Files or iCloud Drive. A prefix reset or a reinstall takes saves with it; a backup does not.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3808"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "Restore saves from a backup\\u{2026}",
+   "lines": [
+    24
+   ],
+   "contexts": [
+    "ActionRow(id: \"sv-restore\", symbol: \"arrow.uturn.backward.circle\", title: \"Restore saves from a backup\\u{2026}\", chevron: false) { picking = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3809"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "Restore saves from \\(pendingRestore?.lastPathComponent ?? ",
+   "lines": [
+    37
+   ],
+   "contexts": [
+    ".confirm(\"Restore saves from \\(pendingRestore?.lastPathComponent ?? \"the backup\")?\", message: \"Files with the same names in C:\\\\users are overwritten.\", confirmTitle: \"Restore\", destructive: true,"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3810"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "Restore",
+   "lines": [
+    37,
+    48
+   ],
+   "contexts": [
+    ".confirm(\"Restore saves from \\(pendingRestore?.lastPathComponent ?? \"the backup\")?\", message: \"Files with the same names in C:\\\\users are overwritten.\", confirmTitle: \"Restore\", destructive: true,",
+    "subtitle: ByteCountFormatter.string(fromByteCount: entry.bytes, countStyle: .file), detail: \"Restore\", chevron: false) { pendingRestore = entry.url }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3811"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "Automatic backups",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Automatic backups\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3812"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "Back up after each game",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "ToggleRow(id: \"sv-auto\", symbol: \"clock.arrow.circlepath\", title: \"Back up after each game\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3813"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "When a game ends, your saves and settings are zipped into Files > Porthole > Saves backups. The newest five are kept, and nothing is written when nothing has changed, when the saves are over 150 MB, or when the phone is nearly out of space.",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "info: \"When a game ends, your saves and settings are zipped into Files > Porthole > Saves backups. The newest five are kept, and nothing is written when nothing has changed, when the saves are over 150 MB, or when the phone is nearly out of space.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3814"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "No automatic backups yet. The first one is made when a game ends.",
+   "lines": [
+    50
+   ],
+   "contexts": [
+    "if autoEntries.isEmpty { Text(autoOn ? \"No automatic backups yet. The first one is made when a game ends.\" : \"Automatic backups are off.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3815"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "Automatic backups are off.",
+   "lines": [
+    50
+   ],
+   "contexts": [
+    "if autoEntries.isEmpty { Text(autoOn ? \"No automatic backups yet. The first one is made when a game ends.\" : \"Automatic backups are off.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3816"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "Back up now",
+   "lines": [
+    51
+   ],
+   "contexts": [
+    "ActionRow(id: \"sv-auto-now\", symbol: \"arrow.clockwise.circle\", title: \"Back up now\", chevron: false) { runAutomatic() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3817"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "Delete the automatic backups",
+   "lines": [
+    52
+   ],
+   "contexts": [
+    "if !autoEntries.isEmpty { ActionRow(id: \"sv-auto-del\", symbol: \"trash\", title: \"Delete the automatic backups\", destructive: true, chevron: false) { confirmDeleteAuto = true } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3818"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "Delete the automatic backups?",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    ".confirm(\"Delete the automatic backups?\", message: \"This removes the backups in Saves backups. Your saves themselves are not touched.\", confirmTitle: \"Delete\", destructive: true, isPresented: $confirmDeleteAuto) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3819"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "This removes the backups in Saves backups. Your saves themselves are not touched.",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    ".confirm(\"Delete the automatic backups?\", message: \"This removes the backups in Saves backups. Your saves themselves are not touched.\", confirmTitle: \"Delete\", destructive: true, isPresented: $confirmDeleteAuto) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3820"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "Delete",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    ".confirm(\"Delete the automatic backups?\", message: \"This removes the backups in Saves backups. Your saves themselves are not touched.\", confirmTitle: \"Delete\", destructive: true, isPresented: $confirmDeleteAuto) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3821"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "Deleted.",
+   "lines": [
+    57
+   ],
+   "contexts": [
+    "AutoBackup.deleteAll(); autoEntries = []; autoMessage = \"Deleted.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3822"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "Backing up\\u{2026}",
+   "lines": [
+    63
+   ],
+   "contexts": [
+    "busy = true; autoMessage = \"Backing up\\u{2026}\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3823"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "\\(b.files) files, \\(ByteCountFormatter.string(fromByteCount: Int64(b.bytes), countStyle: .file))",
+   "lines": [
+    79
+   ],
+   "contexts": [
+    "message = \"\\(b.files) files, \\(ByteCountFormatter.string(fromByteCount: Int64(b.bytes), countStyle: .file))\" + (b.leftOut > 0 ? \"; \\(b.leftOut) very large files left out\" : \"\")"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3824"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "; \\(b.leftOut) very large files left out",
+   "lines": [
+    79
+   ],
+   "contexts": [
+    "message = \"\\(b.files) files, \\(ByteCountFormatter.string(fromByteCount: Int64(b.bytes), countStyle: .file))\" + (b.leftOut > 0 ? \"; \\(b.leftOut) very large files left out\" : \"\")"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3825"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SavesPage.swift",
+   "text": "\\(n) files restored.",
+   "lines": [
+    95
+   ],
+   "contexts": [
+    "case .success(let n): message = \"\\(n) files restored.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3826"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Updates",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "PageScaffold(title: \"Updates\", symbol: \"arrow.triangle.2.circlepath\", subtitle: \"Keep Porthole up to date\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3827"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Keep Porthole up to date",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "PageScaffold(title: \"Updates\", symbol: \"arrow.triangle.2.circlepath\", subtitle: \"Keep Porthole up to date\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3828"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "This app",
+   "lines": [
+    33
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"This app\", note: \"The version you are on and whether a newer one is ready.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3829"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "The version you are on and whether a newer one is ready.",
+   "lines": [
+    33
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"This app\", note: \"The version you are on and whether a newer one is ready.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3830"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Installed",
+   "lines": [
+    34,
+    128
+   ],
+   "contexts": [
+    "ValueRow(id: \"up-version\", symbol: \"app.badge.fill\", title: \"Installed\", value: \"\\(updates.version) (\\(updates.build))\")",
+    "detail: isInstalled(release) ? \"Installed\" : (downloadingBuild == release.build ? \"\\(Int(downloadFraction * 100))%\" : nil)) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3831"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "\\(updates.version) (\\(updates.build))",
+   "lines": [
+    34,
+    77
+   ],
+   "contexts": [
+    "ValueRow(id: \"up-version\", symbol: \"app.badge.fill\", title: \"Installed\", value: \"\\(updates.version) (\\(updates.build))\")",
+    "SinceYourVersionSheet(installed: \"\\(updates.version) (\\(updates.build))\", releases: newer, canSign: updates.vault.canSign, busy: updates.pipeline.isBusy, scope: sinceScope,"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3832"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Check for updates",
+   "lines": [
+    36
+   ],
+   "contexts": [
+    "ActionRow(id: \"up-check\", symbol: \"arrow.clockwise\", title: \"Check for updates\", chevron: false) { Task { await updates.check() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3833"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Update to \\(release.title)",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    "ActionRow(id: \"up-install\", symbol: \"arrow.down.circle.fill\", title: \"Update to \\(release.title)\", subtitle: release.summary.isEmpty ? nil : release.summary, chevron: false) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3834"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Download \\(release.title)",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "ActionRow(id: \"up-install\", symbol: \"arrow.down.circle.fill\", title: \"Download \\(release.title)\", subtitle: release.summary.isEmpty ? \"The file, to install yourself\" : release.summary,"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3835"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "The file, to install yourself",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "ActionRow(id: \"up-install\", symbol: \"arrow.down.circle.fill\", title: \"Download \\(release.title)\", subtitle: release.summary.isEmpty ? \"The file, to install yourself\" : release.summary,"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3836"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "\\(Int(downloadFraction * 100))%",
+   "lines": [
+    44,
+    128
+   ],
+   "contexts": [
+    "detail: downloadingBuild == release.build ? \"\\(Int(downloadFraction * 100))%\" : nil, chevron: false) { download(release) }",
+    "detail: isInstalled(release) ? \"Installed\" : (downloadingBuild == release.build ? \"\\(Int(downloadFraction * 100))%\" : nil)) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3837"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Downloading",
+   "lines": [
+    47,
+    172
+   ],
+   "contexts": [
+    "if downloadingBuild != nil, !updates.vault.canSign { progressRow(\"Downloading\", downloadFraction) }",
+    "case .downloading(let p): progressRow(\"Downloading\", p)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3838"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Signing",
+   "lines": [
+    52,
+    173
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Signing\", note: \"The certificate and profile used to install and update. A free Apple account's signature lasts seven days.\") {",
+    "case .signing(let step): ValueRow(id: \"up-job\", symbol: \"signature\", title: \"Signing\", value: step)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3839"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "The certificate and profile used to install and update. A free Apple account's signature lasts seven days.",
+   "lines": [
+    52
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Signing\", note: \"The certificate and profile used to install and update. A free Apple account's signature lasts seven days.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3840"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Certificate",
+   "lines": [
+    54
+   ],
+   "contexts": [
+    "ActionRow(id: \"up-cert-\\(c.id)\", symbol: \"person.text.rectangle.fill\", title: c.label, subtitle: \"Certificate\", detail: \"Remove\", destructive: true, chevron: false) { updates.vault.removeCertificate(id: c.id) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3841"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Remove",
+   "lines": [
+    54,
+    57
+   ],
+   "contexts": [
+    "ActionRow(id: \"up-cert-\\(c.id)\", symbol: \"person.text.rectangle.fill\", title: c.label, subtitle: \"Certificate\", detail: \"Remove\", destructive: true, chevron: false) { updates.vault.removeCertificate(id: c.id) }",
+    "ActionRow(id: \"up-prof-\\(p.id)\", symbol: \"doc.badge.gearshape.fill\", title: p.profile.name, subtitle: profileDetail(p.profile), detail: \"Remove\", destructive: true, chevron: false) { updates.vault.removeProfile(id: p.id) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3842"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "\\(problem.subject): \\(problem.message)",
+   "lines": [
+    60
+   ],
+   "contexts": [
+    "Text(\"\\(problem.subject): \\(problem.message)\").font(.footnote).foregroundStyle(Theme.warn).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3843"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "What is this?",
+   "lines": [
+    62
+   ],
+   "contexts": [
+    "ActionRow(id: \"up-explain\", symbol: \"questionmark.circle.fill\", title: \"What is this?\", subtitle: \"Why the app needs a certificate and a profile to update itself\", chevron: false) { explaining = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3844"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Why the app needs a certificate and a profile to update itself",
+   "lines": [
+    62
+   ],
+   "contexts": [
+    "ActionRow(id: \"up-explain\", symbol: \"questionmark.circle.fill\", title: \"What is this?\", subtitle: \"Why the app needs a certificate and a profile to update itself\", chevron: false) { explaining = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3845"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Import a certificate (.p12)",
+   "lines": [
+    63
+   ],
+   "contexts": [
+    "ActionRow(id: \"up-import-cert\", symbol: \"square.and.arrow.down\", title: \"Import a certificate (.p12)\") { picking = .certificate }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3846"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Import a profile (.mobileprovision)",
+   "lines": [
+    64
+   ],
+   "contexts": [
+    "ActionRow(id: \"up-import-prof\", symbol: \"square.and.arrow.down\", title: \"Import a profile (.mobileprovision)\") { picking = .profile }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3847"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Certificate password",
+   "lines": [
+    93
+   ],
+   "contexts": [
+    ".alert(\"Certificate password\", isPresented: $askPassword) {"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3848"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Password",
+   "lines": [
+    94
+   ],
+   "contexts": [
+    "SecureField(\"Password\", text: $password)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3849"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Import",
+   "lines": [
+    95
+   ],
+   "contexts": [
+    "Button(\"Import\") { importCertificate() }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3850"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Cancel",
+   "lines": [
+    96
+   ],
+   "contexts": [
+    "Button(\"Cancel\", role: .cancel) { pendingP12 = nil; password = \"\" }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3851"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "The password you set when you exported the .p12.",
+   "lines": [
+    97
+   ],
+   "contexts": [
+    "} message: { Text(\"The password you set when you exported the .p12.\") }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3852"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Downloads",
+   "lines": [
+    108
+   ],
+   "contexts": [
+    "let url = try await client.download(release, to: FileStorage.cacheURL(\"Downloads\")) { fraction in Task { @MainActor in downloadFraction = fraction } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3853"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Versions",
+   "lines": [
+    124
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Versions\", note: \"Every build on the update server, so you can go back to an older one.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3854"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Every build on the update server, so you can go back to an older one.",
+   "lines": [
+    124
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Versions\", note: \"Every build on the update server, so you can go back to an older one.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3855"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Newer",
+   "lines": [
+    134
+   ],
+   "contexts": [
+    "PillButton(id: \"up-newer\", title: \"Newer\", symbol: \"chevron.left\", enabled: page > 0) { versionPage = page - 1 }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3856"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "\\(page * Self.perPage + 1)\\u{2013}\\(min((page + 1) * Self.perPage, releases.count)) of \\(releases.count)",
+   "lines": [
+    135
+   ],
+   "contexts": [
+    "Text(\"\\(page * Self.perPage + 1)\\u{2013}\\(min((page + 1) * Self.perPage, releases.count)) of \\(releases.count)\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3857"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Older",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "PillButton(id: \"up-older\", title: \"Older\", symbol: \"chevron.right\", enabled: page < pages - 1) { versionPage = page + 1 }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3858"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Tap a version to read what it added, changed and fixed, and to install it. Older versions are for when something stopped working.",
+   "lines": [
+    141
+   ],
+   "contexts": [
+    "? \"Tap a version to read what it added, changed and fixed, and to install it. Older versions are for when something stopped working.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3859"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Tap a version to read what it added, changed and fixed, and to download the file to install with your own tool. Older versions are for when something stopped working.",
+   "lines": [
+    142
+   ],
+   "contexts": [
+    ": \"Tap a version to read what it added, changed and fixed, and to download the file to install with your own tool. Older versions are for when something stopped working.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3860"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Every release is also published on GitHub, where you can download the files too.",
+   "lines": [
+    145
+   ],
+   "contexts": [
+    "Text(\"Every release is also published on GitHub, where you can download the files too.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3861"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Open the releases on GitHub",
+   "lines": [
+    146
+   ],
+   "contexts": [
+    "ActionRow(id: \"up-github\", symbol: \"arrow.up.right.square\", title: \"Open the releases on GitHub\", chevron: false) { UIApplication.shared.open(Self.releasesURL) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3862"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Status",
+   "lines": [
+    154,
+    156,
+    157,
+    163,
+    164
+   ],
+   "contexts": [
+    "case .loading?: ValueRow(id: \"up-status\", symbol: \"hourglass\", title: \"Status\", value: \"Checking\\u{2026}\")",
+    "if NetworkStatus.shared.isOnline { ValueRow(id: \"up-status\", symbol: \"exclamationmark.triangle.fill\", title: \"Status\", value: why, statusColor: Theme.bad) }",
+    "else { ValueRow(id: \"up-status\", symbol: \"wifi.slash\", title: \"Status\", value: \"Offline: it checks again when there is a connection\", statusColor: Theme.warn) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3863"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Checking\\u{2026}",
+   "lines": [
+    154
+   ],
+   "contexts": [
+    "case .loading?: ValueRow(id: \"up-status\", symbol: \"hourglass\", title: \"Status\", value: \"Checking\\u{2026}\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3864"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Offline: it checks again when there is a connection",
+   "lines": [
+    157
+   ],
+   "contexts": [
+    "else { ValueRow(id: \"up-status\", symbol: \"wifi.slash\", title: \"Status\", value: \"Offline: it checks again when there is a connection\", statusColor: Theme.warn) }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3865"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Update available",
+   "lines": [
+    161
+   ],
+   "contexts": [
+    "ActionRow(id: \"up-status\", symbol: \"sparkles\", tint: Theme.good, title: \"Update available\", subtitle: \"\\(release.title). Tap to see everything since \\(updates.version) (\\(updates.build)).\", chevron: true) { showingSince = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3866"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "\\(release.title). Tap to see everything since \\(updates.version) (\\(updates.build)).",
+   "lines": [
+    161
+   ],
+   "contexts": [
+    "ActionRow(id: \"up-status\", symbol: \"sparkles\", tint: Theme.good, title: \"Update available\", subtitle: \"\\(release.title). Tap to see everything since \\(updates.version) (\\(updates.build)).\", chevron: true) { showingSince = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3867"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Up to date",
+   "lines": [
+    163
+   ],
+   "contexts": [
+    "else { ValueRow(id: \"up-status\", symbol: \"checkmark.circle.fill\", title: \"Status\", value: \"Up to date\", statusColor: Theme.good) }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3868"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Not checked yet",
+   "lines": [
+    164
+   ],
+   "contexts": [
+    "default: ValueRow(id: \"up-status\", symbol: \"questionmark.circle\", title: \"Status\", value: \"Not checked yet\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3869"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "No certificate added, so new versions are downloaded as files. Add a certificate and a profile below to let the app update itself.",
+   "lines": [
+    166
+   ],
+   "contexts": [
+    "if !updates.vault.canSign { Text(\"No certificate added, so new versions are downloaded as files. Add a certificate and a profile below to let the app update itself.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3870"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Installed. The app restarts.",
+   "lines": [
+    175
+   ],
+   "contexts": [
+    "case .installed: ValueRow(id: \"up-job\", symbol: \"checkmark.circle.fill\", title: job.title, value: \"Installed. The app restarts.\", statusColor: Theme.good)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3871"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Signed, not installed",
+   "lines": [
+    177
+   ],
+   "contexts": [
+    "ValueRow(id: \"up-job\", symbol: \"checkmark.circle.fill\", title: job.title, value: \"Signed, not installed\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3872"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Save or share the signed file",
+   "lines": [
+    178
+   ],
+   "contexts": [
+    "ShareLink(item: file) { Label(\"Save or share the signed file\", systemImage: \"square.and.arrow.up\") }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3873"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Dismiss",
+   "lines": [
+    184
+   ],
+   "contexts": [
+    "if job.isFinished { ActionRow(id: \"up-job-dismiss\", symbol: \"xmark\", title: \"Dismiss\", chevron: false) { updates.pipeline.dismiss() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3874"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "\\(Int((fraction * 100).rounded()))%",
+   "lines": [
+    190
+   ],
+   "contexts": [
+    "HStack { Text(title).font(.system(size: 15, weight: .semibold, design: .rounded)).foregroundStyle(Theme.text); Spacer(); Text(\"\\(Int((fraction * 100).rounded()))%\").monospacedDigit().foregroundStyle(Theme.textDim) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3875"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Could not read that file.",
+   "lines": [
+    203
+   ],
+   "contexts": [
+    "guard let url, let data = try? Data(contentsOf: url) else { updates.message = \"Could not read that file.\"; return }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3876"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "That is not a .p12 file.",
+   "lines": [
+    208
+   ],
+   "contexts": [
+    "guard url.hasExtension(\"p12\", \"pfx\") else { updates.message = \"That is not a .p12 file.\"; return }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3877"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "That is not a .mobileprovision file.",
+   "lines": [
+    211
+   ],
+   "contexts": [
+    "guard url.hasExtension(\"mobileprovision\") else { updates.message = \"That is not a .mobileprovision file.\"; return }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3878"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Compatibility reports",
+   "lines": [
+    233
+   ],
+   "contexts": [
+    "PageScaffold(title: \"Compatibility reports\", symbol: \"checkmark.seal.fill\", subtitle: \"How reports and badges work for you\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3879"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "How reports and badges work for you",
+   "lines": [
+    233
+   ],
+   "contexts": [
+    "PageScaffold(title: \"Compatibility reports\", symbol: \"checkmark.seal.fill\", subtitle: \"How reports and badges work for you\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3880"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Reports tab",
+   "lines": [
+    234
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Reports tab\", note: \"How your games run on this version of the engine, what other people reported, and the reports you sent.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3881"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "How your games run on this version of the engine, what other people reported, and the reports you sent.",
+   "lines": [
+    234
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Reports tab\", note: \"How your games run on this version of the engine, what other people reported, and the reports you sent.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3882"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Open the Reports tab",
+   "lines": [
+    235
+   ],
+   "contexts": [
+    "ActionRow(id: \"rp-open\", symbol: \"checkmark.seal.fill\", title: \"Open the Reports tab\", subtitle: \"Your games and everything people reported\") { router.openReports(.mine) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3883"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Your games and everything people reported",
+   "lines": [
+    235
+   ],
+   "contexts": [
+    "ActionRow(id: \"rp-open\", symbol: \"checkmark.seal.fill\", title: \"Open the Reports tab\", subtitle: \"Your games and everything people reported\") { router.openReports(.mine) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3884"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "My reports",
+   "lines": [
+    236
+   ],
+   "contexts": [
+    "ActionRow(id: \"rp-mine\", symbol: \"paperplane.fill\", title: \"My reports\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3885"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "\\(compat.queuedCount) waiting to be sent",
+   "lines": [
+    237
+   ],
+   "contexts": [
+    "subtitle: compat.queuedCount > 0 ? \"\\(compat.queuedCount) waiting to be sent\" : \"The reports you sent, and how to delete one\") { router.openReports(.sent) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3886"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "The reports you sent, and how to delete one",
+   "lines": [
+    237
+   ],
+   "contexts": [
+    "subtitle: compat.queuedCount > 0 ? \"\\(compat.queuedCount) waiting to be sent\" : \"The reports you sent, and how to delete one\") { router.openReports(.sent) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3887"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Badges",
+   "lines": [
+    239
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Badges\", note: \"Small marks on games that show how they ran for other people.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3888"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Small marks on games that show how they ran for other people.",
+   "lines": [
+    239
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Badges\", note: \"Small marks on games that show how they ran for other people.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3889"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Show compatibility badges",
+   "lines": [
+    240
+   ],
+   "contexts": [
+    "ToggleRow(id: \"rp-badges\", symbol: \"checkmark.seal.fill\", title: \"Show compatibility badges\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3890"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Badges come from reports other people sent. After a game you can send one yourself; it takes under a minute.",
+   "lines": [
+    241
+   ],
+   "contexts": [
+    "info: \"Badges come from reports other people sent. After a game you can send one yourself; it takes under a minute.\", isOn: $showBadges)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3891"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Ask me how a game ran",
+   "lines": [
+    242
+   ],
+   "contexts": [
+    "ToggleRow(id: \"rp-ask\", symbol: \"questionmark.bubble.fill\", title: \"Ask me how a game ran\", isOn: $ask)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3892"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Privacy",
+   "lines": [
+    244
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Privacy\", note: \"Reports carry a random key kept on this device, not your name, and the game's log, which only the developer can read.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3893"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Reports carry a random key kept on this device, not your name, and the game's log, which only the developer can read.",
+   "lines": [
+    244
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Privacy\", note: \"Reports carry a random key kept on this device, not your name, and the game's log, which only the developer can read.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3894"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Forget my reporting identity",
+   "lines": [
+    245
+   ],
+   "contexts": [
+    "ActionRow(id: \"rp-forget\", symbol: \"person.fill.xmark\", title: \"Forget my reporting identity\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3895"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Reports are tied to a random key kept on this device, not to you. Forgetting it starts fresh: your old reports stay up but you can no longer edit or delete them.",
+   "lines": [
+    246
+   ],
+   "contexts": [
+    "info: \"Reports are tied to a random key kept on this device, not to you. Forgetting it starts fresh: your old reports stay up but you can no longer edit or delete them.\", destructive: true, chevron: false) { confirmReset = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3896"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Forget this device's reporting identity?",
+   "lines": [
+    249
+   ],
+   "contexts": [
+    ".confirm(\"Forget this device's reporting identity?\", confirmTitle: \"Forget\", destructive: true, isPresented: $confirmReset) { compat.forgetLocalData() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3897"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Forget",
+   "lines": [
+    249
+   ],
+   "contexts": [
+    ".confirm(\"Forget this device's reporting identity?\", confirmTitle: \"Forget\", destructive: true, isPresented: $confirmReset) { compat.forgetLocalData() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3898"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "\\($0.level.rawValue) \\($0.lastRaw)\\($0.count > 1 ? ",
+   "lines": [
+    261
+   ],
+   "contexts": [
+    "let lines = store.entries.suffix(400).reversed().map { \"\\($0.level.rawValue) \\($0.lastRaw)\\($0.count > 1 ? \"  x\\($0.count)\" : \"\")\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3899"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Log",
+   "lines": [
+    266,
+    267,
+    272
+   ],
+   "contexts": [
+    "PageScaffold(title: \"Log\", symbol: \"doc.text.fill\") {",
+    "SettingsGroup(title: \"Log\", note: \"What Porthole and the engine wrote during the last run. Report a problem sends it for you.\") {",
+    ".sheet(isPresented: $reading) { TextReaderSheet(title: \"Log\", text: text, monospaced: true, scope: scope) { reading = false } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3900"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "What Porthole and the engine wrote during the last run. Report a problem sends it for you.",
+   "lines": [
+    267
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Log\", note: \"What Porthole and the engine wrote during the last run. Report a problem sends it for you.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3901"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Entries",
+   "lines": [
+    268
+   ],
+   "contexts": [
+    "ValueRow(id: \"lg-count\", symbol: \"list.bullet\", title: \"Entries\", value: \"\\(store.entries.count)\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3902"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "\\(store.entries.count)",
+   "lines": [
+    268
+   ],
+   "contexts": [
+    "ValueRow(id: \"lg-count\", symbol: \"list.bullet\", title: \"Entries\", value: \"\\(store.entries.count)\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3903"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Read the log",
+   "lines": [
+    269
+   ],
+   "contexts": [
+    "ActionRow(id: \"lg-read\", symbol: \"doc.text.magnifyingglass\", title: \"Read the log\", subtitle: \"Newest first. Share it from the Files app: Porthole > madeira-log.txt\") { reading = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3904"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Newest first. Share it from the Files app: Porthole > madeira-log.txt",
+   "lines": [
+    269
+   ],
+   "contexts": [
+    "ActionRow(id: \"lg-read\", symbol: \"doc.text.magnifyingglass\", title: \"Read the log\", subtitle: \"Newest first. Share it from the Files app: Porthole > madeira-log.txt\") { reading = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3905"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Licences and source code",
+   "lines": [
+    290
+   ],
+   "contexts": [
+    "Text(\"Licences and source code\").font(.system(size: 24, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3906"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Close",
+   "lines": [
+    292
+   ],
+   "contexts": [
+    "PillButton(id: \"lic-close\", title: \"Close\", symbol: \"xmark\") { dismiss() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3907"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Porthole is free software. You may use, study, change and share it under the terms of the GNU General Public License, version 3 or later. There is no warranty.",
+   "lines": [
+    297
+   ],
+   "contexts": [
+    "Text(\"Porthole is free software. You may use, study, change and share it under the terms of the GNU General Public License, version 3 or later. There is no warranty.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3908"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Source code online",
+   "lines": [
+    300
+   ],
+   "contexts": [
+    "if let source = BuildIdentity.sourceURL { ActionRow(id: \"lic-src\", symbol: \"arrow.up.right.square\", title: \"Source code online\", subtitle: source.absoluteString, chevron: false) { UIApplication.shared.open(source) } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3909"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Project website",
+   "lines": [
+    301
+   ],
+   "contexts": [
+    "if let site = URL(string: \"https://portholehq.site\") { ActionRow(id: \"lic-site\", symbol: \"globe\", title: \"Project website\", subtitle: \"portholehq.site\", chevron: false) { UIApplication.shared.open(site) } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3910"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "portholehq.site",
+   "lines": [
+    301
+   ],
+   "contexts": [
+    "if let site = URL(string: \"https://portholehq.site\") { ActionRow(id: \"lic-site\", symbol: \"globe\", title: \"Project website\", subtitle: \"portholehq.site\", chevron: false) { UIApplication.shared.open(site) } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3911"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Built on",
+   "lines": [
+    303
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Built on\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3912"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Licence texts",
+   "lines": [
+    305
+   ],
+   "contexts": [
+    "ActionRow(id: \"lic-texts\", symbol: \"doc.on.doc.fill\", title: \"Licence texts\", subtitle: \"The licences of the parts it is built from\") { showTexts.toggle() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3913"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "The licences of the parts it is built from",
+   "lines": [
+    305
+   ],
+   "contexts": [
+    "ActionRow(id: \"lic-texts\", symbol: \"doc.on.doc.fill\", title: \"Licence texts\", subtitle: \"The licences of the parts it is built from\") { showTexts.toggle() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3914"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "Apple",
+   "lines": [
+    308
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Apple\") { ForEach(LegalLibrary.apple) { doc($0) } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3915"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsExtras.swift",
+   "text": "This document is not in the app.",
+   "lines": [
+    320
+   ],
+   "contexts": [
+    "TextReaderSheet(title: document.title, text: document.text.map { document.keepsLayout ? $0 : LegalDocument.reflowed($0) } ?? \"This document is not in the app.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3916"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Appearance",
+   "lines": [
+    22
+   ],
+   "contexts": [
+    "PageScaffold(title: \"Appearance\", symbol: \"paintpalette.fill\", subtitle: \"Theme, colours and motion\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3917"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Theme, colours and motion",
+   "lines": [
+    22
+   ],
+   "contexts": [
+    "PageScaffold(title: \"Appearance\", symbol: \"paintpalette.fill\", subtitle: \"Theme, colours and motion\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3918"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Colour scheme",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Colour scheme\", note: \"The colours of the whole app.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3919"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "The colours of the whole app.",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Colour scheme\", note: \"The colours of the whole app.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3920"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Your own colour",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "Text(\"Your own colour\").font(.system(size: 16, weight: .semibold, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3921"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Festive",
+   "lines": [
+    38
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Festive\", note: \"Holiday looks that appear by themselves around the day.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3922"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Holiday looks that appear by themselves around the day.",
+   "lines": [
+    38
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Festive\", note: \"Holiday looks that appear by themselves around the day.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3923"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Festive themes",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    "ToggleRow(id: \"ap-festive\", symbol: \"moon.stars.fill\", title: \"Festive themes\", subtitle: theme.activeSeason.map { \"\\($0.title) is on\" },"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3924"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "\\($0.title) is on",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    "ToggleRow(id: \"ap-festive\", symbol: \"moon.stars.fill\", title: \"Festive themes\", subtitle: theme.activeSeason.map { \"\\($0.title) is on\" },"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3925"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Porthole dresses up for some holidays by the date. Turn this off to keep your own colours all year.",
+   "lines": [
+    40
+   ],
+   "contexts": [
+    "info: \"Porthole dresses up for some holidays by the date. Turn this off to keep your own colours all year.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3926"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Glow and motion",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Glow and motion\", note: \"How lively the app looks. Turning these down saves a little battery.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3927"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "How lively the app looks. Turning these down saves a little battery.",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Glow and motion\", note: \"How lively the app looks. Turning these down saves a little battery.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3928"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Glow",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"ap-glow\", symbol: \"sparkles\", title: \"Glow\", info: \"How strong the light around the selected thing is. Off turns the glow and the soft lights in the background down.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3929"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "How strong the light around the selected thing is. Off turns the glow and the soft lights in the background down.",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"ap-glow\", symbol: \"sparkles\", title: \"Glow\", info: \"How strong the light around the selected thing is. Off turns the glow and the soft lights in the background down.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3930"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Moving background",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "ToggleRow(id: \"ap-motion\", symbol: \"wind\", title: \"Moving background\", info: \"The soft coloured lights behind every screen drift slowly. Turn this off to save a little battery.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3931"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "The soft coloured lights behind every screen drift slowly. Turn this off to save a little battery.",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "ToggleRow(id: \"ap-motion\", symbol: \"wind\", title: \"Moving background\", info: \"The soft coloured lights behind every screen drift slowly. Turn this off to save a little battery.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3932"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Display",
+   "lines": [
+    79
+   ],
+   "contexts": [
+    "PageScaffold(title: \"Display\", symbol: \"display\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3933"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Picture",
+   "lines": [
+    80
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Picture\", note: \"What every game starts with. A game's own page can change it for that game.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3934"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "What every game starts with. A game's own page can change it for that game.",
+   "lines": [
+    80
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Picture\", note: \"What every game starts with. A game's own page can change it for that game.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3935"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Resolution",
+   "lines": [
+    81
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"dp-res\", symbol: \"rectangle.expand.vertical\", title: \"Resolution\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3936"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "The size of the screen games see. Higher is sharper but needs more memory and a faster device; lower is faster. Games that pick their own resolution can choose any size up to this one, and the picture is scaled to your screen. Each game can have its own on its page. Applies the next time a game starts.",
+   "lines": [
+    82
+   ],
+   "contexts": [
+    "info: \"The size of the screen games see. Higher is sharper but needs more memory and a faster device; lower is faster. Games that pick their own resolution can choose any size up to this one, and the picture is scaled to your screen. Each game can have its own on its page. Applies the next time a ga"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3937"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Performance",
+   "lines": [
+    102
+   ],
+   "contexts": [
+    "PageScaffold(title: \"Performance\", symbol: \"speedometer\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3938"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Power",
+   "lines": [
+    103
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Power\", note: \"How fast games run and what happens when the device gets hot.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3939"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "How fast games run and what happens when the device gets hot.",
+   "lines": [
+    103
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Power\", note: \"How fast games run and what happens when the device gets hot.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3940"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Power mode",
+   "lines": [
+    104
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"pf-power\", symbol: \"bolt.fill\", title: \"Power mode\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3941"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "\\(power.detail). By default a game drops to Battery saver (30 FPS and Eco) by itself when the device gets hot. Each game can pick its own on its page.",
+   "lines": [
+    105
+   ],
+   "contexts": [
+    "info: \"\\(power.detail). By default a game drops to Battery saver (30 FPS and Eco) by itself when the device gets hot. Each game can pick its own on its page.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3942"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Keep a game running in the background",
+   "lines": [
+    107
+   ],
+   "contexts": [
+    "EngineChoiceRow(id: \"pf-bgrun\", key: \"background-run\", title: \"Keep a game running in the background\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3943"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Keep my mode when hot",
+   "lines": [
+    108
+   ],
+   "contexts": [
+    "ToggleRow(id: \"pf-hot\", symbol: \"thermometer.high\", title: \"Keep my mode when hot\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3944"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Stops the automatic drop when the device gets hot. Eco mode puts the game on the slow cores, so loading can crawl; this keeps full speed instead, and the device may get hotter and drain faster.",
+   "lines": [
+    109
+   ],
+   "contexts": [
+    "info: \"Stops the automatic drop when the device gets hot. Eco mode puts the game on the slow cores, so loading can crawl; this keeps full speed instead, and the device may get hotter and drain faster.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3945"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Graphics",
+   "lines": [
+    113
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Graphics\", note: \"Picture choices that cost speed.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3946"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Picture choices that cost speed.",
+   "lines": [
+    113
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Graphics\", note: \"Picture choices that cost speed.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3947"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Precise shader math",
+   "lines": [
+    114
+   ],
+   "contexts": [
+    "ToggleRow(id: \"pf-math\", symbol: \"function\", title: \"Precise shader math\", info: \"Exact lighting math instead of fast approximations. Off is faster.\", isOn: $preciseMath)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3948"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Exact lighting math instead of fast approximations. Off is faster.",
+   "lines": [
+    114
+   ],
+   "contexts": [
+    "ToggleRow(id: \"pf-math\", symbol: \"function\", title: \"Precise shader math\", info: \"Exact lighting math instead of fast approximations. Off is faster.\", isOn: $preciseMath)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3949"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Keep compiled pipelines",
+   "lines": [
+    115
+   ],
+   "contexts": [
+    "EngineChoiceRow(id: \"pf-pso\", key: \"pso-archive\", symbol: \"archivebox.fill\", title: \"Keep compiled pipelines\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3950"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Memory",
+   "lines": [
+    117
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Memory\", note: \"For games that run out of memory. Most people never change these.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3951"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "For games that run out of memory. Most people never change these.",
+   "lines": [
+    117
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Memory\", note: \"For games that run out of memory. Most people never change these.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3952"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Swap",
+   "lines": [
+    118
+   ],
+   "contexts": [
+    "ChoiceRow(id: \"pf-swap\", symbol: \"internaldrive.fill\", title: \"Swap\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3953"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "iOS has no swap and closes an app that uses too much memory. Swap keeps big chunks of game data in a file on the device's storage instead, where iOS doesn't count them, so a memory-hungry game can survive. It uses storage and can be slower.",
+   "lines": [
+    119
+   ],
+   "contexts": [
+    "info: \"iOS has no swap and closes an app that uses too much memory. Swap keeps big chunks of game data in a file on the device's storage instead, where iOS doesn't count them, so a memory-hungry game can survive. It uses storage and can be slower.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3954"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "Off",
+   "lines": [
+    120,
+    184
+   ],
+   "contexts": [
+    "options: [(0, \"Off\"), (1024, \"1 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")],",
+    "options: [(0, \"Off\"), (40, \"40 ms\"), (80, \"80 ms\"), (160, \"160 ms\"), (300, \"300 ms\")], selection: $audioCushion)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3955"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "1 GB",
+   "lines": [
+    120,
+    128
+   ],
+   "contexts": [
+    "options: [(0, \"Off\"), (1024, \"1 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")],",
+    "options: [(0, \"Automatic\"), (512, \"512 MB\"), (1024, \"1 GB\"), (1536, \"1.5 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")],"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3956"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "2 GB",
+   "lines": [
+    120,
+    128
+   ],
+   "contexts": [
+    "options: [(0, \"Off\"), (1024, \"1 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")],",
+    "options: [(0, \"Automatic\"), (512, \"512 MB\"), (1024, \"1 GB\"), (1536, \"1.5 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")],"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3957"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "3 GB",
+   "lines": [
+    120,
+    128
+   ],
+   "contexts": [
+    "options: [(0, \"Off\"), (1024, \"1 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")],",
+    "options: [(0, \"Automatic\"), (512, \"512 MB\"), (1024, \"1 GB\"), (1536, \"1.5 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")],"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3958"
+  },
+  {
+   "file": "app/Sources/UI/Settings/SettingsPages.swift",
+   "text": "4 GB",
+   "lines": [
+    120,
+    128
+   ],
+   "contexts": [
+    "options: [(0, \"Off\"), (1024, \"1 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")],",
+    "options: [(0, \"Automatic\"), (512, \"512 MB\"), (1024, \"1 GB\"), (1536, \"1.5 GB\"), (2048, \"2 GB\"), (3072, \"3 GB\"), (4096, \"4 GB\")],"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3959"
+  }
+ ]
+}

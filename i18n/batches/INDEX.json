@@ -1,0 +1,223 @@
+{
+ "batches": [
+  {
+   "batch": 1,
+   "file": "batch-001.json",
+   "units": 180,
+   "files": 23
+  },
+  {
+   "batch": 2,
+   "file": "batch-002.json",
+   "units": 180,
+   "files": 11
+  },
+  {
+   "batch": 3,
+   "file": "batch-003.json",
+   "units": 180,
+   "files": 17
+  },
+  {
+   "batch": 4,
+   "file": "batch-004.json",
+   "units": 180,
+   "files": 15
+  },
+  {
+   "batch": 5,
+   "file": "batch-005.json",
+   "units": 180,
+   "files": 1
+  },
+  {
+   "batch": 6,
+   "file": "batch-006.json",
+   "units": 180,
+   "files": 10
+  },
+  {
+   "batch": 7,
+   "file": "batch-007.json",
+   "units": 180,
+   "files": 14
+  },
+  {
+   "batch": 8,
+   "file": "batch-008.json",
+   "units": 180,
+   "files": 20
+  },
+  {
+   "batch": 9,
+   "file": "batch-009.json",
+   "units": 180,
+   "files": 19
+  },
+  {
+   "batch": 10,
+   "file": "batch-010.json",
+   "units": 180,
+   "files": 13
+  },
+  {
+   "batch": 11,
+   "file": "batch-011.json",
+   "units": 180,
+   "files": 10
+  },
+  {
+   "batch": 12,
+   "file": "batch-012.json",
+   "units": 180,
+   "files": 6
+  },
+  {
+   "batch": 13,
+   "file": "batch-013.json",
+   "units": 180,
+   "files": 4
+  },
+  {
+   "batch": 14,
+   "file": "batch-014.json",
+   "units": 180,
+   "files": 3
+  },
+  {
+   "batch": 15,
+   "file": "batch-015.json",
+   "units": 180,
+   "files": 7
+  },
+  {
+   "batch": 16,
+   "file": "batch-016.json",
+   "units": 180,
+   "files": 6
+  },
+  {
+   "batch": 17,
+   "file": "batch-017.json",
+   "units": 180,
+   "files": 7
+  },
+  {
+   "batch": 18,
+   "file": "batch-018.json",
+   "units": 180,
+   "files": 9
+  },
+  {
+   "batch": 19,
+   "file": "batch-019.json",
+   "units": 180,
+   "files": 18
+  },
+  {
+   "batch": 20,
+   "file": "batch-020.json",
+   "units": 180,
+   "files": 5
+  },
+  {
+   "batch": 21,
+   "file": "batch-021.json",
+   "units": 180,
+   "files": 5
+  },
+  {
+   "batch": 22,
+   "file": "batch-022.json",
+   "units": 180,
+   "files": 4
+  },
+  {
+   "batch": 23,
+   "file": "batch-023.json",
+   "units": 180,
+   "files": 1
+  },
+  {
+   "batch": 24,
+   "file": "batch-024.json",
+   "units": 180,
+   "files": 6
+  },
+  {
+   "batch": 25,
+   "file": "batch-025.json",
+   "units": 180,
+   "files": 5
+  },
+  {
+   "batch": 26,
+   "file": "batch-026.json",
+   "units": 180,
+   "files": 6
+  },
+  {
+   "batch": 27,
+   "file": "batch-027.json",
+   "units": 56,
+   "files": 5
+  }
+ ],
+ "total_units": 4736,
+ "plist_units": [
+  {
+   "file": "app/Info.plist",
+   "key": "NSLocalNetworkUsageDescription",
+   "text": "Porthole uses the local network to pair this iPhone with itself so JIT can be switched on without a computer.",
+   "kind": "plist"
+  },
+  {
+   "file": "app/Activity/Info.plist",
+   "key": "CFBundleDisplayName",
+   "text": "Downloads",
+   "kind": "plist"
+  },
+  {
+   "file": "app/Helper/Info.plist",
+   "key": "CFBundleDisplayName",
+   "text": "JIT Helper",
+   "kind": "plist"
+  },
+  {
+   "file": "app/MemoryHost/Info.plist",
+   "key": "CFBundleDisplayName",
+   "text": "Memory Host",
+   "kind": "plist"
+  },
+  {
+   "file": "app/Tunnel/Info.plist",
+   "key": "CFBundleDisplayName",
+   "text": "JIT Tunnel",
+   "kind": "plist"
+  },
+  {
+   "file": "app/project.yml",
+   "key": "CFBundleDisplayName",
+   "text": "JIT Helper",
+   "kind": "plist"
+  },
+  {
+   "file": "app/project.yml",
+   "key": "CFBundleDisplayName",
+   "text": "JIT Tunnel",
+   "kind": "plist"
+  },
+  {
+   "file": "app/project.yml",
+   "key": "CFBundleDisplayName",
+   "text": "Downloads",
+   "kind": "plist"
+  },
+  {
+   "file": "app/project.yml",
+   "key": "CFBundleDisplayName",
+   "text": "Memory Host",
+   "kind": "plist"
+  }
+ ]
+}

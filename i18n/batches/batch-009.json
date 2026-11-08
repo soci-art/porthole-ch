@@ -1,0 +1,2900 @@
+{
+ "batch": 9,
+ "units": [
+  {
+   "file": "app/Sources/Epic/EpicInstaller.swift",
+   "text": "/",
+   "lines": [
+    288
+   ],
+   "contexts": [
+    "guard url.path.hasPrefix(base.path + \"/\") else { throw EpicContentError.invalid(\"Unsafe Epic install path.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1440"
+  },
+  {
+   "file": "app/Sources/Epic/EpicInstaller.swift",
+   "text": "Unsafe Epic install path.",
+   "lines": [
+    288
+   ],
+   "contexts": [
+    "guard url.path.hasPrefix(base.path + \"/\") else { throw EpicContentError.invalid(\"Unsafe Epic install path.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1441"
+  },
+  {
+   "file": "app/Sources/Epic/EpicInstaller.swift",
+   "text": "Invalid Epic install directory.",
+   "lines": [
+    293
+   ],
+   "contexts": [
+    "throw EpicContentError.invalid(\"Invalid Epic install directory.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1442"
+  },
+  {
+   "file": "app/Sources/Epic/EpicInstaller.swift",
+   "text": "Epic manifest does not contain its launch executable.",
+   "lines": [
+    324
+   ],
+   "contexts": [
+    "throw EpicContentError.invalid(\"Epic manifest does not contain its launch executable.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1443"
+  },
+  {
+   "file": "app/Sources/Epic/EpicInstaller.swift",
+   "text": "Invalid Epic chunk description.",
+   "lines": [
+    337
+   ],
+   "contexts": [
+    "throw EpicContentError.invalid(\"Invalid Epic chunk description.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1444"
+  },
+  {
+   "file": "app/Sources/Epic/EpicInstaller.swift",
+   "text": "Duplicate or symbolic-link file in Epic manifest.",
+   "lines": [
+    348
+   ],
+   "contexts": [
+    "throw EpicContentError.invalid(\"Duplicate or symbolic-link file in Epic manifest.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1445"
+  },
+  {
+   "file": "app/Sources/Epic/EpicInstaller.swift",
+   "text": "Epic file references an invalid chunk part.",
+   "lines": [
+    352
+   ],
+   "contexts": [
+    "throw EpicContentError.invalid(\"Epic file references an invalid chunk part.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1446"
+  },
+  {
+   "file": "app/Sources/Epic/EpicInstaller.swift",
+   "text": "Not enough free space for this Epic game (\\(required / 1024 / 1024) MB plus working space required).",
+   "lines": [
+    365
+   ],
+   "contexts": [
+    "throw EpicContentError.invalid(\"Not enough free space for this Epic game (\\(required / 1024 / 1024) MB plus working space required).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1447"
+  },
+  {
+   "file": "app/Sources/Epic/EpicInstaller.swift",
+   "text": "Epic chunk download failed.",
+   "lines": [
+    403
+   ],
+   "contexts": [
+    "throw lastError ?? EpicContentError.invalid(\"Epic chunk download failed.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1448"
+  },
+  {
+   "file": "app/Sources/Epic/EpicInstaller.swift",
+   "text": "Missing Epic chunk.",
+   "lines": [
+    437
+   ],
+   "contexts": [
+    "guard let have = ready[part.guid] else { throw EpicContentError.invalid(\"Missing Epic chunk.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1449"
+  },
+  {
+   "file": "app/Sources/Epic/EpicInstaller.swift",
+   "text": "Epic file SHA-1 mismatch. Resume to retry.",
+   "lines": [
+    457
+   ],
+   "contexts": [
+    "guard hash.finish() == file.sha else { throw EpicContentError.invalid(\"Epic file SHA-1 mismatch. Resume to retry.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1450"
+  },
+  {
+   "file": "app/Sources/Epic/EpicInstaller.swift",
+   "text": "Could not finalize an Epic game file.",
+   "lines": [
+    461
+   ],
+   "contexts": [
+    "guard rename(temporary.path, target.path) == 0 else { throw EpicContentError.invalid(\"Could not finalize an Epic game file.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1451"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Encrypted Epic chunks need a content secret.",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "guard secret.allSatisfy({ $0 == 0 }) else { throw EpicContentError.invalid(\"Encrypted Epic chunks need a content secret.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1452"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Epic manifest is too large.",
+   "lines": [
+    54
+   ],
+   "contexts": [
+    "guard data.count <= maximumSize else { throw EpicContentError.invalid(\"Epic manifest is too large.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1453"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Invalid Epic manifest magic.",
+   "lines": [
+    57
+   ],
+   "contexts": [
+    "guard try header.u32() == 0x44BEC00C else { throw EpicContentError.invalid(\"Invalid Epic manifest magic.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1454"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Encrypted Epic manifests are not supported.",
+   "lines": [
+    60
+   ],
+   "contexts": [
+    "guard stored & ~1 == 0 else { throw EpicContentError.invalid(\"Encrypted Epic manifests are not supported.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1455"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Invalid Epic manifest size.",
+   "lines": [
+    63
+   ],
+   "contexts": [
+    "throw EpicContentError.invalid(\"Invalid Epic manifest size.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1456"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Epic manifest SHA-1 mismatch.",
+   "lines": [
+    68
+   ],
+   "contexts": [
+    "guard body.count == size, EpicSHA1.hash(body) == sha else { throw EpicContentError.invalid(\"Epic manifest SHA-1 mismatch.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1457"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Legacy file-data manifests are not supported.",
+   "lines": [
+    73
+   ],
+   "contexts": [
+    "guard try m.number(1) == 0 else { throw EpicContentError.invalid(\"Legacy file-data manifests are not supported.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1458"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Invalid Epic chunk count.",
+   "lines": [
+    86
+   ],
+   "contexts": [
+    "guard chunkCount <= c.data.count / 57 else { throw EpicContentError.invalid(\"Invalid Epic chunk count.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1459"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Invalid Epic chunk file size.",
+   "lines": [
+    95
+   ],
+   "contexts": [
+    "guard size <= UInt64(Int.max) else { throw EpicContentError.invalid(\"Invalid Epic chunk file size.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1460"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Invalid Epic file count.",
+   "lines": [
+    104
+   ],
+   "contexts": [
+    "guard fileCount <= f.data.count / 37 else { throw EpicContentError.invalid(\"Invalid Epic file count.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1461"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Invalid Epic hexadecimal field.",
+   "lines": [
+    133,
+    137
+   ],
+   "contexts": [
+    "guard chars.count == count * 2 else { throw EpicContentError.invalid(\"Invalid Epic hexadecimal field.\") }",
+    "throw EpicContentError.invalid(\"Invalid Epic hexadecimal field.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1462"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Invalid Epic JSON blob.",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    "guard let value = value as? String, value.utf8.count % 3 == 0 else { throw EpicContentError.invalid(\"Invalid Epic JSON blob.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1463"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Invalid Epic JSON byte.",
+   "lines": [
+    149
+   ],
+   "contexts": [
+    "throw EpicContentError.invalid(\"Invalid Epic JSON byte.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1464"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Invalid Epic JSON number.",
+   "lines": [
+    157
+   ],
+   "contexts": [
+    "guard data.count <= 8 else { throw EpicContentError.invalid(\"Invalid Epic JSON number.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1465"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Invalid or unsupported Epic JSON manifest.",
+   "lines": [
+    168
+   ],
+   "contexts": [
+    "throw EpicContentError.invalid(\"Invalid or unsupported Epic JSON manifest.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1466"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Invalid Epic JSON size.",
+   "lines": [
+    172
+   ],
+   "contexts": [
+    "guard n <= UInt64(Int.max) else { throw EpicContentError.invalid(\"Invalid Epic JSON size.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1467"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Invalid Epic JSON file.",
+   "lines": [
+    193
+   ],
+   "contexts": [
+    "throw EpicContentError.invalid(\"Invalid Epic JSON file.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1468"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Invalid Epic file SHA-1.",
+   "lines": [
+    196
+   ],
+   "contexts": [
+    "guard file.sha.count == 20 else { throw EpicContentError.invalid(\"Invalid Epic file SHA-1.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1469"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "/Windows",
+   "lines": [
+    224
+   ],
+   "contexts": [
+    "var components = URLComponents(string: launcherHost + \"/Windows\")!"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1470"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Live",
+   "lines": [
+    225
+   ],
+   "contexts": [
+    "components.queryItems = [URLQueryItem(name: \"label\", value: \"Live\")]"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1471"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Epic has no Windows version of this game for your account.",
+   "lines": [
+    245
+   ],
+   "contexts": [
+    "else { throw EpicContentError.invalid(\"Epic has no Windows version of this game for your account.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1472"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Epic did not return a Windows manifest.",
+   "lines": [
+    251,
+    255
+   ],
+   "contexts": [
+    "else { throw EpicContentError.invalid(\"Epic did not return a Windows manifest.\") }",
+    "var lastError: Error = EpicContentError.invalid(\"Epic did not return a Windows manifest.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible",
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1473"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Epic CDN manifest SHA-1 mismatch.",
+   "lines": [
+    269
+   ],
+   "contexts": [
+    "lastError = EpicContentError.invalid(\"Epic CDN manifest SHA-1 mismatch.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1474"
+  },
+  {
+   "file": "app/Sources/Epic/EpicManifest.swift",
+   "text": "Epic download exceeds the size limit.",
+   "lines": [
+    285
+   ],
+   "contexts": [
+    "guard data.count <= limit else { throw EpicContentError.invalid(\"Epic download exceeds the size limit.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1475"
+  },
+  {
+   "file": "app/Sources/Epic/EpicSignInView.swift",
+   "text": "Paste an authorization code",
+   "lines": [
+    35
+   ],
+   "contexts": [
+    "Button(\"Paste an authorization code\") { showPaste = true }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1476"
+  },
+  {
+   "file": "app/Sources/Epic/EpicSignInView.swift",
+   "text": "Authorization code",
+   "lines": [
+    40
+   ],
+   "contexts": [
+    ".alert(\"Authorization code\", isPresented: $showPaste) {"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1477"
+  },
+  {
+   "file": "app/Sources/Epic/EpicSignInView.swift",
+   "text": "authorizationCode",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "TextField(\"authorizationCode\", text: $pastedCode)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1478"
+  },
+  {
+   "file": "app/Sources/Epic/EpicSignInView.swift",
+   "text": "Sign in",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "Button(\"Sign in\") {"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1479"
+  },
+  {
+   "file": "app/Sources/Epic/EpicSignInView.swift",
+   "text": "Cancel",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "Button(\"Cancel\", role: .cancel) { pastedCode = \"\" }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1480"
+  },
+  {
+   "file": "app/Sources/Epic/EpicSignInView.swift",
+   "text": "Signing in…",
+   "lines": [
+    67
+   ],
+   "contexts": [
+    "ProgressView(\"Signing in…\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1481"
+  },
+  {
+   "file": "app/Sources/Epic/EpicSignInView.swift",
+   "text": "Signed in as",
+   "lines": [
+    83
+   ],
+   "contexts": [
+    "LabeledContent(\"Signed in as\", value: name.isEmpty ? \"Epic account\" : name)"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1482"
+  },
+  {
+   "file": "app/Sources/Epic/EpicSignInView.swift",
+   "text": "Epic account",
+   "lines": [
+    83
+   ],
+   "contexts": [
+    "LabeledContent(\"Signed in as\", value: name.isEmpty ? \"Epic account\" : name)"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1483"
+  },
+  {
+   "file": "app/Sources/Epic/EpicSignInView.swift",
+   "text": "Games",
+   "lines": [
+    84
+   ],
+   "contexts": [
+    "LabeledContent(\"Games\", value: library.isLoading ? \"Loading…\" : \"\\(library.games.count)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1484"
+  },
+  {
+   "file": "app/Sources/Epic/EpicSignInView.swift",
+   "text": "Loading…",
+   "lines": [
+    84
+   ],
+   "contexts": [
+    "LabeledContent(\"Games\", value: library.isLoading ? \"Loading…\" : \"\\(library.games.count)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1485"
+  },
+  {
+   "file": "app/Sources/Epic/EpicSignInView.swift",
+   "text": "\\(library.games.count)",
+   "lines": [
+    84
+   ],
+   "contexts": [
+    "LabeledContent(\"Games\", value: library.isLoading ? \"Loading…\" : \"\\(library.games.count)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1486"
+  },
+  {
+   "file": "app/Sources/Epic/EpicSignInView.swift",
+   "text": "Sign out of Epic Games",
+   "lines": [
+    85
+   ],
+   "contexts": [
+    "Button(\"Sign out of Epic Games\", role: .destructive) {"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1487"
+  },
+  {
+   "file": "app/Sources/Gog/Galaxy/GalaxyListener.swift",
+   "text": "socket: errno \\(e)",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "case let .socket(e): \"socket: errno \\(e)\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1488"
+  },
+  {
+   "file": "app/Sources/Gog/Galaxy/GalaxyListener.swift",
+   "text": "127.0.0.1 port in use",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "case let .bind(e): e == EADDRINUSE ? \"127.0.0.1 port in use\" : \"bind: errno \\(e)\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1489"
+  },
+  {
+   "file": "app/Sources/Gog/Galaxy/GalaxyListener.swift",
+   "text": "bind: errno \\(e)",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "case let .bind(e): e == EADDRINUSE ? \"127.0.0.1 port in use\" : \"bind: errno \\(e)\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1490"
+  },
+  {
+   "file": "app/Sources/Gog/Galaxy/GalaxyListener.swift",
+   "text": "listen: errno \\(e)",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "case let .listen(e): \"listen: errno \\(e)\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1491"
+  },
+  {
+   "file": "app/Sources/Gog/Galaxy/GalaxyService.swift",
+   "text": "Galaxy reply of \\(data.count) bytes",
+   "lines": [
+    75
+   ],
+   "contexts": [
+    "guard data.count <= 1 << 20 else { throw GalaxyError.unsafeContent(\"Galaxy reply of \\(data.count) bytes\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1492"
+  },
+  {
+   "file": "app/Sources/Gog/Galaxy/GalaxySupport.swift",
+   "text": "<redacted>",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "var description: String { \"<redacted>\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1493"
+  },
+  {
+   "file": "app/Sources/Gog/Galaxy/GalaxySupport.swift",
+   "text": "protocol changed: \\(s)",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "case let .protocolChanged(s): return \"protocol changed: \\(s)\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1494"
+  },
+  {
+   "file": "app/Sources/Gog/Galaxy/GalaxySupport.swift",
+   "text": "\\(context): HTTP \\(status)",
+   "lines": [
+    49
+   ],
+   "contexts": [
+    "case let .eresult(status, context): return \"\\(context): HTTP \\(status)\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1495"
+  },
+  {
+   "file": "app/Sources/Gog/Galaxy/GalaxySupport.swift",
+   "text": "not signed in",
+   "lines": [
+    50
+   ],
+   "contexts": [
+    "case .notLoggedOn: return \"not signed in\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1496"
+  },
+  {
+   "file": "app/Sources/Gog/Galaxy/GalaxySupport.swift",
+   "text": "unsafe content: \\(s)",
+   "lines": [
+    51
+   ],
+   "contexts": [
+    "case let .unsafeContent(s): return \"unsafe content: \\(s)\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1497"
+  },
+  {
+   "file": "app/Sources/Gog/Galaxy/GalaxyWire.swift",
+   "text": "type \\(rawValue)",
+   "lines": [
+    264
+   ],
+   "contexts": [
+    "default: \"type \\(rawValue)\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1498"
+  },
+  {
+   "file": "app/Sources/Gog/GogAuth.swift",
+   "text": "Sign in to GOG first.",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "case .notSignedIn: return \"Sign in to GOG first.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1499"
+  },
+  {
+   "file": "app/Sources/Gog/GogAuth.swift",
+   "text": "Could not reach GOG. Check your connection and try again.",
+   "lines": [
+    22
+   ],
+   "contexts": [
+    "case .network: return \"Could not reach GOG. Check your connection and try again.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1500"
+  },
+  {
+   "file": "app/Sources/Gog/GogAuth.swift",
+   "text": "GOG refused the sign-in (\\(code)). Sign in again.",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "case .rejected(let code): return \"GOG refused the sign-in (\\(code)). Sign in again.\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1501"
+  },
+  {
+   "file": "app/Sources/Gog/GogAuth.swift",
+   "text": "status \\(http.statusCode)",
+   "lines": [
+    130
+   ],
+   "contexts": [
+    "throw GogAuthError.rejected(\"status \\(http.statusCode)\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1502"
+  },
+  {
+   "file": "app/Sources/Gog/GogDepots.swift",
+   "text": "GOG's build list could not be read.",
+   "lines": [
+    80
+   ],
+   "contexts": [
+    "throw GogContentError.invalid(\"GOG's build list could not be read.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1503"
+  },
+  {
+   "file": "app/Sources/Gog/GogDepots.swift",
+   "text": "GOG's manifest answered \\(status).",
+   "lines": [
+    97
+   ],
+   "contexts": [
+    "guard status == 200 else { throw GogContentError.invalid(\"GOG's manifest answered \\(status).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1504"
+  },
+  {
+   "file": "app/Sources/Gog/GogDepots.swift",
+   "text": "GOG's manifest was not understood.",
+   "lines": [
+    100
+   ],
+   "contexts": [
+    "guard let json = try JSONSerialization.jsonObject(with: plain) as? [String: Any] else { throw GogContentError.invalid(\"GOG's manifest was not understood.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1505"
+  },
+  {
+   "file": "app/Sources/Gog/GogDepots.swift",
+   "text": "GOG's build link points somewhere unexpected.",
+   "lines": [
+    105
+   ],
+   "contexts": [
+    "guard link.host?.hasSuffix(\"gog.com\") == true else { throw GogContentError.invalid(\"GOG's build link points somewhere unexpected.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1506"
+  },
+  {
+   "file": "app/Sources/Gog/GogDepots.swift",
+   "text": "\\(metaHost)/\\(md5.prefix(2))/\\(md5.dropFirst(2).prefix(2))/\\(md5)",
+   "lines": [
+    126
+   ],
+   "contexts": [
+    "guard let url = URL(string: \"\\(metaHost)/\\(md5.prefix(2))/\\(md5.dropFirst(2).prefix(2))/\\(md5)\") else { throw GogContentError.invalid(\"Bad depot address.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1507"
+  },
+  {
+   "file": "app/Sources/Gog/GogDepots.swift",
+   "text": "Bad depot address.",
+   "lines": [
+    126
+   ],
+   "contexts": [
+    "guard let url = URL(string: \"\\(metaHost)/\\(md5.prefix(2))/\\(md5.dropFirst(2).prefix(2))/\\(md5)\") else { throw GogContentError.invalid(\"Bad depot address.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1508"
+  },
+  {
+   "file": "app/Sources/Gog/GogDepots.swift",
+   "text": "GOG's file list holds an unsafe path.",
+   "lines": [
+    132
+   ],
+   "contexts": [
+    "if raw[\"path\"] != nil, safePath(raw[\"path\"] as? String) == nil { throw GogContentError.invalid(\"GOG's file list holds an unsafe path.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1509"
+  },
+  {
+   "file": "app/Sources/Gog/GogDepots.swift",
+   "text": "GOG did not give a download link for this game (answer \\(status)).",
+   "lines": [
+    210
+   ],
+   "contexts": [
+    "throw GogContentError.invalid(\"GOG did not give a download link for this game (answer \\(status)).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1510"
+  },
+  {
+   "file": "app/Sources/Gog/GogDepots.swift",
+   "text": "GOG's download link had no servers in it.",
+   "lines": [
+    219
+   ],
+   "contexts": [
+    "guard !endpoints.isEmpty else { throw GogContentError.invalid(\"GOG's download link had no servers in it.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1511"
+  },
+  {
+   "file": "app/Sources/Gog/GogDepots.swift",
+   "text": "GOG's servers refused the download (\\(lastStatus)). Try again.",
+   "lines": [
+    260
+   ],
+   "contexts": [
+    "throw GogContentError.invalid(\"GOG's servers refused the download (\\(lastStatus)). Try again.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1512"
+  },
+  {
+   "file": "app/Sources/Gog/GogDepots.swift",
+   "text": "A downloaded piece failed GOG's checksum. Try again.",
+   "lines": [
+    265
+   ],
+   "contexts": [
+    "guard md5(raw) == chunk.compressedMd5 else { throw GogContentError.invalid(\"A downloaded piece failed GOG's checksum. Try again.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1513"
+  },
+  {
+   "file": "app/Sources/Gog/GogDepots.swift",
+   "text": "A downloaded piece did not match GOG's manifest. Try again.",
+   "lines": [
+    267
+   ],
+   "contexts": [
+    "guard data.count == chunk.size, md5(data) == chunk.md5 else { throw GogContentError.invalid(\"A downloaded piece did not match GOG's manifest. Try again.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1514"
+  },
+  {
+   "file": "app/Sources/Gog/GogDepots.swift",
+   "text": "zlib could not start.",
+   "lines": [
+    282
+   ],
+   "contexts": [
+    "guard inflateInit_(&stream, ZLIB_VERSION, Int32(MemoryLayout<z_stream>.size)) == Z_OK else { throw GogContentError.invalid(\"zlib could not start.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1515"
+  },
+  {
+   "file": "app/Sources/Gog/GogDepots.swift",
+   "text": "GOG's manifest is larger than expected.",
+   "lines": [
+    299
+   ],
+   "contexts": [
+    "if output.count > limit { throw GogContentError.invalid(\"GOG's manifest is larger than expected.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1516"
+  },
+  {
+   "file": "app/Sources/Gog/GogDepots.swift",
+   "text": "A GOG manifest was not valid zlib data.",
+   "lines": [
+    302
+   ],
+   "contexts": [
+    "guard status == Z_STREAM_END else { throw GogContentError.invalid(\"A GOG manifest was not valid zlib data.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1517"
+  },
+  {
+   "file": "app/Sources/Gog/GogDepots.swift",
+   "text": "A downloaded piece was not valid zlib data.",
+   "lines": [
+    315
+   ],
+   "contexts": [
+    "guard status == Z_OK, Int(length) == expectedSize else { throw GogContentError.invalid(\"A downloaded piece was not valid zlib data.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1518"
+  },
+  {
+   "file": "app/Sources/Gog/GogGalaxy.swift",
+   "text": "GOG game token",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "return try await Self.grant(GalaxySecret(refresh), client, label: \"GOG game token\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1519"
+  },
+  {
+   "file": "app/Sources/Gog/GogGalaxy.swift",
+   "text": "GOG game token refresh",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "try await Self.grant(refreshToken, client, label: \"GOG game token refresh\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1520"
+  },
+  {
+   "file": "app/Sources/Gog/GogGalaxy.swift",
+   "text": "\\(label): unexpected reply",
+   "lines": [
+    45
+   ],
+   "contexts": [
+    "throw GalaxyError.protocolChanged(\"\\(label): unexpected reply\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1521"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "Could not read GOG installs: ",
+   "lines": [
+    91
+   ],
+   "contexts": [
+    "} catch { self.error = \"Could not read GOG installs: \" + error.localizedDescription }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1522"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "Could not save GOG installs: ",
+   "lines": [
+    118
+   ],
+   "contexts": [
+    "do { try await worker.save(store) } catch { self.error = \"Could not save GOG installs: \" + error.localizedDescription }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1523"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "End the game session before uninstalling.",
+   "lines": [
+    198
+   ],
+   "contexts": [
+    "error = \"End the game session before uninstalling.\"; return"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1524"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "End the running game before installing.",
+   "lines": [
+    276
+   ],
+   "contexts": [
+    "if AppModel.shared.session.isActive { error = \"End the running game before installing.\" }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1525"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "game\\(game.id)",
+   "lines": [
+    342,
+    344
+   ],
+   "contexts": [
+    "let base = game.slug.isEmpty ? \"game\\(game.id)\" : game.slug",
+    "return clean.isEmpty ? \"game\\(game.id)\" : clean"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1526"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "GOG did not list the installer for this game (answer \\(status)).",
+   "lines": [
+    375
+   ],
+   "contexts": [
+    "throw GogInstallError.invalid(\"GOG did not list the installer for this game (answer \\(status)).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1527"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "GOG has no Windows installer for this game.",
+   "lines": [
+    378
+   ],
+   "contexts": [
+    "guard !windows.isEmpty else { throw GogInstallError.invalid(\"GOG has no Windows installer for this game.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1528"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "GOG listed no files for this game's installer.",
+   "lines": [
+    388
+   ],
+   "contexts": [
+    "guard !files.isEmpty else { throw GogInstallError.invalid(\"GOG listed no files for this game's installer.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1529"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "GOG did not give a download link (answer \\(status)).",
+   "lines": [
+    400
+   ],
+   "contexts": [
+    "throw GogInstallError.invalid(\"GOG did not give a download link (answer \\(status)).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1530"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "Not enough free space: the installer is \\(total / 1_048_576) MB and needs about twice that while it installs.",
+   "lines": [
+    443
+   ],
+   "contexts": [
+    "throw GogInstallError.invalid(\"Not enough free space: the installer is \\(total / 1_048_576) MB and needs about twice that while it installs.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1531"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "GOG sent an empty file. Try again.",
+   "lines": [
+    469
+   ],
+   "contexts": [
+    "throw GogInstallError.invalid(\"GOG sent an empty file. Try again.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1532"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "A downloaded file failed GOG's checksum. Try again.",
+   "lines": [
+    476
+   ],
+   "contexts": [
+    "throw GogInstallError.invalid(\"A downloaded file failed GOG's checksum. Try again.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1533"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "GOG's installer has no setup program in it.",
+   "lines": [
+    488
+   ],
+   "contexts": [
+    "throw GogInstallError.invalid(\"GOG's installer has no setup program in it.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1534"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "GOG's build of this game lists nothing to download.",
+   "lines": [
+    502
+   ],
+   "contexts": [
+    "guard !depots.isEmpty else { throw GogInstallError.invalid(\"GOG's build of this game lists nothing to download.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1535"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "GOG's build of this game has no files.",
+   "lines": [
+    523
+   ],
+   "contexts": [
+    "guard !byPath.isEmpty else { throw GogInstallError.invalid(\"GOG's build of this game has no files.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1536"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "GOG's small-files container does not hold \\(job.item.path).",
+   "lines": [
+    547
+   ],
+   "contexts": [
+    "c.offset + c.size <= last + lastChunk.size else { throw GogInstallError.invalid(\"GOG's small-files container does not hold \\(job.item.path).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1537"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "Not enough free space: this game needs about \\(write / 1_048_576) MB more.",
+   "lines": [
+    558
+   ],
+   "contexts": [
+    "throw GogInstallError.invalid(\"Not enough free space: this game needs about \\(write / 1_048_576) MB more.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1538"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "Could not finish a game file.",
+   "lines": [
+    584
+   ],
+   "contexts": [
+    "guard rename(part.path, target.path) == 0 else { throw GogInstallError.invalid(\"Could not finish a game file.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1539"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "\\(job.item.path) failed GOG's checksum. Try again.",
+   "lines": [
+    588,
+    591,
+    668
+   ],
+   "contexts": [
+    "throw GogInstallError.invalid(\"\\(job.item.path) failed GOG's checksum. Try again.\")",
+    "GogChunkSource.md5(bytes) != want { throw GogInstallError.invalid(\"\\(job.item.path) failed GOG's checksum. Try again.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1540"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "GOG's small-files container was short for \\(job.item.path).",
+   "lines": [
+    665
+   ],
+   "contexts": [
+    "guard bytes.count == c.size else { throw GogInstallError.invalid(\"GOG's small-files container was short for \\(job.item.path).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1541"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "The installer did not install the game. Run it again from the game's page.",
+   "lines": [
+    702
+   ],
+   "contexts": [
+    "throw GogInstallError.invalid(\"The installer did not install the game. Run it again from the game's page.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1542"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "The game installed, but Porthole could not tell which program starts it. Add it from Files with the + button (folder C:\\\\GOG\\\\\\(folder)).",
+   "lines": [
+    723
+   ],
+   "contexts": [
+    "throw GogInstallError.invalid(\"The game installed, but Porthole could not tell which program starts it. Add it from Files with the + button (folder C:\\\\GOG\\\\\\(folder)).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1543"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "The installer finished but \\(program) is not there.",
+   "lines": [
+    729
+   ],
+   "contexts": [
+    "throw GogInstallError.invalid(\"The installer finished but \\(program) is not there.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1544"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "The download server sent no answer.",
+   "lines": [
+    813
+   ],
+   "contexts": [
+    "guard let http = response as? HTTPURLResponse else { failure = GogInstallError.invalid(\"The download server sent no answer.\"); completionHandler(.cancel); return }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1545"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "The download server answered \\(http.statusCode).",
+   "lines": [
+    828
+   ],
+   "contexts": [
+    "failure = GogInstallError.invalid(\"The download server answered \\(http.statusCode).\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1546"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "Could not write the download to disk.",
+   "lines": [
+    831
+   ],
+   "contexts": [
+    "if handle == nil { failure = GogInstallError.invalid(\"Could not write the download to disk.\"); completionHandler(.cancel); return }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1547"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "Could not write the download to disk (is the device full?).",
+   "lines": [
+    841
+   ],
+   "contexts": [
+    "failure = GogInstallError.invalid(\"Could not write the download to disk (is the device full?).\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1548"
+  },
+  {
+   "file": "app/Sources/Gog/GogInstaller.swift",
+   "text": "The download ended early. Try again (it carries on from where it stopped).",
+   "lines": [
+    855
+   ],
+   "contexts": [
+    "c?.resume(throwing: GogInstallError.invalid(\"The download ended early. Try again (it carries on from where it stopped).\")); return"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1549"
+  },
+  {
+   "file": "app/Sources/Gog/GogLibrary.swift",
+   "text": "the library answered \\(status)",
+   "lines": [
+    86
+   ],
+   "contexts": [
+    "throw GogAuthError.rejected(\"the library answered \\(status)\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1550"
+  },
+  {
+   "file": "app/Sources/Gog/GogSignInView.swift",
+   "text": "Paste a sign-in code or address",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "Menu { Button(\"Paste a sign-in code or address\") { showPaste = true } } label: { Image(systemName: \"ellipsis.circle\") }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1551"
+  },
+  {
+   "file": "app/Sources/Gog/GogSignInView.swift",
+   "text": "Sign-in code",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    ".alert(\"Sign-in code\", isPresented: $showPaste) {"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1552"
+  },
+  {
+   "file": "app/Sources/Gog/GogSignInView.swift",
+   "text": "code, or the whole address",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "TextField(\"code, or the whole address\", text: $pasted).textInputAutocapitalization(.never).autocorrectionDisabled()"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1553"
+  },
+  {
+   "file": "app/Sources/Gog/GogSignInView.swift",
+   "text": "Sign in",
+   "lines": [
+    29
+   ],
+   "contexts": [
+    "Button(\"Sign in\") { auth.exchange(code: GogAuth.extractCode(from: pasted)); pasted = \"\" }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1554"
+  },
+  {
+   "file": "app/Sources/Gog/GogSignInView.swift",
+   "text": "Cancel",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "Button(\"Cancel\", role: .cancel) { pasted = \"\" }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1555"
+  },
+  {
+   "file": "app/Sources/Gog/GogSignInView.swift",
+   "text": "Signing in\\u{2026}",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "ProgressView(\"Signing in\\u{2026}\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1556"
+  },
+  {
+   "file": "app/Sources/Gog/GogSignInView.swift",
+   "text": "Signed in as",
+   "lines": [
+    60
+   ],
+   "contexts": [
+    "LabeledContent(\"Signed in as\", value: name)"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1557"
+  },
+  {
+   "file": "app/Sources/Gog/GogSignInView.swift",
+   "text": "Games",
+   "lines": [
+    61
+   ],
+   "contexts": [
+    "LabeledContent(\"Games\", value: library.isLoading ? \"Loading\\u{2026}\" : \"\\(library.games.count)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1558"
+  },
+  {
+   "file": "app/Sources/Gog/GogSignInView.swift",
+   "text": "Loading\\u{2026}",
+   "lines": [
+    61
+   ],
+   "contexts": [
+    "LabeledContent(\"Games\", value: library.isLoading ? \"Loading\\u{2026}\" : \"\\(library.games.count)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1559"
+  },
+  {
+   "file": "app/Sources/Gog/GogSignInView.swift",
+   "text": "\\(library.games.count)",
+   "lines": [
+    61
+   ],
+   "contexts": [
+    "LabeledContent(\"Games\", value: library.isLoading ? \"Loading\\u{2026}\" : \"\\(library.games.count)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1560"
+  },
+  {
+   "file": "app/Sources/Gog/GogSignInView.swift",
+   "text": "Sign out of GOG",
+   "lines": [
+    62
+   ],
+   "contexts": [
+    "Button(\"Sign out of GOG\", role: .destructive) { auth.signOut(); library.clear() }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1561"
+  },
+  {
+   "file": "app/Sources/Itch/ItchAPI.swift",
+   "text": "Sign in to itch.io first.",
+   "lines": [
+    19
+   ],
+   "contexts": [
+    "case .notSignedIn: return \"Sign in to itch.io first.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1562"
+  },
+  {
+   "file": "app/Sources/Itch/ItchAPI.swift",
+   "text": "Could not reach itch.io. Check your connection and try again.",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "case .network: return \"Could not reach itch.io. Check your connection and try again.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1563"
+  },
+  {
+   "file": "app/Sources/Itch/ItchAPI.swift",
+   "text": "itch.io did not accept the API key. Make a new one and sign in again.",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "case .unauthorized: return \"itch.io did not accept the API key. Make a new one and sign in again.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1564"
+  },
+  {
+   "file": "app/Sources/Itch/ItchAPI.swift",
+   "text": "That does not look like an itch.io API key.",
+   "lines": [
+    80
+   ],
+   "contexts": [
+    "signInError = \"That does not look like an itch.io API key.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1565"
+  },
+  {
+   "file": "app/Sources/Itch/ItchAPI.swift",
+   "text": "itch.io account",
+   "lines": [
+    89
+   ],
+   "contexts": [
+    "let name = (user?[\"display_name\"] as? String).flatMap { $0.isEmpty ? nil : $0 } ?? (user?[\"username\"] as? String) ?? \"itch.io account\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1566"
+  },
+  {
+   "file": "app/Sources/Itch/ItchAPI.swift",
+   "text": "itch.io said: \\(first)",
+   "lines": [
+    158
+   ],
+   "contexts": [
+    "throw ItchError.server(\"itch.io said: \\(first)\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1567"
+  },
+  {
+   "file": "app/Sources/Itch/ItchAPI.swift",
+   "text": "itch.io answered \\(status).",
+   "lines": [
+    160
+   ],
+   "contexts": [
+    "guard status == 200, let json else { throw ItchError.server(\"itch.io answered \\(status).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1568"
+  },
+  {
+   "file": "app/Sources/Itch/ItchAPI.swift",
+   "text": "itch.io did not give a download link (answer \\(http.statusCode)).",
+   "lines": [
+    273
+   ],
+   "contexts": [
+    "throw ItchError.server(\"itch.io did not give a download link (answer \\(http.statusCode)).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1569"
+  },
+  {
+   "file": "app/Sources/Itch/ItchInstaller.swift",
+   "text": "Could not read itch.io installs: ",
+   "lines": [
+    91
+   ],
+   "contexts": [
+    "} catch { self.error = \"Could not read itch.io installs: \" + error.localizedDescription }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1570"
+  },
+  {
+   "file": "app/Sources/Itch/ItchInstaller.swift",
+   "text": "Could not save itch.io installs: ",
+   "lines": [
+    110
+   ],
+   "contexts": [
+    "do { try await worker.save(store) } catch { self.error = \"Could not save itch.io installs: \" + error.localizedDescription }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1571"
+  },
+  {
+   "file": "app/Sources/Itch/ItchInstaller.swift",
+   "text": "End the game session before uninstalling.",
+   "lines": [
+    189
+   ],
+   "contexts": [
+    "error = \"End the game session before uninstalling.\"; return"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1572"
+  },
+  {
+   "file": "app/Sources/Itch/ItchInstaller.swift",
+   "text": "End the running game before installing.",
+   "lines": [
+    264
+   ],
+   "contexts": [
+    "if AppModel.shared.session.isActive { error = \"End the running game before installing.\" }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1573"
+  },
+  {
+   "file": "app/Sources/Itch/ItchInstaller.swift",
+   "text": "game\\(game.id)",
+   "lines": [
+    329,
+    331
+   ],
+   "contexts": [
+    "let base = slug.isEmpty ? \"game\\(game.id)\" : slug",
+    "return clean.isEmpty ? \"game\\(game.id)\" : clean"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1574"
+  },
+  {
+   "file": "app/Sources/Itch/ItchInstaller.swift",
+   "text": "This game has no Windows download on itch.io (it may be a browser game, or Linux/Mac only).",
+   "lines": [
+    369
+   ],
+   "contexts": [
+    "throw ItchError.server(\"This game has no Windows download on itch.io (it may be a browser game, or Linux/Mac only).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1575"
+  },
+  {
+   "file": "app/Sources/Itch/ItchInstaller.swift",
+   "text": "The Windows download is a .\\(upload.ext) file, which Porthole cannot unpack yet.",
+   "lines": [
+    372
+   ],
+   "contexts": [
+    "throw ItchError.server(\"The Windows download is a .\\(upload.ext) file, which Porthole cannot unpack yet.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1576"
+  },
+  {
+   "file": "app/Sources/Itch/ItchInstaller.swift",
+   "text": "Not enough free space: the download is \\(upload.size / 1_048_576) MB and needs about three times that while it unpacks.",
+   "lines": [
+    379
+   ],
+   "contexts": [
+    "throw ItchError.server(\"Not enough free space: the download is \\(upload.size / 1_048_576) MB and needs about three times that while it unpacks.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1577"
+  },
+  {
+   "file": "app/Sources/Itch/ItchInstaller.swift",
+   "text": "itch.io sent an empty file. Try again.",
+   "lines": [
+    398
+   ],
+   "contexts": [
+    "guard size > 0 else { try? FileManager.default.removeItem(at: part); throw ItchError.server(\"itch.io sent an empty file. Try again.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1578"
+  },
+  {
+   "file": "app/Sources/Itch/ItchInstaller.swift",
+   "text": "The game unpacked, but Porthole could not find its program (.exe). Add it with the + button; its folder is C:\\\\\\(installDir.replacingOccurrences(of: ",
+   "lines": [
+    442
+   ],
+   "contexts": [
+    "throw ItchError.server(\"The game unpacked, but Porthole could not find its program (.exe). Add it with the + button; its folder is C:\\\\\\(installDir.replacingOccurrences(of: \"/\", with: \"\\\\\")).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1579"
+  },
+  {
+   "file": "app/Sources/Itch/ItchInstaller.swift",
+   "text": ", with: ",
+   "lines": [
+    442
+   ],
+   "contexts": [
+    "throw ItchError.server(\"The game unpacked, but Porthole could not find its program (.exe). Add it with the + button; its folder is C:\\\\\\(installDir.replacingOccurrences(of: \"/\", with: \"\\\\\")).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1580"
+  },
+  {
+   "file": "app/Sources/Itch/ItchInstaller.swift",
+   "text": ")).",
+   "lines": [
+    442
+   ],
+   "contexts": [
+    "throw ItchError.server(\"The game unpacked, but Porthole could not find its program (.exe). Add it with the + button; its folder is C:\\\\\\(installDir.replacingOccurrences(of: \"/\", with: \"\\\\\")).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1581"
+  },
+  {
+   "file": "app/Sources/Itch/ItchInstaller.swift",
+   "text": "The installer ran, but nothing new showed up in Program Files. If it installed somewhere else, add the game with the + button.",
+   "lines": [
+    471
+   ],
+   "contexts": [
+    "throw ItchError.server(\"The installer ran, but nothing new showed up in Program Files. If it installed somewhere else, add the game with the + button.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1582"
+  },
+  {
+   "file": "app/Sources/Itch/ItchRar.swift",
+   "text": "This is not a .rar file.",
+   "lines": [
+    13
+   ],
+   "contexts": [
+    "case IRAR_NOT_RAR: return .invalid(\"This is not a .rar file.\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1583"
+  },
+  {
+   "file": "app/Sources/Itch/ItchRar.swift",
+   "text": "This .rar is password-protected.",
+   "lines": [
+    15
+   ],
+   "contexts": [
+    "if reason == \"encrypted\" { return .invalid(\"This .rar is password-protected.\") }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1584"
+  },
+  {
+   "file": "app/Sources/Itch/ItchRar.swift",
+   "text": "This .rar is one part of a set. Porthole can only unpack a .rar that is a single file.",
+   "lines": [
+    16
+   ],
+   "contexts": [
+    "if reason == \"volumes\" { return .invalid(\"This .rar is one part of a set. Porthole can only unpack a .rar that is a single file.\") }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1585"
+  },
+  {
+   "file": "app/Sources/Itch/ItchRar.swift",
+   "text": "Porthole cannot unpack this .rar on this device (\\(reason)).",
+   "lines": [
+    17
+   ],
+   "contexts": [
+    "return .invalid(\"Porthole cannot unpack this .rar on this device (\\(reason)).\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1586"
+  },
+  {
+   "file": "app/Sources/Itch/ItchRar.swift",
+   "text": "The .rar could not be read from the device.",
+   "lines": [
+    18
+   ],
+   "contexts": [
+    "case IRAR_IO: return .invalid(\"The .rar could not be read from the device.\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1587"
+  },
+  {
+   "file": "app/Sources/Itch/ItchRar.swift",
+   "text": "This .rar is damaged (\\(reason)). Download it again.",
+   "lines": [
+    19
+   ],
+   "contexts": [
+    "default: return .invalid(\"This .rar is damaged (\\(reason)). Download it again.\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1588"
+  },
+  {
+   "file": "app/Sources/Itch/ItchRar.swift",
+   "text": "A file from the .rar could not be written.",
+   "lines": [
+    63
+   ],
+   "contexts": [
+    "guard fm.createFile(atPath: target.path, contents: nil) else { throw ItchZipError.invalid(\"A file from the .rar could not be written.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1589"
+  },
+  {
+   "file": "app/Sources/Itch/ItchRar.swift",
+   "text": "This .rar holds a link (\\(raw.prefix(40))), which Porthole will not unpack.",
+   "lines": [
+    90
+   ],
+   "contexts": [
+    "if flags & Int(IRAR_ITEM_LINK) != 0 { throw ItchZipError.invalid(\"This .rar holds a link (\\(raw.prefix(40))), which Porthole will not unpack.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1590"
+  },
+  {
+   "file": "app/Sources/Itch/ItchRar.swift",
+   "text": "This .rar holds an unsafe path (\\(raw.prefix(40))).",
+   "lines": [
+    92
+   ],
+   "contexts": [
+    "throw ItchZipError.invalid(\"This .rar holds an unsafe path (\\(raw.prefix(40))).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1591"
+  },
+  {
+   "file": "app/Sources/Itch/ItchRar.swift",
+   "text": "This .rar holds two files with the same name (\\(relative.prefix(40))).",
+   "lines": [
+    122
+   ],
+   "contexts": [
+    "if !seen.insert(relative.lowercased()).inserted, !directory { throw ItchZipError.invalid(\"This .rar holds two files with the same name (\\(relative.prefix(40))).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1592"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSevenZip.swift",
+   "text": "This is not a .7z file.",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "case I7Z_NOT_7Z: return .invalid(\"This is not a .7z file.\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1593"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSevenZip.swift",
+   "text": "This .7z is password-protected.",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "return .invalid(reason == \"encrypted\" ? \"This .7z is password-protected.\" : \"Porthole cannot unpack this .7z yet (\\(reason)).\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1594"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSevenZip.swift",
+   "text": "Porthole cannot unpack this .7z yet (\\(reason)).",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "return .invalid(reason == \"encrypted\" ? \"This .7z is password-protected.\" : \"Porthole cannot unpack this .7z yet (\\(reason)).\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1595"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSevenZip.swift",
+   "text": "This .7z needs more memory to unpack than this device gives it.",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "case I7Z_MEMORY: return .invalid(\"This .7z needs more memory to unpack than this device gives it.\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1596"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSevenZip.swift",
+   "text": "The .7z could not be read from the device.",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "case I7Z_IO: return .invalid(\"The .7z could not be read from the device.\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1597"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSevenZip.swift",
+   "text": "This .7z is damaged (\\(reason)). Download it again.",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "default: return .invalid(\"This .7z is damaged (\\(reason)). Download it again.\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1598"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSevenZip.swift",
+   "text": "This .7z is damaged (item).",
+   "lines": [
+    51
+   ],
+   "contexts": [
+    "guard Int(item) < names.count, let name = names[Int(item)] else { throw ItchZipError.invalid(\"This .7z is damaged (item).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1599"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSevenZip.swift",
+   "text": "A file from the .7z could not be written.",
+   "lines": [
+    55,
+    147
+   ],
+   "contexts": [
+    "guard fm.createFile(atPath: target.path, contents: nil) else { throw ItchZipError.invalid(\"A file from the .7z could not be written.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1600"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSevenZip.swift",
+   "text": "This .7z is damaged (order).",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "guard let file, let data else { throw ItchZipError.invalid(\"This .7z is damaged (order).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1601"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSevenZip.swift",
+   "text": "This .7z holds a link (\\(raw.prefix(40))), which Porthole will not unpack.",
+   "lines": [
+    100
+   ],
+   "contexts": [
+    "if flags & I7Z_ITEM_LINK != 0 { throw ItchZipError.invalid(\"This .7z holds a link (\\(raw.prefix(40))), which Porthole will not unpack.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1602"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSevenZip.swift",
+   "text": "This .7z holds an unsafe path (\\(raw.prefix(40))).",
+   "lines": [
+    102
+   ],
+   "contexts": [
+    "throw ItchZipError.invalid(\"This .7z holds an unsafe path (\\(raw.prefix(40))).\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1603"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSevenZip.swift",
+   "text": "This .7z holds two files with the same name (\\(relative.prefix(40))).",
+   "lines": [
+    132
+   ],
+   "contexts": [
+    "if !seen.insert(relative.lowercased()).inserted, !directory { throw ItchZipError.invalid(\"This .7z holds two files with the same name (\\(relative.prefix(40))).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1604"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSignInView.swift",
+   "text": "itch.io lets you make a personal API key. Porthole uses it only to list your games and download them; it stays in this device's Keychain.",
+   "lines": [
+    35
+   ],
+   "contexts": [
+    "Text(\"itch.io lets you make a personal API key. Porthole uses it only to list your games and download them; it stays in this device's Keychain.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1605"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSignInView.swift",
+   "text": "Open itch.io's API keys page",
+   "lines": [
+    37
+   ],
+   "contexts": [
+    "Button { showPage = true } label: { Label(\"Open itch.io's API keys page\", systemImage: \"safari\") }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1606"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSignInView.swift",
+   "text": "Sign in there, tap Generate new API key, copy the key, and paste it below.",
+   "lines": [
+    38
+   ],
+   "contexts": [
+    "Text(\"Sign in there, tap Generate new API key, copy the key, and paste it below.\").font(.footnote).foregroundStyle(.secondary)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1607"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSignInView.swift",
+   "text": "Your API key",
+   "lines": [
+    40
+   ],
+   "contexts": [
+    "Section(\"Your API key\") {"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1608"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSignInView.swift",
+   "text": "Paste the key here",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "SecureField(\"Paste the key here\", text: $key).textInputAutocapitalization(.never).autocorrectionDisabled()"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1609"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSignInView.swift",
+   "text": "Sign in",
+   "lines": [
+    45
+   ],
+   "contexts": [
+    "if auth.isBusy { ProgressView() } else { Text(\"Sign in\") }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1610"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSignInView.swift",
+   "text": "Signed in as",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    "LabeledContent(\"Signed in as\", value: name)"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1611"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSignInView.swift",
+   "text": "Games",
+   "lines": [
+    57
+   ],
+   "contexts": [
+    "LabeledContent(\"Games\", value: library.isLoading ? \"Loading\\u{2026}\" : \"\\(library.games.count)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1612"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSignInView.swift",
+   "text": "Loading\\u{2026}",
+   "lines": [
+    57
+   ],
+   "contexts": [
+    "LabeledContent(\"Games\", value: library.isLoading ? \"Loading\\u{2026}\" : \"\\(library.games.count)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1613"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSignInView.swift",
+   "text": "\\(library.games.count)",
+   "lines": [
+    57
+   ],
+   "contexts": [
+    "LabeledContent(\"Games\", value: library.isLoading ? \"Loading\\u{2026}\" : \"\\(library.games.count)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u1614"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSignInView.swift",
+   "text": "Sign out of itch.io",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "Button(\"Sign out of itch.io\", role: .destructive) { auth.signOut(); library.clear() }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1615"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSignInView.swift",
+   "text": "API keys",
+   "lines": [
+    74
+   ],
+   "contexts": [
+    ".navigationTitle(\"API keys\").navigationBarTitleDisplayMode(.inline)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1616"
+  },
+  {
+   "file": "app/Sources/Itch/ItchSignInView.swift",
+   "text": "Done",
+   "lines": [
+    75
+   ],
+   "contexts": [
+    ".toolbar { ToolbarItem(placement: .confirmationAction) { Button(\"Done\") { dismiss() } } }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1617"
+  },
+  {
+   "file": "app/Sources/Itch/ItchZip.swift",
+   "text": "This is not a zip file.",
+   "lines": [
+    34,
+    46
+   ],
+   "contexts": [
+    "guard length >= 22 else { throw ItchZipError.invalid(\"This is not a zip file.\") }",
+    "guard eocd >= 0 else { throw ItchZipError.invalid(\"This is not a zip file.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1618"
+  },
+  {
+   "file": "app/Sources/Itch/ItchZip.swift",
+   "text": "This zip file is damaged (no ZIP64 locator).",
+   "lines": [
+    54
+   ],
+   "contexts": [
+    "guard locator >= 0, le32(tail, locator) == 0x0706_4b50 else { throw ItchZipError.invalid(\"This zip file is damaged (no ZIP64 locator).\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u1619"
+  }
+ ]
+}

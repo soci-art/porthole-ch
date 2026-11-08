@@ -1,0 +1,2931 @@
+{
+ "batch": 17,
+ "units": [
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Touching the game",
+   "lines": [
+    124
+   ],
+   "contexts": [
+    "GuideStep(symbol: \"hand.point.up.left.fill\", title: \"Touching the game\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2880"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideCenter.swift",
+   "text": "Tap to click. Drag to hold the left button. Press and hold, or tap with two fingers, for the right button. Pinch to scroll.",
+   "lines": [
+    125
+   ],
+   "contexts": [
+    "text: \"Tap to click. Drag to hold the left button. Press and hold, or tap with two fingers, for the right button. Pinch to scroll.\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2881"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideSheet.swift",
+   "text": "\\(index + 1) of \\(guide.steps.count)",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "if guide.steps.count > 1 { Text(\"\\(index + 1) of \\(guide.steps.count)\").font(.footnote.monospacedDigit()).foregroundStyle(Theme.textDim) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2882"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideSheet.swift",
+   "text": "Back",
+   "lines": [
+    55
+   ],
+   "contexts": [
+    "if index > 0 { PillButton(id: \"guide-back\", title: \"Back\", symbol: \"chevron.left\") { go(-1) } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2883"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideSheet.swift",
+   "text": "Got it",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    "PillButton(id: \"guide-next\", title: last ? \"Got it\" : \"Next\", symbol: last ? \"checkmark\" : \"chevron.right\", style: .primary) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2884"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideSheet.swift",
+   "text": "Next",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    "PillButton(id: \"guide-next\", title: last ? \"Got it\" : \"Next\", symbol: last ? \"checkmark\" : \"chevron.right\", style: .primary) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2885"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideSheet.swift",
+   "text": "Do not show tips",
+   "lines": [
+    64
+   ],
+   "contexts": [
+    "Text(\"Do not show tips\").font(.footnote.weight(.semibold)).foregroundStyle(Theme.textDim).padding(.vertical, 12).padding(.horizontal, 16)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2886"
+  },
+  {
+   "file": "app/Sources/UI/Guide/GuideSheet.swift",
+   "text": "Turns tips off. You can turn them on again in Settings, App.",
+   "lines": [
+    68
+   ],
+   "contexts": [
+    ".accessibilityHint(\"Turns tips off. You can turn them on again in Settings, App.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2887"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Look",
+   "lines": [
+    213,
+    455,
+    464
+   ],
+   "contexts": [
+    "private let cursorToggle = KeyButton(\"Look\", .tap(0), side: 46)",
+    "cursorToggle.setTitle(cursorMode ? \"Menu\" : \"Look\", for: .normal)",
+    "if l != .firstPerson { cursorMode = false; cursorToggle.setTitle(\"Look\", for: .normal); cursorToggle.backgroundColor = UIColor(white: 0, alpha: 0.55) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2888"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "More",
+   "lines": [
+    214
+   ],
+   "contexts": [
+    "private let panel = UIStackView()          // the on-demand \"More\" keys"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2889"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Right mode",
+   "lines": [
+    242,
+    503
+   ],
+   "contexts": [
+    "private let mouse = KeyButton(\"Right mode\", .tap(0))",
+    "mouse.setTitle(rightMode ? \"Right mode: ON\" : \"Right mode\", for: .normal)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2890"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Back to library",
+   "lines": [
+    243
+   ],
+   "contexts": [
+    "private let back = GameHUDView.barButton(\"Back to library\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2891"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Edit the on-screen controls",
+   "lines": [
+    293
+   ],
+   "contexts": [
+    "editButton.accessibilityLabel = \"Edit the on-screen controls\"; editButton.isHidden = true"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2892"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Keyboard",
+   "lines": [
+    299
+   ],
+   "contexts": [
+    "keyboardButton.accessibilityLabel = \"Keyboard\"; keyboardButton.isHidden = true"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2893"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Tab",
+   "lines": [
+    330,
+    377
+   ],
+   "contexts": [
+    "let r1 = row([moreButton, quickKey(\"Tab\", VK.tab), quickKey(\"Esc\", VK.esc)])",
+    "let reload = key(\"R\", .tap(VK.letter(\"R\")), 46), esc = key(\"Esc\", .tap(VK.esc), 46), tab = key(\"Tab\", .tap(VK.tab), 46)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2894"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Esc",
+   "lines": [
+    330,
+    377
+   ],
+   "contexts": [
+    "let r1 = row([moreButton, quickKey(\"Tab\", VK.tab), quickKey(\"Esc\", VK.esc)])",
+    "let reload = key(\"R\", .tap(VK.letter(\"R\")), 46), esc = key(\"Esc\", .tap(VK.esc), 46), tab = key(\"Tab\", .tap(VK.tab), 46)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2895"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "F",
+   "lines": [
+    331
+   ],
+   "contexts": [
+    "let r2 = row([quickKey(\"F\", VK.letter(\"F\")), quickKey(\"E\", VK.letter(\"E\"))])"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2896"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "E",
+   "lines": [
+    331,
+    376
+   ],
+   "contexts": [
+    "let r2 = row([quickKey(\"F\", VK.letter(\"F\")), quickKey(\"E\", VK.letter(\"E\"))])",
+    "let jump = key(\"Jump\", .hold(VK.space), 60), crouch = key(\"Duck\", .hold(VK.ctrl)), use = key(\"Use\", .tap(VK.letter(\"E\"))), sprint = key(\"Run\", .hold(VK.shift))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2897"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Shift",
+   "lines": [
+    338
+   ],
+   "contexts": [
+    "let shift = KeyButton(\"Shift\", .latch(VK.shift)), ctrl = KeyButton(\"Ctrl\", .latch(VK.ctrl)), alt = KeyButton(\"Alt\", .latch(VK.alt))"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2898"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Ctrl",
+   "lines": [
+    338
+   ],
+   "contexts": [
+    "let shift = KeyButton(\"Shift\", .latch(VK.shift)), ctrl = KeyButton(\"Ctrl\", .latch(VK.ctrl)), alt = KeyButton(\"Alt\", .latch(VK.alt))"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2899"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Alt",
+   "lines": [
+    338
+   ],
+   "contexts": [
+    "let shift = KeyButton(\"Shift\", .latch(VK.shift)), ctrl = KeyButton(\"Ctrl\", .latch(VK.ctrl)), alt = KeyButton(\"Alt\", .latch(VK.alt))"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2900"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Zoom +",
+   "lines": [
+    341
+   ],
+   "contexts": [
+    "let zoomIn = KeyButton(\"Zoom +\", .tap(0)), zoomOut = KeyButton(\"Zoom -\", .tap(0))"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2901"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Zoom -",
+   "lines": [
+    341
+   ],
+   "contexts": [
+    "let zoomIn = KeyButton(\"Zoom +\", .tap(0)), zoomOut = KeyButton(\"Zoom -\", .tap(0))"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2902"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Space",
+   "lines": [
+    347
+   ],
+   "contexts": [
+    "row([KeyButton(\"Space\", .hold(VK.space)), shift, ctrl, alt, KeyButton(\"Enter\", .tap(VK.enter)), KeyButton(\"Del\", .tap(VK.backspace))]),"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2903"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Enter",
+   "lines": [
+    347
+   ],
+   "contexts": [
+    "row([KeyButton(\"Space\", .hold(VK.space)), shift, ctrl, alt, KeyButton(\"Enter\", .tap(VK.enter)), KeyButton(\"Del\", .tap(VK.backspace))]),"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2904"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Del",
+   "lines": [
+    347
+   ],
+   "contexts": [
+    "row([KeyButton(\"Space\", .hold(VK.space)), shift, ctrl, alt, KeyButton(\"Enter\", .tap(VK.enter)), KeyButton(\"Del\", .tap(VK.backspace))]),"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2905"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "FIRE",
+   "lines": [
+    374
+   ],
+   "contexts": [
+    "let fire = MouseHoldButton(\"FIRE\", right: false, side: 76), alt = MouseHoldButton(\"ALT\", right: true, side: 76)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2906"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "ALT",
+   "lines": [
+    374
+   ],
+   "contexts": [
+    "let fire = MouseHoldButton(\"FIRE\", right: false, side: 76), alt = MouseHoldButton(\"ALT\", right: true, side: 76)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2907"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Jump",
+   "lines": [
+    376
+   ],
+   "contexts": [
+    "let jump = key(\"Jump\", .hold(VK.space), 60), crouch = key(\"Duck\", .hold(VK.ctrl)), use = key(\"Use\", .tap(VK.letter(\"E\"))), sprint = key(\"Run\", .hold(VK.shift))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2908"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Duck",
+   "lines": [
+    376
+   ],
+   "contexts": [
+    "let jump = key(\"Jump\", .hold(VK.space), 60), crouch = key(\"Duck\", .hold(VK.ctrl)), use = key(\"Use\", .tap(VK.letter(\"E\"))), sprint = key(\"Run\", .hold(VK.shift))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2909"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Use",
+   "lines": [
+    376
+   ],
+   "contexts": [
+    "let jump = key(\"Jump\", .hold(VK.space), 60), crouch = key(\"Duck\", .hold(VK.ctrl)), use = key(\"Use\", .tap(VK.letter(\"E\"))), sprint = key(\"Run\", .hold(VK.shift))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2910"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Run",
+   "lines": [
+    376
+   ],
+   "contexts": [
+    "let jump = key(\"Jump\", .hold(VK.space), 60), crouch = key(\"Duck\", .hold(VK.ctrl)), use = key(\"Use\", .tap(VK.letter(\"E\"))), sprint = key(\"Run\", .hold(VK.shift))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2911"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "R",
+   "lines": [
+    377
+   ],
+   "contexts": [
+    "let reload = key(\"R\", .tap(VK.letter(\"R\")), 46), esc = key(\"Esc\", .tap(VK.esc), 46), tab = key(\"Tab\", .tap(VK.tab), 46)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2912"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Menu",
+   "lines": [
+    455
+   ],
+   "contexts": [
+    "cursorToggle.setTitle(cursorMode ? \"Menu\" : \"Look\", for: .normal)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2913"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Touch controls",
+   "lines": [
+    482
+   ],
+   "contexts": [
+    "let alert = UIAlertController(title: \"Touch controls\", message: \"\"\""
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2914"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "\n            Tap: left click\n            Drag: left button held (belts, selections)\n            Press and hold: right button held (mine, remove)\n            Two-finger tap: right click\n            Pinch: zoom\n            Stick: W A S D\n            E / F / Tab / Esc: always on screen; ••• opens more keys\n            Right mode (under •••): tap and drag use the right button\n            Shift / Ctrl / Alt: tap once to hold, again to release\n            ",
+   "lines": [
+    482
+   ],
+   "contexts": [
+    "let alert = UIAlertController(title: \"Touch controls\", message: \"\"\""
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2915"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "OK",
+   "lines": [
+    493
+   ],
+   "contexts": [
+    "alert.addAction(UIAlertAction(title: \"OK\", style: .default))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2916"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Right mode: ON",
+   "lines": [
+    503
+   ],
+   "contexts": [
+    "mouse.setTitle(rightMode ? \"Right mode: ON\" : \"Right mode\", for: .normal)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2917"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "PROFILING  %.0f s left",
+   "lines": [
+    628
+   ],
+   "contexts": [
+    "profileBadge.text = String(format: \"PROFILING  %.0f s left\", max(0, length - elapsed))"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2918"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Profile done, working out the result...",
+   "lines": [
+    632
+   ],
+   "contexts": [
+    "profileBadge.text = \"Profile done, working out the result...\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2919"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Profile done: the result is in the log",
+   "lines": [
+    637
+   ],
+   "contexts": [
+    "profileBadge.text = \"Profile done: the result is in the log\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2920"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Always visible",
+   "lines": [
+    672
+   ],
+   "contexts": [
+    "guard style != .always else { return }            // \"Always visible\" keeps the buttons bright too"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2921"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Input: \\(HUDKeys.sent) keys sent (last \\(HUDKeys.last)), \\(GameSurfaceView.touchCount) touches\\nHUD: \\(Self.stateChanges) changes / \\(Self.stateCalls) updates, \\(Self.attaches) attaches",
+   "lines": [
+    743
+   ],
+   "contexts": [
+    "perfModel.extra = \"Input: \\(HUDKeys.sent) keys sent (last \\(HUDKeys.last)), \\(GameSurfaceView.touchCount) touches\\nHUD: \\(Self.stateChanges) changes / \\(Self.stateCalls) updates, \\(Self.attaches) attaches\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2922"
+  },
+  {
+   "file": "app/Sources/UI/HUD.swift",
+   "text": "Game ended. To play another game, close Porthole and open it again. The Home screen has a button for that.",
+   "lines": [
+    803
+   ],
+   "contexts": [
+    "case .ended: message.text = \"Game ended. To play another game, close Porthole and open it again. The Home screen has a button for that.\"; message.isHidden = false; back.isHidden = false"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2923"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Friends",
+   "lines": [
+    64,
+    91
+   ],
+   "contexts": [
+    "GameSubSheet(title: \"Friends\", scope: friendsScope, close: { showFriends = false }) {",
+    "return steam.signedIn && friends.loaded && now > 0 ? \"Friends \\u{00B7} \\(now) online\" : \"Friends\""
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2924"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Friends \\u{00B7} \\(now) online",
+   "lines": [
+    91
+   ],
+   "contexts": [
+    "return steam.signedIn && friends.loaded && now > 0 ? \"Friends \\u{00B7} \\(now) online\" : \"Friends\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2925"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Sign in to Steam to see your friends.",
+   "lines": [
+    97
+   ],
+   "contexts": [
+    "Text(\"Sign in to Steam to see your friends.\").font(.system(size: 18, weight: .bold, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2926"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Open Steam",
+   "lines": [
+    98
+   ],
+   "contexts": [
+    "PillButton(id: \"home-friends-signin\", title: \"Open Steam\", symbol: \"arrow.right\", style: .primary) { showFriends = false; router.openSteam() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2927"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Played ",
+   "lines": [
+    108
+   ],
+   "contexts": [
+    "var parts = [game.lastPlayed.map { \"Played \" + RelativeDateTimeFormatter().localizedString(for: $0, relativeTo: Date()) } ?? \"Not played yet\"]"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2928"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Not played yet",
+   "lines": [
+    108
+   ],
+   "contexts": [
+    "var parts = [game.lastPlayed.map { \"Played \" + RelativeDateTimeFormatter().localizedString(for: $0, relativeTo: Date()) } ?? \"Not played yet\"]"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2929"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Not yet tested",
+   "lines": [
+    114
+   ],
+   "contexts": [
+    "else if compat.isUntested(game) { badge = BadgeData(symbol: \"questionmark.circle.fill\", text: \"Not yet tested\", tint: Theme.textDim) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2930"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Direct",
+   "lines": [
+    116
+   ],
+   "contexts": [
+    "let chip: String? = game.dockAppID == nil ? nil : (game.launchDirect == true ? \"Direct\" : \"Steam\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2931"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Waiting for JIT",
+   "lines": [
+    124
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"jit\", symbol: \"hourglass\", title: \"Waiting for JIT\", detail: wait, actionTitle: \"Cancel\", spinner: true))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2932"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Cancel",
+   "lines": [
+    124,
+    134
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"jit\", symbol: \"hourglass\", title: \"Waiting for JIT\", detail: wait, actionTitle: \"Cancel\", spinner: true))",
+    "list.append(NoticeData(id: \"restart-pending\", symbol: \"arrow.clockwise.circle.fill\", title: \"Starting \\(name) again\", detail: \"Finishing any Workshop downloads first.\", actionTitle: \"Cancel\", spinner: true))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2933"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Couldn't start the game",
+   "lines": [
+    127
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"failed\", symbol: \"exclamationmark.triangle.fill\", title: \"Couldn't start the game\", detail: message, tint: Theme.bad, actionTitle: session.restartAdvised ? \"Close Porthole\" : \"Dismiss\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2934"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Close Porthole",
+   "lines": [
+    127,
+    131
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"failed\", symbol: \"exclamationmark.triangle.fill\", title: \"Couldn't start the game\", detail: message, tint: Theme.bad, actionTitle: session.restartAdvised ? \"Close Porthole\" : \"Dismiss\"))",
+    "detail: \"Porthole has to close and open again before the next game. Your games, saves and settings are kept.\", tint: Theme.warn, actionTitle: \"Close Porthole\"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2935"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Dismiss",
+   "lines": [
+    127
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"failed\", symbol: \"exclamationmark.triangle.fill\", title: \"Couldn't start the game\", detail: message, tint: Theme.bad, actionTitle: session.restartAdvised ? \"Close Porthole\" : \"Dismiss\"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2936"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Restart to play another game",
+   "lines": [
+    130
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"restart\", symbol: \"arrow.clockwise.circle.fill\", title: \"Restart to play another game\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2937"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Porthole has to close and open again before the next game. Your games, saves and settings are kept.",
+   "lines": [
+    131
+   ],
+   "contexts": [
+    "detail: \"Porthole has to close and open again before the next game. Your games, saves and settings are kept.\", tint: Theme.warn, actionTitle: \"Close Porthole\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2938"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Starting \\(name) again",
+   "lines": [
+    134
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"restart-pending\", symbol: \"arrow.clockwise.circle.fill\", title: \"Starting \\(name) again\", detail: \"Finishing any Workshop downloads first.\", actionTitle: \"Cancel\", spinner: true))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2939"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Finishing any Workshop downloads first.",
+   "lines": [
+    134
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"restart-pending\", symbol: \"arrow.clockwise.circle.fill\", title: \"Starting \\(name) again\", detail: \"Finishing any Workshop downloads first.\", actionTitle: \"Cancel\", spinner: true))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2940"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Finish setting up",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"setup\", symbol: \"checklist\", title: \"Finish setting up\", detail: \"A few quick steps before games can run.\", actionTitle: \"Continue\", dismissKey: \"setup\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2941"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "A few quick steps before games can run.",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"setup\", symbol: \"checklist\", title: \"Finish setting up\", detail: \"A few quick steps before games can run.\", actionTitle: \"Continue\", dismissKey: \"setup\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2942"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Continue",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"setup\", symbol: \"checklist\", title: \"Finish setting up\", detail: \"A few quick steps before games can run.\", actionTitle: \"Continue\", dismissKey: \"setup\"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2943"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "\\(name) is a .NET Framework game. Wine Mono, the open-source .NET runtime Wine uses, is about 42 MB from WineHQ and checked before use.",
+   "lines": [
+    140
+   ],
+   "contexts": [
+    "var detail = \"\\(name) is a .NET Framework game. Wine Mono, the open-source .NET runtime Wine uses, is about 42 MB from WineHQ and checked before use.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2944"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Downloading .NET support",
+   "lines": [
+    143
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"mono\", symbol: \"shippingbox.fill\", title: mono.busy ? \"Downloading .NET support\" : \".NET support needed\", detail: detail, tint: Theme.warn,"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2945"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": ".NET support needed",
+   "lines": [
+    143
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"mono\", symbol: \"shippingbox.fill\", title: mono.busy ? \"Downloading .NET support\" : \".NET support needed\", detail: detail, tint: Theme.warn,"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2946"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Download",
+   "lines": [
+    144,
+    152
+   ],
+   "contexts": [
+    "actionTitle: mono.busy ? nil : \"Download\", spinner: mono.busy))",
+    "actionTitle: runtime.busy ? nil : \"Download\", spinner: runtime.busy, dismissKey: runtime.busy ? nil : \"runtime\"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2947"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Many games need Microsoft's C++ runtime. About 25 MB, from Microsoft, checked before use.",
+   "lines": [
+    148
+   ],
+   "contexts": [
+    "var detail = \"Many games need Microsoft's C++ runtime. About 25 MB, from Microsoft, checked before use.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2948"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "\\(Int(fraction * 100))% downloaded.",
+   "lines": [
+    149
+   ],
+   "contexts": [
+    "if case .downloading(let fraction) = runtime.state { detail = \"\\(Int(fraction * 100))% downloaded.\" }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2949"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Downloading components",
+   "lines": [
+    151
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"runtime\", symbol: \"shippingbox.fill\", title: runtime.busy ? \"Downloading components\" : \"Windows components\", detail: detail, tint: Theme.warn,"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2950"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Windows components",
+   "lines": [
+    151
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"runtime\", symbol: \"shippingbox.fill\", title: runtime.busy ? \"Downloading components\" : \"Windows components\", detail: detail, tint: Theme.warn,"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2951"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": " (and \\(attention.count - 1) more)",
+   "lines": [
+    157
+   ],
+   "contexts": [
+    "let more = attention.count > 1 ? \" (and \\(attention.count - 1) more)\" : \"\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2952"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Details",
+   "lines": [
+    159,
+    259
+   ],
+   "contexts": [
+    "tint: worst.level == .problem ? Theme.bad : Theme.warn, actionTitle: \"Details\", dismissKey: InstallCheck.noticeKey(attention)))",
+    "Button { router.homePath.append(game.id) } label: { Label(\"Details\", systemImage: \"info.circle\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2953"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Your VPN is paused",
+   "lines": [
+    163
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"vpn\", symbol: \"lock.open.fill\", title: \"Your VPN is paused\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2954"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Porthole switched it off to turn on JIT or install an update. Turn it back on here, or in Settings \\u{203A} VPN. This goes away by itself once a VPN is on.",
+   "lines": [
+    164
+   ],
+   "contexts": [
+    "detail: shortcut ? \"Porthole switched it off to turn on JIT or install an update. Turn it back on here, or in Settings \\u{203A} VPN. This goes away by itself once a VPN is on.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2955"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Porthole switched it off to turn on JIT or install an update. iOS only lets a Shortcut turn it back on, so Porthole cannot do it by itself yet: set one up once (Settings \\u{203A} JIT and connection \\u{203A} Your own VPN) and it comes back after every launch.",
+   "lines": [
+    165
+   ],
+   "contexts": [
+    ": \"Porthole switched it off to turn on JIT or install an update. iOS only lets a Shortcut turn it back on, so Porthole cannot do it by itself yet: set one up once (Settings \\u{203A} JIT and connection \\u{203A} Your own VPN) and it comes back after every launch.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2956"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Turn on",
+   "lines": [
+    166,
+    170
+   ],
+   "contexts": [
+    "tint: Theme.warn, actionTitle: shortcut ? \"Turn on\" : \"Set up\", dismissKey: shortcut ? nil : \"vpn-setup\"))",
+    "tint: Theme.warn, actionTitle: \"Turn on\"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2957"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Set up",
+   "lines": [
+    166
+   ],
+   "contexts": [
+    "tint: Theme.warn, actionTitle: shortcut ? \"Turn on\" : \"Set up\", dismissKey: shortcut ? nil : \"vpn-setup\"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2958"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Cellular data is off",
+   "lines": [
+    169
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"cellular\", symbol: \"antenna.radiowaves.left.and.right.slash\", title: \"Cellular data is off\", detail: \"Porthole switched it off to turn on JIT or install an update and could not switch it back on. Tap Turn on to run the shortcut, or turn it on in Settings.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2959"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Porthole switched it off to turn on JIT or install an update and could not switch it back on. Tap Turn on to run the shortcut, or turn it on in Settings.",
+   "lines": [
+    169
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"cellular\", symbol: \"antenna.radiowaves.left.and.right.slash\", title: \"Cellular data is off\", detail: \"Porthole switched it off to turn on JIT or install an update and could not switch it back on. Tap Turn on to run the shortcut, or turn it on in Settings.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2960"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Update \\(release.title) ready",
+   "lines": [
+    173
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"update\", symbol: \"arrow.down.circle.fill\", title: \"Update \\(release.title) ready\", detail: \"Download and install it from Settings > Updates.\", actionTitle: \"Open\", dismissKey: \"update:\\(release.build)\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2961"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Download and install it from Settings > Updates.",
+   "lines": [
+    173
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"update\", symbol: \"arrow.down.circle.fill\", title: \"Update \\(release.title) ready\", detail: \"Download and install it from Settings > Updates.\", actionTitle: \"Open\", dismissKey: \"update:\\(release.build)\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2962"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Open",
+   "lines": [
+    173,
+    183,
+    187,
+    190,
+    193,
+    196,
+    199,
+    202,
+    216
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"update\", symbol: \"arrow.down.circle.fill\", title: \"Update \\(release.title) ready\", detail: \"Download and install it from Settings > Updates.\", actionTitle: \"Open\", dismissKey: \"update:\\(release.build)\"))",
+    "list.append(NoticeData(id: \"steam-update\", symbol: \"arrow.triangle.2.circlepath.circle.fill\", title: title, detail: detail, tint: Theme.accent, actionTitle: \"Open\",",
+    "list.append(NoticeData(id: \"download\", symbol: \"arrow.down.to.line\", title: \"\\(game.name) \\(Int(d.progress.fraction * 100))%\", detail: \"Downloading from Steam. Tap to see all downloads.\", actionTitle: \"Open\"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2963"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "\\(name) finished",
+   "lines": [
+    176
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"installer\", symbol: \"shippingbox.fill\", title: \"\\(name) finished\", detail: \"Add what it installed to your library.\", tint: .orange, actionTitle: \"Add\", dismissKey: \"installer:\\(name)\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2964"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Add what it installed to your library.",
+   "lines": [
+    176
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"installer\", symbol: \"shippingbox.fill\", title: \"\\(name) finished\", detail: \"Add what it installed to your library.\", tint: .orange, actionTitle: \"Add\", dismissKey: \"installer:\\(name)\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2965"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Add",
+   "lines": [
+    176
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"installer\", symbol: \"shippingbox.fill\", title: \"\\(name) finished\", detail: \"Add what it installed to your library.\", tint: .orange, actionTitle: \"Add\", dismissKey: \"installer:\\(name)\"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2966"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "\\(first.name) has an update",
+   "lines": [
+    181
+   ],
+   "contexts": [
+    "let title = updates.count == 1 ? \"\\(first.name) has an update\" : \"\\(updates.count) Steam games have updates\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2967"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "\\(updates.count) Steam games have updates",
+   "lines": [
+    181
+   ],
+   "contexts": [
+    "let title = updates.count == 1 ? \"\\(first.name) has an update\" : \"\\(updates.count) Steam games have updates\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2968"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "A newer build is on Steam. Open the library to update it.",
+   "lines": [
+    182
+   ],
+   "contexts": [
+    "let detail = updates.count == 1 ? \"A newer build is on Steam. Open the library to update it.\" : \"\\(updates.prefix(3).map(\\.name).joined(separator: \", \"))\\(updates.count > 3 ? \" and more\" : \"\"). Open the library to update them.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2969"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "\\(updates.prefix(3).map(\\.name).joined(separator: ",
+   "lines": [
+    182
+   ],
+   "contexts": [
+    "let detail = updates.count == 1 ? \"A newer build is on Steam. Open the library to update it.\" : \"\\(updates.prefix(3).map(\\.name).joined(separator: \", \"))\\(updates.count > 3 ? \" and more\" : \"\"). Open the library to update them.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2970"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "))\\(updates.count > 3 ? ",
+   "lines": [
+    182
+   ],
+   "contexts": [
+    "let detail = updates.count == 1 ? \"A newer build is on Steam. Open the library to update it.\" : \"\\(updates.prefix(3).map(\\.name).joined(separator: \", \"))\\(updates.count > 3 ? \" and more\" : \"\"). Open the library to update them.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2971"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "). Open the library to update them.",
+   "lines": [
+    182
+   ],
+   "contexts": [
+    "let detail = updates.count == 1 ? \"A newer build is on Steam. Open the library to update it.\" : \"\\(updates.prefix(3).map(\\.name).joined(separator: \", \"))\\(updates.count > 3 ? \" and more\" : \"\"). Open the library to update them.\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2972"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "\\($0.id)@\\($0.buildID)",
+   "lines": [
+    184
+   ],
+   "contexts": [
+    "dismissKey: \"steam-update:\" + updates.map { \"\\($0.id)@\\($0.buildID)\" }.sorted().joined(separator: \",\")))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2973"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "\\(game.name) \\(Int(d.progress.fraction * 100))%",
+   "lines": [
+    187
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"download\", symbol: \"arrow.down.to.line\", title: \"\\(game.name) \\(Int(d.progress.fraction * 100))%\", detail: \"Downloading from Steam. Tap to see all downloads.\", actionTitle: \"Open\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2974"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Downloading from Steam. Tap to see all downloads.",
+   "lines": [
+    187
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"download\", symbol: \"arrow.down.to.line\", title: \"\\(game.name) \\(Int(d.progress.fraction * 100))%\", detail: \"Downloading from Steam. Tap to see all downloads.\", actionTitle: \"Open\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2975"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "\\(game.title) \\(Int(install.progress.fraction * 100))%",
+   "lines": [
+    190,
+    193,
+    196,
+    199
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"download-epic\", symbol: \"arrow.down.to.line\", title: \"\\(game.title) \\(Int(install.progress.fraction * 100))%\", detail: \"Downloading from Epic Games. Tap to see all downloads.\", actionTitle: \"Open\"))",
+    "list.append(NoticeData(id: \"download-gog\", symbol: \"arrow.down.to.line\", title: \"\\(game.title) \\(Int(install.progress.fraction * 100))%\", detail: \"Downloading from GOG. Tap to see all downloads.\", actionTitle: \"Open\"))",
+    "list.append(NoticeData(id: \"download-itch\", symbol: \"arrow.down.to.line\", title: \"\\(game.title) \\(Int(install.progress.fraction * 100))%\", detail: \"Downloading from itch.io. Tap to see all downloads.\", actionTitle: \"Open\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2976"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Downloading from Epic Games. Tap to see all downloads.",
+   "lines": [
+    190
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"download-epic\", symbol: \"arrow.down.to.line\", title: \"\\(game.title) \\(Int(install.progress.fraction * 100))%\", detail: \"Downloading from Epic Games. Tap to see all downloads.\", actionTitle: \"Open\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2977"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Downloading from GOG. Tap to see all downloads.",
+   "lines": [
+    193
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"download-gog\", symbol: \"arrow.down.to.line\", title: \"\\(game.title) \\(Int(install.progress.fraction * 100))%\", detail: \"Downloading from GOG. Tap to see all downloads.\", actionTitle: \"Open\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2978"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Downloading from itch.io. Tap to see all downloads.",
+   "lines": [
+    196
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"download-itch\", symbol: \"arrow.down.to.line\", title: \"\\(game.title) \\(Int(install.progress.fraction * 100))%\", detail: \"Downloading from itch.io. Tap to see all downloads.\", actionTitle: \"Open\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2979"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Downloading from Amazon Games. Tap to see all downloads.",
+   "lines": [
+    199
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"download-amazon\", symbol: \"arrow.down.to.line\", title: \"\\(game.title) \\(Int(install.progress.fraction * 100))%\", detail: \"Downloading from Amazon Games. Tap to see all downloads.\", actionTitle: \"Open\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2980"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "\\(title) \\(Int(install.progress.fraction * 100))%",
+   "lines": [
+    202
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"download-ea\", symbol: \"arrow.down.to.line\", title: \"\\(title) \\(Int(install.progress.fraction * 100))%\", detail: \"Downloading from the EA app. Tap to see all downloads.\", actionTitle: \"Open\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2981"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Downloading from the EA app. Tap to see all downloads.",
+   "lines": [
+    202
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"download-ea\", symbol: \"arrow.down.to.line\", title: \"\\(title) \\(Int(install.progress.fraction * 100))%\", detail: \"Downloading from the EA app. Tap to see all downloads.\", actionTitle: \"Open\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2982"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "was fixed",
+   "lines": [
+    209
+   ],
+   "contexts": [
+    "case \"fixed\": what = first.fixedIn.isEmpty ? \"was fixed\" : \"was fixed in \\(first.fixedIn)\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2983"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "was fixed in \\(first.fixedIn)",
+   "lines": [
+    209
+   ],
+   "contexts": [
+    "case \"fixed\": what = first.fixedIn.isEmpty ? \"was fixed\" : \"was fixed in \\(first.fixedIn)\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2984"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "was reviewed",
+   "lines": [
+    210
+   ],
+   "contexts": [
+    "default: what = \"was reviewed\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2985"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "\\(answered.count) of your reports have an update",
+   "lines": [
+    212
+   ],
+   "contexts": [
+    "let title = answered.count > 1 ? \"\\(answered.count) of your reports have an update\" : \"Your report \\(what)\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2986"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Your report \\(what)",
+   "lines": [
+    212
+   ],
+   "contexts": [
+    "let title = answered.count > 1 ? \"\\(answered.count) of your reports have an update\" : \"Your report \\(what)\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2987"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Open Report a problem to read what was said.",
+   "lines": [
+    213
+   ],
+   "contexts": [
+    "let detail = answered.count > 1 ? \"Open Report a problem to read what was said.\" :"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2988"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "\\u{201C}\\(first.description.prefix(60))\\u{201D}. Open it to read the answer.",
+   "lines": [
+    214
+   ],
+   "contexts": [
+    "(first.note.isEmpty ? \"\\u{201C}\\(first.description.prefix(60))\\u{201D}. Open it to read the answer.\" : first.note)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2989"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "fixed",
+   "lines": [
+    215,
+    216
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"problem\", symbol: first.status == \"fixed\" ? \"checkmark.seal.fill\" : \"text.bubble.fill\", title: title, detail: detail,",
+    "tint: first.status == \"fixed\" ? Theme.good : .blue, actionTitle: \"Open\", dismissKey: \"problem:\\(first.id):\\(Int(first.updatedAt))\"))"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2990"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "checkmark.seal.fill",
+   "lines": [
+    215
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"problem\", symbol: first.status == \"fixed\" ? \"checkmark.seal.fill\" : \"text.bubble.fill\", title: title, detail: detail,"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2991"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "text.bubble.fill",
+   "lines": [
+    215
+   ],
+   "contexts": [
+    "list.append(NoticeData(id: \"problem\", symbol: first.status == \"fixed\" ? \"checkmark.seal.fill\" : \"text.bubble.fill\", title: title, detail: detail,"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2992"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "\\(prompt.gameName) closed unexpectedly",
+   "lines": [
+    220
+   ],
+   "contexts": [
+    "title: prompt.crashed ? \"\\(prompt.gameName) closed unexpectedly\" : \"How did \\(prompt.gameName) run?\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2993"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "How did \\(prompt.gameName) run?",
+   "lines": [
+    220
+   ],
+   "contexts": [
+    "title: prompt.crashed ? \"\\(prompt.gameName) closed unexpectedly\" : \"How did \\(prompt.gameName) run?\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u2994"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "A short report helps other people with your device.",
+   "lines": [
+    221
+   ],
+   "contexts": [
+    "detail: \"A short report helps other people with your device.\", actionTitle: \"Report\", dismissKey: \"compat:\\(prompt.gameID)\"))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2995"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Report",
+   "lines": [
+    221
+   ],
+   "contexts": [
+    "detail: \"A short report helps other people with your device.\", actionTitle: \"Report\", dismissKey: \"compat:\\(prompt.gameID)\"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2996"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Play",
+   "lines": [
+    258
+   ],
+   "contexts": [
+    "Button { session.start(game) } label: { Label(\"Play\", systemImage: \"play.fill\") }.disabled(session.isActive)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2997"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Start through Steam",
+   "lines": [
+    263
+   ],
+   "contexts": [
+    "Label(direct ? \"Start through Steam\" : \"Run directly (skip Steam)\", systemImage: direct ? \"checkmark.shield\" : \"play.rectangle\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2998"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Run directly (skip Steam)",
+   "lines": [
+    263
+   ],
+   "contexts": [
+    "Label(direct ? \"Start through Steam\" : \"Run directly (skip Steam)\", systemImage: direct ? \"checkmark.shield\" : \"play.rectangle\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u2999"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Choose Steam artwork\\u{2026}",
+   "lines": [
+    266
+   ],
+   "contexts": [
+    "Button { pickSteam = game } label: { Label(\"Choose Steam artwork\\u{2026}\", systemImage: \"photo\") }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3000"
+  },
+  {
+   "file": "app/Sources/UI/HomeScreen.swift",
+   "text": "Remove from library",
+   "lines": [
+    267
+   ],
+   "contexts": [
+    "Button(\"Remove from library\", role: .destructive) { model.remove(game) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3001"
+  },
+  {
+   "file": "app/Sources/UI/InGame/AchievementToast.swift",
+   "text": "Pop-ups are working",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "post(SteamAchievement(apiName: \"PORTHOLE_TEST\", name: \"Pop-ups are working\", detail: \"This is how an unlocked achievement will look.\", hidden: false), appID: 0)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3002"
+  },
+  {
+   "file": "app/Sources/UI/InGame/AchievementToast.swift",
+   "text": "This is how an unlocked achievement will look.",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "post(SteamAchievement(apiName: \"PORTHOLE_TEST\", name: \"Pop-ups are working\", detail: \"This is how an unlocked achievement will look.\", hidden: false), appID: 0)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3003"
+  },
+  {
+   "file": "app/Sources/UI/InGame/AchievementToast.swift",
+   "text": "Achievement unlocked",
+   "lines": [
+    85
+   ],
+   "contexts": [
+    "Text(\"Achievement unlocked\").font(.system(size: 11, weight: .bold, design: .rounded)).foregroundStyle(Color.yellow)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3004"
+  },
+  {
+   "file": "app/Sources/UI/InGame/AchievementsTab.swift",
+   "text": "No achievement list for this game yet. Steam's client saves it the first time the game is started with it.",
+   "lines": [
+    22
+   ],
+   "contexts": [
+    "Text(\"No achievement list for this game yet. Steam's client saves it the first time the game is started with it.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3005"
+  },
+  {
+   "file": "app/Sources/UI/InGame/AchievementsTab.swift",
+   "text": "Unlocked",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "if !parts.unlocked.isEmpty { MenuCard(title: \"Unlocked\") { rows(parts.unlocked) } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3006"
+  },
+  {
+   "file": "app/Sources/UI/InGame/AchievementsTab.swift",
+   "text": "Still to unlock",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "if !parts.locked.isEmpty { MenuCard(title: \"Still to unlock\") { rows(parts.locked) } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3007"
+  },
+  {
+   "file": "app/Sources/UI/InGame/AchievementsTab.swift",
+   "text": "Pop-ups",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "MenuCard(title: \"Pop-ups\", footer: \"When Steam records an achievement while you play, a pop-up shows at the top of the screen. It reads Steam's own record on this device; it needs no connection.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3008"
+  },
+  {
+   "file": "app/Sources/UI/InGame/AchievementsTab.swift",
+   "text": "When Steam records an achievement while you play, a pop-up shows at the top of the screen. It reads Steam's own record on this device; it needs no connection.",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "MenuCard(title: \"Pop-ups\", footer: \"When Steam records an achievement while you play, a pop-up shows at the top of the screen. It reads Steam's own record on this device; it needs no connection.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3009"
+  },
+  {
+   "file": "app/Sources/UI/InGame/AchievementsTab.swift",
+   "text": "Pop-ups for unlocked achievements",
+   "lines": [
+    31
+   ],
+   "contexts": [
+    "MenuToggleRow(title: \"Pop-ups for unlocked achievements\", isOn: Binding(get: { toasts }, set: { toasts = $0; AchievementToastCenter.enabled = $0 }))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3010"
+  },
+  {
+   "file": "app/Sources/UI/InGame/AchievementsTab.swift",
+   "text": "Show a test pop-up",
+   "lines": [
+    33
+   ],
+   "contexts": [
+    "MenuActionRow(title: \"Show a test pop-up\", symbol: \"trophy\") { AchievementToastCenter.shared.showTest() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3011"
+  },
+  {
+   "file": "app/Sources/UI/InGame/AchievementsTab.swift",
+   "text": "\\(unlocked) of \\(total) unlocked",
+   "lines": [
+    40
+   ],
+   "contexts": [
+    "Text(\"\\(unlocked) of \\(total) unlocked\").font(.system(size: 15, weight: .bold, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3012"
+  },
+  {
+   "file": "app/Sources/UI/InGame/AchievementsTab.swift",
+   "text": "Unlocked ",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "if let date = item.unlocked { line.append(\"Unlocked \" + date.formatted(date: .abbreviated, time: .shortened)) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3013"
+  },
+  {
+   "file": "app/Sources/UI/InGame/AchievementsTab.swift",
+   "text": "%.1f%% of players",
+   "lines": [
+    59
+   ],
+   "contexts": [
+    "if let share = shares[item.apiName] { line.append(String(format: \"%.1f%% of players\", share)) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3014"
+  },
+  {
+   "file": "app/Sources/UI/InGame/AchievementsTab.swift",
+   "text": "Hidden achievement",
+   "lines": [
+    67
+   ],
+   "contexts": [
+    "Text(secret ? \"Hidden achievement\" : item.name).font(.system(size: 14, weight: .semibold)).foregroundStyle(Theme.text).lineLimit(2)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3015"
+  },
+  {
+   "file": "app/Sources/UI/InGame/AchievementsTab.swift",
+   "text": "\\(SteamAPI.host)/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v2/?gameid=\\(appID)&format=json",
+   "lines": [
+    80
+   ],
+   "contexts": [
+    "if shares.isEmpty, let url = URL(string: \"\\(SteamAPI.host)/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v2/?gameid=\\(appID)&format=json\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3016"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Performance",
+   "lines": [
+    8
+   ],
+   "contexts": [
+    "var title: String { switch self { case .performance: \"Performance\"; case .controls: \"Controls\"; case .game: \"Game\"; case .steam: \"Steam\" } }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3017"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Controls",
+   "lines": [
+    8
+   ],
+   "contexts": [
+    "var title: String { switch self { case .performance: \"Performance\"; case .controls: \"Controls\"; case .game: \"Game\"; case .steam: \"Steam\" } }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3018"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Game",
+   "lines": [
+    8
+   ],
+   "contexts": [
+    "var title: String { switch self { case .performance: \"Performance\"; case .controls: \"Controls\"; case .game: \"Game\"; case .steam: \"Steam\" } }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3019"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Fades out",
+   "lines": [
+    16
+   ],
+   "contexts": [
+    "var title: String { switch self { case .fade: \"Fades out\"; case .always: \"Always visible\"; case .hidden: \"Hidden\" } }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3020"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Always visible",
+   "lines": [
+    16
+   ],
+   "contexts": [
+    "var title: String { switch self { case .fade: \"Fades out\"; case .always: \"Always visible\"; case .hidden: \"Hidden\" } }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3021"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Hidden",
+   "lines": [
+    16
+   ],
+   "contexts": [
+    "var title: String { switch self { case .fade: \"Fades out\"; case .always: \"Always visible\"; case .hidden: \"Hidden\" } }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3022"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Shows for a few seconds when a game starts, then fades.",
+   "lines": [
+    19
+   ],
+   "contexts": [
+    "case .fade: \"Shows for a few seconds when a game starts, then fades.\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3023"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "A thin line stays on the right edge.",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "case .always: \"A thin line stays on the right edge.\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3024"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Nothing is drawn. Swipe in from the right edge.",
+   "lines": [
+    21
+   ],
+   "contexts": [
+    "case .hidden: \"Nothing is drawn. Swipe in from the right edge.\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3025"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Accurate",
+   "lines": [
+    91
+   ],
+   "contexts": [
+    "(1, \"Accurate\", \"Waits for the GPU the way the game expects. The safe choice.\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3026"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Waits for the GPU the way the game expects. The safe choice.",
+   "lines": [
+    91
+   ],
+   "contexts": [
+    "(1, \"Accurate\", \"Waits for the GPU the way the game expects. The safe choice.\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3027"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Barrier-driven",
+   "lines": [
+    92
+   ],
+   "contexts": [
+    "(6, \"Barrier-driven\", \"Waits only at barriers. Can be faster, can show glitches.\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3028"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Waits only at barriers. Can be faster, can show glitches.",
+   "lines": [
+    92
+   ],
+   "contexts": [
+    "(6, \"Barrier-driven\", \"Waits only at barriers. Can be faster, can show glitches.\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3029"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Fragment stage",
+   "lines": [
+    93
+   ],
+   "contexts": [
+    "(5, \"Fragment stage\", \"Waits at the fragment stage.\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3030"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Waits at the fragment stage.",
+   "lines": [
+    93
+   ],
+   "contexts": [
+    "(5, \"Fragment stage\", \"Waits at the fragment stage.\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3031"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "No fences",
+   "lines": [
+    94
+   ],
+   "contexts": [
+    "(0, \"No fences\", \"Never waits. Fastest, but can break the picture or crash.\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3032"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Never waits. Fastest, but can break the picture or crash.",
+   "lines": [
+    94
+   ],
+   "contexts": [
+    "(0, \"No fences\", \"Never waits. Fastest, but can break the picture or crash.\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3033"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "The menu has tabs",
+   "lines": [
+    157
+   ],
+   "contexts": [
+    "Text(\"The menu has tabs\").font(.system(size: 15, weight: .bold, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3034"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Swipe the menu back to the right, or tap outside it, to close it. With a controller: hold \\(padKind.menuChordName) to open it, the D-pad to move, \\(padKind.glyph(",
+   "lines": [
+    163
+   ],
+   "contexts": [
+    "Text(\"Swipe the menu back to the right, or tap outside it, to close it. With a controller: hold \\(padKind.menuChordName) to open it, the D-pad to move, \\(padKind.glyph(\"A\")) to press, \\(padKind.glyph(\"B\")) to close, \\(padKind.glyph(\"LB\")) and \\(padKind.glyph(\"RB\")) to change tab.\").font(.system(size"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3035"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": ")) to press, \\(padKind.glyph(",
+   "lines": [
+    163
+   ],
+   "contexts": [
+    "Text(\"Swipe the menu back to the right, or tap outside it, to close it. With a controller: hold \\(padKind.menuChordName) to open it, the D-pad to move, \\(padKind.glyph(\"A\")) to press, \\(padKind.glyph(\"B\")) to close, \\(padKind.glyph(\"LB\")) and \\(padKind.glyph(\"RB\")) to change tab.\").font(.system(size"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3036"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": ")) to close, \\(padKind.glyph(",
+   "lines": [
+    163
+   ],
+   "contexts": [
+    "Text(\"Swipe the menu back to the right, or tap outside it, to close it. With a controller: hold \\(padKind.menuChordName) to open it, the D-pad to move, \\(padKind.glyph(\"A\")) to press, \\(padKind.glyph(\"B\")) to close, \\(padKind.glyph(\"LB\")) and \\(padKind.glyph(\"RB\")) to change tab.\").font(.system(size"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3037"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": ")) and \\(padKind.glyph(",
+   "lines": [
+    163
+   ],
+   "contexts": [
+    "Text(\"Swipe the menu back to the right, or tap outside it, to close it. With a controller: hold \\(padKind.menuChordName) to open it, the D-pad to move, \\(padKind.glyph(\"A\")) to press, \\(padKind.glyph(\"B\")) to close, \\(padKind.glyph(\"LB\")) and \\(padKind.glyph(\"RB\")) to change tab.\").font(.system(size"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3038"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": ")) to change tab.",
+   "lines": [
+    163
+   ],
+   "contexts": [
+    "Text(\"Swipe the menu back to the right, or tap outside it, to close it. With a controller: hold \\(padKind.menuChordName) to open it, the D-pad to move, \\(padKind.glyph(\"A\")) to press, \\(padKind.glyph(\"B\")) to close, \\(padKind.glyph(\"LB\")) and \\(padKind.glyph(\"RB\")) to change tab.\").font(.system(size"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3039"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Got it",
+   "lines": [
+    165
+   ],
+   "contexts": [
+    "Text(\"Got it\").font(.system(size: 14, weight: .bold, design: .rounded)).foregroundStyle(.white).padding(.horizontal, 22).padding(.vertical, 8).background(Theme.accent, in: Capsule())"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3040"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Menu",
+   "lines": [
+    209
+   ],
+   "contexts": [
+    "Text(\"Menu\").font(.system(size: 20, weight: .bold, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3041"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Close menu",
+   "lines": [
+    220
+   ],
+   "contexts": [
+    ".accessibilityLabel(\"Close menu\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3042"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Power",
+   "lines": [
+    341
+   ],
+   "contexts": [
+    "MenuCard(title: \"Power\", footer: model.powerChosen == .auto"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3043"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Auto plays at a locked 60 FPS while iOS lets the fast cores run, drops to a steady 30 FPS for a minute or more once it holds them back, then tries again. Right now: \\(model.powerEffective == .performance ? ",
+   "lines": [
+    342
+   ],
+   "contexts": [
+    "? \"Auto plays at a locked 60 FPS while iOS lets the fast cores run, drops to a steady 30 FPS for a minute or more once it holds them back, then tries again. Right now: \\(model.powerEffective == .performance ? \"60 FPS\" : model.powerEffective.title).\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3044"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": " : model.powerEffective.title).",
+   "lines": [
+    342
+   ],
+   "contexts": [
+    "? \"Auto plays at a locked 60 FPS while iOS lets the fast cores run, drops to a steady 30 FPS for a minute or more once it holds them back, then tries again. Right now: \\(model.powerEffective == .performance ? \"60 FPS\" : model.powerEffective.title).\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3045"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "The phone is warm, so it is running as \\(model.powerEffective.title) until it cools. Your choice comes back by itself.",
+   "lines": [
+    344
+   ],
+   "contexts": [
+    "? \"The phone is warm, so it is running as \\(model.powerEffective.title) until it cools. Your choice comes back by itself.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3046"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Applies to this game only. Your default is in Settings.",
+   "lines": [
+    345
+   ],
+   "contexts": [
+    ": \"Applies to this game only. Your default is in Settings.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3047"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Engine",
+   "lines": [
+    352
+   ],
+   "contexts": [
+    "MenuCard(title: \"Engine\", footer: \"Eco puts the game on the efficiency cores: cooler and longer battery, slower. Frame generation helps a game running at no more than half the screen\\u{2019}s rate (60 FPS on a 120 Hz screen); try it and look at the overlay. GPU sync only matters if you see flicker o"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3048"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Eco puts the game on the efficiency cores: cooler and longer battery, slower. Frame generation helps a game running at no more than half the screen\\u{2019}s rate (60 FPS on a 120 Hz screen); try it and look at the overlay. GPU sync only matters if you see flicker or a freeze.",
+   "lines": [
+    352
+   ],
+   "contexts": [
+    "MenuCard(title: \"Engine\", footer: \"Eco puts the game on the efficiency cores: cooler and longer battery, slower. Frame generation helps a game running at no more than half the screen\\u{2019}s rate (60 FPS on a 120 Hz screen); try it and look at the overlay. GPU sync only matters if you see flicker o"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3049"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Eco mode",
+   "lines": [
+    353
+   ],
+   "contexts": [
+    "MenuToggleRow(title: \"Eco mode\", detail: nil, isOn: Binding(get: { model.eco }, set: { model.setEco($0) }))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3050"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Frame generation",
+   "lines": [
+    355
+   ],
+   "contexts": [
+    "MenuToggleRow(title: \"Frame generation\", detail: \"Experimental. A picture between game frames, for a screen that can show twice the game's rate.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3051"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Experimental. A picture between game frames, for a screen that can show twice the game's rate.",
+   "lines": [
+    355
+   ],
+   "contexts": [
+    "MenuToggleRow(title: \"Frame generation\", detail: \"Experimental. A picture between game frames, for a screen that can show twice the game's rate.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3052"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "GPU sync",
+   "lines": [
+    359
+   ],
+   "contexts": [
+    "Text(\"GPU sync\").font(.system(size: 15, weight: .semibold)).foregroundStyle(Theme.text).padding(.horizontal, 12).padding(.top, 10)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3053"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Processor",
+   "lines": [
+    374
+   ],
+   "contexts": [
+    "MenuCard(title: \"Processor\", footer: \"After a few minutes of load iOS pins the phone\\u{2019}s fast cores at about 1.1 GHz, roughly half their speed, and the game slows down with them. Less power use delays it: a 30 FPS cap (Balanced) and the screen not held at 120 Hz help. Heat as iOS reports it: \\("
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3054"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "After a few minutes of load iOS pins the phone\\u{2019}s fast cores at about 1.1 GHz, roughly half their speed, and the game slows down with them. Less power use delays it: a 30 FPS cap (Balanced) and the screen not held at 120 Hz help. Heat as iOS reports it: \\(CPUClampMonitor.thermalName), pressure \\(CPUClampMonitor.pressureName(monitor.pressure)).",
+   "lines": [
+    374
+   ],
+   "contexts": [
+    "MenuCard(title: \"Processor\", footer: \"After a few minutes of load iOS pins the phone\\u{2019}s fast cores at about 1.1 GHz, roughly half their speed, and the game slows down with them. Less power use delays it: a 30 FPS cap (Balanced) and the screen not held at 120 Hz help. Heat as iOS reports it: \\("
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3055"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Clamped by iOS: %.1f GHz",
+   "lines": [
+    391
+   ],
+   "contexts": [
+    "case .clamped: String(format: \"Clamped by iOS: %.1f GHz\", monitor.ghz)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3056"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Full speed: %.1f GHz",
+   "lines": [
+    392
+   ],
+   "contexts": [
+    "case .full: String(format: \"Full speed: %.1f GHz\", monitor.ghz)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3057"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Light load",
+   "lines": [
+    393
+   ],
+   "contexts": [
+    "case .light: \"Light load\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3058"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Measuring...",
+   "lines": [
+    394
+   ],
+   "contexts": [
+    "case .measuring: \"Measuring...\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3059"
+  }
+ ]
+}

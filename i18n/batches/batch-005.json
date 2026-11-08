@@ -1,0 +1,2895 @@
+{
+ "batch": 5,
+ "units": [
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "2 minutes",
+   "lines": [
+    61
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (off)\"), (\"2\", \"2 minutes\"), (\"5\", \"5 minutes\"), (\"10\", \"10 minutes\"), (\"30\", \"30 minutes\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0720"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "5 minutes",
+   "lines": [
+    61
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (off)\"), (\"2\", \"2 minutes\"), (\"5\", \"5 minutes\"), (\"10\", \"10 minutes\"), (\"30\", \"30 minutes\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0721"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "10 minutes",
+   "lines": [
+    61
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (off)\"), (\"2\", \"2 minutes\"), (\"5\", \"5 minutes\"), (\"10\", \"10 minutes\"), (\"30\", \"30 minutes\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0722"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "30 minutes",
+   "lines": [
+    61
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (off)\"), (\"2\", \"2 minutes\"), (\"5\", \"5 minutes\"), (\"10\", \"10 minutes\"), (\"30\", \"30 minutes\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0723"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Game sound in the background",
+   "lines": [
+    62
+   ],
+   "contexts": [
+    "EngineOption(key: \"background-sound\", title: \"Game sound in the background\", symbol: \"speaker.wave.2.fill\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0724"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "While a game keeps running in the background its sound is muted, and other apps' audio plays normally. On, you keep hearing the game while you are in another app. Only matters when keeping a game running in the background is on.",
+   "lines": [
+    63
+   ],
+   "contexts": [
+    "info: \"While a game keeps running in the background its sound is muted, and other apps' audio plays normally. On, you keep hearing the game while you are in another app. Only matters when keeping a game running in the background is on.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0725"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Default (muted)",
+   "lines": [
+    64
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (muted)\"), (\"1\", \"Play it\")]),"
+   ],
+   "reasons": [
+    "choice-label"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0726"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Play it",
+   "lines": [
+    64
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (muted)\"), (\"1\", \"Play it\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0727"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "CPU cap in the background",
+   "lines": [
+    65
+   ],
+   "contexts": [
+    "EngineOption(key: \"background-cpu\", title: \"CPU cap in the background\", symbol: \"cpu\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0728"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "While a game keeps running in the background, its CPU use is held under this percent of one core on average (threads are paused to keep to it). iOS ends an app that averages more than about 80% for a minute, and a loading game uses several cores, so the game loads slower in the background instead of being ended. 0 turns the cap off.",
+   "lines": [
+    66
+   ],
+   "contexts": [
+    "info: \"While a game keeps running in the background, its CPU use is held under this percent of one core on average (threads are paused to keep to it). iOS ends an app that averages more than about 80% for a minute, and a loading game uses several cores, so the game loads slower in the background ins"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0729"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Default (50%)",
+   "lines": [
+    67
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (50%)\"), (\"25\", \"25%\"), (\"40\", \"40%\"), (\"60\", \"60%\"), (\"0\", \"No cap\")]),"
+   ],
+   "reasons": [
+    "choice-label"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0730"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "No cap",
+   "lines": [
+    67
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (50%)\"), (\"25\", \"25%\"), (\"40\", \"40%\"), (\"60\", \"60%\"), (\"0\", \"No cap\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0731"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Eco mode priority",
+   "lines": [
+    68
+   ],
+   "contexts": [
+    "EngineOption(key: \"eco-qos\", title: \"Eco mode priority\", symbol: \"leaf.fill\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0732"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "The scheduling class game threads drop to while Eco mode is on. Background saves the most battery and heat and slows the game the most.",
+   "lines": [
+    69
+   ],
+   "contexts": [
+    "info: \"The scheduling class game threads drop to while Eco mode is on. Background saves the most battery and heat and slows the game the most.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0733"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Default (utility)",
+   "lines": [
+    70
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (utility)\"), (\"background\", \"Background\"), (\"initiated\", \"User initiated\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0734"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Background",
+   "lines": [
+    70
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (utility)\"), (\"background\", \"Background\"), (\"initiated\", \"User initiated\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0735"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "User initiated",
+   "lines": [
+    70
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (utility)\"), (\"background\", \"Background\"), (\"initiated\", \"User initiated\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0736"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Memory",
+   "lines": [
+    72
+   ],
+   "contexts": [
+    "EngineOptionGroup(title: \"Memory\", options: ["
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0737"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Memory reported to games",
+   "lines": [
+    73
+   ],
+   "contexts": [
+    "EngineOption(key: \"totalphys\", title: \"Memory reported to games\", symbol: \"gauge.with.dots.needle.33percent\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0738"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Some games size themselves from the physical memory Windows reports. This changes what they are told, not what the device has: a number above the real memory can make a game ask for more than it can get.",
+   "lines": [
+    74
+   ],
+   "contexts": [
+    "info: \"Some games size themselves from the physical memory Windows reports. This changes what they are told, not what the device has: a number above the real memory can make a game ask for more than it can get.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0739"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "2 GB",
+   "lines": [
+    75,
+    87,
+    127
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (the device)\"), (\"2048\", \"2 GB\"), (\"3072\", \"3 GB\"), (\"4096\", \"4 GB\"), (\"6144\", \"6 GB\"), (\"8192\", \"8 GB\")]),",
+    "choices: [(\"\", \"Off\"), (\"2048\", \"2 GB\"), (\"4096\", \"4 GB\"), (\"6144\", \"6 GB\")]),",
+    "choices: [(\"\", \"Default (1 GB)\"), (\"256\", \"256 MB\"), (\"512\", \"512 MB\"), (\"2048\", \"2 GB\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0740"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "3 GB",
+   "lines": [
+    75
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (the device)\"), (\"2048\", \"2 GB\"), (\"3072\", \"3 GB\"), (\"4096\", \"4 GB\"), (\"6144\", \"6 GB\"), (\"8192\", \"8 GB\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0741"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "4 GB",
+   "lines": [
+    75,
+    87
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (the device)\"), (\"2048\", \"2 GB\"), (\"3072\", \"3 GB\"), (\"4096\", \"4 GB\"), (\"6144\", \"6 GB\"), (\"8192\", \"8 GB\")]),",
+    "choices: [(\"\", \"Off\"), (\"2048\", \"2 GB\"), (\"4096\", \"4 GB\"), (\"6144\", \"6 GB\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0742"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "6 GB",
+   "lines": [
+    75,
+    87
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (the device)\"), (\"2048\", \"2 GB\"), (\"3072\", \"3 GB\"), (\"4096\", \"4 GB\"), (\"6144\", \"6 GB\"), (\"8192\", \"8 GB\")]),",
+    "choices: [(\"\", \"Off\"), (\"2048\", \"2 GB\"), (\"4096\", \"4 GB\"), (\"6144\", \"6 GB\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0743"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "8 GB",
+   "lines": [
+    75
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (the device)\"), (\"2048\", \"2 GB\"), (\"3072\", \"3 GB\"), (\"4096\", \"4 GB\"), (\"6144\", \"6 GB\"), (\"8192\", \"8 GB\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0744"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Smallest block swap keeps",
+   "lines": [
+    76
+   ],
+   "contexts": [
+    "EngineOption(key: \"swap-min-mb\", title: \"Smallest block swap keeps\", symbol: \"square.stack.3d.down.right\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0745"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "The smallest allocation the swap file backs. Smaller values move more of a game's memory out of iOS's memory count but cost speed. 0 uses the engine's choice for each coverage mode.",
+   "lines": [
+    77
+   ],
+   "contexts": [
+    "info: \"The smallest allocation the swap file backs. Smaller values move more of a game's memory out of iOS's memory count but cost speed. 0 uses the engine's choice for each coverage mode.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0746"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Default",
+   "lines": [
+    78
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default\"), (\"1\", \"1 MB\"), (\"2\", \"2 MB\"), (\"4\", \"4 MB\"), (\"8\", \"8 MB\"), (\"16\", \"16 MB\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0747"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "8 MB",
+   "lines": [
+    78
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default\"), (\"1\", \"1 MB\"), (\"2\", \"2 MB\"), (\"4\", \"4 MB\"), (\"8\", \"8 MB\"), (\"16\", \"16 MB\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0748"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "16 MB",
+   "lines": [
+    78
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default\"), (\"1\", \"1 MB\"), (\"2\", \"2 MB\"), (\"4\", \"4 MB\"), (\"8\", \"8 MB\"), (\"16\", \"16 MB\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0749"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Swap also keeps the emulator's memory",
+   "lines": [
+    79
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.MADEIRA_SWAP_FEX\", title: \"Swap also keeps the emulator's memory\", symbol: \"externaldrive.badge.plus\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0750"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "The emulator's own working memory can reach 2 GB in a heavy game, nearly all of it cold, and iOS counts it against the app even when it sits compressed. Automatic starts using the swap file for it only once the app's memory reaches about 3 GB, so the game runs at full speed until it needs the room (a server world loading, say). On always puts it in the file from the start, which saves the most memory and slows the game the most. Both need Swap covers set to Wide and a big enough swap size (set swap-mb on the game's Engine page for more than 4 GB). If a game gets slower, stutters or stops working, turn it off. Applies to the next start.",
+   "lines": [
+    80
+   ],
+   "contexts": [
+    "info: \"The emulator's own working memory can reach 2 GB in a heavy game, nearly all of it cold, and iOS counts it against the app even when it sits compressed. Automatic starts using the swap file for it only once the app's memory reaches about 3 GB, so the game runs at full speed until it needs the"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0751"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Automatic (when memory is tight)",
+   "lines": [
+    81
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (off)\"), (\"auto\", \"Automatic (when memory is tight)\"), (\"1\", \"Always (needs Wide)\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0752"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Always (needs Wide)",
+   "lines": [
+    81
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (off)\"), (\"auto\", \"Automatic (when memory is tight)\"), (\"1\", \"Always (needs Wide)\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0753"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Graphics buffers in the swap file",
+   "lines": [
+    82
+   ],
+   "contexts": [
+    "EngineOption(key: \"buffer-swap-kb\", title: \"Graphics buffers in the swap file\", symbol: \"externaldrive.fill.badge.icloud\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0754"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Experimental. A game's meshes and other buffers are normally allocated by Metal and all counted against the app's memory limit (Rust: about 2 GB). This gives buffers at least this big memory backed by a file instead, which iOS does not count the same way. Needs a swap size (swap-mb) too. Smaller values move more buffers. Whether the graphics driver keeps the pages counted is what the first runs show: look for [bufswap] lines in the log.",
+   "lines": [
+    83
+   ],
+   "contexts": [
+    "info: \"Experimental. A game's meshes and other buffers are normally allocated by Metal and all counted against the app's memory limit (Rust: about 2 GB). This gives buffers at least this big memory backed by a file instead, which iOS does not count the same way. Needs a swap size (swap-mb) too. Smal"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0755"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "16 KB and up",
+   "lines": [
+    84
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (off)\"), (\"16\", \"16 KB and up\"), (\"32\", \"32 KB and up\"), (\"64\", \"64 KB and up\"), (\"256\", \"256 KB and up\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0756"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "32 KB and up",
+   "lines": [
+    84
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (off)\"), (\"16\", \"16 KB and up\"), (\"32\", \"32 KB and up\"), (\"64\", \"64 KB and up\"), (\"256\", \"256 KB and up\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0757"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "64 KB and up",
+   "lines": [
+    84
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (off)\"), (\"16\", \"16 KB and up\"), (\"32\", \"32 KB and up\"), (\"64\", \"64 KB and up\"), (\"256\", \"256 KB and up\")]),"
+   ],
+   "reasons": [
+    "choice-label"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0758"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "256 KB and up",
+   "lines": [
+    84
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (off)\"), (\"16\", \"16 KB and up\"), (\"32\", \"32 KB and up\"), (\"64\", \"64 KB and up\"), (\"256\", \"256 KB and up\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0759"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Donor memory",
+   "lines": [
+    85
+   ],
+   "contexts": [
+    "EngineOption(key: \"donor-pool-mb\", title: \"Donor memory\", symbol: \"memorychip.fill\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0760"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Extra memory for a game that needs more than the app's own limit (a big open-world game that is ended for running out of memory). A small extension in Porthole (Memory Host) makes memory objects, hands them to the game and exits; memory owned by an exited task is billed to no app, so the game's memory in it is not counted against Porthole's limit. The device still has to have the RAM free, and iOS can end the game if it runs out of it. Needs the Memory Host extension inside this install (an install signed without it, to spend one App ID less, does nothing here). Applies to the next start.",
+   "lines": [
+    86
+   ],
+   "contexts": [
+    "info: \"Extra memory for a game that needs more than the app's own limit (a big open-world game that is ended for running out of memory). A small extension in Porthole (Memory Host) makes memory objects, hands them to the game and exits; memory owned by an exited task is billed to no app, so the game"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0761"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Big x64 programs in the code pool",
+   "lines": [
+    88
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.MADEIRA_X64_IMAGE_DATA\", title: \"Big x64 programs in the code pool\", symbol: \"memorychip.fill\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0762"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Normally every x64 program file a game loads is also copied into the code pool, which spends pool space the size of the file (Far Cry 6's main file is 534 MB of it) on a copy nothing runs. Keep out of the pool leaves the copy out, so the pool has room for translated code and helper programs. Experimental: if a game stops working with it on, turn it off. Applies to the next start.",
+   "lines": [
+    89
+   ],
+   "contexts": [
+    "info: \"Normally every x64 program file a game loads is also copied into the code pool, which spends pool space the size of the file (Far Cry 6's main file is 534 MB of it) on a copy nothing runs. Keep out of the pool leaves the copy out, so the pool has room for translated code and helper programs."
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0763"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Default (copy into the pool)",
+   "lines": [
+    90
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (copy into the pool)\"), (\"1\", \"Keep out of the pool (saves memory)\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0764"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Keep out of the pool (saves memory)",
+   "lines": [
+    90
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (copy into the pool)\"), (\"1\", \"Keep out of the pool (saves memory)\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0765"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "32-bit system libraries",
+   "lines": [
+    91
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.MADEIRA_LAA_HIGH_IMAGES\", title: \"32-bit system libraries\", symbol: \"square.split.2x1\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0766"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "By default the 32-bit Windows system libraries (ntdll, kernel32 and the rest) load in the top half of a 32-bit program's address space, which leaves the lower half free for the program. Windows keeps them below 2 GB, and a program that patches system functions (some launchers do) can fail when they are not there. Below 2 GB takes address space from the program. Applies to 32-bit programs, from the next start.",
+   "lines": [
+    92
+   ],
+   "contexts": [
+    "info: \"By default the 32-bit Windows system libraries (ntdll, kernel32 and the rest) load in the top half of a 32-bit program's address space, which leaves the lower half free for the program. Windows keeps them below 2 GB, and a program that patches system functions (some launchers do) can fail whe"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0767"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Default (above 2 GB)",
+   "lines": [
+    93
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (above 2 GB)\"), (\"0\", \"Below 2 GB (as on Windows)\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0768"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Below 2 GB (as on Windows)",
+   "lines": [
+    93
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (above 2 GB)\"), (\"0\", \"Below 2 GB (as on Windows)\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0769"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Large address reservations",
+   "lines": [
+    94
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.MADEIRA_THIN_RESERVE\", title: \"Large address reservations\", symbol: \"rectangle.compress.vertical\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0770"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Some games reserve address space in 1 GB blocks and use a few MB of each; after 8 GB of those the device runs out of address space. On gives the later ones only a small real part (the rest is never mapped, so a game that really uses it fails instead). Off keeps them whole.",
+   "lines": [
+    95
+   ],
+   "contexts": [
+    "info: \"Some games reserve address space in 1 GB blocks and use a few MB of each; after 8 GB of those the device runs out of address space. On gives the later ones only a small real part (the rest is never mapped, so a game that really uses it fails instead). Off keeps them whole.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0771"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "OpenGL",
+   "lines": [
+    98,
+    102
+   ],
+   "contexts": [
+    "EngineOptionGroup(title: \"OpenGL\", options: [",
+    "EngineOption(key: \"env.MADEIRA_NO_GL\", title: \"OpenGL\", symbol: \"power\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0772"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "OpenGL driver",
+   "lines": [
+    99
+   ],
+   "contexts": [
+    "EngineOption(key: \"gl-backend\", title: \"OpenGL driver\", symbol: \"cube.transparent\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0773"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "How games that draw with OpenGL are shown. Desktop OpenGL runs Mesa's Zink on MoltenVK (OpenGL 3.3 and up, needed by most games and by 32-bit ones). OpenGL ES uses Apple's own OpenGL ES 3.0 and fails games that insist on desktop OpenGL. Automatic picks desktop OpenGL when its files are in the app and falls back to OpenGL ES by itself if it cannot start. Applies to the next start.",
+   "lines": [
+    100
+   ],
+   "contexts": [
+    "info: \"How games that draw with OpenGL are shown. Desktop OpenGL runs Mesa's Zink on MoltenVK (OpenGL 3.3 and up, needed by most games and by 32-bit ones). OpenGL ES uses Apple's own OpenGL ES 3.0 and fails games that insist on desktop OpenGL. Automatic picks desktop OpenGL when its files are in the"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0774"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Desktop OpenGL (Zink)",
+   "lines": [
+    101
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (automatic)\"), (\"zink\", \"Desktop OpenGL (Zink)\"), (\"gles\", \"OpenGL ES\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0775"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "OpenGL ES",
+   "lines": [
+    101
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (automatic)\"), (\"zink\", \"Desktop OpenGL (Zink)\"), (\"gles\", \"OpenGL ES\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0776"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Off restores the engine's old behaviour: OpenGL calls fail and a game that needs OpenGL cannot draw. Use it to see whether OpenGL is what breaks a game. Applies to the next start.",
+   "lines": [
+    103
+   ],
+   "contexts": [
+    "info: \"Off restores the engine's old behaviour: OpenGL calls fail and a game that needs OpenGL cannot draw. Use it to see whether OpenGL is what breaks a game. Applies to the next start.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0777"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Direct3D 12",
+   "lines": [
+    106
+   ],
+   "contexts": [
+    "EngineOptionGroup(title: \"Direct3D 12\", options: ["
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0778"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "AMD 64-bit atomics rewrite",
+   "lines": [
+    107
+   ],
+   "contexts": [
+    "EngineOption(key: \"ags-rewrite\", title: \"AMD 64-bit atomics rewrite\", symbol: \"arrow.triangle.2.circlepath\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0779"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Rewrites the 64-bit atomic operations that games compiled for AMD cards use, so they run on this GPU. On by default; turn it off only to see whether it is what breaks a game.",
+   "lines": [
+    108
+   ],
+   "contexts": [
+    "info: \"Rewrites the 64-bit atomic operations that games compiled for AMD cards use, so they run on this GPU. On by default; turn it off only to see whether it is what breaks a game.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0780"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Asynchronous submission",
+   "lines": [
+    110
+   ],
+   "contexts": [
+    "EngineOption(key: \"async-submit\", title: \"Asynchronous submission\", symbol: \"rectangle.stack.badge.play\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0781"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Submits command lists on a worker thread so the game can start its next frame sooner. Experimental.",
+   "lines": [
+    111
+   ],
+   "contexts": [
+    "info: \"Submits command lists on a worker thread so the game can start its next frame sooner. Experimental.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0782"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "GPU synchronisation",
+   "lines": [
+    113
+   ],
+   "contexts": [
+    "EngineOption(key: \"fence-chain\", title: \"GPU synchronisation\", symbol: \"link\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0783"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "How the GPU's work is ordered. The default is the accurate mode. Barrier-driven and fragment-stage are lighter; no fences is a test mode that flickers. In the game's menu the same setting can be changed live.",
+   "lines": [
+    114
+   ],
+   "contexts": [
+    "info: \"How the GPU's work is ordered. The default is the accurate mode. Barrier-driven and fragment-stage are lighter; no fences is a test mode that flickers. In the game's menu the same setting can be changed live.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0784"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Default (accurate)",
+   "lines": [
+    115
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (accurate)\"), (\"6\", \"Barrier-driven\"), (\"5\", \"Fragment stage\"), (\"0\", \"No fences (test)\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0785"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Barrier-driven",
+   "lines": [
+    115
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (accurate)\"), (\"6\", \"Barrier-driven\"), (\"5\", \"Fragment stage\"), (\"0\", \"No fences (test)\")]),"
+   ],
+   "reasons": [
+    "choice-label"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0786"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Fragment stage",
+   "lines": [
+    115
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (accurate)\"), (\"6\", \"Barrier-driven\"), (\"5\", \"Fragment stage\"), (\"0\", \"No fences (test)\")]),"
+   ],
+   "reasons": [
+    "choice-label"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0787"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "No fences (test)",
+   "lines": [
+    115
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (accurate)\"), (\"6\", \"Barrier-driven\"), (\"5\", \"Fragment stage\"), (\"0\", \"No fences (test)\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0788"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Typed UAV loads",
+   "lines": [
+    116
+   ],
+   "contexts": [
+    "EngineOption(key: \"d3d12-typed-uav-load\", title: \"Typed UAV loads\", symbol: \"square.grid.3x3.square\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0789"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Tells games the GPU can read from typed unordered-access textures. Some engines need it; on others it moves the game onto a different render path.",
+   "lines": [
+    117
+   ],
+   "contexts": [
+    "info: \"Tells games the GPU can read from typed unordered-access textures. Some engines need it; on others it moves the game onto a different render path.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0790"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Upload buffers on swap memory",
+   "lines": [
+    119
+   ],
+   "contexts": [
+    "EngineOption(key: \"upload-swap\", title: \"Upload buffers on swap memory\", symbol: \"externaldrive.badge.icloud\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0791"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Keeps Direct3D 12 upload buffers in the file-backed swap memory so they do not count against iOS's memory limit. On by default.",
+   "lines": [
+    120
+   ],
+   "contexts": [
+    "info: \"Keeps Direct3D 12 upload buffers in the file-backed swap memory so they do not count against iOS's memory limit. On by default.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0792"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Keep compiled pipelines between runs",
+   "lines": [
+    122
+   ],
+   "contexts": [
+    "EngineOption(key: \"pso-archive\", title: \"Keep compiled pipelines between runs\", symbol: \"archivebox.fill\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0793"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Games compile their graphics pipelines while they run, which is a stutter the first time each one is used. On, Porthole keeps the compiled pipelines in archives of its own for the next run, so the second start stutters less. Off (the default) leaves it to Metal's own cache. The archives take disk space (limited below). Applies the next time a game starts.",
+   "lines": [
+    123
+   ],
+   "contexts": [
+    "info: \"Games compile their graphics pipelines while they run, which is a stutter the first time each one is used. On, Porthole keeps the compiled pipelines in archives of its own for the next run, so the second start stutters less. Off (the default) leaves it to Metal's own cache. The archives take"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0794"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Pipeline archive size limit",
+   "lines": [
+    125
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.MADEIRA_PSO_ARCHIVE_MB\", title: \"Pipeline archive size limit\", symbol: \"internaldrive\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0795"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "The most a game's pipeline archive folder may keep across builds. Over it, the oldest parts are deleted when the game starts. Only matters when the archives are on.",
+   "lines": [
+    126
+   ],
+   "contexts": [
+    "info: \"The most a game's pipeline archive folder may keep across builds. Over it, the oldest parts are deleted when the game starts. Only matters when the archives are on.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0796"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Default (1 GB)",
+   "lines": [
+    127
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (1 GB)\"), (\"256\", \"256 MB\"), (\"512\", \"512 MB\"), (\"2048\", \"2 GB\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0797"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Build pipelines in the background",
+   "lines": [
+    128
+   ],
+   "contexts": [
+    "EngineOption(key: \"pso-async\", title: \"Build pipelines in the background\", symbol: \"gearshape.2.fill\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0798"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "A new pipeline is built on a background thread and the draws that need it are skipped until it is ready, so no frame waits for the compiler. Fewer stutters, but things can flicker or be missing for a moment. Off (the default) builds each pipeline at its first draw. Experimental.",
+   "lines": [
+    129
+   ],
+   "contexts": [
+    "info: \"A new pipeline is built on a background thread and the draws that need it are skipped until it is ready, so no frame waits for the compiler. Fewer stutters, but things can flicker or be missing for a moment. Off (the default) builds each pipeline at its first draw. Experimental.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0799"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Graphics, video and sound",
+   "lines": [
+    135
+   ],
+   "contexts": [
+    "EngineOptionGroup(title: \"Graphics, video and sound\", options: ["
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0800"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Direct3D 9 for 32-bit games",
+   "lines": [
+    136
+   ],
+   "contexts": [
+    "EngineOption(key: \"d3d9\", title: \"Direct3D 9 for 32-bit games\", symbol: \"square.3.layers.3d\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0801"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Emulated (the default) runs the Direct3D 9 layer translated like the game. Native runs it as native ARM code, which is faster but newer. Only 32-bit programs are affected.",
+   "lines": [
+    137
+   ],
+   "contexts": [
+    "info: \"Emulated (the default) runs the Direct3D 9 layer translated like the game. Native runs it as native ARM code, which is faster but newer. Only 32-bit programs are affected.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0802"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Default (emulated)",
+   "lines": [
+    138
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (emulated)\"), (\"native\", \"Native ARM64\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0803"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Native ARM64",
+   "lines": [
+    138
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (emulated)\"), (\"native\", \"Native ARM64\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0804"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "MP4 video in 32-bit games",
+   "lines": [
+    139
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.MADEIRA_WG_VIDEO\", title: \"MP4 video in 32-bit games\", symbol: \"film\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0805"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "By default MP4 video with H.264 or HEVC plays through the device's video decoder. Off limits the media layer to MP3 and WAV, which is what to try if a game hangs on an intro video.",
+   "lines": [
+    140
+   ],
+   "contexts": [
+    "info: \"By default MP4 video with H.264 or HEVC plays through the device's video decoder. Off limits the media layer to MP3 and WAV, which is what to try if a game hangs on an intro video.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0806"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "MP3 and WAV only",
+   "lines": [
+    141
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (on)\"), (\"0\", \"MP3 and WAV only\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0807"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Hold the screen at its top refresh rate",
+   "lines": [
+    142
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.MADEIRA_PROMOTE\", title: \"Hold the screen at its top refresh rate\", symbol: \"display\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0808"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Keeps a ProMotion screen at 120 Hz for the whole game even when the game is capped at 60, which lets frames land sooner. Costs battery.",
+   "lines": [
+    143
+   ],
+   "contexts": [
+    "info: \"Keeps a ProMotion screen at 120 Hz for the whole game even when the game is capped at 60, which lets frames land sooner. Costs battery.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0809"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Audio buffer length",
+   "lines": [
+    145
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.MADEIRA_AUDIO_IO_MS\", title: \"Audio buffer length\", symbol: \"waveform\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0810"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "How much sound iOS asks the app for at a time. A short buffer (5 ms) stops the gaps some games make when they send sound in small pieces, at a small cost in battery. Default leaves iOS's own length.",
+   "lines": [
+    146
+   ],
+   "contexts": [
+    "info: \"How much sound iOS asks the app for at a time. A short buffer (5 ms) stops the gaps some games make when they send sound in small pieces, at a small cost in battery. Default leaves iOS's own length.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0811"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Short (5 ms)",
+   "lines": [
+    147
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (iOS's own)\"), (\"5\", \"Short (5 ms)\"), (\"10\", \"10 ms\"), (\"20\", \"20 ms\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0812"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "10 ms",
+   "lines": [
+    147
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (iOS's own)\"), (\"5\", \"Short (5 ms)\"), (\"10\", \"10 ms\"), (\"20\", \"20 ms\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0813"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "20 ms",
+   "lines": [
+    147
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (iOS's own)\"), (\"5\", \"Short (5 ms)\"), (\"10\", \"10 ms\"), (\"20\", \"20 ms\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0814"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Game volume",
+   "lines": [
+    148
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.MADEIRA_AUDIO_GAIN\", title: \"Game volume\", symbol: \"speaker.wave.3.fill\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0815"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "How loud games are at the output, as a percent of the level they send, 10 to 200. Over 100 boosts a quiet game (and can distort a loud one). Read once, when a game's sound starts, so it applies the next time a game starts.",
+   "lines": [
+    149
+   ],
+   "contexts": [
+    "info: \"How loud games are at the output, as a percent of the level they send, 10 to 200. Over 100 boosts a quiet game (and can distort a loud one). Read once, when a game's sound starts, so it applies the next time a game starts.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0816"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Default (100%)",
+   "lines": [
+    150
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (100%)\"), (\"50\", \"Quieter (50%)\"), (\"75\", \"Softer (75%)\"), (\"125\", \"Louder (125%)\"), (\"150\", \"Much louder (150%)\"), (\"200\", \"Loudest (200%)\")]),"
+   ],
+   "reasons": [
+    "choice-label"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0817"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Quieter (50%)",
+   "lines": [
+    150
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (100%)\"), (\"50\", \"Quieter (50%)\"), (\"75\", \"Softer (75%)\"), (\"125\", \"Louder (125%)\"), (\"150\", \"Much louder (150%)\"), (\"200\", \"Loudest (200%)\")]),"
+   ],
+   "reasons": [
+    "choice-label"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0818"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Softer (75%)",
+   "lines": [
+    150
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (100%)\"), (\"50\", \"Quieter (50%)\"), (\"75\", \"Softer (75%)\"), (\"125\", \"Louder (125%)\"), (\"150\", \"Much louder (150%)\"), (\"200\", \"Loudest (200%)\")]),"
+   ],
+   "reasons": [
+    "choice-label"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0819"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Louder (125%)",
+   "lines": [
+    150
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (100%)\"), (\"50\", \"Quieter (50%)\"), (\"75\", \"Softer (75%)\"), (\"125\", \"Louder (125%)\"), (\"150\", \"Much louder (150%)\"), (\"200\", \"Loudest (200%)\")]),"
+   ],
+   "reasons": [
+    "choice-label"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0820"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Much louder (150%)",
+   "lines": [
+    150
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (100%)\"), (\"50\", \"Quieter (50%)\"), (\"75\", \"Softer (75%)\"), (\"125\", \"Louder (125%)\"), (\"150\", \"Much louder (150%)\"), (\"200\", \"Loudest (200%)\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0821"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Loudest (200%)",
+   "lines": [
+    150
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (100%)\"), (\"50\", \"Quieter (50%)\"), (\"75\", \"Softer (75%)\"), (\"125\", \"Louder (125%)\"), (\"150\", \"Much louder (150%)\"), (\"200\", \"Loudest (200%)\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0822"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Bring sound back after a call",
+   "lines": [
+    151
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.MADEIRA_AUDIO_RESUME\", title: \"Bring sound back after a call\", symbol: \"phone.arrow.down.left\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0823"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "After a call, Siri, an alarm or the app being suspended, a game's sound stays off until the game restarts. On, Porthole activates the audio again and restarts the output, and the game's audio clock keeps running meanwhile. Applies the next time a game starts.",
+   "lines": [
+    152
+   ],
+   "contexts": [
+    "info: \"After a call, Siri, an alarm or the app being suspended, a game's sound stays off until the game restarts. On, Porthole activates the audio again and restarts the output, and the game's audio clock keeps running meanwhile. Applies the next time a game starts.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0824"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Controllers",
+   "lines": [
+    155
+   ],
+   "contexts": [
+    "EngineOptionGroup(title: \"Controllers\", options: ["
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0825"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Send controllers to games",
+   "lines": [
+    156
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.MADEIRA_XINPUT\", title: \"Send controllers to games\", symbol: \"gamecontroller.fill\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0826"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Game controllers paired with the device appear to games as Xbox controllers. Off hides every controller from games.",
+   "lines": [
+    157
+   ],
+   "contexts": [
+    "info: \"Game controllers paired with the device appear to games as Xbox controllers. Off hides every controller from games.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0827"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Controller type for player 1",
+   "lines": [
+    159
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.MADEIRA_PAD_MODE\", title: \"Controller type for player 1\", symbol: \"gamecontroller\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0828"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Xbox (the default) shows every controller as an Xbox pad. The HID choices show player 1 as a DualSense or a generic gamepad instead, which some games need for their own button prompts. Applies to the next start.",
+   "lines": [
+    160
+   ],
+   "contexts": [
+    "info: \"Xbox (the default) shows every controller as an Xbox pad. The HID choices show player 1 as a DualSense or a generic gamepad instead, which some games need for their own button prompts. Applies to the next start.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0829"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Default (Xbox)",
+   "lines": [
+    161
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (Xbox)\"), (\"hid\", \"HID (DualSense when it is one)\"), (\"dualsense\", \"Always a DualSense\"), (\"generic\", \"Always a generic gamepad\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0830"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "HID (DualSense when it is one)",
+   "lines": [
+    161
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (Xbox)\"), (\"hid\", \"HID (DualSense when it is one)\"), (\"dualsense\", \"Always a DualSense\"), (\"generic\", \"Always a generic gamepad\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0831"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Always a DualSense",
+   "lines": [
+    161
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (Xbox)\"), (\"hid\", \"HID (DualSense when it is one)\"), (\"dualsense\", \"Always a DualSense\"), (\"generic\", \"Always a generic gamepad\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0832"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Always a generic gamepad",
+   "lines": [
+    161
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (Xbox)\"), (\"hid\", \"HID (DualSense when it is one)\"), (\"dualsense\", \"Always a DualSense\"), (\"generic\", \"Always a generic gamepad\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0833"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Controller rumble",
+   "lines": [
+    162
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.PORTHOLE_RUMBLE\", title: \"Controller rumble\", symbol: \"waveform.path\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0834"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "When a game asks a controller to vibrate, the controller does. Light, medium and strong scale how hard. Off ignores the game's rumble. Needs a controller with haptics, such as an Xbox or PlayStation pad. Applies the next time a game starts. Rumble does not work when player 1 is set to a HID controller below.",
+   "lines": [
+    163
+   ],
+   "contexts": [
+    "info: \"When a game asks a controller to vibrate, the controller does. Light, medium and strong scale how hard. Off ignores the game's rumble. Needs a controller with haptics, such as an Xbox or PlayStation pad. Applies the next time a game starts. Rumble does not work when player 1 is set to a HID c"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0835"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Light (50%)",
+   "lines": [
+    164
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (on)\"), (\"50\", \"Light (50%)\"), (\"75\", \"Medium (75%)\"), (\"150\", \"Strong (150%)\"), (\"0\", \"Off\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0836"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Medium (75%)",
+   "lines": [
+    164
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (on)\"), (\"50\", \"Light (50%)\"), (\"75\", \"Medium (75%)\"), (\"150\", \"Strong (150%)\"), (\"0\", \"Off\")]),"
+   ],
+   "reasons": [
+    "choice-label"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0837"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Strong (150%)",
+   "lines": [
+    164
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (on)\"), (\"50\", \"Light (50%)\"), (\"75\", \"Medium (75%)\"), (\"150\", \"Strong (150%)\"), (\"0\", \"Off\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0838"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "HID mode: keep Xbox too",
+   "lines": [
+    165
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.MADEIRA_HIDPAD_XINPUT\", title: \"HID mode: keep Xbox too\", symbol: \"gamecontroller.fill\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0839"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "With a HID controller on, player 1 is also still shown as an Xbox pad. Off by default so a game that reads both does not see the same controller twice.",
+   "lines": [
+    166
+   ],
+   "contexts": [
+    "info: \"With a HID controller on, player 1 is also still shown as an Xbox pad. Off by default so a game that reads both does not see the same controller twice.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0840"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "DirectInput joystick",
+   "lines": [
+    168
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.MADEIRA_DINPUT_PAD\", title: \"DirectInput joystick\", symbol: \"dpad.fill\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0841"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Also shows the controller as a DirectInput joystick, for old games that only look for one. Off by default because a game that reads both would see two controllers.",
+   "lines": [
+    169
+   ],
+   "contexts": [
+    "info: \"Also shows the controller as a DirectInput joystick, for old games that only look for one. Off by default because a game that reads both would see two controllers.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0842"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Offer controller as keyboard and mouse",
+   "lines": [
+    171
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.MADEIRA_PAD_KBM\", title: \"Offer controller as keyboard and mouse\", symbol: \"keyboard\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0843"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Makes the Controller choice on each game's page available, so a controller can drive a game that has no controller support. Off removes it.",
+   "lines": [
+    172
+   ],
+   "contexts": [
+    "info: \"Makes the Controller choice on each game's page available, so a controller can drive a game that has no controller support. Off removes it.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0844"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Controller menus and pointer",
+   "lines": [
+    175
+   ],
+   "contexts": [
+    "EngineOptionGroup(title: \"Controller menus and pointer\", options: ["
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0845"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Open the menu with the controller",
+   "lines": [
+    176
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.PORTHOLE_PAD_MENU\", title: \"Open the menu with the controller\", symbol: \"line.3.horizontal.circle\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0846"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Hold two buttons for half a second during a game to open Porthole's menu: Menu + View (Options + Create on a DualSense) by default, both stick clicks, or the PS / Xbox button (iOS keeps that one for itself on some controllers). The two buttons are kept from the game while you hold them. Off removes the shortcut; the menu then opens only with a swipe in from the right edge.",
+   "lines": [
+    177
+   ],
+   "contexts": [
+    "info: \"Hold two buttons for half a second during a game to open Porthole's menu: Menu + View (Options + Create on a DualSense) by default, both stick clicks, or the PS / Xbox button (iOS keeps that one for itself on some controllers). The two buttons are kept from the game while you hold them. Off r"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0847"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Default (Menu + View)",
+   "lines": [
+    178
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (Menu + View)\"), (\"l3r3\", \"Both stick clicks\"), (\"home\", \"PS / Xbox button\"), (\"off\", \"Off\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0848"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Both stick clicks",
+   "lines": [
+    178
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (Menu + View)\"), (\"l3r3\", \"Both stick clicks\"), (\"home\", \"PS / Xbox button\"), (\"off\", \"Off\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0849"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "PS / Xbox button",
+   "lines": [
+    178
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (Menu + View)\"), (\"l3r3\", \"Both stick clicks\"), (\"home\", \"PS / Xbox button\"), (\"off\", \"Off\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0850"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Pointer for the controller",
+   "lines": [
+    179
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.PORTHOLE_PAD_POINTER\", title: \"Pointer for the controller\", symbol: \"cursorarrow\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0851"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "When a controller moves the mouse (keyboard and mouse mode), an arrow is drawn where the pointer is, since a game running directly shows none of its own. It appears the first time the stick moves the pointer and stays; Hide when idle fades it after three seconds. Off draws nothing. Applies at once.",
+   "lines": [
+    180
+   ],
+   "contexts": [
+    "info: \"When a controller moves the mouse (keyboard and mouse mode), an arrow is drawn where the pointer is, since a game running directly shows none of its own. It appears the first time the stick moves the pointer and stays; Hide when idle fades it after three seconds. Off draws nothing. Applies at"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0852"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Default (always shown)",
+   "lines": [
+    181
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (always shown)\"), (\"autohide\", \"Hide when idle\"), (\"0\", \"Off\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0853"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Hide when idle",
+   "lines": [
+    181
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (always shown)\"), (\"autohide\", \"Hide when idle\"), (\"0\", \"Off\")]),"
+   ],
+   "reasons": [
+    "choice-label"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0854"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Pointer arrow: move up",
+   "lines": [
+    182
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.PORTHOLE_PAD_POINTER_UP\", title: \"Pointer arrow: move up\", symbol: \"arrow.up\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0855"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Moves the controller's pointer arrow up by this many points if it is drawn a little below where the game's pointer really is. Only the arrow moves; clicks do not change. Applies at once.",
+   "lines": [
+    183
+   ],
+   "contexts": [
+    "info: \"Moves the controller's pointer arrow up by this many points if it is drawn a little below where the game's pointer really is. Only the arrow moves; clicks do not change. Applies at once.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0856"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Default (0)",
+   "lines": [
+    184
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (0)\"), (\"2\", \"2 points\"), (\"4\", \"4 points\"), (\"6\", \"6 points\"), (\"8\", \"8 points\"), (\"12\", \"12 points\"), (\"16\", \"16 points\"), (\"24\", \"24 points\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0857"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "2 points",
+   "lines": [
+    184
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (0)\"), (\"2\", \"2 points\"), (\"4\", \"4 points\"), (\"6\", \"6 points\"), (\"8\", \"8 points\"), (\"12\", \"12 points\"), (\"16\", \"16 points\"), (\"24\", \"24 points\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0858"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "4 points",
+   "lines": [
+    184
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (0)\"), (\"2\", \"2 points\"), (\"4\", \"4 points\"), (\"6\", \"6 points\"), (\"8\", \"8 points\"), (\"12\", \"12 points\"), (\"16\", \"16 points\"), (\"24\", \"24 points\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0859"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "6 points",
+   "lines": [
+    184
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (0)\"), (\"2\", \"2 points\"), (\"4\", \"4 points\"), (\"6\", \"6 points\"), (\"8\", \"8 points\"), (\"12\", \"12 points\"), (\"16\", \"16 points\"), (\"24\", \"24 points\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0860"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "8 points",
+   "lines": [
+    184
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (0)\"), (\"2\", \"2 points\"), (\"4\", \"4 points\"), (\"6\", \"6 points\"), (\"8\", \"8 points\"), (\"12\", \"12 points\"), (\"16\", \"16 points\"), (\"24\", \"24 points\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0861"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "12 points",
+   "lines": [
+    184
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (0)\"), (\"2\", \"2 points\"), (\"4\", \"4 points\"), (\"6\", \"6 points\"), (\"8\", \"8 points\"), (\"12\", \"12 points\"), (\"16\", \"16 points\"), (\"24\", \"24 points\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0862"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "16 points",
+   "lines": [
+    184
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (0)\"), (\"2\", \"2 points\"), (\"4\", \"4 points\"), (\"6\", \"6 points\"), (\"8\", \"8 points\"), (\"12\", \"12 points\"), (\"16\", \"16 points\"), (\"24\", \"24 points\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0863"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "24 points",
+   "lines": [
+    184
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (0)\"), (\"2\", \"2 points\"), (\"4\", \"4 points\"), (\"6\", \"6 points\"), (\"8\", \"8 points\"), (\"12\", \"12 points\"), (\"16\", \"16 points\"), (\"24\", \"24 points\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0864"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Steam overlay",
+   "lines": [
+    185
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.PORTHOLE_STEAM_OVERLAY\", title: \"Steam overlay\", symbol: \"square.stack.3d.up.slash\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0865"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Steam's in-game overlay hooks a game's graphics and searches for free executable memory next to every hook, which the engine refuses; in one log that went on for minutes. Default leaves the overlay alone. Off renames its DLLs (never deleting them) before a game starts. Applies the next time a game starts.",
+   "lines": [
+    186
+   ],
+   "contexts": [
+    "info: \"Steam's in-game overlay hooks a game's graphics and searches for free executable memory next to every hook, which the engine refuses; in one log that went on for minutes. Default leaves the overlay alone. Off renames its DLLs (never deleting them) before a game starts. Applies the next time a"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0866"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Default (leave it)",
+   "lines": [
+    187
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (leave it)\"), (\"0\", \"Off\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0867"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Hide on-screen controls when a controller is used",
+   "lines": [
+    188
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.PORTHOLE_HIDE_TOUCH_ON_PAD\", title: \"Hide on-screen controls when a controller is used\", symbol: \"hand.raised.slash\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0868"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "While a controller is connected and being used, the on-screen buttons and sticks step aside. Touching the game screen brings them back until the controller is used again. The menu, pencil and keyboard buttons stay. Off keeps them on screen. Applies at once.",
+   "lines": [
+    189
+   ],
+   "contexts": [
+    "info: \"While a controller is connected and being used, the on-screen buttons and sticks step aside. Touching the game screen brings them back until the controller is used again. The menu, pencil and keyboard buttons stay. Off keeps them on screen. Applies at once.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0869"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Keyboard and mouse",
+   "lines": [
+    192
+   ],
+   "contexts": [
+    "EngineOptionGroup(title: \"Keyboard and mouse\", options: ["
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0870"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Keyboard and mouse in games",
+   "lines": [
+    193
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.MADEIRA_HWINPUT\", title: \"Keyboard and mouse in games\", symbol: \"keyboard\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0871"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "A Bluetooth or USB keyboard and a mouse or trackpad work in a game like they do on a PC: every key with its own press and release, the modifiers, five mouse buttons and the wheel. The game's own cursor follows the pointer; a game that hides its cursor to look around gets the mouse's movement and the pointer is locked to the game. Off ignores keyboards and mice in games. Applies the next time the app starts.",
+   "lines": [
+    194
+   ],
+   "contexts": [
+    "info: \"A Bluetooth or USB keyboard and a mouse or trackpad work in a game like they do on a PC: every key with its own press and release, the modifiers, five mouse buttons and the wheel. The game's own cursor follows the pointer; a game that hides its cursor to look around gets the mouse's movement"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0872"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Mouse speed",
+   "lines": [
+    196
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.PORTHOLE_MOUSE_SPEED\", title: \"Mouse speed\", symbol: \"computermouse\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0873"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "How fast the mouse turns the camera when a game reads it for looking around. 1 sends the mouse's own movement unchanged. It does not change the pointer in menus, which follows the pointer exactly. Applies at once.",
+   "lines": [
+    197
+   ],
+   "contexts": [
+    "info: \"How fast the mouse turns the camera when a game reads it for looking around. 1 sends the mouse's own movement unchanged. It does not change the pointer in menus, which follows the pointer exactly. Applies at once.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0874"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Default (1x)",
+   "lines": [
+    198
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (1x)\"), (\"0.25\", \"0.25x\"), (\"0.5\", \"0.5x\"), (\"0.75\", \"0.75x\"), (\"1.5\", \"1.5x\"), (\"2\", \"2x\"), (\"3\", \"3x\"), (\"4\", \"4x\"), (\"6\", \"6x\")]),"
+   ],
+   "reasons": [
+    "choice-label"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0875"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Scroll direction",
+   "lines": [
+    199
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.PORTHOLE_SCROLL_DIRECTION\", title: \"Scroll direction\", symbol: \"arrow.up.arrow.down\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0876"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Which way the mouse wheel or trackpad scrolls in a game and along the shelf of games on Home. Follow the system uses iPadOS's own setting (Settings > Trackpad & Mouse > Natural Scrolling); Reversed turns it around. Lists in Porthole that scroll up and down always follow iPadOS. Applies at once.",
+   "lines": [
+    200
+   ],
+   "contexts": [
+    "info: \"Which way the mouse wheel or trackpad scrolls in a game and along the shelf of games on Home. Follow the system uses iPadOS's own setting (Settings > Trackpad & Mouse > Natural Scrolling); Reversed turns it around. Lists in Porthole that scroll up and down always follow iPadOS. Applies at onc"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0877"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Follow the system",
+   "lines": [
+    201
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Follow the system\"), (\"reversed\", \"Reversed\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0878"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Reversed",
+   "lines": [
+    201
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Follow the system\"), (\"reversed\", \"Reversed\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0879"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Hold a key to repeat it",
+   "lines": [
+    202
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.PORTHOLE_KEY_REPEAT\", title: \"Hold a key to repeat it\", symbol: \"repeat\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0880"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "A keyboard sends one press and one release, so holding Backspace in a text box of a Windows program deleted one letter. By default the keys that edit text (Backspace, Delete, the arrows, Home, End, Page Up and Down) repeat after half a second, like on a PC. All keys repeats every key but the modifiers; Off sends only the press and the release. Applies at once.",
+   "lines": [
+    203
+   ],
+   "contexts": [
+    "info: \"A keyboard sends one press and one release, so holding Backspace in a text box of a Windows program deleted one letter. By default the keys that edit text (Backspace, Delete, the arrows, Home, End, Page Up and Down) repeat after half a second, like on a PC. All keys repeats every key but the"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0881"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Editing keys (default)",
+   "lines": [
+    204
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Editing keys (default)\"), (\"all\", \"All keys\"), (\"off\", \"Off\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0882"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "All keys",
+   "lines": [
+    204
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Editing keys (default)\"), (\"all\", \"All keys\"), (\"off\", \"Off\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0883"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Keyboard layout for typing",
+   "lines": [
+    205
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.PORTHOLE_KEY_LAYOUT\", title: \"Keyboard layout for typing\", symbol: \"character.textbox\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0884"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Keys are sent by their place on the keyboard, as on a US keyboard, which is right for games. On a French, German or other keyboard, typing text in a Windows program then gives the wrong letters. Follow the keyboard's letters sends the letter the key really types instead; a game that reads key positions then sees those keys moved, so use it for typing, not for games. Applies at once.",
+   "lines": [
+    206
+   ],
+   "contexts": [
+    "info: \"Keys are sent by their place on the keyboard, as on a US keyboard, which is right for games. On a French, German or other keyboard, typing text in a Windows program then gives the wrong letters. Follow the keyboard's letters sends the letter the key really types instead; a game that reads key"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0885"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Key positions (US)",
+   "lines": [
+    207
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Key positions (US)\"), (\"letters\", \"Follow the keyboard's letters\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0886"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Follow the keyboard's letters",
+   "lines": [
+    207
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Key positions (US)\"), (\"letters\", \"Follow the keyboard's letters\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0887"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Always use the mouse to look",
+   "lines": [
+    208
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.PORTHOLE_MOUSE_LOOK\", title: \"Always use the mouse to look\", symbol: \"viewfinder\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0888"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "For a game that never hides its cursor but still turns the camera with the mouse (many do not tell Porthole when they capture the mouse): the mouse always moves the camera, as relative movement, and the pointer is locked to the game. Off lets the game's cursor decide. Ctrl+Alt+P frees the pointer. Applies at once.",
+   "lines": [
+    209
+   ],
+   "contexts": [
+    "info: \"For a game that never hides its cursor but still turns the camera with the mouse (many do not tell Porthole when they capture the mouse): the mouse always moves the camera, as relative movement, and the pointer is locked to the game. Off lets the game's cursor decide. Ctrl+Alt+P frees the poi"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0889"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Default (the game decides)",
+   "lines": [
+    210
+   ],
+   "contexts": [
+    "choices: [(\"\", \"Default (the game decides)\"), (\"1\", \"On\")]),"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0890"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Lock the pointer to the game",
+   "lines": [
+    211
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.MADEIRA_POINTER_LOCK\", title: \"Lock the pointer to the game\", symbol: \"lock.fill\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0891"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "iPad: while a game hides its cursor, the system pointer is hidden and held so the mouse can keep turning the camera at the screen edges and cannot slide onto Porthole's own buttons. Ctrl+Alt+P locks or frees it by hand; Ctrl+Alt+M opens Porthole's menu. Off never locks it. Applies the next time the app starts.",
+   "lines": [
+    212
+   ],
+   "contexts": [
+    "info: \"iPad: while a game hides its cursor, the system pointer is hidden and held so the mouse can keep turning the camera at the screen edges and cannot slide onto Porthole's own buttons. Ctrl+Alt+P locks or frees it by hand; Ctrl+Alt+M opens Porthole's menu. Off never locks it. Applies the next ti"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0892"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Only while the game has focus",
+   "lines": [
+    214
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.MADEIRA_INPUT_FOCUS\", title: \"Only while the game has focus\", symbol: \"scope\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0893"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Keys and mouse reach the game only while it is in front: not while a sheet, an alert or a text field of Porthole has the keyboard, and not while the pointer is outside the game. Off sends them to the game whatever is in front of it. Applies the next time the app starts.",
+   "lines": [
+    215
+   ],
+   "contexts": [
+    "info: \"Keys and mouse reach the game only while it is in front: not while a sheet, an alert or a text field of Porthole has the keyboard, and not while the pointer is outside the game. Off sends them to the game whatever is in front of it. Applies the next time the app starts.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0894"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Hide on-screen controls when a keyboard or mouse is used",
+   "lines": [
+    217
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.PORTHOLE_HIDE_TOUCH_ON_KEYS\", title: \"Hide on-screen controls when a keyboard or mouse is used\", symbol: \"hand.raised.slash\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0895"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "While a keyboard or mouse is connected and being used, the on-screen buttons and sticks step aside. Touching the game screen brings them back until the keyboard or mouse is used again. Off keeps them.",
+   "lines": [
+    218
+   ],
+   "contexts": [
+    "info: \"While a keyboard or mouse is connected and being used, the on-screen buttons and sticks step aside. Touching the game screen brings them back until the keyboard or mouse is used again. Off keeps them.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0896"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Log keyboard and mouse details",
+   "lines": [
+    220
+   ],
+   "contexts": [
+    "EngineOption(key: \"env.PORTHOLE_INPUT_DIAGNOSTICS\", title: \"Log keyboard and mouse details\", symbol: \"ladybug\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0897"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Adds lines to the log for every change of where the mouse goes, the first movements, the button state every 10 seconds and the rate input arrives at. Turn it on when sending a report about a keyboard or mouse that does not work.",
+   "lines": [
+    221
+   ],
+   "contexts": [
+    "info: \"Adds lines to the log for every change of where the mouse goes, the first movements, the button state every 10 seconds and the rate input arrives at. Turn it on when sending a report about a keyboard or mouse that does not work.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0898"
+  },
+  {
+   "file": "app/Sources/Core/EngineOptions.swift",
+   "text": "Graphics card the game sees",
+   "lines": [
+    252
+   ],
+   "contexts": [
+    "var gpuCard: String?            // \"Graphics card the game sees\" (GPUCards.swift, from Madeira): nil = the engine's own report, set by the NVIDIA switches or by nothing"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0899"
+  }
+ ]
+}

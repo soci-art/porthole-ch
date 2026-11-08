@@ -1,0 +1,2928 @@
+{
+ "batch": 18,
+ "units": [
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": " Processor energy used: %.0f J when iOS first slowed them, %.0f J now.",
+   "lines": [
+    398
+   ],
+   "contexts": [
+    "if let at = monitor.energyAtFirstClamp { return String(format: \" Processor energy used: %.0f J when iOS first slowed them, %.0f J now.\", at, monitor.energyJ) }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3060"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": " Processor energy used: %.0f J. iOS has slowed the fast cores after about %.0f J in every test so far.",
+   "lines": [
+    399
+   ],
+   "contexts": [
+    "return String(format: \" Processor energy used: %.0f J. iOS has slowed the fast cores after about %.0f J in every test so far.\", monitor.energyJ, CPUClampMonitor.observedBudgetJ)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3061"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": ". The fast cores carry %.0f%% of the game\\u{2019}s work.",
+   "lines": [
+    401
+   ],
+   "contexts": [
+    "private var shareText: String { monitor.fastShare >= 0 ? String(format: \". The fast cores carry %.0f%% of the game\\u{2019}s work.\", monitor.fastShare * 100) : \"\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3062"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Fast cores held back for \\(n / 60) min \\(n % 60) s",
+   "lines": [
+    407
+   ],
+   "contexts": [
+    "return \"Fast cores held back for \\(n / 60) min \\(n % 60) s\" + (first.map { \", first \\($0 / 60) min \\($0 % 60) s into the game\" } ?? \"\") + shareText + energyText"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3063"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": ", first \\($0 / 60) min \\($0 % 60) s into the game",
+   "lines": [
+    407
+   ],
+   "contexts": [
+    "return \"Fast cores held back for \\(n / 60) min \\(n % 60) s\" + (first.map { \", first \\($0 / 60) min \\($0 % 60) s into the game\" } ?? \"\") + shareText + energyText"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3064"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "The fast cores are not held back.",
+   "lines": [
+    408
+   ],
+   "contexts": [
+    "case .full: return \"The fast cores are not held back.\" + shareText + energyText"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3065"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Too little load to tell. The cores idle down by themselves.",
+   "lines": [
+    409
+   ],
+   "contexts": [
+    "case .light: return \"Too little load to tell. The cores idle down by themselves.\" + energyText"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3066"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Needs a few seconds of play.",
+   "lines": [
+    410
+   ],
+   "contexts": [
+    "case .measuring: return \"Needs a few seconds of play.\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3067"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Performance overlay",
+   "lines": [
+    419
+   ],
+   "contexts": [
+    "MenuCard(title: \"Performance overlay\", footer: \"Drawn over the game. It never takes touches. Off until you turn it on.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3068"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Drawn over the game. It never takes touches. Off until you turn it on.",
+   "lines": [
+    419
+   ],
+   "contexts": [
+    "MenuCard(title: \"Performance overlay\", footer: \"Drawn over the game. It never takes touches. Off until you turn it on.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3069"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Show overlay",
+   "lines": [
+    420
+   ],
+   "contexts": [
+    "MenuToggleRow(title: \"Show overlay\", detail: nil, isOn: $overlay.enabled)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3070"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "What to show",
+   "lines": [
+    423
+   ],
+   "contexts": [
+    "MenuCard(title: \"What to show\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3071"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Look",
+   "lines": [
+    426
+   ],
+   "contexts": [
+    "MenuCard(title: \"Look\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3072"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Position",
+   "lines": [
+    428
+   ],
+   "contexts": [
+    "labeled(\"Position\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3073"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Size",
+   "lines": [
+    436
+   ],
+   "contexts": [
+    "labeled(\"Size\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3074"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Layout",
+   "lines": [
+    441,
+    522
+   ],
+   "contexts": [
+    "labeled(\"Layout\") {",
+    "MenuCard(title: \"Layout\", footer: model.customLayoutInUse"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3075"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "List",
+   "lines": [
+    443
+   ],
+   "contexts": [
+    "pill(\"List\", on: !overlay.asLine) { overlay.asLine = false }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3076"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "One line",
+   "lines": [
+    444
+   ],
+   "contexts": [
+    "pill(\"One line\", on: overlay.asLine) { overlay.asLine = true }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3077"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Background \\(Int(overlay.opacity * 100))%",
+   "lines": [
+    447
+   ],
+   "contexts": [
+    "labeled(\"Background \\(Int(overlay.opacity * 100))%\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3078"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Frame graph",
+   "lines": [
+    454
+   ],
+   "contexts": [
+    "MenuToggleRow(title: \"Frame graph\", detail: \"FPS over the last minute\", isOn: $overlay.showGraph)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3079"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "FPS over the last minute",
+   "lines": [
+    454
+   ],
+   "contexts": [
+    "MenuToggleRow(title: \"Frame graph\", detail: \"FPS over the last minute\", isOn: $overlay.showGraph)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3080"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Developer details",
+   "lines": [
+    456
+   ],
+   "contexts": [
+    "MenuToggleRow(title: \"Developer details\", detail: \"Input counters, engine memory and swap lines\", isOn: $overlay.developerDetails)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3081"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Input counters, engine memory and swap lines",
+   "lines": [
+    456
+   ],
+   "contexts": [
+    "MenuToggleRow(title: \"Developer details\", detail: \"Input counters, engine memory and swap lines\", isOn: $overlay.developerDetails)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3082"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Controller",
+   "lines": [
+    510
+   ],
+   "contexts": [
+    "MenuCard(title: \"Controller\", footer: (model.padKindName.isEmpty ? \"No controller is connected.\" : \"Connected: \\(model.padKindName).\")"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3083"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "No controller is connected.",
+   "lines": [
+    510
+   ],
+   "contexts": [
+    "MenuCard(title: \"Controller\", footer: (model.padKindName.isEmpty ? \"No controller is connected.\" : \"Connected: \\(model.padKindName).\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3084"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Connected: \\(model.padKindName).",
+   "lines": [
+    510
+   ],
+   "contexts": [
+    "MenuCard(title: \"Controller\", footer: (model.padKindName.isEmpty ? \"No controller is connected.\" : \"Connected: \\(model.padKindName).\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3085"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": " The choice applies at once and is remembered for this game. A game that picks its controller only when it starts may need a restart to notice. The DualSense is available when a PlayStation controller was connected as the game started.",
+   "lines": [
+    511
+   ],
+   "contexts": [
+    "+ \" The choice applies at once and is remembered for this game. A game that picks its controller only when it starts may need a restart to notice. The DualSense is available when a PlayStation controller was connected as the game started.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3086"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Automatic",
+   "lines": [
+    512
+   ],
+   "contexts": [
+    "MenuChoiceRow(title: \"Automatic\", detail: \"Xbox pad, a DualSense for a PlayStation controller, keyboard and mouse if the game ignores it\", selected: model.padMode == nil) { model.setPadMode(nil) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3087"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Xbox pad, a DualSense for a PlayStation controller, keyboard and mouse if the game ignores it",
+   "lines": [
+    512
+   ],
+   "contexts": [
+    "MenuChoiceRow(title: \"Automatic\", detail: \"Xbox pad, a DualSense for a PlayStation controller, keyboard and mouse if the game ignores it\", selected: model.padMode == nil) { model.setPadMode(nil) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3088"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Xbox controller",
+   "lines": [
+    514
+   ],
+   "contexts": [
+    "MenuChoiceRow(title: \"Xbox controller\", detail: \"The game sees an Xbox pad only\", selected: model.padMode == \"xbox\") { model.setPadMode(\"xbox\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3089"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "The game sees an Xbox pad only",
+   "lines": [
+    514
+   ],
+   "contexts": [
+    "MenuChoiceRow(title: \"Xbox controller\", detail: \"The game sees an Xbox pad only\", selected: model.padMode == \"xbox\") { model.setPadMode(\"xbox\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3090"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "DualSense and Xbox",
+   "lines": [
+    516
+   ],
+   "contexts": [
+    "MenuChoiceRow(title: \"DualSense and Xbox\", detail: model.padHidReady ? \"The game sees a DualSense, with the Xbox pad kept for games that only read that\" : \"Saved, but it starts with the next launch of the game\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3091"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "The game sees a DualSense, with the Xbox pad kept for games that only read that",
+   "lines": [
+    516
+   ],
+   "contexts": [
+    "MenuChoiceRow(title: \"DualSense and Xbox\", detail: model.padHidReady ? \"The game sees a DualSense, with the Xbox pad kept for games that only read that\" : \"Saved, but it starts with the next launch of the game\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3092"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Saved, but it starts with the next launch of the game",
+   "lines": [
+    516
+   ],
+   "contexts": [
+    "MenuChoiceRow(title: \"DualSense and Xbox\", detail: model.padHidReady ? \"The game sees a DualSense, with the Xbox pad kept for games that only read that\" : \"Saved, but it starts with the next launch of the game\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3093"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Keyboard and mouse",
+   "lines": [
+    519
+   ],
+   "contexts": [
+    "MenuChoiceRow(title: \"Keyboard and mouse\", detail: \"Sticks and buttons as keys and the mouse (the game's controller binds)\", selected: model.padMode == \"keys\") { model.setPadMode(\"keys\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3094"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Sticks and buttons as keys and the mouse (the game's controller binds)",
+   "lines": [
+    519
+   ],
+   "contexts": [
+    "MenuChoiceRow(title: \"Keyboard and mouse\", detail: \"Sticks and buttons as keys and the mouse (the game's controller binds)\", selected: model.padMode == \"keys\") { model.setPadMode(\"keys\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3095"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "A layout from a bind set is on screen, so the built-in layouts are off. Change it under Binds.",
+   "lines": [
+    523
+   ],
+   "contexts": [
+    "? \"A layout from a bind set is on screen, so the built-in layouts are off. Change it under Binds.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3096"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "How the touch screen plays the game.",
+   "lines": [
+    524
+   ],
+   "contexts": [
+    ": \"How the touch screen plays the game.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3097"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Binds and layouts",
+   "lines": [
+    526,
+    554
+   ],
+   "contexts": [
+    "MenuActionRow(title: \"Binds and layouts\", symbol: \"square.grid.2x2\", detail: \"Pick a set or edit its controls\") { model.openBinds() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3098"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Pick a set or edit its controls",
+   "lines": [
+    526,
+    554
+   ],
+   "contexts": [
+    "MenuActionRow(title: \"Binds and layouts\", symbol: \"square.grid.2x2\", detail: \"Pick a set or edit its controls\") { model.openBinds() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3099"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Mouse and keys",
+   "lines": [
+    528
+   ],
+   "contexts": [
+    "MenuChoiceRow(title: \"Mouse and keys\", detail: \"Tap to click, a stick for W A S D\", selected: model.layout == .standard) { model.setLayout(.standard) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3100"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Tap to click, a stick for W A S D",
+   "lines": [
+    528
+   ],
+   "contexts": [
+    "MenuChoiceRow(title: \"Mouse and keys\", detail: \"Tap to click, a stick for W A S D\", selected: model.layout == .standard) { model.setLayout(.standard) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3101"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "First person",
+   "lines": [
+    530
+   ],
+   "contexts": [
+    "MenuChoiceRow(title: \"First person\", detail: \"Drag to look around\", selected: model.layout == .firstPerson) { model.setLayout(.firstPerson) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3102"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Drag to look around",
+   "lines": [
+    530
+   ],
+   "contexts": [
+    "MenuChoiceRow(title: \"First person\", detail: \"Drag to look around\", selected: model.layout == .firstPerson) { model.setLayout(.firstPerson) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3103"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "On screen",
+   "lines": [
+    534
+   ],
+   "contexts": [
+    "MenuCard(title: \"On screen\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3104"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Show controls",
+   "lines": [
+    535
+   ],
+   "contexts": [
+    "MenuToggleRow(title: \"Show controls\", detail: nil, isOn: Binding(get: { model.controlsShown }, set: { model.setControlsShown($0) }))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3105"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Look speed",
+   "lines": [
+    539
+   ],
+   "contexts": [
+    "Text(\"Look speed\").font(.system(size: 15, weight: .semibold)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3106"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "minus",
+   "lines": [
+    541
+   ],
+   "contexts": [
+    "stepButton(\"minus\", id: \"look-less\") { model.adjustLook(1 / 1.25) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3107"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "%.1f\\u{00D7}",
+   "lines": [
+    542
+   ],
+   "contexts": [
+    "Text(String(format: \"%.1f\\u{00D7}\", model.lookSpeed)).font(.system(size: 15, weight: .semibold, design: .monospaced))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3108"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "plus",
+   "lines": [
+    544
+   ],
+   "contexts": [
+    "stepButton(\"plus\", id: \"look-more\") { model.adjustLook(1.25) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3109"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Keyboard",
+   "lines": [
+    549
+   ],
+   "contexts": [
+    "MenuActionRow(title: \"Keyboard\", symbol: \"keyboard\") { model.openKeyboard() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3110"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Binds",
+   "lines": [
+    552
+   ],
+   "contexts": [
+    "MenuCard(title: \"Binds\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3111"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Edit on-screen controls",
+   "lines": [
+    557
+   ],
+   "contexts": [
+    "MenuActionRow(title: \"Edit on-screen controls\", symbol: \"pencil\", detail: \"Move, resize and add buttons on the game\") { model.editControls() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3112"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Move, resize and add buttons on the game",
+   "lines": [
+    557
+   ],
+   "contexts": [
+    "MenuActionRow(title: \"Edit on-screen controls\", symbol: \"pencil\", detail: \"Move, resize and add buttons on the game\") { model.editControls() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3113"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Help",
+   "lines": [
+    577
+   ],
+   "contexts": [
+    "MenuCard(title: \"Help\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3114"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Report how it runs",
+   "lines": [
+    579
+   ],
+   "contexts": [
+    "MenuActionRow(title: \"Report how it runs\", symbol: \"text.bubble\", detail: \"Tell others how this game works on your device\") { model.report() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3115"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Tell others how this game works on your device",
+   "lines": [
+    579
+   ],
+   "contexts": [
+    "MenuActionRow(title: \"Report how it runs\", symbol: \"text.bubble\", detail: \"Tell others how this game works on your device\") { model.report() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3116"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Touch controls guide",
+   "lines": [
+    582
+   ],
+   "contexts": [
+    "MenuActionRow(title: \"Touch controls guide\", symbol: \"questionmark.circle\") { model.help() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3117"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Tools",
+   "lines": [
+    584
+   ],
+   "contexts": [
+    "MenuCard(title: \"Tools\", footer: \"A frame capture is for bug reports: it is taken a moment after the menu closes. The profile looks 200 times a second at what every busy thread is doing, names the busiest game modules and functions and writes them to the log; it slows the game a little while it runs"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3118"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "A frame capture is for bug reports: it is taken a moment after the menu closes. The profile looks 200 times a second at what every busy thread is doing, names the busiest game modules and functions and writes them to the log; it slows the game a little while it runs.",
+   "lines": [
+    584
+   ],
+   "contexts": [
+    "MenuCard(title: \"Tools\", footer: \"A frame capture is for bug reports: it is taken a moment after the menu closes. The profile looks 200 times a second at what every busy thread is doing, names the busiest game modules and functions and writes them to the log; it slows the game a little while it runs"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3119"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Capture the next frame",
+   "lines": [
+    585
+   ],
+   "contexts": [
+    "MenuActionRow(title: \"Capture the next frame\", symbol: \"camera.viewfinder\") { model.captureFrame() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3120"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Profile where the time goes",
+   "lines": [
+    587
+   ],
+   "contexts": [
+    "MenuActionRow(title: \"Profile where the time goes\", symbol: \"waveform.path.ecg\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3121"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Close the menu and play for 30 seconds; the result goes into the log",
+   "lines": [
+    588
+   ],
+   "contexts": [
+    "detail: \"Close the menu and play for 30 seconds; the result goes into the log\") { model.profile() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3122"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Edge handle and quick buttons",
+   "lines": [
+    590
+   ],
+   "contexts": [
+    "MenuCard(title: \"Edge handle and quick buttons\", footer: \"Swipe in from the right edge of the screen to open this menu, and swipe it back to the right to close it. The pencil and keyboard buttons fade along with the handle (Hidden dims them like Fades out) and light up when touched.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3123"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Swipe in from the right edge of the screen to open this menu, and swipe it back to the right to close it. The pencil and keyboard buttons fade along with the handle (Hidden dims them like Fades out) and light up when touched.",
+   "lines": [
+    590
+   ],
+   "contexts": [
+    "MenuCard(title: \"Edge handle and quick buttons\", footer: \"Swipe in from the right edge of the screen to open this menu, and swipe it back to the right to close it. The pencil and keyboard buttons fade along with the handle (Hidden dims them like Fades out) and light up when touched.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3124"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Session",
+   "lines": [
+    596
+   ],
+   "contexts": [
+    "MenuCard(title: \"Session\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3125"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Restart game",
+   "lines": [
+    597
+   ],
+   "contexts": [
+    "MenuActionRow(title: \"Restart game\", symbol: \"arrow.clockwise\", detail: \"Closes the game and Porthole, then starts the game again when you open Porthole\") { model.restartGame() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3126"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Closes the game and Porthole, then starts the game again when you open Porthole",
+   "lines": [
+    597
+   ],
+   "contexts": [
+    "MenuActionRow(title: \"Restart game\", symbol: \"arrow.clockwise\", detail: \"Closes the game and Porthole, then starts the game again when you open Porthole\") { model.restartGame() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3127"
+  },
+  {
+   "file": "app/Sources/UI/InGame/GameMenu.swift",
+   "text": "Close game",
+   "lines": [
+    599
+   ],
+   "contexts": [
+    "MenuActionRow(title: \"Close game\", symbol: \"power\", destructive: true) { model.closeGame() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3128"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Achievements",
+   "lines": [
+    13
+   ],
+   "contexts": [
+    "var title: String { switch self { case .achievements: \"Achievements\"; case .friends: \"Friends\"; case .workshop: \"Workshop\"; case .news: \"News\" } }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3129"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Friends",
+   "lines": [
+    13
+   ],
+   "contexts": [
+    "var title: String { switch self { case .achievements: \"Achievements\"; case .friends: \"Friends\"; case .workshop: \"Workshop\"; case .news: \"News\" } }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3130"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Workshop",
+   "lines": [
+    13,
+    78
+   ],
+   "contexts": [
+    "var title: String { switch self { case .achievements: \"Achievements\"; case .friends: \"Friends\"; case .workshop: \"Workshop\"; case .news: \"News\" } }",
+    "HStack(spacing: 8) { Theme.label(\"Workshop\"); BetaBadge(); Spacer() }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3131"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "News",
+   "lines": [
+    13
+   ],
+   "contexts": [
+    "var title: String { switch self { case .achievements: \"Achievements\"; case .friends: \"Friends\"; case .workshop: \"Workshop\"; case .news: \"News\" } }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3132"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Steam's overlay",
+   "lines": [
+    36
+   ],
+   "contexts": [
+    "MenuCard(title: \"Steam's overlay\", footer: \"A game's Steam buttons (Workshop, Store) and Shift+Tab ask for Steam's overlay, which cannot draw here and would leave the game not answering. With this on, this menu opens instead.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3133"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "A game's Steam buttons (Workshop, Store) and Shift+Tab ask for Steam's overlay, which cannot draw here and would leave the game not answering. With this on, this menu opens instead.",
+   "lines": [
+    36
+   ],
+   "contexts": [
+    "MenuCard(title: \"Steam's overlay\", footer: \"A game's Steam buttons (Workshop, Store) and Shift+Tab ask for Steam's overlay, which cannot draw here and would leave the game not answering. With this on, this menu opens instead.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3134"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Open this menu instead",
+   "lines": [
+    37
+   ],
+   "contexts": [
+    "MenuToggleRow(title: \"Open this menu instead\", isOn: Binding(get: { overlayOpens }, set: { overlayOpens = $0; AchievementToastCenter.overlayOpensMenu = $0 }))"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3135"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "this game",
+   "lines": [
+    74
+   ],
+   "contexts": [
+    "private var name: String { model.gameName ?? \"this game\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3136"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Restart to apply",
+   "lines": [
+    81
+   ],
+   "contexts": [
+    "MenuCard(title: \"Restart to apply\", footer: waiting > 0 ? \"\\(waiting) item\\(waiting == 1 ? \"\" : \"s\") can only download when the game is closed. Restarting closes the game, downloads them, and starts it again.\""
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3137"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "\\(waiting) item\\(waiting == 1 ? ",
+   "lines": [
+    81
+   ],
+   "contexts": [
+    "MenuCard(title: \"Restart to apply\", footer: waiting > 0 ? \"\\(waiting) item\\(waiting == 1 ? \"\" : \"s\") can only download when the game is closed. Restarting closes the game, downloads them, and starts it again.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3138"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": ") can only download when the game is closed. Restarting closes the game, downloads them, and starts it again.",
+   "lines": [
+    81
+   ],
+   "contexts": [
+    "MenuCard(title: \"Restart to apply\", footer: waiting > 0 ? \"\\(waiting) item\\(waiting == 1 ? \"\" : \"s\") can only download when the game is closed. Restarting closes the game, downloads them, and starts it again.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3139"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Many games only look for Workshop items when they start. Restarting closes the game and starts it again.",
+   "lines": [
+    82
+   ],
+   "contexts": [
+    ": \"Many games only look for Workshop items when they start. Restarting closes the game and starts it again.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3140"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Restart game",
+   "lines": [
+    83
+   ],
+   "contexts": [
+    "MenuActionRow(title: \"Restart game\", symbol: \"arrow.clockwise\") { model.restartGame() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3141"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Subscribing happens on your Steam account. Files are saved with the game's Steam files. A game that only looks for new items when it starts may need to be restarted to show them.",
+   "lines": [
+    87
+   ],
+   "contexts": [
+    "MenuCard(title: \"\", footer: \"Subscribing happens on your Steam account. Files are saved with the game's Steam files. A game that only looks for new items when it starts may need to be restarted to show them.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3142"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "On this device",
+   "lines": [
+    88
+   ],
+   "contexts": [
+    "MenuChoiceRow(title: \"On this device\", selected: mode == .device) { mode = .device }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3143"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Browse and search",
+   "lines": [
+    90
+   ],
+   "contexts": [
+    "MenuChoiceRow(title: \"Browse and search\", selected: mode == .browse) { mode = .browse }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3144"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Find items",
+   "lines": [
+    93
+   ],
+   "contexts": [
+    "MenuCard(title: \"Find items\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3145"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Order: \\(sort.title)",
+   "lines": [
+    94
+   ],
+   "contexts": [
+    "MenuActionRow(title: \"Order: \\(sort.title)\", symbol: \"arrow.up.arrow.down\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3146"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Search items",
+   "lines": [
+    102
+   ],
+   "contexts": [
+    "PadTextField(title: \"Search items\", prompt: \"Search items\", onDone: { Task { await startBrowse() } }, text: $search)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3147"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "No Workshop items on this device for \\(name) yet. Choose \\u{201C}Browse and search\\u{201D} to find some.",
+   "lines": [
+    124
+   ],
+   "contexts": [
+    "Text(mode == .device ? \"No Workshop items on this device for \\(name) yet. Choose \\u{201C}Browse and search\\u{201D} to find some.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3148"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "No items found.",
+   "lines": [
+    125
+   ],
+   "contexts": [
+    ": (searched.isEmpty ? \"No items found.\" : \"Nothing found for \\u{201C}\\(searched)\\u{201D}.\"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3149"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Nothing found for \\u{201C}\\(searched)\\u{201D}.",
+   "lines": [
+    125
+   ],
+   "contexts": [
+    ": (searched.isEmpty ? \"No items found.\" : \"Nothing found for \\u{201C}\\(searched)\\u{201D}.\"))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3150"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Installed",
+   "lines": [
+    128
+   ],
+   "contexts": [
+    "MenuCard(title: mode == .device ? \"Installed\" : (searched.isEmpty ? sort.title : \"Results\")) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3151"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Results",
+   "lines": [
+    128
+   ],
+   "contexts": [
+    "MenuCard(title: mode == .device ? \"Installed\" : (searched.isEmpty ? sort.title : \"Results\")) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3152"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Loading\\u{2026}",
+   "lines": [
+    136
+   ],
+   "contexts": [
+    "MenuActionRow(title: loading ? \"Loading\\u{2026}\" : \"Show more\", symbol: \"ellipsis.circle\", detail: \"\\(browseItems.count) of \\(browseTotal)\") { Task { await loadMore() } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3153"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Show more",
+   "lines": [
+    136
+   ],
+   "contexts": [
+    "MenuActionRow(title: loading ? \"Loading\\u{2026}\" : \"Show more\", symbol: \"ellipsis.circle\", detail: \"\\(browseItems.count) of \\(browseTotal)\") { Task { await loadMore() } }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3154"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "\\(browseItems.count) of \\(browseTotal)",
+   "lines": [
+    136
+   ],
+   "contexts": [
+    "MenuActionRow(title: loading ? \"Loading\\u{2026}\" : \"Show more\", symbol: \"ellipsis.circle\", detail: \"\\(browseItems.count) of \\(browseTotal)\") { Task { await loadMore() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3155"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Downloading\\u{2026}",
+   "lines": [
+    169
+   ],
+   "contexts": [
+    "Text(\"Downloading\\u{2026}\").font(.system(size: 11)).foregroundStyle(Theme.accent)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3156"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Waiting\\u{2026}",
+   "lines": [
+    171
+   ],
+   "contexts": [
+    "Text(\"Waiting\\u{2026}\").font(.system(size: 11)).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3157"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Subscribed \\u{00B7} downloads when the game closes",
+   "lines": [
+    173
+   ],
+   "contexts": [
+    "Text(\"Subscribed \\u{00B7} downloads when the game closes\").font(.system(size: 11)).foregroundStyle(Theme.accent)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3158"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Tap to try again",
+   "lines": [
+    176
+   ],
+   "contexts": [
+    "Text(\"Tap to try again\").font(.system(size: 11)).foregroundStyle(Theme.accent)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3159"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Tap again to remove",
+   "lines": [
+    178
+   ],
+   "contexts": [
+    "if armed == item.id { Text(\"Tap again to remove\").font(.system(size: 11, weight: .semibold)).foregroundStyle(Theme.bad) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3160"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "On this device \\u{00B7} tap to remove",
+   "lines": [
+    179
+   ],
+   "contexts": [
+    "else if present { Text(\"On this device \\u{00B7} tap to remove\").font(.system(size: 11)).foregroundStyle(Theme.good) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3161"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "Tap to subscribe and download",
+   "lines": [
+    180
+   ],
+   "contexts": [
+    "else { Text(\"Tap to subscribe and download\").font(.system(size: 11)).foregroundStyle(Theme.accent) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3162"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "\\(Int((rating * 100).rounded()))% liked",
+   "lines": [
+    186
+   ],
+   "contexts": [
+    "if let rating = item.rating { parts.append(\"\\(Int((rating * 100).rounded()))% liked\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3163"
+  },
+  {
+   "file": "app/Sources/UI/InGame/WorkshopTab.swift",
+   "text": "\\(item.subscriptions.formatted(.number.notation(.compactName))) subscribers",
+   "lines": [
+    187
+   ],
+   "contexts": [
+    "if item.subscriptions > 0 { parts.append(\"\\(item.subscriptions.formatted(.number.notation(.compactName))) subscribers\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3164"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Sign in to itch.io",
+   "lines": [
+    19
+   ],
+   "contexts": [
+    "Text(\"Sign in to itch.io\").font(.system(size: 24, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3165"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "itch.io lets you make a personal API key; Porthole uses it only to list the games you own or claimed and to download them. The key stays in this device's Keychain. Games you own that have a Windows download are listed here.",
+   "lines": [
+    20
+   ],
+   "contexts": [
+    "Text(\"itch.io lets you make a personal API key; Porthole uses it only to list the games you own or claimed and to download them. The key stays in this device's Keychain. Games you own that have a Windows download are listed here.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3166"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Sign in",
+   "lines": [
+    22
+   ],
+   "contexts": [
+    "PillButton(id: \"itch-signin\", title: \"Sign in\", symbol: \"key.fill\", style: .primary) { signIn = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3167"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "\\(Int((install?.progress.fraction ?? 0) * 100))%",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "case .active?: return BadgeData(symbol: \"arrow.down.circle.fill\", text: \"\\(Int((install?.progress.fraction ?? 0) * 100))%\", tint: Theme.accent)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3168"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Waiting",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "case .queued?: return BadgeData(symbol: \"hourglass\", text: \"Waiting\", tint: Theme.textDim)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3169"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Paused",
+   "lines": [
+    45
+   ],
+   "contexts": [
+    "case .paused?: return BadgeData(symbol: \"pause.circle.fill\", text: \"Paused\", tint: Theme.warn)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3170"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Failed",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "case .failed?: return BadgeData(symbol: \"exclamationmark.triangle.fill\", text: \"Failed\", tint: Theme.bad)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3171"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Ready to install",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "case .ready?: return BadgeData(symbol: \"shippingbox.fill\", text: \"Ready to install\", tint: Theme.accent)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3172"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Installing",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "case .running?: return BadgeData(symbol: \"gearshape.fill\", text: \"Installing\", tint: Theme.accent)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3173"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Installed",
+   "lines": [
+    49,
+    104
+   ],
+   "contexts": [
+    "case .installed?: return BadgeData(symbol: \"checkmark.circle.fill\", text: \"Installed\", tint: Theme.good)",
+    "SegmentedPills(options: [.init(id: \"all\", title: \"All\"), .init(id: \"installed\", title: \"Installed\")], selection: filter) { filter = $0 }"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3174"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Refresh the list",
+   "lines": [
+    102
+   ],
+   "contexts": [
+    "else { IconPillButton(id: \"io-refresh\", symbol: \"arrow.clockwise\", label: \"Refresh the list\") { library.refresh() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3175"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "All",
+   "lines": [
+    104
+   ],
+   "contexts": [
+    "SegmentedPills(options: [.init(id: \"all\", title: \"All\"), .init(id: \"installed\", title: \"Installed\")], selection: filter) { filter = $0 }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3176"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "itch.io account",
+   "lines": [
+    105
+   ],
+   "contexts": [
+    "IconPillButton(id: \"io-account\", symbol: \"person.crop.circle\", label: \"itch.io account\") { showAccount = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3177"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "No games with a Windows download found on this account yet. Games you bought, claimed or got in a bundle show up here.",
+   "lines": [
+    109
+   ],
+   "contexts": [
+    "Text(library.games.isEmpty ? \"No games with a Windows download found on this account yet. Games you bought, claimed or got in a bundle show up here.\" : \"No games match.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3178"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "No games match.",
+   "lines": [
+    109
+   ],
+   "contexts": [
+    "Text(library.games.isEmpty ? \"No games with a Windows download found on this account yet. Games you bought, claimed or got in a bundle show up here.\" : \"No games match.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3179"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "itch.io games are plain downloads: Porthole fetches the game's Windows file, unpacks it, and finds its program. Games that are made for a web browser are not listed.",
+   "lines": [
+    115
+   ],
+   "contexts": [
+    "Text(\"itch.io games are plain downloads: Porthole fetches the game's Windows file, unpacks it, and finds its program. Games that are made for a web browser are not listed.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3180"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Search \\(library.games.count) game\\(library.games.count == 1 ? ",
+   "lines": [
+    123
+   ],
+   "contexts": [
+    "private var searchField: some View { SearchField(id: \"io-search\", prompt: \"Search \\(library.games.count) game\\(library.games.count == 1 ? \"\" : \"s\")\", text: $search) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3181"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "by \\($0)",
+   "lines": [
+    138
+   ],
+   "contexts": [
+    "StoreSheetShell(store: .itch, title: game.title, subtitle: game.author.map { \"by \\($0)\" }, close: { dismiss() }, art: { EpicArtView(url: game.cover) }) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3182"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Open on itch.io",
+   "lines": [
+    142
+   ],
+   "contexts": [
+    "if let page = game.page { Link(destination: page) { Label(\"Open on itch.io\", systemImage: \"safari\") }.font(.subheadline) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3183"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Uninstall \\(game.title)?",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    ".confirm(\"Uninstall \\(game.title)?\", message: \"The game's folder is removed from this device. Your itch.io library is not touched.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3184"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "The game's folder is removed from this device. Your itch.io library is not touched.",
+   "lines": [
+    144
+   ],
+   "contexts": [
+    ".confirm(\"Uninstall \\(game.title)?\", message: \"The game's folder is removed from this device. Your itch.io library is not touched.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3185"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Uninstall and delete its files",
+   "lines": [
+    145
+   ],
+   "contexts": [
+    "confirmTitle: \"Uninstall and delete its files\", destructive: true, isPresented: $confirmUninstall) { installer.uninstall(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3186"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "No Windows download found for this game.",
+   "lines": [
+    156
+   ],
+   "contexts": [
+    "Label(\"No Windows download found for this game.\", systemImage: \"exclamationmark.triangle.fill\").font(.footnote).foregroundStyle(.orange)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3187"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "\\(u.title) \\u{00B7} \\(EpicText.size(u.size))",
+   "lines": [
+    161
+   ],
+   "contexts": [
+    "Button { chosen = u.id } label: { Text(\"\\(u.title) \\u{00B7} \\(EpicText.size(u.size))\") }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3188"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "\\(upload.title) \\u{00B7} \\(EpicText.size(upload.size))",
+   "lines": [
+    164,
+    167
+   ],
+   "contexts": [
+    "Label(\"\\(upload.title) \\u{00B7} \\(EpicText.size(upload.size))\", systemImage: \"square.stack.3d.down.right\").font(.subheadline)",
+    "Label(\"\\(upload.title) \\u{00B7} \\(EpicText.size(upload.size))\", systemImage: \"doc.zipper\").font(.subheadline).foregroundStyle(.secondary)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3189"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Install",
+   "lines": [
+    169
+   ],
+   "contexts": [
+    "button(\"Install\", symbol: \"arrow.down.circle.fill\", prominent: true) { installer.install(game, uploadID: upload.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3190"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Downloads the game's Windows file from itch.io and unpacks it. Keep the app open while it installs.",
+   "lines": [
+    170
+   ],
+   "contexts": [
+    "note(\"Downloads the game's Windows file from itch.io and unpacks it. Keep the app open while it installs.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3191"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Looking up the download\\u{2026}",
+   "lines": [
+    172
+   ],
+   "contexts": [
+    "HStack { ProgressView(); Text(\"Looking up the download\\u{2026}\").font(.footnote).foregroundStyle(.secondary) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3192"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Waiting for its turn\\u{2026}",
+   "lines": [
+    175
+   ],
+   "contexts": [
+    "Label(\"Waiting for its turn\\u{2026}\", systemImage: \"hourglass\").foregroundStyle(.secondary)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3193"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Cancel",
+   "lines": [
+    176,
+    183
+   ],
+   "contexts": [
+    "button(\"Cancel\", symbol: \"xmark\") { installer.cancel(game.id) }",
+    "button(\"Cancel\", symbol: \"xmark\", role: .destructive) { installer.cancel(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3194"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Pause",
+   "lines": [
+    182
+   ],
+   "contexts": [
+    "button(\"Pause\", symbol: \"pause.fill\") { installer.pause(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3195"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Resume",
+   "lines": [
+    188
+   ],
+   "contexts": [
+    "button(\"Resume\", symbol: \"play.fill\", prominent: true) { installer.install(game) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3196"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Remove",
+   "lines": [
+    189,
+    195
+   ],
+   "contexts": [
+    "button(\"Remove\", symbol: \"trash\", role: .destructive) { installer.cancel(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3197"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Try again",
+   "lines": [
+    194
+   ],
+   "contexts": [
+    "button(\"Try again\", symbol: \"arrow.clockwise\", prominent: true) { installer.install(game) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3198"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Downloaded",
+   "lines": [
+    198
+   ],
+   "contexts": [
+    "Label(\"Downloaded\", systemImage: \"checkmark.circle.fill\").foregroundStyle(.green)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3199"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Run the installer",
+   "lines": [
+    199
+   ],
+   "contexts": [
+    "button(\"Run the installer\", symbol: \"shippingbox.fill\", prominent: true) { installer.runInstaller(game.id); dismiss() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3200"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "This game comes with an installer. It runs in Porthole's Wine; follow its steps, and when it ends the game is added to your library.",
+   "lines": [
+    200
+   ],
+   "contexts": [
+    "note(\"This game comes with an installer. It runs in Porthole's Wine; follow its steps, and when it ends the game is added to your library.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3201"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Remove the download",
+   "lines": [
+    201
+   ],
+   "contexts": [
+    "button(\"Remove the download\", symbol: \"trash\", role: .destructive) { installer.cancel(game.id) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3202"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Installing\\u{2026}",
+   "lines": [
+    203
+   ],
+   "contexts": [
+    "Label(\"Installing\\u{2026}\", systemImage: \"gearshape.fill\").foregroundStyle(.secondary)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3203"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "The installer is running. When it ends, the game is added to your library by itself.",
+   "lines": [
+    204
+   ],
+   "contexts": [
+    "note(\"The installer is running. When it ends, the game is added to your library by itself.\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3204"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Installed. Find it in your library.",
+   "lines": [
+    206
+   ],
+   "contexts": [
+    "Label(\"Installed. Find it in your library.\", systemImage: \"checkmark.seal.fill\").foregroundStyle(.green)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3205"
+  },
+  {
+   "file": "app/Sources/UI/ItchLibraryScreens.swift",
+   "text": "Uninstall",
+   "lines": [
+    207
+   ],
+   "contexts": [
+    "button(\"Uninstall\", symbol: \"trash\", role: .destructive) { confirmUninstall = true }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3206"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Controls.swift",
+   "text": "More information",
+   "lines": [
+    91
+   ],
+   "contexts": [
+    ".accessibilityLabel(\"More information\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3207"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Controls.swift",
+   "text": "Got it",
+   "lines": [
+    116
+   ],
+   "contexts": [
+    "HStack { Spacer(); PillButton(id: \"info-ok\", title: \"Got it\", style: .primary, action: dismiss) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3208"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Controls.swift",
+   "text": "A",
+   "lines": [
+    162,
+    172
+   ],
+   "contexts": [
+    "guard let scope = NavHub.shared.top else { return [Hint(glyph: kind.glyph(\"A\"), label: \"Select\")] }",
+    "Hint(glyph: kind.glyph(\"A\"), label: aLabel, on: entry != nil || scope.focused == nil),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "visible-name-target"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3209"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Controls.swift",
+   "text": "Select",
+   "lines": [
+    162,
+    169
+   ],
+   "contexts": [
+    "guard let scope = NavHub.shared.top else { return [Hint(glyph: kind.glyph(\"A\"), label: \"Select\")] }",
+    "let aLabel = engaged ? \"Done\" : slider ? \"Adjust\" : entry?.label ?? \"Select\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3210"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Controls.swift",
+   "text": "Action",
+   "lines": [
+    165
+   ],
+   "contexts": [
+    "let x = entry?.secondary != nil ? entry?.secondaryLabel ?? \"Action\" : (scope.hasSecondaryFallback ? scope.secondaryLabel ?? \"Action\" : nil)"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3211"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Controls.swift",
+   "text": "Done",
+   "lines": [
+    169
+   ],
+   "contexts": [
+    "let aLabel = engaged ? \"Done\" : slider ? \"Adjust\" : entry?.label ?? \"Select\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3212"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Controls.swift",
+   "text": "Adjust",
+   "lines": [
+    169
+   ],
+   "contexts": [
+    "let aLabel = engaged ? \"Done\" : slider ? \"Adjust\" : entry?.label ?? \"Select\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3213"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Controls.swift",
+   "text": "\\u{25C0} \\u{25B6}",
+   "lines": [
+    174
+   ],
+   "contexts": [
+    "Hint(glyph: \"\\u{25C0} \\u{25B6}\", label: \"Change\", on: changes),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3214"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Controls.swift",
+   "text": "Change",
+   "lines": [
+    174
+   ],
+   "contexts": [
+    "Hint(glyph: \"\\u{25C0} \\u{25B6}\", label: \"Change\", on: changes),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3215"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Controls.swift",
+   "text": "B",
+   "lines": [
+    180,
+    184
+   ],
+   "contexts": [
+    "guard let scope = NavHub.shared.top else { return [Hint(glyph: kind.glyph(\"B\"), label: \"Back\")] }",
+    "Hint(glyph: kind.glyph(\"B\"), label: \"Back\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "visible-name-target"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3216"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Controls.swift",
+   "text": "Back",
+   "lines": [
+    180,
+    184
+   ],
+   "contexts": [
+    "guard let scope = NavHub.shared.top else { return [Hint(glyph: kind.glyph(\"B\"), label: \"Back\")] }",
+    "Hint(glyph: kind.glyph(\"B\"), label: \"Back\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3217"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Controls.swift",
+   "text": "D-pad",
+   "lines": [
+    183
+   ],
+   "contexts": [
+    "Hint(glyph: \"D-pad\", label: \"Move\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3218"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Controls.swift",
+   "text": "Move",
+   "lines": [
+    183
+   ],
+   "contexts": [
+    "Hint(glyph: \"D-pad\", label: \"Move\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3219"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Controls.swift",
+   "text": "Previous",
+   "lines": [
+    185
+   ],
+   "contexts": [
+    "Hint(glyph: kind.glyph(\"LB\"), label: previous ?? \"Previous\", on: canSwitch),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3220"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Controls.swift",
+   "text": "Next",
+   "lines": [
+    186
+   ],
+   "contexts": [
+    "Hint(glyph: kind.glyph(\"RB\"), label: next ?? \"Next\", on: canSwitch),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3221"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Controls.swift",
+   "text": "Y",
+   "lines": [
+    187
+   ],
+   "contexts": [
+    "Hint(glyph: kind.glyph(\"Y\"), label: scope.tertiaryLabel ?? \"More\", on: scope.hasTertiary),"
+   ],
+   "reasons": [
+    "visible-name-target"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3222"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Controls.swift",
+   "text": "More",
+   "lines": [
+    187
+   ],
+   "contexts": [
+    "Hint(glyph: kind.glyph(\"Y\"), label: scope.tertiaryLabel ?? \"More\", on: scope.hasTertiary),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3223"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Controls.swift",
+   "text": "Menu",
+   "lines": [
+    188
+   ],
+   "contexts": [
+    "Hint(glyph: kind.glyph(\"Menu\"), label: scope.menuLabel ?? \"Menu\", on: scope.hasMenu),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3224"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Controls.swift",
+   "text": "Item",
+   "lines": [
+    196,
+    197,
+    198
+   ],
+   "contexts": [
+    "HStack(spacing: 22) { group(itemHints, title: \"Item\"); group(pageHints, title: \"Page\") }.fixedSize()",
+    "VStack(spacing: 6) { group(itemHints, title: \"Item\"); group(pageHints, title: \"Page\") }.fixedSize()",
+    "VStack(spacing: 6) { group(itemHints, title: \"Item\"); group(pageHints, title: \"Page\") }.fixedSize().scaleEffect(0.82)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3225"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Controls.swift",
+   "text": "Page",
+   "lines": [
+    196,
+    197,
+    198
+   ],
+   "contexts": [
+    "HStack(spacing: 22) { group(itemHints, title: \"Item\"); group(pageHints, title: \"Page\") }.fixedSize()",
+    "VStack(spacing: 6) { group(itemHints, title: \"Item\"); group(pageHints, title: \"Page\") }.fixedSize()",
+    "VStack(spacing: 6) { group(itemHints, title: \"Item\"); group(pageHints, title: \"Page\") }.fixedSize().scaleEffect(0.82)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3226"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Dialogs.swift",
+   "text": "Confirm",
+   "lines": [
+    41,
+    70
+   ],
+   "contexts": [
+    "var confirmTitle = \"Confirm\"",
+    "func confirm(_ title: String, message: String? = nil, confirmTitle: String = \"Confirm\", destructive: Bool = false, isPresented: Binding<Bool>, action: @escaping () -> Void) -> some View {"
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3227"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Dialogs.swift",
+   "text": "Cancel",
+   "lines": [
+    54,
+    139
+   ],
+   "contexts": [
+    "PillButton(id: \"confirm-no\", title: \"Cancel\", symbol: \"xmark\") { done(false) }",
+    "var closeTitle = \"Cancel\""
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3228"
+  },
+  {
+   "file": "app/Sources/UI/Kit/Dialogs.swift",
+   "text": "Close",
+   "lines": [
+    111
+   ],
+   "contexts": [
+    "PillButton(id: \"reader-close\", title: \"Close\", symbol: \"xmark\", action: done)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3229"
+  },
+  {
+   "file": "app/Sources/UI/Kit/DisplayResolution.swift",
+   "text": "\\(width) \\u{00D7} \\(height)",
+   "lines": [
+    10
+   ],
+   "contexts": [
+    "var text: String { \"\\(width) \\u{00D7} \\(height)\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3230"
+  },
+  {
+   "file": "app/Sources/UI/Kit/DisplayResolution.swift",
+   "text": "Screen shape, \\(size.text)",
+   "lines": [
+    45
+   ],
+   "contexts": [
+    "if id.hasPrefix(\"screen\") { return \"Screen shape, \\(size.text)\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3231"
+  },
+  {
+   "file": "app/Sources/UI/Kit/DisplayResolution.swift",
+   "text": "\\(size.text) (fastest)",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "case \"640x360\": return \"\\(size.text) (fastest)\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3232"
+  },
+  {
+   "file": "app/Sources/UI/Kit/DisplayResolution.swift",
+   "text": "\\(size.text) (default)",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "case defaultID: return \"\\(size.text) (default)\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3233"
+  },
+  {
+   "file": "app/Sources/UI/Kit/GameHero.swift",
+   "text": "Play",
+   "lines": [
+    18
+   ],
+   "contexts": [
+    "var playTitle = \"Play\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3234"
+  },
+  {
+   "file": "app/Sources/UI/Kit/GameHero.swift",
+   "text": "Home",
+   "lines": [
+    31,
+    36
+   ],
+   "contexts": [
+    "if let back { PillButton(id: \"gp-back\", title: \"Home\", symbol: \"chevron.left\", action: back) }",
+    "PillButton(id: \"gp-back\", title: \"Home\", symbol: \"chevron.left\", action: back)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3235"
+  },
+  {
+   "file": "app/Sources/UI/Kit/GameHero.swift",
+   "text": "Back",
+   "lines": [
+    100
+   ],
+   "contexts": [
+    "var backTitle = \"Back\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3236"
+  },
+  {
+   "file": "app/Sources/UI/Kit/HalloweenProps.swift",
+   "text": "Boo!",
+   "lines": [
+    162
+   ],
+   "contexts": [
+    "Text(\"Boo!\").font(.system(size: size * 0.4, weight: .heavy, design: .rounded)).foregroundStyle(Color(hex: 0xFF8A1F))"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3237"
+  },
+  {
+   "file": "app/Sources/UI/Kit/HomeViews.swift",
+   "text": "Full controller support",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "var title: String { self == .full ? \"Full controller support\" : \"Partial controller support\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3238"
+  },
+  {
+   "file": "app/Sources/UI/Kit/HomeViews.swift",
+   "text": "Partial controller support",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "var title: String { self == .full ? \"Full controller support\" : \"Partial controller support\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3239"
+  }
+ ]
+}

@@ -1,0 +1,2933 @@
+{
+ "batch": 21,
+ "units": [
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Remove the downloaded copy",
+   "lines": [
+    76
+   ],
+   "contexts": [
+    "ActionRow(id: \"ad-vc-remove\", symbol: \"trash\", title: \"Remove the downloaded copy\", destructive: true, chevron: false) { installer.remove() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3600"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": ".NET Framework (Wine Mono)",
+   "lines": [
+    79
+   ],
+   "contexts": [
+    "title: \".NET Framework (Wine Mono)\", subtitle: mono.error ?? mono.status, detail: !WineMonoModel.available && !mono.busy ? \"Download\" : nil,"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3601"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Games built on Microsoft's .NET Framework (Celeste, many indie games and launchers) run on Wine Mono, the Wine project's open-source .NET runtime. About 42 MB from WineHQ, about 130 MB once installed, checked against a fixed fingerprint before use. Without it those games end as soon as they start.",
+   "lines": [
+    80
+   ],
+   "contexts": [
+    "info: \"Games built on Microsoft's .NET Framework (Celeste, many indie games and launchers) run on Wine Mono, the Wine project's open-source .NET runtime. About 42 MB from WineHQ, about 130 MB once installed, checked against a fixed fingerprint before use. Without it those games end as soon as they s"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3602"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Remove Wine Mono",
+   "lines": [
+    85
+   ],
+   "contexts": [
+    "ActionRow(id: \"ad-mono-remove\", symbol: \"trash\", title: \"Remove Wine Mono\", destructive: true, chevron: false) { mono.remove() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3603"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "32-bit Visual C++ runtime",
+   "lines": [
+    88
+   ],
+   "contexts": [
+    "title: \"32-bit Visual C++ runtime\", subtitle: vc32.error ?? vc32.status, detail: !vc32.complete && !vc32.busy ? \"Download\" : nil,"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3604"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Microsoft's C++ runtime for 32-bit programs (older games, many launchers). Without it they run on Wine's own C++ runtime. About 14 MB from Microsoft's installer, checked against a pinned fingerprint and unpacked here; every file is checked again. Not allowed while a game is running.",
+   "lines": [
+    89
+   ],
+   "contexts": [
+    "info: \"Microsoft's C++ runtime for 32-bit programs (older games, many launchers). Without it they run on Wine's own C++ runtime. About 14 MB from Microsoft's installer, checked against a pinned fingerprint and unpacked here; every file is checked again. Not allowed while a game is running.\", chevron"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3605"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Remove the 32-bit runtime",
+   "lines": [
+    94
+   ],
+   "contexts": [
+    "ActionRow(id: \"ad-vc32-remove\", symbol: \"trash\", title: \"Remove the 32-bit runtime\", destructive: true, chevron: false) { vc32.remove() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3606"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Web pages in programs (Wine Gecko)",
+   "lines": [
+    97
+   ],
+   "contexts": [
+    "title: \"Web pages in programs (Wine Gecko)\", subtitle: gecko.error ?? gecko.status, detail: !gecko.installed && !gecko.busy ? \"Download\" : nil,"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3607"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Installers and launchers that show a web page use Wine Gecko, the Wine project's open-source web engine. About 110 MB from WineHQ (a 32-bit and a 64-bit file), checked against fixed fingerprints before use. Without it Wine stops on its own \\u{201C}Wine Gecko Installer\\u{201D} window, whose download can hang. Programs that already installed it keep it.",
+   "lines": [
+    98
+   ],
+   "contexts": [
+    "info: \"Installers and launchers that show a web page use Wine Gecko, the Wine project's open-source web engine. About 110 MB from WineHQ (a 32-bit and a 64-bit file), checked against fixed fingerprints before use. Without it Wine stops on its own \\u{201C}Wine Gecko Installer\\u{201D} window, whose do"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3608"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Remove Wine Gecko",
+   "lines": [
+    103
+   ],
+   "contexts": [
+    "ActionRow(id: \"ad-gecko-remove\", symbol: \"trash\", title: \"Remove Wine Gecko\", destructive: true, chevron: false) { gecko.remove() }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3609"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Downloading \\(Int(f * 100))%",
+   "lines": [
+    111
+   ],
+   "contexts": [
+    "case .downloading(let f): return \"Downloading \\(Int(f * 100))%\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3610"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Checking and unpacking\\u{2026}",
+   "lines": [
+    112
+   ],
+   "contexts": [
+    "case .unpacking: return \"Checking and unpacking\\u{2026}\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3611"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Installed",
+   "lines": [
+    114
+   ],
+   "contexts": [
+    "case .idle: return installer.installed ? \"Installed\" : (installer.available ? \"Included with this app\" : \"Not installed\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3612"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Included with this app",
+   "lines": [
+    114
+   ],
+   "contexts": [
+    "case .idle: return installer.installed ? \"Installed\" : (installer.available ? \"Included with this app\" : \"Not installed\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3613"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Not installed",
+   "lines": [
+    114
+   ],
+   "contexts": [
+    "case .idle: return installer.installed ? \"Installed\" : (installer.available ? \"Included with this app\" : \"Not installed\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3614"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Links",
+   "lines": [
+    127
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Links\", note: \"A porthole:// link can start a game from a Home Screen shortcut, a web page or another app.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3615"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "A porthole:// link can start a game from a Home Screen shortcut, a web page or another app.",
+   "lines": [
+    127
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Links\", note: \"A porthole:// link can start a game from a Home Screen shortcut, a web page or another app.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3616"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Ask before a link starts a game",
+   "lines": [
+    128
+   ],
+   "contexts": [
+    "ToggleRow(id: \"ad-confirm-link\", symbol: \"link.badge.plus\", title: \"Ask before a link starts a game\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3617"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "A porthole://play link (a Home Screen shortcut, a web page, another app) starts a game that is in your library. With this on, Porthole asks first, so a link you did not expect cannot start one. Links from a computer you have paired are not asked.",
+   "lines": [
+    129
+   ],
+   "contexts": [
+    "info: \"A porthole://play link (a Home Screen shortcut, a web page, another app) starts a game that is in your library. With this on, Porthole asks first, so a link you did not expect cannot start one. Links from a computer you have paired are not asked.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3618"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Remote control",
+   "lines": [
+    132
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Remote control\", note: \"For testing from a computer. Leave this off normally.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3619"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "For testing from a computer. Leave this off normally.",
+   "lines": [
+    132
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Remote control\", note: \"For testing from a computer. Leave this off normally.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3620"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Allow remote-control links",
+   "lines": [
+    133
+   ],
+   "contexts": [
+    "ToggleRow(id: \"ad-remote\", symbol: \"antenna.radiowaves.left.and.right\", title: \"Allow remote-control links\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3621"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Lets porthole:// links stop an ended game, change one setting line of a game, or install the newest update. For testing from a computer (tools/ipad.sh). Leave off normally: any app or web page that can open a link could use them.",
+   "lines": [
+    134
+   ],
+   "contexts": [
+    "info: \"Lets porthole:// links stop an ended game, change one setting line of a game, or install the newest update. For testing from a computer (tools/ipad.sh). Leave off normally: any app or web page that can open a link could use them.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3622"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Debugging",
+   "lines": [
+    150
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Debugging\", note: \"For finding out why something looks or behaves wrong. Leave these off normally.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3623"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "For finding out why something looks or behaves wrong. Leave these off normally.",
+   "lines": [
+    150
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Debugging\", note: \"For finding out why something looks or behaves wrong. Leave these off normally.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3624"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Save window pictures",
+   "lines": [
+    151
+   ],
+   "contexts": [
+    "ToggleRow(id: \"ad-pics\", symbol: \"photo.on.rectangle\", title: \"Save window pictures\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3625"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Saves a picture of every Windows window about every 2 seconds to Files > Porthole > surfdump. Use them to report a window that looks wrong. Leave off normally.",
+   "lines": [
+    152
+   ],
+   "contexts": [
+    "info: \"Saves a picture of every Windows window about every 2 seconds to Files > Porthole > surfdump. Use them to report a window that looks wrong. Leave off normally.\", isOn: $dumpSurfaces)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3626"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Wine debug channels",
+   "lines": [
+    153
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"ad-debug\", symbol: \"terminal.fill\", title: \"Wine debug channels\", placeholder: \"for example +msg\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3627"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "for example +msg",
+   "lines": [
+    153
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"ad-debug\", symbol: \"terminal.fill\", title: \"Wine debug channels\", placeholder: \"for example +msg\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3628"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Advanced: records extra Wine messages in the log (for example +msg for window messages). Leave empty normally.",
+   "lines": [
+    154
+   ],
+   "contexts": [
+    "info: \"Advanced: records extra Wine messages in the log (for example +msg for window messages). Leave empty normally.\", monospaced: true, text: $wineDebug)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3629"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Starting a game",
+   "lines": [
+    165,
+    177
+   ],
+   "contexts": [
+    "\"Starting a game\": \"How quickly Wine starts, and the memory set aside for translated code.\",",
+    "\"Starting a game\": \"bolt.fill\", \"CPU and power\": \"cpu\", \"Memory\": \"memorychip.fill\", \"OpenGL\": \"cube.transparent\", \"Direct3D 12\": \"square.3.layers.3d\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3630"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "How quickly Wine starts, and the memory set aside for translated code.",
+   "lines": [
+    165
+   ],
+   "contexts": [
+    "\"Starting a game\": \"How quickly Wine starts, and the memory set aside for translated code.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3631"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "CPU and power",
+   "lines": [
+    166,
+    177
+   ],
+   "contexts": [
+    "\"CPU and power\": \"How many cores games see, and how slow Eco mode makes them.\",",
+    "\"Starting a game\": \"bolt.fill\", \"CPU and power\": \"cpu\", \"Memory\": \"memorychip.fill\", \"OpenGL\": \"cube.transparent\", \"Direct3D 12\": \"square.3.layers.3d\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3632"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "How many cores games see, and how slow Eco mode makes them.",
+   "lines": [
+    166
+   ],
+   "contexts": [
+    "\"CPU and power\": \"How many cores games see, and how slow Eco mode makes them.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3633"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Memory",
+   "lines": [
+    167,
+    177
+   ],
+   "contexts": [
+    "\"Memory\": \"Swap, donor memory, and how the engine spends the device's RAM.\",",
+    "\"Starting a game\": \"bolt.fill\", \"CPU and power\": \"cpu\", \"Memory\": \"memorychip.fill\", \"OpenGL\": \"cube.transparent\", \"Direct3D 12\": \"square.3.layers.3d\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3634"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Swap, donor memory, and how the engine spends the device's RAM.",
+   "lines": [
+    167
+   ],
+   "contexts": [
+    "\"Memory\": \"Swap, donor memory, and how the engine spends the device's RAM.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3635"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "OpenGL",
+   "lines": [
+    168,
+    177
+   ],
+   "contexts": [
+    "\"OpenGL\": \"How games that draw with OpenGL are shown.\",",
+    "\"Starting a game\": \"bolt.fill\", \"CPU and power\": \"cpu\", \"Memory\": \"memorychip.fill\", \"OpenGL\": \"cube.transparent\", \"Direct3D 12\": \"square.3.layers.3d\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3636"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "How games that draw with OpenGL are shown.",
+   "lines": [
+    168
+   ],
+   "contexts": [
+    "\"OpenGL\": \"How games that draw with OpenGL are shown.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3637"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Direct3D 12",
+   "lines": [
+    169,
+    177
+   ],
+   "contexts": [
+    "\"Direct3D 12\": \"Switches for games that use Direct3D 12.\",",
+    "\"Starting a game\": \"bolt.fill\", \"CPU and power\": \"cpu\", \"Memory\": \"memorychip.fill\", \"OpenGL\": \"cube.transparent\", \"Direct3D 12\": \"square.3.layers.3d\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3638"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Switches for games that use Direct3D 12.",
+   "lines": [
+    169
+   ],
+   "contexts": [
+    "\"Direct3D 12\": \"Switches for games that use Direct3D 12.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3639"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Graphics, video and sound",
+   "lines": [
+    170,
+    178
+   ],
+   "contexts": [
+    "\"Graphics, video and sound\": \"Direct3D 9, video in games, the screen's refresh rate and the audio buffer.\",",
+    "\"Graphics, video and sound\": \"tv.fill\", \"Controllers\": \"gamecontroller.fill\", \"Controller menus and pointer\": \"cursorarrow.rays\", \"Keyboard and mouse\": \"keyboard.fill\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3640"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Direct3D 9, video in games, the screen's refresh rate and the audio buffer.",
+   "lines": [
+    170
+   ],
+   "contexts": [
+    "\"Graphics, video and sound\": \"Direct3D 9, video in games, the screen's refresh rate and the audio buffer.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3641"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Controllers",
+   "lines": [
+    171,
+    178,
+    253
+   ],
+   "contexts": [
+    "\"Controllers\": \"How controllers are presented to games.\",",
+    "\"Graphics, video and sound\": \"tv.fill\", \"Controllers\": \"gamecontroller.fill\", \"Controller menus and pointer\": \"cursorarrow.rays\", \"Keyboard and mouse\": \"keyboard.fill\",",
+    "if title == \"Controllers\" {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3642"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "How controllers are presented to games.",
+   "lines": [
+    171
+   ],
+   "contexts": [
+    "\"Controllers\": \"How controllers are presented to games.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3643"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Controller menus and pointer",
+   "lines": [
+    172,
+    178
+   ],
+   "contexts": [
+    "\"Controller menus and pointer\": \"Using a controller in Porthole's own menus and the in-game pointer.\",",
+    "\"Graphics, video and sound\": \"tv.fill\", \"Controllers\": \"gamecontroller.fill\", \"Controller menus and pointer\": \"cursorarrow.rays\", \"Keyboard and mouse\": \"keyboard.fill\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3644"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Using a controller in Porthole's own menus and the in-game pointer.",
+   "lines": [
+    172
+   ],
+   "contexts": [
+    "\"Controller menus and pointer\": \"Using a controller in Porthole's own menus and the in-game pointer.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3645"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Keyboard and mouse",
+   "lines": [
+    173,
+    178,
+    247
+   ],
+   "contexts": [
+    "\"Keyboard and mouse\": \"A keyboard, mouse or trackpad in games: the keys for Porthole's menu and the pointer lock, mouse speed, scroll direction.\",",
+    "\"Graphics, video and sound\": \"tv.fill\", \"Controllers\": \"gamecontroller.fill\", \"Controller menus and pointer\": \"cursorarrow.rays\", \"Keyboard and mouse\": \"keyboard.fill\",",
+    "if title == \"Keyboard and mouse\" {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed",
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3646"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "A keyboard, mouse or trackpad in games: the keys for Porthole's menu and the pointer lock, mouse speed, scroll direction.",
+   "lines": [
+    173
+   ],
+   "contexts": [
+    "\"Keyboard and mouse\": \"A keyboard, mouse or trackpad in games: the keys for Porthole's menu and the pointer lock, mouse speed, scroll direction.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3647"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Experimental",
+   "lines": [
+    186
+   ],
+   "contexts": [
+    "if option.info.localizedCaseInsensitiveContains(\"experimental\") { tags.append(\"Experimental\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3648"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "next start",
+   "lines": [
+    187
+   ],
+   "contexts": [
+    "if option.info.localizedCaseInsensitiveContains(\"next start\") || option.info.localizedCaseInsensitiveContains(\"next time\") { tags.append(\"Applies on the next start\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3649"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "next time",
+   "lines": [
+    187
+   ],
+   "contexts": [
+    "if option.info.localizedCaseInsensitiveContains(\"next start\") || option.info.localizedCaseInsensitiveContains(\"next time\") { tags.append(\"Applies on the next start\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3650"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Applies on the next start",
+   "lines": [
+    187
+   ],
+   "contexts": [
+    "if option.info.localizedCaseInsensitiveContains(\"next start\") || option.info.localizedCaseInsensitiveContains(\"next time\") { tags.append(\"Applies on the next start\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3651"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Switches of the game engine. Every option starts on Default, which leaves the engine as it is. Most apply the next time a game starts. Settings that have a page of their own, such as swap, video memory and resolution, are not repeated here.",
+   "lines": [
+    218
+   ],
+   "contexts": [
+    "Text(\"Switches of the game engine. Every option starts on Default, which leaves the engine as it is. Most apply the next time a game starts. Settings that have a page of their own, such as swap, video memory and resolution, are not repeated here.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3652"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Changed from default",
+   "lines": [
+    221
+   ],
+   "contexts": [
+    "ActionRow(id: SettingsSub.engineChanged.rowID, symbol: \"arrow.triangle.branch\", tint: changed == 0 ? Theme.textDim : Theme.warn, title: \"Changed from default\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3653"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Nothing is changed",
+   "lines": [
+    222
+   ],
+   "contexts": [
+    "subtitle: changed == 0 ? \"Nothing is changed\" : \"\\(changed) option\\(changed == 1 ? \"\" : \"s\") set\", detail: nil) { router.settingsSub = .engineChanged }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3654"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "\\(changed) option\\(changed == 1 ? ",
+   "lines": [
+    222
+   ],
+   "contexts": [
+    "subtitle: changed == 0 ? \"Nothing is changed\" : \"\\(changed) option\\(changed == 1 ? \"\" : \"s\") set\", detail: nil) { router.settingsSub = .engineChanged }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3655"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": ") set",
+   "lines": [
+    222
+   ],
+   "contexts": [
+    "subtitle: changed == 0 ? \"Nothing is changed\" : \"\\(changed) option\\(changed == 1 ? \"\" : \"s\") set\", detail: nil) { router.settingsSub = .engineChanged }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3656"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Groups",
+   "lines": [
+    224
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Groups\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3657"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "\\(group.options.count)",
+   "lines": [
+    228
+   ],
+   "contexts": [
+    "subtitle: EngineOptions.summaries[group.title], detail: n == 0 ? \"\\(group.options.count)\" : \"\\(n) changed\") { router.settingsSub = .engineGroup(group.title) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3658"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "\\(n) changed",
+   "lines": [
+    228
+   ],
+   "contexts": [
+    "subtitle: EngineOptions.summaries[group.title], detail: n == 0 ? \"\\(group.options.count)\" : \"\\(n) changed\") { router.settingsSub = .engineGroup(group.title) }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3659"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Keys for Porthole",
+   "lines": [
+    248
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Keys for Porthole\", note: \"Tap a row, then press the key you want (hold Ctrl, Alt, Shift or Cmd with it for a combination). Esc cancels. Ctrl+Alt+M and Ctrl+Alt+P always work as well, so a key you cannot press never locks you out.\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3660"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Tap a row, then press the key you want (hold Ctrl, Alt, Shift or Cmd with it for a combination). Esc cancels. Ctrl+Alt+M and Ctrl+Alt+P always work as well, so a key you cannot press never locks you out.",
+   "lines": [
+    248
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Keys for Porthole\", note: \"Tap a row, then press the key you want (hold Ctrl, Alt, Shift or Cmd with it for a combination). Esc cancels. Ctrl+Alt+M and Ctrl+Alt+P always work as well, so a key you cannot press never locks you out.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3661"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Open Porthole's menu in a game",
+   "lines": [
+    249
+   ],
+   "contexts": [
+    "KeybindRow(id: \"kb-menu\", symbol: \"line.3.horizontal.circle\", title: \"Open Porthole's menu in a game\", key: InputSettings.menuKeyKey, fallback: .defaultMenu)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3662"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Lock or free the pointer",
+   "lines": [
+    250
+   ],
+   "contexts": [
+    "KeybindRow(id: \"kb-lock\", symbol: \"lock.fill\", title: \"Lock or free the pointer\", key: InputSettings.lockKeyKey, fallback: .defaultLock)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3663"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Try it",
+   "lines": [
+    254
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Try it\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3664"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Test controller rumble",
+   "lines": [
+    255
+   ],
+   "contexts": [
+    "ActionRow(id: \"eo-rumble-test\", symbol: \"waveform\", title: \"Test controller rumble\", subtitle: rumbleMessage ?? \"Buzzes the left, then the right motor of the first controller\", chevron: false) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3665"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Buzzes the left, then the right motor of the first controller",
+   "lines": [
+    255
+   ],
+   "contexts": [
+    "ActionRow(id: \"eo-rumble-test\", symbol: \"waveform\", title: \"Test controller rumble\", subtitle: rumbleMessage ?? \"Buzzes the left, then the right motor of the first controller\", chevron: false) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3666"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Testing\\u{2026}",
+   "lines": [
+    256
+   ],
+   "contexts": [
+    "rumbleMessage = \"Testing\\u{2026}\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3667"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Every engine option is on its default.",
+   "lines": [
+    276
+   ],
+   "contexts": [
+    "Text(\"Every engine option is on its default.\").foregroundStyle(Theme.textDim).frame(maxWidth: .infinity).padding(.top, 30)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3668"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "These options are set to something other than the default. A game that stopped working after you changed one is the first place to look.",
+   "lines": [
+    278
+   ],
+   "contexts": [
+    "SettingsGroup(note: \"These options are set to something other than the default. A game that stopped working after you changed one is the first place to look.\") {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3669"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Put every option back to Default",
+   "lines": [
+    282
+   ],
+   "contexts": [
+    "ActionRow(id: \"eo-reset-all\", symbol: \"arrow.counterclockwise\", title: \"Put every option back to Default\", destructive: true, chevron: false) { confirmReset = true }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3670"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Put every engine option back to Default?",
+   "lines": [
+    287
+   ],
+   "contexts": [
+    ".confirm(\"Put every engine option back to Default?\", message: \"Only these engine options change. Your games and other settings are not touched.\", confirmTitle: \"Put back\", destructive: true, isPresented: $confirmReset) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3671"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Only these engine options change. Your games and other settings are not touched.",
+   "lines": [
+    287
+   ],
+   "contexts": [
+    ".confirm(\"Put every engine option back to Default?\", message: \"Only these engine options change. Your games and other settings are not touched.\", confirmTitle: \"Put back\", destructive: true, isPresented: $confirmReset) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3672"
+  },
+  {
+   "file": "app/Sources/UI/Settings/AdvancedSettingsPages.swift",
+   "text": "Put back",
+   "lines": [
+    287
+   ],
+   "contexts": [
+    ".confirm(\"Put every engine option back to Default?\", message: \"Only these engine options change. Your games and other settings are not touched.\", confirmTitle: \"Put back\", destructive: true, isPresented: $confirmReset) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3673"
+  },
+  {
+   "file": "app/Sources/UI/Settings/KeybindRows.swift",
+   "text": "Press the key now. Esc cancels.",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "subtitle: listening ? \"Press the key now. Esc cancels.\" : (GCKeyboard.coalesced == nil ? \"Connect a keyboard to choose a key\" : \"Tap, then press a key\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3674"
+  },
+  {
+   "file": "app/Sources/UI/Settings/KeybindRows.swift",
+   "text": "Connect a keyboard to choose a key",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "subtitle: listening ? \"Press the key now. Esc cancels.\" : (GCKeyboard.coalesced == nil ? \"Connect a keyboard to choose a key\" : \"Tap, then press a key\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3675"
+  },
+  {
+   "file": "app/Sources/UI/Settings/KeybindRows.swift",
+   "text": "Tap, then press a key",
+   "lines": [
+    25
+   ],
+   "contexts": [
+    "subtitle: listening ? \"Press the key now. Esc cancels.\" : (GCKeyboard.coalesced == nil ? \"Connect a keyboard to choose a key\" : \"Tap, then press a key\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3676"
+  },
+  {
+   "file": "app/Sources/UI/Settings/KeybindRows.swift",
+   "text": "Waiting\\u{2026}",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "detail: listening ? \"Waiting\\u{2026}\" : (bind?.label ?? \"No key\"), chevron: false) { listen() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3677"
+  },
+  {
+   "file": "app/Sources/UI/Settings/KeybindRows.swift",
+   "text": "No key",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "detail: listening ? \"Waiting\\u{2026}\" : (bind?.label ?? \"No key\"), chevron: false) { listen() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3678"
+  },
+  {
+   "file": "app/Sources/UI/Settings/KeybindRows.swift",
+   "text": "-default",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "ActionRow(id: id + \"-default\", symbol: \"arrow.uturn.backward\", title: \"Use the default (\\(fallback.label))\", chevron: false) { set(\"\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3679"
+  },
+  {
+   "file": "app/Sources/UI/Settings/KeybindRows.swift",
+   "text": "Use the default (\\(fallback.label))",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "ActionRow(id: id + \"-default\", symbol: \"arrow.uturn.backward\", title: \"Use the default (\\(fallback.label))\", chevron: false) { set(\"\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3680"
+  },
+  {
+   "file": "app/Sources/UI/Settings/KeybindRows.swift",
+   "text": "-off",
+   "lines": [
+    31
+   ],
+   "contexts": [
+    "ActionRow(id: id + \"-off\", symbol: \"xmark\", title: \"No key for this\", subtitle: \"Only the Ctrl+Alt chord works\", chevron: false) { set(\"none\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3681"
+  },
+  {
+   "file": "app/Sources/UI/Settings/KeybindRows.swift",
+   "text": "No key for this",
+   "lines": [
+    31
+   ],
+   "contexts": [
+    "ActionRow(id: id + \"-off\", symbol: \"xmark\", title: \"No key for this\", subtitle: \"Only the Ctrl+Alt chord works\", chevron: false) { set(\"none\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3682"
+  },
+  {
+   "file": "app/Sources/UI/Settings/KeybindRows.swift",
+   "text": "Only the Ctrl+Alt chord works",
+   "lines": [
+    31
+   ],
+   "contexts": [
+    "ActionRow(id: id + \"-off\", symbol: \"xmark\", title: \"No key for this\", subtitle: \"Only the Ctrl+Alt chord works\", chevron: false) { set(\"none\") }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3683"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": ".md",
+   "lines": [
+    23
+   ],
+   "contexts": [
+    "var keepsLayout: Bool { file.hasSuffix(\".md\") }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3684"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "Licence",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Licence\", detail: \"GNU General Public License, version 3 or later\", file: \"LICENSE\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3685"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "GNU General Public License, version 3 or later",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Licence\", detail: \"GNU General Public License, version 3 or later\", file: \"LICENSE\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3686"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "LICENSE-EXCEPTION.md",
+   "lines": [
+    40
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Additional permission\", detail: \"For Apple's Metal Shader Converter\", file: \"LICENSE-EXCEPTION.md\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3687"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "Additional permission",
+   "lines": [
+    40
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Additional permission\", detail: \"For Apple's Metal Shader Converter\", file: \"LICENSE-EXCEPTION.md\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3688"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "For Apple's Metal Shader Converter",
+   "lines": [
+    40
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Additional permission\", detail: \"For Apple's Metal Shader Converter\", file: \"LICENSE-EXCEPTION.md\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3689"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "Source code and how to rebuild",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Source code and how to rebuild\", detail: \"Where the source is, and the exact versions used\", file: \"SOURCE.md\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3690"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "Where the source is, and the exact versions used",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Source code and how to rebuild\", detail: \"Where the source is, and the exact versions used\", file: \"SOURCE.md\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3691"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "SOURCE.md",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Source code and how to rebuild\", detail: \"Where the source is, and the exact versions used\", file: \"SOURCE.md\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3692"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "Credits",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Credits\", detail: \"Who made what this app is built on\", file: \"CREDITS.md\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3693"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "Who made what this app is built on",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Credits\", detail: \"Who made what this app is built on\", file: \"CREDITS.md\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3694"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "CREDITS.md",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Credits\", detail: \"Who made what this app is built on\", file: \"CREDITS.md\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3695"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "Third-party components",
+   "lines": [
+    45
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Third-party components\", detail: \"Wine, FEX, DXMT, FFmpeg and the rest\", file: \"THIRD-PARTY-NOTICES.md\", folder: \"legal\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3696"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "Wine, FEX, DXMT, FFmpeg and the rest",
+   "lines": [
+    45
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Third-party components\", detail: \"Wine, FEX, DXMT, FFmpeg and the rest\", file: \"THIRD-PARTY-NOTICES.md\", folder: \"legal\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3697"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "THIRD-PARTY-NOTICES.md",
+   "lines": [
+    45
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Third-party components\", detail: \"Wine, FEX, DXMT, FFmpeg and the rest\", file: \"THIRD-PARTY-NOTICES.md\", folder: \"legal\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3698"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "StikJIT, idevice and StikDebug",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "LegalDocument(title: \"StikJIT, idevice and StikDebug\", detail: \"JIT support: what is included and where its source is\", file: \"StikJIT.md\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3699"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "JIT support: what is included and where its source is",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "LegalDocument(title: \"StikJIT, idevice and StikDebug\", detail: \"JIT support: what is included and where its source is\", file: \"StikJIT.md\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3700"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "StikJIT.md",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "LegalDocument(title: \"StikJIT, idevice and StikDebug\", detail: \"JIT support: what is included and where its source is\", file: \"StikJIT.md\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3701"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "MPL-2.0 (StikJIT)",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "LegalDocument(title: \"MPL-2.0 (StikJIT)\", detail: \"The licence of the JIT library\", file: \"MPL-2.0-StikJIT.txt\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3702"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "The licence of the JIT library",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "LegalDocument(title: \"MPL-2.0 (StikJIT)\", detail: \"The licence of the JIT library\", file: \"MPL-2.0-StikJIT.txt\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3703"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "MPL-2.0-StikJIT.txt",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "LegalDocument(title: \"MPL-2.0 (StikJIT)\", detail: \"The licence of the JIT library\", file: \"MPL-2.0-StikJIT.txt\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3704"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "Libraries inside StikJIT",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Libraries inside StikJIT\", detail: \"About 130 Rust libraries and their licences\", file: \"StikJIT-rust-libraries.txt\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3705"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "About 130 Rust libraries and their licences",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Libraries inside StikJIT\", detail: \"About 130 Rust libraries and their licences\", file: \"StikJIT-rust-libraries.txt\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3706"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "StikJIT-rust-libraries.txt",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Libraries inside StikJIT\", detail: \"About 130 Rust libraries and their licences\", file: \"StikJIT-rust-libraries.txt\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3707"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "Metal Shader Converter agreement",
+   "lines": [
+    51
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Metal Shader Converter agreement\", detail: \"Apple's terms for the converter library\", file: \"METAL-SHADER-CONVERTER-AGREEMENT.txt\", folder: \"d3d12\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3708"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "Apple's terms for the converter library",
+   "lines": [
+    51
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Metal Shader Converter agreement\", detail: \"Apple's terms for the converter library\", file: \"METAL-SHADER-CONVERTER-AGREEMENT.txt\", folder: \"d3d12\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3709"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "METAL-SHADER-CONVERTER-AGREEMENT.txt",
+   "lines": [
+    51
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Metal Shader Converter agreement\", detail: \"Apple's terms for the converter library\", file: \"METAL-SHADER-CONVERTER-AGREEMENT.txt\", folder: \"d3d12\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3710"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "Metal Shader Converter notice",
+   "lines": [
+    52
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Metal Shader Converter notice\", detail: nil, file: \"NOTICE.txt\", folder: \"d3d12\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3711"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "NOTICE.txt",
+   "lines": [
+    52
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Metal Shader Converter notice\", detail: nil, file: \"NOTICE.txt\", folder: \"d3d12\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3712"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "Metal Shader Converter headers licence",
+   "lines": [
+    53
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Metal Shader Converter headers licence\", detail: nil, file: \"LICENSE-metal-shader-converter-headers.txt\", folder: \"d3d12\"),"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3713"
+  },
+  {
+   "file": "app/Sources/UI/Settings/LicensesPage.swift",
+   "text": "LICENSE-metal-shader-converter-headers.txt",
+   "lines": [
+    53
+   ],
+   "contexts": [
+    "LegalDocument(title: \"Metal Shader Converter headers licence\", detail: nil, file: \"LICENSE-metal-shader-converter-headers.txt\", folder: \"d3d12\"),"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3714"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "Close",
+   "lines": [
+    28,
+    147
+   ],
+   "contexts": [
+    "PillButton(id: \"rn-close\", title: \"Close\", symbol: \"xmark\", action: close)",
+    "PillButton(id: \"sy-close\", title: \"Close\", symbol: \"xmark\", action: close)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3715"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "New",
+   "lines": [
+    38,
+    152
+   ],
+   "contexts": [
+    "section(\"New\", symbol: \"sparkles\", tint: Theme.accent, items: release.added)",
+    "section(\"New\", symbol: \"sparkles\", tint: Theme.accent, items: lines(\\.added))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3716"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "Changed",
+   "lines": [
+    39,
+    153
+   ],
+   "contexts": [
+    "section(\"Changed\", symbol: \"arrow.triangle.2.circlepath\", tint: .teal, items: release.changed)",
+    "section(\"Changed\", symbol: \"arrow.triangle.2.circlepath\", tint: .teal, items: lines(\\.changed))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3717"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "Fixed",
+   "lines": [
+    40,
+    154
+   ],
+   "contexts": [
+    "section(\"Fixed\", symbol: \"wrench.and.screwdriver.fill\", tint: Theme.good, items: release.fixed)",
+    "section(\"Fixed\", symbol: \"wrench.and.screwdriver.fill\", tint: Theme.good, items: lines(\\.fixed))"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3718"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "No notes were published for this version.",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "Text(\"No notes were published for this version.\").font(.subheadline).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3719"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "iOS \\(os) or later",
+   "lines": [
+    63
+   ],
+   "contexts": [
+    "if let os = release.minimumOS, !os.isEmpty { parts.append(\"iOS \\(os) or later\") }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3720"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "A published version",
+   "lines": [
+    64
+   ],
+   "contexts": [
+    "return parts.isEmpty ? \"A published version\" : parts.joined(separator: \" \\u{00B7} \")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3721"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "This is the version you have",
+   "lines": [
+    69
+   ],
+   "contexts": [
+    "return Label(installed ? \"This is the version you have\" : \"Older than the version you have\", systemImage: installed ? \"checkmark.circle.fill\" : \"clock.arrow.circlepath\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3722"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "Older than the version you have",
+   "lines": [
+    69
+   ],
+   "contexts": [
+    "return Label(installed ? \"This is the version you have\" : \"Older than the version you have\", systemImage: installed ? \"checkmark.circle.fill\" : \"clock.arrow.circlepath\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3723"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "Download \\(release.version)",
+   "lines": [
+    96
+   ],
+   "contexts": [
+    "if !canSign { return \"Download \\(release.version)\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3724"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "Install \\(release.version) again",
+   "lines": [
+    97
+   ],
+   "contexts": [
+    "if isInstalled { return \"Install \\(release.version) again\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3725"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "Go back to \\(release.version)",
+   "lines": [
+    98
+   ],
+   "contexts": [
+    "if isOlder { return \"Go back to \\(release.version)\" }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3726"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "Install \\(release.version)",
+   "lines": [
+    99
+   ],
+   "contexts": [
+    "return \"Install \\(release.version)\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3727"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "This is older than the version you have. Your games and settings are kept, but an older version may not understand data a newer one saved.",
+   "lines": [
+    105
+   ],
+   "contexts": [
+    "Text(\"This is older than the version you have. Your games and settings are kept, but an older version may not understand data a newer one saved.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3728"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "An update is already running.",
+   "lines": [
+    108,
+    176
+   ],
+   "contexts": [
+    "if busy { Text(\"An update is already running.\").font(.footnote).foregroundStyle(Theme.textDim) }"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3729"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "Since your version",
+   "lines": [
+    142
+   ],
+   "contexts": [
+    "Text(\"Since your version\").font(.system(size: 26, weight: .heavy, design: .rounded)).foregroundStyle(Theme.text).lineLimit(1).minimumScaleFactor(0.7)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3730"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "\\(installed) \\u{2192} \\(latest?.title ?? ",
+   "lines": [
+    143
+   ],
+   "contexts": [
+    "Text(\"\\(installed) \\u{2192} \\(latest?.title ?? \"?\") \\u{00B7} \\(releases.count) version\\(releases.count == 1 ? \"\" : \"s\")\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3731"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": ") \\u{00B7} \\(releases.count) version\\(releases.count == 1 ? ",
+   "lines": [
+    143
+   ],
+   "contexts": [
+    "Text(\"\\(installed) \\u{2192} \\(latest?.title ?? \"?\") \\u{00B7} \\(releases.count) version\\(releases.count == 1 ? \"\" : \"s\")\")"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3732"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "These versions were published without notes. Their one-line summaries are below.",
+   "lines": [
+    156
+   ],
+   "contexts": [
+    "Text(\"These versions were published without notes. Their one-line summaries are below.\").font(.subheadline).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3733"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "Version by version",
+   "lines": [
+    159
+   ],
+   "contexts": [
+    "Label(\"Version by version\", systemImage: \"list.bullet\").font(.system(size: 15, weight: .heavy, design: .rounded)).foregroundStyle(Theme.textDim)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3734"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "Update to \\(latest?.version ?? ",
+   "lines": [
+    177
+   ],
+   "contexts": [
+    "PillButton(id: \"sy-install\", title: canSign ? \"Update to \\(latest?.version ?? \"\")\" : \"Download \\(latest?.version ?? \"\")\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3735"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "Download \\(latest?.version ?? ",
+   "lines": [
+    177
+   ],
+   "contexts": [
+    "PillButton(id: \"sy-install\", title: canSign ? \"Update to \\(latest?.version ?? \"\")\" : \"Download \\(latest?.version ?? \"\")\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3736"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReleaseNotesSheet.swift",
+   "text": "\\(title) \\u{00B7} \\(items.count)",
+   "lines": [
+    194
+   ],
+   "contexts": [
+    "Label(\"\\(title) \\u{00B7} \\(items.count)\", systemImage: symbol).font(.system(size: 15, weight: .heavy, design: .rounded)).foregroundStyle(tint)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3737"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Report a problem",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "PageScaffold(title: \"Report a problem\", symbol: \"exclamationmark.bubble.fill\", subtitle: \"Send the developer what went wrong\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3738"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Send the developer what went wrong",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "PageScaffold(title: \"Report a problem\", symbol: \"exclamationmark.bubble.fill\", subtitle: \"Send the developer what went wrong\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3739"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "My reports",
+   "lines": [
+    30
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"My reports\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3740"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "(no description)",
+   "lines": [
+    32
+   ],
+   "contexts": [
+    "RowBase(id: \"rp-e-\\(entry.id)\", symbol: symbol(entry), tint: tint(entry), title: entry.description.isEmpty ? \"(no description)\" : entry.description,"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3741"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Check for answers",
+   "lines": [
+    40
+   ],
+   "contexts": [
+    "ActionRow(id: \"rp-refresh\", symbol: \"arrow.clockwise\", title: \"Check for answers\", chevron: false) { Task { await tracker.refresh(); tracker.markSeen() } }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3742"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Tap a report to read the whole answer, or to withdraw it.",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "Text(\"Tap a report to read the whole answer, or to withdraw it.\").font(.footnote).foregroundStyle(Theme.textDim).padding(.horizontal, 6)"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3743"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Porthole makes a small text file with what a person fixing this needs. It is not sent anywhere: you choose where it goes.",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "Text(\"Porthole makes a small text file with what a person fixing this needs. It is not sent anywhere: you choose where it goes.\")"
+   ],
+   "reasons": [
+    "swiftui-direct"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3744"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "A game ended unexpectedly",
+   "lines": [
+    47
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"A game ended unexpectedly\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3745"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Include the crash of \\(crash.record.game)",
+   "lines": [
+    48
+   ],
+   "contexts": [
+    "ToggleRow(id: \"rp-crash\", symbol: \"exclamationmark.triangle.fill\", tint: Theme.warn, title: \"Include the crash of \\(crash.record.game)\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3746"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Found when Porthole opened again, \\(crash.record.started.formatted(date: .abbreviated, time: .shortened)). Its log was kept, so the report has the run that ended and not the launch that followed.",
+   "lines": [
+    49
+   ],
+   "contexts": [
+    "subtitle: \"Found when Porthole opened again, \\(crash.record.started.formatted(date: .abbreviated, time: .shortened)). Its log was kept, so the report has the run that ended and not the launch that followed.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3747"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "What went wrong",
+   "lines": [
+    53
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"What went wrong\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3748"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "In a sentence",
+   "lines": [
+    54
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"rp-note\", symbol: \"text.bubble.fill\", title: \"In a sentence\", placeholder: \"For example: the game closes after the logo\", text: $note)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3749"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "For example: the game closes after the logo",
+   "lines": [
+    54
+   ],
+   "contexts": [
+    "TextFieldRow(id: \"rp-note\", symbol: \"text.bubble.fill\", title: \"In a sentence\", placeholder: \"For example: the game closes after the logo\", text: $note)"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3750"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "What is in the file",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"What is in the file\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3751"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "The whole log of the run (recommended)",
+   "lines": [
+    57
+   ],
+   "contexts": [
+    "ToggleRow(id: \"rp-log\", symbol: \"doc.text.fill\", title: \"The whole log of the run (recommended)\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3752"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Without it a problem usually cannot be found. The whole run is needed: the cause is often far from the last line.",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "subtitle: \"Without it a problem usually cannot be found. The whole run is needed: the cause is often far from the last line.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3753"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "The log says what the app and the engine did, from the start of the run to its end. It is a few megabytes and is sent packed. Folder names inside the app, your account names, e-mail addresses and public IP addresses are replaced before it is written or sent. Fingerprints and technical lines stay, because they are what is looked at.",
+   "lines": [
+    59
+   ],
+   "contexts": [
+    "info: \"The log says what the app and the engine did, from the start of the run to its end. It is a few megabytes and is sent packed. Folder names inside the app, your account names, e-mail addresses and public IP addresses are replaced before it is written or sent. Fingerprints and technical lines s"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3754"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Look at exactly what would be shared",
+   "lines": [
+    61
+   ],
+   "contexts": [
+    "ActionRow(id: \"rp-preview\", symbol: \"eye.fill\", title: \"Look at exactly what would be shared\", chevron: true) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3755"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Send it",
+   "lines": [
+    65
+   ],
+   "contexts": [
+    "SettingsGroup(title: \"Send it\") {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3756"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Preparing\\u{2026}",
+   "lines": [
+    66
+   ],
+   "contexts": [
+    "ActionRow(id: \"rp-share\", symbol: \"square.and.arrow.up\", title: building ? \"Preparing\\u{2026}\" : \"Save or share the file\", prominent: true) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3757"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Save or share the file",
+   "lines": [
+    66
+   ],
+   "contexts": [
+    "ActionRow(id: \"rp-share\", symbol: \"square.and.arrow.up\", title: building ? \"Preparing\\u{2026}\" : \"Save or share the file\", prominent: true) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3758"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Sending\\u{2026}",
+   "lines": [
+    78
+   ],
+   "contexts": [
+    "ActionRow(id: \"rp-send\", symbol: \"paperplane.fill\", title: sending ? \"Sending\\u{2026}\" : \"Send it to Porthole's server\", subtitle: \"Private: only the maintainer can read it\", chevron: false) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3759"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Send it to Porthole's server",
+   "lines": [
+    78
+   ],
+   "contexts": [
+    "ActionRow(id: \"rp-send\", symbol: \"paperplane.fill\", title: sending ? \"Sending\\u{2026}\" : \"Send it to Porthole's server\", subtitle: \"Private: only the maintainer can read it\", chevron: false) {"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3760"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Private: only the maintainer can read it",
+   "lines": [
+    78
+   ],
+   "contexts": [
+    "ActionRow(id: \"rp-send\", symbol: \"paperplane.fill\", title: sending ? \"Sending\\u{2026}\" : \"Send it to Porthole's server\", subtitle: \"Private: only the maintainer can read it\", chevron: false) {"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3761"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Open an issue on GitHub",
+   "lines": [
+    82
+   ],
+   "contexts": [
+    "ActionRow(id: \"rp-github\", symbol: \"arrow.up.right.square\", title: \"Open an issue on GitHub\", subtitle: \"Attach the file to it\", chevron: false) { UIApplication.shared.open(Self.issues) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3762"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Attach the file to it",
+   "lines": [
+    82
+   ],
+   "contexts": [
+    "ActionRow(id: \"rp-github\", symbol: \"arrow.up.right.square\", title: \"Open an issue on GitHub\", subtitle: \"Attach the file to it\", chevron: false) { UIApplication.shared.open(Self.issues) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3763"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Ask on Discord",
+   "lines": [
+    83
+   ],
+   "contexts": [
+    "ActionRow(id: \"rp-discord\", symbol: \"bubble.left.and.bubble.right.fill\", title: \"Ask on Discord\", subtitle: \"There are support channels\", chevron: false) { UIApplication.shared.open(Self.discord) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3764"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "There are support channels",
+   "lines": [
+    83
+   ],
+   "contexts": [
+    "ActionRow(id: \"rp-discord\", symbol: \"bubble.left.and.bubble.right.fill\", title: \"Ask on Discord\", subtitle: \"There are support channels\", chevron: false) { UIApplication.shared.open(Self.discord) }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3765"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Send this report?",
+   "lines": [
+    94
+   ],
+   "contexts": [
+    ".confirm(\"Send this report?\", message: \"It goes to Porthole's server and is private: only the maintainer can read it, and you can follow what happens to it here. What is in it is what \\u{201C}Look at exactly what would be shared\\u{201D} shows.\","
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3766"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "It goes to Porthole's server and is private: only the maintainer can read it, and you can follow what happens to it here. What is in it is what \\u{201C}Look at exactly what would be shared\\u{201D} shows.",
+   "lines": [
+    94
+   ],
+   "contexts": [
+    ".confirm(\"Send this report?\", message: \"It goes to Porthole's server and is private: only the maintainer can read it, and you can follow what happens to it here. What is in it is what \\u{201C}Look at exactly what would be shared\\u{201D} shows.\","
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3767"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Send",
+   "lines": [
+    95
+   ],
+   "contexts": [
+    "confirmTitle: \"Send\", isPresented: $confirmSend) { send() }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3768"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "The report",
+   "lines": [
+    102
+   ],
+   "contexts": [
+    "TextReaderSheet(title: \"The report\", text: preview ?? \"\", monospaced: true, scope: readerScope) { preview = nil }"
+   ],
+   "reasons": [
+    "named-param-string-component"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3769"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Sent. Its status shows under My reports; the maintainer may add a note.",
+   "lines": [
+    118
+   ],
+   "contexts": [
+    "sentNote = \"Sent. Its status shows under My reports; the maintainer may add a note.\""
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3770"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Could not send it: \\(error.localizedDescription)",
+   "lines": [
+    121
+   ],
+   "contexts": [
+    "} catch { sentNote = \"Could not send it: \\(error.localizedDescription)\" }"
+   ],
+   "reasons": [
+    "group:ui-residual-reviewed"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3771"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Fixed",
+   "lines": [
+    128,
+    137,
+    153
+   ],
+   "contexts": [
+    "case \"fixed\": e.fixedIn.isEmpty ? \"Fixed\" : \"Fixed in \\(e.fixedIn)\"",
+    "let base = e.status == \"open\" ? \"Waiting to be looked at\" : e.status == \"reviewed\" ? \"Looked at\" : \"Fixed\"",
+    "case \"fixed\": entry.fixedIn.isEmpty ? \"Fixed\" : \"Fixed in \\(entry.fixedIn)\""
+   ],
+   "reasons": [
+    "enclosing-visible-func",
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3772"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Fixed in \\(e.fixedIn)",
+   "lines": [
+    128
+   ],
+   "contexts": [
+    "case \"fixed\": e.fixedIn.isEmpty ? \"Fixed\" : \"Fixed in \\(e.fixedIn)\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u3773"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Reviewed",
+   "lines": [
+    129,
+    154
+   ],
+   "contexts": [
+    "case \"reviewed\": \"Reviewed\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3774"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "Open",
+   "lines": [
+    130
+   ],
+   "contexts": [
+    "default: \"Open\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3775"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "fixed",
+   "lines": [
+    133,
+    134,
+    150
+   ],
+   "contexts": [
+    "private func tint(_ e: ProblemEntry) -> Color { e.status == \"fixed\" ? Theme.good : e.status == \"reviewed\" ? .blue : Theme.warn }",
+    "private func symbol(_ e: ProblemEntry) -> String { e.status == \"fixed\" ? \"checkmark.seal.fill\" : e.status == \"reviewed\" ? \"eye.fill\" : \"hourglass\" }",
+    "private var tint: Color { entry.status == \"fixed\" ? Theme.good : entry.status == \"reviewed\" ? .blue : Theme.warn }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3776"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "reviewed",
+   "lines": [
+    133,
+    134,
+    137,
+    150
+   ],
+   "contexts": [
+    "private func tint(_ e: ProblemEntry) -> Color { e.status == \"fixed\" ? Theme.good : e.status == \"reviewed\" ? .blue : Theme.warn }",
+    "private func symbol(_ e: ProblemEntry) -> String { e.status == \"fixed\" ? \"checkmark.seal.fill\" : e.status == \"reviewed\" ? \"eye.fill\" : \"hourglass\" }",
+    "let base = e.status == \"open\" ? \"Waiting to be looked at\" : e.status == \"reviewed\" ? \"Looked at\" : \"Fixed\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3777"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "eye.fill",
+   "lines": [
+    134
+   ],
+   "contexts": [
+    "private func symbol(_ e: ProblemEntry) -> String { e.status == \"fixed\" ? \"checkmark.seal.fill\" : e.status == \"reviewed\" ? \"eye.fill\" : \"hourglass\" }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3778"
+  },
+  {
+   "file": "app/Sources/UI/Settings/ReportProblemSheet.swift",
+   "text": "checkmark.seal.fill",
+   "lines": [
+    134
+   ],
+   "contexts": [
+    "private func symbol(_ e: ProblemEntry) -> String { e.status == \"fixed\" ? \"checkmark.seal.fill\" : e.status == \"reviewed\" ? \"eye.fill\" : \"hourglass\" }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u3779"
+  }
+ ]
+}

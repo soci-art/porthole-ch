@@ -1,0 +1,2892 @@
+{
+ "batch": 2,
+ "units": [
+  {
+   "file": "app/Runtime/GPUCards.swift",
+   "text": "\\(key)=\\\"\\(target)\\\"",
+   "lines": [
+    145
+   ],
+   "contexts": [
+    "lines[i] = \"\\(key)=\\\"\\(target)\\\"\" + (cr ? \"\\r\" : \"\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0180"
+  },
+  {
+   "file": "app/Runtime/GameRecommendations.swift",
+   "text": "AVX \\(avx ? ",
+   "lines": [
+    101
+   ],
+   "contexts": [
+    "if let avx { parts.append(\"AVX \\(avx ? \"on\" : \"off\")\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0181"
+  },
+  {
+   "file": "app/Runtime/GameRecommendations.swift",
+   "text": "Wine's C++ runtime \\(wineVCRT ? ",
+   "lines": [
+    104
+   ],
+   "contexts": [
+    "if let wineVCRT { parts.append(\"Wine's C++ runtime \\(wineVCRT ? \"on\" : \"off\")\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0182"
+  },
+  {
+   "file": "app/Runtime/GameRecommendations.swift",
+   "text": "fast synchronization off",
+   "lines": [
+    105
+   ],
+   "contexts": [
+    "if fastSync == false { parts.append(\"fast synchronization off\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0183"
+  },
+  {
+   "file": "app/Runtime/GameRecommendations.swift",
+   "text": "fast semaphore waits \\(semaphoreFastPath ? ",
+   "lines": [
+    106
+   ],
+   "contexts": [
+    "if let semaphoreFastPath { parts.append(\"fast semaphore waits \\(semaphoreFastPath ? \"on\" : \"off\")\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0184"
+  },
+  {
+   "file": "app/Runtime/GameRecommendations.swift",
+   "text": "display maximum",
+   "lines": [
+    108
+   ],
+   "contexts": [
+    "let label = [1: \"60\", 3: \"30\", 4: \"40\", 0: \"display maximum\", 2: \"uncapped\"][fpsMode] ?? \"\\(fpsMode)\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0185"
+  },
+  {
+   "file": "app/Runtime/GameRecommendations.swift",
+   "text": "\\(fpsMode)",
+   "lines": [
+    108
+   ],
+   "contexts": [
+    "let label = [1: \"60\", 3: \"30\", 4: \"40\", 0: \"display maximum\", 2: \"uncapped\"][fpsMode] ?? \"\\(fpsMode)\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0186"
+  },
+  {
+   "file": "app/Runtime/GameRecommendations.swift",
+   "text": "FPS limit \\(label)",
+   "lines": [
+    109
+   ],
+   "contexts": [
+    "parts.append(\"FPS limit \\(label)\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0187"
+  },
+  {
+   "file": "app/Runtime/GameRecommendations.swift",
+   "text": "this screen's shape at 720 lines",
+   "lines": [
+    111
+   ],
+   "contexts": [
+    "if let resolution { parts.append(resolution == Self.screen720 ? \"this screen's shape at 720 lines\" : resolution) }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0188"
+  },
+  {
+   "file": "app/Runtime/GameRecommendations.swift",
+   "text": "starts in the Wine desktop",
+   "lines": [
+    112
+   ],
+   "contexts": [
+    "if launchMode == \"desktop\" { parts.append(\"starts in the Wine desktop\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0189"
+  },
+  {
+   "file": "app/Runtime/GameRecommendations.swift",
+   "text": "Windows services first",
+   "lines": [
+    113
+   ],
+   "contexts": [
+    "if startServices == true { parts.append(\"Windows services first\") }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0190"
+  },
+  {
+   "file": "app/Runtime/JITPoolMeter.swift",
+   "text": "JIT FULL \\(totalMB) MB",
+   "lines": [
+    85
+   ],
+   "contexts": [
+    "if s.exhausted > 0 { return \"JIT FULL \\(totalMB) MB\" + (s.holes.isEmpty ? \"\" : \" (split)\") }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0191"
+  },
+  {
+   "file": "app/Runtime/JITPoolMeter.swift",
+   "text": " (split)",
+   "lines": [
+    85
+   ],
+   "contexts": [
+    "if s.exhausted > 0 { return \"JIT FULL \\(totalMB) MB\" + (s.holes.isEmpty ? \"\" : \" (split)\") }"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0192"
+  },
+  {
+   "file": "app/Runtime/JITPoolMeter.swift",
+   "text": "JIT \\(usedMB)/\\(totalMB) MB",
+   "lines": [
+    86
+   ],
+   "contexts": [
+    "return \"JIT \\(usedMB)/\\(totalMB) MB\" + (notes.isEmpty ? \"\" : \" (\" + notes.joined(separator: \", \") + \")\")"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0193"
+  },
+  {
+   "file": "app/Runtime/LogStore.swift",
+   "text": "ERR",
+   "lines": [
+    66
+   ],
+   "contexts": [
+    "case error = \"ERR\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0194"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "From \\(source)",
+   "lines": [
+    274
+   ],
+   "contexts": [
+    "\"From \\(source)\" + (f.firstTime.map { \", \\($0)\" } ?? \"\") + (f.lastTime.map { \" to \\($0)\" } ?? \"\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0195"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": " to \\($0)",
+   "lines": [
+    274
+   ],
+   "contexts": [
+    "\"From \\(source)\" + (f.firstTime.map { \", \\($0)\" } ?? \"\") + (f.lastTime.map { \" to \\($0)\" } ?? \"\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0196"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": ". The full log has the details; this lists what usually explains a problem.",
+   "lines": [
+    275
+   ],
+   "contexts": [
+    "+ \". The full log has the details; this lists what usually explains a problem.\", \"\"]"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0197"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "Program: \\(game)",
+   "lines": [
+    276
+   ],
+   "contexts": [
+    "if let game = f.game { out.append(\"Program: \\(game)\" + (f.dock.isEmpty ? \"\" : \" (Steam, through Madeira Dock)\")) }"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0198"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": " (Steam, through Madeira Dock)",
+   "lines": [
+    276
+   ],
+   "contexts": [
+    "if let game = f.game { out.append(\"Program: \\(game)\" + (f.dock.isEmpty ? \"\" : \" (Steam, through Madeira Dock)\")) }"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0199"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "Programs started: ",
+   "lines": [
+    282
+   ],
+   "contexts": [
+    "out.append(\"Programs started: \" + counts.map { $0.1 > 1 ? \"\\($0.0) (\\($0.1)x)\" : $0.0 }.joined(separator: \", \"))"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0200"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "\\($0.0) (\\($0.1)x)",
+   "lines": [
+    282
+   ],
+   "contexts": [
+    "out.append(\"Programs started: \" + counts.map { $0.1 > 1 ? \"\\($0.0) (\\($0.1)x)\" : $0.0 }.joined(separator: \", \"))"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0201"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "The JIT pool could not be allocated, so Wine was not started. See the JIT pool lines in the full log for the reason.",
+   "lines": [
+    287
+   ],
+   "contexts": [
+    "problems.append(\"The JIT pool could not be allocated, so Wine was not started. See the JIT pool lines in the full log for the reason.\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0202"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "A 32-bit program could not reserve its 4 GB guest-memory window. See the [wow-window] lines in the full log for the reservation failure.",
+   "lines": [
+    290
+   ],
+   "contexts": [
+    "problems.append(\"A 32-bit program could not reserve its 4 GB guest-memory window. See the [wow-window] lines in the full log for the reservation failure.\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0203"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "The JIT pool (the memory games' code runs from) got \\(mb) MB",
+   "lines": [
+    293
+   ],
+   "contexts": [
+    "problems.append(\"The JIT pool (the memory games' code runs from) got \\(mb) MB\""
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0204"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": " instead of \\($0) MB",
+   "lines": [
+    294
+   ],
+   "contexts": [
+    "+ (f.poolWantedMB.map { \" instead of \\($0) MB\" } ?? \"\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0205"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": ": iPadOS had no larger free space at launch. Big games may run out of it.",
+   "lines": [
+    295
+   ],
+   "contexts": [
+    "+ \": iPadOS had no larger free space at launch. Big games may run out of it.\""
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0206"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": " Relaunching Madeira can give a bigger one; `pool-split = 1` in the game's config lets Madeira join two free spaces.",
+   "lines": [
+    296
+   ],
+   "contexts": [
+    "+ \" Relaunching Madeira can give a bigger one; `pool-split = 1` in the game's config lets Madeira join two free spaces.\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0207"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "The JIT pool ran out \\(f.exhausted)x",
+   "lines": [
+    299
+   ],
+   "contexts": [
+    "problems.append(\"The JIT pool ran out \\(f.exhausted)x\" + (f.exhaustedWant > 0 ? \" (largest request \\(mb(f.exhaustedWant)) MB)\" : \"\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0208"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": " (largest request \\(mb(f.exhaustedWant)) MB)",
+   "lines": [
+    299
+   ],
+   "contexts": [
+    "problems.append(\"The JIT pool ran out \\(f.exhausted)x\" + (f.exhaustedWant > 0 ? \" (largest request \\(mb(f.exhaustedWant)) MB)\" : \"\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0209"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": ": a DLL could not be loaded, and the program usually stops right after.",
+   "lines": [
+    300
+   ],
+   "contexts": [
+    "+ \": a DLL could not be loaded, and the program usually stops right after.\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0210"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "\\(m.name) could not be loaded: out of memory",
+   "lines": [
+    303
+   ],
+   "contexts": [
+    "problems.append(\"\\(m.name) could not be loaded: out of memory\" + (m.program.map { \" (in \\($0))\" } ?? \"\") + \".\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0211"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": " (in \\($0))",
+   "lines": [
+    303
+   ],
+   "contexts": [
+    "problems.append(\"\\(m.name) could not be loaded: out of memory\" + (m.program.map { \" (in \\($0))\" } ?? \"\") + \".\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0212"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "The program stopped with Windows error \\(report).",
+   "lines": [
+    305
+   ],
+   "contexts": [
+    "if let report = f.exitReport { problems.append(\"The program stopped with Windows error \\(report).\") }"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0213"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "The game started Steam and closed itself: it only runs when Steam starts it. Start it with Madeira Dock (Game details > Steam > Start with).",
+   "lines": [
+    307
+   ],
+   "contexts": [
+    "problems.append(\"The game started Steam and closed itself: it only runs when Steam starts it. Start it with Madeira Dock (Game details > Steam > Start with).\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0214"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "\\(crash.program ?? ",
+   "lines": [
+    310
+   ],
+   "contexts": [
+    "problems.append(\"\\(crash.program ?? \"A program\") crashed: \\(crash.what) at address \\(crash.address).\""
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0215"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": ") crashed: \\(crash.what) at address \\(crash.address).",
+   "lines": [
+    310
+   ],
+   "contexts": [
+    "problems.append(\"\\(crash.program ?? \"A program\") crashed: \\(crash.what) at address \\(crash.address).\""
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0216"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": " Searching the address with the game's name often finds a known fix.",
+   "lines": [
+    311
+   ],
+   "contexts": [
+    "+ \" Searching the address with the game's name often finds a known fix.\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0217"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": " The last program started was \\($0.image).",
+   "lines": [
+    314
+   ],
+   "contexts": [
+    "let started = f.processes.last.map { \" The last program started was \\($0.image).\" } ?? \"\""
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0218"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "Madeira closed: iPadOS refused to run a program's code. Madeira can start only one 32-bit program",
+   "lines": [
+    315
+   ],
+   "contexts": [
+    "problems.append(\"Madeira closed: iPadOS refused to run a program's code. Madeira can start only one 32-bit program\""
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0219"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": " per session, so this usually means a launcher started the game.\\(started)",
+   "lines": [
+    316
+   ],
+   "contexts": [
+    "+ \" per session, so this usually means a launcher started the game.\\(started)\""
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0220"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": " For a Steam game, pick the game's own program in Game details > Steam > Steam starts.",
+   "lines": [
+    317
+   ],
+   "contexts": [
+    "+ \" For a Steam game, pick the game's own program in Game details > Steam > Steam starts.\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0221"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "Steam starts: the chosen program was not put in place (\\(why)), so Steam started its own.",
+   "lines": [
+    320
+   ],
+   "contexts": [
+    "problems.append(\"Steam starts: the chosen program was not put in place (\\(why)), so Steam started its own.\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0222"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "Unhandled exception: \\($0)",
+   "lines": [
+    322
+   ],
+   "contexts": [
+    "problems += f.unhandled.map { \"Unhandled exception: \\($0)\" }"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0223"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "Madeira Dock: \\(words)",
+   "lines": [
+    323
+   ],
+   "contexts": [
+    "if let words = dockWords(f.dock) { problems.append(\"Madeira Dock: \\(words)\") }"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0224"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "Problems found: none of the known signs.",
+   "lines": [
+    325
+   ],
+   "contexts": [
+    "out.append(problems.isEmpty ? \"Problems found: none of the known signs.\" : \"Problems found:\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0225"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "Problems found:",
+   "lines": [
+    325
+   ],
+   "contexts": [
+    "out.append(problems.isEmpty ? \"Problems found: none of the known signs.\" : \"Problems found:\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0226"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "How it ended:",
+   "lines": [
+    331
+   ],
+   "contexts": [
+    "out.append(\"How it ended:\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0227"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "exit code 0 (normal)",
+   "lines": [
+    334
+   ],
+   "contexts": [
+    "let words = code == 0 ? \"exit code 0 (normal)\" : code >= 0xC0000000"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0228"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "Windows error 0x%08X",
+   "lines": [
+    335
+   ],
+   "contexts": [
+    "? String(format: \"Windows error 0x%08X\", code) + (LogSummary.errorMeanings[code].map { \" (\\($0))\" } ?? \"\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0229"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "exit code \\(code)",
+   "lines": [
+    336
+   ],
+   "contexts": [
+    ": \"exit code \\(code)\""
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0230"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "  \\(p.image) ended itself with \\(words)",
+   "lines": [
+    337
+   ],
+   "contexts": [
+    "out.append(\"  \\(p.image) ended itself with \\(words)\" + (p.endedAt.map { \" around \\($0)\" } ?? \"\"))"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0231"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": " around \\($0)",
+   "lines": [
+    337
+   ],
+   "contexts": [
+    "out.append(\"  \\(p.image) ended itself with \\(words)\" + (p.endedAt.map { \" around \\($0)\" } ?? \"\"))"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0232"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "  Quit game was pressed at \\(asked)",
+   "lines": [
+    339
+   ],
+   "contexts": [
+    "if let asked = f.quitAsked { out.append(\"  Quit game was pressed at \\(asked)\") }"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0233"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "  Madeira was force-closed",
+   "lines": [
+    340
+   ],
+   "contexts": [
+    "if f.forceClosed { out.append(\"  Madeira was force-closed\") }"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0234"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "Missing DLLs: none that matter",
+   "lines": [
+    346
+   ],
+   "contexts": [
+    "out.append(\"Missing DLLs: none that matter\" + (f.harmlessMissing > 0 ? \" (\\(f.harmlessMissing) known harmless ones skipped).\" : \".\"))"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0235"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": " (\\(f.harmlessMissing) known harmless ones skipped).",
+   "lines": [
+    346
+   ],
+   "contexts": [
+    "out.append(\"Missing DLLs: none that matter\" + (f.harmlessMissing > 0 ? \" (\\(f.harmlessMissing) known harmless ones skipped).\" : \".\"))"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0236"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "Missing DLLs (may be harmless: programs often look for optional ones; \\(f.harmlessMissing) known harmless ones skipped):",
+   "lines": [
+    348
+   ],
+   "contexts": [
+    "out.append(\"Missing DLLs (may be harmless: programs often look for optional ones; \\(f.harmlessMissing) known harmless ones skipped):\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0237"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "  \\($0.name)",
+   "lines": [
+    350
+   ],
+   "contexts": [
+    "\"  \\($0.name)\" + ($0.status == \"c000007b\" ? \" (wrong architecture)\" : \"\") + ($0.program.map { \" - \\($0)\" } ?? \"\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0238"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": " (wrong architecture)",
+   "lines": [
+    350
+   ],
+   "contexts": [
+    "\"  \\($0.name)\" + ($0.status == \"c000007b\" ? \" (wrong architecture)\" : \"\") + ($0.program.map { \" - \\($0)\" } ?? \"\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0239"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "  ... and \\(other.count - 20) more",
+   "lines": [
+    352
+   ],
+   "contexts": [
+    "if other.count > 20 { out.append(\"  ... and \\(other.count - 20) more\") }"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0240"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "size not logged",
+   "lines": [
+    357
+   ],
+   "contexts": [
+    "var pool = \"JIT pool: \" + (f.poolMB.map { \"\\($0) MB\" } ?? \"size not logged\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0241"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": ", peak use \\(mb(f.poolPeak)) MB",
+   "lines": [
+    358
+   ],
+   "contexts": [
+    "if f.poolPeak > 0 { pool += \", peak use \\(mb(f.poolPeak)) MB\" + (f.poolTotal > 0 ? \" of \\(mb(f.poolTotal)) MB\" : \"\") }"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0242"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": " of \\(mb(f.poolTotal)) MB",
+   "lines": [
+    358
+   ],
+   "contexts": [
+    "if f.poolPeak > 0 { pool += \", peak use \\(mb(f.poolPeak)) MB\" + (f.poolTotal > 0 ? \" of \\(mb(f.poolTotal)) MB\" : \"\") }"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0243"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": ", largest code cache \\(mb(tail)) MB",
+   "lines": [
+    359
+   ],
+   "contexts": [
+    "if let tail = f.tailGrants.max() { pool += \", largest code cache \\(mb(tail)) MB\" }"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0244"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "Steam launch: ",
+   "lines": [
+    363
+   ],
+   "contexts": [
+    "out.append(\"Steam launch: \" + (launch == \"0\" ? \"accepted\" : \"refused, error \\(launch)\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0245"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "refused, error \\(launch)",
+   "lines": [
+    363
+   ],
+   "contexts": [
+    "out.append(\"Steam launch: \" + (launch == \"0\" ? \"accepted\" : \"refused, error \\(launch)\")"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0246"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": ", Madeira Dock result \\($0)",
+   "lines": [
+    364
+   ],
+   "contexts": [
+    "+ (f.dock[\"probe-result\"].map { \", Madeira Dock result \\($0)\" } ?? \"\"))"
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0247"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "a crash: the program used memory it may not",
+   "lines": [
+    421
+   ],
+   "contexts": [
+    "0xC0000005: \"a crash: the program used memory it may not\","
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0248"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "an instruction this CPU lacks: try Game details > Compatibility > AVX and AVX2",
+   "lines": [
+    422
+   ],
+   "contexts": [
+    "0xC000001D: \"an instruction this CPU lacks: try Game details > Compatibility > AVX and AVX2\","
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0249"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "a DLL it needs is missing: see Missing DLLs",
+   "lines": [
+    423
+   ],
+   "contexts": [
+    "0xC0000135: \"a DLL it needs is missing: see Missing DLLs\","
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0250"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "a DLL failed to start",
+   "lines": [
+    424
+   ],
+   "contexts": [
+    "0xC0000142: \"a DLL failed to start\","
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0251"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "the program stopped itself after finding damaged memory",
+   "lines": [
+    425
+   ],
+   "contexts": [
+    "0xC0000409: \"the program stopped itself after finding damaged memory\","
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0252"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "damaged memory (heap corruption)",
+   "lines": [
+    426
+   ],
+   "contexts": [
+    "0xC0000374: \"damaged memory (heap corruption)\","
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0253"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "a stack overflow",
+   "lines": [
+    427
+   ],
+   "contexts": [
+    "0xC00000FD: \"a stack overflow\","
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0254"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "out of memory",
+   "lines": [
+    428
+   ],
+   "contexts": [
+    "0xC0000017: \"out of memory\","
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0255"
+  },
+  {
+   "file": "app/Runtime/LogSummary.swift",
+   "text": "a crash inside a window callback",
+   "lines": [
+    429
+   ],
+   "contexts": [
+    "0xC000041D: \"a crash inside a window callback\","
+   ],
+   "reasons": [
+    "session-summary-prose"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0256"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Madeira Dock is not built into this app. Run build/madeira-dock/build.sh.",
+   "lines": [
+    203
+   ],
+   "contexts": [
+    "guard bundled else { throw DockError.message(\"Madeira Dock is not built into this app. Run build/madeira-dock/build.sh.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0257"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "This game's Steam install record is invalid.",
+   "lines": [
+    205
+   ],
+   "contexts": [
+    "throw DockError.message(\"This game's Steam install record is invalid.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0258"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam's client files are missing. Download Valve's client components first.",
+   "lines": [
+    208
+   ],
+   "contexts": [
+    "throw DockError.message(\"Steam's client files are missing. Download Valve's client components first.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0259"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam does not list this game as fully installed.",
+   "lines": [
+    216
+   ],
+   "contexts": [
+    "throw DockError.message(\"Steam does not list this game as fully installed.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0260"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Your Steam sign-in cannot be handed to Dock. Sign in to Steam again in Madeira.",
+   "lines": [
+    231
+   ],
+   "contexts": [
+    "throw DockError.message(\"Your Steam sign-in cannot be handed to Dock. Sign in to Steam again in Madeira.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0261"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam sign-in is too large.",
+   "lines": [
+    246
+   ],
+   "contexts": [
+    "guard token.utf8.count <= 8192 else { throw DockError.message(\"Steam sign-in is too large.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0262"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam sign-in needs renewal.",
+   "lines": [
+    248,
+    254
+   ],
+   "contexts": [
+    "guard parts.count == 3 else { throw DockError.message(\"Steam sign-in needs renewal.\") }",
+    "throw DockError.message(\"Steam sign-in needs renewal.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0263"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Madeira Dock does not support this Steam client build. Dock only drives client builds it has verified; the log has the client fingerprint and the failed check.",
+   "lines": [
+    276
+   ],
+   "contexts": [
+    "return \"Madeira Dock does not support this Steam client build. Dock only drives client builds it has verified; the log has the client fingerprint and the failed check.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0264"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Madeira Dock could not initialize the Steam session (code 30). Export the log to identify the failed check.",
+   "lines": [
+    278
+   ],
+   "contexts": [
+    "return \"Madeira Dock could not initialize the Steam session (code 30). Export the log to identify the failed check.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0265"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam signed in but did not confirm this game's license in time. Export the log before trying again.",
+   "lines": [
+    284
+   ],
+   "contexts": [
+    "? \"Steam signed in but did not confirm this game's license in time. Export the log before trying again.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0266"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam did not finish signing in. Check the connection and try again.",
+   "lines": [
+    285
+   ],
+   "contexts": [
+    ": \"Steam did not finish signing in. Check the connection and try again.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0267"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "The game's launch arguments are invalid or too long. Edit them in Game details and try again.",
+   "lines": [
+    288
+   ],
+   "contexts": [
+    "return \"The game's launch arguments are invalid or too long. Edit them in Game details and try again.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0268"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam did not confirm a license for this game on the signed-in account.",
+   "lines": [
+    290,
+    342
+   ],
+   "contexts": [
+    "if result == 35 { return \"Steam did not confirm a license for this game on the signed-in account.\" }",
+    "case 5: return \"Steam did not confirm a license for this game on the signed-in account.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0269"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "There is no connection, and this Steam client build cannot be started offline by Madeira Dock. Connect to the internet and try again.",
+   "lines": [
+    294
+   ],
+   "contexts": [
+    "? \"There is no connection, and this Steam client build cannot be started offline by Madeira Dock. Connect to the internet and try again.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0270"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "There is no connection, and Steam has nothing saved to sign this account in offline. Start a game once while online; Steam then allows offline starts until its offline sign-in expires.",
+   "lines": [
+    295
+   ],
+   "contexts": [
+    ": \"There is no connection, and Steam has nothing saved to sign this account in offline. Start a game once while online; Steam then allows offline starts until its offline sign-in expires.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0271"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "There is no connection, and Steam refused to sign in offline. Connect to the internet and start the game once. Export the log if it happens again.",
+   "lines": [
+    297
+   ],
+   "contexts": [
+    "if result == 51 { return \"There is no connection, and Steam refused to sign in offline. Connect to the internet and start the game once. Export the log if it happens again.\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0272"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam signed in offline, but what it has saved does not list this game. Start this game once while online, then it can be played offline.",
+   "lines": [
+    298
+   ],
+   "contexts": [
+    "if result == 52 { return \"Steam signed in offline, but what it has saved does not list this game. Start this game once while online, then it can be played offline.\" }"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0273"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Madeira Dock received a sign-in transfer for a different launch. Close the session and try again.",
+   "lines": [
+    301
+   ],
+   "contexts": [
+    "return \"Madeira Dock received a sign-in transfer for a different launch. Close the session and try again.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0274"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Madeira Dock could not read the one-use Steam sign-in transfer. Steam has not checked the login yet. Export the log before trying again.",
+   "lines": [
+    303
+   ],
+   "contexts": [
+    "return \"Madeira Dock could not read the one-use Steam sign-in transfer. Steam has not checked the login yet. Export the log before trying again.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0275"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam took too long to prepare this game's executable. Check the connection and try again.",
+   "lines": [
+    308
+   ],
+   "contexts": [
+    "case -1: return \"Steam took too long to prepare this game's executable. Check the connection and try again.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0276"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam did not start preparing this game's executable. Verify the game's files with Steam, then try again.",
+   "lines": [
+    309
+   ],
+   "contexts": [
+    "case 0: return \"Steam did not start preparing this game's executable. Verify the game's files with Steam, then try again.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0277"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam is busy with this game (updating or running). Try again in a moment.",
+   "lines": [
+    310
+   ],
+   "contexts": [
+    "case 10: return \"Steam is busy with this game (updating or running). Try again in a moment.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0278"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam's Windows service manager could not be started, so Steam could not prepare this game's executable.",
+   "lines": [
+    311
+   ],
+   "contexts": [
+    "case -4: return \"Steam's Windows service manager could not be started, so Steam could not prepare this game's executable.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0279"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam's Windows service is not installed in Madeira's Windows setup, so Steam could not prepare this game's executable.",
+   "lines": [
+    312
+   ],
+   "contexts": [
+    "case -5: return \"Steam's Windows service is not installed in Madeira's Windows setup, so Steam could not prepare this game's executable.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0280"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam could not prepare this game's executable for your account (code \\(fields[",
+   "lines": [
+    313
+   ],
+   "contexts": [
+    "default: return \"Steam could not prepare this game's executable for your account (code \\(fields[\"ceg-result\"] ?? \"?\")).\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0281"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam rejected this game's launch option. Refresh the Steam library and try again.",
+   "lines": [
+    317
+   ],
+   "contexts": [
+    "return \"Steam rejected this game's launch option. Refresh the Steam library and try again.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0282"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam did not finish loading this game's configuration after signing in. Wait a minute and start the game again.",
+   "lines": [
+    321
+   ],
+   "contexts": [
+    "return \"Steam did not finish loading this game's configuration after signing in. Wait a minute and start the game again.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0283"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam still says this account is playing in another session. Close the game on your other device (or wait a few minutes after a closed session) and start it again.",
+   "lines": [
+    326
+   ],
+   "contexts": [
+    "return \"Steam still says this account is playing in another session. Close the game on your other device (or wait a few minutes after a closed session) and start it again.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0284"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam did not resolve this game's registered install folder. Reconnect its storage and retry; if this repeats, export the log.",
+   "lines": [
+    333
+   ],
+   "contexts": [
+    "return \"Steam did not resolve this game's registered install folder. Reconnect its storage and retry; if this repeats, export the log.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0285"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Madeira Dock could not complete the Steam launch (code \\(result)). Export the log before trying again.",
+   "lines": [
+    335
+   ],
+   "contexts": [
+    "return \"Madeira Dock could not complete the Steam launch (code \\(result)). Export the log before trying again.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0286"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam could not reach its servers to start this game. Check the connection and try again.",
+   "lines": [
+    343
+   ],
+   "contexts": [
+    "case 6, 21: return \"Steam could not reach its servers to start this game. Check the connection and try again.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0287"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam reports this game is already running. Close it, then try again.",
+   "lines": [
+    344
+   ],
+   "contexts": [
+    "case 16: return \"Steam reports this game is already running. Close it, then try again.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0288"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam could not finish installing content this game needs. Try again later.",
+   "lines": [
+    347
+   ],
+   "contexts": [
+    "? \"Steam could not finish installing content this game needs. Try again later.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0289"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam needs to install or update content this game depends on before it can start. Start the game again to let Madeira Dock wait for Steam.",
+   "lines": [
+    348
+   ],
+   "contexts": [
+    ": \"Steam needs to install or update content this game depends on before it can start. Start the game again to let Madeira Dock wait for Steam.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0290"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam does not see this game as installed.",
+   "lines": [
+    349
+   ],
+   "contexts": [
+    "case 18: return \"Steam does not see this game as installed.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0291"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam could not find the game's executable.",
+   "lines": [
+    350
+   ],
+   "contexts": [
+    "case 28: return \"Steam could not find the game's executable.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0292"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam started this game's program, but Madeira could not load it (Steam reports an invalid platform). Export the log: it names the reason.",
+   "lines": [
+    352
+   ],
+   "contexts": [
+    "case 29: return \"Steam started this game's program, but Madeira could not load it (Steam reports an invalid platform). Export the log: it names the reason.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0293"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam could not read this game's configuration. Try again.",
+   "lines": [
+    353
+   ],
+   "contexts": [
+    "case 22, 23, 24: return \"Steam could not read this game's configuration. Try again.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0294"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam says this game is not released yet.",
+   "lines": [
+    354
+   ],
+   "contexts": [
+    "case 25: return \"Steam says this game is not released yet.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0295"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam says this game is not available in your region.",
+   "lines": [
+    355
+   ],
+   "contexts": [
+    "case 26: return \"Steam says this game is not available in your region.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0296"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Steam says this account is playing in another session. Close the game on your other device and start it again.",
+   "lines": [
+    356
+   ],
+   "contexts": [
+    "case 35: return \"Steam says this account is playing in another session. Close the game on your other device and start it again.\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0297"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Dock's private transfer folder is unavailable.",
+   "lines": [
+    465
+   ],
+   "contexts": [
+    "guard let url = transferURL else { throw DockError.message(\"Dock's private transfer folder is unavailable.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0298"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Dock's transfer folder is invalid.",
+   "lines": [
+    473
+   ],
+   "contexts": [
+    "throw DockError.message(\"Dock's transfer folder is invalid.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0299"
+  },
+  {
+   "file": "app/Runtime/MadeiraDock.swift",
+   "text": "Madeira could not create Dock's private sign-in transfer.",
+   "lines": [
+    478
+   ],
+   "contexts": [
+    "guard descriptor >= 0 else { throw DockError.message(\"Madeira could not create Dock's private sign-in transfer.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0300"
+  },
+  {
+   "file": "app/Runtime/SteamKeyValues.swift",
+   "text": "Steam metadata is too large.",
+   "lines": [
+    27
+   ],
+   "contexts": [
+    "guard data.count <= 4 * 1024 * 1024 else { throw SteamFileError.invalid(\"Steam metadata is too large.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0301"
+  },
+  {
+   "file": "app/Runtime/SteamKeyValues.swift",
+   "text": "Steam metadata has too many entries.",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "guard tokens <= 100_000 else { throw SteamFileError.invalid(\"Steam metadata has too many entries.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0302"
+  },
+  {
+   "file": "app/Runtime/SteamKeyValues.swift",
+   "text": "Steam metadata contains an oversized value.",
+   "lines": [
+    54,
+    61
+   ],
+   "contexts": [
+    "guard value.count <= 16_384 else { throw SteamFileError.invalid(\"Steam metadata contains an oversized value.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0303"
+  },
+  {
+   "file": "app/Runtime/SteamKeyValues.swift",
+   "text": "Steam metadata is incomplete. Refresh after the download finishes.",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    "throw SteamFileError.invalid(\"Steam metadata is incomplete. Refresh after the download finishes.\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0304"
+  },
+  {
+   "file": "app/Runtime/SteamKeyValues.swift",
+   "text": "Steam metadata is nested too deeply.",
+   "lines": [
+    67
+   ],
+   "contexts": [
+    "guard depth < 32 else { throw SteamFileError.invalid(\"Steam metadata is nested too deeply.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0305"
+  },
+  {
+   "file": "app/Runtime/SteamKeyValues.swift",
+   "text": "Steam metadata has an unexpected closing brace.",
+   "lines": [
+    71
+   ],
+   "contexts": [
+    "guard depth > 0 else { throw SteamFileError.invalid(\"Steam metadata has an unexpected closing brace.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0306"
+  },
+  {
+   "file": "app/Runtime/SteamKeyValues.swift",
+   "text": "Steam metadata is incomplete. Try refreshing it.",
+   "lines": [
+    75,
+    83
+   ],
+   "contexts": [
+    "throw SteamFileError.invalid(\"Steam metadata is incomplete. Try refreshing it.\")",
+    "guard depth == 0 else { throw SteamFileError.invalid(\"Steam metadata is incomplete. Try refreshing it.\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0307"
+  },
+  {
+   "file": "app/Runtime/SteamRuntime.swift",
+   "text": "Steam's components could not be verified. Try downloading them again.",
+   "lines": [
+    38
+   ],
+   "contexts": [
+    "case .invalidPackage: return \"Steam's components could not be verified. Try downloading them again.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0308"
+  },
+  {
+   "file": "app/Runtime/SteamRuntime.swift",
+   "text": "Existing Steam files need attention. They were kept. Use the desktop setup option.",
+   "lines": [
+    39
+   ],
+   "contexts": [
+    "case .conflict: return \"Existing Steam files need attention. They were kept. Use the desktop setup option.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0309"
+  },
+  {
+   "file": "app/Runtime/SteamRuntime.swift",
+   "text": "Close the running session before preparing Steam's components.",
+   "lines": [
+    40
+   ],
+   "contexts": [
+    "case .activeSession: return \"Close the running session before preparing Steam's components.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0310"
+  },
+  {
+   "file": "app/Runtime/SteamRuntime.swift",
+   "text": "Madeira could not prepare its Windows environment.",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "case .prefixMissing: return \"Madeira could not prepare its Windows environment.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0311"
+  },
+  {
+   "file": "app/Runtime/SteamRuntime.swift",
+   "text": "WINE REGISTRY Version 2",
+   "lines": [
+    165
+   ],
+   "contexts": [
+    "guard text.hasPrefix(\"WINE REGISTRY Version 2\") else { throw Failure.prefixMissing }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0312"
+  },
+  {
+   "file": "app/Runtime/SteamRuntime.swift",
+   "text": "an unstamped registry",
+   "lines": [
+    232
+   ],
+   "contexts": [
+    "SteamRuntimeFiles.lastConflict = \"an unstamped registry\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0313"
+  },
+  {
+   "file": "app/Runtime/SteamRuntime.swift",
+   "text": "a linked Steam folder",
+   "lines": [
+    238
+   ],
+   "contexts": [
+    "SteamRuntimeFiles.lastConflict = \"a linked Steam folder\""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0314"
+  },
+  {
+   "file": "app/Runtime/SteamRuntime.swift",
+   "text": "Downloading Steam components (\\(index + 1) of \\(SteamRuntimeFiles.packages.count))…",
+   "lines": [
+    257
+   ],
+   "contexts": [
+    "await progress(\"Downloading Steam components (\\(index + 1) of \\(SteamRuntimeFiles.packages.count))…\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0315"
+  },
+  {
+   "file": "app/Runtime/SteamRuntime.swift",
+   "text": "Verifying Steam components…",
+   "lines": [
+    268
+   ],
+   "contexts": [
+    "await progress(\"Verifying Steam components…\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0316"
+  },
+  {
+   "file": "app/Runtime/SteamRuntime.swift",
+   "text": "Preparing the Windows environment…",
+   "lines": [
+    281
+   ],
+   "contexts": [
+    "await progress(\"Preparing the Windows environment…\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0317"
+  },
+  {
+   "file": "app/Runtime/SteamRuntime.swift",
+   "text": "Steam components are ready.",
+   "lines": [
+    325
+   ],
+   "contexts": [
+    "await progress(\"Steam components are ready.\")"
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0318"
+  },
+  {
+   "file": "app/Runtime/SteamStorage.swift",
+   "text": "Reconnect the registered SSD and try again.",
+   "lines": [
+    205
+   ],
+   "contexts": [
+    "case .unavailable(.disconnected): return \"Reconnect the registered SSD and try again.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0319"
+  },
+  {
+   "file": "app/Runtime/SteamStorage.swift",
+   "text": "Select the registered folder again to renew access.",
+   "lines": [
+    206
+   ],
+   "contexts": [
+    "case .unavailable(.permissionDenied): return \"Select the registered folder again to renew access.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0320"
+  },
+  {
+   "file": "app/Runtime/SteamStorage.swift",
+   "text": "The SSD is read-only.",
+   "lines": [
+    207
+   ],
+   "contexts": [
+    "case .unavailable(.readOnly): return \"The SSD is read-only.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0321"
+  },
+  {
+   "file": "app/Runtime/SteamStorage.swift",
+   "text": "This is not the registered library folder. Select the original folder.",
+   "lines": [
+    208
+   ],
+   "contexts": [
+    "case .unavailable(.identityMismatch): return \"This is not the registered library folder. Select the original folder.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0322"
+  },
+  {
+   "file": "app/Runtime/SteamStorage.swift",
+   "text": "The library could not be accessed.",
+   "lines": [
+    209
+   ],
+   "contexts": [
+    "case .unavailable(.available): return \"The library could not be accessed.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0323"
+  },
+  {
+   "file": "app/Runtime/SteamStorage.swift",
+   "text": "The requested path leaves the registered library.",
+   "lines": [
+    210
+   ],
+   "contexts": [
+    "case .unsafePath: return \"The requested path leaves the registered library.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0324"
+  },
+  {
+   "file": "app/Runtime/SteamStorage.swift",
+   "text": "Select a dedicated folder on a locally attached drive. Cloud and network folders are unsupported.",
+   "lines": [
+    211
+   ],
+   "contexts": [
+    "case .unsupportedLocation: return \"Select a dedicated folder on a locally attached drive. Cloud and network folders are unsupported.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0325"
+  },
+  {
+   "file": "app/Runtime/SteamStorage.swift",
+   "text": "The saved library registration is invalid.",
+   "lines": [
+    212
+   ],
+   "contexts": [
+    "case .invalidRecord: return \"The saved library registration is invalid.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0326"
+  },
+  {
+   "file": "app/Runtime/SteamStorage.swift",
+   "text": "The Windows SSD drive mapping is already in use. The registered library folder is unchanged.",
+   "lines": [
+    213
+   ],
+   "contexts": [
+    "case .mappingConflict: return \"The Windows SSD drive mapping is already in use. The registered library folder is unchanged.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0327"
+  },
+  {
+   "file": "app/Runtime/StikJITHelper.swift",
+   "text": "Madeira's JIT script is missing from this installation. Reinstall Madeira.",
+   "lines": [
+    22
+   ],
+   "contexts": [
+    "return \"Madeira's JIT script is missing from this installation. Reinstall Madeira.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0328"
+  },
+  {
+   "file": "app/Runtime/StikJITHelper.swift",
+   "text": "Madeira could not create the StikDebug request.",
+   "lines": [
+    24
+   ],
+   "contexts": [
+    "return \"Madeira could not create the StikDebug request.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0329"
+  },
+  {
+   "file": "app/Runtime/StikJITHelper.swift",
+   "text": "StikDebug is not installed. Install it, or configure Built-in StikJIT.",
+   "lines": [
+    26
+   ],
+   "contexts": [
+    "return \"StikDebug is not installed. Install it, or configure Built-in StikJIT.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0330"
+  },
+  {
+   "file": "app/Runtime/StikJITHelper.swift",
+   "text": "StikDebug did not attach to Madeira within 90 seconds. Check its pairing file and LocalDevVPN, then try again.",
+   "lines": [
+    28
+   ],
+   "contexts": [
+    "return \"StikDebug did not attach to Madeira within 90 seconds. Check its pairing file and LocalDevVPN, then try again.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0331"
+  },
+  {
+   "file": "app/Runtime/StikJITHelper.swift",
+   "text": "JIT is switched on, but StikDebug is not attached to Madeira, so the JIT memory cannot ",
+   "lines": [
+    120
+   ],
+   "contexts": [
+    "static let noDebuggerMessage = \"JIT is switched on, but StikDebug is not attached to Madeira, so the JIT memory cannot \""
+   ],
+   "reasons": [
+    "group:group-reviewed-user-visible"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0332"
+  },
+  {
+   "file": "app/Runtime/StikJITHelper.swift",
+   "text": " + [0x%lx,0x%lx) %luMB (pool-mid)",
+   "lines": [
+    1363
+   ],
+   "contexts": [
+    "text += String(format: \" + [0x%lx,0x%lx) %luMB (pool-mid)\", Int(mid.base), Int(mid.base + mid.size), Int(mid.size >> 20))"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0333"
+  },
+  {
+   "file": "app/Runtime/StikJITHelper.swift",
+   "text": " + [0x%lx,0x%lx) %luMB as one %luMB span; pool offsets",
+   "lines": [
+    1366
+   ],
+   "contexts": [
+    "text += String(format: \" + [0x%lx,0x%lx) %luMB as one %luMB span; pool offsets\", Int(second.base),"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0334"
+  },
+  {
+   "file": "app/Runtime/StikJITHelper.swift",
+   "text": " [0x%lx,0x%lx) (%luMB, the mapping below the third region)",
+   "lines": [
+    1369
+   ],
+   "contexts": [
+    "text += String(format: \" [0x%lx,0x%lx) (%luMB, the mapping below the third region)\", h.off, h.end, (h.end - h.off) >> 20)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0335"
+  },
+  {
+   "file": "app/Runtime/StikJITHelper.swift",
+   "text": " and [0x%lx,0x%lx) (%luMB, the main thread's stack)",
+   "lines": [
+    1372
+   ],
+   "contexts": [
+    "text += String(format: \" and [0x%lx,0x%lx) (%luMB, the main thread's stack)\", h.off, h.end, (h.end - h.off) >> 20)"
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0336"
+  },
+  {
+   "file": "app/Runtime/StikJITHelper.swift",
+   "text": " are never handed out",
+   "lines": [
+    1374
+   ],
+   "contexts": [
+    "return text + \" are never handed out\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0337"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "Sign in to EA to continue.",
+   "lines": [
+    38
+   ],
+   "contexts": [
+    "case .signedOut: return \"Sign in to EA to continue.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0338"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "EA refused the request (HTTP \\(status)). Sign in again in the Stores tab.",
+   "lines": [
+    40
+   ],
+   "contexts": [
+    "if status == 401 || status == 403 { return \"EA refused the request (HTTP \\(status)). Sign in again in the Stores tab.\" }"
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0339"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "EA's server answered with HTTP \\(status). Try again later.",
+   "lines": [
+    41
+   ],
+   "contexts": [
+    "return \"EA's server answered with HTTP \\(status). Try again later.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0340"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "EA's server declined the request: \\(message)",
+   "lines": [
+    42
+   ],
+   "contexts": [
+    "case .graphQL(let message): return \"EA's server declined the request: \\(message)\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0341"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "EA sent an unexpected answer (\\(what)).",
+   "lines": [
+    43
+   ],
+   "contexts": [
+    "case .invalid(let what): return \"EA sent an unexpected answer (\\(what)).\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0342"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "EA has no PC build of this game for Porthole to download.",
+   "lines": [
+    44
+   ],
+   "contexts": [
+    "case .noBuild: return \"EA has no PC build of this game for Porthole to download.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0343"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "The game's files downloaded, but they do not say which program starts the game (__Installer/installerdata.xml). Add the game with + and choose its .exe.",
+   "lines": [
+    45
+   ],
+   "contexts": [
+    "case .noLauncher: return \"The game's files downloaded, but they do not say which program starts the game (__Installer/installerdata.xml). Add the game with + and choose its .exe.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0344"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "EA did not give this game a licence (\\(reason)). Check that your account owns it and try again.",
+   "lines": [
+    46
+   ],
+   "contexts": [
+    "case .license(let reason): return \"EA did not give this game a licence (\\(reason)). Check that your account owns it and try again.\""
+   ],
+   "reasons": [
+    "errorDescription-scope"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0345"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "signed-out",
+   "lines": [
+    53
+   ],
+   "contexts": [
+    "case .signedOut: return \"signed-out\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0346"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "graphql",
+   "lines": [
+    55
+   ],
+   "contexts": [
+    "case .graphQL: return \"graphql\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0347"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "invalid-\\(what)",
+   "lines": [
+    56
+   ],
+   "contexts": [
+    "case .invalid(let what): return \"invalid-\\(what)\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0348"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "no-build",
+   "lines": [
+    57
+   ],
+   "contexts": [
+    "case .noBuild: return \"no-build\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0349"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "no-launcher",
+   "lines": [
+    58
+   ],
+   "contexts": [
+    "case .noLauncher: return \"no-launcher\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0350"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "license-\\(reason)",
+   "lines": [
+    59
+   ],
+   "contexts": [
+    "case .license(let reason): return \"license-\\(reason)\""
+   ],
+   "reasons": [
+    "error-type-message"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0351"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "https://signin.ea.com",
+   "lines": [
+    339
+   ],
+   "contexts": [
+    "guard !location.hasPrefix(\"https://signin.ea.com\") else { throw EAAPIError.invalid(\"exchange-signin\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0352"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "exchange-\\(responseType)",
+   "lines": [
+    345
+   ],
+   "contexts": [
+    "throw EAAPIError.invalid(\"exchange-\\(responseType)\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0353"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "error_description",
+   "lines": [
+    396
+   ],
+   "contexts": [
+    "messages = [\"error\", \"error_description\"].compactMap { json[$0] as? String }"
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0354"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": " message=\\\"\\(text.prefix(300))\\\"",
+   "lines": [
+    400
+   ],
+   "contexts": [
+    "return \" message=\\\"\\(text.prefix(300))\\\"\""
+   ],
+   "reasons": [
+    "enclosing-visible-func"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0355"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "unknown error",
+   "lines": [
+    438
+   ],
+   "contexts": [
+    "let message = (first[\"message\"] as? String) ?? \"unknown error\""
+   ],
+   "reasons": [
+    "string-state-assignment"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0356"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "HTTP \\(http.statusCode)",
+   "lines": [
+    667
+   ],
+   "contexts": [
+    "throw EAAPIError.license(\"HTTP \\(http.statusCode)\")"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": true,
+   "whole_sentence": true,
+   "id": "u0357"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "X-Signature",
+   "lines": [
+    669
+   ],
+   "contexts": [
+    "guard let signature = http.value(forHTTPHeaderField: \"X-Signature\") else { throw EAAPIError.license(\"no signature\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0358"
+  },
+  {
+   "file": "app/Runtime/SwiftEA/EAAPI.swift",
+   "text": "no signature",
+   "lines": [
+    669
+   ],
+   "contexts": [
+    "guard let signature = http.value(forHTTPHeaderField: \"X-Signature\") else { throw EAAPIError.license(\"no signature\") }"
+   ],
+   "reasons": [
+    "throw-literal"
+   ],
+   "interpolated": false,
+   "whole_sentence": false,
+   "id": "u0359"
+  }
+ ]
+}
