@@ -88,6 +88,34 @@
 #       ntdll/win32u failure branches now print non-empty obj/*.err, and the
 #       always() collector also sweeps *.err into probe-logs/err-dump/.
 
+# Iteration 5 (after run #5, 2026-11-08 - diagnosis: notes/PROBE-RUN5-DIAGNOSIS.md):
+#   Run #5 failed at the NEW step 13 "Prepare wine/build-arm64ec" (3s): configure
+#   reported 'arm64ec PE cross-compiler not found'. The run #5 diagnosis first
+#   blamed a missing compiler - that is WRONG, and run #5's own step-12 log proves
+#   it: 07-wine-macos.log line 36-37 shows the SAME configure finding
+#   'arm64ec-w64-mingw32-clang... arm64ec-w64-mingw32-clang' and its capability
+#   probe answering YES. llvm-mingw 20260421 ships the compiler (Madeira's
+#   setup-llvm-mingw.sh asserts its presence and step 12 would have failed
+#   without it). The real defect is in the iteration-4 step itself: it put the
+#   toolchain on PATH as a RELATIVE entry
+#   ('vendor/Madeira/toolchains/llvm-mingw-.../bin') and then ran configure from a
+#   subshell that had cd'd into vendor/Madeira/wine/build-arm64ec - PATH entries
+#   resolve against the process cwd, so from there the relative entry pointed at
+#   a nonexistent directory and configure saw no compiler. Step 12 never hit
+#   this because Madeira's build/wine-macos/configure.sh exports the toolchain
+#   via an ABSOLUTE path ($R/toolchains/...). Iteration 5 therefore keeps the
+#   verbatim configure+make (no new toolchain, no widl shortcut) and only fixes
+#   the PATH to absolute, plus a pre-flight 'test -x .../arm64ec-w64-mingw32-clang'
+#   so a genuinely missing compiler fails fast with a readable message instead
+#   of configure's generic one. Corollary, verified against the pinned sources
+#   (see PROBE-RUN5-DIAGNOSIS.md '迭代 5 修法'): the dwrite TU's only use of
+#   build-arm64ec/include is the -I flag in build/ntdll-unix/build.sh:155, and
+#   build-macos/configure.sh itself configures --enable-archs=arm64ec and its
+#   step-12 log already shows widl generating dwrite.h/dwrite_3.h in
+#   build-macos/include - so reusing those headers would also be equivalent;
+#   it is kept as the documented fallback, not implemented, because the
+#   verbatim configure is now proven runnable on this runner.
+
 name: probe-build (Porthole rebuild spike)
 
 on:
@@ -307,20 +335,30 @@ jobs:
             echo 'wine/build-macos ready'
           } 2>&1 | tee "$PROBE_LOGS/07-wine-macos.log"
 
-      - name: Prepare wine/build-arm64ec (dwrite headers) - iteration 4
+      - name: Prepare wine/build-arm64ec (dwrite headers) - iteration 5
         working-directory: ${{ github.workspace }}/src
         run: |
           set -euxo pipefail
-          # 迭代 4（运行 #4 诊断，notes/PROBE-RUN4-DIAGNOSIS.md）：ntdll-unix 的 dwrite 单元
+          # 迭代 5（运行 #5 诊断，notes/PROBE-RUN5-DIAGNOSIS.md）：ntdll-unix 的 dwrite 单元
           # 编译 vendor/Madeira/build/ntdll-unix/dwrite_freetype_ios.c，它 -I
           # wine/build-arm64ec/include 取 widl 生成的 dwrite.h/dwrite_3.h；干净克隆里这棵树
           # 不存在（与运行 #1 的 build-macos 是同一类「作者本机构建树缺失」），此前没有任何
           # 步骤创建它。下面逐字照搬 Madeira tools/build/build-wine.sh（5fda6a0）里生成该树的
           # 一段：configure --enable-archs=arm64ec，再只 make 两个 dwrite 头文件（不走整树构建）。
-          # 注意与 build-macos 的区别：build/wine-macos/configure.sh 生成的是 build-macos/include
-          # 里的 dwrite.h，ntdll-unix 的 dwrite 单元要的是 build-arm64ec/include 里的那份。
+          # 迭代 4 的教训（运行 #5 的真根因）：第 13 步曾把 llvm-mingw 用相对路径挂上 PATH，
+          # 再 cd 进 build-arm64ec 子目录跑 configure——PATH 相对项按进程当前目录解析，cd 后
+          # 便指向不存在的目录，configure 遂报找不到编译器；而运行 #5 自身的第 12 步日志证明
+          # 编译器本就存在且可用（build-macos/configure.sh 用绝对路径 $R/toolchains/... 挂 PATH，
+          # configure 当场找到 arm64ec-w64-mingw32-clang 且能力探测为 yes）。所以本步改用绝对
+          # 路径挂 PATH，并在 configure 前先验 test -x：编译器真缺失时直接报明错，不再让
+          # configure 的通用报错误导诊断。注意 build-macos/configure.sh 本身也是
+          # --enable-archs=arm64ec 配置、第 12 步日志已显示 widl 在 build-macos/include 里生成
+          # 了 dwrite.h/dwrite_3.h——复用那份头是等价的备用路线，见诊断附录；主路线仍走原样
+          # configure，因为它已被证明能在本运行器上跑通。
           {
-            export PATH="$(brew --prefix bison)/bin:$(brew --prefix flex)/bin:vendor/Madeira/toolchains/llvm-mingw-20260421-ucrt-macos-universal/bin:$PATH"
+            TOOLCHAIN="$GITHUB_WORKSPACE/src/vendor/Madeira/toolchains/llvm-mingw-20260421-ucrt-macos-universal/bin"
+            export PATH="$(brew --prefix bison)/bin:$(brew --prefix flex)/bin:$TOOLCHAIN:$PATH"
+            test -x "$TOOLCHAIN/arm64ec-w64-mingw32-clang" || { echo 'ERROR: arm64ec-w64-mingw32-clang not found in llvm-mingw toolchain' >&2; ls "$TOOLCHAIN" | head -20; exit 1; }
             WINE=vendor/Madeira/wine
             if [ ! -f "$WINE/build-arm64ec/Makefile" ]; then
               echo 'Configuring Wine (ARM64EC headers)...'
