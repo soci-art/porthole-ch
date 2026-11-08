@@ -28,6 +28,32 @@
 #   before the library builds, adds freetype/gnutls to the Homebrew set (configure.sh needs
 #   them), and adds failure diagnostics to every library step plus an always() collector that
 #   sweeps err-*.txt files into probe-logs so the next failure is readable from the artifact.
+#
+# Iteration 3 (after run #2, 2026-11-08 - diagnosis: notes/PROBE-RUN2-DIAGNOSIS.md):
+#   Run #2 got past wineserver base (23/23 objects, archive built - the iteration 2 fix is
+#   verified) and failed at "Build libs - DXMT shader headers":
+#   air_tessellation.patched.metal:153 'too many arguments to function call, expected 4,
+#   have 5'. DXMT's pinned source has exactly ONE __metal_atomic_fetch_add_explicit call
+#   (src/airconv/shaders/air_tessellation.metal, in get_next_index) and it passes 4 args;
+#   repo-wide there are ZERO '__METAL_MEMORY_FLAGS_' occurrences in DXMT. The 5th argument
+#   is manufactured by Porthole's own tools/build_dxmt_shader_headers.sh (its patch 0002):
+#   its sed appends ', __METAL_MEMORY_FLAGS_NONE__' because Xcode 27's metal intrinsic
+#   REQUIRES 5 args. This runner's metal (Xcode 26.6) accepts only 4 - although
+#   'metal --version' prints 32023.883, the very number the script's comment associates
+#   with Xcode 27, so version strings cannot be trusted as the gate. Iteration 3:
+#   (1) the toolchain step now enumerates every /Applications/Xcode*.app with its REAL
+#       version (the old filename sort -V could never select the unversioned Xcode.app,
+#       because '.' sorts before '_') and selects the true maximum - run #3's
+#       01-toolchain.log will state Xcode.app's real version either way;
+#   (2) the DXMT headers step is gated on an actual compile probe of the exact 5-arg
+#       call: probe compiles -> the upstream script runs completely untouched; probe
+#       fails -> a shadow copy of the SAME script in the SAME directory (identical path
+#       logic) with only the FLAGS append neutralized runs instead. The diff is printed
+#       and the shadow is asserted to contain zero '__METAL_MEMORY_FLAGS_NONE__'.
+#       Equivalence: __METAL_MEMORY_FLAGS_NONE__ is defined as 0 = no extra flags, which
+#       is exactly what the 4-arg form means; patch 0002 itself states 'Semantics
+#       unchanged (flags NONE)', and DXMT's own meson compiles the unpatched 4-arg
+#       source. The two paths are mutually exclusive by construction of the probe.
 
 name: probe-build (Porthole rebuild spike)
 
@@ -100,8 +126,21 @@ jobs:
             sw_vers || true
             echo '--- Xcodes in /Applications ---'
             ls /Applications | grep -i xcode || true
-            echo '--- select newest Xcode ---'
-            newest="$(ls -d /Applications/Xcode*.app 2>/dev/null | sort -V | tail -1 || true)"
+            echo '--- every Xcode in /Applications, with its REAL version (iteration 3) ---'
+            # Runs #1/#2 selected by filename (sort -V), which can never pick the
+            # unversioned Xcode.app ('.' sorts before '_'), so a 27.x hiding behind
+            # Xcode.app would have been silently ignored. Enumerate real versions
+            # via DEVELOPER_DIR and select the true maximum; this log line is the
+            # authoritative answer to "what is Xcode.app" for this runner image.
+            best_ver=''; newest=''
+            for app in /Applications/Xcode*.app; do
+              [ -d "$app/Contents/Developer" ] || continue
+              ver="$(DEVELOPER_DIR="$app/Contents/Developer" xcodebuild -version 2>/dev/null | head -1 | awk '{print $2}')"
+              echo "XCODE_ENUM $app -> ${ver:-UNREADABLE}"
+              [ -n "$ver" ] || continue
+              if [ -z "$best_ver" ] || [ "$(printf '%s\n%s\n' "$best_ver" "$ver" | sort -V | tail -1)" = "$ver" ]; then best_ver="$ver"; newest="$app"; fi
+            done
+            echo "--- select newest Xcode: ${newest:-none} (real version ${best_ver:-unknown}) ---"
             if [ -n "$newest" ]; then sudo xcode-select -s "$newest/Contents/Developer"; fi
             xcode-select -p
             xcodebuild -version
@@ -245,12 +284,46 @@ jobs:
             exit 1
           }
 
-      - name: Build libs - DXMT shader headers + DXMT patches
+      - name: Build libs - DXMT shader headers + DXMT patches (iteration 3 metal atomic compat)
         working-directory: ${{ github.workspace }}/src
         run: |
           set -euxo pipefail
-          # shader 头由 Metal 工具链生成（build_dxmt_shader_headers.sh 需要 xcrun metal，是 Xcode 版本敏感点）
-          tools/build_dxmt_shader_headers.sh 2>&1 | tee "$PROBE_LOGS/11-dxmt-headers.log" || {
+          # Iteration 3 gate (diagnosis: notes/PROBE-RUN2-DIAGNOSIS.md): the ONLY 5-arg
+          # atomic call in this build is manufactured by tools/build_dxmt_shader_headers.sh
+          # itself (patch 0002's sed appends ', __METAL_MEMORY_FLAGS_NONE__' for Xcode 27's
+          # metal). Gate on a real compile probe of that exact call - NOT on version
+          # strings ('metal --version' here prints 32023.883 yet rejects the 5-arg form).
+          # Probe OK -> upstream script untouched. Probe fails -> shadow copy of the same
+          # script in the same directory (identical path logic), FLAGS append neutralized,
+          # diff printed, shadow asserted free of '__METAL_MEMORY_FLAGS_NONE__'.
+          {
+            echo '--- metal 5-arg atomic capability probe (iteration 3) ---'
+            cat > "$RUNNER_TEMP/probe_atomic5.metal" <<'EOF'
+          #include <metal_stdlib>
+          using namespace metal;
+          kernel void probe_atomic5() {
+            threadgroup int c;
+            __metal_atomic_fetch_add_explicit(&c, 1, int(memory_order_relaxed), __METAL_MEMORY_SCOPE_THREADGROUP__, __METAL_MEMORY_FLAGS_NONE__);
+          }
+          EOF
+            if xcrun -sdk macosx metal -o "$RUNNER_TEMP/probe_atomic5.air" -c "$RUNNER_TEMP/probe_atomic5.metal" -std=metal3.1 --target=air64-apple-macos14.0 2>"$RUNNER_TEMP/probe_atomic5.err"; then
+              echo 'METAL_ATOMIC5: supported - upstream script runs as-is'
+              tools/build_dxmt_shader_headers.sh
+            else
+              echo 'METAL_ATOMIC5: NOT supported - probe compiler output:'
+              cat "$RUNNER_TEMP/probe_atomic5.err" || true
+              echo '--- building compat shadow script (only the FLAGS append is neutralized) ---'
+              sed 's/, __METAL_MEMORY_FLAGS_NONE__//' tools/build_dxmt_shader_headers.sh > tools/.probe-build_dxmt_shader_headers.sh
+              echo '--- diff: upstream script vs compat shadow (expect exactly one line) ---'
+              diff tools/build_dxmt_shader_headers.sh tools/.probe-build_dxmt_shader_headers.sh || true
+              test "$(grep -c '__METAL_MEMORY_FLAGS_NONE__' tools/.probe-build_dxmt_shader_headers.sh)" = '0'
+              chmod +x tools/.probe-build_dxmt_shader_headers.sh
+              tools/.probe-build_dxmt_shader_headers.sh
+              rm -f tools/.probe-build_dxmt_shader_headers.sh
+              echo '--- compat audit: FLAGS occurrences in generated air_tessellation.patched.metal (expect 0) ---'
+              grep -c '__METAL_MEMORY_FLAGS_' vendor/Madeira/build/dxmt-ios/shader-headers/air_tessellation.patched.metal || echo 'none found (0)'
+            fi
+          } 2>&1 | tee "$PROBE_LOGS/11-dxmt-headers.log" || {
             echo '--- err-*.txt dump (step failed) ---'
             find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
             exit 1
