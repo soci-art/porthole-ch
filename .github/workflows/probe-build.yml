@@ -170,6 +170,23 @@
 #   24-stage, 25-xcodegen, 26-xcodebuild, 27-package, 28-diff. Still
 #   unverified after this fix: RuntimeStage, xcodegen, xcodebuild, package,
 #   structure diff.
+#
+# Iteration 8.1 (after runs #9 and #10, 2026-11-08 - diagnosis:
+#   notes/PROBE-RUN10-DIAGNOSIS.md):
+#   Runs #9 (5m09s) and #10 (4m54s) BOTH died at step 5 "Download upstream
+#   IPA" with curl exit code 56 (CURLE_RECV_ERROR) - same step, same error,
+#   ~25 minutes apart, so this is no longer treated as a one-off flake.
+#   The old command (curl -fL --retry 3) restarted the 200 MB download from
+#   zero on every retry and never got it through. Iteration 8.1 changes
+#   ONLY that step: a resume loop (curl -C -, up to 8 rounds, stalled-
+#   transfer abort via --speed-limit/--speed-time, delete-and-restart if
+#   the server refuses ranges) with the pinned sha256 still the final
+#   arbiter, and the step now tees its output to
+#   probe-logs/03-download-upstream.log (runs #9/#10 left no log for this
+#   step in the artifact, forcing diagnosis from the job annotation alone).
+#   The xz step's two curls also gain --retry-all-errors. Nothing else is
+#   touched: iteration 8's xz fix remains exactly as run #9/#10 carried it,
+#   still unverified.
 
 name: probe-build (Porthole rebuild spike)
 
@@ -317,13 +334,37 @@ jobs:
             echo 'all pinned commits match docs/SOURCE.md'
           } 2>&1 | tee "$PROBE_LOGS/02-pinned-commits.log"
 
-      - name: Download upstream IPA and verify sha256
+      - name: Download upstream IPA and verify sha256 (resumable) - iteration 8.1
         run: |
           set -euxo pipefail
-          curl -fL --retry 3 -o "$RUNNER_TEMP/Porthole-1.2.1-688.ipa" "$UPSTREAM_IPA_URL"
-          echo "$UPSTREAM_IPA_SHA256  $RUNNER_TEMP/Porthole-1.2.1-688.ipa" | shasum -a 256 -c -
-          ls -l "$RUNNER_TEMP/Porthole-1.2.1-688.ipa"
-          echo "UPSTREAM_IPA=$RUNNER_TEMP/Porthole-1.2.1-688.ipa" >> "$GITHUB_ENV"
+          # 迭代 8.1（运行 #9、#10 连续在此步失败，诊断 PROBE-RUN10-DIAGNOSIS.md）：
+          # 两次都是 curl 退出码 56（CURLE_RECV_ERROR）在下载 200MB 官方 IPA 时中断，
+          # 相隔约 25 分钟、形态完全相同，不再按偶发抖动处理。原命令 --retry 3 每次
+          # 从零重下、四次尝试全断在半路。改为断点续传循环：每轮带 -C - 从已下载的
+          # 部分续传（进度不丢）、--speed-limit/--speed-time 让卡死传输自动中断进
+          # 下一轮、服务端拒绝续传（退出码 33）时删档从零重来，最多 8 轮；最终仍
+          # 以固定 sha256 校验为准。本步输出此前没留 artifact 日志（#9/#10 只能靠
+          # 作业标注推断失败点），这次起 tee 进 probe-logs/03-download-upstream.log。
+          IPA_TMP="$RUNNER_TEMP/Porthole-1.2.1-688.ipa"
+          rm -f "$IPA_TMP"
+          {
+            ok=0
+            for i in 1 2 3 4 5 6 7 8; do
+              echo "--- download attempt $i (resume offset: $(stat -f%z "$IPA_TMP" 2>/dev/null || echo 0) bytes) ---"
+              rc=0
+              curl -fL -C - --retry 2 --retry-all-errors --connect-timeout 30 \
+                --speed-limit 10240 --speed-time 60 \
+                -o "$IPA_TMP" "$UPSTREAM_IPA_URL" || rc=$?
+              if [ "$rc" = 0 ]; then ok=1; break; fi
+              echo "curl exited $rc on attempt $i"
+              if [ "$rc" = 33 ]; then echo 'server refused byte-range resume; deleting partial file'; rm -f "$IPA_TMP"; fi
+              sleep 5
+            done
+            test "$ok" = 1
+            ls -l "$IPA_TMP"
+            echo "$UPSTREAM_IPA_SHA256  $IPA_TMP" | shasum -a 256 -c -
+          } 2>&1 | tee "$PROBE_LOGS/03-download-upstream.log"
+          echo "UPSTREAM_IPA=$IPA_TMP" >> "$GITHUB_ENV"
 
       - name: Apply engine patches 0172-0176 (docs/SOURCE.md step 0)
         working-directory: ${{ github.workspace }}/src
@@ -666,8 +707,8 @@ jobs:
             XZ_ROOT="$PWD/vendor/Madeira/build/xz-ios"
             mkdir -p "$XZ_ROOT"
             if [ ! -d "$XZ_ROOT/xz-$XZ_VER" ]; then
-              curl -fL --retry 3 -o "$RUNNER_TEMP/xz-$XZ_VER.tar.gz" "https://tukaani.org/xz/xz-$XZ_VER.tar.gz" \
-                || curl -fL --retry 3 -o "$RUNNER_TEMP/xz-$XZ_VER.tar.gz" "https://github.com/tukaani-project/xz/releases/download/v$XZ_VER/xz-$XZ_VER.tar.gz"
+              curl -fL --retry 3 --retry-all-errors -o "$RUNNER_TEMP/xz-$XZ_VER.tar.gz" "https://tukaani.org/xz/xz-$XZ_VER.tar.gz" \
+                || curl -fL --retry 3 --retry-all-errors -o "$RUNNER_TEMP/xz-$XZ_VER.tar.gz" "https://github.com/tukaani-project/xz/releases/download/v$XZ_VER/xz-$XZ_VER.tar.gz"
               ls -l "$RUNNER_TEMP/xz-$XZ_VER.tar.gz"
               shasum -a 256 "$RUNNER_TEMP/xz-$XZ_VER.tar.gz"
               tar -xzf "$RUNNER_TEMP/xz-$XZ_VER.tar.gz" -C "$XZ_ROOT"
