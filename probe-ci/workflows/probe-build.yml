@@ -147,6 +147,29 @@
 #   (Darwin -> Darwin|iOS for -dead_strip vs --gc-sections) that the scripted
 #   recipe omits - if the iOS configure/build trips on --gc-sections, run #8's
 #   20-llvm-ios.log will show it and iteration 8 applies that documented edit.
+#
+# Iteration 8 (after run #8, 2026-11-08 - diagnosis: notes/PROBE-RUN8-DIAGNOSIS.md):
+#   Run #8 (40m30s, the longest yet) VERIFIED iteration 7 end to end: llvm-ios
+#   built 76 LLVM libraries, dxmt-ios went 88/88 (the 18 airconv/dxbc failures
+#   are gone; the anticipated AddLLVM.cmake --gc-sections issue never appeared,
+#   so that edit stays unapplied). Steps 1-25 all succeeded; the run failed at
+#   step 26 "Collect and audit static libraries": 12 of the 13 required
+#   libraries were collected (all self-built), only liblzma.a was missing.
+#   Verified root cause: NO build step anywhere produces liblzma.a - it is not
+#   in the source tree, not in the Madeira snapshot (app/Madeira/ carries only
+#   the other snapshot libs), not a gnutls-ios byproduct, and the iOS SDK ships
+#   only liblzma.tbd text stubs, not a static archive. project.yml's -llzma is
+#   the repo's only mention of lzma; the author evidently linked the SDK stub
+#   on his machine. Grace chose route A (2026-11-08) over relaxing the audit
+#   to accept the .tbd (route B): a new step "Build libs - xz (liblzma.a from
+#   source)" immediately before Collect downloads xz 5.4.7 (tukaani.org,
+#   GitHub release mirror as fallback), cross-compiles liblzma for
+#   iphoneos/arm64 with the SDK clang, and installs it under
+#   vendor/Madeira/build/xz-ios/ - inside Collect's existing search roots, so
+#   Collect itself is unchanged. Logs renumbered 22-xz-ios, 23-collect,
+#   24-stage, 25-xcodegen, 26-xcodebuild, 27-package, 28-diff. Still
+#   unverified after this fix: RuntimeStage, xcodegen, xcodebuild, package,
+#   structure diff.
 
 name: probe-build (Porthole rebuild spike)
 
@@ -413,7 +436,8 @@ jobs:
       # project.yml 的 OTHER_LDFLAGS 需要 13 个库：dxmt_combined gmp lzma gnutls hogweed nettle
       # ntdll_unix win32u_unix wineserver avcodec avformat avutil swresample。
       # 其中 gmp/gnutls/hogweed/nettle 四个快照自带（兜底）；其余靠下面各步补建；
-      # liblzma.a 的来源脚本未点名（报告未决项 2），在 Collect 步骤全盘搜索定位。
+      # liblzma.a 无任何脚本产出（运行 #8 确诊），迭代 8 起由 xz 源码交叉编译补建
+      # （见 dxmt-ios 之后的 xz 步）。
       # 顺序（迭代 4，运行 #4 诊断）：依赖库先于使用者——gnutls-ios、ffmpeg、freetype-ios
       # 在 ntdll-unix 之前（见各步注释）。Madeira docs/BUILDING.md 的「Native build chains」
       # 也是这个顺序：gnutls-ios 与 ffmpeg 列在第 1 位，Wine unix side（ntdll/win32u/wineserver）
@@ -624,6 +648,51 @@ jobs:
             exit 1
           }
 
+      - name: Build libs - xz (liblzma.a from source) - iteration 8
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # 迭代 8 新增（诊断 PROBE-RUN8-DIAGNOSIS.md；Grace 2026-11-08 选定方案 A）：
+          # 运行 #8 的 Collect 步 13 个库只缺 liblzma.a——全仓没有一步产出它、快照
+          # app/Madeira/ 里也没有、iOS SDK 只有 .tbd 存根；PROBE-PLAN 未决项 1 的预备
+          # 方案正是「从 xz 源码交叉编译一个（独立小步）」。本步下载 xz 5.4.7 源码
+          # （tukaani.org 主源、GitHub 发布镜像兜底，URL 已于 2026-11-08 本地实测 200），
+          # 用 iphoneos SDK 的 clang 以 arm64 交叉编译，只建 liblzma 静态库（关掉命令行
+          # 工具、脚本、文档与共享库），install 到 vendor/Madeira/build/xz-ios/——正落在
+          # Collect 步的搜索树（find "$F4_BUILD_ROOT" vendor/Madeira/build）内，
+          # Collect 步一字不用改。方案 B（放宽审计接受 SDK .tbd）未采用。
+          {
+            XZ_VER=5.4.7
+            XZ_ROOT="$PWD/vendor/Madeira/build/xz-ios"
+            mkdir -p "$XZ_ROOT"
+            if [ ! -d "$XZ_ROOT/xz-$XZ_VER" ]; then
+              curl -fL --retry 3 -o "$RUNNER_TEMP/xz-$XZ_VER.tar.gz" "https://tukaani.org/xz/xz-$XZ_VER.tar.gz" \
+                || curl -fL --retry 3 -o "$RUNNER_TEMP/xz-$XZ_VER.tar.gz" "https://github.com/tukaani-project/xz/releases/download/v$XZ_VER/xz-$XZ_VER.tar.gz"
+              ls -l "$RUNNER_TEMP/xz-$XZ_VER.tar.gz"
+              shasum -a 256 "$RUNNER_TEMP/xz-$XZ_VER.tar.gz"
+              tar -xzf "$RUNNER_TEMP/xz-$XZ_VER.tar.gz" -C "$XZ_ROOT"
+            fi
+            SDK_PATH="$(xcrun -sdk iphoneos --show-sdk-path)"
+            export CC="$(xcrun -sdk iphoneos -find clang)"
+            export AR="$(xcrun -sdk iphoneos -find ar)"
+            export RANLIB="$(xcrun -sdk iphoneos -find ranlib)"
+            export CFLAGS="-arch arm64 -isysroot $SDK_PATH -miphoneos-version-min=15.0 -O2"
+            export LDFLAGS="-arch arm64 -isysroot $SDK_PATH"
+            cd "$XZ_ROOT/xz-$XZ_VER"
+            ./configure --host=arm64-apple-darwin --prefix="$XZ_ROOT" \
+              --enable-static --disable-shared \
+              --disable-xz --disable-xzdec --disable-lzmadec --disable-lzmainfo \
+              --disable-lzma-links --disable-scripts --disable-doc --disable-nls
+            make -j"$(sysctl -n hw.ncpu)"
+            make install
+            test -f "$XZ_ROOT/lib/liblzma.a"
+            lipo -info "$XZ_ROOT/lib/liblzma.a" || true
+            echo "liblzma.a built from xz $XZ_VER source: $(stat -f%z "$XZ_ROOT/lib/liblzma.a") bytes"
+          } 2>&1 | tee "$PROBE_LOGS/22-xz-ios.log" || {
+            echo '--- xz (liblzma) build failed - see 22-xz-ios.log ---'
+            exit 1
+          }
+
       - name: Collect and audit static libraries (13 required by project.yml)
         working-directory: ${{ github.workspace }}/src
         run: |
@@ -654,7 +723,7 @@ jobs:
             fi
             echo "all 13 required libraries collected into $STAGE_LIB"
             ls -l "$STAGE_LIB"
-          } 2>&1 | tee "$PROBE_LOGS/22-collect-libs.log"
+          } 2>&1 | tee "$PROBE_LOGS/23-collect-libs.log"
 
       - name: Assemble RuntimeStage (libs above + Resources from IPA)
         working-directory: ${{ github.workspace }}/src
@@ -679,13 +748,13 @@ jobs:
             ls -la app/RuntimeStage app/RuntimeStage/lib app/RuntimeStage/Resources
             # 上游自带的 stage 一致性检查（防「用错 stage 构建」出旧引擎包），作为本步的卡口
             tools/check_stage.sh
-          } 2>&1 | tee "$PROBE_LOGS/23-stage.log"
+          } 2>&1 | tee "$PROBE_LOGS/24-stage.log"
 
       - name: Generate Xcode project (xcodegen)
         working-directory: ${{ github.workspace }}/src
         run: |
           set -euxo pipefail
-          ( cd app && xcodegen generate ) 2>&1 | tee "$PROBE_LOGS/24-xcodegen.log"
+          ( cd app && xcodegen generate ) 2>&1 | tee "$PROBE_LOGS/25-xcodegen.log"
           ls app/Porthole.xcodeproj
 
       - name: Build app unsigned (xcodebuild Release, CODE_SIGNING_ALLOWED=NO)
@@ -694,7 +763,7 @@ jobs:
           set -euxo pipefail
           xcodebuild -project app/Porthole.xcodeproj -scheme Porthole -configuration Release \
             -destination 'generic/platform=iOS' -derivedDataPath "$F4_BUILD_ROOT/DD" \
-            CODE_SIGNING_ALLOWED=NO build 2>&1 | tee "$PROBE_LOGS/25-xcodebuild.log"
+            CODE_SIGNING_ALLOWED=NO build 2>&1 | tee "$PROBE_LOGS/26-xcodebuild.log"
           ls -la "$F4_BUILD_ROOT/DD/Build/Products/Release-iphoneos/Porthole.app"
 
       - name: Package unsigned IPA (tools/package_app.sh)
@@ -704,7 +773,7 @@ jobs:
           tools/package_app.sh \
             "$F4_BUILD_ROOT/DD/Build/Products/Release-iphoneos/Porthole.app" \
             "$PROBE_OUT/Porthole-1.2.1-probe-unsigned.ipa" \
-            2>&1 | tee "$PROBE_LOGS/26-package.log"
+            2>&1 | tee "$PROBE_LOGS/27-package.log"
           ls -l "$PROBE_OUT/Porthole-1.2.1-probe-unsigned.ipa"
 
       - name: Structure diff vs upstream IPA (report)
@@ -713,7 +782,7 @@ jobs:
           set -euxo pipefail
           # 只出报告不设卡（人工按 PROBE-PLAN 的核对清单判读）；比对：顶层条目、扩展集合与各自
           # Bundle ID/扩展点、主 Info.plist 关键键（Bundle ID/版本/引擎/Hub）、各主要条目大小量级。
-          python3 - "$UPSTREAM_IPA" "$PROBE_OUT/Porthole-1.2.1-probe-unsigned.ipa" > "$PROBE_OUT/structure-diff.txt" <<'PYEOF' 2>&1 | tee "$PROBE_LOGS/27-diff.log"
+          python3 - "$UPSTREAM_IPA" "$PROBE_OUT/Porthole-1.2.1-probe-unsigned.ipa" > "$PROBE_OUT/structure-diff.txt" <<'PYEOF' 2>&1 | tee "$PROBE_LOGS/28-diff.log"
           import plistlib, sys, zipfile
           def load(path):
               z = zipfile.ZipFile(path)
