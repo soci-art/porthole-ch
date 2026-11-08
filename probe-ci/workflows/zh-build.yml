@@ -271,6 +271,36 @@ jobs:
             echo 'zh-Hans translation applied'
           } 2>&1 | tee "$PROBE_LOGS/00b-translate.log"
 
+      - name: Swift syntax gate (parse translated .swift files)
+        run: |
+          set -euxo pipefail
+          {
+            # zh-build run #1 lesson (notes/ZH-RUN1-DIAGNOSIS.md): translation
+            # unit u0017 carried one extra ASCII quote into IPASigner.swift:138;
+            # apply only does text substitution, so the unterminated string was
+            # caught 48 minutes later by xcodebuild. Parse-check every .swift
+            # file the translation touched (working-tree diff vs the pristine
+            # clone) right here so this class of error fails in seconds.
+            cd "$SRC"
+            changed="$(git diff --name-only -- '*.swift')"
+            echo "translated .swift files to parse: $(printf '%s' "$changed" | grep -c . || true)"
+            : > "$PROBE_LOGS/00c-syntax-gate-errors.log"
+            fail=0
+            while IFS= read -r f; do
+              [ -n "$f" ] || continue
+              if ! xcrun swiftc -parse "$f" 2>>"$PROBE_LOGS/00c-syntax-gate-errors.log"; then
+                echo "SYNTAX GATE FAIL: $f"
+                fail=1
+              fi
+            done <<< "$changed"
+            if [ "$fail" -ne 0 ]; then
+              echo '--- syntax errors ---'
+              cat "$PROBE_LOGS/00c-syntax-gate-errors.log" || true
+              exit 1
+            fi
+            echo 'swift syntax gate passed'
+          } 2>&1 | tee "$PROBE_LOGS/00c-syntax-gate.log"
+
       - name: Toolchain report (Xcode / xcodegen / clang / tools)
         run: |
           set -euxo pipefail
