@@ -55,6 +55,39 @@
 #       unchanged (flags NONE)', and DXMT's own meson compiles the unpatched 4-arg
 #       source. The two paths are mutually exclusive by construction of the probe.
 
+# Iteration 4 (after run #4, 2026-11-08 - diagnosis: notes/PROBE-RUN4-DIAGNOSIS.md):
+#   Run #4 got to step 17 "Build libs - Madeira build/ntdll-unix": 36/41 unixlibs OK,
+#   5 FAILED (bcrypt/secur32/crypt32/dwrite/winegstreamer), then ar failed on the 5
+#   missing .o files. Iteration 3.1's two fixes are VERIFIED (toolchain enum: Xcode.app
+#   really is 26.6; DXMT compat probe + shadow script, FLAGS count 0; wineserver 23/23;
+#   FEX 100%) - none of those steps are touched here. The failures split into two
+#   dependency-order gaps, both confirmed against the pinned Madeira sources, not
+#   guessed from the log (run #4's log carries no per-lib compiler output at all):
+#   (1) bcrypt/secur32/crypt32: build/ntdll-unix/build.sh warns verbatim that
+#       toolchains/gnutls-ios/lib/libgnutls.a is missing and compiles the three to
+#       empty objects - and gnutls-ios was step 22, AFTER ntdll-unix (step 17).
+#       Madeira docs/BUILDING.md lists gnutls-ios and ffmpeg FIRST in its native
+#       build chains, Wine unix side third; the two build scripts' own headers name
+#       their consumers (gnutls-ios -> the three crypto unixlibs; ffmpeg ->
+#       winegstreamer's unix side, which reads toolchains/ffmpeg-ios/include).
+#       So gnutls-ios, ffmpeg and freetype-ios all move BEFORE ntdll-unix.
+#       freetype-ios also matters for dwrite: research/freetype/ is NOT in the repo
+#       (only metal-blend-test/remote-metal are tracked under research/), and
+#       freetype-ios/build.sh is what clones freetype 2.13.3 into research/freetype -
+#       dwrite's TU reads research/freetype/include.
+#   (2) dwrite: its TU also reads wine/build-arm64ec/include for widl-generated
+#       dwrite.h/dwrite_3.h, and NO probe step ever created that tree (same class
+#       of gap as run #1's build-macos). New step "Prepare wine/build-arm64ec"
+#       runs the arm64ec block of Madeira tools/build/build-wine.sh verbatim
+#       (configure --enable-archs=arm64ec, then make only include/dwrite.h and
+#       include/dwrite_3.h). Run #5's logs will prove or refute (2): the .err
+#       capture below is what makes that possible.
+#   (3) Diagnostics: build/ntdll-unix/build.sh (and win32u-unix) write each
+#       unit's compiler stderr to obj/<name>.err - NOT err-*.txt - which is why
+#       run #4's 99-err-dump.log and all 23 err-dump files were 0 bytes. The
+#       ntdll/win32u failure branches now print non-empty obj/*.err, and the
+#       always() collector also sweeps *.err into probe-logs/err-dump/.
+
 name: probe-build (Porthole rebuild spike)
 
 on:
@@ -274,11 +307,41 @@ jobs:
             echo 'wine/build-macos ready'
           } 2>&1 | tee "$PROBE_LOGS/07-wine-macos.log"
 
-      # ---- 补建缺失静态库（报告 B-3）：顺序照 docs/SOURCE.md 的 Rebuilding 第 1 步 ----
+      - name: Prepare wine/build-arm64ec (dwrite headers) - iteration 4
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # 迭代 4（运行 #4 诊断，notes/PROBE-RUN4-DIAGNOSIS.md）：ntdll-unix 的 dwrite 单元
+          # 编译 vendor/Madeira/build/ntdll-unix/dwrite_freetype_ios.c，它 -I
+          # wine/build-arm64ec/include 取 widl 生成的 dwrite.h/dwrite_3.h；干净克隆里这棵树
+          # 不存在（与运行 #1 的 build-macos 是同一类「作者本机构建树缺失」），此前没有任何
+          # 步骤创建它。下面逐字照搬 Madeira tools/build/build-wine.sh（5fda6a0）里生成该树的
+          # 一段：configure --enable-archs=arm64ec，再只 make 两个 dwrite 头文件（不走整树构建）。
+          # 注意与 build-macos 的区别：build/wine-macos/configure.sh 生成的是 build-macos/include
+          # 里的 dwrite.h，ntdll-unix 的 dwrite 单元要的是 build-arm64ec/include 里的那份。
+          {
+            export PATH="$(brew --prefix bison)/bin:$(brew --prefix flex)/bin:vendor/Madeira/toolchains/llvm-mingw-20260421-ucrt-macos-universal/bin:$PATH"
+            WINE=vendor/Madeira/wine
+            if [ ! -f "$WINE/build-arm64ec/Makefile" ]; then
+              echo 'Configuring Wine (ARM64EC headers)...'
+              mkdir -p "$WINE/build-arm64ec"
+              (cd "$WINE/build-arm64ec" && ../configure --enable-archs=arm64ec --without-x --disable-tests --without-freetype --without-gnutls --enable-winegstreamer)
+            fi
+            make -C "$WINE/build-arm64ec" -j"$(sysctl -n hw.ncpu)" include/dwrite.h include/dwrite_3.h
+            test -f "$WINE/build-arm64ec/include/dwrite.h"
+            test -f "$WINE/build-arm64ec/include/dwrite_3.h"
+            echo 'wine/build-arm64ec dwrite headers ready'
+          } 2>&1 | tee "$PROBE_LOGS/08-wine-arm64ec.log"
+
+      # ---- 补建缺失静态库（报告 B-3）----
       # project.yml 的 OTHER_LDFLAGS 需要 13 个库：dxmt_combined gmp lzma gnutls hogweed nettle
       # ntdll_unix win32u_unix wineserver avcodec avformat avutil swresample。
       # 其中 gmp/gnutls/hogweed/nettle 四个快照自带（兜底）；其余靠下面各步补建；
       # liblzma.a 的来源脚本未点名（报告未决项 2），在 Collect 步骤全盘搜索定位。
+      # 顺序（迭代 4，运行 #4 诊断）：依赖库先于使用者——gnutls-ios、ffmpeg、freetype-ios
+      # 在 ntdll-unix 之前（见各步注释）。Madeira docs/BUILDING.md 的「Native build chains」
+      # 也是这个顺序：gnutls-ios 与 ffmpeg 列在第 1 位，Wine unix side（ntdll/win32u/wineserver）
+      # 列在第 3 位；上游 docs/SOURCE.md 第 1 步只列了名字、未定顺序。
 
       - name: Build libs - wineserver base archive (tools/build_wineserver_base.sh)
         working-directory: ${{ github.workspace }}/src
@@ -364,11 +427,58 @@ jobs:
             exit 1
           }
 
+      - name: Build libs - Madeira build/gnutls-ios
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # 迭代 4 移到 ntdll-unix 之前：bcrypt/secur32/crypt32 三个 unixlib 编译时要读
+          # toolchains/gnutls-ios/lib/libgnutls.a（build/ntdll-unix/build.sh 的 WARNING 点名；
+          # build/gnutls-ios/build.sh 头注释亦点名这三个消费者）。快照自带成品时此步仍跑，
+          # Collect 步骤以自建优先、快照兜底。
+          bash vendor/Madeira/build/gnutls-ios/build.sh 2>&1 | tee "$PROBE_LOGS/14-gnutls.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
+
+      - name: Build libs - Madeira build/ffmpeg (avcodec/avformat/avutil/swresample)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # 迭代 4 移到 ntdll-unix 之前：winegstreamer 单元编译时要读 toolchains/ffmpeg-ios/include
+          #（build/ffmpeg/build.sh 头注释点名该消费者；build/ntdll-unix/build.sh 里 FFMPEG_PREFIX 即此）。
+          bash vendor/Madeira/build/ffmpeg/build.sh 2>&1 | tee "$PROBE_LOGS/15-ffmpeg.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
+
+      - name: Build libs - Madeira build/freetype-ios
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # 迭代 4 移到 ntdll-unix 之前：其一，dwrite 单元编译时要读 research/freetype/include
+          #（该目录不在仓库里，由本步在缺失时 clone 出 freetype 2.13.3）；其二，win32u-unix 的
+          # freetype 单元要读 build/freetype-ios/build/include 并合并 libfreetype.a
+          #（build/freetype-ios/build.sh 头注释）。
+          bash vendor/Madeira/build/freetype-ios/build.sh 2>&1 | tee "$PROBE_LOGS/16-freetype.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
+
       - name: Build libs - Madeira build/ntdll-unix
         working-directory: ${{ github.workspace }}/src
         run: |
           set -euxo pipefail
-          bash vendor/Madeira/build/ntdll-unix/build.sh 2>&1 | tee "$PROBE_LOGS/14-ntdll-unix.log" || {
+          # 迭代 4：失败时把 build.sh 逐单元写在 obj/<name>.err 的编译器报错打出来
+          # （它不写 err-*.txt，运行 #4 的 err-dump 因此全空）；Collect 步亦收这些 .err 进 artifact。
+          bash vendor/Madeira/build/ntdll-unix/build.sh 2>&1 | tee "$PROBE_LOGS/17-ntdll-unix.log" || {
+            echo '--- per-lib compiler stderr (iteration 4: build.sh writes obj/<name>.err, not err-*.txt) ---'
+            for ef in vendor/Madeira/build/ntdll-unix/obj/*.err; do
+              [ -s "$ef" ] || continue
+              echo "===== $ef ====="; cat "$ef" || true
+            done
             echo '--- err-*.txt dump (step failed) ---'
             find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
             exit 1
@@ -378,7 +488,12 @@ jobs:
         working-directory: ${{ github.workspace }}/src
         run: |
           set -euxo pipefail
-          bash vendor/Madeira/build/win32u-unix/build.sh 2>&1 | tee "$PROBE_LOGS/15-win32u-unix.log" || {
+          bash vendor/Madeira/build/win32u-unix/build.sh 2>&1 | tee "$PROBE_LOGS/18-win32u-unix.log" || {
+            echo '--- per-lib compiler stderr (iteration 4: build.sh writes obj/<name>.err, not err-*.txt) ---'
+            for ef in vendor/Madeira/build/win32u-unix/obj/*.err; do
+              [ -s "$ef" ] || continue
+              echo "===== $ef ====="; cat "$ef" || true
+            done
             echo '--- err-*.txt dump (step failed) ---'
             find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
             exit 1
@@ -393,7 +508,7 @@ jobs:
         working-directory: ${{ github.workspace }}/src
         run: |
           set -euxo pipefail
-          bash vendor/Madeira/build/wineserver/build.sh 2>&1 | tee "$PROBE_LOGS/16-wineserver.log" || {
+          bash vendor/Madeira/build/wineserver/build.sh 2>&1 | tee "$PROBE_LOGS/19-wineserver.log" || {
             echo '--- err-*.txt dump (step failed) ---'
             find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
             exit 1
@@ -403,38 +518,7 @@ jobs:
         working-directory: ${{ github.workspace }}/src
         run: |
           set -euxo pipefail
-          bash vendor/Madeira/build/dxmt-ios/build.sh 2>&1 | tee "$PROBE_LOGS/17-dxmt-ios.log" || {
-            echo '--- err-*.txt dump (step failed) ---'
-            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
-            exit 1
-          }
-
-      - name: Build libs - Madeira build/ffmpeg (avcodec/avformat/avutil/swresample)
-        working-directory: ${{ github.workspace }}/src
-        run: |
-          set -euxo pipefail
-          bash vendor/Madeira/build/ffmpeg/build.sh 2>&1 | tee "$PROBE_LOGS/18-ffmpeg.log" || {
-            echo '--- err-*.txt dump (step failed) ---'
-            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
-            exit 1
-          }
-
-      - name: Build libs - Madeira build/freetype-ios
-        working-directory: ${{ github.workspace }}/src
-        run: |
-          set -euxo pipefail
-          bash vendor/Madeira/build/freetype-ios/build.sh 2>&1 | tee "$PROBE_LOGS/19-freetype.log" || {
-            echo '--- err-*.txt dump (step failed) ---'
-            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
-            exit 1
-          }
-
-      - name: Build libs - Madeira build/gnutls-ios
-        working-directory: ${{ github.workspace }}/src
-        run: |
-          set -euxo pipefail
-          # gnutls/hogweed/nettle/gmp 快照已带成品；此步仍按 SOURCE.md 顺序跑，Collect 步骤以自建优先、快照兜底。
-          bash vendor/Madeira/build/gnutls-ios/build.sh 2>&1 | tee "$PROBE_LOGS/20-gnutls.log" || {
+          bash vendor/Madeira/build/dxmt-ios/build.sh 2>&1 | tee "$PROBE_LOGS/20-dxmt-ios.log" || {
             echo '--- err-*.txt dump (step failed) ---'
             find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
             exit 1
@@ -575,19 +659,21 @@ jobs:
           PYEOF
           cat "$PROBE_OUT/structure-diff.txt"
 
-      - name: Collect build error files (err-*.txt into probe-logs) - iteration 2
+      - name: Collect build error files (err-*.txt + *.err into probe-logs) - iteration 2, 4
         if: always()
         working-directory: ${{ github.workspace }}/src
         run: |
           # 迭代 2 新增：运行 #1 的教训是逐对象错误只写在源码树的 err-*.txt 里、没进 artifact，
           # 定位被迫靠推断。本步无条件执行：把所有 err-*.txt（及构建目录里的小 *.log）复制进
           # probe-logs/err-dump/，并把非空 err 文件内容汇总进 99-err-dump.log 且回显到本步日志。
+          # 迭代 4 追加：ntdll/win32u 的构建脚本把逐单元编译器报错写在 obj/<name>.err（不是
+          # err-*.txt），运行 #4 的 err-dump 因此全空；本步同样收 *.err。
           # 全程 set +e 且逐项 || true：找不到任何文件时也绝不二次失败。
           set +e
           mkdir -p "$PROBE_LOGS/err-dump"
           : > "$PROBE_LOGS/99-err-dump.log"
           found=0
-          for ef in $(find vendor/Madeira/build build "$F4_BUILD_ROOT" -type f \( -name 'err-*.txt' -o -name '*.log' \) -size -2M 2>/dev/null); do
+          for ef in $(find vendor/Madeira/build build "$F4_BUILD_ROOT" -type f \( -name 'err-*.txt' -o -name '*.err' -o -name '*.log' \) -size -2M 2>/dev/null); do
             found=$((found+1))
             flat="$(echo "$ef" | tr '/' '_')"
             cp -f "$ef" "$PROBE_LOGS/err-dump/$flat" 2>/dev/null || true
