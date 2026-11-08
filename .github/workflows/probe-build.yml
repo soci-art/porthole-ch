@@ -135,7 +135,15 @@ jobs:
             best_ver=''; newest=''
             for app in /Applications/Xcode*.app; do
               [ -d "$app/Contents/Developer" ] || continue
-              ver="$(DEVELOPER_DIR="$app/Contents/Developer" xcodebuild -version 2>/dev/null | head -1 | awk '{print $2}')"
+              # Iteration 3.1 (after run #3): run #3 died HERE with exit 134 (SIGABRT) -
+              # DEVELOPER_DIR xcodebuild -version ABORTED inside the command substitution
+              # for /Applications/Xcode_26.2.app, and set -e + pipefail turned that abort
+              # into a step failure before any real build step ran. Never execute a
+              # foreign Xcode's xcodebuild just to learn its version: read the version
+              # from the app bundle's Info.plist (pure file read, cannot abort); keep an
+              # xcodebuild fallback only, fully guarded with || true.
+              ver="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$app/Contents/Info.plist" 2>/dev/null || true)"
+              if [ -z "$ver" ]; then ver="$(DEVELOPER_DIR="$app/Contents/Developer" xcodebuild -version 2>/dev/null | head -1 | awk '{print $2}' || true)"; fi
               echo "XCODE_ENUM $app -> ${ver:-UNREADABLE}"
               [ -n "$ver" ] || continue
               if [ -z "$best_ver" ] || [ "$(printf '%s\n%s\n' "$best_ver" "$ver" | sort -V | tail -1)" = "$ver" ]; then best_ver="$ver"; newest="$app"; fi
