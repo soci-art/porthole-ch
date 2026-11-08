@@ -1,0 +1,45 @@
+name: release-publish (attach IPA to zh-Hans release)
+
+# One-shot helper for the Porthole zh-Hans release.
+#
+# Why this exists: the zh-Hans IPA is ~200 MB, which exceeds the size limit
+# of the browser file-upload channel used to publish releases by hand, and
+# the GitHub connector has no release-asset upload. The IPA already exists
+# server-side as the zh-build run #3 artifact (porthole-zh-build), so this
+# workflow downloads that artifact, verifies the IPA's SHA-256, uploads it
+# to the existing DRAFT release v1.2.1-zh-Hans (created in the web UI with
+# the final title and Chinese notes), and publishes the draft.
+#
+# Manual trigger only (workflow_dispatch).
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download zh-build run 3 artifact and attach IPA to release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euxo pipefail
+          gh run download 42486598265 --repo soci-art/porthole-ch --name porthole-zh-build --dir artifact
+          ipa="$(find artifact -name 'Porthole-1.2.1-zh-Hans-unsigned.ipa' | head -1)"
+          test -n "$ipa"
+          ls -la "$ipa"
+          digest="$(sha256sum "$ipa" | awk '{print $1}')"
+          echo "IPA sha256: $digest"
+          test "$digest" = "1b71f5d25bb787768e3b021dca9e570c623de8beb7ef2f3745b4d90275761e19"
+          # The release is a UI-created draft whose tag does not exist yet, so
+          # resolve it by ID (the by-tag lookup does not return drafts).
+          rid="$(gh api repos/soci-art/porthole-ch/releases --paginate --jq '.[] | select(.draft == true and .tag_name == "v1.2.1-zh-Hans") | .id' | head -1)"
+          test -n "$rid"
+          echo "draft release id: $rid"
+          gh api --method POST -H 'Accept: application/vnd.github+json' -H 'Content-Type: application/octet-stream' "https://uploads.github.com/repos/soci-art/porthole-ch/releases/$rid/assets?name=Porthole-1.2.1-zh-Hans-unsigned.ipa" --input "$ipa"
+          gh api --method PATCH "repos/soci-art/porthole-ch/releases/$rid" -F draft=false
+          gh release view v1.2.1-zh-Hans --repo soci-art/porthole-ch
