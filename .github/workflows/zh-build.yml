@@ -1,0 +1,927 @@
+# zh-build: identical to probe-build (iteration 8.1) plus one step after the clone:
+# "Apply zh-Hans translation" rewrites the cloned app/Packages trees with the
+# translations in i18n/ (apply_translations.py + manual_patches.py; same scripts
+# verified locally to reproduce the audited zh tree byte-for-byte).
+# Porthole probe build (route B spike) - untranslated English rebuild; only verifies a cloud Mac can rebuild the IPA.
+# Basis: notes/INVESTIGATION.md (route B). Pass criteria: probe-ci/PROBE-PLAN.md.
+#
+# Repo layout (assembly model - this repo stays minimal, CI assembles the source tree):
+#   this repo (soci-art/porthole-ch)  : README.md, probe-ci/, notes/ only - no upstream source.
+#   this file                         : when landed, lives at .github/workflows/probe-build.yml;
+#                                       a reference copy is kept at probe-ci/workflows/probe-build.yml.
+#   checkout step                     : checks out THIS repo only (to get probe-ci/scripts), no submodules.
+#   clone step                        : clones upstream Porthole at tag v1.2.1 (recursive submodules:
+#                                       Madeira + Wine/FEX/DXMT/dock) into $GITHUB_WORKSPACE/src and
+#                                       verifies HEAD = 0786a24fa97647491c942db6279ad3610dcbb48a.
+#   probe-ci/ is then copied into src/ so every later step runs with working-directory = src and the
+#   scripts' original relative-path assumptions hold unchanged (probe-ci/scripts/*.sh, tools/*,
+#   vendor/*, app/* ...). F4_BUILD_ROOT lives inside src (src/build); PROBE_OUT / PROBE_LOGS stay
+#   at the workspace root so the artifact-upload step finds them from any working directory.
+#
+# Manual trigger only (workflow_dispatch): the probe is expensive and expected to iterate.
+#
+# Iteration 2 (after run #1, 2026-11-08 - diagnosis: notes/PROBE-RUN1-DIAGNOSIS.md):
+#   Run #1 failed at "Build libs - wineserver base archive": all 23 Wine server objects failed
+#   in ~5s. Root cause (verified): wine/build-macos/ does not exist in a clean clone - it is the
+#   author's local host-configured Wine tree, and every wine/server/*.c starts with
+#   #include "config.h", which only wine/build-macos/include provides. Neither Porthole's
+#   build_wineserver_base.sh nor Madeira's bootstrap-base.sh creates it; Madeira's
+#   build/wine-macos/configure.sh does (and says so in its header). docs/SOURCE.md omits this
+#   prerequisite entirely. Iteration 2 therefore adds a "Prepare wine/build-macos" step
+#   (setup-llvm-mingw.sh -> build/wine-macos/configure.sh -> Porthole tools/fix_macos_config.sh)
+#   before the library builds, adds freetype/gnutls to the Homebrew set (configure.sh needs
+#   them), and adds failure diagnostics to every library step plus an always() collector that
+#   sweeps err-*.txt files into probe-logs so the next failure is readable from the artifact.
+#
+# Iteration 3 (after run #2, 2026-11-08 - diagnosis: notes/PROBE-RUN2-DIAGNOSIS.md):
+#   Run #2 got past wineserver base (23/23 objects, archive built - the iteration 2 fix is
+#   verified) and failed at "Build libs - DXMT shader headers":
+#   air_tessellation.patched.metal:153 'too many arguments to function call, expected 4,
+#   have 5'. DXMT's pinned source has exactly ONE __metal_atomic_fetch_add_explicit call
+#   (src/airconv/shaders/air_tessellation.metal, in get_next_index) and it passes 4 args;
+#   repo-wide there are ZERO '__METAL_MEMORY_FLAGS_' occurrences in DXMT. The 5th argument
+#   is manufactured by Porthole's own tools/build_dxmt_shader_headers.sh (its patch 0002):
+#   its sed appends ', __METAL_MEMORY_FLAGS_NONE__' because Xcode 27's metal intrinsic
+#   REQUIRES 5 args. This runner's metal (Xcode 26.6) accepts only 4 - although
+#   'metal --version' prints 32023.883, the very number the script's comment associates
+#   with Xcode 27, so version strings cannot be trusted as the gate. Iteration 3:
+#   (1) the toolchain step now enumerates every /Applications/Xcode*.app with its REAL
+#       version (the old filename sort -V could never select the unversioned Xcode.app,
+#       because '.' sorts before '_') and selects the true maximum - run #3's
+#       01-toolchain.log will state Xcode.app's real version either way;
+#   (2) the DXMT headers step is gated on an actual compile probe of the exact 5-arg
+#       call: probe compiles -> the upstream script runs completely untouched; probe
+#       fails -> a shadow copy of the SAME script in the SAME directory (identical path
+#       logic) with only the FLAGS append neutralized runs instead. The diff is printed
+#       and the shadow is asserted to contain zero '__METAL_MEMORY_FLAGS_NONE__'.
+#       Equivalence: __METAL_MEMORY_FLAGS_NONE__ is defined as 0 = no extra flags, which
+#       is exactly what the 4-arg form means; patch 0002 itself states 'Semantics
+#       unchanged (flags NONE)', and DXMT's own meson compiles the unpatched 4-arg
+#       source. The two paths are mutually exclusive by construction of the probe.
+
+# Iteration 4 (after run #4, 2026-11-08 - diagnosis: notes/PROBE-RUN4-DIAGNOSIS.md):
+#   Run #4 got to step 17 "Build libs - Madeira build/ntdll-unix": 36/41 unixlibs OK,
+#   5 FAILED (bcrypt/secur32/crypt32/dwrite/winegstreamer), then ar failed on the 5
+#   missing .o files. Iteration 3.1's two fixes are VERIFIED (toolchain enum: Xcode.app
+#   really is 26.6; DXMT compat probe + shadow script, FLAGS count 0; wineserver 23/23;
+#   FEX 100%) - none of those steps are touched here. The failures split into two
+#   dependency-order gaps, both confirmed against the pinned Madeira sources, not
+#   guessed from the log (run #4's log carries no per-lib compiler output at all):
+#   (1) bcrypt/secur32/crypt32: build/ntdll-unix/build.sh warns verbatim that
+#       toolchains/gnutls-ios/lib/libgnutls.a is missing and compiles the three to
+#       empty objects - and gnutls-ios was step 22, AFTER ntdll-unix (step 17).
+#       Madeira docs/BUILDING.md lists gnutls-ios and ffmpeg FIRST in its native
+#       build chains, Wine unix side third; the two build scripts' own headers name
+#       their consumers (gnutls-ios -> the three crypto unixlibs; ffmpeg ->
+#       winegstreamer's unix side, which reads toolchains/ffmpeg-ios/include).
+#       So gnutls-ios, ffmpeg and freetype-ios all move BEFORE ntdll-unix.
+#       freetype-ios also matters for dwrite: research/freetype/ is NOT in the repo
+#       (only metal-blend-test/remote-metal are tracked under research/), and
+#       freetype-ios/build.sh is what clones freetype 2.13.3 into research/freetype -
+#       dwrite's TU reads research/freetype/include.
+#   (2) dwrite: its TU also reads wine/build-arm64ec/include for widl-generated
+#       dwrite.h/dwrite_3.h, and NO probe step ever created that tree (same class
+#       of gap as run #1's build-macos). New step "Prepare wine/build-arm64ec"
+#       runs the arm64ec block of Madeira tools/build/build-wine.sh verbatim
+#       (configure --enable-archs=arm64ec, then make only include/dwrite.h and
+#       include/dwrite_3.h). Run #5's logs will prove or refute (2): the .err
+#       capture below is what makes that possible.
+#   (3) Diagnostics: build/ntdll-unix/build.sh (and win32u-unix) write each
+#       unit's compiler stderr to obj/<name>.err - NOT err-*.txt - which is why
+#       run #4's 99-err-dump.log and all 23 err-dump files were 0 bytes. The
+#       ntdll/win32u failure branches now print non-empty obj/*.err, and the
+#       always() collector also sweeps *.err into probe-logs/err-dump/.
+
+# Iteration 5 (after run #5, 2026-11-08 - diagnosis: notes/PROBE-RUN5-DIAGNOSIS.md):
+#   Run #5 failed at the NEW step 13 "Prepare wine/build-arm64ec" (3s): configure
+#   reported 'arm64ec PE cross-compiler not found'. The run #5 diagnosis first
+#   blamed a missing compiler - that is WRONG, and run #5's own step-12 log proves
+#   it: 07-wine-macos.log line 36-37 shows the SAME configure finding
+#   'arm64ec-w64-mingw32-clang... arm64ec-w64-mingw32-clang' and its capability
+#   probe answering YES. llvm-mingw 20260421 ships the compiler (Madeira's
+#   setup-llvm-mingw.sh asserts its presence and step 12 would have failed
+#   without it). The real defect is in the iteration-4 step itself: it put the
+#   toolchain on PATH as a RELATIVE entry
+#   ('vendor/Madeira/toolchains/llvm-mingw-.../bin') and then ran configure from a
+#   subshell that had cd'd into vendor/Madeira/wine/build-arm64ec - PATH entries
+#   resolve against the process cwd, so from there the relative entry pointed at
+#   a nonexistent directory and configure saw no compiler. Step 12 never hit
+#   this because Madeira's build/wine-macos/configure.sh exports the toolchain
+#   via an ABSOLUTE path ($R/toolchains/...). Iteration 5 therefore keeps the
+#   verbatim configure+make (no new toolchain, no widl shortcut) and only fixes
+#   the PATH to absolute, plus a pre-flight 'test -x .../arm64ec-w64-mingw32-clang'
+#   so a genuinely missing compiler fails fast with a readable message instead
+#   of configure's generic one. Corollary, verified against the pinned sources
+#   (see PROBE-RUN5-DIAGNOSIS.md '迭代 5 修法'): the dwrite TU's only use of
+#   build-arm64ec/include is the -I flag in build/ntdll-unix/build.sh:155, and
+#   build-macos/configure.sh itself configures --enable-archs=arm64ec and its
+#   step-12 log already shows widl generating dwrite.h/dwrite_3.h in
+#   build-macos/include - so reusing those headers would also be equivalent;
+#   it is kept as the documented fallback, not implemented, because the
+#   verbatim configure is now proven runnable on this runner.
+
+# Iteration 7 (after run #7, 2026-11-08 - diagnosis: notes/PROBE-RUN7-DIAGNOSIS.md):
+#   Run #7 got through wineserver (iteration 6's brew llvm fix VERIFIED - the
+#   objcopy sweep found llvm-objcopy via `brew --prefix llvm`) and failed at
+#   "Build libs - Madeira build/dxmt-ios": 70 succeeded, 18 failed, and all 18
+#   failures are the airconv/dxbc group (incl. madeira_ags). Every .err is the
+#   same first-line error: 'llvm/IR/*.h' file not found. Mechanism, verified
+#   against the pinned Madeira sources (build/dxmt-ios/build.sh lines 25-27,47):
+#   the script does NOT use llvm-config, brew, or any env var - it hardcodes
+#   LLVM_INCLUDES="-I$TOOLCHAINS/llvm-ios-build/include -I$TOOLCHAINS/llvm-project/llvm/include"
+#   and, at archive time, merges EVERY $TOOLCHAINS/llvm-ios-build/lib/libLLVM*.a
+#   into libdxmt_combined.a (failing hard if none exist). Both trees are
+#   gitignored local state the author's machine had and a clean clone lacks -
+#   the same class of gap as run #1's build-macos - and NO probe step ever
+#   created them. The version is pinned by the sources, not a free choice:
+#   build/dxmt-ios/README.md (prerequisite 3) says 'LLVM 15.0.7 cross-built
+#   for iOS-aarch64', dxmt-ios/build.sh's own comment calls it 'the LLVM 15
+#   that airconv already links', and Madeira's build/llvm-ios/build.sh checks
+#   out llvm-project commit 8dfdcc7b7 - the llvmorg-15.0.7 release commit.
+#   The brew llvm installed by iteration 6 CANNOT substitute: it is a current
+#   major version whose headers/libs are for macOS, not iOS-arm64, and whose
+#   API airconv (written against LLVM 15) does not match. New step
+#   "Build libs - Madeira build/llvm-ios" runs Madeira's own script verbatim
+#   (it clones llvm-project itself, builds host llvm-tblgen, then the iOS
+#   library targets only) immediately before dxmt-ios; logs renumbered
+#   20-llvm-ios, 21-dxmt-ios, 22-collect, 23-stage, 24-xcodegen,
+#   25-xcodebuild, 26-package, 27-diff. Known residual risks (see diagnosis):
+#   the LLVM build is the longest single step so far (full clone + two cmake
+#   stages); docs/BUILDING.md's recipe mentions a one-line AddLLVM.cmake edit
+#   (Darwin -> Darwin|iOS for -dead_strip vs --gc-sections) that the scripted
+#   recipe omits - if the iOS configure/build trips on --gc-sections, run #8's
+#   20-llvm-ios.log will show it and iteration 8 applies that documented edit.
+#
+# Iteration 8 (after run #8, 2026-11-08 - diagnosis: notes/PROBE-RUN8-DIAGNOSIS.md):
+#   Run #8 (40m30s, the longest yet) VERIFIED iteration 7 end to end: llvm-ios
+#   built 76 LLVM libraries, dxmt-ios went 88/88 (the 18 airconv/dxbc failures
+#   are gone; the anticipated AddLLVM.cmake --gc-sections issue never appeared,
+#   so that edit stays unapplied). Steps 1-25 all succeeded; the run failed at
+#   step 26 "Collect and audit static libraries": 12 of the 13 required
+#   libraries were collected (all self-built), only liblzma.a was missing.
+#   Verified root cause: NO build step anywhere produces liblzma.a - it is not
+#   in the source tree, not in the Madeira snapshot (app/Madeira/ carries only
+#   the other snapshot libs), not a gnutls-ios byproduct, and the iOS SDK ships
+#   only liblzma.tbd text stubs, not a static archive. project.yml's -llzma is
+#   the repo's only mention of lzma; the author evidently linked the SDK stub
+#   on his machine. Grace chose route A (2026-11-08) over relaxing the audit
+#   to accept the .tbd (route B): a new step "Build libs - xz (liblzma.a from
+#   source)" immediately before Collect downloads xz 5.4.7 (tukaani.org,
+#   GitHub release mirror as fallback), cross-compiles liblzma for
+#   iphoneos/arm64 with the SDK clang, and installs it under
+#   vendor/Madeira/build/xz-ios/ - inside Collect's existing search roots, so
+#   Collect itself is unchanged. Logs renumbered 22-xz-ios, 23-collect,
+#   24-stage, 25-xcodegen, 26-xcodebuild, 27-package, 28-diff. Still
+#   unverified after this fix: RuntimeStage, xcodegen, xcodebuild, package,
+#   structure diff.
+#
+# Iteration 8.1 (after runs #9 and #10, 2026-11-08 - diagnosis:
+#   notes/PROBE-RUN10-DIAGNOSIS.md):
+#   Runs #9 (5m09s) and #10 (4m54s) BOTH died at step 5 "Download upstream
+#   IPA" with curl exit code 56 (CURLE_RECV_ERROR) - same step, same error,
+#   ~25 minutes apart, so this is no longer treated as a one-off flake.
+#   The old command (curl -fL --retry 3) restarted the 200 MB download from
+#   zero on every retry and never got it through. Iteration 8.1 changes
+#   ONLY that step: a resume loop (curl -C -, up to 8 rounds, stalled-
+#   transfer abort via --speed-limit/--speed-time, delete-and-restart if
+#   the server refuses ranges) with the pinned sha256 still the final
+#   arbiter, and the step now tees its output to
+#   probe-logs/03-download-upstream.log (runs #9/#10 left no log for this
+#   step in the artifact, forcing diagnosis from the job annotation alone).
+#   The xz step's two curls also gain --retry-all-errors. Nothing else is
+#   touched: iteration 8's xz fix remains exactly as run #9/#10 carried it,
+#   still unverified.
+
+name: zh-build (Porthole zh-Hans)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  UPSTREAM_REPO_URL: https://github.com/tylerkaska112/Porthole.git
+  UPSTREAM_TAG: v1.2.1
+  UPSTREAM_HEAD: 0786a24fa97647491c942db6279ad3610dcbb48a
+  SRC: ${{ github.workspace }}/src
+  UPSTREAM_IPA_URL: https://github.com/tylerkaska112/Porthole/releases/download/v1.2.1/Porthole-1.2.1-688.ipa
+  UPSTREAM_IPA_SHA256: 5a6d06aa00cd05d76c5fab1a0a0380a38c43fcdd4790bf6f845744fb7e0dfaf7
+  # Default build root of stage_runtime.sh / check_stage.sh (tools/local.env is not committed;
+  # in CI use a path inside the cloned source tree instead of the author's external drive).
+  F4_BUILD_ROOT: ${{ github.workspace }}/src/build
+  PROBE_OUT: ${{ github.workspace }}/probe-output
+  PROBE_LOGS: ${{ github.workspace }}/probe-logs
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  probe:
+    # Runner choice: docs/SOURCE.md asks for Xcode 27 + its Metal toolchain. macos-26 (macOS 26)
+    # is the newest GitHub-hosted macOS image and ships the newest Xcode line, closest to the ask.
+    # [UNKNOWN] Whether any hosted image already provides Xcode 27 cannot be pre-verified; the
+    # toolchain step below lists every Xcode in /Applications, selects the newest, and records
+    # the real versions in the logs/artifacts - confirming this is the probe's first job.
+    # If the macos-26 label is unavailable when the repo goes live, fall back to macos-15 and
+    # record the version gap in PROBE-PLAN.
+    runs-on: macos-26
+    # Duration is unknown (first from-scratch rebuild of the engine libs on a clean machine;
+    # upstream docs/SOURCE.md admits it has never been done). 360 min is the hosted-runner
+    # per-job cap; if the probe times out, split jobs or add caching (see PROBE-PLAN unknowns).
+    timeout-minutes: 360
+
+    steps:
+      - name: Checkout this repo (probe-ci scripts only - no submodules, no source)
+        uses: actions/checkout@v4
+
+      - name: Clone upstream Porthole v1.2.1 into src (recursive submodules) and verify pinned HEAD
+        run: |
+          set -euxo pipefail
+          mkdir -p "$PROBE_LOGS" "$PROBE_OUT"
+          {
+            git clone --branch "$UPSTREAM_TAG" --recurse-submodules "$UPSTREAM_REPO_URL" "$SRC"
+            # Belt and braces: vendor/Madeira is a submodule with its own wine/FEX/dxmt/madeira-dock
+            # submodules; all pinned, all needed - make sure the nested ones are all present.
+            git -C "$SRC" submodule update --init --recursive
+            head_sha="$(git -C "$SRC" rev-parse HEAD)"
+            echo "upstream HEAD: $head_sha (expect $UPSTREAM_HEAD, tag $UPSTREAM_TAG)"
+            test "$head_sha" = "$UPSTREAM_HEAD"
+            git -C "$SRC" submodule status --recursive | head -40
+            # probe-ci scripts assume they sit at the source repo root (probe-ci/scripts/*.sh);
+            # copy probe-ci into the cloned tree so all later steps keep those relative paths.
+            cp -R "$GITHUB_WORKSPACE/probe-ci" "$SRC/probe-ci"
+            ls "$SRC/probe-ci/scripts"
+          } 2>&1 | tee "$PROBE_LOGS/00-clone-upstream.log"
+
+      - name: Apply zh-Hans translation (i18n/ apply + manual patches)
+        run: |
+          set -euxo pipefail
+          {
+            mkdir -p "$RUNNER_TEMP/zhwork"
+            cp -a "$SRC/app" "$SRC/Packages" "$RUNNER_TEMP/zhwork/"
+            python3 "$GITHUB_WORKSPACE/i18n/apply_translations.py" "$RUNNER_TEMP/zhwork" "$GITHUB_WORKSPACE/i18n" "$RUNNER_TEMP/zhout"
+            cat "$RUNNER_TEMP/apply-report.json"
+            rsync -a "$RUNNER_TEMP/zhout/app/" "$SRC/app/"
+            rsync -a "$RUNNER_TEMP/zhout/Packages/" "$SRC/Packages/"
+            python3 "$GITHUB_WORKSPACE/i18n/manual_patches.py" "$SRC"
+            grep -q '应用内存' "$SRC/app/Sources/Core/Telemetry.swift"
+            grep -q '删除已下载的文件' "$SRC/app/Sources/UI/SteamPage.swift"
+            echo 'zh-Hans translation applied'
+          } 2>&1 | tee "$PROBE_LOGS/00b-translate.log"
+
+      - name: Toolchain report (Xcode / xcodegen / clang / tools)
+        run: |
+          set -euxo pipefail
+          mkdir -p "$PROBE_LOGS" "$PROBE_OUT"
+          {
+            sw_vers || true
+            echo '--- Xcodes in /Applications ---'
+            ls /Applications | grep -i xcode || true
+            echo '--- every Xcode in /Applications, with its REAL version (iteration 3) ---'
+            # Runs #1/#2 selected by filename (sort -V), which can never pick the
+            # unversioned Xcode.app ('.' sorts before '_'), so a 27.x hiding behind
+            # Xcode.app would have been silently ignored. Enumerate real versions
+            # via DEVELOPER_DIR and select the true maximum; this log line is the
+            # authoritative answer to "what is Xcode.app" for this runner image.
+            best_ver=''; newest=''
+            for app in /Applications/Xcode*.app; do
+              [ -d "$app/Contents/Developer" ] || continue
+              # Iteration 3.1 (after run #3): run #3 died HERE with exit 134 (SIGABRT) -
+              # DEVELOPER_DIR xcodebuild -version ABORTED inside the command substitution
+              # for /Applications/Xcode_26.2.app, and set -e + pipefail turned that abort
+              # into a step failure before any real build step ran. Never execute a
+              # foreign Xcode's xcodebuild just to learn its version: read the version
+              # from the app bundle's Info.plist (pure file read, cannot abort); keep an
+              # xcodebuild fallback only, fully guarded with || true.
+              ver="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$app/Contents/Info.plist" 2>/dev/null || true)"
+              if [ -z "$ver" ]; then ver="$(DEVELOPER_DIR="$app/Contents/Developer" xcodebuild -version 2>/dev/null | head -1 | awk '{print $2}' || true)"; fi
+              echo "XCODE_ENUM $app -> ${ver:-UNREADABLE}"
+              [ -n "$ver" ] || continue
+              if [ -z "$best_ver" ] || [ "$(printf '%s\n%s\n' "$best_ver" "$ver" | sort -V | tail -1)" = "$ver" ]; then best_ver="$ver"; newest="$app"; fi
+            done
+            echo "--- select newest Xcode: ${newest:-none} (real version ${best_ver:-unknown}) ---"
+            if [ -n "$newest" ]; then sudo xcode-select -s "$newest/Contents/Developer"; fi
+            xcode-select -p
+            xcodebuild -version
+            echo '--- compilers & build tools ---'
+            clang --version | head -2
+            xcrun -sdk iphoneos --show-sdk-path
+            xcrun -sdk macosx metal --version || echo 'metal toolchain: NOT FOUND (DXMT shader headers step needs it)'
+            command -v xcodegen && xcodegen --version || echo 'xcodegen: NOT INSTALLED (next step installs)'
+            command -v cmake && cmake --version | head -1 || echo 'cmake: not installed'
+            command -v ninja && ninja --version || echo 'ninja: not installed'
+            command -v meson && meson --version || echo 'meson: not installed'
+          } 2>&1 | tee "$PROBE_LOGS/01-toolchain.log"
+
+      - name: Install build tools (Homebrew - xcodegen/cmake/ninja/meson)
+        run: |
+          set -euxo pipefail
+          # [UNKNOWN] There is no authoritative list of host tools Madeira's build scripts need;
+          # install the common source-build set. Anything missing shows up as "command not found"
+          # in the matching step log - see the failure table in PROBE-PLAN.md.
+          # freetype + gnutls are required by Madeira's build/wine-macos/configure.sh (iteration 2):
+          # config.h must enable the font/crypto code the unix libraries compile against.
+          # Iteration 6 (after run #6): +llvm. Madeira build/wineserver/build.sh
+          # (5fda6a0, lines 442-444) ends with an objcopy sweep that needs
+          # llvm-objcopy, looked up via `command -v` or `brew --prefix llvm`;
+          # run #6 compiled all 27 wineserver objects fine and died only on
+          # that missing binary. brew llvm is keg-only; `brew --prefix llvm`
+          # resolves without linking, which is exactly the script's fallback.
+          brew install xcodegen cmake ninja meson pkg-config autoconf automake libtool bison flex gettext freetype gnutls llvm || \
+            brew install xcodegen cmake ninja meson pkg-config freetype gnutls llvm
+          xcodegen --version
+          cmake --version | head -1
+          echo 'export PATH="$(brew --prefix bison)/bin:$(brew --prefix flex)/bin:$PATH"' >> "$GITHUB_ENV" || true
+
+      - name: Verify pinned commits (Madeira + nested submodules)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          {
+            git submodule status --recursive
+            test "$(git -C vendor/Madeira rev-parse HEAD)" = "5fda6a0e9543e5de1df010aff35748ab913fd0d9"
+            # The four nested pins are from the "Pinned upstream commits" table in docs/SOURCE.md;
+            # submodule status prints each submodule HEAD first on its line - check all four appear.
+            status="$(git submodule status --recursive)"
+            for sha in 80c859a76e1073bd41095b1b0abc43135efdd475 \
+                       1dc6ed4932bd231df1c53dd7b8043ffdee0ac34a \
+                       1f617cd5bbe7a71bc0ad9083589cb44c747cdc9b \
+                       67780ba92e60dbfac4fe80eaf2ce34b9ea1a1c60; do
+              echo "$status" | grep -q "$sha" || { echo "MISSING pinned commit $sha"; exit 1; }
+            done
+            echo 'all pinned commits match docs/SOURCE.md'
+          } 2>&1 | tee "$PROBE_LOGS/02-pinned-commits.log"
+
+      - name: Download upstream IPA and verify sha256 (resumable) - iteration 8.1
+        run: |
+          set -euxo pipefail
+          # 迭代 8.1（运行 #9、#10 连续在此步失败，诊断 PROBE-RUN10-DIAGNOSIS.md）：
+          # 两次都是 curl 退出码 56（CURLE_RECV_ERROR）在下载 200MB 官方 IPA 时中断，
+          # 相隔约 25 分钟、形态完全相同，不再按偶发抖动处理。原命令 --retry 3 每次
+          # 从零重下、四次尝试全断在半路。改为断点续传循环：每轮带 -C - 从已下载的
+          # 部分续传（进度不丢）、--speed-limit/--speed-time 让卡死传输自动中断进
+          # 下一轮、服务端拒绝续传（退出码 33）时删档从零重来，最多 8 轮；最终仍
+          # 以固定 sha256 校验为准。本步输出此前没留 artifact 日志（#9/#10 只能靠
+          # 作业标注推断失败点），这次起 tee 进 probe-logs/03-download-upstream.log。
+          IPA_TMP="$RUNNER_TEMP/Porthole-1.2.1-688.ipa"
+          rm -f "$IPA_TMP"
+          {
+            ok=0
+            for i in 1 2 3 4 5 6 7 8; do
+              echo "--- download attempt $i (resume offset: $(stat -f%z "$IPA_TMP" 2>/dev/null || echo 0) bytes) ---"
+              rc=0
+              curl -fL -C - --retry 2 --retry-all-errors --connect-timeout 30 \
+                --speed-limit 10240 --speed-time 60 \
+                -o "$IPA_TMP" "$UPSTREAM_IPA_URL" || rc=$?
+              if [ "$rc" = 0 ]; then ok=1; break; fi
+              echo "curl exited $rc on attempt $i"
+              if [ "$rc" = 33 ]; then echo 'server refused byte-range resume; deleting partial file'; rm -f "$IPA_TMP"; fi
+              sleep 5
+            done
+            test "$ok" = 1
+            ls -l "$IPA_TMP"
+            echo "$UPSTREAM_IPA_SHA256  $IPA_TMP" | shasum -a 256 -c -
+          } 2>&1 | tee "$PROBE_LOGS/03-download-upstream.log"
+          echo "UPSTREAM_IPA=$IPA_TMP" >> "$GITHUB_ENV"
+
+      - name: Apply engine patches 0172-0176 (docs/SOURCE.md step 0)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          {
+            git -C vendor/Madeira apply --whitespace=nowarn ../../patches/0172-engine-r28-madeira.patch
+            git -C vendor/Madeira/FEX apply --whitespace=nowarn ../../../patches/0173-engine-r28-fex.patch
+            git -C vendor/Madeira/wine apply --whitespace=nowarn ../../../patches/0174-engine-r28-wine.patch
+            git -C vendor/Madeira/dxmt apply --whitespace=nowarn ../../../patches/0175-engine-r28-dxmt.patch
+            git -C vendor/Madeira/madeira-dock apply --whitespace=nowarn ../../../patches/0176-engine-r28-madeira-dock.patch
+            echo 'patches 0172-0176 applied'
+            # Diagnostic only (not a gate): the engine input digest recorded in Engine.xcconfig
+            # should match the current source (pin + all patches + Runtime glue).
+            tools/engine.sh show || true
+          } 2>&1 | tee "$PROBE_LOGS/03-patches.log"
+
+      - name: Extract runtime Resources from upstream IPA
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # Resources come from the IPA (report B-2: the Madeira snapshot lacks the i386 farm,
+          # the gl dylibs and more, so stage_runtime.sh alone cannot produce the full set).
+          # probe-ci/ was copied into src/ by the clone step, so this relative path resolves here.
+          bash probe-ci/scripts/extract_runtime_resources.sh \
+            "$UPSTREAM_IPA" "$F4_BUILD_ROOT/probe-resources" \
+            --manifest "$PROBE_OUT/resources-manifest.txt" \
+            --sha256 "$UPSTREAM_IPA_SHA256" \
+            2>&1 | tee "$PROBE_LOGS/04-extract-resources.log"
+
+      - name: Prepare Local.xcconfig (official build identity values)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # The script's argument is the SOURCE repo root - now src/, not the workspace root.
+          bash probe-ci/scripts/prepare_local_xcconfig.sh "$SRC" \
+            2>&1 | tee "$PROBE_LOGS/05-local-xcconfig.log"
+
+      - name: Prepare StikJIT framework (tools/prepare_stikjit.py)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # The script itself verifies a pinned SHA-256 (444b8d43...7e85) and installs
+          # StikJIT 1.5.0 from the official StikDebug release into app/Vendor/.
+          python3 tools/prepare_stikjit.py 2>&1 | tee "$PROBE_LOGS/06-stikjit.log"
+          ls app/Vendor/StikJIT.xcframework
+
+      - name: Prepare wine/build-macos (llvm-mingw + configure + fix config.h) - iteration 2
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          {
+            # 根因修复（运行 #1 诊断，notes/PROBE-RUN1-DIAGNOSIS.md）：wine/build-macos 是作者本机的
+            # 主机配置构建树，干净克隆里不存在；wine/server/*.c 第一行 #include "config.h" 只能由
+            # wine/build-macos/include 提供，缺它时全部对象在预处理阶段失败（运行 #1 第 12 步 23/23 全灭）。
+            # Madeira 的 build/wineserver/bootstrap-base.sh 与 Porthole 的 build_wineserver_base.sh
+            # 都只是「用现成 build-macos 编底档」，不生成它；唯一生成者是 Madeira 自己的
+            # build/wine-macos/configure.sh（其文件头明说 Nothing else creates it）。docs/SOURCE.md
+            # 漏写了这一步。下面三步全是项目自带脚本，按作者本机流程原样执行：
+            # 1) setup-llvm-mingw.sh：把 llvm-mingw 20260421（带固定 sha256）下到 vendor/Madeira/toolchains/，
+            #    configure.sh 的 --enable-archs=arm64ec 需要它提供的 arm64ec-w64-mingw32-clang。
+            bash vendor/Madeira/tools/build/setup-llvm-mingw.sh
+            # 2) configure.sh：在 wine/build-macos 里跑 ../configure 并生成全部 widl 头，
+            #    自检 include/config.h、include/wtypes.h、include/dwrite.h 必须存在。
+            bash vendor/Madeira/build/wine-macos/configure.sh
+            # 3) fix_macos_config.sh（Porthole 自带）：把新生成的 config.h 与作者原构建树对齐 3 行
+            #    （GnuTLS 两个 define 打开、HAVE_PIPE2 关掉）；brew gnutls 已装时前两处 sed 自动无操作。
+            tools/fix_macos_config.sh
+            ls -l vendor/Madeira/wine/build-macos/include/config.h
+            echo 'wine/build-macos ready'
+          } 2>&1 | tee "$PROBE_LOGS/07-wine-macos.log"
+
+      - name: Prepare wine/build-arm64ec (dwrite headers) - iteration 5
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # 迭代 5（运行 #5 诊断，notes/PROBE-RUN5-DIAGNOSIS.md）：ntdll-unix 的 dwrite 单元
+          # 编译 vendor/Madeira/build/ntdll-unix/dwrite_freetype_ios.c，它 -I
+          # wine/build-arm64ec/include 取 widl 生成的 dwrite.h/dwrite_3.h；干净克隆里这棵树
+          # 不存在（与运行 #1 的 build-macos 是同一类「作者本机构建树缺失」），此前没有任何
+          # 步骤创建它。下面逐字照搬 Madeira tools/build/build-wine.sh（5fda6a0）里生成该树的
+          # 一段：configure --enable-archs=arm64ec，再只 make 两个 dwrite 头文件（不走整树构建）。
+          # 迭代 4 的教训（运行 #5 的真根因）：第 13 步曾把 llvm-mingw 用相对路径挂上 PATH，
+          # 再 cd 进 build-arm64ec 子目录跑 configure——PATH 相对项按进程当前目录解析，cd 后
+          # 便指向不存在的目录，configure 遂报找不到编译器；而运行 #5 自身的第 12 步日志证明
+          # 编译器本就存在且可用（build-macos/configure.sh 用绝对路径 $R/toolchains/... 挂 PATH，
+          # configure 当场找到 arm64ec-w64-mingw32-clang 且能力探测为 yes）。所以本步改用绝对
+          # 路径挂 PATH，并在 configure 前先验 test -x：编译器真缺失时直接报明错，不再让
+          # configure 的通用报错误导诊断。注意 build-macos/configure.sh 本身也是
+          # --enable-archs=arm64ec 配置、第 12 步日志已显示 widl 在 build-macos/include 里生成
+          # 了 dwrite.h/dwrite_3.h——复用那份头是等价的备用路线，见诊断附录；主路线仍走原样
+          # configure，因为它已被证明能在本运行器上跑通。
+          {
+            TOOLCHAIN="$GITHUB_WORKSPACE/src/vendor/Madeira/toolchains/llvm-mingw-20260421-ucrt-macos-universal/bin"
+            export PATH="$(brew --prefix bison)/bin:$(brew --prefix flex)/bin:$TOOLCHAIN:$PATH"
+            test -x "$TOOLCHAIN/arm64ec-w64-mingw32-clang" || { echo 'ERROR: arm64ec-w64-mingw32-clang not found in llvm-mingw toolchain' >&2; ls "$TOOLCHAIN" | head -20; exit 1; }
+            WINE=vendor/Madeira/wine
+            if [ ! -f "$WINE/build-arm64ec/Makefile" ]; then
+              echo 'Configuring Wine (ARM64EC headers)...'
+              mkdir -p "$WINE/build-arm64ec"
+              (cd "$WINE/build-arm64ec" && ../configure --enable-archs=arm64ec --without-x --disable-tests --without-freetype --without-gnutls --enable-winegstreamer)
+            fi
+            make -C "$WINE/build-arm64ec" -j"$(sysctl -n hw.ncpu)" include/dwrite.h include/dwrite_3.h
+            test -f "$WINE/build-arm64ec/include/dwrite.h"
+            test -f "$WINE/build-arm64ec/include/dwrite_3.h"
+            echo 'wine/build-arm64ec dwrite headers ready'
+          } 2>&1 | tee "$PROBE_LOGS/08-wine-arm64ec.log"
+
+      # ---- 补建缺失静态库（报告 B-3）----
+      # project.yml 的 OTHER_LDFLAGS 需要 13 个库：dxmt_combined gmp lzma gnutls hogweed nettle
+      # ntdll_unix win32u_unix wineserver avcodec avformat avutil swresample。
+      # 其中 gmp/gnutls/hogweed/nettle 四个快照自带（兜底）；其余靠下面各步补建；
+      # liblzma.a 无任何脚本产出（运行 #8 确诊），迭代 8 起由 xz 源码交叉编译补建
+      # （见 dxmt-ios 之后的 xz 步）。
+      # 顺序（迭代 4，运行 #4 诊断）：依赖库先于使用者——gnutls-ios、ffmpeg、freetype-ios
+      # 在 ntdll-unix 之前（见各步注释）。Madeira docs/BUILDING.md 的「Native build chains」
+      # 也是这个顺序：gnutls-ios 与 ffmpeg 列在第 1 位，Wine unix side（ntdll/win32u/wineserver）
+      # 列在第 3 位；上游 docs/SOURCE.md 第 1 步只列了名字、未定顺序。
+
+      - name: Build libs - wineserver base archive (tools/build_wineserver_base.sh)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # build/wineserver/build.sh 只往一个现成 libwineserver.a 里换对象，而仓库不跟踪该底档；
+          # 这个 Porthole 工具脚本用 Wine server/*.c 现编出底档，必须先于 wineserver 步骤跑。
+          tools/build_wineserver_base.sh 2>&1 | tee "$PROBE_LOGS/10-wineserver-base.log" || {
+            echo '--- err-*.txt dump (step failed; the Collect step also sweeps these into the artifact) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
+
+      - name: Build libs - DXMT shader headers + DXMT patches (iteration 3 metal atomic compat)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # Iteration 3 gate (diagnosis: notes/PROBE-RUN2-DIAGNOSIS.md): the ONLY 5-arg
+          # atomic call in this build is manufactured by tools/build_dxmt_shader_headers.sh
+          # itself (patch 0002's sed appends ', __METAL_MEMORY_FLAGS_NONE__' for Xcode 27's
+          # metal). Gate on a real compile probe of that exact call - NOT on version
+          # strings ('metal --version' here prints 32023.883 yet rejects the 5-arg form).
+          # Probe OK -> upstream script untouched. Probe fails -> shadow copy of the same
+          # script in the same directory (identical path logic), FLAGS append neutralized,
+          # diff printed, shadow asserted free of '__METAL_MEMORY_FLAGS_NONE__'.
+          {
+            echo '--- metal 5-arg atomic capability probe (iteration 3) ---'
+            cat > "$RUNNER_TEMP/probe_atomic5.metal" <<'EOF'
+          #include <metal_stdlib>
+          using namespace metal;
+          kernel void probe_atomic5() {
+            threadgroup int c;
+            __metal_atomic_fetch_add_explicit(&c, 1, int(memory_order_relaxed), __METAL_MEMORY_SCOPE_THREADGROUP__, __METAL_MEMORY_FLAGS_NONE__);
+          }
+          EOF
+            if xcrun -sdk macosx metal -o "$RUNNER_TEMP/probe_atomic5.air" -c "$RUNNER_TEMP/probe_atomic5.metal" -std=metal3.1 --target=air64-apple-macos14.0 2>"$RUNNER_TEMP/probe_atomic5.err"; then
+              echo 'METAL_ATOMIC5: supported - upstream script runs as-is'
+              tools/build_dxmt_shader_headers.sh
+            else
+              echo 'METAL_ATOMIC5: NOT supported - probe compiler output:'
+              cat "$RUNNER_TEMP/probe_atomic5.err" || true
+              echo '--- building compat shadow script (only the FLAGS append is neutralized) ---'
+              sed 's/, __METAL_MEMORY_FLAGS_NONE__//' tools/build_dxmt_shader_headers.sh > tools/.probe-build_dxmt_shader_headers.sh
+              echo '--- diff: upstream script vs compat shadow (expect exactly one line) ---'
+              diff tools/build_dxmt_shader_headers.sh tools/.probe-build_dxmt_shader_headers.sh || true
+              test "$(grep -c '__METAL_MEMORY_FLAGS_NONE__' tools/.probe-build_dxmt_shader_headers.sh)" = '0'
+              chmod +x tools/.probe-build_dxmt_shader_headers.sh
+              tools/.probe-build_dxmt_shader_headers.sh
+              rm -f tools/.probe-build_dxmt_shader_headers.sh
+              echo '--- compat audit: FLAGS occurrences in generated air_tessellation.patched.metal (expect 0) ---'
+              grep -c '__METAL_MEMORY_FLAGS_' vendor/Madeira/build/dxmt-ios/shader-headers/air_tessellation.patched.metal || echo 'none found (0)'
+            fi
+          } 2>&1 | tee "$PROBE_LOGS/11-dxmt-headers.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
+          tools/apply_dxmt_patch.sh 2>&1 | tee -a "$PROBE_LOGS/11-dxmt-headers.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
+
+      - name: Build libs - Madeira patch script (tools/apply_madeira_patch.sh)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # 注意：此脚本主体补丁 0006 已 RETIRED（脚本头有说明，多半走 already-applied 分支），
+          # 保留此步只为与 docs/SOURCE.md 的官方顺序完全一致，输出原样进日志供判读。
+          tools/apply_madeira_patch.sh 2>&1 | tee "$PROBE_LOGS/12-madeira-patch.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            echo 'apply_madeira_patch.sh failed - see log; patch 0006 is retired, judge from log whether this matters'
+          }
+
+      - name: Build libs - FEX iOS (tools/build_fex_ios.sh)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          tools/build_fex_ios.sh 2>&1 | tee "$PROBE_LOGS/13-fex.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
+
+      - name: Build libs - Madeira build/gnutls-ios
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # 迭代 4 移到 ntdll-unix 之前：bcrypt/secur32/crypt32 三个 unixlib 编译时要读
+          # toolchains/gnutls-ios/lib/libgnutls.a（build/ntdll-unix/build.sh 的 WARNING 点名；
+          # build/gnutls-ios/build.sh 头注释亦点名这三个消费者）。快照自带成品时此步仍跑，
+          # Collect 步骤以自建优先、快照兜底。
+          bash vendor/Madeira/build/gnutls-ios/build.sh 2>&1 | tee "$PROBE_LOGS/14-gnutls.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
+
+      - name: Build libs - Madeira build/ffmpeg (avcodec/avformat/avutil/swresample)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # 迭代 4 移到 ntdll-unix 之前：winegstreamer 单元编译时要读 toolchains/ffmpeg-ios/include
+          #（build/ffmpeg/build.sh 头注释点名该消费者；build/ntdll-unix/build.sh 里 FFMPEG_PREFIX 即此）。
+          bash vendor/Madeira/build/ffmpeg/build.sh 2>&1 | tee "$PROBE_LOGS/15-ffmpeg.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
+
+      - name: Build libs - Madeira build/freetype-ios
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # 迭代 4 移到 ntdll-unix 之前：其一，dwrite 单元编译时要读 research/freetype/include
+          #（该目录不在仓库里，由本步在缺失时 clone 出 freetype 2.13.3）；其二，win32u-unix 的
+          # freetype 单元要读 build/freetype-ios/build/include 并合并 libfreetype.a
+          #（build/freetype-ios/build.sh 头注释）。
+          bash vendor/Madeira/build/freetype-ios/build.sh 2>&1 | tee "$PROBE_LOGS/16-freetype.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
+
+      - name: Build libs - Madeira build/ntdll-unix
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # 迭代 4：失败时把 build.sh 逐单元写在 obj/<name>.err 的编译器报错打出来
+          # （它不写 err-*.txt，运行 #4 的 err-dump 因此全空）；Collect 步亦收这些 .err 进 artifact。
+          bash vendor/Madeira/build/ntdll-unix/build.sh 2>&1 | tee "$PROBE_LOGS/17-ntdll-unix.log" || {
+            echo '--- per-lib compiler stderr (iteration 4: build.sh writes obj/<name>.err, not err-*.txt) ---'
+            for ef in vendor/Madeira/build/ntdll-unix/obj/*.err; do
+              [ -s "$ef" ] || continue
+              echo "===== $ef ====="; cat "$ef" || true
+            done
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
+
+      - name: Build libs - Madeira build/win32u-unix
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          bash vendor/Madeira/build/win32u-unix/build.sh 2>&1 | tee "$PROBE_LOGS/18-win32u-unix.log" || {
+            echo '--- per-lib compiler stderr (iteration 4: build.sh writes obj/<name>.err, not err-*.txt) ---'
+            for ef in vendor/Madeira/build/win32u-unix/obj/*.err; do
+              [ -s "$ef" ] || continue
+              echo "===== $ef ====="; cat "$ef" || true
+            done
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
+          # docs/REBUILD.md 已知陷阱：此脚本每次把 FreeType 再并入 libwin32u_unix.a，
+          # 成员数应为 89（131/173 = 有重复成员，需按 REBUILD.md 手工去重）。这里只报告成员数，不自动改。
+          for a in $(find vendor/Madeira build -name 'libwin32u_unix.a' 2>/dev/null); do
+            echo "$a members: $(ar t "$a" | wc -l) (expect 89)"
+          done
+
+      - name: Build libs - Madeira build/wineserver
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          bash vendor/Madeira/build/wineserver/build.sh 2>&1 | tee "$PROBE_LOGS/19-wineserver.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
+
+      - name: Build libs - Madeira build/llvm-ios (LLVM 15.0.7 for dxmt airconv) - iteration 7
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # 迭代 7 新增（诊断 PROBE-RUN7-DIAGNOSIS.md）：dxmt-ios/build.sh 把 LLVM 写死在
+          # vendor/Madeira/toolchains/ 下——头文件来自 llvm-ios-build/include + llvm-project/llvm/include，
+          # 链接（合并 libdxmt_combined.a）需要 llvm-ios-build/lib/libLLVM*.a 全部。这两棵树是
+          # gitignored 的作者本机状态，干净克隆里没有，此前没有任何探针步生成过它们。
+          # Madeira 自带 build/llvm-ios/build.sh 就是生成它们的官方脚本：自克隆 llvm-project 并
+          # checkout 8dfdcc7b7（= llvmorg-15.0.7；README 前置条件 3 明写 LLVM 15.0.7），先建宿主
+          # llvm-tblgen，再只建 iOS 的 libLLVM*.a 目标。原样跑，不改一行。
+          # 版本不能换：brew llvm 是当前大版本且是 macOS 产物，airconv 按 LLVM 15 的 API 写，
+          # 头与库都对不上（迭代 6 装的 brew llvm 只供 wineserver 的 llvm-objcopy 用途不变）。
+          bash vendor/Madeira/build/llvm-ios/build.sh 2>&1 | tee "$PROBE_LOGS/20-llvm-ios.log" || {
+            echo '--- llvm-ios build failed: toolchain tree state ---'
+            ls vendor/Madeira/toolchains/ || true
+            ls vendor/Madeira/toolchains/llvm-ios-build/lib/ 2>/dev/null | head -20 || true
+            exit 1
+          }
+          # 硬校验 dxmt-ios 步真正要的三样东西都在：生成的配置头、源码头、静态库。
+          test -f vendor/Madeira/toolchains/llvm-ios-build/include/llvm/Config/llvm-config.h
+          test -f vendor/Madeira/toolchains/llvm-project/llvm/include/llvm/IR/Constants.h
+          ls vendor/Madeira/toolchains/llvm-ios-build/lib/libLLVM*.a | wc -l
+
+      - name: Build libs - Madeira build/dxmt-ios
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          bash vendor/Madeira/build/dxmt-ios/build.sh 2>&1 | tee "$PROBE_LOGS/21-dxmt-ios.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
+
+      - name: Build libs - xz (liblzma.a from source) - iteration 8
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # 迭代 8 新增（诊断 PROBE-RUN8-DIAGNOSIS.md；Grace 2026-11-08 选定方案 A）：
+          # 运行 #8 的 Collect 步 13 个库只缺 liblzma.a——全仓没有一步产出它、快照
+          # app/Madeira/ 里也没有、iOS SDK 只有 .tbd 存根；PROBE-PLAN 未决项 1 的预备
+          # 方案正是「从 xz 源码交叉编译一个（独立小步）」。本步下载 xz 5.4.7 源码
+          # （tukaani.org 主源、GitHub 发布镜像兜底，URL 已于 2026-11-08 本地实测 200），
+          # 用 iphoneos SDK 的 clang 以 arm64 交叉编译，只建 liblzma 静态库（关掉命令行
+          # 工具、脚本、文档与共享库），install 到 vendor/Madeira/build/xz-ios/——正落在
+          # Collect 步的搜索树（find "$F4_BUILD_ROOT" vendor/Madeira/build）内，
+          # Collect 步一字不用改。方案 B（放宽审计接受 SDK .tbd）未采用。
+          {
+            XZ_VER=5.4.7
+            XZ_ROOT="$PWD/vendor/Madeira/build/xz-ios"
+            mkdir -p "$XZ_ROOT"
+            if [ ! -d "$XZ_ROOT/xz-$XZ_VER" ]; then
+              curl -fL --retry 3 --retry-all-errors -o "$RUNNER_TEMP/xz-$XZ_VER.tar.gz" "https://tukaani.org/xz/xz-$XZ_VER.tar.gz" \
+                || curl -fL --retry 3 --retry-all-errors -o "$RUNNER_TEMP/xz-$XZ_VER.tar.gz" "https://github.com/tukaani-project/xz/releases/download/v$XZ_VER/xz-$XZ_VER.tar.gz"
+              ls -l "$RUNNER_TEMP/xz-$XZ_VER.tar.gz"
+              shasum -a 256 "$RUNNER_TEMP/xz-$XZ_VER.tar.gz"
+              tar -xzf "$RUNNER_TEMP/xz-$XZ_VER.tar.gz" -C "$XZ_ROOT"
+            fi
+            SDK_PATH="$(xcrun -sdk iphoneos --show-sdk-path)"
+            export CC="$(xcrun -sdk iphoneos -find clang)"
+            export AR="$(xcrun -sdk iphoneos -find ar)"
+            export RANLIB="$(xcrun -sdk iphoneos -find ranlib)"
+            export CFLAGS="-arch arm64 -isysroot $SDK_PATH -miphoneos-version-min=15.0 -O2"
+            export LDFLAGS="-arch arm64 -isysroot $SDK_PATH"
+            cd "$XZ_ROOT/xz-$XZ_VER"
+            ./configure --host=arm64-apple-darwin --prefix="$XZ_ROOT" \
+              --enable-static --disable-shared \
+              --disable-xz --disable-xzdec --disable-lzmadec --disable-lzmainfo \
+              --disable-lzma-links --disable-scripts --disable-doc --disable-nls
+            make -j"$(sysctl -n hw.ncpu)"
+            make install
+            test -f "$XZ_ROOT/lib/liblzma.a"
+            lipo -info "$XZ_ROOT/lib/liblzma.a" || true
+            echo "liblzma.a built from xz $XZ_VER source: $(stat -f%z "$XZ_ROOT/lib/liblzma.a") bytes"
+          } 2>&1 | tee "$PROBE_LOGS/22-xz-ios.log" || {
+            echo '--- xz (liblzma) build failed - see 22-xz-ios.log ---'
+            exit 1
+          }
+
+      - name: Collect and audit static libraries (13 required by project.yml)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          STAGE_LIB="$F4_BUILD_ROOT/probe-stage/lib"
+          mkdir -p "$STAGE_LIB"
+          {
+            required="dxmt_combined gmp lzma gnutls hogweed nettle ntdll_unix win32u_unix wineserver avcodec avformat avutil swresample"
+            missing=""
+            for n in $required; do
+              # 全盘找该库：优先非快照路径（本次自建产物），其次 Madeira 快照 app/Madeira/ 里的跟踪成品。
+              # 自建产物落在 F4_BUILD_ROOT（= src/build）下；vendor/Madeira/build 为相对 src 的路径。
+              built="$(find "$F4_BUILD_ROOT" vendor/Madeira/build -name "lib$n.a" 2>/dev/null | head -1 || true)"
+              snap="vendor/Madeira/app/Madeira/lib$n.a"
+              if [ -n "$built" ]; then src="$built"; origin="built"
+              elif [ -f "$snap" ]; then src="$snap"; origin="snapshot"
+              else missing="$missing lib$n.a"; continue; fi
+              cp -f "$src" "$STAGE_LIB/lib$n.a"
+              echo "lib$n.a  <- $src  ($origin, $(stat -f%z "$src" 2>/dev/null || stat -c%s "$src") bytes)"
+            done
+            echo '--- liblzma.a 全盘搜索（来源定位，报告未决项 2） ---'
+            find "$SRC" -name 'liblzma*' -not -path '*/.git/*' 2>/dev/null || true
+            xcrun -sdk iphoneos --show-sdk-path | xargs -I{} sh -c 'ls {}/usr/lib/liblzma* 2>/dev/null' || true
+            if [ -n "$missing" ]; then
+              echo "MISSING:$missing"
+              echo '探针在此步失败属预期失败模式之一：按 PROBE-PLAN 定位表看对应编号的构建日志。'
+              exit 1
+            fi
+            echo "all 13 required libraries collected into $STAGE_LIB"
+            ls -l "$STAGE_LIB"
+          } 2>&1 | tee "$PROBE_LOGS/23-collect-libs.log"
+
+      - name: Assemble RuntimeStage (libs above + Resources from IPA)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          {
+            STAGE="$F4_BUILD_ROOT/probe-stage"
+            RES_SRC="$F4_BUILD_ROOT/probe-resources"
+            mkdir -p "$STAGE/Resources"
+            # 与 tools/stage_runtime.sh 相同的布局语义：目录/文件用符号链接（check_stage.sh 要求
+            # 链接目标落在 checkout 或 F4_BUILD_ROOT 内，本步两者都满足），x86_64-vcruntime 为真实空目录。
+            for d in nls aarch64-windows arm64ec-windows i386-windows d3d12 gl compat legal licenses; do
+              ln -sfn "$RES_SRC/$d" "$STAGE/Resources/$d"
+            done
+            for f in prefix-template.tar.gz cacert.pem madeira-jit.js; do
+              ln -sfn "$RES_SRC/$f" "$STAGE/Resources/$f"
+            done
+            mkdir -p "$STAGE/Resources/x86_64-vcruntime"
+            # arm64ec farm 已从 IPA 提取、自带 patches/0001 的 gdiplus.dll，此处只断言其存在
+            test -f "$STAGE/Resources/arm64ec-windows/gdiplus.dll" && echo 'gdiplus.dll present in extracted farm'
+            ln -sfn "$STAGE" app/RuntimeStage
+            ls -la app/RuntimeStage app/RuntimeStage/lib app/RuntimeStage/Resources
+            # 上游自带的 stage 一致性检查（防「用错 stage 构建」出旧引擎包），作为本步的卡口
+            tools/check_stage.sh
+          } 2>&1 | tee "$PROBE_LOGS/24-stage.log"
+
+      - name: Generate Xcode project (xcodegen)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          ( cd app && xcodegen generate ) 2>&1 | tee "$PROBE_LOGS/25-xcodegen.log"
+          ls app/Porthole.xcodeproj
+
+      - name: Build app unsigned (xcodebuild Release, CODE_SIGNING_ALLOWED=NO)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          xcodebuild -project app/Porthole.xcodeproj -scheme Porthole -configuration Release \
+            -destination 'generic/platform=iOS' -derivedDataPath "$F4_BUILD_ROOT/DD" \
+            CODE_SIGNING_ALLOWED=NO build 2>&1 | tee "$PROBE_LOGS/26-xcodebuild.log"
+          ls -la "$F4_BUILD_ROOT/DD/Build/Products/Release-iphoneos/Porthole.app"
+
+      - name: Package unsigned IPA (tools/package_app.sh)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          tools/package_app.sh \
+            "$F4_BUILD_ROOT/DD/Build/Products/Release-iphoneos/Porthole.app" \
+            "$PROBE_OUT/Porthole-1.2.1-zh-Hans-unsigned.ipa" \
+            2>&1 | tee "$PROBE_LOGS/27-package.log"
+          ls -l "$PROBE_OUT/Porthole-1.2.1-zh-Hans-unsigned.ipa"
+
+      - name: Structure diff vs upstream IPA (report)
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # 只出报告不设卡（人工按 PROBE-PLAN 的核对清单判读）；比对：顶层条目、扩展集合与各自
+          # Bundle ID/扩展点、主 Info.plist 关键键（Bundle ID/版本/引擎/Hub）、各主要条目大小量级。
+          python3 - "$UPSTREAM_IPA" "$PROBE_OUT/Porthole-1.2.1-zh-Hans-unsigned.ipa" > "$PROBE_OUT/structure-diff.txt" <<'PYEOF' 2>&1 | tee "$PROBE_LOGS/28-diff.log"
+          import plistlib, sys, zipfile
+          def load(path):
+              z = zipfile.ZipFile(path)
+              infos = {}
+              for n in z.namelist():
+                  if n.endswith('.app/Info.plist') or ('.appex/Info.plist' in n and 'PlugIns' in n):
+                      infos[n] = plistlib.loads(z.read(n))
+              tops = {}
+              for i in z.infolist():
+                  if i.filename.startswith('Payload/Porthole.app/'):
+                      rest = i.filename[len('Payload/Porthole.app/'):]
+                      if rest and not i.is_dir():
+                          top = rest.split('/')[0]
+                          c, b = tops.get(top, (0, 0)); tops[top] = (c + 1, b + i.file_size)
+              return z, infos, tops
+          uz, ui, ut = load(sys.argv[1]); rz, ri, rt = load(sys.argv[2])
+          print('== main Info.plist keys (upstream -> rebuilt) ==')
+          uk = next(v for k, v in ui.items() if k.endswith('.app/Info.plist'))
+          rk = next((v for k, v in ri.items() if k.endswith('.app/Info.plist')), {})
+          for key in ('CFBundleIdentifier', 'CFBundleShortVersionString', 'CFBundleVersion',
+                      'PortholeEngine', 'PortholeEngineMadeira', 'PortholeHubURL',
+                      'PortholeHubAppID', 'PortholeReleaseKey'):
+              mark = 'OK ' if uk.get(key) == rk.get(key) else 'DIFF'
+              print(f'{mark} {key}: {uk.get(key)!r} -> {rk.get(key)!r}')
+          print('\n== extensions (PlugIns/*.appex) ==')
+          def exts(infos):
+              out = {}
+              for path, p in infos.items():
+                  if '.appex' in path:
+                      name = path.split('/')[-2]
+                      ext = (p.get('NSExtension') or {}).get('NSExtensionPointIdentifier')
+                      out[name] = (p.get('CFBundleIdentifier'), ext)
+              return out
+          ue, re_ = exts(ui), exts(ri)
+          for name in sorted(set(ue) | set(re_)):
+              mark = 'OK ' if ue.get(name) == re_.get(name) else 'DIFF'
+              print(f'{mark} {name}: {ue.get(name)} -> {re_.get(name)}')
+          print('\n== top-level entries: files / bytes (upstream -> rebuilt) ==')
+          for top in sorted(set(ut) | set(rt)):
+              u, r = ut.get(top, (0, 0)), rt.get(top, (0, 0))
+              print(f'{top:28s} {u[0]:>5} / {u[1]:>12,}  ->  {r[0]:>5} / {r[1]:>12,}')
+          print(f'\nIPA total bytes: upstream {sum(b for _, b in ut.values()):,} vs rebuilt file itself in probe-output')
+          PYEOF
+          cat "$PROBE_OUT/structure-diff.txt"
+
+      - name: Collect build error files (err-*.txt + *.err into probe-logs) - iteration 2, 4
+        if: always()
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          # 迭代 2 新增：运行 #1 的教训是逐对象错误只写在源码树的 err-*.txt 里、没进 artifact，
+          # 定位被迫靠推断。本步无条件执行：把所有 err-*.txt（及构建目录里的小 *.log）复制进
+          # probe-logs/err-dump/，并把非空 err 文件内容汇总进 99-err-dump.log 且回显到本步日志。
+          # 迭代 4 追加：ntdll/win32u 的构建脚本把逐单元编译器报错写在 obj/<name>.err（不是
+          # err-*.txt），运行 #4 的 err-dump 因此全空；本步同样收 *.err。
+          # 全程 set +e 且逐项 || true：找不到任何文件时也绝不二次失败。
+          set +e
+          mkdir -p "$PROBE_LOGS/err-dump"
+          : > "$PROBE_LOGS/99-err-dump.log"
+          found=0
+          for ef in $(find vendor/Madeira/build build "$F4_BUILD_ROOT" -type f \( -name 'err-*.txt' -o -name '*.err' -o -name '*.log' \) -size -2M 2>/dev/null); do
+            found=$((found+1))
+            flat="$(echo "$ef" | tr '/' '_')"
+            cp -f "$ef" "$PROBE_LOGS/err-dump/$flat" 2>/dev/null || true
+            if [ -s "$ef" ]; then
+              { echo "===== $ef ====="; head -300 "$ef"; echo; } >> "$PROBE_LOGS/99-err-dump.log" 2>/dev/null || true
+            fi
+          done
+          echo "collected $found error/log files into probe-logs/err-dump/"
+          cat "$PROBE_LOGS/99-err-dump.log" || true
+          exit 0
+
+      - name: Upload probe artifacts (rebuilt IPA + all logs + reports)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: porthole-zh-build
+          path: |
+            probe-output/
+            probe-logs/
+          if-no-files-found: warn
+          retention-days: 14
