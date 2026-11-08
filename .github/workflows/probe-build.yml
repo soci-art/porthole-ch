@@ -231,8 +231,14 @@ jobs:
           # in the matching step log - see the failure table in PROBE-PLAN.md.
           # freetype + gnutls are required by Madeira's build/wine-macos/configure.sh (iteration 2):
           # config.h must enable the font/crypto code the unix libraries compile against.
-          brew install xcodegen cmake ninja meson pkg-config autoconf automake libtool bison flex gettext freetype gnutls || \
-            brew install xcodegen cmake ninja meson pkg-config freetype gnutls
+          # Iteration 6 (after run #6): +llvm. Madeira build/wineserver/build.sh
+          # (5fda6a0, lines 442-444) ends with an objcopy sweep that needs
+          # llvm-objcopy, looked up via `command -v` or `brew --prefix llvm`;
+          # run #6 compiled all 27 wineserver objects fine and died only on
+          # that missing binary. brew llvm is keg-only; `brew --prefix llvm`
+          # resolves without linking, which is exactly the script's fallback.
+          brew install xcodegen cmake ninja meson pkg-config autoconf automake libtool bison flex gettext freetype gnutls llvm || \
+            brew install xcodegen cmake ninja meson pkg-config freetype gnutls llvm
           xcodegen --version
           cmake --version | head -1
           echo 'export PATH="$(brew --prefix bison)/bin:$(brew --prefix flex)/bin:$PATH"' >> "$GITHUB_ENV" || true
