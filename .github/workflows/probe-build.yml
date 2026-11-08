@@ -116,6 +116,38 @@
 #   it is kept as the documented fallback, not implemented, because the
 #   verbatim configure is now proven runnable on this runner.
 
+# Iteration 7 (after run #7, 2026-11-08 - diagnosis: notes/PROBE-RUN7-DIAGNOSIS.md):
+#   Run #7 got through wineserver (iteration 6's brew llvm fix VERIFIED - the
+#   objcopy sweep found llvm-objcopy via `brew --prefix llvm`) and failed at
+#   "Build libs - Madeira build/dxmt-ios": 70 succeeded, 18 failed, and all 18
+#   failures are the airconv/dxbc group (incl. madeira_ags). Every .err is the
+#   same first-line error: 'llvm/IR/*.h' file not found. Mechanism, verified
+#   against the pinned Madeira sources (build/dxmt-ios/build.sh lines 25-27,47):
+#   the script does NOT use llvm-config, brew, or any env var - it hardcodes
+#   LLVM_INCLUDES="-I$TOOLCHAINS/llvm-ios-build/include -I$TOOLCHAINS/llvm-project/llvm/include"
+#   and, at archive time, merges EVERY $TOOLCHAINS/llvm-ios-build/lib/libLLVM*.a
+#   into libdxmt_combined.a (failing hard if none exist). Both trees are
+#   gitignored local state the author's machine had and a clean clone lacks -
+#   the same class of gap as run #1's build-macos - and NO probe step ever
+#   created them. The version is pinned by the sources, not a free choice:
+#   build/dxmt-ios/README.md (prerequisite 3) says 'LLVM 15.0.7 cross-built
+#   for iOS-aarch64', dxmt-ios/build.sh's own comment calls it 'the LLVM 15
+#   that airconv already links', and Madeira's build/llvm-ios/build.sh checks
+#   out llvm-project commit 8dfdcc7b7 - the llvmorg-15.0.7 release commit.
+#   The brew llvm installed by iteration 6 CANNOT substitute: it is a current
+#   major version whose headers/libs are for macOS, not iOS-arm64, and whose
+#   API airconv (written against LLVM 15) does not match. New step
+#   "Build libs - Madeira build/llvm-ios" runs Madeira's own script verbatim
+#   (it clones llvm-project itself, builds host llvm-tblgen, then the iOS
+#   library targets only) immediately before dxmt-ios; logs renumbered
+#   20-llvm-ios, 21-dxmt-ios, 22-collect, 23-stage, 24-xcodegen,
+#   25-xcodebuild, 26-package, 27-diff. Known residual risks (see diagnosis):
+#   the LLVM build is the longest single step so far (full clone + two cmake
+#   stages); docs/BUILDING.md's recipe mentions a one-line AddLLVM.cmake edit
+#   (Darwin -> Darwin|iOS for -dead_strip vs --gc-sections) that the scripted
+#   recipe omits - if the iOS configure/build trips on --gc-sections, run #8's
+#   20-llvm-ios.log will show it and iteration 8 applies that documented edit.
+
 name: probe-build (Porthole rebuild spike)
 
 on:
@@ -558,11 +590,35 @@ jobs:
             exit 1
           }
 
+      - name: Build libs - Madeira build/llvm-ios (LLVM 15.0.7 for dxmt airconv) - iteration 7
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          # 迭代 7 新增（诊断 PROBE-RUN7-DIAGNOSIS.md）：dxmt-ios/build.sh 把 LLVM 写死在
+          # vendor/Madeira/toolchains/ 下——头文件来自 llvm-ios-build/include + llvm-project/llvm/include，
+          # 链接（合并 libdxmt_combined.a）需要 llvm-ios-build/lib/libLLVM*.a 全部。这两棵树是
+          # gitignored 的作者本机状态，干净克隆里没有，此前没有任何探针步生成过它们。
+          # Madeira 自带 build/llvm-ios/build.sh 就是生成它们的官方脚本：自克隆 llvm-project 并
+          # checkout 8dfdcc7b7（= llvmorg-15.0.7；README 前置条件 3 明写 LLVM 15.0.7），先建宿主
+          # llvm-tblgen，再只建 iOS 的 libLLVM*.a 目标。原样跑，不改一行。
+          # 版本不能换：brew llvm 是当前大版本且是 macOS 产物，airconv 按 LLVM 15 的 API 写，
+          # 头与库都对不上（迭代 6 装的 brew llvm 只供 wineserver 的 llvm-objcopy 用途不变）。
+          bash vendor/Madeira/build/llvm-ios/build.sh 2>&1 | tee "$PROBE_LOGS/20-llvm-ios.log" || {
+            echo '--- llvm-ios build failed: toolchain tree state ---'
+            ls vendor/Madeira/toolchains/ || true
+            ls vendor/Madeira/toolchains/llvm-ios-build/lib/ 2>/dev/null | head -20 || true
+            exit 1
+          }
+          # 硬校验 dxmt-ios 步真正要的三样东西都在：生成的配置头、源码头、静态库。
+          test -f vendor/Madeira/toolchains/llvm-ios-build/include/llvm/Config/llvm-config.h
+          test -f vendor/Madeira/toolchains/llvm-project/llvm/include/llvm/IR/Constants.h
+          ls vendor/Madeira/toolchains/llvm-ios-build/lib/libLLVM*.a | wc -l
+
       - name: Build libs - Madeira build/dxmt-ios
         working-directory: ${{ github.workspace }}/src
         run: |
           set -euxo pipefail
-          bash vendor/Madeira/build/dxmt-ios/build.sh 2>&1 | tee "$PROBE_LOGS/20-dxmt-ios.log" || {
+          bash vendor/Madeira/build/dxmt-ios/build.sh 2>&1 | tee "$PROBE_LOGS/21-dxmt-ios.log" || {
             echo '--- err-*.txt dump (step failed) ---'
             find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
             exit 1
@@ -598,7 +654,7 @@ jobs:
             fi
             echo "all 13 required libraries collected into $STAGE_LIB"
             ls -l "$STAGE_LIB"
-          } 2>&1 | tee "$PROBE_LOGS/21-collect-libs.log"
+          } 2>&1 | tee "$PROBE_LOGS/22-collect-libs.log"
 
       - name: Assemble RuntimeStage (libs above + Resources from IPA)
         working-directory: ${{ github.workspace }}/src
@@ -623,13 +679,13 @@ jobs:
             ls -la app/RuntimeStage app/RuntimeStage/lib app/RuntimeStage/Resources
             # 上游自带的 stage 一致性检查（防「用错 stage 构建」出旧引擎包），作为本步的卡口
             tools/check_stage.sh
-          } 2>&1 | tee "$PROBE_LOGS/22-stage.log"
+          } 2>&1 | tee "$PROBE_LOGS/23-stage.log"
 
       - name: Generate Xcode project (xcodegen)
         working-directory: ${{ github.workspace }}/src
         run: |
           set -euxo pipefail
-          ( cd app && xcodegen generate ) 2>&1 | tee "$PROBE_LOGS/23-xcodegen.log"
+          ( cd app && xcodegen generate ) 2>&1 | tee "$PROBE_LOGS/24-xcodegen.log"
           ls app/Porthole.xcodeproj
 
       - name: Build app unsigned (xcodebuild Release, CODE_SIGNING_ALLOWED=NO)
@@ -638,7 +694,7 @@ jobs:
           set -euxo pipefail
           xcodebuild -project app/Porthole.xcodeproj -scheme Porthole -configuration Release \
             -destination 'generic/platform=iOS' -derivedDataPath "$F4_BUILD_ROOT/DD" \
-            CODE_SIGNING_ALLOWED=NO build 2>&1 | tee "$PROBE_LOGS/24-xcodebuild.log"
+            CODE_SIGNING_ALLOWED=NO build 2>&1 | tee "$PROBE_LOGS/25-xcodebuild.log"
           ls -la "$F4_BUILD_ROOT/DD/Build/Products/Release-iphoneos/Porthole.app"
 
       - name: Package unsigned IPA (tools/package_app.sh)
@@ -648,7 +704,7 @@ jobs:
           tools/package_app.sh \
             "$F4_BUILD_ROOT/DD/Build/Products/Release-iphoneos/Porthole.app" \
             "$PROBE_OUT/Porthole-1.2.1-probe-unsigned.ipa" \
-            2>&1 | tee "$PROBE_LOGS/25-package.log"
+            2>&1 | tee "$PROBE_LOGS/26-package.log"
           ls -l "$PROBE_OUT/Porthole-1.2.1-probe-unsigned.ipa"
 
       - name: Structure diff vs upstream IPA (report)
@@ -657,7 +713,7 @@ jobs:
           set -euxo pipefail
           # 只出报告不设卡（人工按 PROBE-PLAN 的核对清单判读）；比对：顶层条目、扩展集合与各自
           # Bundle ID/扩展点、主 Info.plist 关键键（Bundle ID/版本/引擎/Hub）、各主要条目大小量级。
-          python3 - "$UPSTREAM_IPA" "$PROBE_OUT/Porthole-1.2.1-probe-unsigned.ipa" > "$PROBE_OUT/structure-diff.txt" <<'PYEOF' 2>&1 | tee "$PROBE_LOGS/26-diff.log"
+          python3 - "$UPSTREAM_IPA" "$PROBE_OUT/Porthole-1.2.1-probe-unsigned.ipa" > "$PROBE_OUT/structure-diff.txt" <<'PYEOF' 2>&1 | tee "$PROBE_LOGS/27-diff.log"
           import plistlib, sys, zipfile
           def load(path):
               z = zipfile.ZipFile(path)
