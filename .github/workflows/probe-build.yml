@@ -15,6 +15,19 @@
 #   at the workspace root so the artifact-upload step finds them from any working directory.
 #
 # Manual trigger only (workflow_dispatch): the probe is expensive and expected to iterate.
+#
+# Iteration 2 (after run #1, 2026-11-08 - diagnosis: notes/PROBE-RUN1-DIAGNOSIS.md):
+#   Run #1 failed at "Build libs - wineserver base archive": all 23 Wine server objects failed
+#   in ~5s. Root cause (verified): wine/build-macos/ does not exist in a clean clone - it is the
+#   author's local host-configured Wine tree, and every wine/server/*.c starts with
+#   #include "config.h", which only wine/build-macos/include provides. Neither Porthole's
+#   build_wineserver_base.sh nor Madeira's bootstrap-base.sh creates it; Madeira's
+#   build/wine-macos/configure.sh does (and says so in its header). docs/SOURCE.md omits this
+#   prerequisite entirely. Iteration 2 therefore adds a "Prepare wine/build-macos" step
+#   (setup-llvm-mingw.sh -> build/wine-macos/configure.sh -> Porthole tools/fix_macos_config.sh)
+#   before the library builds, adds freetype/gnutls to the Homebrew set (configure.sh needs
+#   them), and adds failure diagnostics to every library step plus an always() collector that
+#   sweeps err-*.txt files into probe-logs so the next failure is readable from the artifact.
 
 name: probe-build (Porthole rebuild spike)
 
@@ -108,8 +121,10 @@ jobs:
           # [UNKNOWN] There is no authoritative list of host tools Madeira's build scripts need;
           # install the common source-build set. Anything missing shows up as "command not found"
           # in the matching step log - see the failure table in PROBE-PLAN.md.
-          brew install xcodegen cmake ninja meson pkg-config autoconf automake libtool bison flex gettext || \
-            brew install xcodegen cmake ninja meson pkg-config
+          # freetype + gnutls are required by Madeira's build/wine-macos/configure.sh (iteration 2):
+          # config.h must enable the font/crypto code the unix libraries compile against.
+          brew install xcodegen cmake ninja meson pkg-config autoconf automake libtool bison flex gettext freetype gnutls || \
+            brew install xcodegen cmake ninja meson pkg-config freetype gnutls
           xcodegen --version
           cmake --version | head -1
           echo 'export PATH="$(brew --prefix bison)/bin:$(brew --prefix flex)/bin:$PATH"' >> "$GITHUB_ENV" || true
@@ -187,6 +202,31 @@ jobs:
           python3 tools/prepare_stikjit.py 2>&1 | tee "$PROBE_LOGS/06-stikjit.log"
           ls app/Vendor/StikJIT.xcframework
 
+      - name: Prepare wine/build-macos (llvm-mingw + configure + fix config.h) - iteration 2
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          set -euxo pipefail
+          {
+            # 根因修复（运行 #1 诊断，notes/PROBE-RUN1-DIAGNOSIS.md）：wine/build-macos 是作者本机的
+            # 主机配置构建树，干净克隆里不存在；wine/server/*.c 第一行 #include "config.h" 只能由
+            # wine/build-macos/include 提供，缺它时全部对象在预处理阶段失败（运行 #1 第 12 步 23/23 全灭）。
+            # Madeira 的 build/wineserver/bootstrap-base.sh 与 Porthole 的 build_wineserver_base.sh
+            # 都只是「用现成 build-macos 编底档」，不生成它；唯一生成者是 Madeira 自己的
+            # build/wine-macos/configure.sh（其文件头明说 Nothing else creates it）。docs/SOURCE.md
+            # 漏写了这一步。下面三步全是项目自带脚本，按作者本机流程原样执行：
+            # 1) setup-llvm-mingw.sh：把 llvm-mingw 20260421（带固定 sha256）下到 vendor/Madeira/toolchains/，
+            #    configure.sh 的 --enable-archs=arm64ec 需要它提供的 arm64ec-w64-mingw32-clang。
+            bash vendor/Madeira/tools/build/setup-llvm-mingw.sh
+            # 2) configure.sh：在 wine/build-macos 里跑 ../configure 并生成全部 widl 头，
+            #    自检 include/config.h、include/wtypes.h、include/dwrite.h 必须存在。
+            bash vendor/Madeira/build/wine-macos/configure.sh
+            # 3) fix_macos_config.sh（Porthole 自带）：把新生成的 config.h 与作者原构建树对齐 3 行
+            #    （GnuTLS 两个 define 打开、HAVE_PIPE2 关掉）；brew gnutls 已装时前两处 sed 自动无操作。
+            tools/fix_macos_config.sh
+            ls -l vendor/Madeira/wine/build-macos/include/config.h
+            echo 'wine/build-macos ready'
+          } 2>&1 | tee "$PROBE_LOGS/07-wine-macos.log"
+
       # ---- 补建缺失静态库（报告 B-3）：顺序照 docs/SOURCE.md 的 Rebuilding 第 1 步 ----
       # project.yml 的 OTHER_LDFLAGS 需要 13 个库：dxmt_combined gmp lzma gnutls hogweed nettle
       # ntdll_unix win32u_unix wineserver avcodec avformat avutil swresample。
@@ -199,15 +239,27 @@ jobs:
           set -euxo pipefail
           # build/wineserver/build.sh 只往一个现成 libwineserver.a 里换对象，而仓库不跟踪该底档；
           # 这个 Porthole 工具脚本用 Wine server/*.c 现编出底档，必须先于 wineserver 步骤跑。
-          tools/build_wineserver_base.sh 2>&1 | tee "$PROBE_LOGS/10-wineserver-base.log"
+          tools/build_wineserver_base.sh 2>&1 | tee "$PROBE_LOGS/10-wineserver-base.log" || {
+            echo '--- err-*.txt dump (step failed; the Collect step also sweeps these into the artifact) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
 
       - name: Build libs - DXMT shader headers + DXMT patches
         working-directory: ${{ github.workspace }}/src
         run: |
           set -euxo pipefail
           # shader 头由 Metal 工具链生成（build_dxmt_shader_headers.sh 需要 xcrun metal，是 Xcode 版本敏感点）
-          tools/build_dxmt_shader_headers.sh 2>&1 | tee "$PROBE_LOGS/11-dxmt-headers.log"
-          tools/apply_dxmt_patch.sh 2>&1 | tee -a "$PROBE_LOGS/11-dxmt-headers.log"
+          tools/build_dxmt_shader_headers.sh 2>&1 | tee "$PROBE_LOGS/11-dxmt-headers.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
+          tools/apply_dxmt_patch.sh 2>&1 | tee -a "$PROBE_LOGS/11-dxmt-headers.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
 
       - name: Build libs - Madeira patch script (tools/apply_madeira_patch.sh)
         working-directory: ${{ github.workspace }}/src
@@ -215,26 +267,41 @@ jobs:
           set -euxo pipefail
           # 注意：此脚本主体补丁 0006 已 RETIRED（脚本头有说明，多半走 already-applied 分支），
           # 保留此步只为与 docs/SOURCE.md 的官方顺序完全一致，输出原样进日志供判读。
-          tools/apply_madeira_patch.sh 2>&1 | tee "$PROBE_LOGS/12-madeira-patch.log" || \
+          tools/apply_madeira_patch.sh 2>&1 | tee "$PROBE_LOGS/12-madeira-patch.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
             echo 'apply_madeira_patch.sh failed - see log; patch 0006 is retired, judge from log whether this matters'
+          }
 
       - name: Build libs - FEX iOS (tools/build_fex_ios.sh)
         working-directory: ${{ github.workspace }}/src
         run: |
           set -euxo pipefail
-          tools/build_fex_ios.sh 2>&1 | tee "$PROBE_LOGS/13-fex.log"
+          tools/build_fex_ios.sh 2>&1 | tee "$PROBE_LOGS/13-fex.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
 
       - name: Build libs - Madeira build/ntdll-unix
         working-directory: ${{ github.workspace }}/src
         run: |
           set -euxo pipefail
-          bash vendor/Madeira/build/ntdll-unix/build.sh 2>&1 | tee "$PROBE_LOGS/14-ntdll-unix.log"
+          bash vendor/Madeira/build/ntdll-unix/build.sh 2>&1 | tee "$PROBE_LOGS/14-ntdll-unix.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
 
       - name: Build libs - Madeira build/win32u-unix
         working-directory: ${{ github.workspace }}/src
         run: |
           set -euxo pipefail
-          bash vendor/Madeira/build/win32u-unix/build.sh 2>&1 | tee "$PROBE_LOGS/15-win32u-unix.log"
+          bash vendor/Madeira/build/win32u-unix/build.sh 2>&1 | tee "$PROBE_LOGS/15-win32u-unix.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
           # docs/REBUILD.md 已知陷阱：此脚本每次把 FreeType 再并入 libwin32u_unix.a，
           # 成员数应为 89（131/173 = 有重复成员，需按 REBUILD.md 手工去重）。这里只报告成员数，不自动改。
           for a in $(find vendor/Madeira build -name 'libwin32u_unix.a' 2>/dev/null); do
@@ -245,32 +312,52 @@ jobs:
         working-directory: ${{ github.workspace }}/src
         run: |
           set -euxo pipefail
-          bash vendor/Madeira/build/wineserver/build.sh 2>&1 | tee "$PROBE_LOGS/16-wineserver.log"
+          bash vendor/Madeira/build/wineserver/build.sh 2>&1 | tee "$PROBE_LOGS/16-wineserver.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
 
       - name: Build libs - Madeira build/dxmt-ios
         working-directory: ${{ github.workspace }}/src
         run: |
           set -euxo pipefail
-          bash vendor/Madeira/build/dxmt-ios/build.sh 2>&1 | tee "$PROBE_LOGS/17-dxmt-ios.log"
+          bash vendor/Madeira/build/dxmt-ios/build.sh 2>&1 | tee "$PROBE_LOGS/17-dxmt-ios.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
 
       - name: Build libs - Madeira build/ffmpeg (avcodec/avformat/avutil/swresample)
         working-directory: ${{ github.workspace }}/src
         run: |
           set -euxo pipefail
-          bash vendor/Madeira/build/ffmpeg/build.sh 2>&1 | tee "$PROBE_LOGS/18-ffmpeg.log"
+          bash vendor/Madeira/build/ffmpeg/build.sh 2>&1 | tee "$PROBE_LOGS/18-ffmpeg.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
 
       - name: Build libs - Madeira build/freetype-ios
         working-directory: ${{ github.workspace }}/src
         run: |
           set -euxo pipefail
-          bash vendor/Madeira/build/freetype-ios/build.sh 2>&1 | tee "$PROBE_LOGS/19-freetype.log"
+          bash vendor/Madeira/build/freetype-ios/build.sh 2>&1 | tee "$PROBE_LOGS/19-freetype.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
 
       - name: Build libs - Madeira build/gnutls-ios
         working-directory: ${{ github.workspace }}/src
         run: |
           set -euxo pipefail
           # gnutls/hogweed/nettle/gmp 快照已带成品；此步仍按 SOURCE.md 顺序跑，Collect 步骤以自建优先、快照兜底。
-          bash vendor/Madeira/build/gnutls-ios/build.sh 2>&1 | tee "$PROBE_LOGS/20-gnutls.log"
+          bash vendor/Madeira/build/gnutls-ios/build.sh 2>&1 | tee "$PROBE_LOGS/20-gnutls.log" || {
+            echo '--- err-*.txt dump (step failed) ---'
+            find vendor/Madeira/build build -name 'err-*.txt' -type f 2>/dev/null | while read -r ef; do echo "===== $ef ====="; cat "$ef" || true; done
+            exit 1
+          }
 
       - name: Collect and audit static libraries (13 required by project.yml)
         working-directory: ${{ github.workspace }}/src
@@ -406,6 +493,30 @@ jobs:
           print(f'\nIPA total bytes: upstream {sum(b for _, b in ut.values()):,} vs rebuilt file itself in probe-output')
           PYEOF
           cat "$PROBE_OUT/structure-diff.txt"
+
+      - name: Collect build error files (err-*.txt into probe-logs) - iteration 2
+        if: always()
+        working-directory: ${{ github.workspace }}/src
+        run: |
+          # 迭代 2 新增：运行 #1 的教训是逐对象错误只写在源码树的 err-*.txt 里、没进 artifact，
+          # 定位被迫靠推断。本步无条件执行：把所有 err-*.txt（及构建目录里的小 *.log）复制进
+          # probe-logs/err-dump/，并把非空 err 文件内容汇总进 99-err-dump.log 且回显到本步日志。
+          # 全程 set +e 且逐项 || true：找不到任何文件时也绝不二次失败。
+          set +e
+          mkdir -p "$PROBE_LOGS/err-dump"
+          : > "$PROBE_LOGS/99-err-dump.log"
+          found=0
+          for ef in $(find vendor/Madeira/build build "$F4_BUILD_ROOT" -type f \( -name 'err-*.txt' -o -name '*.log' \) -size -2M 2>/dev/null); do
+            found=$((found+1))
+            flat="$(echo "$ef" | tr '/' '_')"
+            cp -f "$ef" "$PROBE_LOGS/err-dump/$flat" 2>/dev/null || true
+            if [ -s "$ef" ]; then
+              { echo "===== $ef ====="; head -300 "$ef"; echo; } >> "$PROBE_LOGS/99-err-dump.log" 2>/dev/null || true
+            fi
+          done
+          echo "collected $found error/log files into probe-logs/err-dump/"
+          cat "$PROBE_LOGS/99-err-dump.log" || true
+          exit 0
 
       - name: Upload probe artifacts (rebuilt IPA + all logs + reports)
         if: always()
