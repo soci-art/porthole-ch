@@ -16,8 +16,11 @@
 #   PortholeKeychainService / PortholeStorageFolder 在正式包里均为空 → 本文件同样留空（走默认）
 #
 # 引擎 ID 不写在本文件里：PORTHOLE_ENGINE_ID / PORTHOLE_ENGINE_MADEIRA 由 app/Config/
-# Engine.xcconfig 提供（已入库，值 3af3467-r1 / 3af3467），Porthole.xcconfig 先 include 它、
+# Engine.xcconfig 提供（已入库，值 3af3467-r2 / 3af3467），Porthole.xcconfig 先 include 它、
 # 再 include 本文件。本脚本只校验 Engine.xcconfig 的值无误，不对它做任何修改。
+# 注：上游正式包的引擎是 3af3467-r1；汉化构建的引擎是 r2，因为 i18n/close_fix.py
+# 给引擎加了补丁 0180（关闭游戏修复，driver_ios.c 加 winios_drv_close_window_if_owner），
+# 修订号按上游规则 1→2。Madeira 基串仍是 3af3467。
 #
 # xcconfig 语法注意：值里的 "//" 会被当注释，故 URL 一律写成 https:/$()/... 形式（与 example 同法）。
 #
@@ -29,12 +32,12 @@ CFG_DIR="$ROOT/app/Config"
 [ -d "$CFG_DIR" ] || { echo "✗ 找不到 $CFG_DIR（仓库根目录传错了？）" >&2; exit 1; }
 [ -f "$CFG_DIR/Local.xcconfig.example" ] || { echo "✗ 缺 Local.xcconfig.example" >&2; exit 1; }
 
-# 先校验引擎 ID（报告 1.5：正式包 PortholeEngine = 3af3467-r1）
-grep -qE '^PORTHOLE_ENGINE_ID[[:space:]]*=[[:space:]]*3af3467-r1([[:space:]]|$)' "$CFG_DIR/Engine.xcconfig" \
-  || { echo "✗ Engine.xcconfig 的 PORTHOLE_ENGINE_ID 不是 3af3467-r1，先核对再构建" >&2; exit 1; }
+# 先校验引擎 ID（汉化构建：3af3467-r2，见本文件头注；上游正式包是 r1）
+grep -qE '^PORTHOLE_ENGINE_ID[[:space:]]*=[[:space:]]*3af3467-r2([[:space:]]|$)' "$CFG_DIR/Engine.xcconfig" \
+  || { echo "✗ Engine.xcconfig 的 PORTHOLE_ENGINE_ID 不是 3af3467-r2，先核对再构建" >&2; exit 1; }
 grep -qE '^PORTHOLE_ENGINE_MADEIRA[[:space:]]*=[[:space:]]*3af3467([[:space:]]|$)' "$CFG_DIR/Engine.xcconfig" \
   || { echo "✗ Engine.xcconfig 的 PORTHOLE_ENGINE_MADEIRA 不是 3af3467" >&2; exit 1; }
-echo "✓ Engine.xcconfig 引擎 ID = 3af3467-r1（Madeira 3af3467），与正式包一致"
+echo "✓ Engine.xcconfig 引擎 ID = 3af3467-r2（Madeira 3af3467），与汉化构建一致"
 
 cat > "$CFG_DIR/Local.xcconfig" <<'EOF'
 // 由 probe-ci/scripts/prepare_local_xcconfig.sh 生成（勿手改；改值请改脚本）。
