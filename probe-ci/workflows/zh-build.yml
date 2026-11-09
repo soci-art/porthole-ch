@@ -393,31 +393,42 @@ jobs:
             echo 'all pinned commits match docs/SOURCE.md'
           } 2>&1 | tee "$PROBE_LOGS/02-pinned-commits.log"
 
-      - name: Download upstream IPA and verify sha256 (resumable) - iteration 8.1
+      - name: Download upstream IPA and verify sha256 (resumable) - iteration 8.2
         run: |
           set -euxo pipefail
-          # 迭代 8.1（运行 #9、#10 连续在此步失败，诊断 PROBE-RUN10-DIAGNOSIS.md）：
-          # 两次都是 curl 退出码 56（CURLE_RECV_ERROR）在下载 200MB 官方 IPA 时中断，
-          # 相隔约 25 分钟、形态完全相同，不再按偶发抖动处理。原命令 --retry 3 每次
-          # 从零重下、四次尝试全断在半路。改为断点续传循环：每轮带 -C - 从已下载的
-          # 部分续传（进度不丢）、--speed-limit/--speed-time 让卡死传输自动中断进
-          # 下一轮、服务端拒绝续传（退出码 33）时删档从零重来，最多 8 轮；最终仍
-          # 以固定 sha256 校验为准。本步输出此前没留 artifact 日志（#9/#10 只能靠
-          # 作业标注推断失败点），这次起 tee 进 probe-logs/03-download-upstream.log。
+          # 迭代 8.2（zh-build #4 两次尝试连续在此步失败）：上游 releases/download
+          # 端点持续返回 HTTP 504（curl 56），8 轮、间隔 5 秒的重试在 25 分钟以上的
+          # 服务故障面前毫无意义。两处加固：(1) 轮次 20 轮、间隔 30 秒，总耐心约
+          # 20 分钟；(2) 奇数轮走 releases/download，偶数轮走 GitHub API 的 asset
+          # 直下地址（api.github.com/.../releases/assets/<id>，Accept:
+          # application/octet-stream）——2026-11-09 实测：releases/download 504
+          # 时 API 路由仍能正常返回 206。asset id 运行时解析，失败时回退到
+          # 2026-11-09 核实的 711200781。断点续传与 sha256 校验机制不变。
           IPA_TMP="$RUNNER_TEMP/Porthole-1.2.1-688.ipa"
           rm -f "$IPA_TMP"
+          ASSET_ID="$(curl -fsSL --retry 3 --max-time 30 'https://api.github.com/repos/tylerkaska112/Porthole/releases/tags/v1.2.1' | python3 -c "import json,sys; d=json.load(sys.stdin); print([a['id'] for a in d['assets'] if a['name'].endswith('.ipa')][0])" 2>/dev/null || echo 711200781)"
+          API_URL="https://api.github.com/repos/tylerkaska112/Porthole/releases/assets/$ASSET_ID"
+          echo "asset id: $ASSET_ID"
           {
             ok=0
-            for i in 1 2 3 4 5 6 7 8; do
-              echo "--- download attempt $i (resume offset: $(stat -f%z "$IPA_TMP" 2>/dev/null || echo 0) bytes) ---"
-              rc=0
-              curl -fL -C - --retry 2 --retry-all-errors --connect-timeout 30 \
-                --speed-limit 10240 --speed-time 60 \
-                -o "$IPA_TMP" "$UPSTREAM_IPA_URL" || rc=$?
+            for i in $(seq 1 20); do
+              if [ $((i % 2)) = 0 ]; then
+                echo "--- download attempt $i via API asset (resume offset: $(stat -f%z "$IPA_TMP" 2>/dev/null || echo 0) bytes) ---"
+                rc=0
+                curl -fL -C - -H 'Accept: application/octet-stream' --retry 3 --retry-delay 10 --retry-all-errors --connect-timeout 30 \
+                  --speed-limit 10240 --speed-time 60 \
+                  -o "$IPA_TMP" "$API_URL" || rc=$?
+              else
+                echo "--- download attempt $i via releases/download (resume offset: $(stat -f%z "$IPA_TMP" 2>/dev/null || echo 0) bytes) ---"
+                rc=0
+                curl -fL -C - --retry 3 --retry-delay 10 --retry-all-errors --connect-timeout 30 \
+                  --speed-limit 10240 --speed-time 60 \
+                  -o "$IPA_TMP" "$UPSTREAM_IPA_URL" || rc=$?
+              fi
               if [ "$rc" = 0 ]; then ok=1; break; fi
               echo "curl exited $rc on attempt $i"
               if [ "$rc" = 33 ]; then echo 'server refused byte-range resume; deleting partial file'; rm -f "$IPA_TMP"; fi
-              sleep 5
+              sleep 30
             done
             test "$ok" = 1
             ls -l "$IPA_TMP"
