@@ -1,0 +1,28 @@
+diff --git a/build/win32u-unix/driver_ios.c b/build/win32u-unix/driver_ios.c
+--- a/build/win32u-unix/driver_ios.c
++++ b/build/win32u-unix/driver_ios.c
+@@ -568,6 +568,24 @@
+     return NtUserPostMessage( desktop, WM_CLOSE, 0, 0 ) ? 1 : -1;
+ }
+ 
++/* The same request for one specific window, for the app's in-game
++ * "Close game" action (Porthole patch 0180). That action used to inject
++ * Alt+F4 keys only; a game reading raw input never routes them through
++ * DefWindowProc, so nothing turned them into a close and the menu item
++ * appeared dead. A posted WM_CLOSE reaches the window's message loop
++ * directly, which is the normal Windows way to ask a program to close:
++ * it can still save, prompt, or refuse. syscmd=1 posts
++ * WM_SYSCOMMAND/SC_CLOSE instead, which DefWindowProc turns into the
++ * same WM_CLOSE for windows that only honour the system-command path.
++ * Only the window's own thread posts it, from its event pump. Returns 0
++ * on another thread, 1 when posted, -1 on failure. */
++int winios_drv_close_window_if_owner( HWND hwnd, int syscmd )
++{
++    if (!hwnd || get_window_thread( hwnd, NULL ) != GetCurrentThreadId()) return 0;
++    if (syscmd) return NtUserPostMessage( hwnd, WM_SYSCOMMAND, SC_CLOSE, 0 ) ? 1 : -1;
++    return NtUserPostMessage( hwnd, WM_CLOSE, 0, 0 ) ? 1 : -1;
++}
++
+ /* ============================================================ *
+  * winios window surfaces (S2): GDI window content → app compositor.
+  * Modeled on win32u's offscreen surface (dce.c): the generic

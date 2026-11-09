@@ -2,6 +2,10 @@
 # "Apply zh-Hans translation" rewrites the cloned app/Packages trees with the
 # translations in i18n/ (apply_translations.py + manual_patches.py; same scripts
 # verified locally to reproduce the audited zh tree byte-for-byte).
+# Close-game fix (2026-11-09): the same step also runs i18n/close_fix.py
+# (graded normal-close flow for the in-game "Close game" action, engine
+# bumped to 3af3467-r2), and the engine-patches step additionally applies
+# patches/0180-winios-close-window.patch to vendor/Madeira.
 # Porthole probe build (route B spike) - untranslated English rebuild; only verifies a cloud Mac can rebuild the IPA.
 # Basis: notes/INVESTIGATION.md (route B). Pass criteria: probe-ci/PROBE-PLAN.md.
 #
@@ -266,8 +270,13 @@ jobs:
             rsync -a "$RUNNER_TEMP/zhout/app/" "$SRC/app/"
             rsync -a "$RUNNER_TEMP/zhout/Packages/" "$SRC/Packages/"
             python3 "$GITHUB_WORKSPACE/i18n/manual_patches.py" "$SRC"
+            python3 "$GITHUB_WORKSPACE/i18n/close_fix.py" "$SRC"
             grep -q '应用内存' "$SRC/app/Sources/Core/Telemetry.swift"
             grep -q '删除已下载的文件' "$SRC/app/Sources/UI/SteamPage.swift"
+            grep -q 'winios_request_close_window' "$SRC/app/Runtime/Winios/Winios.h"
+            grep -q 'func closeGame()' "$SRC/app/Sources/Core/SessionController.swift"
+            test -f "$SRC/patches/0180-winios-close-window.patch"
+            grep -q 'PORTHOLE_ENGINE_ID = 3af3467-r2' "$SRC/app/Config/Engine.xcconfig"
             echo 'zh-Hans translation applied'
           } 2>&1 | tee "$PROBE_LOGS/00b-translate.log"
 
@@ -416,7 +425,7 @@ jobs:
           } 2>&1 | tee "$PROBE_LOGS/03-download-upstream.log"
           echo "UPSTREAM_IPA=$IPA_TMP" >> "$GITHUB_ENV"
 
-      - name: Apply engine patches 0172-0176 (docs/SOURCE.md step 0)
+      - name: Apply engine patches 0172-0176 + 0180 (docs/SOURCE.md step 0)
         working-directory: ${{ github.workspace }}/src
         run: |
           set -euxo pipefail
@@ -426,7 +435,8 @@ jobs:
             git -C vendor/Madeira/wine apply --whitespace=nowarn ../../../patches/0174-engine-r28-wine.patch
             git -C vendor/Madeira/dxmt apply --whitespace=nowarn ../../../patches/0175-engine-r28-dxmt.patch
             git -C vendor/Madeira/madeira-dock apply --whitespace=nowarn ../../../patches/0176-engine-r28-madeira-dock.patch
-            echo 'patches 0172-0176 applied'
+            git -C vendor/Madeira apply --whitespace=nowarn ../../patches/0180-winios-close-window.patch
+            echo 'patches 0172-0176 + 0180 (zh-Hans close-window) applied'
             # Diagnostic only (not a gate): the engine input digest recorded in Engine.xcconfig
             # should match the current source (pin + all patches + Runtime glue).
             tools/engine.sh show || true
