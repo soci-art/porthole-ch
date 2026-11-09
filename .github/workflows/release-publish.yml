@@ -1,16 +1,17 @@
-name: release-publish (attach IPA to zh-Hans release)
+name: release-publish (replace IPA on zh-Hans release)
 
 # One-shot helper for the Porthole zh-Hans release.
 #
 # Why this exists: the zh-Hans IPA is ~200 MB, which exceeds the size limit
 # of the browser file-upload channel used to publish releases by hand, and
 # the GitHub connector has no release-asset upload. The IPA already exists
-# server-side as the zh-build run #3 artifact (porthole-zh-build), so this
-# workflow downloads that artifact, verifies the IPA's SHA-256, uploads it
-# to the existing DRAFT release v1.2.1-zh-Hans (created in the web UI with
-# the final title and Chinese notes), and publishes the draft.
+# server-side as a zh-build run artifact (porthole-zh-build), so this
+# workflow downloads that artifact, verifies the IPA's SHA-256, replaces
+# the same-named asset on the existing PUBLISHED release v1.2.1-zh-Hans
+# (delete old, upload new), and prints the release for verification.
 #
-# Manual trigger only (workflow_dispatch).
+# Manual trigger only (workflow_dispatch). Edit the run id and expected
+# SHA-256 below for each new build before dispatching.
 
 on:
   workflow_dispatch:
@@ -23,23 +24,27 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Download zh-build run 3 artifact and attach IPA to release
+      - name: Download zh-build run 6 artifact and replace IPA on release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euxo pipefail
-          gh run download 42486598265 --repo soci-art/porthole-ch --name porthole-zh-build --dir artifact
+          gh run download 42584502975 --repo soci-art/porthole-ch --name porthole-zh-build --dir artifact
           ipa="$(find artifact -name 'Porthole-1.2.1-zh-Hans-unsigned.ipa' | head -1)"
           test -n "$ipa"
           ls -la "$ipa"
           digest="$(sha256sum "$ipa" | awk '{print $1}')"
           echo "IPA sha256: $digest"
-          test "$digest" = "1b71f5d25bb787768e3b021dca9e570c623de8beb7ef2f3745b4d90275761e19"
-          # The release is a UI-created draft whose tag does not exist yet, so
-          # resolve it by ID (the by-tag lookup does not return drafts).
-          rid="$(gh api repos/soci-art/porthole-ch/releases --paginate --jq '.[] | select(.draft == true and .tag_name == "v1.2.1-zh-Hans") | .id' | head -1)"
+          test "$digest" = "6b2b34a009fdf03dec2d51874bccf037938112282d3177e02501de52a05c73b6"
+          # The release is already published (not a draft); resolve it by tag.
+          rid="$(gh api repos/soci-art/porthole-ch/releases --paginate --jq '.[] | select(.tag_name == "v1.2.1-zh-Hans") | .id' | head -1)"
           test -n "$rid"
-          echo "draft release id: $rid"
+          echo "release id: $rid"
+          # Delete the previous asset of the same name, if any.
+          old="$(gh api "repos/soci-art/porthole-ch/releases/$rid/assets" --paginate --jq '.[] | select(.name == "Porthole-1.2.1-zh-Hans-unsigned.ipa") | .id' | head -1)"
+          if [ -n "$old" ]; then
+            echo "deleting old asset id: $old"
+            gh api --method DELETE "repos/soci-art/porthole-ch/releases/assets/$old"
+          fi
           gh api --method POST -H 'Accept: application/vnd.github+json' -H 'Content-Type: application/octet-stream' "https://uploads.github.com/repos/soci-art/porthole-ch/releases/$rid/assets?name=Porthole-1.2.1-zh-Hans-unsigned.ipa" --input "$ipa"
-          gh api --method PATCH "repos/soci-art/porthole-ch/releases/$rid" -F draft=false
-          gh release view v1.2.1-zh-Hans --repo soci-art/porthole-ch
+          gh api "repos/soci-art/porthole-ch/releases/$rid" --jq '{tag_name, draft, assets: [.assets[] | {name, size, digest}]}'
